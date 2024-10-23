@@ -14,6 +14,8 @@
 
 #include <gtest/gtest.h>
 
+#include <vector>
+
 #include "../include/maze.h"
 
 class MazeTest : public ::testing::Test {
