@@ -13,6 +13,9 @@ DIST_DIR              := ../dist
 #================================== FILE LIST ==================================
 ALL_FILES             := $(shell find . -type f \( -name "*.h" -o -name "*.cc" \))
 ARCHIVE_NAME          := $(PROJECT_NAME).tar.gz
+GCOVR_EXCLUDES        := --exclude='.*tests/.*|.*include/.*'
+GCOVR_HTML            := -r .. $(GCOVR_EXCLUDES) --html --html-details -o coverage.html 
+GCOVR_TXT             := -r .. $(GCOVR_EXCLUDES) --txt -o coverage.txt
 
 1:
 	@echo $(ALL_FILES)
@@ -69,3 +72,10 @@ dvi: $(DOCS_DIR)
 #=================================== ARCHIVE ===================================
 dist: clean $(DIST_DIR)
 	tar -czvf $(DIST_DIR)/$(ARCHIVE_NAME) -C .. src README.md README_RUS.md LICENSE
+
+#================================== COVERAGE ===================================
+gcov_report: test
+	cd $(TEST_BIN_DIR) && \
+  gcovr $(GCOVR_HTML) && \
+	gcovr $(GCOVR_TXT)
+	xdg-open $(TEST_BIN_DIR)/coverage.html

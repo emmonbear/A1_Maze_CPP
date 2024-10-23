@@ -28,9 +28,9 @@ add_executable(${PROJECT_NAME}
 
 include_directories(${CMAKE_SOURCE_DIR})
 
-target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Werror -Wextra -g)
+target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Werror -Wextra -g -fprofile-arcs -ftest-coverage)
 
-target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES} pthread)
+target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES} pthread gcov)
 
 target_include_directories(${PROJECT_NAME} PRIVATE
   ${CMAKE_SOURCE_DIR}/..
