@@ -13,6 +13,7 @@
 
 #include <fstream>
 #include <string>
+#include <vector>
 
 namespace s21 {
 void Maze::loadFromFile(const std::string& filename) {
