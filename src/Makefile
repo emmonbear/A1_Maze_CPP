@@ -1,5 +1,5 @@
 #================================ PROJECT NAME =================================
-PROJECT_NAME          := Maze
+PROJECT_NAME          := maze
 
 #==================================== FLAGS ====================================
 VALGRIND              := --leak-check=full
@@ -39,10 +39,10 @@ clean:
 	rm -rf $(TEST_BIN_DIR)
 
 run:
-	./$(BIN_DIR)/viewer
+	$(BIN_DIR)/$(PROJECT_NAME)
 
 valgrind_run:
-	valgrind $(VALGRIND) ./$(BIN_DIR)/viewer
+	valgrind $(VALGRIND) $(BIN_DIR)/$(PROJECT_NAME)
 
 #================================ STYLE CHECKS =================================
 cpplint:
