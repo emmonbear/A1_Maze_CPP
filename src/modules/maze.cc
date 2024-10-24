@@ -12,6 +12,7 @@
 #include "include/maze.h"
 
 #include <fstream>
+#include <iostream>
 #include <string>
 #include <vector>
 
@@ -31,8 +32,8 @@ void Maze::loadFromFile(const std::string& filename) {
 void Maze::loadMazeSize(std::fstream& file) {
   file >> rows_ >> cols_;
 
-  vertical_walls_.resize(rows_, std::vector<int>(cols_));
-  horizontal_walls_.resize(rows_, std::vector<int>(cols_));
+  vertical_walls_.resize(rows_, Vector(cols_));
+  horizontal_walls_.resize(rows_, Vector(cols_));
 }
 
 void Maze::loadVerticalWalls(std::fstream& file) {
@@ -51,4 +52,38 @@ void Maze::loadHorizontalWalls(std::fstream& file) {
   }
 }
 
+void Maze::printMaze() const {
+  printTopBorder();
+
+  for (int row = 0; row < rows_; ++row) {
+    printVerticalWalls(row);
+    printHorizontalWalls(row);
+  }
+}
+
+void Maze::printTopBorder() const {
+  for (int j = 0; j < cols_; ++j) {
+    std::cout << "+---";
+  }
+
+  std::cout << "+" << std::endl;
+}
+
+void Maze::printVerticalWalls(int row) const {
+  std::cout << "|";
+
+  for (int col = 0; col < cols_; ++col) {
+    std::cout << "   " << (vertical_walls_[row][col] ? "|" : " ");
+  }
+
+  std::cout << std::endl << "+";
+}
+
+void Maze::printHorizontalWalls(int row) const {
+  for (int col = 0; col < cols_; ++col) {
+    std::cout << (horizontal_walls_[row][col] ? "---+" : "   +");
+  }
+
+  std::cout << std::endl;
+}
 }  // namespace s21
