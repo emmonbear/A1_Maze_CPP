@@ -17,9 +17,6 @@ GCOVR_EXCLUDES        := --exclude='.*tests/.*|.*include/.*'
 GCOVR_HTML            := -r .. $(GCOVR_EXCLUDES) --html --html-details -o coverage.html 
 GCOVR_TXT             := -r .. $(GCOVR_EXCLUDES) --txt -o coverage.txt
 
-1:
-	@echo $(ALL_FILES)
-
 #=================================== TARGETS ===================================
 all: install run
 
@@ -49,7 +46,7 @@ cpplint:
 	cpplint $(ALL_FILES)
 
 clang:
-	clang-format -style=Google -i $(ALL_FILES)
+	clang-format -style=Google --verbose -i $(ALL_FILES)
 
 #============================= CREATE DIRECTORIES ==============================
 $(BIN_DIR):
