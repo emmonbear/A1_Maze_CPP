@@ -1,7 +1,7 @@
 /**
  * @file IGenerator.h
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
- * @brief
+ * @brief Header file for the abstract Generator class
  * @version 1.0
  * @date 2024-10-25
  *
