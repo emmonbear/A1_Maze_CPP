@@ -12,7 +12,7 @@
 #ifndef SRC_INCLUDE_CAVE_CREATOR_H_
 #define SRC_INCLUDE_CAVE_CREATOR_H_
 
-#include "include/creator.h"
+#include "include/factory/creator.h"
 
 namespace s21 {
 class CaveCreator : public Creator {};

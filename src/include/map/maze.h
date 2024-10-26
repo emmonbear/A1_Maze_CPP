@@ -12,7 +12,7 @@
 #ifndef SRC_INCLUDE_MAZE_H_
 #define SRC_INCLUDE_MAZE_H_
 
-#include "include/map.h"
+#include "include/map/map.h"
 
 namespace s21 {
 class Maze : public Map {};

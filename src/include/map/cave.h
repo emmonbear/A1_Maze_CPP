@@ -12,7 +12,7 @@
 #ifndef SRC_INCLUDE_CAVE_H_
 #define SRC_INCLUDE_CAVE_H_
 
-#include "include/map.h"
+#include "include/map/map.h"
 
 namespace s21 {
 
