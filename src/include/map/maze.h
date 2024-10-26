@@ -9,8 +9,8 @@
  *
  */
 
-#ifndef SRC_INCLUDE_MAZE_H_
-#define SRC_INCLUDE_MAZE_H_
+#ifndef SRC_INCLUDE_MAP_MAZE_H_
+#define SRC_INCLUDE_MAP_MAZE_H_
 
 #include "include/map/map.h"
 
@@ -18,4 +18,4 @@ namespace s21 {
 class Maze : public Map {};
 }  // namespace s21
 
-#endif  // SRC_INCLUDE_MAZE_H_
+#endif  // SRC_INCLUDE_MAP_MAZE_H_

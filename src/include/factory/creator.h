@@ -9,8 +9,8 @@
  *
  */
 
-#ifndef SRC_INCLUDE_CREATOR_H_
-#define SRC_INCLUDE_CREATOR_H_
+#ifndef SRC_INCLUDE_FACTORY_CREATOR_H_
+#define SRC_INCLUDE_FACTORY_CREATOR_H_
 
 namespace s21 {
 class Creator {
@@ -19,4 +19,4 @@ class Creator {
 };
 }  // namespace s21
 
-#endif  // SRC_INCLUDE_CREATOR_H_
+#endif  // SRC_INCLUDE_FACTORY_CREATOR_H_

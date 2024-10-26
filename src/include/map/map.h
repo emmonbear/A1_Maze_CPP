@@ -9,8 +9,8 @@
  *
  */
 
-#ifndef SRC_INCLUDE_MAP_H_
-#define SRC_INCLUDE_MAP_H_
+#ifndef SRC_INCLUDE_MAP_MAP_H_
+#define SRC_INCLUDE_MAP_MAP_H_
 
 namespace s21 {
 
@@ -23,4 +23,4 @@ class Map {
 };
 }  // namespace s21
 
-#endif  // SRC_INCLUDE_MAP_H_
+#endif  // SRC_INCLUDE_MAP_MAP_H_

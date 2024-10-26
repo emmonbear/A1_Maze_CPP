@@ -9,8 +9,8 @@
  *
  */
 
-#ifndef SRC_INCLUDE_CAVE_CREATOR_H_
-#define SRC_INCLUDE_CAVE_CREATOR_H_
+#ifndef SRC_INCLUDE_FACTORY_CAVE_CREATOR_H_
+#define SRC_INCLUDE_FACTORY_CAVE_CREATOR_H_
 
 #include "include/factory/creator.h"
 
@@ -18,4 +18,4 @@ namespace s21 {
 class CaveCreator : public Creator {};
 }  // namespace s21
 
-#endif  // SRC_INCLUDE_CAVE_CREATOR_H_
+#endif  // SRC_INCLUDE_FACTORY_CAVE_CREATOR_H_

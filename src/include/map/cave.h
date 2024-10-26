@@ -9,8 +9,8 @@
  *
  */
 
-#ifndef SRC_INCLUDE_CAVE_H_
-#define SRC_INCLUDE_CAVE_H_
+#ifndef SRC_INCLUDE_MAP_CAVE_H_
+#define SRC_INCLUDE_MAP_CAVE_H_
 
 #include "include/map/map.h"
 
@@ -19,4 +19,4 @@ namespace s21 {
 class Cave : public Map {};
 }  // namespace s21
 
-#endif  // SRC_INCLUDE_CAVE_H_
+#endif  // SRC_INCLUDE_MAP_CAVE_H_
