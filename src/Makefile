@@ -11,7 +11,8 @@ DOCS_DIR              := ../docs
 DIST_DIR              := ../dist
 
 #================================== FILE LIST ==================================
-ALL_FILES             := $(shell find . -type f \( -name "*.h" -o -name "*.cc" \))
+ALL_FILES             := $(shell find . -type f \( -name "*.h" -o -name "*.cc" \) -not -path "./tmp/*")
+
 ARCHIVE_NAME          := $(PROJECT_NAME).tar.gz
 GCOVR_EXCLUDES        := --exclude='.*tests/.*|.*include/.*'
 GCOVR_HTML            := -r .. $(GCOVR_EXCLUDES) --html --html-details -o coverage.html 
