@@ -20,6 +20,12 @@ void Maze::loadFromStream(std::istream& is) {
   loadHorizontalWalls(is);
 }
 
+void Maze::saveToStream(std::ostream& os) const {
+  saveSize(os);
+  saveVerticalWalls(os);
+  saveHorizontalWalls(os);
+}
+
 void Maze::print() const {
   printTopBorder();
 
@@ -53,6 +59,30 @@ void Maze::loadHorizontalWalls(std::istream& is) {
       is >> wall_value;
       horizontal_walls_[i][j] = static_cast<bool>(wall_value);
     }
+  }
+}
+
+void Maze::saveSize(std::ostream& os) const {
+  os << rows_ << " " << cols_ << "\n";
+}
+
+void Maze::saveVerticalWalls(std::ostream& os) const {
+  for (const auto& row : vertical_walls_) {
+    for (const auto& col : row) {
+      os << static_cast<int>(col) << " ";
+    }
+    os << "\n";
+  }
+
+  os << "\n";
+}
+
+void Maze::saveHorizontalWalls(std::ostream& os) const {
+  for (const auto& row : horizontal_walls_) {
+    for (const auto& col : row) {
+      os << static_cast<int>(col) << " ";
+    }
+    os << "\n";
   }
 }
 

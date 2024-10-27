@@ -18,6 +18,8 @@ namespace s21 {
 
 class Cave : public Map {
   void loadFromStream(std::istream& is) override;
+  void saveToStream(std::ostream& os) const override;
+
   void print() const override;
 };
 }  // namespace s21

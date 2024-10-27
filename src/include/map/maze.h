@@ -24,6 +24,8 @@ class Maze : public Map {
   using WallMatrix = std::vector<WallVector>;
 
   void loadFromStream(std::istream& is) override;
+  void saveToStream(std::ostream& os) const override;
+
   void print() const override;
 
  private:
@@ -33,6 +35,9 @@ class Maze : public Map {
   void loadSize(std::istream& is);
   void loadVerticalWalls(std::istream& is);
   void loadHorizontalWalls(std::istream& is);
+  void saveSize(std::ostream& os) const;
+  void saveVerticalWalls(std::ostream& os) const;
+  void saveHorizontalWalls(std::ostream& os) const;
   void printTopBorder() const;
   void printVerticalWalls(int row) const;
   void printHorizontalWalls(int row) const;
