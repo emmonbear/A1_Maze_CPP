@@ -12,10 +12,31 @@
 #ifndef SRC_INCLUDE_MAP_MAZE_H_
 #define SRC_INCLUDE_MAP_MAZE_H_
 
+#include <string>
+#include <vector>
+
 #include "include/map/map.h"
 
 namespace s21 {
-class Maze : public Map {};
+class Maze : public Map {
+ public:
+  using WallVector = std::vector<bool>;
+  using WallMatrix = std::vector<WallVector>;
+
+  void loadFromStream(std::istream& is) override;
+  void print() const override;
+
+ private:
+  WallMatrix vertical_walls_;
+  WallMatrix horizontal_walls_;
+
+  void loadSize(std::istream& is);
+  void loadVerticalWalls(std::istream& is);
+  void loadHorizontalWalls(std::istream& is);
+  void printTopBorder() const;
+  void printVerticalWalls(int row) const;
+  void printHorizontalWalls(int row) const;
+};
 }  // namespace s21
 
 #endif  // SRC_INCLUDE_MAP_MAZE_H_

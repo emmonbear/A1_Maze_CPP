@@ -12,11 +12,16 @@
 #ifndef SRC_INCLUDE_MAP_MAP_H_
 #define SRC_INCLUDE_MAP_MAP_H_
 
+#include <iostream>
+#include <string>
+
 namespace s21 {
 
 class Map {
  public:
   virtual ~Map() = default;
+  virtual void loadFromStream(std::istream& is) = 0;
+  virtual void print() const = 0;
 
  protected:
   int rows_, cols_;

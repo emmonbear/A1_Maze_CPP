@@ -16,7 +16,10 @@
 
 namespace s21 {
 
-class Cave : public Map {};
+class Cave : public Map {
+  void loadFromStream(std::istream& is) override;
+  void print() const override;
+};
 }  // namespace s21
 
 #endif  // SRC_INCLUDE_MAP_CAVE_H_
