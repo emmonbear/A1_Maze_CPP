@@ -24,6 +24,9 @@ class Map {
   virtual void saveToStream(std::ostream& os) const = 0;
   virtual void print() const = 0;
 
+  inline int rows() const { return rows_; }
+  inline int cols() const { return cols_; }
+
  protected:
   int rows_{}, cols_{};
 };

@@ -28,6 +28,11 @@ class Maze : public Map {
 
   void print() const override;
 
+  inline const WallMatrix& vertical_walls() const { return vertical_walls_; }
+  inline const WallMatrix& horizontal_walls() const {
+    return horizontal_walls_;
+  }
+
  private:
   WallMatrix vertical_walls_;
   WallMatrix horizontal_walls_;
