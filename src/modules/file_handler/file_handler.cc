@@ -26,5 +26,14 @@ void FileHandler::load(Map* map, const std::string& filename) {
   is.close();
 }
 
-void FileHandler::save(const Map& map, const std::string& filename) {}
+void FileHandler::save(const Map& map, const std::string& filename) {
+  std::ofstream os{filename};
+
+  if (!os.is_open()) {
+    throw std::runtime_error("Error: could not open file:" + filename);
+  }
+
+  map.saveToStream(os);
+  os.close();
+}
 }  // namespace s21
