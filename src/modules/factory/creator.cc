@@ -24,4 +24,12 @@ MapPtr Creator::createMapFromFile(const std::string& filename) const {
   return map;
 }
 
+MapPtr Creator::createMapFromSetting(int rows, int cols) const {
+  MapPtr map = createMap();
+
+  map->generate(rows, cols);
+
+  return map;
+}
+
 }  // namespace s21

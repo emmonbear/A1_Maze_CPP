@@ -26,6 +26,8 @@ void Maze::saveToStream(std::ostream& os) const {
   saveHorizontalWalls(os);
 }
 
+void Maze::generate(int rows, int cols) {}
+
 void Maze::print() const {
   printTopBorder();
 

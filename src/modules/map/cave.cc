@@ -14,7 +14,7 @@
 namespace s21 {
 void Cave::loadFromStream(std::istream& is) {}
 void Cave::saveToStream(std::ostream& os) const {}
-
+void Cave::generate(int rows, int cols) {}
 void Cave::print() const {}
 
 }  // namespace s21

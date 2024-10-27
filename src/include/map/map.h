@@ -22,6 +22,7 @@ class Map {
   virtual ~Map() = default;
   virtual void loadFromStream(std::istream& is) = 0;
   virtual void saveToStream(std::ostream& os) const = 0;
+  virtual void generate(int rows, int cols) = 0;
   virtual void print() const = 0;
 
   inline int rows() const { return rows_; }

@@ -26,6 +26,7 @@ class Creator {
   virtual ~Creator() = default;
 
   MapPtr createMapFromFile(const std::string& filename) const;
+  MapPtr createMapFromSetting(int rows, int cols) const;
 
  protected:
   virtual MapPtr createMap() const = 0;
