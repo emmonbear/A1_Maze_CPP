@@ -12,10 +12,15 @@
 #ifndef SRC_INCLUDE_FACTORY_MAZE_CREATOR_H_
 #define SRC_INCLUDE_FACTORY_MAZE_CREATOR_H_
 
+#include <memory>
+
 #include "include/factory/creator.h"
+#include "include/map/maze.h"
 
 namespace s21 {
-class MazeCreator : public Creator {};
+class MazeCreator : public Creator {
+  MapPtr createMap() const override;
+};
 }  // namespace s21
 
 #endif  // SRC_INCLUDE_FACTORY_MAZE_CREATOR_H_

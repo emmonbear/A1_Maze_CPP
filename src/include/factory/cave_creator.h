@@ -13,9 +13,12 @@
 #define SRC_INCLUDE_FACTORY_CAVE_CREATOR_H_
 
 #include "include/factory/creator.h"
+#include "include/map/cave.h"
 
 namespace s21 {
-class CaveCreator : public Creator {};
+class CaveCreator : public Creator {
+  MapPtr createMap() const override;
+};
 }  // namespace s21
 
 #endif  // SRC_INCLUDE_FACTORY_CAVE_CREATOR_H_
