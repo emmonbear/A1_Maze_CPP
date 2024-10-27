@@ -9,18 +9,19 @@
  *
  */
 
-#include "include/maze.h"
-
 #include <fstream>
+#include <memory>
 #include <string>
 #include <vector>
 
-int main() {
-  std::string filename{"data/3x4.txt"};
-  s21::Maze maze;
+#include "include/factory/creator.h"
+#include "include/factory/maze_creator.h"
 
-  maze.loadFromFile(filename);
-  maze.printMaze();
+int main() {
+  auto creator = std::make_unique<s21::MazeCreator>();
+
+  auto maze = creator->createMapFromFile("data/3x4.txt");
+  maze->print();
 
   return 0;
 }
