@@ -12,11 +12,14 @@
 #ifndef SRC_INCLUDE_VIEW_MAZE_TAB_H_
 #define SRC_INCLUDE_VIEW_MAZE_TAB_H_
 
+#include <QGridLayout>
+#include <QHBoxLayout>
 #include <QLabel>
+#include <QPushButton>
 #include <QVBoxLayout>
 #include <QWidget>
 
-#include "include/view/maze_layout_manager.h"
+#include "include/view/maze_map.h"
 
 namespace s21 {
 
@@ -27,8 +30,19 @@ class MazeTab : public QWidget {
   explicit MazeTab(QWidget* parent = nullptr);
   ~MazeTab();
 
+  void initWindow();
+
  private:
-  MazeLayoutManager* maze_layout_;
+  MazeMap* map_;
+
+  QPushButton* open_file_btn_;
+  QPushButton* generate_btn_;
+
+  void setupLayouts();
+  void setupMainLayout(QVBoxLayout* layout);
+  void setupHLayout(QHBoxLayout* layout);
+  void setupButtonsLayout(QHBoxLayout* layout);
+  void setupSettingsLayout(QGridLayout* layout);
 };
 }  // namespace s21
 
