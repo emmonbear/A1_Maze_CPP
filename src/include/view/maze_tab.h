@@ -19,6 +19,7 @@
 #include <QVBoxLayout>
 #include <QWidget>
 
+#include "include/model/maze.h"
 #include "include/view/maze_map.h"
 
 namespace s21 {
@@ -32,8 +33,12 @@ class MazeTab : public QWidget {
 
   void initWindow();
 
+ private slots:
+  void onOpenFileButtonClicked();
+
  private:
   MazeMap* map_;
+  Maze* maze_;
 
   QPushButton* open_file_btn_;
   QPushButton* generate_btn_;

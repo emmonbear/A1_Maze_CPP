@@ -11,6 +11,7 @@
 
 #include "include/view/maze_tab.h"
 
+#include <QFileDialog>
 #include <QGridLayout>
 #include <QHBoxLayout>
 #include <QSpinBox>
@@ -23,12 +24,27 @@ namespace s21 {
 MazeTab::MazeTab(QWidget* parent) : QWidget(parent) {
   initWindow();
   setupLayouts();
+
+  connect(open_file_btn_, &QPushButton::clicked, this,
+          &MazeTab::onOpenFileButtonClicked);
 }
 
-MazeTab::~MazeTab() {}
+void MazeTab::onOpenFileButtonClicked() {
+  QString file_path = QFileDialog::getOpenFileName(
+      this, "Open Maze File", "", "Text Files (*.txt);;All Files (*)");
+
+  if (!file_path.isEmpty()) {
+    map_->clearMaze();
+    maze_->loadFromFile(file_path.toStdString());
+    map_->drawMaze();
+  }
+}
+
+MazeTab::~MazeTab() { delete maze_; }
 
 void MazeTab::initWindow() {
-  map_ = new MazeMap(this);
+  maze_ = new Maze();
+  map_ = new MazeMap(this, maze_);
 
   open_file_btn_ = new QPushButton("Open file", this);
   generate_btn_ = new QPushButton("Generate", this);
