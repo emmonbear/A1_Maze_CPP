@@ -23,7 +23,7 @@ set(VIEW
   ${VIEW_DIR}/main_window.cc
   ${VIEW_DIR}/cave_tab.cc
   ${VIEW_DIR}/maze_tab.cc
-  ${VIEW_DIR}/maze_layout_manager.cc
+  ${VIEW_DIR}/maze_map.cc
 )
 
 set(HEADERS
@@ -32,7 +32,7 @@ set(HEADERS
   ${INCLUDE_DIR}/view/maze_tab.h
   ${INCLUDE_DIR}/view/settings.h
   ${INCLUDE_DIR}/view/main_window.h
-  ${INCLUDE_DIR}/view/maze_layout_manager.h
+  ${INCLUDE_DIR}/view/maze_map.h
   # ${INCLUDE_DIR}/
   # ${INCLUDE_DIR}/
   # ${INCLUDE_DIR}/
