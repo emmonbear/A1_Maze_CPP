@@ -24,13 +24,13 @@ class Maze {
 
   void loadFromFile(const std::string& filename);
 
-  inline unsigned rows() const { return rows_; }
-  inline unsigned cols() const { return cols_; }
+  inline int rows() const { return rows_; }
+  inline int cols() const { return cols_; }
   inline const WallMatrix& v_walls() const { return v_walls_; }
   inline const WallMatrix& h_walls() const { return h_walls_; }
 
  private:
-  unsigned rows_{}, cols_{};
+  int rows_{}, cols_{};
   WallMatrix v_walls_{};
   WallMatrix h_walls_{};
 

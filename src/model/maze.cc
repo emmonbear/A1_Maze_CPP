@@ -29,9 +29,9 @@ void Maze::loadSize(std::istream& is) {
   h_walls_.resize(rows_, WallVector(cols_));
 }
 void Maze::loadVerticalWalls(std::istream& is) {
-  for (unsigned i = 0; i < rows_; ++i) {
-    for (unsigned j = 0; j < cols_; ++j) {
-      unsigned wall_value;
+  for (int i = 0; i < rows_; ++i) {
+    for (int j = 0; j < cols_; ++j) {
+      int wall_value;
       is >> wall_value;
       v_walls_[i][j] = static_cast<bool>(wall_value);
     }
@@ -39,9 +39,9 @@ void Maze::loadVerticalWalls(std::istream& is) {
 }
 
 void Maze::loadHorizontalWalls(std::istream& is) {
-  for (unsigned i = 0; i < rows_; ++i) {
-    for (unsigned j = 0; j < cols_; ++j) {
-      unsigned wall_value;
+  for (int i = 0; i < rows_; ++i) {
+    for (int j = 0; j < cols_; ++j) {
+      int wall_value;
       is >> wall_value;
       h_walls_[i][j] = static_cast<bool>(wall_value);
     }
