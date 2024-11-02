@@ -48,6 +48,7 @@ set(MAIN
 
 set(PROJECT_SOURCES
   ${VIEW}
+  ${MODEL}
   ${HEADERS}
   ${MAIN}
   # ${RESOURCE}
