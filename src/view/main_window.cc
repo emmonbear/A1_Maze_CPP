@@ -13,6 +13,8 @@
 
 #include <QVBoxLayout>
 
+#include "include/view/settings.h"
+
 namespace s21 {
 
 MainWindow::MainWindow(QWidget* parent) : QWidget(parent) {
@@ -38,6 +40,7 @@ void MainWindow::setupMainWindow() {
   main_layout->addWidget(tab_widget_);
   setLayout(main_layout);
   resize(1000, 1000);
+  setStyleSheet(Settings::background_style);
 }
 
 }  // namespace s21
