@@ -35,6 +35,30 @@ class Settings {
       "color: #26A168; "
       "}";
 
+  static constexpr const char* tab_style =
+      "QTabWidget::pane { "
+      "border: 1px solid #171421; "
+      "} "
+      "QTabBar::tab { "
+      "background-color: #171421; "
+      "color: #26A168; "
+      "font-weight: bold; "
+      "font-size: 28px; "
+      "border: none; "
+      "border-top-left-radius: 10px; "
+      "border-top-right-radius: 10px; "
+      "min-width: 120px; "
+      "padding: 10px; "
+      "} "
+      "QTabBar::tab:selected { "
+      "background-color: #26A168; "
+      "color: #171421; "
+      "font-weight: bold; "
+      "font-size: 28px; "
+      "border: none; "
+      "border-top-left-radius: 10px; "
+      "border-top-right-radius: 10px; "
+      "}";
   static constexpr const char* map_style = "border: 2px color: #171421";
   static constexpr const char* green = "#26A168";
   static constexpr const char* black = "#171421";

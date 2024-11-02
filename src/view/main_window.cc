@@ -33,6 +33,7 @@ void MainWindow::initWindow() {
 void MainWindow::setupTabWidget() {
   tab_widget_->addTab(maze_tab_, "Maze");
   tab_widget_->addTab(cave_tab_, "Cave");
+  tab_widget_->setStyleSheet(Settings::tab_style);
 }
 
 void MainWindow::setupMainWindow() {
