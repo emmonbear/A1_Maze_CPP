@@ -40,6 +40,7 @@ void MainWindow::setupMainWindow() {
   main_layout->addWidget(tab_widget_);
   setLayout(main_layout);
   resize(1000, 1000);
+  setMinimumSize(600, 600);
   setStyleSheet(Settings::background_style);
 }
 
