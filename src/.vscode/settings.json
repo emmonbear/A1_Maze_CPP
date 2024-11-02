@@ -58,6 +58,18 @@
         "streambuf": "cpp",
         "thread": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "qmainwindow": "cpp",
+        "charconv": "cpp",
+        "chrono": "cpp",
+        "cstring": "cpp",
+        "list": "cpp",
+        "format": "cpp",
+        "future": "cpp",
+        "span": "cpp",
+        "qgroupbox": "cpp",
+        "qwidget": "cpp",
+        "qdebug": "cpp",
+        "codecvt": "cpp"
     }
 }
