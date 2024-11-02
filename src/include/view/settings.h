@@ -14,7 +14,31 @@
 
 namespace s21 {
 
-class Settings {};
+class Settings {
+ public:
+  static constexpr const char* background_style =
+      "QWidget { background-color: #171421; }";
+
+  static constexpr int btn_width = 150;
+  static constexpr int btn_height = 50;
+  static constexpr const char* btn_style =
+      "QPushButton { "
+      "background-color: #26A168; "
+      "color: #171421; "
+      "height: 50px; "
+      "font-family: 'Arial'; "
+      "font-size: 24px; "
+      "font-weight: bold; "
+      "} "
+      "QPushButton:hover { "
+      "background-color: #171421; "
+      "color: #26A168; "
+      "}";
+
+  static constexpr const char* map_style = "border: 2px color: #171421";
+  static constexpr const char* green = "#26A168";
+  static constexpr const char* black = "#171421";
+};
 }  // namespace s21
 
 #endif  // SRC_INCLUDE_VIEW_SETTINGS_H_
