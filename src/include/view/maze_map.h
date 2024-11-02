@@ -24,16 +24,25 @@ class MazeMap : public QWidget {
   Q_OBJECT
 
  public:
-  explicit MazeMap(QWidget* parent = nullptr);
+  explicit MazeMap(QWidget* parent = nullptr, Maze* maze = nullptr);
   ~MazeMap();
+  void drawMaze();
+  void clearMaze();
 
  protected:
   void resizeEvent(QResizeEvent* event) override;
   void paintEvent(QPaintEvent* event) override;
 
  private:
-  Maze* maze_;
   QImage image_;
+  Maze* maze_;
+  int cell_width_{}, cell_height_{};
+
+  void drawCells(QPainter* p, int row, int col);
+  void drawLeftWall(QPainter* p, int x, int y);
+  void drawTopWall(QPainter* p, int x, int y);
+  void drawRightWall(QPainter* p, int row, int col, int x, int y);
+  void drawBottomWall(QPainter* p, int row, int col, int x, int y);
 };
 
 }  // namespace s21
