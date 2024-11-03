@@ -27,6 +27,9 @@ MazeTab::MazeTab(QWidget* parent) : QWidget(parent) {
 
   connect(open_file_btn_, &QPushButton::clicked, this,
           &MazeTab::onOpenFileButtonClicked);
+
+  connect(generate_btn_, &QPushButton::clicked, this,
+          &MazeTab::onGenerateButtonClicked);
 }
 
 void MazeTab::onOpenFileButtonClicked() {
@@ -40,12 +43,21 @@ void MazeTab::onOpenFileButtonClicked() {
   }
 }
 
+void MazeTab::onGenerateButtonClicked() {
+  map_->clearMaze();
+  maze_->set_rows(rows_spin_box_->value());
+  maze_->set_cols(cols_spin_box_->value());
+  maze_->generate();
+  map_->drawMaze();
+}
+
 MazeTab::~MazeTab() { delete maze_; }
 
 void MazeTab::initWindow() {
   maze_ = new Maze();
   map_ = new MazeMap(this, maze_);
-
+  rows_spin_box_ = new QSpinBox(this);
+  cols_spin_box_ = new QSpinBox(this);
   open_file_btn_ = new QPushButton("Open file", this);
   generate_btn_ = new QPushButton("Generate", this);
 
@@ -88,23 +100,21 @@ void MazeTab::setupButtonsLayout(QHBoxLayout* layout) {
   layout->addWidget(open_file_btn_);
   layout->addWidget(generate_btn_);
 }
-
+//
 void MazeTab::setupSettingsLayout(QGridLayout* layout) {
   QLabel* rows_label = new QLabel("ROWS", this);
   QLabel* cols_label = new QLabel("COLS", this);
-  QSpinBox* rows_spin_box = new QSpinBox(this);
-  QSpinBox* cols_spin_box = new QSpinBox(this);
 
-  rows_spin_box->setRange(2, 50);
-  cols_spin_box->setRange(2, 50);
+  rows_spin_box_->setRange(2, 500);
+  cols_spin_box_->setRange(2, 500);
 
   rows_label->setFixedWidth(50);
   cols_label->setFixedWidth(50);
 
   layout->addWidget(rows_label, 0, 0);
-  layout->addWidget(rows_spin_box, 0, 1);
+  layout->addWidget(rows_spin_box_, 0, 1);
   layout->addWidget(cols_label, 1, 0);
-  layout->addWidget(cols_spin_box, 1, 1);
+  layout->addWidget(cols_spin_box_, 1, 1);
   layout->setAlignment(Qt::AlignLeft);
 }
 

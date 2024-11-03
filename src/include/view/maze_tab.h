@@ -16,6 +16,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
+#include <QSpinBox>
 #include <QVBoxLayout>
 #include <QWidget>
 
@@ -35,6 +36,7 @@ class MazeTab : public QWidget {
 
  private slots:
   void onOpenFileButtonClicked();
+  void onGenerateButtonClicked();
 
  private:
   MazeMap* map_;
@@ -42,6 +44,8 @@ class MazeTab : public QWidget {
 
   QPushButton* open_file_btn_;
   QPushButton* generate_btn_;
+  QSpinBox* rows_spin_box_;
+  QSpinBox* cols_spin_box_;
 
   void setupLayouts();
   void setupMainLayout(QVBoxLayout* layout);
