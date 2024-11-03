@@ -19,24 +19,44 @@ namespace s21 {
 
 class Maze {
  public:
+  using Vector = std::vector<int>;
   using WallVector = std::vector<bool>;
   using WallMatrix = std::vector<WallVector>;
 
   void loadFromFile(const std::string& filename);
-
+  void generate();
   inline int rows() const { return rows_; }
   inline int cols() const { return cols_; }
   inline const WallMatrix& v_walls() const { return v_walls_; }
   inline const WallMatrix& h_walls() const { return h_walls_; }
+  inline void set_rows(int rows) { rows_ = rows; }
+  inline void set_cols(int cols) { cols_ = cols; }
 
  private:
   int rows_{}, cols_{};
   WallMatrix v_walls_{};
   WallMatrix h_walls_{};
+  Vector sets_{};
+  int counter_{1};
 
+  void resize();
   void loadSize(std::istream& is);
   void loadVerticalWalls(std::istream& is);
   void loadHorizontalWalls(std::istream& is);
+
+  void initFirstRow();
+  void setUnique();
+  bool randomBool();
+  void createSet(int index, int element);
+  bool isSingleElementInSet(int element);
+  int countHorizontalWalls(int row, int element);
+  void avoidBottomWallIfIsolated(int row);
+  void prepareRowForGeneration(int row);
+  void generateVerticalWalls(int row);
+  void generateHorizontalWalls(int row);
+  void generateLastRow();
+  void checkEndLine();
+  void clearGenerator();
 };
 }  // namespace s21
 
