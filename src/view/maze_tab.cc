@@ -37,25 +37,23 @@ void MazeTab::onOpenFileButtonClicked() {
       this, "Open Maze File", "", "Text Files (*.txt);;All Files (*)");
 
   if (!file_path.isEmpty()) {
-    map_->clearMaze();
-    maze_->loadFromFile(file_path.toStdString());
-    map_->drawMaze();
+    renderer_->clearMaze();
+    facade_->loadFromFile(file_path.toStdString());
+    renderer_->drawMaze();
   }
 }
 
 void MazeTab::onGenerateButtonClicked() {
-  map_->clearMaze();
-  maze_->set_rows(rows_spin_box_->value());
-  maze_->set_cols(cols_spin_box_->value());
-  maze_->generate();
-  map_->drawMaze();
+  renderer_->clearMaze();
+  facade_->generate(rows_spin_box_->value(), cols_spin_box_->value());
+  renderer_->drawMaze();
 }
 
-MazeTab::~MazeTab() { delete maze_; }
+MazeTab::~MazeTab() { delete facade_; }
 
 void MazeTab::initWindow() {
-  maze_ = new Maze();
-  map_ = new MazeMap(this, maze_);
+  facade_ = new MazeFacade();
+  renderer_ = new MazeRenderer(this, &facade_->maze());
   rows_spin_box_ = new QSpinBox(this);
   cols_spin_box_ = new QSpinBox(this);
   open_file_btn_ = new QPushButton("Open file", this);
@@ -79,7 +77,7 @@ void MazeTab::setupLayouts() {
   h_layout->addLayout(settings_layout);
   h_layout->addLayout(buttons_layout);
 
-  main_layout->addWidget(map_);
+  main_layout->addWidget(renderer_);
   main_layout->addLayout(h_layout);
 
   setLayout(main_layout);
