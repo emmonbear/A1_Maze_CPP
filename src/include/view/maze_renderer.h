@@ -1,7 +1,7 @@
 /**
- * @file maze_map.h
+ * @file maze_renderer.h
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
- * @brief Header file for the MazeMap class
+ * @brief Header file for the MazeRenderer class
  * @version 1.0
  * @date 2024-11-02
  *
@@ -9,8 +9,8 @@
  *
  */
 
-#ifndef SRC_INCLUDE_VIEW_MAZE_MAP_H_
-#define SRC_INCLUDE_VIEW_MAZE_MAP_H_
+#ifndef SRC_INCLUDE_VIEW_MAZE_RENDERER_H_
+#define SRC_INCLUDE_VIEW_MAZE_RENDERER_H_
 
 #include <QImage>
 #include <QResizeEvent>
@@ -20,12 +20,12 @@
 
 namespace s21 {
 
-class MazeMap : public QWidget {
+class MazeRenderer : public QWidget {
   Q_OBJECT
 
  public:
-  explicit MazeMap(QWidget* parent = nullptr, Maze* maze = nullptr);
-  ~MazeMap();
+  explicit MazeRenderer(QWidget* parent = nullptr, const Maze* maze = nullptr);
+  ~MazeRenderer();
   void drawMaze();
   void clearMaze();
 
@@ -35,7 +35,7 @@ class MazeMap : public QWidget {
 
  private:
   QImage image_;
-  Maze* maze_;
+  const Maze* maze_;
   int cell_width_{}, cell_height_{};
 
   void drawCells(QPainter* p, int row, int col);
@@ -47,4 +47,4 @@ class MazeMap : public QWidget {
 
 }  // namespace s21
 
-#endif  // SRC_INCLUDE_VIEW_MAZE_MAP_H_
+#endif  // SRC_INCLUDE_VIEW_MAZE_RENDERER_H_

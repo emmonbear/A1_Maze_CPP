@@ -1,7 +1,7 @@
 /**
- * @file maze_map.cc
+ * @file maze_renderer.cc
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
- * @brief Implementation file for the MazeMap class
+ * @brief Implementation file for the MazeRenderer class
  * @version 1.0
  * @date 2024-11-02
  *
@@ -9,7 +9,7 @@
  *
  */
 
-#include "include/view/maze_map.h"
+#include "include/view/maze_renderer.h"
 
 #include <QPainter>
 
@@ -17,26 +17,27 @@
 
 namespace s21 {
 
-MazeMap::MazeMap(QWidget* parent, Maze* maze) : QWidget{parent}, maze_{maze} {}
+MazeRenderer::MazeRenderer(QWidget* parent, const Maze* maze)
+    : QWidget{parent}, maze_{maze} {}
 
-MazeMap::~MazeMap() {}
+MazeRenderer::~MazeRenderer() {}
 
-void MazeMap::resizeEvent(QResizeEvent* event) {
+void MazeRenderer::resizeEvent(QResizeEvent* event) {
   image_ = QImage(event->size(), QImage::Format_ARGB32_Premultiplied);
   image_.fill(QColor(Settings::black));
   drawMaze();
   update();
 }
 
-void MazeMap::paintEvent(QPaintEvent* event) {
+void MazeRenderer::paintEvent(QPaintEvent* event) {
   QPainter p{this};
   QRect dirty_rect = event->rect();
   p.drawImage(dirty_rect, image_, dirty_rect);
 }
 
-void MazeMap::clearMaze() { image_.fill(QColor(Settings::black)); }
+void MazeRenderer::clearMaze() { image_.fill(QColor(Settings::black)); }
 
-void MazeMap::drawMaze() {
+void MazeRenderer::drawMaze() {
   if (maze_->cols() == 0 || maze_->rows() == 0) {
     return;
   }
@@ -55,7 +56,7 @@ void MazeMap::drawMaze() {
   update();
 }
 
-void MazeMap::drawCells(QPainter* p, int row, int col) {
+void MazeRenderer::drawCells(QPainter* p, int row, int col) {
   int x = col * cell_width_;
   int y = row * cell_height_;
 
@@ -69,21 +70,21 @@ void MazeMap::drawCells(QPainter* p, int row, int col) {
   drawBottomWall(p, row, col, x, y);
 }
 
-void MazeMap::drawLeftWall(QPainter* p, int x, int y) {
+void MazeRenderer::drawLeftWall(QPainter* p, int x, int y) {
   p->drawLine(x, y, x, y + cell_height_);
 }
 
-void MazeMap::drawTopWall(QPainter* p, int x, int y) {
+void MazeRenderer::drawTopWall(QPainter* p, int x, int y) {
   p->drawLine(x, y, x + cell_width_, y);
 }
 
-void MazeMap::drawRightWall(QPainter* p, int row, int col, int x, int y) {
+void MazeRenderer::drawRightWall(QPainter* p, int row, int col, int x, int y) {
   if (maze_->v_walls()[row][col]) {
     p->drawLine(x + cell_width_, y, x + cell_width_, y + cell_height_);
   }
 }
 
-void MazeMap::drawBottomWall(QPainter* p, int row, int col, int x, int y) {
+void MazeRenderer::drawBottomWall(QPainter* p, int row, int col, int x, int y) {
   if (maze_->h_walls()[row][col]) {
     p->drawLine(x, y + cell_height_, x + cell_width_, y + cell_height_);
   }
