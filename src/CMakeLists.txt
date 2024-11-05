@@ -13,26 +13,35 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets)
 
 set(MODEL_DIR ${CMAKE_SOURCE_DIR}/model)
 set(VIEW_DIR ${CMAKE_SOURCE_DIR}/view)
+set(CONTROLLER_DIR ${CMAKE_SOURCE_DIR}/controller)
 set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
 
 set(MODEL
   ${MODEL_DIR}/maze.cc
+  ${MODEL_DIR}/maze_generator.cc
 )
+
+set(CONTROLLER
+  ${CONTROLLER_DIR}/maze_facade.cc
+)
+
 
 set(VIEW
   ${VIEW_DIR}/main_window.cc
   ${VIEW_DIR}/cave_tab.cc
   ${VIEW_DIR}/maze_tab.cc
-  ${VIEW_DIR}/maze_map.cc
+  ${VIEW_DIR}/maze_renderer.cc
 )
 
 set(HEADERS
   ${INCLUDE_DIR}/model/maze.h
+  ${INCLUDE_DIR}/model/maze_generator.h
+  ${INCLUDE_DIR}/controller/maze_facade.h
   ${INCLUDE_DIR}/view/cave_tab.h
   ${INCLUDE_DIR}/view/maze_tab.h
   ${INCLUDE_DIR}/view/settings.h
   ${INCLUDE_DIR}/view/main_window.h
-  ${INCLUDE_DIR}/view/maze_map.h
+  ${INCLUDE_DIR}/view/maze_renderer.h
   # ${INCLUDE_DIR}/
   # ${INCLUDE_DIR}/
   # ${INCLUDE_DIR}/
@@ -48,6 +57,7 @@ set(MAIN
 
 set(PROJECT_SOURCES
   ${VIEW}
+  ${CONTROLLER}
   ${MODEL}
   ${HEADERS}
   ${MAIN}
