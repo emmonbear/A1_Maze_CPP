@@ -20,6 +20,7 @@ set(MODEL
   ${MODEL_DIR}/maze.cc
   ${MODEL_DIR}/maze_generator.cc
   ${MODEL_DIR}/file_handler.cc
+  ${MODEL_DIR}/maze_solver.cc
 )
 
 set(CONTROLLER
@@ -38,6 +39,7 @@ set(HEADERS
   ${INCLUDE_DIR}/model/maze.h
   ${INCLUDE_DIR}/model/maze_generator.h
   ${INCLUDE_DIR}/model/file_handler.h
+  ${INCLUDE_DIR}/model/maze_solver.h
   ${INCLUDE_DIR}/controller/maze_facade.h
   ${INCLUDE_DIR}/view/cave_tab.h
   ${INCLUDE_DIR}/view/maze_tab.h
