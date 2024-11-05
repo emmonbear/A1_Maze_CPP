@@ -14,6 +14,7 @@
 
 #include <string>
 
+#include "include/model/file_handler.h"
 #include "include/model/maze.h"
 #include "include/model/maze_generator.h"
 

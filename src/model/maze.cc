@@ -17,11 +17,9 @@
 
 namespace s21 {
 
-void Maze::loadFromFile(const std::string& filename) {
-  std::ifstream is{filename};
-  loadSize(is);
-  loadVerticalWalls(is);
-  loadHorizontalWalls(is);
+void Maze::set_cols(int cols) {
+  cols_ = cols;
+  resize();
 }
 
 void Maze::resize() {
@@ -29,31 +27,6 @@ void Maze::resize() {
   h_walls_.clear();
   v_walls_.resize(rows_, WallVector(cols_, false));
   h_walls_.resize(rows_, WallVector(cols_, false));
-}
-
-void Maze::loadSize(std::istream& is) {
-  is >> rows_ >> cols_;
-  resize();
-}
-
-void Maze::loadVerticalWalls(std::istream& is) {
-  for (int i = 0; i < rows_; ++i) {
-    for (int j = 0; j < cols_; ++j) {
-      int wall_value;
-      is >> wall_value;
-      v_walls_[i][j] = static_cast<bool>(wall_value);
-    }
-  }
-}
-
-void Maze::loadHorizontalWalls(std::istream& is) {
-  for (int i = 0; i < rows_; ++i) {
-    for (int j = 0; j < cols_; ++j) {
-      int wall_value;
-      is >> wall_value;
-      h_walls_[i][j] = static_cast<bool>(wall_value);
-    }
-  }
 }
 
 }  // namespace s21

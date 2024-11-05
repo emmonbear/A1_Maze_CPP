@@ -18,12 +18,11 @@ namespace s21 {
 void MazeFacade::generate(int rows, int cols) {
   maze_.set_rows(rows);
   maze_.set_cols(cols);
-  maze_.resize();
   generator_.generate(&maze_);
 }
 
 void MazeFacade::loadFromFile(const std::string& filename) {
-  maze_.loadFromFile(filename);
+  FileHandler::load(&maze_, filename);
 }
 
 }  // namespace s21

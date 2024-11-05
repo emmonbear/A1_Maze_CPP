@@ -19,8 +19,13 @@
 namespace s21 {
 class FileHandler {
  public:
-  void load(Maze* maze, const std::string& filename);
-  void save(const Maze& maze, const std::string& filename);
+  static void load(Maze* maze, const std::string& filename);
+  static void save(const Maze& maze, const std::string& filename);
+
+ private:
+  static void loadSize(Maze* maze, std::istream& is);
+  static void loadVerticalWalls(Maze* maze, std::istream& is);
+  static void loadHorizontalWalls(Maze* maze, std::istream& is);
 };
 }  // namespace s21
 

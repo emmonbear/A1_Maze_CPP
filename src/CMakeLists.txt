@@ -19,6 +19,7 @@ set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
 set(MODEL
   ${MODEL_DIR}/maze.cc
   ${MODEL_DIR}/maze_generator.cc
+  ${MODEL_DIR}/file_handler.cc
 )
 
 set(CONTROLLER
@@ -36,6 +37,7 @@ set(VIEW
 set(HEADERS
   ${INCLUDE_DIR}/model/maze.h
   ${INCLUDE_DIR}/model/maze_generator.h
+  ${INCLUDE_DIR}/model/file_handler.h
   ${INCLUDE_DIR}/controller/maze_facade.h
   ${INCLUDE_DIR}/view/cave_tab.h
   ${INCLUDE_DIR}/view/maze_tab.h
