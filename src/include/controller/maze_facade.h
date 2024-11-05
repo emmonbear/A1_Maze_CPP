@@ -15,6 +15,7 @@
 #include <string>
 
 #include "include/model/maze.h"
+#include "include/model/maze_generator.h"
 
 namespace s21 {
 
@@ -27,6 +28,7 @@ class MazeFacade {
 
  private:
   Maze maze_{};
+  MazeGenerator generator_{};
 };
 }  // namespace s21
 
