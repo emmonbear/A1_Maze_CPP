@@ -25,4 +25,8 @@ void MazeFacade::loadFromFile(const std::string& filename) {
   FileHandler::load(&maze_, filename);
 }
 
+void MazeFacade::saveTofile(const std::string& filename) {
+  FileHandler::save(maze_, filename);
+}
+
 }  // namespace s21

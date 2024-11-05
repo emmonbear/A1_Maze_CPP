@@ -24,7 +24,7 @@ class MazeFacade {
  public:
   void generate(int rows, int cols);
   void loadFromFile(const std::string& filename);
-
+  void saveTofile(const std::string& filename);
   inline const Maze& maze() const { return maze_; }
 
  private:

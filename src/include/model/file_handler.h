@@ -26,6 +26,9 @@ class FileHandler {
   static void loadSize(Maze* maze, std::istream& is);
   static void loadVerticalWalls(Maze* maze, std::istream& is);
   static void loadHorizontalWalls(Maze* maze, std::istream& is);
+  static void saveSize(const Maze& maze, std::ostream& os);
+  static void saveVerticalWalls(const Maze& maze, std::ostream& os);
+  static void saveHorizontalWalls(const Maze& maze, std::ostream& os);
 };
 }  // namespace s21
 

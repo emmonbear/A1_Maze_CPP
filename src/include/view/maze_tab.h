@@ -37,6 +37,7 @@ class MazeTab : public QWidget {
  private slots:
   void onOpenFileButtonClicked();
   void onGenerateButtonClicked();
+  void onSaveButtonClicked();
 
  private:
   MazeRenderer* renderer_;
@@ -44,6 +45,7 @@ class MazeTab : public QWidget {
 
   QPushButton* open_file_btn_;
   QPushButton* generate_btn_;
+  QPushButton* save_btn_;
   QSpinBox* rows_spin_box_;
   QSpinBox* cols_spin_box_;
 

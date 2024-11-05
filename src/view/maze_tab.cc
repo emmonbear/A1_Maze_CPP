@@ -30,11 +30,16 @@ MazeTab::MazeTab(QWidget* parent) : QWidget(parent) {
 
   connect(generate_btn_, &QPushButton::clicked, this,
           &MazeTab::onGenerateButtonClicked);
+
+  connect(save_btn_, &QPushButton::clicked, this,
+          &MazeTab::onSaveButtonClicked);
 }
+
+MazeTab::~MazeTab() { delete facade_; }
 
 void MazeTab::onOpenFileButtonClicked() {
   QString file_path = QFileDialog::getOpenFileName(
-      this, "Open Maze File", "", "Text Files (*.txt);;All Files (*)");
+      this, "Open Maze File", "../datasets", "Text Files (*.txt)");
 
   if (!file_path.isEmpty()) {
     renderer_->clearMaze();
@@ -49,7 +54,16 @@ void MazeTab::onGenerateButtonClicked() {
   renderer_->drawMaze();
 }
 
-MazeTab::~MazeTab() { delete facade_; }
+void MazeTab::onSaveButtonClicked() {
+  QString file_path = QFileDialog::getSaveFileName(this, "", "../datasets",
+                                                   "Text Files (*.txt)");
+  if (!file_path.isEmpty()) {
+    if (!file_path.endsWith(".txt")) {
+      file_path += ".txt";
+    }
+    facade_->saveTofile(file_path.toStdString());
+  }
+}
 
 void MazeTab::initWindow() {
   facade_ = new MazeFacade();
@@ -58,9 +72,11 @@ void MazeTab::initWindow() {
   cols_spin_box_ = new QSpinBox(this);
   open_file_btn_ = new QPushButton("Open file", this);
   generate_btn_ = new QPushButton("Generate", this);
+  save_btn_ = new QPushButton("Save", this);
 
   open_file_btn_->setStyleSheet(Settings::btn_style);
   generate_btn_->setStyleSheet(Settings::btn_style);
+  save_btn_->setStyleSheet(Settings::btn_style);
 }
 
 void MazeTab::setupLayouts() {
@@ -97,6 +113,7 @@ void MazeTab::setupButtonsLayout(QHBoxLayout* layout) {
   layout->setSpacing(10);
   layout->addWidget(open_file_btn_);
   layout->addWidget(generate_btn_);
+  layout->addWidget(save_btn_);
 }
 //
 void MazeTab::setupSettingsLayout(QGridLayout* layout) {

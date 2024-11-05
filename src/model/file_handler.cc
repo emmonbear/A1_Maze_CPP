@@ -21,9 +21,16 @@ void FileHandler::load(Maze* maze, const std::string& filename) {
   loadSize(maze, is);
   loadVerticalWalls(maze, is);
   loadHorizontalWalls(maze, is);
+  is.close();
 }
 
-void FileHandler::save(const Maze& maze, const std::string& filename) {}
+void FileHandler::save(const Maze& maze, const std::string& filename) {
+  std::ofstream os{filename};
+  saveSize(maze, os);
+  saveVerticalWalls(maze, os);
+  saveHorizontalWalls(maze, os);
+  os.close();
+}
 
 void FileHandler::loadSize(Maze* maze, std::istream& is) {
   is >> maze->rows_ >> maze->cols_;
@@ -47,6 +54,31 @@ void FileHandler::loadHorizontalWalls(Maze* maze, std::istream& is) {
       is >> wall_value;
       maze->h_walls_[i][j] = static_cast<bool>(wall_value);
     }
+  }
+}
+
+void FileHandler::saveSize(const Maze& maze, std::ostream& os) {
+  os << maze.rows_ << " " << maze.cols_ << "\n";
+}
+
+void FileHandler::saveVerticalWalls(const Maze& maze, std::ostream& os) {
+  for (const auto& row : maze.v_walls_) {
+    for (const auto& col : row) {
+      os << static_cast<int>(col) << " ";
+    }
+
+    os << "\n";
+  }
+
+  os << "\n";
+}
+
+void FileHandler::saveHorizontalWalls(const Maze& maze, std::ostream& os) {
+  for (const auto& row : maze.h_walls_) {
+    for (const auto& col : row) {
+      os << static_cast<int>(col) << " ";
+    }
+    os << "\n";
   }
 }
 
