@@ -38,6 +38,7 @@ class MazeTab : public QWidget {
   void onOpenFileButtonClicked();
   void onGenerateButtonClicked();
   void onSaveButtonClicked();
+  void onSolveButtonClicked();
 
  private:
   MazeRenderer* renderer_;
@@ -46,8 +47,14 @@ class MazeTab : public QWidget {
   QPushButton* open_file_btn_;
   QPushButton* generate_btn_;
   QPushButton* save_btn_;
+  QPushButton* solve_btn_;
+
   QSpinBox* rows_spin_box_;
   QSpinBox* cols_spin_box_;
+  QSpinBox* start_row_spin_box_;
+  QSpinBox* start_col_spin_box_;
+  QSpinBox* end_row_spin_box_;
+  QSpinBox* end_col_spin_box_;
 
   void setupLayouts();
   void setupMainLayout(QVBoxLayout* layout);
