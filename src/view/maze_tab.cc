@@ -33,6 +33,9 @@ MazeTab::MazeTab(QWidget* parent) : QWidget(parent) {
 
   connect(save_btn_, &QPushButton::clicked, this,
           &MazeTab::onSaveButtonClicked);
+
+  connect(solve_btn_, &QPushButton::clicked, this,
+          &MazeTab::onSolveButtonClicked);
 }
 
 MazeTab::~MazeTab() { delete facade_; }
@@ -65,14 +68,30 @@ void MazeTab::onSaveButtonClicked() {
   }
 }
 
+void MazeTab::onSolveButtonClicked() {
+  int start_row = start_row_spin_box_->value();
+  int start_col = start_col_spin_box_->value();
+  int end_row = end_row_spin_box_->value();
+  int end_col = end_col_spin_box_->value();
+
+  facade_->solve({start_row, start_col}, {end_row, end_col});
+  renderer_->drawPath();
+}
+
 void MazeTab::initWindow() {
   facade_ = new MazeFacade();
-  renderer_ = new MazeRenderer(this, &facade_->maze());
+  renderer_ = new MazeRenderer(this, facade_->maze());
   rows_spin_box_ = new QSpinBox(this);
   cols_spin_box_ = new QSpinBox(this);
   open_file_btn_ = new QPushButton("Open file", this);
   generate_btn_ = new QPushButton("Generate", this);
   save_btn_ = new QPushButton("Save", this);
+  solve_btn_ = new QPushButton("Solve", this);
+
+  start_row_spin_box_ = new QSpinBox(this);
+  start_col_spin_box_ = new QSpinBox(this);
+  end_row_spin_box_ = new QSpinBox(this);
+  end_col_spin_box_ = new QSpinBox(this);
 
   open_file_btn_->setStyleSheet(Settings::btn_style);
   generate_btn_->setStyleSheet(Settings::btn_style);
@@ -114,11 +133,14 @@ void MazeTab::setupButtonsLayout(QHBoxLayout* layout) {
   layout->addWidget(open_file_btn_);
   layout->addWidget(generate_btn_);
   layout->addWidget(save_btn_);
+  layout->addWidget(solve_btn_);
 }
 //
 void MazeTab::setupSettingsLayout(QGridLayout* layout) {
   QLabel* rows_label = new QLabel("ROWS", this);
   QLabel* cols_label = new QLabel("COLS", this);
+  QLabel* start_label = new QLabel("START (x, y)", this);
+  QLabel* end_label = new QLabel("END (x, y)", this);
 
   rows_spin_box_->setRange(2, 500);
   cols_spin_box_->setRange(2, 500);
@@ -128,8 +150,17 @@ void MazeTab::setupSettingsLayout(QGridLayout* layout) {
 
   layout->addWidget(rows_label, 0, 0);
   layout->addWidget(rows_spin_box_, 0, 1);
+
   layout->addWidget(cols_label, 1, 0);
   layout->addWidget(cols_spin_box_, 1, 1);
+
+  layout->addWidget(start_label, 2, 0);
+  layout->addWidget(start_row_spin_box_, 2, 1);
+  layout->addWidget(start_col_spin_box_, 2, 2);
+
+  layout->addWidget(end_label, 3, 0);
+  layout->addWidget(end_row_spin_box_, 3, 1);
+  layout->addWidget(end_col_spin_box_, 3, 2);
   layout->setAlignment(Qt::AlignLeft);
 }
 
