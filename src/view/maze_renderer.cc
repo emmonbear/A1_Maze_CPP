@@ -37,6 +37,11 @@ void MazeRenderer::paintEvent(QPaintEvent* event) {
 
 void MazeRenderer::clearMaze() { image_.fill(QColor(Settings::black)); }
 
+void MazeRenderer::clearPath() {
+  drawMaze();
+  update();
+}
+
 void MazeRenderer::drawMaze() {
   if (maze_.cols() == 0 || maze_.rows() == 0) {
     return;
@@ -91,6 +96,8 @@ void MazeRenderer::drawBottomWall(QPainter* p, int row, int col, int x, int y) {
 }
 
 void MazeRenderer::drawPath() {
+  clearMaze();
+  drawMaze();
   Maze::Path path = maze_.path();
   QPainter p(&image_);
   p.setPen(QPen(Qt::blue, 1));

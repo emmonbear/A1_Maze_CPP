@@ -96,6 +96,7 @@ void MazeTab::initWindow() {
   open_file_btn_->setStyleSheet(Settings::btn_style);
   generate_btn_->setStyleSheet(Settings::btn_style);
   save_btn_->setStyleSheet(Settings::btn_style);
+  solve_btn_->setStyleSheet(Settings::btn_style);
 }
 
 void MazeTab::setupLayouts() {
@@ -142,8 +143,8 @@ void MazeTab::setupSettingsLayout(QGridLayout* layout) {
   QLabel* start_label = new QLabel("START (x, y)", this);
   QLabel* end_label = new QLabel("END (x, y)", this);
 
-  rows_spin_box_->setRange(2, 500);
-  cols_spin_box_->setRange(2, 500);
+  rows_spin_box_->setRange(2, 50);
+  cols_spin_box_->setRange(2, 50);
 
   rows_label->setFixedWidth(50);
   cols_label->setFixedWidth(50);

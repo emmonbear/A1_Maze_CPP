@@ -28,6 +28,7 @@ class MazeRenderer : public QWidget {
   ~MazeRenderer();
   void drawMaze();
   void clearMaze();
+  void clearPath();
   void drawPath();
 
  protected:
