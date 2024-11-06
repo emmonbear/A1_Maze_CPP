@@ -24,7 +24,8 @@ class MazeGenerator {
   using WallVector = std::vector<bool>;
   using WallMatrix = std::vector<WallVector>;
 
-  void generate(Maze* maze);
+  explicit MazeGenerator(Maze* maze);
+  void generate();
 
  private:
   Maze* maze_{};

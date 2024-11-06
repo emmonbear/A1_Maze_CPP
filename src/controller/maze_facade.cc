@@ -16,9 +16,11 @@
 namespace s21 {
 
 void MazeFacade::generate(int rows, int cols) {
+  MazeGenerator generator(&maze_);
+
   maze_.set_rows(rows);
   maze_.set_cols(cols);
-  generator_.generate(&maze_);
+  generator.generate();
 }
 
 void MazeFacade::loadFromFile(const std::string& filename) {
@@ -27,6 +29,12 @@ void MazeFacade::loadFromFile(const std::string& filename) {
 
 void MazeFacade::saveTofile(const std::string& filename) {
   FileHandler::save(maze_, filename);
+}
+
+void MazeFacade::solve(MazeSolver::Point start, MazeSolver::Point end) {
+  MazeSolver solver(maze_, start, end);
+  solver.solve();
+  path_ = solver.path();
 }
 
 }  // namespace s21

@@ -17,8 +17,9 @@
 
 namespace s21 {
 
-void MazeGenerator::generate(Maze* maze) {
-  maze_ = maze;
+MazeGenerator::MazeGenerator(Maze* maze) : maze_{maze} {}
+
+void MazeGenerator::generate() {
   initFirstRow();
 
   for (int row = 0; row < maze_->rows_ - 1; ++row) {
