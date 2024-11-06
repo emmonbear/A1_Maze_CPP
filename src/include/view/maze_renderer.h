@@ -24,10 +24,11 @@ class MazeRenderer : public QWidget {
   Q_OBJECT
 
  public:
-  explicit MazeRenderer(QWidget* parent = nullptr, const Maze* maze = nullptr);
+  explicit MazeRenderer(QWidget* parent = nullptr, const Maze& maze = Maze());
   ~MazeRenderer();
   void drawMaze();
   void clearMaze();
+  void drawPath();
 
  protected:
   void resizeEvent(QResizeEvent* event) override;
@@ -35,7 +36,7 @@ class MazeRenderer : public QWidget {
 
  private:
   QImage image_;
-  const Maze* maze_;
+  const Maze& maze_;
   int cell_width_{}, cell_height_{};
 
   void drawCells(QPainter* p, int row, int col);

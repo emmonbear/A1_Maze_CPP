@@ -17,7 +17,7 @@
 
 namespace s21 {
 
-MazeRenderer::MazeRenderer(QWidget* parent, const Maze* maze)
+MazeRenderer::MazeRenderer(QWidget* parent, const Maze& maze)
     : QWidget{parent}, maze_{maze} {}
 
 MazeRenderer::~MazeRenderer() {}
@@ -38,18 +38,18 @@ void MazeRenderer::paintEvent(QPaintEvent* event) {
 void MazeRenderer::clearMaze() { image_.fill(QColor(Settings::black)); }
 
 void MazeRenderer::drawMaze() {
-  if (maze_->cols() == 0 || maze_->rows() == 0) {
+  if (maze_.cols() == 0 || maze_.rows() == 0) {
     return;
   }
 
   QPainter p(&image_);
   p.setPen(QPen(Qt::white, 2));
 
-  cell_width_ = image_.width() / maze_->cols();
-  cell_height_ = image_.height() / maze_->rows();
+  cell_width_ = image_.width() / maze_.cols();
+  cell_height_ = image_.height() / maze_.rows();
 
-  for (int row = 0; row < maze_->rows(); ++row) {
-    for (int col = 0; col < maze_->cols(); ++col) {
+  for (int row = 0; row < maze_.rows(); ++row) {
+    for (int col = 0; col < maze_.cols(); ++col) {
       drawCells(&p, row, col);
     }
   }
@@ -79,15 +79,32 @@ void MazeRenderer::drawTopWall(QPainter* p, int x, int y) {
 }
 
 void MazeRenderer::drawRightWall(QPainter* p, int row, int col, int x, int y) {
-  if (maze_->v_walls()[row][col]) {
+  if (maze_.v_walls()[row][col]) {
     p->drawLine(x + cell_width_, y, x + cell_width_, y + cell_height_);
   }
 }
 
 void MazeRenderer::drawBottomWall(QPainter* p, int row, int col, int x, int y) {
-  if (maze_->h_walls()[row][col]) {
+  if (maze_.h_walls()[row][col]) {
     p->drawLine(x, y + cell_height_, x + cell_width_, y + cell_height_);
   }
+}
+
+void MazeRenderer::drawPath() {
+  Maze::Path path = maze_.path();
+  QPainter p(&image_);
+  p.setPen(QPen(Qt::blue, 1));
+
+  for (size_t i = 0; i < path.size() - 1; ++i) {
+    int x1 = path[i].second * cell_width_ + cell_width_ / 2;
+    int y1 = path[i].first * cell_height_ + cell_height_ / 2;
+    int x2 = path[i + 1].second * cell_width_ + cell_width_ / 2;
+    int y2 = path[i + 1].first * cell_height_ + cell_height_ / 2;
+
+    p.drawLine(x1, y1, x2, y2);
+  }
+
+  update();
 }
 
 }  // namespace s21
