@@ -26,7 +26,7 @@ class MazeFacade {
   void generate(int rows, int cols);
   void loadFromFile(const std::string& filename);
   void saveTofile(const std::string& filename);
-  void solve(MazeSolver::Point start, MazeSolver::Point end);
+  void solve(Maze::Point start, Maze::Point end);
   inline const Maze& maze() const { return maze_; }
 
  private:

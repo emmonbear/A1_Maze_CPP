@@ -31,8 +31,8 @@ void MazeFacade::saveTofile(const std::string& filename) {
   FileHandler::save(maze_, filename);
 }
 
-void MazeFacade::solve(MazeSolver::Point start, MazeSolver::Point end) {
-  MazeSolver solver(maze_, start, end);
+void MazeFacade::solve(Maze::Point start, Maze::Point end) {
+  MazeSolver solver(&maze_, start, end);
   solver.solve();
 }
 

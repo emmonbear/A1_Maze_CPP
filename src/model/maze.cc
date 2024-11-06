@@ -29,4 +29,8 @@ void Maze::resize() {
   h_walls_.resize(rows_, WallVector(cols_, false));
 }
 
+void Maze::push_path(int row, int col) { path_.push_back({row, col}); }
+
+void Maze::free_path() { path_.clear(); }
+
 }  // namespace s21

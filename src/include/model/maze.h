@@ -29,9 +29,11 @@ class Maze {
   inline int cols() const { return cols_; }
   inline const WallMatrix& v_walls() const { return v_walls_; }
   inline const WallMatrix& h_walls() const { return h_walls_; }
-  inline void set_rows(int rows) { rows_ = rows; }
   inline const Path& path() const { return path_; }
+  inline void set_rows(int rows) { rows_ = rows; }
+  void push_path(int row, int col);
   void set_cols(int cols);
+  void free_path();
   void resize();
 
  private:
