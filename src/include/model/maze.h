@@ -13,12 +13,15 @@
 #define SRC_INCLUDE_MODEL_MAZE_H_
 
 #include <string>
+#include <utility>
 #include <vector>
 
 namespace s21 {
 
 class Maze {
  public:
+  using Point = std::pair<int, int>;
+  using Path = std::vector<Point>;
   using WallVector = std::vector<bool>;
   using WallMatrix = std::vector<WallVector>;
 
@@ -27,6 +30,7 @@ class Maze {
   inline const WallMatrix& v_walls() const { return v_walls_; }
   inline const WallMatrix& h_walls() const { return h_walls_; }
   inline void set_rows(int rows) { rows_ = rows; }
+  inline const Path& path() const { return path_; }
   void set_cols(int cols);
   void resize();
 
@@ -34,9 +38,11 @@ class Maze {
   int rows_{}, cols_{};
   WallMatrix v_walls_{};
   WallMatrix h_walls_{};
+  Path path_{};
 
   friend class MazeGenerator;
   friend class FileHandler;
+  friend class MazeSolver;
 };
 }  // namespace s21
 

@@ -34,7 +34,6 @@ void MazeFacade::saveTofile(const std::string& filename) {
 void MazeFacade::solve(MazeSolver::Point start, MazeSolver::Point end) {
   MazeSolver solver(maze_, start, end);
   solver.solve();
-  path_ = solver.path();
 }
 
 }  // namespace s21
