@@ -3,7 +3,7 @@
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
  * @brief Implementation file for the MazeRenderer class
  * @version 1.0
- * @date 2024-11-02
+ * @date 2024-11-10
  *
  * @copyright Copyright (c) 2024
  *
@@ -12,34 +12,30 @@
 #include "include/view/maze_renderer.h"
 
 #include <QPainter>
-
-#include "include/view/settings.h"
+#include <algorithm>
 
 namespace s21 {
 
 MazeRenderer::MazeRenderer(QWidget* parent, const Maze& maze)
-    : QWidget{parent}, maze_{maze} {}
+    : QWidget{parent}, maze_{maze}, cell_size_{} {
+  setupWindow();
+}
 
 MazeRenderer::~MazeRenderer() {}
 
-void MazeRenderer::resizeEvent(QResizeEvent* event) {
-  image_ = QImage(event->size(), QImage::Format_ARGB32_Premultiplied);
-  image_.fill(QColor(Settings::black));
-  drawMaze();
-  update();
+void MazeRenderer::setupWindow() {
+  setWindowTitle("Maze Renderer");
+  setFixedSize(Settings::render_size, Settings::render_size);
+
+  image_ = QImage(size(), QImage::Format_ARGB32_Premultiplied);
 }
+
+void MazeRenderer::clearMaze() { image_.fill(QColor(Settings::black)); }
 
 void MazeRenderer::paintEvent(QPaintEvent* event) {
   QPainter p{this};
   QRect dirty_rect = event->rect();
   p.drawImage(dirty_rect, image_, dirty_rect);
-}
-
-void MazeRenderer::clearMaze() { image_.fill(QColor(Settings::black)); }
-
-void MazeRenderer::clearPath() {
-  drawMaze();
-  update();
 }
 
 void MazeRenderer::drawMaze() {
@@ -50,8 +46,7 @@ void MazeRenderer::drawMaze() {
   QPainter p(&image_);
   p.setPen(QPen(Qt::white, 2));
 
-  cell_width_ = image_.width() / maze_.cols();
-  cell_height_ = image_.height() / maze_.rows();
+  calculateCellSize();
 
   for (int row = 0; row < maze_.rows(); ++row) {
     for (int col = 0; col < maze_.cols(); ++col) {
@@ -62,8 +57,8 @@ void MazeRenderer::drawMaze() {
 }
 
 void MazeRenderer::drawCells(QPainter* p, int row, int col) {
-  int x = col * cell_width_;
-  int y = row * cell_height_;
+  int x = col * cell_size_;
+  int y = row * cell_size_;
 
   if (col == 0) {
     drawLeftWall(p, x, y);
@@ -76,42 +71,29 @@ void MazeRenderer::drawCells(QPainter* p, int row, int col) {
 }
 
 void MazeRenderer::drawLeftWall(QPainter* p, int x, int y) {
-  p->drawLine(x, y, x, y + cell_height_);
+  p->drawLine(x, y, x, y + cell_size_);
 }
 
 void MazeRenderer::drawTopWall(QPainter* p, int x, int y) {
-  p->drawLine(x, y, x + cell_width_, y);
+  p->drawLine(x, y, x + cell_size_, y);
 }
 
 void MazeRenderer::drawRightWall(QPainter* p, int row, int col, int x, int y) {
   if (maze_.v_walls()[row][col]) {
-    p->drawLine(x + cell_width_, y, x + cell_width_, y + cell_height_);
+    p->drawLine(x + cell_size_, y, x + cell_size_, y + cell_size_);
   }
 }
 
 void MazeRenderer::drawBottomWall(QPainter* p, int row, int col, int x, int y) {
   if (maze_.h_walls()[row][col]) {
-    p->drawLine(x, y + cell_height_, x + cell_width_, y + cell_height_);
+    p->drawLine(x, y + cell_size_, x + cell_size_, y + cell_size_);
   }
 }
 
-void MazeRenderer::drawPath() {
-  clearMaze();
-  drawMaze();
-  Maze::Path path = maze_.path();
-  QPainter p(&image_);
-  p.setPen(QPen(Qt::blue, 1));
+void MazeRenderer::calculateCellSize() {
+  int max_dimension = std::max(maze_.rows(), maze_.cols());
 
-  for (size_t i = 0; i < path.size() - 1; ++i) {
-    int x1 = path[i].second * cell_width_ + cell_width_ / 2;
-    int y1 = path[i].first * cell_height_ + cell_height_ / 2;
-    int x2 = path[i + 1].second * cell_width_ + cell_width_ / 2;
-    int y2 = path[i + 1].first * cell_height_ + cell_height_ / 2;
-
-    p.drawLine(x1, y1, x2, y2);
-  }
-
-  update();
+  cell_size_ = Settings::render_size / max_dimension;
 }
 
 }  // namespace s21

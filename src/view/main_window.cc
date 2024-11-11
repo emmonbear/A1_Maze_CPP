@@ -22,6 +22,7 @@ MainWindow::MainWindow(QWidget* parent) : QWidget(parent) {
   setupMainWindow();
   setupTabWidget();
 }
+
 MainWindow::~MainWindow() {}
 
 void MainWindow::initWindow() {
@@ -40,8 +41,7 @@ void MainWindow::setupMainWindow() {
   QVBoxLayout* main_layout = new QVBoxLayout(this);
   main_layout->addWidget(tab_widget_);
   setLayout(main_layout);
-  resize(1000, 1000);
-  setMinimumSize(600, 600);
+  setFixedSize(600, 800);
   setStyleSheet(Settings::background_style);
 }
 

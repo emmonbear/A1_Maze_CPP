@@ -14,6 +14,7 @@
 #include <QFileDialog>
 #include <QGridLayout>
 #include <QHBoxLayout>
+#include <QLabel>
 #include <QSpinBox>
 #include <QVBoxLayout>
 
@@ -27,60 +28,26 @@ MazeTab::MazeTab(QWidget* parent) : QWidget(parent) {
 
   connect(open_file_btn_, &QPushButton::clicked, this,
           &MazeTab::onOpenFileButtonClicked);
-
-  connect(generate_btn_, &QPushButton::clicked, this,
-          &MazeTab::onGenerateButtonClicked);
-
-  connect(save_btn_, &QPushButton::clicked, this,
-          &MazeTab::onSaveButtonClicked);
-
-  connect(solve_btn_, &QPushButton::clicked, this,
-          &MazeTab::onSolveButtonClicked);
 }
 
-MazeTab::~MazeTab() { delete facade_; }
+MazeTab::~MazeTab() {}
 
 void MazeTab::onOpenFileButtonClicked() {
   QString file_path = QFileDialog::getOpenFileName(
       this, "Open Maze File", "../datasets", "Text Files (*.txt)");
 
   if (!file_path.isEmpty()) {
-    renderer_->clearMaze();
     facade_->loadFromFile(file_path.toStdString());
+    renderer_->clearMaze();
     renderer_->drawMaze();
   }
 }
 
-void MazeTab::onGenerateButtonClicked() {
-  renderer_->clearMaze();
-  facade_->generate(rows_spin_box_->value(), cols_spin_box_->value());
-  renderer_->drawMaze();
-}
-
-void MazeTab::onSaveButtonClicked() {
-  QString file_path = QFileDialog::getSaveFileName(this, "", "../datasets",
-                                                   "Text Files (*.txt)");
-  if (!file_path.isEmpty()) {
-    if (!file_path.endsWith(".txt")) {
-      file_path += ".txt";
-    }
-    facade_->saveTofile(file_path.toStdString());
-  }
-}
-
-void MazeTab::onSolveButtonClicked() {
-  int start_row = start_row_spin_box_->value();
-  int start_col = start_col_spin_box_->value();
-  int end_row = end_row_spin_box_->value();
-  int end_col = end_col_spin_box_->value();
-
-  facade_->solve({start_row, start_col}, {end_row, end_col});
-  renderer_->drawPath();
-}
-
 void MazeTab::initWindow() {
   facade_ = new MazeFacade();
-  renderer_ = new MazeRenderer(this, facade_->maze());
+  renderer_ = new MazeRenderer(nullptr, facade_->maze());
+  renderer_->show();
+
   rows_spin_box_ = new QSpinBox(this);
   cols_spin_box_ = new QSpinBox(this);
   open_file_btn_ = new QPushButton("Open file", this);
@@ -97,72 +64,56 @@ void MazeTab::initWindow() {
   generate_btn_->setStyleSheet(Settings::btn_style);
   save_btn_->setStyleSheet(Settings::btn_style);
   solve_btn_->setStyleSheet(Settings::btn_style);
+  rows_spin_box_->setStyleSheet(Settings::spinbox_style);
+  cols_spin_box_->setStyleSheet(Settings::spinbox_style);
+  start_row_spin_box_->setStyleSheet(Settings::spinbox_style);
+  start_col_spin_box_->setStyleSheet(Settings::spinbox_style);
+  end_row_spin_box_->setStyleSheet(Settings::spinbox_style);
+  end_col_spin_box_->setStyleSheet(Settings::spinbox_style);
 }
 
 void MazeTab::setupLayouts() {
-  QVBoxLayout* main_layout = new QVBoxLayout(this);
-  QHBoxLayout* h_layout = new QHBoxLayout();
-  QHBoxLayout* buttons_layout = new QHBoxLayout();
   QGridLayout* settings_layout = new QGridLayout();
+  QGridLayout* button_layout = new QGridLayout();
+  QVBoxLayout* main_layout = new QVBoxLayout(this);
 
-  setupMainLayout(main_layout);
-  setupHLayout(h_layout);
-  setupButtonsLayout(buttons_layout);
+  setupButtonLayout(button_layout);
   setupSettingsLayout(settings_layout);
-
-  h_layout->addLayout(settings_layout);
-  h_layout->addLayout(buttons_layout);
-
-  main_layout->addWidget(renderer_);
-  main_layout->addLayout(h_layout);
-
+  main_layout->addStretch(1);
+  main_layout->addLayout(settings_layout);
+  main_layout->addStretch(1);
+  main_layout->addLayout(button_layout);
   setLayout(main_layout);
 }
 
-void MazeTab::setupMainLayout(QVBoxLayout* layout) {
-  layout->setContentsMargins(50, 10, 50, 50);
-  layout->setSpacing(10);
+void MazeTab::setupButtonLayout(QGridLayout* button_layout) {
+  button_layout->addWidget(open_file_btn_, 0, 0);
+  button_layout->addWidget(save_btn_, 1, 0);
+  button_layout->addWidget(generate_btn_, 0, 1);
+  button_layout->addWidget(solve_btn_, 1, 1);
 }
 
-void MazeTab::setupHLayout(QHBoxLayout* layout) {
-  layout->setContentsMargins(50, 10, 50, 50);
-  layout->setSpacing(10);
-}
-
-void MazeTab::setupButtonsLayout(QHBoxLayout* layout) {
-  layout->setSpacing(10);
-  layout->addWidget(open_file_btn_);
-  layout->addWidget(generate_btn_);
-  layout->addWidget(save_btn_);
-  layout->addWidget(solve_btn_);
-}
-//
-void MazeTab::setupSettingsLayout(QGridLayout* layout) {
+void MazeTab::setupSettingsLayout(QGridLayout* settings_layout) {
   QLabel* rows_label = new QLabel("ROWS", this);
   QLabel* cols_label = new QLabel("COLS", this);
-  QLabel* start_label = new QLabel("START (x, y)", this);
-  QLabel* end_label = new QLabel("END (x, y)", this);
+  QLabel* start_label = new QLabel("START (row, col)", this);
+  QLabel* end_label = new QLabel("END (row, col)", this);
 
-  rows_spin_box_->setRange(2, 50);
-  cols_spin_box_->setRange(2, 50);
+  rows_label->setStyleSheet(Settings::label_style);
+  cols_label->setStyleSheet(Settings::label_style);
+  start_label->setStyleSheet(Settings::label_style);
+  end_label->setStyleSheet(Settings::label_style);
 
-  rows_label->setFixedWidth(50);
-  cols_label->setFixedWidth(50);
-
-  layout->addWidget(rows_label, 0, 0);
-  layout->addWidget(rows_spin_box_, 0, 1);
-
-  layout->addWidget(cols_label, 1, 0);
-  layout->addWidget(cols_spin_box_, 1, 1);
-
-  layout->addWidget(start_label, 2, 0);
-  layout->addWidget(start_row_spin_box_, 2, 1);
-  layout->addWidget(start_col_spin_box_, 2, 2);
-
-  layout->addWidget(end_label, 3, 0);
-  layout->addWidget(end_row_spin_box_, 3, 1);
-  layout->addWidget(end_col_spin_box_, 3, 2);
-  layout->setAlignment(Qt::AlignLeft);
+  settings_layout->addWidget(rows_label, 0, 0);
+  settings_layout->addWidget(rows_spin_box_, 0, 1);
+  settings_layout->addWidget(cols_label, 1, 0);
+  settings_layout->addWidget(cols_spin_box_, 1, 1);
+  settings_layout->addWidget(start_label, 2, 0);
+  settings_layout->addWidget(start_row_spin_box_, 2, 1);
+  settings_layout->addWidget(start_col_spin_box_, 2, 2);
+  settings_layout->addWidget(end_label, 3, 0);
+  settings_layout->addWidget(end_row_spin_box_, 3, 1);
+  settings_layout->addWidget(end_col_spin_box_, 3, 2);
 }
 
 }  // namespace s21

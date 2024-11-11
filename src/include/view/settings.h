@@ -59,9 +59,43 @@ class Settings {
       "border-top-left-radius: 10px; "
       "border-top-right-radius: 10px; "
       "}";
+
+  static constexpr const char* spinbox_style =
+      "QSpinBox { "
+      "background-color: #171421; "
+      "color: #ffffff; "
+      "font-family: 'Arial'; "
+      "font-size: 24px; "
+      "font-weight: bold; "
+      "border: 2px solid #ffffff; "
+      "padding: 5px; "
+      "} "
+      "QSpinBox::up-button, QSpinBox::down-button { "
+      "background-color: #ffffff; "
+      "width: 20px; "
+      "border: none; "
+      "} "
+      "QSpinBox::up-button:hover, QSpinBox::down-button:hover { "
+      "background-color: #26A168; "
+      "} "
+      "QSpinBox::up-arrow, QSpinBox::down-arrow { "
+      "width: 10px; "
+      "height: 10px; "
+      "background-color: #171421; "
+      "}";
+
+  static constexpr const char* label_style =
+      "QLabel { "
+      "color: #ffffff; "
+      "font-family: 'Arial'; "
+      "font-size: 24px; "
+      "font-weight: bold; "
+      "}";
+
   static constexpr const char* map_style = "border: 2px color: #171421";
   static constexpr const char* green = "#26A168";
   static constexpr const char* black = "#171421";
+  static constexpr int render_size = 800;
 };
 }  // namespace s21
 
