@@ -12,6 +12,6 @@
 #ifndef SRC_TESTS_INCLUDE_MAIN_TEST_H_
 #define SRC_TESTS_INCLUDE_MAIN_TEST_H_
 
-#include "include/maze_test.h"
+#include <gtest/gtest.h>
 
 #endif  // SRC_TESTS_INCLUDE_MAIN_TEST_H_
