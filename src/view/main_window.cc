@@ -41,7 +41,7 @@ void MainWindow::setupMainWindow() {
   QVBoxLayout* main_layout = new QVBoxLayout(this);
   main_layout->addWidget(tab_widget_);
   setLayout(main_layout);
-  setFixedSize(600, 800);
+  setFixedSize(800, 800);
   setStyleSheet(Settings::background_style);
 }
 

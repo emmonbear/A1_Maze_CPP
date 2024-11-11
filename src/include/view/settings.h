@@ -84,18 +84,10 @@ class Settings {
       "background-color: #171421; "
       "}";
 
-  static constexpr const char* label_style =
-      "QLabel { "
-      "color: #ffffff; "
-      "font-family: 'Arial'; "
-      "font-size: 24px; "
-      "font-weight: bold; "
-      "}";
-
   static constexpr const char* map_style = "border: 2px color: #171421";
   static constexpr const char* green = "#26A168";
   static constexpr const char* black = "#171421";
-  static constexpr int render_size = 800;
+  static constexpr int render_size = 500;
 };
 }  // namespace s21
 

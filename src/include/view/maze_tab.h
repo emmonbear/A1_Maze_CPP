@@ -33,9 +33,9 @@ class MazeTab : public QWidget {
 
  private slots:
   void onOpenFileButtonClicked();
-  // void onGenerateButtonClicked();
-  // void onSaveButtonClicked();
-  // void onSolveButtonClicked();
+  void onGenerateButtonClicked();
+  void onSaveButtonClicked();
+  void onSolveButtonClicked();
 
  private:
   MazeFacade* facade_;
@@ -53,8 +53,8 @@ class MazeTab : public QWidget {
   QSpinBox* end_col_spin_box_;
 
   void setupLayouts();
+  void setupVerticalLayout(QVBoxLayout* v_layout);
   void setupButtonLayout(QGridLayout* button_layout);
-  void setupSettingsLayout(QGridLayout* settings_layout);
 };
 }  // namespace s21
 
