@@ -30,6 +30,7 @@ class MazeRenderer : public QWidget {
 
   void drawMaze();
   void clearMaze();
+  void drawPath();
 
  protected:
   void paintEvent(QPaintEvent* event) override;
@@ -46,6 +47,7 @@ class MazeRenderer : public QWidget {
   void drawRightWall(QPainter* p, int row, int col, int x, int y);
   void drawBottomWall(QPainter* p, int row, int col, int x, int y);
   void calculateCellSize();
+  // void clearPath();
 };
 }  // namespace s21
 

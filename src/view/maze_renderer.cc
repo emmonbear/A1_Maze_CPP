@@ -96,4 +96,23 @@ void MazeRenderer::calculateCellSize() {
   cell_size_ = Settings::render_size / max_dimension;
 }
 
+void MazeRenderer::drawPath() {
+  clearMaze();
+  drawMaze();
+  Maze::Path path = maze_.path();
+  QPainter p(&image_);
+  p.setPen(QPen(QColor(Settings::green), 3));
+
+  for (size_t i = 0; i < path.size() - 1; ++i) {
+    int x1 = path[i].second * cell_size_ + cell_size_ / 2;
+    int y1 = path[i].first * cell_size_ + cell_size_ / 2;
+    int x2 = path[i + 1].second * cell_size_ + cell_size_ / 2;
+    int y2 = path[i + 1].first * cell_size_ + cell_size_ / 2;
+
+    p.drawLine(x1, y1, x2, y2);
+  }
+
+  update();
+}
+
 }  // namespace s21

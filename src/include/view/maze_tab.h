@@ -55,6 +55,8 @@ class MazeTab : public QWidget {
   void setupLayouts();
   void setupVerticalLayout(QVBoxLayout* v_layout);
   void setupButtonLayout(QGridLayout* button_layout);
+  void updateSolveSpinBoxRanges();
+  void updateGenerateSpinBoxRanges();
 };
 }  // namespace s21
 

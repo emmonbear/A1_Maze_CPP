@@ -43,12 +43,15 @@ MazeTab::~MazeTab() {}
 
 void MazeTab::onOpenFileButtonClicked() {
   QString file_path = QFileDialog::getOpenFileName(
-      this, "Open Maze File", "../datasets", "Text Files (*.txt)");
+      nullptr, "Open Maze File", "../datasets", "Text Files (*.txt)");
 
   if (!file_path.isEmpty()) {
     facade_->loadFromFile(file_path.toStdString());
     renderer_->clearMaze();
     renderer_->drawMaze();
+
+    updateGenerateSpinBoxRanges();
+    updateSolveSpinBoxRanges();
   }
 }
 
@@ -56,11 +59,29 @@ void MazeTab::onGenerateButtonClicked() {
   renderer_->clearMaze();
   facade_->generate(rows_spin_box_->value(), cols_spin_box_->value());
   renderer_->drawMaze();
+  updateSolveSpinBoxRanges();
 }
 
-void MazeTab::onSaveButtonClicked() {}
+void MazeTab::onSaveButtonClicked() {
+  QString file_path = QFileDialog::getSaveFileName(nullptr, "", "../datasets",
+                                                   "Text Files (*.txt)");
+  if (!file_path.isEmpty()) {
+    if (!file_path.endsWith(".txt")) {
+      file_path += ".txt";
+    }
+    facade_->saveTofile(file_path.toStdString());
+  }
+}
 
-void MazeTab::onSolveButtonClicked() {}
+void MazeTab::onSolveButtonClicked() {
+  int start_row = start_row_spin_box_->value();
+  int start_col = start_col_spin_box_->value();
+  int end_row = end_row_spin_box_->value();
+  int end_col = end_col_spin_box_->value();
+
+  facade_->solve({start_row, start_col}, {end_row, end_col});
+  renderer_->drawPath();
+}
 
 void MazeTab::initWindow() {
   facade_ = new MazeFacade();
@@ -169,6 +190,31 @@ void MazeTab::setupButtonLayout(QGridLayout* button_layout) {
   button_layout->addWidget(save_btn_, 1, 0);
   button_layout->addWidget(generate_btn_, 0, 1);
   button_layout->addWidget(solve_btn_, 1, 1);
+}
+
+void MazeTab::updateSolveSpinBoxRanges() {
+  int rows = facade_->maze().rows() - 1;
+  int cols = facade_->maze().cols() - 1;
+  start_row_spin_box_->setMinimum(0);
+  start_col_spin_box_->setMinimum(0);
+  end_row_spin_box_->setMinimum(0);
+  end_col_spin_box_->setMinimum(0);
+
+  start_row_spin_box_->setMaximum(rows);
+  start_col_spin_box_->setMaximum(cols);
+  start_row_spin_box_->setValue(0);
+  start_col_spin_box_->setValue(0);
+
+  end_row_spin_box_->setMaximum(rows);
+  end_col_spin_box_->setMaximum(cols);
+
+  end_row_spin_box_->setValue(rows);
+  end_col_spin_box_->setValue(cols);
+}
+
+void MazeTab::updateGenerateSpinBoxRanges() {
+  rows_spin_box_->setValue(facade_->maze().rows());
+  cols_spin_box_->setValue(facade_->maze().cols());
 }
 
 }  // namespace s21
