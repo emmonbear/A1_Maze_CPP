@@ -12,12 +12,16 @@
 #include "include/model/file_handler.h"
 
 #include <fstream>
+#include <sstream>
 #include <string>
 
 namespace s21 {
 
 void FileHandler::load(Maze* maze, const std::string& filename) {
   std::ifstream is{filename};
+  validateFile(is);
+  is.clear();
+  is.seekg(0, std::ios::beg);
   loadSize(maze, is);
   loadVerticalWalls(maze, is);
   loadHorizontalWalls(maze, is);
@@ -82,4 +86,40 @@ void FileHandler::saveHorizontalWalls(const Maze& maze, std::ostream& os) {
   }
 }
 
+void FileHandler::validateFile(std::istream& is) {
+  int rows{}, cols{};
+
+  if (!(is >> rows >> cols) || rows < 2 || rows > 50 || cols < 2 || cols > 50) {
+    throw std::runtime_error("Invalid file format");
+  }
+
+  int value{};
+
+  for (int i = 0; i < rows; ++i) {
+    for (int j = 0; j < cols; ++j) {
+      if (!(is >> value) || (value != 0 && value != 1)) {
+        throw std::runtime_error("Invalid file format");
+      }
+      if (j == cols - 1 && value != 1) {
+        throw std::runtime_error(
+            "Invalid file format: the last column in vertical walls matrix "
+            "must be filled with 1");
+      }
+    }
+
+    for (int i = 0; i < rows; ++i) {
+      for (int j = 0; j < cols; ++j) {
+        if (!(is >> value) || (value != 0 && value != 1)) {
+          throw std::runtime_error("Invalid file format");
+        }
+
+        if (j == cols - 1 && value != 1) {
+          throw std::runtime_error(
+              "Invalid file format: the last column in vertical walls matrix "
+              "must be filled with 1");
+        }
+      }
+    }
+  }
+}
 }  // namespace s21

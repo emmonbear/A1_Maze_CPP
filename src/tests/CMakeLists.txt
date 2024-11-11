@@ -5,40 +5,28 @@ project(tests)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(FACTORY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../modules/factory)
-set(FILE_HANDLER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../modules/file_handler)
-set(MAP_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../modules/map)
-set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../include)
+set(MODEL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../model/)
+set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../include/model)
 set(INCLUDE_TEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set(TEST_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/modules)
 
-set(FACTORY
-  ${FACTORY_DIR}/cave_creator.cc
-  ${FACTORY_DIR}/creator.cc
-  ${FACTORY_DIR}/maze_creator.cc
+set(MODEL
+  ${MODEL_DIR}/file_handler.cc
+  ${MODEL_DIR}/maze_generator.cc
+  ${MODEL_DIR}/maze_solver.cc
+  ${MODEL_DIR}/maze.cc
 )
 
-set(FILE_HANDLER
-  ${FILE_HANDLER_DIR}/file_handler.cc
-)
-
-set(MAP
-  ${MAP_DIR}/cave.cc
-  ${MAP_DIR}/maze.cc
-)
 set(HEADERS
-  ${INCLUDE_DIR}/factory/cave_creator.h
-  ${INCLUDE_DIR}/factory/creator.h
-  ${INCLUDE_DIR}/factory/maze_creator.h
-  ${INCLUDE_DIR}/file_handler/file_handler.h
-  ${INCLUDE_DIR}/map/cave.h
-  ${INCLUDE_DIR}/map/map.h
-  ${INCLUDE_DIR}/map/maze.h
+  ${INCLUDE_DIR}/file_handler.h
+  ${INCLUDE_DIR}/maze_generator.h
+  ${INCLUDE_DIR}/maze_solver.h
+  ${INCLUDE_DIR}/maze.h
+
 )
 
 set(TEST_HEADERS
   ${INCLUDE_TEST_DIR}/main_test.h
-  ${INCLUDE_TEST_DIR}/maze_test.h
 )
 
 set(TEST_SOURCES
@@ -53,10 +41,8 @@ set(MAIN
 )
 
 add_executable(${PROJECT_NAME}
-  ${TEST_SOURCES}
-  ${FACTORY}
-  ${FILE_HANDLER}
-  ${MAP}
+  # ${TEST_SOURCES}
+  ${MODEL}
   ${TEST_HEADERS}
   ${HEADERS}
   ${MAIN}

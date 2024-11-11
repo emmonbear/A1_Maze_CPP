@@ -15,6 +15,7 @@
 #include <QFormLayout>
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QMessageBox>
 #include <QSpinBox>
 #include <QVBoxLayout>
 
@@ -46,12 +47,16 @@ void MazeTab::onOpenFileButtonClicked() {
       nullptr, "Open Maze File", "../datasets", "Text Files (*.txt)");
 
   if (!file_path.isEmpty()) {
-    facade_->loadFromFile(file_path.toStdString());
-    renderer_->clearMaze();
-    renderer_->drawMaze();
-
-    updateGenerateSpinBoxRanges();
-    updateSolveSpinBoxRanges();
+    try {
+      facade_->loadFromFile(file_path.toStdString());
+      renderer_->clearMaze();
+      renderer_->drawMaze();
+      updateGenerateSpinBoxRanges();
+      updateSolveSpinBoxRanges();
+    } catch (const std::runtime_error& e) {
+      QMessageBox::critical(this, "File upload error",
+                            QString("Incorrect file format: %1").arg(e.what()));
+    }
   }
 }
 
