@@ -12,6 +12,7 @@
 #include "include/model/file_handler.h"
 
 #include <fstream>
+#include <iostream>
 #include <sstream>
 #include <string>
 
@@ -89,37 +90,58 @@ void FileHandler::saveHorizontalWalls(const Maze& maze, std::ostream& os) {
 void FileHandler::validateFile(std::istream& is) {
   int rows{}, cols{};
 
-  if (!(is >> rows >> cols) || rows < 2 || rows > 50 || cols < 2 || cols > 50) {
+  validateSize(is, &rows, &cols);
+  validateVerticalWalls(is, rows, cols);
+  validateHorizontalWalls(is, rows, cols);
+  checkForExtraData(is);
+}
+
+void FileHandler::validateSize(std::istream& is, int* rows, int* cols) {
+  if (!(is >> *rows >> *cols) || *rows < 2 || *rows > 50 || *cols < 2 ||
+      *cols > 50) {
     throw std::runtime_error("Invalid file format");
   }
+}
 
+void FileHandler::validateVerticalWalls(std::istream& is, int rows, int cols) {
   int value{};
-
   for (int i = 0; i < rows; ++i) {
     for (int j = 0; j < cols; ++j) {
-      if (!(is >> value) || (value != 0 && value != 1)) {
+      is >> value;
+      if (value != 0 && value != 1) {
         throw std::runtime_error("Invalid file format");
       }
-      if (j == cols - 1 && value != 1) {
-        throw std::runtime_error(
-            "Invalid file format: the last column in vertical walls matrix "
-            "must be filled with 1");
-      }
-    }
 
-    for (int i = 0; i < rows; ++i) {
-      for (int j = 0; j < cols; ++j) {
-        if (!(is >> value) || (value != 0 && value != 1)) {
-          throw std::runtime_error("Invalid file format");
-        }
-
-        if (j == cols - 1 && value != 1) {
-          throw std::runtime_error(
-              "Invalid file format: the last column in vertical walls matrix "
-              "must be filled with 1");
-        }
+      if (j == cols - 1 && value == 0) {
+        throw std::runtime_error("Invalid file format: vertical walls");
       }
     }
   }
 }
+
+void FileHandler::validateHorizontalWalls(std::istream& is, int rows,
+                                          int cols) {
+  int value{};
+
+  for (int i = 0; i < rows; ++i) {
+    for (int j = 0; j < cols; ++j) {
+      is >> value;
+      if (value != 0 && value != 1) {
+        throw std::runtime_error("Invalid file format");
+      }
+
+      if (i == rows - 1 && value != 1) {
+        throw std::runtime_error("Invalid file format: horizontal walls");
+      }
+    }
+  }
+}
+
+void FileHandler::checkForExtraData(std::istream& is) {
+  int extra_data_check;
+  if (is >> extra_data_check) {
+    throw std::runtime_error("Invalid file format: unexpected additional data");
+  }
+}
+
 }  // namespace s21

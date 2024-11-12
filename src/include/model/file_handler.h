@@ -30,6 +30,10 @@ class FileHandler {
   static void saveVerticalWalls(const Maze& maze, std::ostream& os);
   static void saveHorizontalWalls(const Maze& maze, std::ostream& os);
   static void validateFile(std::istream& is);
+  static void validateSize(std::istream& is, int* rows, int* cols);
+  static void validateVerticalWalls(std::istream& is, int rows, int cols);
+  static void validateHorizontalWalls(std::istream& is, int rows, int cols);
+  static void checkForExtraData(std::istream& is);
 };
 }  // namespace s21
 
