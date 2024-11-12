@@ -24,6 +24,456 @@ class FileLoaderTest : public ::testing::Test {
   std::string filename_ = "test_maze.txt";
 };
 
+TEST_F(FileLoaderTest, LoadFromFileInvalidRowsTest1) {
+  std::ofstream file(filename_);
+  file << "0 6\n";
+  file << "0 1 1 1 1 1\n";
+  file << "1 0 0 0 0 1\n";
+  file << "1 1 1 1 1 1\n";
+  file << "0 0 0 1 1 1\n";
+  file << "1 0 0 0 0 0\n";
+  file << "0 0 0 0 0 0\n";
+  file << "0 1 1 0 0 0\n";
+  file << "1 1 1 1 1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidRowsTest2) {
+  std::ofstream file(filename_);
+  file << "a 6\n";
+  file << "0 1 1 1 1 1\n";
+  file << "1 0 0 0 0 1\n";
+  file << "1 1 1 1 1 1\n";
+  file << "0 0 0 1 1 1\n";
+  file << "1 0 0 0 0 0\n";
+  file << "0 0 0 0 0 0\n";
+  file << "0 1 1 0 0 0\n";
+  file << "1 1 1 1 1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidRowsTest3) {
+  std::ofstream file(filename_);
+  file << "-3 6\n";
+  file << "0 1 1 1 1 1\n";
+  file << "1 0 0 0 0 1\n";
+  file << "1 1 1 1 1 1\n";
+  file << "0 0 0 1 1 1\n";
+  file << "1 0 0 0 0 0\n";
+  file << "0 0 0 0 0 0\n";
+  file << "0 1 1 0 0 0\n";
+  file << "1 1 1 1 1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidRowsTest4) {
+  std::ofstream file(filename_);
+  file << "3 62\n";
+  file << "0 1 1 1 1 1\n";
+  file << "1 0 0 0 0 1\n";
+  file << "1 1 1 1 1 1\n";
+  file << "0 0 0 1 1 1\n";
+  file << "1 0 0 0 0 0\n";
+  file << "0 0 0 0 0 0\n";
+  file << "0 1 1 0 0 0\n";
+  file << "1 1 1 1 1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidColsTest1) {
+  std::ofstream file(filename_);
+  file << "10 1\n";
+  file << "0 1 1 1 1 1\n";
+  file << "1 0 0 0 0 1\n";
+  file << "1 1 1 1 1 1\n";
+  file << "0 0 0 1 1 1\n";
+  file << "1 0 0 0 0 0\n";
+  file << "0 0 0 0 0 0\n";
+  file << "0 1 1 0 0 0\n";
+  file << "1 1 1 1 1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidColsTest2) {
+  std::ofstream file(filename_);
+  file << "10 -10\n";
+  file << "0 1 1 1 1 1\n";
+  file << "1 0 0 0 0 1\n";
+  file << "1 1 1 1 1 1\n";
+  file << "0 0 0 1 1 1\n";
+  file << "1 0 0 0 0 0\n";
+  file << "0 0 0 0 0 0\n";
+  file << "0 1 1 0 0 0\n";
+  file << "1 1 1 1 1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidColsTest3) {
+  std::ofstream file(filename_);
+  file << "10 51\n";
+  file << "0 1 1 1 1 1\n";
+  file << "1 0 0 0 0 1\n";
+  file << "1 1 1 1 1 1\n";
+  file << "0 0 0 1 1 1\n";
+  file << "1 0 0 0 0 0\n";
+  file << "0 0 0 0 0 0\n";
+  file << "0 1 1 0 0 0\n";
+  file << "1 1 1 1 1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidRowsAndColsTest1) {
+  std::ofstream file(filename_);
+  file << "67 51\n";
+  file << "0 1 1 1 1 1\n";
+  file << "1 0 0 0 0 1\n";
+  file << "1 1 1 1 1 1\n";
+  file << "0 0 0 1 1 1\n";
+  file << "1 0 0 0 0 0\n";
+  file << "0 0 0 0 0 0\n";
+  file << "0 1 1 0 0 0\n";
+  file << "1 1 1 1 1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidRowsAndColsTest2) {
+  std::ofstream file(filename_);
+  file << "1 0\n";
+  file << "0 1 1 1 1 1\n";
+  file << "1 0 0 0 0 1\n";
+  file << "1 1 1 1 1 1\n";
+  file << "0 0 0 1 1 1\n";
+  file << "1 0 0 0 0 0\n";
+  file << "0 0 0 0 0 0\n";
+  file << "0 1 1 0 0 0\n";
+  file << "1 1 1 1 1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidRowsAndColsTest3) {
+  std::ofstream file(filename_);
+  file << "51 0\n";
+  file << "0 1 1 1 1 1\n";
+  file << "1 0 0 0 0 1\n";
+  file << "1 1 1 1 1 1\n";
+  file << "0 0 0 1 1 1\n";
+  file << "1 0 0 0 0 0\n";
+  file << "0 0 0 0 0 0\n";
+  file << "0 1 1 0 0 0\n";
+  file << "1 1 1 1 1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidRowsAndColsTest4) {
+  std::ofstream file(filename_);
+  file << "1 78\n";
+  file << "0 1 1 1 1 1\n";
+  file << "1 0 0 0 0 1\n";
+  file << "1 1 1 1 1 1\n";
+  file << "0 0 0 1 1 1\n";
+  file << "1 0 0 0 0 0\n";
+  file << "0 0 0 0 0 0\n";
+  file << "0 1 1 0 0 0\n";
+  file << "1 1 1 1 1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidVerticalWallsTest1) {
+  std::ofstream file(filename_);
+  file << "2 2\n";
+  file << "1 0\n";
+  file << "0 1\n";
+  file << "0 0\n";
+  file << "1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL()
+        << "Expected std::runtime_error due to invalid vertical walls format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format: vertical walls");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidVerticalWallsTest2) {
+  std::ofstream file(filename_);
+  file << "2 2\n";
+  file << "1 1\n";
+  file << "0 0\n";
+  file << "0 0\n";
+  file << "1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL()
+        << "Expected std::runtime_error due to invalid vertical walls format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format: vertical walls");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidVerticalWallsTest3) {
+  std::ofstream file(filename_);
+  file << "2 2\n";
+  file << "1 0\n";
+  file << "0 0\n";
+  file << "0 0\n";
+  file << "1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL()
+        << "Expected std::runtime_error due to invalid vertical walls format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format: vertical walls");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidVerticalWallsTest4) {
+  std::ofstream file(filename_);
+  file << "2 2\n";
+  file << "0 1\n";
+  file << "0 1\n";
+  file << "3 0\n";
+  file << "0 0\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidHorizontalWallsTest1) {
+  std::ofstream file(filename_);
+  file << "2 2\n";
+  file << "1 1\n";
+  file << "0 1\n";
+  file << "0 0\n";
+  file << "0 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL()
+        << "Expected std::runtime_error due to invalid vertical walls format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format: horizontal walls");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidHorizontalWallsTest2) {
+  std::ofstream file(filename_);
+  file << "2 2\n";
+  file << "1 1\n";
+  file << "0 1\n";
+  file << "0 0\n";
+  file << "1 0\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL()
+        << "Expected std::runtime_error due to invalid vertical walls format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format: horizontal walls");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidHorizontalWallsTest3) {
+  std::ofstream file(filename_);
+  file << "2 2\n";
+  file << "1 1\n";
+  file << "0 1\n";
+  file << "0 0\n";
+  file << "0 0\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL()
+        << "Expected std::runtime_error due to invalid vertical walls format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format: horizontal walls");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileInvalidHorizontalWallsTest4) {
+  std::ofstream file(filename_);
+  file << "2 2\n";
+  file << "0 1\n";
+  file << "3 1\n";
+  file << "0 0\n";
+  file << "0 0\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to invalid file format";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
+TEST_F(FileLoaderTest, LoadFromFileExtraDateTest) {
+  std::ofstream file(filename_);
+  file << "2 2\n";
+  file << "0 1\n";
+  file << "0 1\n";
+  file << "0 0\n";
+  file << "1 1 1\n";
+  file.close();
+
+  try {
+    facade_.loadFromFile(filename_);
+    FAIL() << "Expected std::runtime_error due to unexpected additional data";
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "Invalid file format: unexpected additional data");
+  } catch (...) {
+    FAIL()
+        << "Expected std::runtime_error, but caught a different exception type";
+  }
+}
+
 TEST_F(FileLoaderTest, LoadFromFile2x2Test) {
   std::ofstream file(filename_);
   file << "2 2\n";
@@ -49,8 +499,6 @@ TEST_F(FileLoaderTest, LoadFromFile2x2Test) {
   EXPECT_EQ(h_walls_loaded[0][1], 0);
   EXPECT_EQ(h_walls_loaded[1][0], 1);
   EXPECT_EQ(h_walls_loaded[1][1], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile2x3Test) {
@@ -82,8 +530,6 @@ TEST_F(FileLoaderTest, LoadFromFile2x3Test) {
   EXPECT_EQ(h_walls_loaded[1][0], 1);
   EXPECT_EQ(h_walls_loaded[1][1], 1);
   EXPECT_EQ(h_walls_loaded[1][2], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile2x4Test) {
@@ -119,8 +565,6 @@ TEST_F(FileLoaderTest, LoadFromFile2x4Test) {
   EXPECT_EQ(h_walls_loaded[1][1], 1);
   EXPECT_EQ(h_walls_loaded[1][2], 1);
   EXPECT_EQ(h_walls_loaded[1][3], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile2x5Test) {
@@ -160,8 +604,6 @@ TEST_F(FileLoaderTest, LoadFromFile2x5Test) {
   EXPECT_EQ(h_walls_loaded[1][2], 1);
   EXPECT_EQ(h_walls_loaded[1][3], 1);
   EXPECT_EQ(h_walls_loaded[1][4], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile2x6Test) {
@@ -205,8 +647,6 @@ TEST_F(FileLoaderTest, LoadFromFile2x6Test) {
   EXPECT_EQ(h_walls_loaded[1][3], 1);
   EXPECT_EQ(h_walls_loaded[1][4], 1);
   EXPECT_EQ(h_walls_loaded[1][5], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile2x7Test) {
@@ -254,8 +694,6 @@ TEST_F(FileLoaderTest, LoadFromFile2x7Test) {
   EXPECT_EQ(h_walls_loaded[1][4], 1);
   EXPECT_EQ(h_walls_loaded[1][5], 1);
   EXPECT_EQ(h_walls_loaded[1][6], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile2x8Test) {
@@ -307,8 +745,6 @@ TEST_F(FileLoaderTest, LoadFromFile2x8Test) {
   EXPECT_EQ(h_walls_loaded[1][5], 1);
   EXPECT_EQ(h_walls_loaded[1][6], 1);
   EXPECT_EQ(h_walls_loaded[1][7], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile2x9Test) {
@@ -364,8 +800,6 @@ TEST_F(FileLoaderTest, LoadFromFile2x9Test) {
   EXPECT_EQ(h_walls_loaded[1][6], 1);
   EXPECT_EQ(h_walls_loaded[1][7], 1);
   EXPECT_EQ(h_walls_loaded[1][8], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile2x10Test) {
@@ -425,8 +859,6 @@ TEST_F(FileLoaderTest, LoadFromFile2x10Test) {
   EXPECT_EQ(h_walls_loaded[1][7], 1);
   EXPECT_EQ(h_walls_loaded[1][8], 1);
   EXPECT_EQ(h_walls_loaded[1][9], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile3x2Test) {
@@ -460,8 +892,6 @@ TEST_F(FileLoaderTest, LoadFromFile3x2Test) {
   EXPECT_EQ(h_walls_loaded[1][1], 0);
   EXPECT_EQ(h_walls_loaded[2][0], 1);
   EXPECT_EQ(h_walls_loaded[2][1], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile3x3Test) {
@@ -501,8 +931,6 @@ TEST_F(FileLoaderTest, LoadFromFile3x3Test) {
   EXPECT_EQ(h_walls_loaded[2][0], 1);
   EXPECT_EQ(h_walls_loaded[2][1], 1);
   EXPECT_EQ(h_walls_loaded[2][2], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile3x4Test) {
@@ -548,8 +976,6 @@ TEST_F(FileLoaderTest, LoadFromFile3x4Test) {
   EXPECT_EQ(h_walls_loaded[2][1], 1);
   EXPECT_EQ(h_walls_loaded[2][2], 1);
   EXPECT_EQ(h_walls_loaded[2][3], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile3x5Test) {
@@ -601,8 +1027,6 @@ TEST_F(FileLoaderTest, LoadFromFile3x5Test) {
   EXPECT_EQ(h_walls_loaded[2][2], 1);
   EXPECT_EQ(h_walls_loaded[2][3], 1);
   EXPECT_EQ(h_walls_loaded[2][4], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile3x6Test) {
@@ -660,8 +1084,6 @@ TEST_F(FileLoaderTest, LoadFromFile3x6Test) {
   EXPECT_EQ(h_walls_loaded[2][3], 1);
   EXPECT_EQ(h_walls_loaded[2][4], 1);
   EXPECT_EQ(h_walls_loaded[2][5], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile3x7Test) {
@@ -725,8 +1147,6 @@ TEST_F(FileLoaderTest, LoadFromFile3x7Test) {
   EXPECT_EQ(h_walls_loaded[2][4], 1);
   EXPECT_EQ(h_walls_loaded[2][5], 1);
   EXPECT_EQ(h_walls_loaded[2][6], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile3x8Test) {
@@ -796,8 +1216,6 @@ TEST_F(FileLoaderTest, LoadFromFile3x8Test) {
   EXPECT_EQ(h_walls_loaded[2][5], 1);
   EXPECT_EQ(h_walls_loaded[2][6], 1);
   EXPECT_EQ(h_walls_loaded[2][7], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile3x9Test) {
@@ -873,8 +1291,6 @@ TEST_F(FileLoaderTest, LoadFromFile3x9Test) {
   EXPECT_EQ(h_walls_loaded[2][6], 1);
   EXPECT_EQ(h_walls_loaded[2][7], 1);
   EXPECT_EQ(h_walls_loaded[2][8], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile3x10Test) {
@@ -956,8 +1372,6 @@ TEST_F(FileLoaderTest, LoadFromFile3x10Test) {
   EXPECT_EQ(h_walls_loaded[2][7], 1);
   EXPECT_EQ(h_walls_loaded[2][8], 1);
   EXPECT_EQ(h_walls_loaded[2][9], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile4x2Test) {
@@ -997,8 +1411,6 @@ TEST_F(FileLoaderTest, LoadFromFile4x2Test) {
   EXPECT_EQ(h_walls_loaded[2][1], 0);
   EXPECT_EQ(h_walls_loaded[3][0], 1);
   EXPECT_EQ(h_walls_loaded[3][1], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile4x3Test) {
@@ -1046,8 +1458,6 @@ TEST_F(FileLoaderTest, LoadFromFile4x3Test) {
   EXPECT_EQ(h_walls_loaded[3][0], 1);
   EXPECT_EQ(h_walls_loaded[3][1], 1);
   EXPECT_EQ(h_walls_loaded[3][2], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile4x4Test) {
@@ -1103,8 +1513,6 @@ TEST_F(FileLoaderTest, LoadFromFile4x4Test) {
   EXPECT_EQ(h_walls_loaded[3][1], 1);
   EXPECT_EQ(h_walls_loaded[3][2], 1);
   EXPECT_EQ(h_walls_loaded[3][3], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile4x5Test) {
@@ -1168,8 +1576,6 @@ TEST_F(FileLoaderTest, LoadFromFile4x5Test) {
   EXPECT_EQ(h_walls_loaded[3][2], 1);
   EXPECT_EQ(h_walls_loaded[3][3], 1);
   EXPECT_EQ(h_walls_loaded[3][4], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile4x6Test) {
@@ -1241,8 +1647,6 @@ TEST_F(FileLoaderTest, LoadFromFile4x6Test) {
   EXPECT_EQ(h_walls_loaded[3][3], 1);
   EXPECT_EQ(h_walls_loaded[3][4], 1);
   EXPECT_EQ(h_walls_loaded[3][5], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile4x7Test) {
@@ -1322,8 +1726,6 @@ TEST_F(FileLoaderTest, LoadFromFile4x7Test) {
   EXPECT_EQ(h_walls_loaded[3][4], 1);
   EXPECT_EQ(h_walls_loaded[3][5], 1);
   EXPECT_EQ(h_walls_loaded[3][6], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile4x8Test) {
@@ -1411,8 +1813,6 @@ TEST_F(FileLoaderTest, LoadFromFile4x8Test) {
   EXPECT_EQ(h_walls_loaded[3][5], 1);
   EXPECT_EQ(h_walls_loaded[3][6], 1);
   EXPECT_EQ(h_walls_loaded[3][7], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile4x9Test) {
@@ -1508,8 +1908,6 @@ TEST_F(FileLoaderTest, LoadFromFile4x9Test) {
   EXPECT_EQ(h_walls_loaded[3][6], 1);
   EXPECT_EQ(h_walls_loaded[3][7], 1);
   EXPECT_EQ(h_walls_loaded[3][8], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile4x10Test) {
@@ -1613,8 +2011,6 @@ TEST_F(FileLoaderTest, LoadFromFile4x10Test) {
   EXPECT_EQ(h_walls_loaded[3][7], 1);
   EXPECT_EQ(h_walls_loaded[3][8], 1);
   EXPECT_EQ(h_walls_loaded[3][9], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile5x2Test) {
@@ -1660,8 +2056,6 @@ TEST_F(FileLoaderTest, LoadFromFile5x2Test) {
   EXPECT_EQ(h_walls_loaded[3][1], 0);
   EXPECT_EQ(h_walls_loaded[4][0], 1);
   EXPECT_EQ(h_walls_loaded[4][1], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile5x3Test) {
@@ -1717,8 +2111,6 @@ TEST_F(FileLoaderTest, LoadFromFile5x3Test) {
   EXPECT_EQ(h_walls_loaded[4][0], 1);
   EXPECT_EQ(h_walls_loaded[4][1], 1);
   EXPECT_EQ(h_walls_loaded[4][2], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile5x4Test) {
@@ -1784,8 +2176,6 @@ TEST_F(FileLoaderTest, LoadFromFile5x4Test) {
   EXPECT_EQ(h_walls_loaded[4][1], 1);
   EXPECT_EQ(h_walls_loaded[4][2], 1);
   EXPECT_EQ(h_walls_loaded[4][3], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile5x5Test) {
@@ -1861,8 +2251,6 @@ TEST_F(FileLoaderTest, LoadFromFile5x5Test) {
   EXPECT_EQ(h_walls_loaded[4][2], 1);
   EXPECT_EQ(h_walls_loaded[4][3], 1);
   EXPECT_EQ(h_walls_loaded[4][4], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile5x6Test) {
@@ -1948,8 +2336,6 @@ TEST_F(FileLoaderTest, LoadFromFile5x6Test) {
   EXPECT_EQ(h_walls_loaded[4][3], 1);
   EXPECT_EQ(h_walls_loaded[4][4], 1);
   EXPECT_EQ(h_walls_loaded[4][5], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile5x7Test) {
@@ -2045,8 +2431,6 @@ TEST_F(FileLoaderTest, LoadFromFile5x7Test) {
   EXPECT_EQ(h_walls_loaded[4][4], 1);
   EXPECT_EQ(h_walls_loaded[4][5], 1);
   EXPECT_EQ(h_walls_loaded[4][6], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile5x8Test) {
@@ -2152,8 +2536,6 @@ TEST_F(FileLoaderTest, LoadFromFile5x8Test) {
   EXPECT_EQ(h_walls_loaded[4][5], 1);
   EXPECT_EQ(h_walls_loaded[4][6], 1);
   EXPECT_EQ(h_walls_loaded[4][7], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile5x9Test) {
@@ -2269,8 +2651,6 @@ TEST_F(FileLoaderTest, LoadFromFile5x9Test) {
   EXPECT_EQ(h_walls_loaded[4][6], 1);
   EXPECT_EQ(h_walls_loaded[4][7], 1);
   EXPECT_EQ(h_walls_loaded[4][8], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile5x10Test) {
@@ -2396,8 +2776,6 @@ TEST_F(FileLoaderTest, LoadFromFile5x10Test) {
   EXPECT_EQ(h_walls_loaded[4][7], 1);
   EXPECT_EQ(h_walls_loaded[4][8], 1);
   EXPECT_EQ(h_walls_loaded[4][9], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile6x2Test) {
@@ -2449,8 +2827,6 @@ TEST_F(FileLoaderTest, LoadFromFile6x2Test) {
   EXPECT_EQ(h_walls_loaded[4][1], 0);
   EXPECT_EQ(h_walls_loaded[5][0], 1);
   EXPECT_EQ(h_walls_loaded[5][1], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile6x3Test) {
@@ -2514,8 +2890,6 @@ TEST_F(FileLoaderTest, LoadFromFile6x3Test) {
   EXPECT_EQ(h_walls_loaded[5][0], 1);
   EXPECT_EQ(h_walls_loaded[5][1], 1);
   EXPECT_EQ(h_walls_loaded[5][2], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile6x4Test) {
@@ -2591,8 +2965,6 @@ TEST_F(FileLoaderTest, LoadFromFile6x4Test) {
   EXPECT_EQ(h_walls_loaded[5][1], 1);
   EXPECT_EQ(h_walls_loaded[5][2], 1);
   EXPECT_EQ(h_walls_loaded[5][3], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile6x5Test) {
@@ -2680,8 +3052,6 @@ TEST_F(FileLoaderTest, LoadFromFile6x5Test) {
   EXPECT_EQ(h_walls_loaded[5][2], 1);
   EXPECT_EQ(h_walls_loaded[5][3], 1);
   EXPECT_EQ(h_walls_loaded[5][4], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile6x6Test) {
@@ -2781,8 +3151,6 @@ TEST_F(FileLoaderTest, LoadFromFile6x6Test) {
   EXPECT_EQ(h_walls_loaded[5][3], 1);
   EXPECT_EQ(h_walls_loaded[5][4], 1);
   EXPECT_EQ(h_walls_loaded[5][5], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile6x7Test) {
@@ -2894,8 +3262,6 @@ TEST_F(FileLoaderTest, LoadFromFile6x7Test) {
   EXPECT_EQ(h_walls_loaded[5][4], 1);
   EXPECT_EQ(h_walls_loaded[5][5], 1);
   EXPECT_EQ(h_walls_loaded[5][6], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile6x8Test) {
@@ -3019,8 +3385,6 @@ TEST_F(FileLoaderTest, LoadFromFile6x8Test) {
   EXPECT_EQ(h_walls_loaded[5][5], 1);
   EXPECT_EQ(h_walls_loaded[5][6], 1);
   EXPECT_EQ(h_walls_loaded[5][7], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile6x9Test) {
@@ -3156,8 +3520,6 @@ TEST_F(FileLoaderTest, LoadFromFile6x9Test) {
   EXPECT_EQ(h_walls_loaded[5][6], 1);
   EXPECT_EQ(h_walls_loaded[5][7], 1);
   EXPECT_EQ(h_walls_loaded[5][8], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile6x10Test) {
@@ -3305,8 +3667,6 @@ TEST_F(FileLoaderTest, LoadFromFile6x10Test) {
   EXPECT_EQ(h_walls_loaded[5][7], 1);
   EXPECT_EQ(h_walls_loaded[5][8], 1);
   EXPECT_EQ(h_walls_loaded[5][9], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile7x2Test) {
@@ -3364,8 +3724,6 @@ TEST_F(FileLoaderTest, LoadFromFile7x2Test) {
   EXPECT_EQ(h_walls_loaded[5][1], 1);
   EXPECT_EQ(h_walls_loaded[6][0], 1);
   EXPECT_EQ(h_walls_loaded[6][1], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile7x3Test) {
@@ -3437,8 +3795,6 @@ TEST_F(FileLoaderTest, LoadFromFile7x3Test) {
   EXPECT_EQ(h_walls_loaded[6][0], 1);
   EXPECT_EQ(h_walls_loaded[6][1], 1);
   EXPECT_EQ(h_walls_loaded[6][2], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile7x4Test) {
@@ -3524,8 +3880,6 @@ TEST_F(FileLoaderTest, LoadFromFile7x4Test) {
   EXPECT_EQ(h_walls_loaded[6][1], 1);
   EXPECT_EQ(h_walls_loaded[6][2], 1);
   EXPECT_EQ(h_walls_loaded[6][3], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile7x5Test) {
@@ -3625,8 +3979,6 @@ TEST_F(FileLoaderTest, LoadFromFile7x5Test) {
   EXPECT_EQ(h_walls_loaded[6][2], 1);
   EXPECT_EQ(h_walls_loaded[6][3], 1);
   EXPECT_EQ(h_walls_loaded[6][4], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile7x6Test) {
@@ -3740,8 +4092,6 @@ TEST_F(FileLoaderTest, LoadFromFile7x6Test) {
   EXPECT_EQ(h_walls_loaded[6][3], 1);
   EXPECT_EQ(h_walls_loaded[6][4], 1);
   EXPECT_EQ(h_walls_loaded[6][5], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile7x7Test) {
@@ -3869,8 +4219,6 @@ TEST_F(FileLoaderTest, LoadFromFile7x7Test) {
   EXPECT_EQ(h_walls_loaded[6][4], 1);
   EXPECT_EQ(h_walls_loaded[6][5], 1);
   EXPECT_EQ(h_walls_loaded[6][6], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile7x8Test) {
@@ -4012,8 +4360,6 @@ TEST_F(FileLoaderTest, LoadFromFile7x8Test) {
   EXPECT_EQ(h_walls_loaded[6][5], 1);
   EXPECT_EQ(h_walls_loaded[6][6], 1);
   EXPECT_EQ(h_walls_loaded[6][7], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile7x9Test) {
@@ -4169,8 +4515,6 @@ TEST_F(FileLoaderTest, LoadFromFile7x9Test) {
   EXPECT_EQ(h_walls_loaded[6][6], 1);
   EXPECT_EQ(h_walls_loaded[6][7], 1);
   EXPECT_EQ(h_walls_loaded[6][8], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile7x10Test) {
@@ -4340,8 +4684,6 @@ TEST_F(FileLoaderTest, LoadFromFile7x10Test) {
   EXPECT_EQ(h_walls_loaded[6][7], 1);
   EXPECT_EQ(h_walls_loaded[6][8], 1);
   EXPECT_EQ(h_walls_loaded[6][9], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile8x2Test) {
@@ -4405,8 +4747,6 @@ TEST_F(FileLoaderTest, LoadFromFile8x2Test) {
   EXPECT_EQ(h_walls_loaded[6][1], 1);
   EXPECT_EQ(h_walls_loaded[7][0], 1);
   EXPECT_EQ(h_walls_loaded[7][1], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile8x3Test) {
@@ -4486,8 +4826,6 @@ TEST_F(FileLoaderTest, LoadFromFile8x3Test) {
   EXPECT_EQ(h_walls_loaded[7][0], 1);
   EXPECT_EQ(h_walls_loaded[7][1], 1);
   EXPECT_EQ(h_walls_loaded[7][2], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile8x4Test) {
@@ -4583,8 +4921,6 @@ TEST_F(FileLoaderTest, LoadFromFile8x4Test) {
   EXPECT_EQ(h_walls_loaded[7][1], 1);
   EXPECT_EQ(h_walls_loaded[7][2], 1);
   EXPECT_EQ(h_walls_loaded[7][3], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile8x5Test) {
@@ -4696,8 +5032,6 @@ TEST_F(FileLoaderTest, LoadFromFile8x5Test) {
   EXPECT_EQ(h_walls_loaded[7][2], 1);
   EXPECT_EQ(h_walls_loaded[7][3], 1);
   EXPECT_EQ(h_walls_loaded[7][4], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile8x6Test) {
@@ -4825,8 +5159,6 @@ TEST_F(FileLoaderTest, LoadFromFile8x6Test) {
   EXPECT_EQ(h_walls_loaded[7][3], 1);
   EXPECT_EQ(h_walls_loaded[7][4], 1);
   EXPECT_EQ(h_walls_loaded[7][5], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile8x7Test) {
@@ -4970,8 +5302,6 @@ TEST_F(FileLoaderTest, LoadFromFile8x7Test) {
   EXPECT_EQ(h_walls_loaded[7][4], 1);
   EXPECT_EQ(h_walls_loaded[7][5], 1);
   EXPECT_EQ(h_walls_loaded[7][6], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile8x8Test) {
@@ -5131,8 +5461,6 @@ TEST_F(FileLoaderTest, LoadFromFile8x8Test) {
   EXPECT_EQ(h_walls_loaded[7][5], 1);
   EXPECT_EQ(h_walls_loaded[7][6], 1);
   EXPECT_EQ(h_walls_loaded[7][7], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile8x9Test) {
@@ -5308,8 +5636,6 @@ TEST_F(FileLoaderTest, LoadFromFile8x9Test) {
   EXPECT_EQ(h_walls_loaded[7][6], 1);
   EXPECT_EQ(h_walls_loaded[7][7], 1);
   EXPECT_EQ(h_walls_loaded[7][8], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile8x10Test) {
@@ -5501,8 +5827,6 @@ TEST_F(FileLoaderTest, LoadFromFile8x10Test) {
   EXPECT_EQ(h_walls_loaded[7][7], 1);
   EXPECT_EQ(h_walls_loaded[7][8], 1);
   EXPECT_EQ(h_walls_loaded[7][9], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile9x2Test) {
@@ -5572,8 +5896,6 @@ TEST_F(FileLoaderTest, LoadFromFile9x2Test) {
   EXPECT_EQ(h_walls_loaded[7][1], 0);
   EXPECT_EQ(h_walls_loaded[8][0], 1);
   EXPECT_EQ(h_walls_loaded[8][1], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile9x3Test) {
@@ -5661,8 +5983,6 @@ TEST_F(FileLoaderTest, LoadFromFile9x3Test) {
   EXPECT_EQ(h_walls_loaded[8][0], 1);
   EXPECT_EQ(h_walls_loaded[8][1], 1);
   EXPECT_EQ(h_walls_loaded[8][2], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile9x4Test) {
@@ -5768,8 +6088,6 @@ TEST_F(FileLoaderTest, LoadFromFile9x4Test) {
   EXPECT_EQ(h_walls_loaded[8][1], 1);
   EXPECT_EQ(h_walls_loaded[8][2], 1);
   EXPECT_EQ(h_walls_loaded[8][3], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile9x5Test) {
@@ -5893,8 +6211,6 @@ TEST_F(FileLoaderTest, LoadFromFile9x5Test) {
   EXPECT_EQ(h_walls_loaded[8][2], 1);
   EXPECT_EQ(h_walls_loaded[8][3], 1);
   EXPECT_EQ(h_walls_loaded[8][4], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile9x6Test) {
@@ -6036,8 +6352,6 @@ TEST_F(FileLoaderTest, LoadFromFile9x6Test) {
   EXPECT_EQ(h_walls_loaded[8][3], 1);
   EXPECT_EQ(h_walls_loaded[8][4], 1);
   EXPECT_EQ(h_walls_loaded[8][5], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile9x7Test) {
@@ -6197,8 +6511,6 @@ TEST_F(FileLoaderTest, LoadFromFile9x7Test) {
   EXPECT_EQ(h_walls_loaded[8][4], 1);
   EXPECT_EQ(h_walls_loaded[8][5], 1);
   EXPECT_EQ(h_walls_loaded[8][6], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile9x8Test) {
@@ -6376,8 +6688,6 @@ TEST_F(FileLoaderTest, LoadFromFile9x8Test) {
   EXPECT_EQ(h_walls_loaded[8][5], 1);
   EXPECT_EQ(h_walls_loaded[8][6], 1);
   EXPECT_EQ(h_walls_loaded[8][7], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile9x9Test) {
@@ -6573,8 +6883,6 @@ TEST_F(FileLoaderTest, LoadFromFile9x9Test) {
   EXPECT_EQ(h_walls_loaded[8][6], 1);
   EXPECT_EQ(h_walls_loaded[8][7], 1);
   EXPECT_EQ(h_walls_loaded[8][8], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile9x10Test) {
@@ -6788,8 +7096,6 @@ TEST_F(FileLoaderTest, LoadFromFile9x10Test) {
   EXPECT_EQ(h_walls_loaded[8][7], 1);
   EXPECT_EQ(h_walls_loaded[8][8], 1);
   EXPECT_EQ(h_walls_loaded[8][9], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile10x2Test) {
@@ -6865,8 +7171,6 @@ TEST_F(FileLoaderTest, LoadFromFile10x2Test) {
   EXPECT_EQ(h_walls_loaded[8][1], 0);
   EXPECT_EQ(h_walls_loaded[9][0], 1);
   EXPECT_EQ(h_walls_loaded[9][1], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile10x3Test) {
@@ -6962,8 +7266,6 @@ TEST_F(FileLoaderTest, LoadFromFile10x3Test) {
   EXPECT_EQ(h_walls_loaded[9][0], 1);
   EXPECT_EQ(h_walls_loaded[9][1], 1);
   EXPECT_EQ(h_walls_loaded[9][2], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile10x4Test) {
@@ -7079,8 +7381,6 @@ TEST_F(FileLoaderTest, LoadFromFile10x4Test) {
   EXPECT_EQ(h_walls_loaded[9][1], 1);
   EXPECT_EQ(h_walls_loaded[9][2], 1);
   EXPECT_EQ(h_walls_loaded[9][3], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile10x5Test) {
@@ -7216,8 +7516,6 @@ TEST_F(FileLoaderTest, LoadFromFile10x5Test) {
   EXPECT_EQ(h_walls_loaded[9][2], 1);
   EXPECT_EQ(h_walls_loaded[9][3], 1);
   EXPECT_EQ(h_walls_loaded[9][4], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile10x6Test) {
@@ -7373,8 +7671,6 @@ TEST_F(FileLoaderTest, LoadFromFile10x6Test) {
   EXPECT_EQ(h_walls_loaded[9][3], 1);
   EXPECT_EQ(h_walls_loaded[9][4], 1);
   EXPECT_EQ(h_walls_loaded[9][5], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile10x7Test) {
@@ -7550,8 +7846,6 @@ TEST_F(FileLoaderTest, LoadFromFile10x7Test) {
   EXPECT_EQ(h_walls_loaded[9][4], 1);
   EXPECT_EQ(h_walls_loaded[9][5], 1);
   EXPECT_EQ(h_walls_loaded[9][6], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile10x8Test) {
@@ -7747,8 +8041,6 @@ TEST_F(FileLoaderTest, LoadFromFile10x8Test) {
   EXPECT_EQ(h_walls_loaded[9][5], 1);
   EXPECT_EQ(h_walls_loaded[9][6], 1);
   EXPECT_EQ(h_walls_loaded[9][7], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile10x9Test) {
@@ -7964,8 +8256,6 @@ TEST_F(FileLoaderTest, LoadFromFile10x9Test) {
   EXPECT_EQ(h_walls_loaded[9][6], 1);
   EXPECT_EQ(h_walls_loaded[9][7], 1);
   EXPECT_EQ(h_walls_loaded[9][8], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile10x10Test) {
@@ -8201,8 +8491,6 @@ TEST_F(FileLoaderTest, LoadFromFile10x10Test) {
   EXPECT_EQ(h_walls_loaded[9][7], 1);
   EXPECT_EQ(h_walls_loaded[9][8], 1);
   EXPECT_EQ(h_walls_loaded[9][9], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile15x22Test) {
@@ -8908,8 +9196,6 @@ TEST_F(FileLoaderTest, LoadFromFile15x22Test) {
   EXPECT_EQ(h_walls_loaded[14][19], 1);
   EXPECT_EQ(h_walls_loaded[14][20], 1);
   EXPECT_EQ(h_walls_loaded[14][21], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile15x23Test) {
@@ -9645,8 +9931,6 @@ TEST_F(FileLoaderTest, LoadFromFile15x23Test) {
   EXPECT_EQ(h_walls_loaded[14][20], 1);
   EXPECT_EQ(h_walls_loaded[14][21], 1);
   EXPECT_EQ(h_walls_loaded[14][22], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile16x22Test) {
@@ -10398,8 +10682,6 @@ TEST_F(FileLoaderTest, LoadFromFile16x22Test) {
   EXPECT_EQ(h_walls_loaded[15][19], 1);
   EXPECT_EQ(h_walls_loaded[15][20], 1);
   EXPECT_EQ(h_walls_loaded[15][21], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile16x23Test) {
@@ -11183,8 +11465,6 @@ TEST_F(FileLoaderTest, LoadFromFile16x23Test) {
   EXPECT_EQ(h_walls_loaded[15][20], 1);
   EXPECT_EQ(h_walls_loaded[15][21], 1);
   EXPECT_EQ(h_walls_loaded[15][22], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile28x45Test) {
@@ -13832,8 +14112,6 @@ TEST_F(FileLoaderTest, LoadFromFile28x45Test) {
   EXPECT_EQ(h_walls_loaded[27][42], 1);
   EXPECT_EQ(h_walls_loaded[27][43], 1);
   EXPECT_EQ(h_walls_loaded[27][44], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile50x49Test) {
@@ -18949,8 +19227,6 @@ TEST_F(FileLoaderTest, LoadFromFile50x49Test) {
   EXPECT_EQ(h_walls_loaded[49][46], 1);
   EXPECT_EQ(h_walls_loaded[49][47], 1);
   EXPECT_EQ(h_walls_loaded[49][48], 1);
-
-  std::remove(filename_.c_str());
 }
 
 TEST_F(FileLoaderTest, LoadFromFile50x50Test) {
@@ -24166,6 +24442,4 @@ TEST_F(FileLoaderTest, LoadFromFile50x50Test) {
   EXPECT_EQ(h_walls_loaded[49][47], 1);
   EXPECT_EQ(h_walls_loaded[49][48], 1);
   EXPECT_EQ(h_walls_loaded[49][49], 1);
-
-  std::remove(filename_.c_str());
 }
