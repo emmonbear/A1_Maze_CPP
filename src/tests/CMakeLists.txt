@@ -6,7 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(MODEL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../model/)
-set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../include/model)
+set(CONTROLLER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../controller/)
+set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../include/)
 set(INCLUDE_TEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set(TEST_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/modules)
 
@@ -17,11 +18,16 @@ set(MODEL
   ${MODEL_DIR}/maze.cc
 )
 
+set(CONTROLLER
+  ${CONTROLLER_DIR}/maze_facade.cc
+)
+
 set(HEADERS
-  ${INCLUDE_DIR}/file_handler.h
-  ${INCLUDE_DIR}/maze_generator.h
-  ${INCLUDE_DIR}/maze_solver.h
-  ${INCLUDE_DIR}/maze.h
+  ${INCLUDE_DIR}/model/file_handler.h
+  ${INCLUDE_DIR}/model/maze_generator.h
+  ${INCLUDE_DIR}/model/maze_solver.h
+  ${INCLUDE_DIR}/model/maze.h
+  ${INCLUDE_DIR}/controller/maze_facade.h
 
 )
 
@@ -30,7 +36,7 @@ set(TEST_HEADERS
 )
 
 set(TEST_SOURCES
-  ${TEST_SOURCE_DIR}/maze_test.cc
+  ${TEST_SOURCE_DIR}/maze_load_test.cc
 )
 
 find_package(GTest REQUIRED)
@@ -41,7 +47,8 @@ set(MAIN
 )
 
 add_executable(${PROJECT_NAME}
-  # ${TEST_SOURCES}
+  ${TEST_SOURCES}
+  ${CONTROLLER}
   ${MODEL}
   ${TEST_HEADERS}
   ${HEADERS}
