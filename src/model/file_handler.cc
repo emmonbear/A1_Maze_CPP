@@ -68,8 +68,11 @@ void FileHandler::saveSize(const Maze& maze, std::ostream& os) {
 
 void FileHandler::saveVerticalWalls(const Maze& maze, std::ostream& os) {
   for (const auto& row : maze.v_walls_) {
-    for (const auto& col : row) {
-      os << static_cast<int>(col) << " ";
+    for (size_t col = 0; col < row.size(); ++col) {
+      os << static_cast<int>(row[col]);
+      if (col < row.size() - 1) {
+        os << " ";
+      }
     }
 
     os << "\n";
@@ -80,8 +83,11 @@ void FileHandler::saveVerticalWalls(const Maze& maze, std::ostream& os) {
 
 void FileHandler::saveHorizontalWalls(const Maze& maze, std::ostream& os) {
   for (const auto& row : maze.h_walls_) {
-    for (const auto& col : row) {
-      os << static_cast<int>(col) << " ";
+    for (size_t col = 0; col < row.size(); ++col) {
+      os << static_cast<int>(row[col]);
+      if (col < row.size() - 1) {
+        os << " ";
+      }
     }
     os << "\n";
   }
