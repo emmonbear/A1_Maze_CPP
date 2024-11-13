@@ -1,7 +1,7 @@
 /**
  * @file maze_load_test.cc
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
- * @brief
+ * @brief Implementation file for the FileHandler::load
  * @version 1.0
  * @date 2024-11-12
  *
