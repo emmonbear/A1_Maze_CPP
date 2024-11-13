@@ -37,6 +37,7 @@ set(TEST_HEADERS
 
 set(TEST_SOURCES
   ${TEST_SOURCE_DIR}/maze_load_test.cc
+  ${TEST_SOURCE_DIR}/maze_save_test.cc
 )
 
 find_package(GTest REQUIRED)
