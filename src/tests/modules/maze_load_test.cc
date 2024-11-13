@@ -9,12 +9,13 @@
  *
  */
 
-#include <cstdio>
 #include <fstream>
 #include <string>
 
 #include "include/controller/maze_facade.h"
 #include "tests/include/main_test.h"
+
+namespace Test {
 
 class FileLoaderTest : public ::testing::Test {
  protected:
@@ -24443,3 +24444,4 @@ TEST_F(FileLoaderTest, LoadFromFile50x50Test) {
   EXPECT_EQ(h_walls_loaded[49][48], 1);
   EXPECT_EQ(h_walls_loaded[49][49], 1);
 }
+}  // namespace Test

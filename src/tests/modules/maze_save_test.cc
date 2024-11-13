@@ -9,12 +9,13 @@
  *
  */
 
-#include <cstdio>
 #include <fstream>
 #include <string>
 
 #include "include/controller/maze_facade.h"
 #include "tests/include/main_test.h"
+
+namespace Test {
 
 class FileSaverTest : public ::testing::Test {
  protected:
@@ -43810,3 +43811,4 @@ TEST_F(FileSaverTest, SaveToFile50x50Test) {
   std::remove(input_.c_str());
   std::remove(output_.c_str());
 }
+}  // namespace Test
