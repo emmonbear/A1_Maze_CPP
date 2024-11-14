@@ -84,8 +84,12 @@ void MazeTab::onSolveButtonClicked() {
   int end_row = end_row_spin_box_->value();
   int end_col = end_col_spin_box_->value();
 
-  facade_->solve({start_row, start_col}, {end_row, end_col});
-  renderer_->drawPath();
+  try {
+    facade_->solve({start_row, start_col}, {end_row, end_col});
+    renderer_->drawPath();
+  } catch (const std::runtime_error& e) {
+    QMessageBox::critical(this, "Maze solve error", QString(e.what()));
+  }
 }
 
 void MazeTab::initWindow() {

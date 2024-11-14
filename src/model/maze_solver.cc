@@ -11,6 +11,9 @@
 
 #include "include/model/maze_solver.h"
 
+#include <stdexcept>
+#include <string>
+
 namespace s21 {
 
 MazeSolver::MazeSolver(Maze* maze, Maze::Point start, Maze::Point end)
@@ -21,7 +24,9 @@ MazeSolver::MazeSolver(Maze* maze, Maze::Point start, Maze::Point end)
 
 void MazeSolver::solve() {
   maze_->free_path();
-  dfs(start_.first, start_.second);
+  if (!dfs(start_.first, start_.second)) {
+    throw std::runtime_error("No solution found for the maze.");
+  }
 }
 
 bool MazeSolver::dfs(int row, int col) {
