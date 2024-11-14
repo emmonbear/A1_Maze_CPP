@@ -29,9 +29,7 @@ set(CONTROLLER
 
 set(VIEW
   ${VIEW_DIR}/main_window.cc
-  ${VIEW_DIR}/cave_tab.cc
-  ${VIEW_DIR}/maze_tab.cc
-  ${VIEW_DIR}/maze_renderer.cc
+  ${VIEW_DIR}/renderer.cc
 )
 
 set(HEADERS
@@ -40,11 +38,9 @@ set(HEADERS
   ${INCLUDE_DIR}/model/file_handler.h
   ${INCLUDE_DIR}/model/solver.h
   ${INCLUDE_DIR}/controller/facade.h
-  ${INCLUDE_DIR}/view/cave_tab.h
-  ${INCLUDE_DIR}/view/maze_tab.h
-  ${INCLUDE_DIR}/view/settings.h
   ${INCLUDE_DIR}/view/main_window.h
-  ${INCLUDE_DIR}/view/maze_renderer.h
+  ${INCLUDE_DIR}/view/settings.h
+  ${INCLUDE_DIR}/view/renderer.h
 
 )
 

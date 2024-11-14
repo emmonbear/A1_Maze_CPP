@@ -1,7 +1,7 @@
 /**
- * @file maze_solver.cc
+ * @file solver.cc
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
- * @brief Implementation file for the MazeSolver class
+ * @brief Implementation file for the Solver class
  * @version 1.0
  * @date 2024-11-05
  *
@@ -16,20 +16,20 @@
 
 namespace s21 {
 
-MazeSolver::MazeSolver(Maze* maze, Maze::Point start, Maze::Point end)
+Solver::Solver(Maze* maze, Maze::Point start, Maze::Point end)
     : maze_{maze},
       start_{start},
       end_{end},
       visited_(maze_->rows_, Maze::WallVector(maze_->cols_, false)) {}
 
-void MazeSolver::solve() {
+void Solver::solve() {
   maze_->free_path();
   if (!dfs(start_.first, start_.second)) {
     throw std::runtime_error("No solution found for the maze.");
   }
 }
 
-bool MazeSolver::dfs(int row, int col) {
+bool Solver::dfs(int row, int col) {
   if (row < 0 || row >= maze_->rows() || col < 0 || col >= maze_->cols() ||
       visited_[row][col]) {
     return false;
@@ -54,7 +54,7 @@ bool MazeSolver::dfs(int row, int col) {
   return false;
 }
 
-bool MazeSolver::canMoveTo(int row, int col, direction dir) {
+bool Solver::canMoveTo(int row, int col, direction dir) {
   switch (dir) {
     case direction::kLeft:
       return col > 0 && !maze_->v_walls_[row][col - 1];

@@ -1,5 +1,5 @@
 /**
- * @file maze_load_test.cc
+ * @file load_test.cc
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
  * @brief Implementation file for the FileHandler::load
  * @version 1.0
@@ -21,7 +21,7 @@ class FileLoaderTest : public ::testing::Test {
  protected:
   void TearDown() override { std::remove(filename_.c_str()); }
 
-  s21::MazeFacade facade_;
+  s21::Facade facade_;
   std::string filename_ = "test_maze.txt";
 };
 

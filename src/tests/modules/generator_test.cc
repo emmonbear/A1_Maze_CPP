@@ -1,7 +1,7 @@
 /**
- * @file maze_generator_test.cc
+ * @file generator_test.cc
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
- * @brief Implementation file for the MazeGenerator class tests
+ * @brief Implementation file for the Generator class tests
  * @version 1.0
  * @date 2024-11-13
  *
@@ -17,15 +17,15 @@
 
 namespace Test {
 
-class MazeGeneratorTest : public ::testing::Test {
+class GeneratorTest : public ::testing::Test {
  protected:
   void TearDown() override {}
 
-  s21::MazeFacade facade_;
+  s21::Facade facade_;
   int rows_{}, cols_{};
 };
 
-TEST_F(MazeGeneratorTest, Generate2x2Test) {
+TEST_F(GeneratorTest, Generate2x2Test) {
   rows_ = 2;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -45,7 +45,7 @@ TEST_F(MazeGeneratorTest, Generate2x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x3Test) {
+TEST_F(GeneratorTest, Generate2x3Test) {
   rows_ = 2;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -65,7 +65,7 @@ TEST_F(MazeGeneratorTest, Generate2x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x4Test) {
+TEST_F(GeneratorTest, Generate2x4Test) {
   rows_ = 2;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -85,7 +85,7 @@ TEST_F(MazeGeneratorTest, Generate2x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x5Test) {
+TEST_F(GeneratorTest, Generate2x5Test) {
   rows_ = 2;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -105,7 +105,7 @@ TEST_F(MazeGeneratorTest, Generate2x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x6Test) {
+TEST_F(GeneratorTest, Generate2x6Test) {
   rows_ = 2;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -125,7 +125,7 @@ TEST_F(MazeGeneratorTest, Generate2x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x7Test) {
+TEST_F(GeneratorTest, Generate2x7Test) {
   rows_ = 2;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -145,7 +145,7 @@ TEST_F(MazeGeneratorTest, Generate2x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x8Test) {
+TEST_F(GeneratorTest, Generate2x8Test) {
   rows_ = 2;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -165,7 +165,7 @@ TEST_F(MazeGeneratorTest, Generate2x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x9Test) {
+TEST_F(GeneratorTest, Generate2x9Test) {
   rows_ = 2;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -185,7 +185,7 @@ TEST_F(MazeGeneratorTest, Generate2x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x10Test) {
+TEST_F(GeneratorTest, Generate2x10Test) {
   rows_ = 2;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -205,7 +205,7 @@ TEST_F(MazeGeneratorTest, Generate2x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x11Test) {
+TEST_F(GeneratorTest, Generate2x11Test) {
   rows_ = 2;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -225,7 +225,7 @@ TEST_F(MazeGeneratorTest, Generate2x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x12Test) {
+TEST_F(GeneratorTest, Generate2x12Test) {
   rows_ = 2;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -245,7 +245,7 @@ TEST_F(MazeGeneratorTest, Generate2x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x13Test) {
+TEST_F(GeneratorTest, Generate2x13Test) {
   rows_ = 2;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -265,7 +265,7 @@ TEST_F(MazeGeneratorTest, Generate2x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x14Test) {
+TEST_F(GeneratorTest, Generate2x14Test) {
   rows_ = 2;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -285,7 +285,7 @@ TEST_F(MazeGeneratorTest, Generate2x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x15Test) {
+TEST_F(GeneratorTest, Generate2x15Test) {
   rows_ = 2;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -305,7 +305,7 @@ TEST_F(MazeGeneratorTest, Generate2x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x16Test) {
+TEST_F(GeneratorTest, Generate2x16Test) {
   rows_ = 2;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -325,7 +325,7 @@ TEST_F(MazeGeneratorTest, Generate2x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x17Test) {
+TEST_F(GeneratorTest, Generate2x17Test) {
   rows_ = 2;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -345,7 +345,7 @@ TEST_F(MazeGeneratorTest, Generate2x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x18Test) {
+TEST_F(GeneratorTest, Generate2x18Test) {
   rows_ = 2;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -365,7 +365,7 @@ TEST_F(MazeGeneratorTest, Generate2x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x19Test) {
+TEST_F(GeneratorTest, Generate2x19Test) {
   rows_ = 2;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -385,7 +385,7 @@ TEST_F(MazeGeneratorTest, Generate2x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x20Test) {
+TEST_F(GeneratorTest, Generate2x20Test) {
   rows_ = 2;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -405,7 +405,7 @@ TEST_F(MazeGeneratorTest, Generate2x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x21Test) {
+TEST_F(GeneratorTest, Generate2x21Test) {
   rows_ = 2;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -425,7 +425,7 @@ TEST_F(MazeGeneratorTest, Generate2x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x22Test) {
+TEST_F(GeneratorTest, Generate2x22Test) {
   rows_ = 2;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -445,7 +445,7 @@ TEST_F(MazeGeneratorTest, Generate2x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x23Test) {
+TEST_F(GeneratorTest, Generate2x23Test) {
   rows_ = 2;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -465,7 +465,7 @@ TEST_F(MazeGeneratorTest, Generate2x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x24Test) {
+TEST_F(GeneratorTest, Generate2x24Test) {
   rows_ = 2;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -485,7 +485,7 @@ TEST_F(MazeGeneratorTest, Generate2x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x25Test) {
+TEST_F(GeneratorTest, Generate2x25Test) {
   rows_ = 2;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -505,7 +505,7 @@ TEST_F(MazeGeneratorTest, Generate2x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x26Test) {
+TEST_F(GeneratorTest, Generate2x26Test) {
   rows_ = 2;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -525,7 +525,7 @@ TEST_F(MazeGeneratorTest, Generate2x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x27Test) {
+TEST_F(GeneratorTest, Generate2x27Test) {
   rows_ = 2;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -545,7 +545,7 @@ TEST_F(MazeGeneratorTest, Generate2x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x28Test) {
+TEST_F(GeneratorTest, Generate2x28Test) {
   rows_ = 2;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -565,7 +565,7 @@ TEST_F(MazeGeneratorTest, Generate2x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x29Test) {
+TEST_F(GeneratorTest, Generate2x29Test) {
   rows_ = 2;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -585,7 +585,7 @@ TEST_F(MazeGeneratorTest, Generate2x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x30Test) {
+TEST_F(GeneratorTest, Generate2x30Test) {
   rows_ = 2;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -605,7 +605,7 @@ TEST_F(MazeGeneratorTest, Generate2x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x31Test) {
+TEST_F(GeneratorTest, Generate2x31Test) {
   rows_ = 2;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -625,7 +625,7 @@ TEST_F(MazeGeneratorTest, Generate2x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x32Test) {
+TEST_F(GeneratorTest, Generate2x32Test) {
   rows_ = 2;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -645,7 +645,7 @@ TEST_F(MazeGeneratorTest, Generate2x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x33Test) {
+TEST_F(GeneratorTest, Generate2x33Test) {
   rows_ = 2;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -665,7 +665,7 @@ TEST_F(MazeGeneratorTest, Generate2x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x34Test) {
+TEST_F(GeneratorTest, Generate2x34Test) {
   rows_ = 2;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -685,7 +685,7 @@ TEST_F(MazeGeneratorTest, Generate2x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x35Test) {
+TEST_F(GeneratorTest, Generate2x35Test) {
   rows_ = 2;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -705,7 +705,7 @@ TEST_F(MazeGeneratorTest, Generate2x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x36Test) {
+TEST_F(GeneratorTest, Generate2x36Test) {
   rows_ = 2;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -725,7 +725,7 @@ TEST_F(MazeGeneratorTest, Generate2x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x37Test) {
+TEST_F(GeneratorTest, Generate2x37Test) {
   rows_ = 2;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -745,7 +745,7 @@ TEST_F(MazeGeneratorTest, Generate2x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x38Test) {
+TEST_F(GeneratorTest, Generate2x38Test) {
   rows_ = 2;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -765,7 +765,7 @@ TEST_F(MazeGeneratorTest, Generate2x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x39Test) {
+TEST_F(GeneratorTest, Generate2x39Test) {
   rows_ = 2;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -785,7 +785,7 @@ TEST_F(MazeGeneratorTest, Generate2x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x40Test) {
+TEST_F(GeneratorTest, Generate2x40Test) {
   rows_ = 2;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -805,7 +805,7 @@ TEST_F(MazeGeneratorTest, Generate2x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x41Test) {
+TEST_F(GeneratorTest, Generate2x41Test) {
   rows_ = 2;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -825,7 +825,7 @@ TEST_F(MazeGeneratorTest, Generate2x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x42Test) {
+TEST_F(GeneratorTest, Generate2x42Test) {
   rows_ = 2;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -845,7 +845,7 @@ TEST_F(MazeGeneratorTest, Generate2x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x43Test) {
+TEST_F(GeneratorTest, Generate2x43Test) {
   rows_ = 2;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -865,7 +865,7 @@ TEST_F(MazeGeneratorTest, Generate2x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x44Test) {
+TEST_F(GeneratorTest, Generate2x44Test) {
   rows_ = 2;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -885,7 +885,7 @@ TEST_F(MazeGeneratorTest, Generate2x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x45Test) {
+TEST_F(GeneratorTest, Generate2x45Test) {
   rows_ = 2;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -905,7 +905,7 @@ TEST_F(MazeGeneratorTest, Generate2x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x46Test) {
+TEST_F(GeneratorTest, Generate2x46Test) {
   rows_ = 2;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -925,7 +925,7 @@ TEST_F(MazeGeneratorTest, Generate2x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x47Test) {
+TEST_F(GeneratorTest, Generate2x47Test) {
   rows_ = 2;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -945,7 +945,7 @@ TEST_F(MazeGeneratorTest, Generate2x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x48Test) {
+TEST_F(GeneratorTest, Generate2x48Test) {
   rows_ = 2;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -965,7 +965,7 @@ TEST_F(MazeGeneratorTest, Generate2x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x49Test) {
+TEST_F(GeneratorTest, Generate2x49Test) {
   rows_ = 2;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -985,7 +985,7 @@ TEST_F(MazeGeneratorTest, Generate2x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate2x50Test) {
+TEST_F(GeneratorTest, Generate2x50Test) {
   rows_ = 2;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -1005,7 +1005,7 @@ TEST_F(MazeGeneratorTest, Generate2x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x2Test) {
+TEST_F(GeneratorTest, Generate3x2Test) {
   rows_ = 3;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -1025,7 +1025,7 @@ TEST_F(MazeGeneratorTest, Generate3x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x3Test) {
+TEST_F(GeneratorTest, Generate3x3Test) {
   rows_ = 3;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -1045,7 +1045,7 @@ TEST_F(MazeGeneratorTest, Generate3x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x4Test) {
+TEST_F(GeneratorTest, Generate3x4Test) {
   rows_ = 3;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -1065,7 +1065,7 @@ TEST_F(MazeGeneratorTest, Generate3x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x5Test) {
+TEST_F(GeneratorTest, Generate3x5Test) {
   rows_ = 3;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -1085,7 +1085,7 @@ TEST_F(MazeGeneratorTest, Generate3x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x6Test) {
+TEST_F(GeneratorTest, Generate3x6Test) {
   rows_ = 3;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -1105,7 +1105,7 @@ TEST_F(MazeGeneratorTest, Generate3x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x7Test) {
+TEST_F(GeneratorTest, Generate3x7Test) {
   rows_ = 3;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -1125,7 +1125,7 @@ TEST_F(MazeGeneratorTest, Generate3x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x8Test) {
+TEST_F(GeneratorTest, Generate3x8Test) {
   rows_ = 3;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -1145,7 +1145,7 @@ TEST_F(MazeGeneratorTest, Generate3x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x9Test) {
+TEST_F(GeneratorTest, Generate3x9Test) {
   rows_ = 3;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -1165,7 +1165,7 @@ TEST_F(MazeGeneratorTest, Generate3x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x10Test) {
+TEST_F(GeneratorTest, Generate3x10Test) {
   rows_ = 3;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -1185,7 +1185,7 @@ TEST_F(MazeGeneratorTest, Generate3x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x11Test) {
+TEST_F(GeneratorTest, Generate3x11Test) {
   rows_ = 3;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -1205,7 +1205,7 @@ TEST_F(MazeGeneratorTest, Generate3x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x12Test) {
+TEST_F(GeneratorTest, Generate3x12Test) {
   rows_ = 3;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -1225,7 +1225,7 @@ TEST_F(MazeGeneratorTest, Generate3x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x13Test) {
+TEST_F(GeneratorTest, Generate3x13Test) {
   rows_ = 3;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -1245,7 +1245,7 @@ TEST_F(MazeGeneratorTest, Generate3x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x14Test) {
+TEST_F(GeneratorTest, Generate3x14Test) {
   rows_ = 3;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -1265,7 +1265,7 @@ TEST_F(MazeGeneratorTest, Generate3x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x15Test) {
+TEST_F(GeneratorTest, Generate3x15Test) {
   rows_ = 3;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -1285,7 +1285,7 @@ TEST_F(MazeGeneratorTest, Generate3x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x16Test) {
+TEST_F(GeneratorTest, Generate3x16Test) {
   rows_ = 3;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -1305,7 +1305,7 @@ TEST_F(MazeGeneratorTest, Generate3x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x17Test) {
+TEST_F(GeneratorTest, Generate3x17Test) {
   rows_ = 3;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -1325,7 +1325,7 @@ TEST_F(MazeGeneratorTest, Generate3x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x18Test) {
+TEST_F(GeneratorTest, Generate3x18Test) {
   rows_ = 3;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -1345,7 +1345,7 @@ TEST_F(MazeGeneratorTest, Generate3x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x19Test) {
+TEST_F(GeneratorTest, Generate3x19Test) {
   rows_ = 3;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -1365,7 +1365,7 @@ TEST_F(MazeGeneratorTest, Generate3x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x20Test) {
+TEST_F(GeneratorTest, Generate3x20Test) {
   rows_ = 3;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -1385,7 +1385,7 @@ TEST_F(MazeGeneratorTest, Generate3x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x21Test) {
+TEST_F(GeneratorTest, Generate3x21Test) {
   rows_ = 3;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -1405,7 +1405,7 @@ TEST_F(MazeGeneratorTest, Generate3x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x22Test) {
+TEST_F(GeneratorTest, Generate3x22Test) {
   rows_ = 3;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -1425,7 +1425,7 @@ TEST_F(MazeGeneratorTest, Generate3x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x23Test) {
+TEST_F(GeneratorTest, Generate3x23Test) {
   rows_ = 3;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -1445,7 +1445,7 @@ TEST_F(MazeGeneratorTest, Generate3x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x24Test) {
+TEST_F(GeneratorTest, Generate3x24Test) {
   rows_ = 3;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -1465,7 +1465,7 @@ TEST_F(MazeGeneratorTest, Generate3x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x25Test) {
+TEST_F(GeneratorTest, Generate3x25Test) {
   rows_ = 3;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -1485,7 +1485,7 @@ TEST_F(MazeGeneratorTest, Generate3x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x26Test) {
+TEST_F(GeneratorTest, Generate3x26Test) {
   rows_ = 3;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -1505,7 +1505,7 @@ TEST_F(MazeGeneratorTest, Generate3x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x27Test) {
+TEST_F(GeneratorTest, Generate3x27Test) {
   rows_ = 3;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -1525,7 +1525,7 @@ TEST_F(MazeGeneratorTest, Generate3x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x28Test) {
+TEST_F(GeneratorTest, Generate3x28Test) {
   rows_ = 3;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -1545,7 +1545,7 @@ TEST_F(MazeGeneratorTest, Generate3x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x29Test) {
+TEST_F(GeneratorTest, Generate3x29Test) {
   rows_ = 3;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -1565,7 +1565,7 @@ TEST_F(MazeGeneratorTest, Generate3x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x30Test) {
+TEST_F(GeneratorTest, Generate3x30Test) {
   rows_ = 3;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -1585,7 +1585,7 @@ TEST_F(MazeGeneratorTest, Generate3x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x31Test) {
+TEST_F(GeneratorTest, Generate3x31Test) {
   rows_ = 3;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -1605,7 +1605,7 @@ TEST_F(MazeGeneratorTest, Generate3x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x32Test) {
+TEST_F(GeneratorTest, Generate3x32Test) {
   rows_ = 3;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -1625,7 +1625,7 @@ TEST_F(MazeGeneratorTest, Generate3x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x33Test) {
+TEST_F(GeneratorTest, Generate3x33Test) {
   rows_ = 3;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -1645,7 +1645,7 @@ TEST_F(MazeGeneratorTest, Generate3x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x34Test) {
+TEST_F(GeneratorTest, Generate3x34Test) {
   rows_ = 3;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -1665,7 +1665,7 @@ TEST_F(MazeGeneratorTest, Generate3x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x35Test) {
+TEST_F(GeneratorTest, Generate3x35Test) {
   rows_ = 3;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -1685,7 +1685,7 @@ TEST_F(MazeGeneratorTest, Generate3x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x36Test) {
+TEST_F(GeneratorTest, Generate3x36Test) {
   rows_ = 3;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -1705,7 +1705,7 @@ TEST_F(MazeGeneratorTest, Generate3x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x37Test) {
+TEST_F(GeneratorTest, Generate3x37Test) {
   rows_ = 3;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -1725,7 +1725,7 @@ TEST_F(MazeGeneratorTest, Generate3x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x38Test) {
+TEST_F(GeneratorTest, Generate3x38Test) {
   rows_ = 3;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -1745,7 +1745,7 @@ TEST_F(MazeGeneratorTest, Generate3x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x39Test) {
+TEST_F(GeneratorTest, Generate3x39Test) {
   rows_ = 3;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -1765,7 +1765,7 @@ TEST_F(MazeGeneratorTest, Generate3x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x40Test) {
+TEST_F(GeneratorTest, Generate3x40Test) {
   rows_ = 3;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -1785,7 +1785,7 @@ TEST_F(MazeGeneratorTest, Generate3x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x41Test) {
+TEST_F(GeneratorTest, Generate3x41Test) {
   rows_ = 3;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -1805,7 +1805,7 @@ TEST_F(MazeGeneratorTest, Generate3x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x42Test) {
+TEST_F(GeneratorTest, Generate3x42Test) {
   rows_ = 3;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -1825,7 +1825,7 @@ TEST_F(MazeGeneratorTest, Generate3x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x43Test) {
+TEST_F(GeneratorTest, Generate3x43Test) {
   rows_ = 3;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -1845,7 +1845,7 @@ TEST_F(MazeGeneratorTest, Generate3x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x44Test) {
+TEST_F(GeneratorTest, Generate3x44Test) {
   rows_ = 3;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -1865,7 +1865,7 @@ TEST_F(MazeGeneratorTest, Generate3x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x45Test) {
+TEST_F(GeneratorTest, Generate3x45Test) {
   rows_ = 3;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -1885,7 +1885,7 @@ TEST_F(MazeGeneratorTest, Generate3x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x46Test) {
+TEST_F(GeneratorTest, Generate3x46Test) {
   rows_ = 3;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -1905,7 +1905,7 @@ TEST_F(MazeGeneratorTest, Generate3x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x47Test) {
+TEST_F(GeneratorTest, Generate3x47Test) {
   rows_ = 3;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -1925,7 +1925,7 @@ TEST_F(MazeGeneratorTest, Generate3x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x48Test) {
+TEST_F(GeneratorTest, Generate3x48Test) {
   rows_ = 3;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -1945,7 +1945,7 @@ TEST_F(MazeGeneratorTest, Generate3x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x49Test) {
+TEST_F(GeneratorTest, Generate3x49Test) {
   rows_ = 3;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -1965,7 +1965,7 @@ TEST_F(MazeGeneratorTest, Generate3x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate3x50Test) {
+TEST_F(GeneratorTest, Generate3x50Test) {
   rows_ = 3;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -1985,7 +1985,7 @@ TEST_F(MazeGeneratorTest, Generate3x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x2Test) {
+TEST_F(GeneratorTest, Generate4x2Test) {
   rows_ = 4;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -2005,7 +2005,7 @@ TEST_F(MazeGeneratorTest, Generate4x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x3Test) {
+TEST_F(GeneratorTest, Generate4x3Test) {
   rows_ = 4;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -2025,7 +2025,7 @@ TEST_F(MazeGeneratorTest, Generate4x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x4Test) {
+TEST_F(GeneratorTest, Generate4x4Test) {
   rows_ = 4;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -2045,7 +2045,7 @@ TEST_F(MazeGeneratorTest, Generate4x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x5Test) {
+TEST_F(GeneratorTest, Generate4x5Test) {
   rows_ = 4;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -2065,7 +2065,7 @@ TEST_F(MazeGeneratorTest, Generate4x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x6Test) {
+TEST_F(GeneratorTest, Generate4x6Test) {
   rows_ = 4;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -2085,7 +2085,7 @@ TEST_F(MazeGeneratorTest, Generate4x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x7Test) {
+TEST_F(GeneratorTest, Generate4x7Test) {
   rows_ = 4;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -2105,7 +2105,7 @@ TEST_F(MazeGeneratorTest, Generate4x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x8Test) {
+TEST_F(GeneratorTest, Generate4x8Test) {
   rows_ = 4;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -2125,7 +2125,7 @@ TEST_F(MazeGeneratorTest, Generate4x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x9Test) {
+TEST_F(GeneratorTest, Generate4x9Test) {
   rows_ = 4;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -2145,7 +2145,7 @@ TEST_F(MazeGeneratorTest, Generate4x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x10Test) {
+TEST_F(GeneratorTest, Generate4x10Test) {
   rows_ = 4;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -2165,7 +2165,7 @@ TEST_F(MazeGeneratorTest, Generate4x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x11Test) {
+TEST_F(GeneratorTest, Generate4x11Test) {
   rows_ = 4;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -2185,7 +2185,7 @@ TEST_F(MazeGeneratorTest, Generate4x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x12Test) {
+TEST_F(GeneratorTest, Generate4x12Test) {
   rows_ = 4;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -2205,7 +2205,7 @@ TEST_F(MazeGeneratorTest, Generate4x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x13Test) {
+TEST_F(GeneratorTest, Generate4x13Test) {
   rows_ = 4;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -2225,7 +2225,7 @@ TEST_F(MazeGeneratorTest, Generate4x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x14Test) {
+TEST_F(GeneratorTest, Generate4x14Test) {
   rows_ = 4;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -2245,7 +2245,7 @@ TEST_F(MazeGeneratorTest, Generate4x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x15Test) {
+TEST_F(GeneratorTest, Generate4x15Test) {
   rows_ = 4;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -2265,7 +2265,7 @@ TEST_F(MazeGeneratorTest, Generate4x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x16Test) {
+TEST_F(GeneratorTest, Generate4x16Test) {
   rows_ = 4;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -2285,7 +2285,7 @@ TEST_F(MazeGeneratorTest, Generate4x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x17Test) {
+TEST_F(GeneratorTest, Generate4x17Test) {
   rows_ = 4;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -2305,7 +2305,7 @@ TEST_F(MazeGeneratorTest, Generate4x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x18Test) {
+TEST_F(GeneratorTest, Generate4x18Test) {
   rows_ = 4;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -2325,7 +2325,7 @@ TEST_F(MazeGeneratorTest, Generate4x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x19Test) {
+TEST_F(GeneratorTest, Generate4x19Test) {
   rows_ = 4;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -2345,7 +2345,7 @@ TEST_F(MazeGeneratorTest, Generate4x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x20Test) {
+TEST_F(GeneratorTest, Generate4x20Test) {
   rows_ = 4;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -2365,7 +2365,7 @@ TEST_F(MazeGeneratorTest, Generate4x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x21Test) {
+TEST_F(GeneratorTest, Generate4x21Test) {
   rows_ = 4;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -2385,7 +2385,7 @@ TEST_F(MazeGeneratorTest, Generate4x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x22Test) {
+TEST_F(GeneratorTest, Generate4x22Test) {
   rows_ = 4;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -2405,7 +2405,7 @@ TEST_F(MazeGeneratorTest, Generate4x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x23Test) {
+TEST_F(GeneratorTest, Generate4x23Test) {
   rows_ = 4;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -2425,7 +2425,7 @@ TEST_F(MazeGeneratorTest, Generate4x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x24Test) {
+TEST_F(GeneratorTest, Generate4x24Test) {
   rows_ = 4;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -2445,7 +2445,7 @@ TEST_F(MazeGeneratorTest, Generate4x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x25Test) {
+TEST_F(GeneratorTest, Generate4x25Test) {
   rows_ = 4;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -2465,7 +2465,7 @@ TEST_F(MazeGeneratorTest, Generate4x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x26Test) {
+TEST_F(GeneratorTest, Generate4x26Test) {
   rows_ = 4;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -2485,7 +2485,7 @@ TEST_F(MazeGeneratorTest, Generate4x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x27Test) {
+TEST_F(GeneratorTest, Generate4x27Test) {
   rows_ = 4;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -2505,7 +2505,7 @@ TEST_F(MazeGeneratorTest, Generate4x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x28Test) {
+TEST_F(GeneratorTest, Generate4x28Test) {
   rows_ = 4;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -2525,7 +2525,7 @@ TEST_F(MazeGeneratorTest, Generate4x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x29Test) {
+TEST_F(GeneratorTest, Generate4x29Test) {
   rows_ = 4;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -2545,7 +2545,7 @@ TEST_F(MazeGeneratorTest, Generate4x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x30Test) {
+TEST_F(GeneratorTest, Generate4x30Test) {
   rows_ = 4;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -2565,7 +2565,7 @@ TEST_F(MazeGeneratorTest, Generate4x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x31Test) {
+TEST_F(GeneratorTest, Generate4x31Test) {
   rows_ = 4;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -2585,7 +2585,7 @@ TEST_F(MazeGeneratorTest, Generate4x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x32Test) {
+TEST_F(GeneratorTest, Generate4x32Test) {
   rows_ = 4;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -2605,7 +2605,7 @@ TEST_F(MazeGeneratorTest, Generate4x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x33Test) {
+TEST_F(GeneratorTest, Generate4x33Test) {
   rows_ = 4;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -2625,7 +2625,7 @@ TEST_F(MazeGeneratorTest, Generate4x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x34Test) {
+TEST_F(GeneratorTest, Generate4x34Test) {
   rows_ = 4;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -2645,7 +2645,7 @@ TEST_F(MazeGeneratorTest, Generate4x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x35Test) {
+TEST_F(GeneratorTest, Generate4x35Test) {
   rows_ = 4;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -2665,7 +2665,7 @@ TEST_F(MazeGeneratorTest, Generate4x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x36Test) {
+TEST_F(GeneratorTest, Generate4x36Test) {
   rows_ = 4;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -2685,7 +2685,7 @@ TEST_F(MazeGeneratorTest, Generate4x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x37Test) {
+TEST_F(GeneratorTest, Generate4x37Test) {
   rows_ = 4;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -2705,7 +2705,7 @@ TEST_F(MazeGeneratorTest, Generate4x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x38Test) {
+TEST_F(GeneratorTest, Generate4x38Test) {
   rows_ = 4;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -2725,7 +2725,7 @@ TEST_F(MazeGeneratorTest, Generate4x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x39Test) {
+TEST_F(GeneratorTest, Generate4x39Test) {
   rows_ = 4;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -2745,7 +2745,7 @@ TEST_F(MazeGeneratorTest, Generate4x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x40Test) {
+TEST_F(GeneratorTest, Generate4x40Test) {
   rows_ = 4;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -2765,7 +2765,7 @@ TEST_F(MazeGeneratorTest, Generate4x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x41Test) {
+TEST_F(GeneratorTest, Generate4x41Test) {
   rows_ = 4;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -2785,7 +2785,7 @@ TEST_F(MazeGeneratorTest, Generate4x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x42Test) {
+TEST_F(GeneratorTest, Generate4x42Test) {
   rows_ = 4;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -2805,7 +2805,7 @@ TEST_F(MazeGeneratorTest, Generate4x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x43Test) {
+TEST_F(GeneratorTest, Generate4x43Test) {
   rows_ = 4;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -2825,7 +2825,7 @@ TEST_F(MazeGeneratorTest, Generate4x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x44Test) {
+TEST_F(GeneratorTest, Generate4x44Test) {
   rows_ = 4;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -2845,7 +2845,7 @@ TEST_F(MazeGeneratorTest, Generate4x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x45Test) {
+TEST_F(GeneratorTest, Generate4x45Test) {
   rows_ = 4;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -2865,7 +2865,7 @@ TEST_F(MazeGeneratorTest, Generate4x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x46Test) {
+TEST_F(GeneratorTest, Generate4x46Test) {
   rows_ = 4;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -2885,7 +2885,7 @@ TEST_F(MazeGeneratorTest, Generate4x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x47Test) {
+TEST_F(GeneratorTest, Generate4x47Test) {
   rows_ = 4;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -2905,7 +2905,7 @@ TEST_F(MazeGeneratorTest, Generate4x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x48Test) {
+TEST_F(GeneratorTest, Generate4x48Test) {
   rows_ = 4;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -2925,7 +2925,7 @@ TEST_F(MazeGeneratorTest, Generate4x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x49Test) {
+TEST_F(GeneratorTest, Generate4x49Test) {
   rows_ = 4;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -2945,7 +2945,7 @@ TEST_F(MazeGeneratorTest, Generate4x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate4x50Test) {
+TEST_F(GeneratorTest, Generate4x50Test) {
   rows_ = 4;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -2965,7 +2965,7 @@ TEST_F(MazeGeneratorTest, Generate4x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x2Test) {
+TEST_F(GeneratorTest, Generate5x2Test) {
   rows_ = 5;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -2985,7 +2985,7 @@ TEST_F(MazeGeneratorTest, Generate5x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x3Test) {
+TEST_F(GeneratorTest, Generate5x3Test) {
   rows_ = 5;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -3005,7 +3005,7 @@ TEST_F(MazeGeneratorTest, Generate5x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x4Test) {
+TEST_F(GeneratorTest, Generate5x4Test) {
   rows_ = 5;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -3025,7 +3025,7 @@ TEST_F(MazeGeneratorTest, Generate5x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x5Test) {
+TEST_F(GeneratorTest, Generate5x5Test) {
   rows_ = 5;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -3045,7 +3045,7 @@ TEST_F(MazeGeneratorTest, Generate5x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x6Test) {
+TEST_F(GeneratorTest, Generate5x6Test) {
   rows_ = 5;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -3065,7 +3065,7 @@ TEST_F(MazeGeneratorTest, Generate5x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x7Test) {
+TEST_F(GeneratorTest, Generate5x7Test) {
   rows_ = 5;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -3085,7 +3085,7 @@ TEST_F(MazeGeneratorTest, Generate5x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x8Test) {
+TEST_F(GeneratorTest, Generate5x8Test) {
   rows_ = 5;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -3105,7 +3105,7 @@ TEST_F(MazeGeneratorTest, Generate5x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x9Test) {
+TEST_F(GeneratorTest, Generate5x9Test) {
   rows_ = 5;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -3125,7 +3125,7 @@ TEST_F(MazeGeneratorTest, Generate5x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x10Test) {
+TEST_F(GeneratorTest, Generate5x10Test) {
   rows_ = 5;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -3145,7 +3145,7 @@ TEST_F(MazeGeneratorTest, Generate5x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x11Test) {
+TEST_F(GeneratorTest, Generate5x11Test) {
   rows_ = 5;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -3165,7 +3165,7 @@ TEST_F(MazeGeneratorTest, Generate5x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x12Test) {
+TEST_F(GeneratorTest, Generate5x12Test) {
   rows_ = 5;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -3185,7 +3185,7 @@ TEST_F(MazeGeneratorTest, Generate5x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x13Test) {
+TEST_F(GeneratorTest, Generate5x13Test) {
   rows_ = 5;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -3205,7 +3205,7 @@ TEST_F(MazeGeneratorTest, Generate5x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x14Test) {
+TEST_F(GeneratorTest, Generate5x14Test) {
   rows_ = 5;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -3225,7 +3225,7 @@ TEST_F(MazeGeneratorTest, Generate5x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x15Test) {
+TEST_F(GeneratorTest, Generate5x15Test) {
   rows_ = 5;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -3245,7 +3245,7 @@ TEST_F(MazeGeneratorTest, Generate5x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x16Test) {
+TEST_F(GeneratorTest, Generate5x16Test) {
   rows_ = 5;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -3265,7 +3265,7 @@ TEST_F(MazeGeneratorTest, Generate5x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x17Test) {
+TEST_F(GeneratorTest, Generate5x17Test) {
   rows_ = 5;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -3285,7 +3285,7 @@ TEST_F(MazeGeneratorTest, Generate5x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x18Test) {
+TEST_F(GeneratorTest, Generate5x18Test) {
   rows_ = 5;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -3305,7 +3305,7 @@ TEST_F(MazeGeneratorTest, Generate5x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x19Test) {
+TEST_F(GeneratorTest, Generate5x19Test) {
   rows_ = 5;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -3325,7 +3325,7 @@ TEST_F(MazeGeneratorTest, Generate5x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x20Test) {
+TEST_F(GeneratorTest, Generate5x20Test) {
   rows_ = 5;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -3345,7 +3345,7 @@ TEST_F(MazeGeneratorTest, Generate5x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x21Test) {
+TEST_F(GeneratorTest, Generate5x21Test) {
   rows_ = 5;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -3365,7 +3365,7 @@ TEST_F(MazeGeneratorTest, Generate5x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x22Test) {
+TEST_F(GeneratorTest, Generate5x22Test) {
   rows_ = 5;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -3385,7 +3385,7 @@ TEST_F(MazeGeneratorTest, Generate5x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x23Test) {
+TEST_F(GeneratorTest, Generate5x23Test) {
   rows_ = 5;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -3405,7 +3405,7 @@ TEST_F(MazeGeneratorTest, Generate5x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x24Test) {
+TEST_F(GeneratorTest, Generate5x24Test) {
   rows_ = 5;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -3425,7 +3425,7 @@ TEST_F(MazeGeneratorTest, Generate5x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x25Test) {
+TEST_F(GeneratorTest, Generate5x25Test) {
   rows_ = 5;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -3445,7 +3445,7 @@ TEST_F(MazeGeneratorTest, Generate5x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x26Test) {
+TEST_F(GeneratorTest, Generate5x26Test) {
   rows_ = 5;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -3465,7 +3465,7 @@ TEST_F(MazeGeneratorTest, Generate5x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x27Test) {
+TEST_F(GeneratorTest, Generate5x27Test) {
   rows_ = 5;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -3485,7 +3485,7 @@ TEST_F(MazeGeneratorTest, Generate5x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x28Test) {
+TEST_F(GeneratorTest, Generate5x28Test) {
   rows_ = 5;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -3505,7 +3505,7 @@ TEST_F(MazeGeneratorTest, Generate5x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x29Test) {
+TEST_F(GeneratorTest, Generate5x29Test) {
   rows_ = 5;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -3525,7 +3525,7 @@ TEST_F(MazeGeneratorTest, Generate5x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x30Test) {
+TEST_F(GeneratorTest, Generate5x30Test) {
   rows_ = 5;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -3545,7 +3545,7 @@ TEST_F(MazeGeneratorTest, Generate5x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x31Test) {
+TEST_F(GeneratorTest, Generate5x31Test) {
   rows_ = 5;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -3565,7 +3565,7 @@ TEST_F(MazeGeneratorTest, Generate5x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x32Test) {
+TEST_F(GeneratorTest, Generate5x32Test) {
   rows_ = 5;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -3585,7 +3585,7 @@ TEST_F(MazeGeneratorTest, Generate5x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x33Test) {
+TEST_F(GeneratorTest, Generate5x33Test) {
   rows_ = 5;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -3605,7 +3605,7 @@ TEST_F(MazeGeneratorTest, Generate5x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x34Test) {
+TEST_F(GeneratorTest, Generate5x34Test) {
   rows_ = 5;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -3625,7 +3625,7 @@ TEST_F(MazeGeneratorTest, Generate5x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x35Test) {
+TEST_F(GeneratorTest, Generate5x35Test) {
   rows_ = 5;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -3645,7 +3645,7 @@ TEST_F(MazeGeneratorTest, Generate5x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x36Test) {
+TEST_F(GeneratorTest, Generate5x36Test) {
   rows_ = 5;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -3665,7 +3665,7 @@ TEST_F(MazeGeneratorTest, Generate5x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x37Test) {
+TEST_F(GeneratorTest, Generate5x37Test) {
   rows_ = 5;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -3685,7 +3685,7 @@ TEST_F(MazeGeneratorTest, Generate5x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x38Test) {
+TEST_F(GeneratorTest, Generate5x38Test) {
   rows_ = 5;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -3705,7 +3705,7 @@ TEST_F(MazeGeneratorTest, Generate5x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x39Test) {
+TEST_F(GeneratorTest, Generate5x39Test) {
   rows_ = 5;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -3725,7 +3725,7 @@ TEST_F(MazeGeneratorTest, Generate5x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x40Test) {
+TEST_F(GeneratorTest, Generate5x40Test) {
   rows_ = 5;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -3745,7 +3745,7 @@ TEST_F(MazeGeneratorTest, Generate5x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x41Test) {
+TEST_F(GeneratorTest, Generate5x41Test) {
   rows_ = 5;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -3765,7 +3765,7 @@ TEST_F(MazeGeneratorTest, Generate5x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x42Test) {
+TEST_F(GeneratorTest, Generate5x42Test) {
   rows_ = 5;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -3785,7 +3785,7 @@ TEST_F(MazeGeneratorTest, Generate5x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x43Test) {
+TEST_F(GeneratorTest, Generate5x43Test) {
   rows_ = 5;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -3805,7 +3805,7 @@ TEST_F(MazeGeneratorTest, Generate5x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x44Test) {
+TEST_F(GeneratorTest, Generate5x44Test) {
   rows_ = 5;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -3825,7 +3825,7 @@ TEST_F(MazeGeneratorTest, Generate5x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x45Test) {
+TEST_F(GeneratorTest, Generate5x45Test) {
   rows_ = 5;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -3845,7 +3845,7 @@ TEST_F(MazeGeneratorTest, Generate5x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x46Test) {
+TEST_F(GeneratorTest, Generate5x46Test) {
   rows_ = 5;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -3865,7 +3865,7 @@ TEST_F(MazeGeneratorTest, Generate5x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x47Test) {
+TEST_F(GeneratorTest, Generate5x47Test) {
   rows_ = 5;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -3885,7 +3885,7 @@ TEST_F(MazeGeneratorTest, Generate5x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x48Test) {
+TEST_F(GeneratorTest, Generate5x48Test) {
   rows_ = 5;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -3905,7 +3905,7 @@ TEST_F(MazeGeneratorTest, Generate5x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x49Test) {
+TEST_F(GeneratorTest, Generate5x49Test) {
   rows_ = 5;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -3925,7 +3925,7 @@ TEST_F(MazeGeneratorTest, Generate5x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate5x50Test) {
+TEST_F(GeneratorTest, Generate5x50Test) {
   rows_ = 5;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -3945,7 +3945,7 @@ TEST_F(MazeGeneratorTest, Generate5x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x2Test) {
+TEST_F(GeneratorTest, Generate6x2Test) {
   rows_ = 6;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -3965,7 +3965,7 @@ TEST_F(MazeGeneratorTest, Generate6x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x3Test) {
+TEST_F(GeneratorTest, Generate6x3Test) {
   rows_ = 6;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -3985,7 +3985,7 @@ TEST_F(MazeGeneratorTest, Generate6x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x4Test) {
+TEST_F(GeneratorTest, Generate6x4Test) {
   rows_ = 6;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -4005,7 +4005,7 @@ TEST_F(MazeGeneratorTest, Generate6x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x5Test) {
+TEST_F(GeneratorTest, Generate6x5Test) {
   rows_ = 6;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -4025,7 +4025,7 @@ TEST_F(MazeGeneratorTest, Generate6x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x6Test) {
+TEST_F(GeneratorTest, Generate6x6Test) {
   rows_ = 6;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -4045,7 +4045,7 @@ TEST_F(MazeGeneratorTest, Generate6x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x7Test) {
+TEST_F(GeneratorTest, Generate6x7Test) {
   rows_ = 6;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -4065,7 +4065,7 @@ TEST_F(MazeGeneratorTest, Generate6x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x8Test) {
+TEST_F(GeneratorTest, Generate6x8Test) {
   rows_ = 6;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -4085,7 +4085,7 @@ TEST_F(MazeGeneratorTest, Generate6x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x9Test) {
+TEST_F(GeneratorTest, Generate6x9Test) {
   rows_ = 6;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -4105,7 +4105,7 @@ TEST_F(MazeGeneratorTest, Generate6x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x10Test) {
+TEST_F(GeneratorTest, Generate6x10Test) {
   rows_ = 6;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -4125,7 +4125,7 @@ TEST_F(MazeGeneratorTest, Generate6x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x11Test) {
+TEST_F(GeneratorTest, Generate6x11Test) {
   rows_ = 6;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -4145,7 +4145,7 @@ TEST_F(MazeGeneratorTest, Generate6x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x12Test) {
+TEST_F(GeneratorTest, Generate6x12Test) {
   rows_ = 6;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -4165,7 +4165,7 @@ TEST_F(MazeGeneratorTest, Generate6x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x13Test) {
+TEST_F(GeneratorTest, Generate6x13Test) {
   rows_ = 6;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -4185,7 +4185,7 @@ TEST_F(MazeGeneratorTest, Generate6x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x14Test) {
+TEST_F(GeneratorTest, Generate6x14Test) {
   rows_ = 6;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -4205,7 +4205,7 @@ TEST_F(MazeGeneratorTest, Generate6x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x15Test) {
+TEST_F(GeneratorTest, Generate6x15Test) {
   rows_ = 6;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -4225,7 +4225,7 @@ TEST_F(MazeGeneratorTest, Generate6x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x16Test) {
+TEST_F(GeneratorTest, Generate6x16Test) {
   rows_ = 6;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -4245,7 +4245,7 @@ TEST_F(MazeGeneratorTest, Generate6x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x17Test) {
+TEST_F(GeneratorTest, Generate6x17Test) {
   rows_ = 6;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -4265,7 +4265,7 @@ TEST_F(MazeGeneratorTest, Generate6x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x18Test) {
+TEST_F(GeneratorTest, Generate6x18Test) {
   rows_ = 6;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -4285,7 +4285,7 @@ TEST_F(MazeGeneratorTest, Generate6x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x19Test) {
+TEST_F(GeneratorTest, Generate6x19Test) {
   rows_ = 6;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -4305,7 +4305,7 @@ TEST_F(MazeGeneratorTest, Generate6x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x20Test) {
+TEST_F(GeneratorTest, Generate6x20Test) {
   rows_ = 6;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -4325,7 +4325,7 @@ TEST_F(MazeGeneratorTest, Generate6x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x21Test) {
+TEST_F(GeneratorTest, Generate6x21Test) {
   rows_ = 6;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -4345,7 +4345,7 @@ TEST_F(MazeGeneratorTest, Generate6x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x22Test) {
+TEST_F(GeneratorTest, Generate6x22Test) {
   rows_ = 6;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -4365,7 +4365,7 @@ TEST_F(MazeGeneratorTest, Generate6x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x23Test) {
+TEST_F(GeneratorTest, Generate6x23Test) {
   rows_ = 6;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -4385,7 +4385,7 @@ TEST_F(MazeGeneratorTest, Generate6x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x24Test) {
+TEST_F(GeneratorTest, Generate6x24Test) {
   rows_ = 6;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -4405,7 +4405,7 @@ TEST_F(MazeGeneratorTest, Generate6x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x25Test) {
+TEST_F(GeneratorTest, Generate6x25Test) {
   rows_ = 6;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -4425,7 +4425,7 @@ TEST_F(MazeGeneratorTest, Generate6x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x26Test) {
+TEST_F(GeneratorTest, Generate6x26Test) {
   rows_ = 6;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -4445,7 +4445,7 @@ TEST_F(MazeGeneratorTest, Generate6x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x27Test) {
+TEST_F(GeneratorTest, Generate6x27Test) {
   rows_ = 6;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -4465,7 +4465,7 @@ TEST_F(MazeGeneratorTest, Generate6x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x28Test) {
+TEST_F(GeneratorTest, Generate6x28Test) {
   rows_ = 6;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -4485,7 +4485,7 @@ TEST_F(MazeGeneratorTest, Generate6x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x29Test) {
+TEST_F(GeneratorTest, Generate6x29Test) {
   rows_ = 6;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -4505,7 +4505,7 @@ TEST_F(MazeGeneratorTest, Generate6x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x30Test) {
+TEST_F(GeneratorTest, Generate6x30Test) {
   rows_ = 6;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -4525,7 +4525,7 @@ TEST_F(MazeGeneratorTest, Generate6x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x31Test) {
+TEST_F(GeneratorTest, Generate6x31Test) {
   rows_ = 6;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -4545,7 +4545,7 @@ TEST_F(MazeGeneratorTest, Generate6x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x32Test) {
+TEST_F(GeneratorTest, Generate6x32Test) {
   rows_ = 6;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -4565,7 +4565,7 @@ TEST_F(MazeGeneratorTest, Generate6x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x33Test) {
+TEST_F(GeneratorTest, Generate6x33Test) {
   rows_ = 6;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -4585,7 +4585,7 @@ TEST_F(MazeGeneratorTest, Generate6x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x34Test) {
+TEST_F(GeneratorTest, Generate6x34Test) {
   rows_ = 6;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -4605,7 +4605,7 @@ TEST_F(MazeGeneratorTest, Generate6x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x35Test) {
+TEST_F(GeneratorTest, Generate6x35Test) {
   rows_ = 6;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -4625,7 +4625,7 @@ TEST_F(MazeGeneratorTest, Generate6x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x36Test) {
+TEST_F(GeneratorTest, Generate6x36Test) {
   rows_ = 6;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -4645,7 +4645,7 @@ TEST_F(MazeGeneratorTest, Generate6x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x37Test) {
+TEST_F(GeneratorTest, Generate6x37Test) {
   rows_ = 6;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -4665,7 +4665,7 @@ TEST_F(MazeGeneratorTest, Generate6x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x38Test) {
+TEST_F(GeneratorTest, Generate6x38Test) {
   rows_ = 6;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -4685,7 +4685,7 @@ TEST_F(MazeGeneratorTest, Generate6x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x39Test) {
+TEST_F(GeneratorTest, Generate6x39Test) {
   rows_ = 6;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -4705,7 +4705,7 @@ TEST_F(MazeGeneratorTest, Generate6x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x40Test) {
+TEST_F(GeneratorTest, Generate6x40Test) {
   rows_ = 6;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -4725,7 +4725,7 @@ TEST_F(MazeGeneratorTest, Generate6x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x41Test) {
+TEST_F(GeneratorTest, Generate6x41Test) {
   rows_ = 6;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -4745,7 +4745,7 @@ TEST_F(MazeGeneratorTest, Generate6x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x42Test) {
+TEST_F(GeneratorTest, Generate6x42Test) {
   rows_ = 6;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -4765,7 +4765,7 @@ TEST_F(MazeGeneratorTest, Generate6x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x43Test) {
+TEST_F(GeneratorTest, Generate6x43Test) {
   rows_ = 6;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -4785,7 +4785,7 @@ TEST_F(MazeGeneratorTest, Generate6x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x44Test) {
+TEST_F(GeneratorTest, Generate6x44Test) {
   rows_ = 6;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -4805,7 +4805,7 @@ TEST_F(MazeGeneratorTest, Generate6x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x45Test) {
+TEST_F(GeneratorTest, Generate6x45Test) {
   rows_ = 6;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -4825,7 +4825,7 @@ TEST_F(MazeGeneratorTest, Generate6x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x46Test) {
+TEST_F(GeneratorTest, Generate6x46Test) {
   rows_ = 6;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -4845,7 +4845,7 @@ TEST_F(MazeGeneratorTest, Generate6x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x47Test) {
+TEST_F(GeneratorTest, Generate6x47Test) {
   rows_ = 6;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -4865,7 +4865,7 @@ TEST_F(MazeGeneratorTest, Generate6x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x48Test) {
+TEST_F(GeneratorTest, Generate6x48Test) {
   rows_ = 6;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -4885,7 +4885,7 @@ TEST_F(MazeGeneratorTest, Generate6x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x49Test) {
+TEST_F(GeneratorTest, Generate6x49Test) {
   rows_ = 6;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -4905,7 +4905,7 @@ TEST_F(MazeGeneratorTest, Generate6x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate6x50Test) {
+TEST_F(GeneratorTest, Generate6x50Test) {
   rows_ = 6;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -4925,7 +4925,7 @@ TEST_F(MazeGeneratorTest, Generate6x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x2Test) {
+TEST_F(GeneratorTest, Generate7x2Test) {
   rows_ = 7;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -4945,7 +4945,7 @@ TEST_F(MazeGeneratorTest, Generate7x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x3Test) {
+TEST_F(GeneratorTest, Generate7x3Test) {
   rows_ = 7;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -4965,7 +4965,7 @@ TEST_F(MazeGeneratorTest, Generate7x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x4Test) {
+TEST_F(GeneratorTest, Generate7x4Test) {
   rows_ = 7;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -4985,7 +4985,7 @@ TEST_F(MazeGeneratorTest, Generate7x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x5Test) {
+TEST_F(GeneratorTest, Generate7x5Test) {
   rows_ = 7;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -5005,7 +5005,7 @@ TEST_F(MazeGeneratorTest, Generate7x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x6Test) {
+TEST_F(GeneratorTest, Generate7x6Test) {
   rows_ = 7;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -5025,7 +5025,7 @@ TEST_F(MazeGeneratorTest, Generate7x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x7Test) {
+TEST_F(GeneratorTest, Generate7x7Test) {
   rows_ = 7;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -5045,7 +5045,7 @@ TEST_F(MazeGeneratorTest, Generate7x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x8Test) {
+TEST_F(GeneratorTest, Generate7x8Test) {
   rows_ = 7;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -5065,7 +5065,7 @@ TEST_F(MazeGeneratorTest, Generate7x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x9Test) {
+TEST_F(GeneratorTest, Generate7x9Test) {
   rows_ = 7;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -5085,7 +5085,7 @@ TEST_F(MazeGeneratorTest, Generate7x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x10Test) {
+TEST_F(GeneratorTest, Generate7x10Test) {
   rows_ = 7;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -5105,7 +5105,7 @@ TEST_F(MazeGeneratorTest, Generate7x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x11Test) {
+TEST_F(GeneratorTest, Generate7x11Test) {
   rows_ = 7;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -5125,7 +5125,7 @@ TEST_F(MazeGeneratorTest, Generate7x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x12Test) {
+TEST_F(GeneratorTest, Generate7x12Test) {
   rows_ = 7;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -5145,7 +5145,7 @@ TEST_F(MazeGeneratorTest, Generate7x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x13Test) {
+TEST_F(GeneratorTest, Generate7x13Test) {
   rows_ = 7;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -5165,7 +5165,7 @@ TEST_F(MazeGeneratorTest, Generate7x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x14Test) {
+TEST_F(GeneratorTest, Generate7x14Test) {
   rows_ = 7;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -5185,7 +5185,7 @@ TEST_F(MazeGeneratorTest, Generate7x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x15Test) {
+TEST_F(GeneratorTest, Generate7x15Test) {
   rows_ = 7;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -5205,7 +5205,7 @@ TEST_F(MazeGeneratorTest, Generate7x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x16Test) {
+TEST_F(GeneratorTest, Generate7x16Test) {
   rows_ = 7;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -5225,7 +5225,7 @@ TEST_F(MazeGeneratorTest, Generate7x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x17Test) {
+TEST_F(GeneratorTest, Generate7x17Test) {
   rows_ = 7;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -5245,7 +5245,7 @@ TEST_F(MazeGeneratorTest, Generate7x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x18Test) {
+TEST_F(GeneratorTest, Generate7x18Test) {
   rows_ = 7;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -5265,7 +5265,7 @@ TEST_F(MazeGeneratorTest, Generate7x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x19Test) {
+TEST_F(GeneratorTest, Generate7x19Test) {
   rows_ = 7;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -5285,7 +5285,7 @@ TEST_F(MazeGeneratorTest, Generate7x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x20Test) {
+TEST_F(GeneratorTest, Generate7x20Test) {
   rows_ = 7;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -5305,7 +5305,7 @@ TEST_F(MazeGeneratorTest, Generate7x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x21Test) {
+TEST_F(GeneratorTest, Generate7x21Test) {
   rows_ = 7;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -5325,7 +5325,7 @@ TEST_F(MazeGeneratorTest, Generate7x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x22Test) {
+TEST_F(GeneratorTest, Generate7x22Test) {
   rows_ = 7;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -5345,7 +5345,7 @@ TEST_F(MazeGeneratorTest, Generate7x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x23Test) {
+TEST_F(GeneratorTest, Generate7x23Test) {
   rows_ = 7;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -5365,7 +5365,7 @@ TEST_F(MazeGeneratorTest, Generate7x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x24Test) {
+TEST_F(GeneratorTest, Generate7x24Test) {
   rows_ = 7;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -5385,7 +5385,7 @@ TEST_F(MazeGeneratorTest, Generate7x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x25Test) {
+TEST_F(GeneratorTest, Generate7x25Test) {
   rows_ = 7;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -5405,7 +5405,7 @@ TEST_F(MazeGeneratorTest, Generate7x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x26Test) {
+TEST_F(GeneratorTest, Generate7x26Test) {
   rows_ = 7;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -5425,7 +5425,7 @@ TEST_F(MazeGeneratorTest, Generate7x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x27Test) {
+TEST_F(GeneratorTest, Generate7x27Test) {
   rows_ = 7;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -5445,7 +5445,7 @@ TEST_F(MazeGeneratorTest, Generate7x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x28Test) {
+TEST_F(GeneratorTest, Generate7x28Test) {
   rows_ = 7;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -5465,7 +5465,7 @@ TEST_F(MazeGeneratorTest, Generate7x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x29Test) {
+TEST_F(GeneratorTest, Generate7x29Test) {
   rows_ = 7;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -5485,7 +5485,7 @@ TEST_F(MazeGeneratorTest, Generate7x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x30Test) {
+TEST_F(GeneratorTest, Generate7x30Test) {
   rows_ = 7;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -5505,7 +5505,7 @@ TEST_F(MazeGeneratorTest, Generate7x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x31Test) {
+TEST_F(GeneratorTest, Generate7x31Test) {
   rows_ = 7;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -5525,7 +5525,7 @@ TEST_F(MazeGeneratorTest, Generate7x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x32Test) {
+TEST_F(GeneratorTest, Generate7x32Test) {
   rows_ = 7;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -5545,7 +5545,7 @@ TEST_F(MazeGeneratorTest, Generate7x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x33Test) {
+TEST_F(GeneratorTest, Generate7x33Test) {
   rows_ = 7;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -5565,7 +5565,7 @@ TEST_F(MazeGeneratorTest, Generate7x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x34Test) {
+TEST_F(GeneratorTest, Generate7x34Test) {
   rows_ = 7;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -5585,7 +5585,7 @@ TEST_F(MazeGeneratorTest, Generate7x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x35Test) {
+TEST_F(GeneratorTest, Generate7x35Test) {
   rows_ = 7;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -5605,7 +5605,7 @@ TEST_F(MazeGeneratorTest, Generate7x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x36Test) {
+TEST_F(GeneratorTest, Generate7x36Test) {
   rows_ = 7;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -5625,7 +5625,7 @@ TEST_F(MazeGeneratorTest, Generate7x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x37Test) {
+TEST_F(GeneratorTest, Generate7x37Test) {
   rows_ = 7;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -5645,7 +5645,7 @@ TEST_F(MazeGeneratorTest, Generate7x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x38Test) {
+TEST_F(GeneratorTest, Generate7x38Test) {
   rows_ = 7;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -5665,7 +5665,7 @@ TEST_F(MazeGeneratorTest, Generate7x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x39Test) {
+TEST_F(GeneratorTest, Generate7x39Test) {
   rows_ = 7;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -5685,7 +5685,7 @@ TEST_F(MazeGeneratorTest, Generate7x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x40Test) {
+TEST_F(GeneratorTest, Generate7x40Test) {
   rows_ = 7;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -5705,7 +5705,7 @@ TEST_F(MazeGeneratorTest, Generate7x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x41Test) {
+TEST_F(GeneratorTest, Generate7x41Test) {
   rows_ = 7;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -5725,7 +5725,7 @@ TEST_F(MazeGeneratorTest, Generate7x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x42Test) {
+TEST_F(GeneratorTest, Generate7x42Test) {
   rows_ = 7;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -5745,7 +5745,7 @@ TEST_F(MazeGeneratorTest, Generate7x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x43Test) {
+TEST_F(GeneratorTest, Generate7x43Test) {
   rows_ = 7;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -5765,7 +5765,7 @@ TEST_F(MazeGeneratorTest, Generate7x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x44Test) {
+TEST_F(GeneratorTest, Generate7x44Test) {
   rows_ = 7;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -5785,7 +5785,7 @@ TEST_F(MazeGeneratorTest, Generate7x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x45Test) {
+TEST_F(GeneratorTest, Generate7x45Test) {
   rows_ = 7;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -5805,7 +5805,7 @@ TEST_F(MazeGeneratorTest, Generate7x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x46Test) {
+TEST_F(GeneratorTest, Generate7x46Test) {
   rows_ = 7;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -5825,7 +5825,7 @@ TEST_F(MazeGeneratorTest, Generate7x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x47Test) {
+TEST_F(GeneratorTest, Generate7x47Test) {
   rows_ = 7;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -5845,7 +5845,7 @@ TEST_F(MazeGeneratorTest, Generate7x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x48Test) {
+TEST_F(GeneratorTest, Generate7x48Test) {
   rows_ = 7;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -5865,7 +5865,7 @@ TEST_F(MazeGeneratorTest, Generate7x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x49Test) {
+TEST_F(GeneratorTest, Generate7x49Test) {
   rows_ = 7;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -5885,7 +5885,7 @@ TEST_F(MazeGeneratorTest, Generate7x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate7x50Test) {
+TEST_F(GeneratorTest, Generate7x50Test) {
   rows_ = 7;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -5905,7 +5905,7 @@ TEST_F(MazeGeneratorTest, Generate7x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x2Test) {
+TEST_F(GeneratorTest, Generate8x2Test) {
   rows_ = 8;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -5925,7 +5925,7 @@ TEST_F(MazeGeneratorTest, Generate8x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x3Test) {
+TEST_F(GeneratorTest, Generate8x3Test) {
   rows_ = 8;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -5945,7 +5945,7 @@ TEST_F(MazeGeneratorTest, Generate8x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x4Test) {
+TEST_F(GeneratorTest, Generate8x4Test) {
   rows_ = 8;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -5965,7 +5965,7 @@ TEST_F(MazeGeneratorTest, Generate8x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x5Test) {
+TEST_F(GeneratorTest, Generate8x5Test) {
   rows_ = 8;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -5985,7 +5985,7 @@ TEST_F(MazeGeneratorTest, Generate8x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x6Test) {
+TEST_F(GeneratorTest, Generate8x6Test) {
   rows_ = 8;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -6005,7 +6005,7 @@ TEST_F(MazeGeneratorTest, Generate8x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x7Test) {
+TEST_F(GeneratorTest, Generate8x7Test) {
   rows_ = 8;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -6025,7 +6025,7 @@ TEST_F(MazeGeneratorTest, Generate8x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x8Test) {
+TEST_F(GeneratorTest, Generate8x8Test) {
   rows_ = 8;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -6045,7 +6045,7 @@ TEST_F(MazeGeneratorTest, Generate8x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x9Test) {
+TEST_F(GeneratorTest, Generate8x9Test) {
   rows_ = 8;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -6065,7 +6065,7 @@ TEST_F(MazeGeneratorTest, Generate8x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x10Test) {
+TEST_F(GeneratorTest, Generate8x10Test) {
   rows_ = 8;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -6085,7 +6085,7 @@ TEST_F(MazeGeneratorTest, Generate8x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x11Test) {
+TEST_F(GeneratorTest, Generate8x11Test) {
   rows_ = 8;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -6105,7 +6105,7 @@ TEST_F(MazeGeneratorTest, Generate8x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x12Test) {
+TEST_F(GeneratorTest, Generate8x12Test) {
   rows_ = 8;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -6125,7 +6125,7 @@ TEST_F(MazeGeneratorTest, Generate8x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x13Test) {
+TEST_F(GeneratorTest, Generate8x13Test) {
   rows_ = 8;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -6145,7 +6145,7 @@ TEST_F(MazeGeneratorTest, Generate8x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x14Test) {
+TEST_F(GeneratorTest, Generate8x14Test) {
   rows_ = 8;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -6165,7 +6165,7 @@ TEST_F(MazeGeneratorTest, Generate8x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x15Test) {
+TEST_F(GeneratorTest, Generate8x15Test) {
   rows_ = 8;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -6185,7 +6185,7 @@ TEST_F(MazeGeneratorTest, Generate8x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x16Test) {
+TEST_F(GeneratorTest, Generate8x16Test) {
   rows_ = 8;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -6205,7 +6205,7 @@ TEST_F(MazeGeneratorTest, Generate8x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x17Test) {
+TEST_F(GeneratorTest, Generate8x17Test) {
   rows_ = 8;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -6225,7 +6225,7 @@ TEST_F(MazeGeneratorTest, Generate8x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x18Test) {
+TEST_F(GeneratorTest, Generate8x18Test) {
   rows_ = 8;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -6245,7 +6245,7 @@ TEST_F(MazeGeneratorTest, Generate8x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x19Test) {
+TEST_F(GeneratorTest, Generate8x19Test) {
   rows_ = 8;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -6265,7 +6265,7 @@ TEST_F(MazeGeneratorTest, Generate8x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x20Test) {
+TEST_F(GeneratorTest, Generate8x20Test) {
   rows_ = 8;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -6285,7 +6285,7 @@ TEST_F(MazeGeneratorTest, Generate8x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x21Test) {
+TEST_F(GeneratorTest, Generate8x21Test) {
   rows_ = 8;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -6305,7 +6305,7 @@ TEST_F(MazeGeneratorTest, Generate8x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x22Test) {
+TEST_F(GeneratorTest, Generate8x22Test) {
   rows_ = 8;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -6325,7 +6325,7 @@ TEST_F(MazeGeneratorTest, Generate8x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x23Test) {
+TEST_F(GeneratorTest, Generate8x23Test) {
   rows_ = 8;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -6345,7 +6345,7 @@ TEST_F(MazeGeneratorTest, Generate8x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x24Test) {
+TEST_F(GeneratorTest, Generate8x24Test) {
   rows_ = 8;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -6365,7 +6365,7 @@ TEST_F(MazeGeneratorTest, Generate8x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x25Test) {
+TEST_F(GeneratorTest, Generate8x25Test) {
   rows_ = 8;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -6385,7 +6385,7 @@ TEST_F(MazeGeneratorTest, Generate8x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x26Test) {
+TEST_F(GeneratorTest, Generate8x26Test) {
   rows_ = 8;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -6405,7 +6405,7 @@ TEST_F(MazeGeneratorTest, Generate8x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x27Test) {
+TEST_F(GeneratorTest, Generate8x27Test) {
   rows_ = 8;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -6425,7 +6425,7 @@ TEST_F(MazeGeneratorTest, Generate8x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x28Test) {
+TEST_F(GeneratorTest, Generate8x28Test) {
   rows_ = 8;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -6445,7 +6445,7 @@ TEST_F(MazeGeneratorTest, Generate8x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x29Test) {
+TEST_F(GeneratorTest, Generate8x29Test) {
   rows_ = 8;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -6465,7 +6465,7 @@ TEST_F(MazeGeneratorTest, Generate8x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x30Test) {
+TEST_F(GeneratorTest, Generate8x30Test) {
   rows_ = 8;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -6485,7 +6485,7 @@ TEST_F(MazeGeneratorTest, Generate8x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x31Test) {
+TEST_F(GeneratorTest, Generate8x31Test) {
   rows_ = 8;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -6505,7 +6505,7 @@ TEST_F(MazeGeneratorTest, Generate8x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x32Test) {
+TEST_F(GeneratorTest, Generate8x32Test) {
   rows_ = 8;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -6525,7 +6525,7 @@ TEST_F(MazeGeneratorTest, Generate8x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x33Test) {
+TEST_F(GeneratorTest, Generate8x33Test) {
   rows_ = 8;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -6545,7 +6545,7 @@ TEST_F(MazeGeneratorTest, Generate8x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x34Test) {
+TEST_F(GeneratorTest, Generate8x34Test) {
   rows_ = 8;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -6565,7 +6565,7 @@ TEST_F(MazeGeneratorTest, Generate8x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x35Test) {
+TEST_F(GeneratorTest, Generate8x35Test) {
   rows_ = 8;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -6585,7 +6585,7 @@ TEST_F(MazeGeneratorTest, Generate8x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x36Test) {
+TEST_F(GeneratorTest, Generate8x36Test) {
   rows_ = 8;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -6605,7 +6605,7 @@ TEST_F(MazeGeneratorTest, Generate8x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x37Test) {
+TEST_F(GeneratorTest, Generate8x37Test) {
   rows_ = 8;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -6625,7 +6625,7 @@ TEST_F(MazeGeneratorTest, Generate8x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x38Test) {
+TEST_F(GeneratorTest, Generate8x38Test) {
   rows_ = 8;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -6645,7 +6645,7 @@ TEST_F(MazeGeneratorTest, Generate8x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x39Test) {
+TEST_F(GeneratorTest, Generate8x39Test) {
   rows_ = 8;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -6665,7 +6665,7 @@ TEST_F(MazeGeneratorTest, Generate8x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x40Test) {
+TEST_F(GeneratorTest, Generate8x40Test) {
   rows_ = 8;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -6685,7 +6685,7 @@ TEST_F(MazeGeneratorTest, Generate8x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x41Test) {
+TEST_F(GeneratorTest, Generate8x41Test) {
   rows_ = 8;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -6705,7 +6705,7 @@ TEST_F(MazeGeneratorTest, Generate8x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x42Test) {
+TEST_F(GeneratorTest, Generate8x42Test) {
   rows_ = 8;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -6725,7 +6725,7 @@ TEST_F(MazeGeneratorTest, Generate8x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x43Test) {
+TEST_F(GeneratorTest, Generate8x43Test) {
   rows_ = 8;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -6745,7 +6745,7 @@ TEST_F(MazeGeneratorTest, Generate8x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x44Test) {
+TEST_F(GeneratorTest, Generate8x44Test) {
   rows_ = 8;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -6765,7 +6765,7 @@ TEST_F(MazeGeneratorTest, Generate8x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x45Test) {
+TEST_F(GeneratorTest, Generate8x45Test) {
   rows_ = 8;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -6785,7 +6785,7 @@ TEST_F(MazeGeneratorTest, Generate8x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x46Test) {
+TEST_F(GeneratorTest, Generate8x46Test) {
   rows_ = 8;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -6805,7 +6805,7 @@ TEST_F(MazeGeneratorTest, Generate8x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x47Test) {
+TEST_F(GeneratorTest, Generate8x47Test) {
   rows_ = 8;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -6825,7 +6825,7 @@ TEST_F(MazeGeneratorTest, Generate8x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x48Test) {
+TEST_F(GeneratorTest, Generate8x48Test) {
   rows_ = 8;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -6845,7 +6845,7 @@ TEST_F(MazeGeneratorTest, Generate8x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x49Test) {
+TEST_F(GeneratorTest, Generate8x49Test) {
   rows_ = 8;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -6865,7 +6865,7 @@ TEST_F(MazeGeneratorTest, Generate8x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate8x50Test) {
+TEST_F(GeneratorTest, Generate8x50Test) {
   rows_ = 8;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -6885,7 +6885,7 @@ TEST_F(MazeGeneratorTest, Generate8x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x2Test) {
+TEST_F(GeneratorTest, Generate9x2Test) {
   rows_ = 9;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -6905,7 +6905,7 @@ TEST_F(MazeGeneratorTest, Generate9x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x3Test) {
+TEST_F(GeneratorTest, Generate9x3Test) {
   rows_ = 9;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -6925,7 +6925,7 @@ TEST_F(MazeGeneratorTest, Generate9x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x4Test) {
+TEST_F(GeneratorTest, Generate9x4Test) {
   rows_ = 9;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -6945,7 +6945,7 @@ TEST_F(MazeGeneratorTest, Generate9x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x5Test) {
+TEST_F(GeneratorTest, Generate9x5Test) {
   rows_ = 9;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -6965,7 +6965,7 @@ TEST_F(MazeGeneratorTest, Generate9x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x6Test) {
+TEST_F(GeneratorTest, Generate9x6Test) {
   rows_ = 9;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -6985,7 +6985,7 @@ TEST_F(MazeGeneratorTest, Generate9x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x7Test) {
+TEST_F(GeneratorTest, Generate9x7Test) {
   rows_ = 9;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -7005,7 +7005,7 @@ TEST_F(MazeGeneratorTest, Generate9x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x8Test) {
+TEST_F(GeneratorTest, Generate9x8Test) {
   rows_ = 9;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -7025,7 +7025,7 @@ TEST_F(MazeGeneratorTest, Generate9x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x9Test) {
+TEST_F(GeneratorTest, Generate9x9Test) {
   rows_ = 9;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -7045,7 +7045,7 @@ TEST_F(MazeGeneratorTest, Generate9x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x10Test) {
+TEST_F(GeneratorTest, Generate9x10Test) {
   rows_ = 9;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -7065,7 +7065,7 @@ TEST_F(MazeGeneratorTest, Generate9x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x11Test) {
+TEST_F(GeneratorTest, Generate9x11Test) {
   rows_ = 9;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -7085,7 +7085,7 @@ TEST_F(MazeGeneratorTest, Generate9x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x12Test) {
+TEST_F(GeneratorTest, Generate9x12Test) {
   rows_ = 9;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -7105,7 +7105,7 @@ TEST_F(MazeGeneratorTest, Generate9x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x13Test) {
+TEST_F(GeneratorTest, Generate9x13Test) {
   rows_ = 9;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -7125,7 +7125,7 @@ TEST_F(MazeGeneratorTest, Generate9x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x14Test) {
+TEST_F(GeneratorTest, Generate9x14Test) {
   rows_ = 9;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -7145,7 +7145,7 @@ TEST_F(MazeGeneratorTest, Generate9x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x15Test) {
+TEST_F(GeneratorTest, Generate9x15Test) {
   rows_ = 9;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -7165,7 +7165,7 @@ TEST_F(MazeGeneratorTest, Generate9x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x16Test) {
+TEST_F(GeneratorTest, Generate9x16Test) {
   rows_ = 9;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -7185,7 +7185,7 @@ TEST_F(MazeGeneratorTest, Generate9x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x17Test) {
+TEST_F(GeneratorTest, Generate9x17Test) {
   rows_ = 9;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -7205,7 +7205,7 @@ TEST_F(MazeGeneratorTest, Generate9x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x18Test) {
+TEST_F(GeneratorTest, Generate9x18Test) {
   rows_ = 9;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -7225,7 +7225,7 @@ TEST_F(MazeGeneratorTest, Generate9x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x19Test) {
+TEST_F(GeneratorTest, Generate9x19Test) {
   rows_ = 9;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -7245,7 +7245,7 @@ TEST_F(MazeGeneratorTest, Generate9x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x20Test) {
+TEST_F(GeneratorTest, Generate9x20Test) {
   rows_ = 9;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -7265,7 +7265,7 @@ TEST_F(MazeGeneratorTest, Generate9x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x21Test) {
+TEST_F(GeneratorTest, Generate9x21Test) {
   rows_ = 9;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -7285,7 +7285,7 @@ TEST_F(MazeGeneratorTest, Generate9x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x22Test) {
+TEST_F(GeneratorTest, Generate9x22Test) {
   rows_ = 9;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -7305,7 +7305,7 @@ TEST_F(MazeGeneratorTest, Generate9x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x23Test) {
+TEST_F(GeneratorTest, Generate9x23Test) {
   rows_ = 9;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -7325,7 +7325,7 @@ TEST_F(MazeGeneratorTest, Generate9x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x24Test) {
+TEST_F(GeneratorTest, Generate9x24Test) {
   rows_ = 9;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -7345,7 +7345,7 @@ TEST_F(MazeGeneratorTest, Generate9x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x25Test) {
+TEST_F(GeneratorTest, Generate9x25Test) {
   rows_ = 9;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -7365,7 +7365,7 @@ TEST_F(MazeGeneratorTest, Generate9x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x26Test) {
+TEST_F(GeneratorTest, Generate9x26Test) {
   rows_ = 9;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -7385,7 +7385,7 @@ TEST_F(MazeGeneratorTest, Generate9x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x27Test) {
+TEST_F(GeneratorTest, Generate9x27Test) {
   rows_ = 9;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -7405,7 +7405,7 @@ TEST_F(MazeGeneratorTest, Generate9x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x28Test) {
+TEST_F(GeneratorTest, Generate9x28Test) {
   rows_ = 9;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -7425,7 +7425,7 @@ TEST_F(MazeGeneratorTest, Generate9x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x29Test) {
+TEST_F(GeneratorTest, Generate9x29Test) {
   rows_ = 9;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -7445,7 +7445,7 @@ TEST_F(MazeGeneratorTest, Generate9x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x30Test) {
+TEST_F(GeneratorTest, Generate9x30Test) {
   rows_ = 9;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -7465,7 +7465,7 @@ TEST_F(MazeGeneratorTest, Generate9x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x31Test) {
+TEST_F(GeneratorTest, Generate9x31Test) {
   rows_ = 9;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -7485,7 +7485,7 @@ TEST_F(MazeGeneratorTest, Generate9x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x32Test) {
+TEST_F(GeneratorTest, Generate9x32Test) {
   rows_ = 9;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -7505,7 +7505,7 @@ TEST_F(MazeGeneratorTest, Generate9x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x33Test) {
+TEST_F(GeneratorTest, Generate9x33Test) {
   rows_ = 9;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -7525,7 +7525,7 @@ TEST_F(MazeGeneratorTest, Generate9x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x34Test) {
+TEST_F(GeneratorTest, Generate9x34Test) {
   rows_ = 9;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -7545,7 +7545,7 @@ TEST_F(MazeGeneratorTest, Generate9x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x35Test) {
+TEST_F(GeneratorTest, Generate9x35Test) {
   rows_ = 9;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -7565,7 +7565,7 @@ TEST_F(MazeGeneratorTest, Generate9x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x36Test) {
+TEST_F(GeneratorTest, Generate9x36Test) {
   rows_ = 9;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -7585,7 +7585,7 @@ TEST_F(MazeGeneratorTest, Generate9x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x37Test) {
+TEST_F(GeneratorTest, Generate9x37Test) {
   rows_ = 9;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -7605,7 +7605,7 @@ TEST_F(MazeGeneratorTest, Generate9x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x38Test) {
+TEST_F(GeneratorTest, Generate9x38Test) {
   rows_ = 9;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -7625,7 +7625,7 @@ TEST_F(MazeGeneratorTest, Generate9x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x39Test) {
+TEST_F(GeneratorTest, Generate9x39Test) {
   rows_ = 9;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -7645,7 +7645,7 @@ TEST_F(MazeGeneratorTest, Generate9x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x40Test) {
+TEST_F(GeneratorTest, Generate9x40Test) {
   rows_ = 9;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -7665,7 +7665,7 @@ TEST_F(MazeGeneratorTest, Generate9x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x41Test) {
+TEST_F(GeneratorTest, Generate9x41Test) {
   rows_ = 9;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -7685,7 +7685,7 @@ TEST_F(MazeGeneratorTest, Generate9x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x42Test) {
+TEST_F(GeneratorTest, Generate9x42Test) {
   rows_ = 9;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -7705,7 +7705,7 @@ TEST_F(MazeGeneratorTest, Generate9x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x43Test) {
+TEST_F(GeneratorTest, Generate9x43Test) {
   rows_ = 9;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -7725,7 +7725,7 @@ TEST_F(MazeGeneratorTest, Generate9x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x44Test) {
+TEST_F(GeneratorTest, Generate9x44Test) {
   rows_ = 9;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -7745,7 +7745,7 @@ TEST_F(MazeGeneratorTest, Generate9x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x45Test) {
+TEST_F(GeneratorTest, Generate9x45Test) {
   rows_ = 9;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -7765,7 +7765,7 @@ TEST_F(MazeGeneratorTest, Generate9x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x46Test) {
+TEST_F(GeneratorTest, Generate9x46Test) {
   rows_ = 9;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -7785,7 +7785,7 @@ TEST_F(MazeGeneratorTest, Generate9x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x47Test) {
+TEST_F(GeneratorTest, Generate9x47Test) {
   rows_ = 9;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -7805,7 +7805,7 @@ TEST_F(MazeGeneratorTest, Generate9x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x48Test) {
+TEST_F(GeneratorTest, Generate9x48Test) {
   rows_ = 9;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -7825,7 +7825,7 @@ TEST_F(MazeGeneratorTest, Generate9x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x49Test) {
+TEST_F(GeneratorTest, Generate9x49Test) {
   rows_ = 9;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -7845,7 +7845,7 @@ TEST_F(MazeGeneratorTest, Generate9x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate9x50Test) {
+TEST_F(GeneratorTest, Generate9x50Test) {
   rows_ = 9;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -7865,7 +7865,7 @@ TEST_F(MazeGeneratorTest, Generate9x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x2Test) {
+TEST_F(GeneratorTest, Generate10x2Test) {
   rows_ = 10;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -7885,7 +7885,7 @@ TEST_F(MazeGeneratorTest, Generate10x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x3Test) {
+TEST_F(GeneratorTest, Generate10x3Test) {
   rows_ = 10;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -7905,7 +7905,7 @@ TEST_F(MazeGeneratorTest, Generate10x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x4Test) {
+TEST_F(GeneratorTest, Generate10x4Test) {
   rows_ = 10;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -7925,7 +7925,7 @@ TEST_F(MazeGeneratorTest, Generate10x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x5Test) {
+TEST_F(GeneratorTest, Generate10x5Test) {
   rows_ = 10;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -7945,7 +7945,7 @@ TEST_F(MazeGeneratorTest, Generate10x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x6Test) {
+TEST_F(GeneratorTest, Generate10x6Test) {
   rows_ = 10;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -7965,7 +7965,7 @@ TEST_F(MazeGeneratorTest, Generate10x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x7Test) {
+TEST_F(GeneratorTest, Generate10x7Test) {
   rows_ = 10;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -7985,7 +7985,7 @@ TEST_F(MazeGeneratorTest, Generate10x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x8Test) {
+TEST_F(GeneratorTest, Generate10x8Test) {
   rows_ = 10;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -8005,7 +8005,7 @@ TEST_F(MazeGeneratorTest, Generate10x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x9Test) {
+TEST_F(GeneratorTest, Generate10x9Test) {
   rows_ = 10;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -8025,7 +8025,7 @@ TEST_F(MazeGeneratorTest, Generate10x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x10Test) {
+TEST_F(GeneratorTest, Generate10x10Test) {
   rows_ = 10;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -8045,7 +8045,7 @@ TEST_F(MazeGeneratorTest, Generate10x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x11Test) {
+TEST_F(GeneratorTest, Generate10x11Test) {
   rows_ = 10;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -8065,7 +8065,7 @@ TEST_F(MazeGeneratorTest, Generate10x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x12Test) {
+TEST_F(GeneratorTest, Generate10x12Test) {
   rows_ = 10;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -8085,7 +8085,7 @@ TEST_F(MazeGeneratorTest, Generate10x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x13Test) {
+TEST_F(GeneratorTest, Generate10x13Test) {
   rows_ = 10;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -8105,7 +8105,7 @@ TEST_F(MazeGeneratorTest, Generate10x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x14Test) {
+TEST_F(GeneratorTest, Generate10x14Test) {
   rows_ = 10;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -8125,7 +8125,7 @@ TEST_F(MazeGeneratorTest, Generate10x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x15Test) {
+TEST_F(GeneratorTest, Generate10x15Test) {
   rows_ = 10;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -8145,7 +8145,7 @@ TEST_F(MazeGeneratorTest, Generate10x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x16Test) {
+TEST_F(GeneratorTest, Generate10x16Test) {
   rows_ = 10;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -8165,7 +8165,7 @@ TEST_F(MazeGeneratorTest, Generate10x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x17Test) {
+TEST_F(GeneratorTest, Generate10x17Test) {
   rows_ = 10;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -8185,7 +8185,7 @@ TEST_F(MazeGeneratorTest, Generate10x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x18Test) {
+TEST_F(GeneratorTest, Generate10x18Test) {
   rows_ = 10;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -8205,7 +8205,7 @@ TEST_F(MazeGeneratorTest, Generate10x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x19Test) {
+TEST_F(GeneratorTest, Generate10x19Test) {
   rows_ = 10;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -8225,7 +8225,7 @@ TEST_F(MazeGeneratorTest, Generate10x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x20Test) {
+TEST_F(GeneratorTest, Generate10x20Test) {
   rows_ = 10;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -8245,7 +8245,7 @@ TEST_F(MazeGeneratorTest, Generate10x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x21Test) {
+TEST_F(GeneratorTest, Generate10x21Test) {
   rows_ = 10;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -8265,7 +8265,7 @@ TEST_F(MazeGeneratorTest, Generate10x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x22Test) {
+TEST_F(GeneratorTest, Generate10x22Test) {
   rows_ = 10;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -8285,7 +8285,7 @@ TEST_F(MazeGeneratorTest, Generate10x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x23Test) {
+TEST_F(GeneratorTest, Generate10x23Test) {
   rows_ = 10;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -8305,7 +8305,7 @@ TEST_F(MazeGeneratorTest, Generate10x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x24Test) {
+TEST_F(GeneratorTest, Generate10x24Test) {
   rows_ = 10;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -8325,7 +8325,7 @@ TEST_F(MazeGeneratorTest, Generate10x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x25Test) {
+TEST_F(GeneratorTest, Generate10x25Test) {
   rows_ = 10;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -8345,7 +8345,7 @@ TEST_F(MazeGeneratorTest, Generate10x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x26Test) {
+TEST_F(GeneratorTest, Generate10x26Test) {
   rows_ = 10;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -8365,7 +8365,7 @@ TEST_F(MazeGeneratorTest, Generate10x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x27Test) {
+TEST_F(GeneratorTest, Generate10x27Test) {
   rows_ = 10;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -8385,7 +8385,7 @@ TEST_F(MazeGeneratorTest, Generate10x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x28Test) {
+TEST_F(GeneratorTest, Generate10x28Test) {
   rows_ = 10;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -8405,7 +8405,7 @@ TEST_F(MazeGeneratorTest, Generate10x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x29Test) {
+TEST_F(GeneratorTest, Generate10x29Test) {
   rows_ = 10;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -8425,7 +8425,7 @@ TEST_F(MazeGeneratorTest, Generate10x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x30Test) {
+TEST_F(GeneratorTest, Generate10x30Test) {
   rows_ = 10;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -8445,7 +8445,7 @@ TEST_F(MazeGeneratorTest, Generate10x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x31Test) {
+TEST_F(GeneratorTest, Generate10x31Test) {
   rows_ = 10;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -8465,7 +8465,7 @@ TEST_F(MazeGeneratorTest, Generate10x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x32Test) {
+TEST_F(GeneratorTest, Generate10x32Test) {
   rows_ = 10;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -8485,7 +8485,7 @@ TEST_F(MazeGeneratorTest, Generate10x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x33Test) {
+TEST_F(GeneratorTest, Generate10x33Test) {
   rows_ = 10;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -8505,7 +8505,7 @@ TEST_F(MazeGeneratorTest, Generate10x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x34Test) {
+TEST_F(GeneratorTest, Generate10x34Test) {
   rows_ = 10;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -8525,7 +8525,7 @@ TEST_F(MazeGeneratorTest, Generate10x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x35Test) {
+TEST_F(GeneratorTest, Generate10x35Test) {
   rows_ = 10;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -8545,7 +8545,7 @@ TEST_F(MazeGeneratorTest, Generate10x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x36Test) {
+TEST_F(GeneratorTest, Generate10x36Test) {
   rows_ = 10;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -8565,7 +8565,7 @@ TEST_F(MazeGeneratorTest, Generate10x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x37Test) {
+TEST_F(GeneratorTest, Generate10x37Test) {
   rows_ = 10;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -8585,7 +8585,7 @@ TEST_F(MazeGeneratorTest, Generate10x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x38Test) {
+TEST_F(GeneratorTest, Generate10x38Test) {
   rows_ = 10;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -8605,7 +8605,7 @@ TEST_F(MazeGeneratorTest, Generate10x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x39Test) {
+TEST_F(GeneratorTest, Generate10x39Test) {
   rows_ = 10;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -8625,7 +8625,7 @@ TEST_F(MazeGeneratorTest, Generate10x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x40Test) {
+TEST_F(GeneratorTest, Generate10x40Test) {
   rows_ = 10;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -8645,7 +8645,7 @@ TEST_F(MazeGeneratorTest, Generate10x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x41Test) {
+TEST_F(GeneratorTest, Generate10x41Test) {
   rows_ = 10;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -8665,7 +8665,7 @@ TEST_F(MazeGeneratorTest, Generate10x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x42Test) {
+TEST_F(GeneratorTest, Generate10x42Test) {
   rows_ = 10;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -8685,7 +8685,7 @@ TEST_F(MazeGeneratorTest, Generate10x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x43Test) {
+TEST_F(GeneratorTest, Generate10x43Test) {
   rows_ = 10;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -8705,7 +8705,7 @@ TEST_F(MazeGeneratorTest, Generate10x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x44Test) {
+TEST_F(GeneratorTest, Generate10x44Test) {
   rows_ = 10;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -8725,7 +8725,7 @@ TEST_F(MazeGeneratorTest, Generate10x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x45Test) {
+TEST_F(GeneratorTest, Generate10x45Test) {
   rows_ = 10;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -8745,7 +8745,7 @@ TEST_F(MazeGeneratorTest, Generate10x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x46Test) {
+TEST_F(GeneratorTest, Generate10x46Test) {
   rows_ = 10;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -8765,7 +8765,7 @@ TEST_F(MazeGeneratorTest, Generate10x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x47Test) {
+TEST_F(GeneratorTest, Generate10x47Test) {
   rows_ = 10;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -8785,7 +8785,7 @@ TEST_F(MazeGeneratorTest, Generate10x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x48Test) {
+TEST_F(GeneratorTest, Generate10x48Test) {
   rows_ = 10;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -8805,7 +8805,7 @@ TEST_F(MazeGeneratorTest, Generate10x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x49Test) {
+TEST_F(GeneratorTest, Generate10x49Test) {
   rows_ = 10;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -8825,7 +8825,7 @@ TEST_F(MazeGeneratorTest, Generate10x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate10x50Test) {
+TEST_F(GeneratorTest, Generate10x50Test) {
   rows_ = 10;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -8845,7 +8845,7 @@ TEST_F(MazeGeneratorTest, Generate10x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x2Test) {
+TEST_F(GeneratorTest, Generate11x2Test) {
   rows_ = 11;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -8865,7 +8865,7 @@ TEST_F(MazeGeneratorTest, Generate11x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x3Test) {
+TEST_F(GeneratorTest, Generate11x3Test) {
   rows_ = 11;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -8885,7 +8885,7 @@ TEST_F(MazeGeneratorTest, Generate11x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x4Test) {
+TEST_F(GeneratorTest, Generate11x4Test) {
   rows_ = 11;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -8905,7 +8905,7 @@ TEST_F(MazeGeneratorTest, Generate11x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x5Test) {
+TEST_F(GeneratorTest, Generate11x5Test) {
   rows_ = 11;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -8925,7 +8925,7 @@ TEST_F(MazeGeneratorTest, Generate11x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x6Test) {
+TEST_F(GeneratorTest, Generate11x6Test) {
   rows_ = 11;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -8945,7 +8945,7 @@ TEST_F(MazeGeneratorTest, Generate11x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x7Test) {
+TEST_F(GeneratorTest, Generate11x7Test) {
   rows_ = 11;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -8965,7 +8965,7 @@ TEST_F(MazeGeneratorTest, Generate11x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x8Test) {
+TEST_F(GeneratorTest, Generate11x8Test) {
   rows_ = 11;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -8985,7 +8985,7 @@ TEST_F(MazeGeneratorTest, Generate11x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x9Test) {
+TEST_F(GeneratorTest, Generate11x9Test) {
   rows_ = 11;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -9005,7 +9005,7 @@ TEST_F(MazeGeneratorTest, Generate11x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x10Test) {
+TEST_F(GeneratorTest, Generate11x10Test) {
   rows_ = 11;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -9025,7 +9025,7 @@ TEST_F(MazeGeneratorTest, Generate11x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x11Test) {
+TEST_F(GeneratorTest, Generate11x11Test) {
   rows_ = 11;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -9045,7 +9045,7 @@ TEST_F(MazeGeneratorTest, Generate11x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x12Test) {
+TEST_F(GeneratorTest, Generate11x12Test) {
   rows_ = 11;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -9065,7 +9065,7 @@ TEST_F(MazeGeneratorTest, Generate11x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x13Test) {
+TEST_F(GeneratorTest, Generate11x13Test) {
   rows_ = 11;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -9085,7 +9085,7 @@ TEST_F(MazeGeneratorTest, Generate11x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x14Test) {
+TEST_F(GeneratorTest, Generate11x14Test) {
   rows_ = 11;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -9105,7 +9105,7 @@ TEST_F(MazeGeneratorTest, Generate11x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x15Test) {
+TEST_F(GeneratorTest, Generate11x15Test) {
   rows_ = 11;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -9125,7 +9125,7 @@ TEST_F(MazeGeneratorTest, Generate11x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x16Test) {
+TEST_F(GeneratorTest, Generate11x16Test) {
   rows_ = 11;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -9145,7 +9145,7 @@ TEST_F(MazeGeneratorTest, Generate11x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x17Test) {
+TEST_F(GeneratorTest, Generate11x17Test) {
   rows_ = 11;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -9165,7 +9165,7 @@ TEST_F(MazeGeneratorTest, Generate11x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x18Test) {
+TEST_F(GeneratorTest, Generate11x18Test) {
   rows_ = 11;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -9185,7 +9185,7 @@ TEST_F(MazeGeneratorTest, Generate11x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x19Test) {
+TEST_F(GeneratorTest, Generate11x19Test) {
   rows_ = 11;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -9205,7 +9205,7 @@ TEST_F(MazeGeneratorTest, Generate11x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x20Test) {
+TEST_F(GeneratorTest, Generate11x20Test) {
   rows_ = 11;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -9225,7 +9225,7 @@ TEST_F(MazeGeneratorTest, Generate11x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x21Test) {
+TEST_F(GeneratorTest, Generate11x21Test) {
   rows_ = 11;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -9245,7 +9245,7 @@ TEST_F(MazeGeneratorTest, Generate11x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x22Test) {
+TEST_F(GeneratorTest, Generate11x22Test) {
   rows_ = 11;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -9265,7 +9265,7 @@ TEST_F(MazeGeneratorTest, Generate11x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x23Test) {
+TEST_F(GeneratorTest, Generate11x23Test) {
   rows_ = 11;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -9285,7 +9285,7 @@ TEST_F(MazeGeneratorTest, Generate11x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x24Test) {
+TEST_F(GeneratorTest, Generate11x24Test) {
   rows_ = 11;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -9305,7 +9305,7 @@ TEST_F(MazeGeneratorTest, Generate11x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x25Test) {
+TEST_F(GeneratorTest, Generate11x25Test) {
   rows_ = 11;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -9325,7 +9325,7 @@ TEST_F(MazeGeneratorTest, Generate11x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x26Test) {
+TEST_F(GeneratorTest, Generate11x26Test) {
   rows_ = 11;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -9345,7 +9345,7 @@ TEST_F(MazeGeneratorTest, Generate11x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x27Test) {
+TEST_F(GeneratorTest, Generate11x27Test) {
   rows_ = 11;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -9365,7 +9365,7 @@ TEST_F(MazeGeneratorTest, Generate11x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x28Test) {
+TEST_F(GeneratorTest, Generate11x28Test) {
   rows_ = 11;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -9385,7 +9385,7 @@ TEST_F(MazeGeneratorTest, Generate11x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x29Test) {
+TEST_F(GeneratorTest, Generate11x29Test) {
   rows_ = 11;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -9405,7 +9405,7 @@ TEST_F(MazeGeneratorTest, Generate11x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x30Test) {
+TEST_F(GeneratorTest, Generate11x30Test) {
   rows_ = 11;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -9425,7 +9425,7 @@ TEST_F(MazeGeneratorTest, Generate11x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x31Test) {
+TEST_F(GeneratorTest, Generate11x31Test) {
   rows_ = 11;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -9445,7 +9445,7 @@ TEST_F(MazeGeneratorTest, Generate11x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x32Test) {
+TEST_F(GeneratorTest, Generate11x32Test) {
   rows_ = 11;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -9465,7 +9465,7 @@ TEST_F(MazeGeneratorTest, Generate11x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x33Test) {
+TEST_F(GeneratorTest, Generate11x33Test) {
   rows_ = 11;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -9485,7 +9485,7 @@ TEST_F(MazeGeneratorTest, Generate11x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x34Test) {
+TEST_F(GeneratorTest, Generate11x34Test) {
   rows_ = 11;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -9505,7 +9505,7 @@ TEST_F(MazeGeneratorTest, Generate11x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x35Test) {
+TEST_F(GeneratorTest, Generate11x35Test) {
   rows_ = 11;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -9525,7 +9525,7 @@ TEST_F(MazeGeneratorTest, Generate11x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x36Test) {
+TEST_F(GeneratorTest, Generate11x36Test) {
   rows_ = 11;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -9545,7 +9545,7 @@ TEST_F(MazeGeneratorTest, Generate11x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x37Test) {
+TEST_F(GeneratorTest, Generate11x37Test) {
   rows_ = 11;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -9565,7 +9565,7 @@ TEST_F(MazeGeneratorTest, Generate11x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x38Test) {
+TEST_F(GeneratorTest, Generate11x38Test) {
   rows_ = 11;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -9585,7 +9585,7 @@ TEST_F(MazeGeneratorTest, Generate11x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x39Test) {
+TEST_F(GeneratorTest, Generate11x39Test) {
   rows_ = 11;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -9605,7 +9605,7 @@ TEST_F(MazeGeneratorTest, Generate11x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x40Test) {
+TEST_F(GeneratorTest, Generate11x40Test) {
   rows_ = 11;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -9625,7 +9625,7 @@ TEST_F(MazeGeneratorTest, Generate11x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x41Test) {
+TEST_F(GeneratorTest, Generate11x41Test) {
   rows_ = 11;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -9645,7 +9645,7 @@ TEST_F(MazeGeneratorTest, Generate11x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x42Test) {
+TEST_F(GeneratorTest, Generate11x42Test) {
   rows_ = 11;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -9665,7 +9665,7 @@ TEST_F(MazeGeneratorTest, Generate11x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x43Test) {
+TEST_F(GeneratorTest, Generate11x43Test) {
   rows_ = 11;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -9685,7 +9685,7 @@ TEST_F(MazeGeneratorTest, Generate11x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x44Test) {
+TEST_F(GeneratorTest, Generate11x44Test) {
   rows_ = 11;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -9705,7 +9705,7 @@ TEST_F(MazeGeneratorTest, Generate11x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x45Test) {
+TEST_F(GeneratorTest, Generate11x45Test) {
   rows_ = 11;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -9725,7 +9725,7 @@ TEST_F(MazeGeneratorTest, Generate11x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x46Test) {
+TEST_F(GeneratorTest, Generate11x46Test) {
   rows_ = 11;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -9745,7 +9745,7 @@ TEST_F(MazeGeneratorTest, Generate11x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x47Test) {
+TEST_F(GeneratorTest, Generate11x47Test) {
   rows_ = 11;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -9765,7 +9765,7 @@ TEST_F(MazeGeneratorTest, Generate11x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x48Test) {
+TEST_F(GeneratorTest, Generate11x48Test) {
   rows_ = 11;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -9785,7 +9785,7 @@ TEST_F(MazeGeneratorTest, Generate11x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x49Test) {
+TEST_F(GeneratorTest, Generate11x49Test) {
   rows_ = 11;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -9805,7 +9805,7 @@ TEST_F(MazeGeneratorTest, Generate11x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate11x50Test) {
+TEST_F(GeneratorTest, Generate11x50Test) {
   rows_ = 11;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -9825,7 +9825,7 @@ TEST_F(MazeGeneratorTest, Generate11x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x2Test) {
+TEST_F(GeneratorTest, Generate12x2Test) {
   rows_ = 12;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -9845,7 +9845,7 @@ TEST_F(MazeGeneratorTest, Generate12x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x3Test) {
+TEST_F(GeneratorTest, Generate12x3Test) {
   rows_ = 12;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -9865,7 +9865,7 @@ TEST_F(MazeGeneratorTest, Generate12x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x4Test) {
+TEST_F(GeneratorTest, Generate12x4Test) {
   rows_ = 12;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -9885,7 +9885,7 @@ TEST_F(MazeGeneratorTest, Generate12x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x5Test) {
+TEST_F(GeneratorTest, Generate12x5Test) {
   rows_ = 12;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -9905,7 +9905,7 @@ TEST_F(MazeGeneratorTest, Generate12x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x6Test) {
+TEST_F(GeneratorTest, Generate12x6Test) {
   rows_ = 12;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -9925,7 +9925,7 @@ TEST_F(MazeGeneratorTest, Generate12x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x7Test) {
+TEST_F(GeneratorTest, Generate12x7Test) {
   rows_ = 12;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -9945,7 +9945,7 @@ TEST_F(MazeGeneratorTest, Generate12x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x8Test) {
+TEST_F(GeneratorTest, Generate12x8Test) {
   rows_ = 12;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -9965,7 +9965,7 @@ TEST_F(MazeGeneratorTest, Generate12x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x9Test) {
+TEST_F(GeneratorTest, Generate12x9Test) {
   rows_ = 12;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -9985,7 +9985,7 @@ TEST_F(MazeGeneratorTest, Generate12x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x10Test) {
+TEST_F(GeneratorTest, Generate12x10Test) {
   rows_ = 12;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -10005,7 +10005,7 @@ TEST_F(MazeGeneratorTest, Generate12x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x11Test) {
+TEST_F(GeneratorTest, Generate12x11Test) {
   rows_ = 12;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -10025,7 +10025,7 @@ TEST_F(MazeGeneratorTest, Generate12x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x12Test) {
+TEST_F(GeneratorTest, Generate12x12Test) {
   rows_ = 12;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -10045,7 +10045,7 @@ TEST_F(MazeGeneratorTest, Generate12x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x13Test) {
+TEST_F(GeneratorTest, Generate12x13Test) {
   rows_ = 12;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -10065,7 +10065,7 @@ TEST_F(MazeGeneratorTest, Generate12x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x14Test) {
+TEST_F(GeneratorTest, Generate12x14Test) {
   rows_ = 12;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -10085,7 +10085,7 @@ TEST_F(MazeGeneratorTest, Generate12x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x15Test) {
+TEST_F(GeneratorTest, Generate12x15Test) {
   rows_ = 12;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -10105,7 +10105,7 @@ TEST_F(MazeGeneratorTest, Generate12x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x16Test) {
+TEST_F(GeneratorTest, Generate12x16Test) {
   rows_ = 12;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -10125,7 +10125,7 @@ TEST_F(MazeGeneratorTest, Generate12x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x17Test) {
+TEST_F(GeneratorTest, Generate12x17Test) {
   rows_ = 12;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -10145,7 +10145,7 @@ TEST_F(MazeGeneratorTest, Generate12x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x18Test) {
+TEST_F(GeneratorTest, Generate12x18Test) {
   rows_ = 12;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -10165,7 +10165,7 @@ TEST_F(MazeGeneratorTest, Generate12x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x19Test) {
+TEST_F(GeneratorTest, Generate12x19Test) {
   rows_ = 12;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -10185,7 +10185,7 @@ TEST_F(MazeGeneratorTest, Generate12x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x20Test) {
+TEST_F(GeneratorTest, Generate12x20Test) {
   rows_ = 12;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -10205,7 +10205,7 @@ TEST_F(MazeGeneratorTest, Generate12x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x21Test) {
+TEST_F(GeneratorTest, Generate12x21Test) {
   rows_ = 12;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -10225,7 +10225,7 @@ TEST_F(MazeGeneratorTest, Generate12x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x22Test) {
+TEST_F(GeneratorTest, Generate12x22Test) {
   rows_ = 12;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -10245,7 +10245,7 @@ TEST_F(MazeGeneratorTest, Generate12x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x23Test) {
+TEST_F(GeneratorTest, Generate12x23Test) {
   rows_ = 12;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -10265,7 +10265,7 @@ TEST_F(MazeGeneratorTest, Generate12x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x24Test) {
+TEST_F(GeneratorTest, Generate12x24Test) {
   rows_ = 12;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -10285,7 +10285,7 @@ TEST_F(MazeGeneratorTest, Generate12x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x25Test) {
+TEST_F(GeneratorTest, Generate12x25Test) {
   rows_ = 12;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -10305,7 +10305,7 @@ TEST_F(MazeGeneratorTest, Generate12x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x26Test) {
+TEST_F(GeneratorTest, Generate12x26Test) {
   rows_ = 12;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -10325,7 +10325,7 @@ TEST_F(MazeGeneratorTest, Generate12x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x27Test) {
+TEST_F(GeneratorTest, Generate12x27Test) {
   rows_ = 12;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -10345,7 +10345,7 @@ TEST_F(MazeGeneratorTest, Generate12x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x28Test) {
+TEST_F(GeneratorTest, Generate12x28Test) {
   rows_ = 12;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -10365,7 +10365,7 @@ TEST_F(MazeGeneratorTest, Generate12x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x29Test) {
+TEST_F(GeneratorTest, Generate12x29Test) {
   rows_ = 12;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -10385,7 +10385,7 @@ TEST_F(MazeGeneratorTest, Generate12x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x30Test) {
+TEST_F(GeneratorTest, Generate12x30Test) {
   rows_ = 12;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -10405,7 +10405,7 @@ TEST_F(MazeGeneratorTest, Generate12x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x31Test) {
+TEST_F(GeneratorTest, Generate12x31Test) {
   rows_ = 12;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -10425,7 +10425,7 @@ TEST_F(MazeGeneratorTest, Generate12x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x32Test) {
+TEST_F(GeneratorTest, Generate12x32Test) {
   rows_ = 12;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -10445,7 +10445,7 @@ TEST_F(MazeGeneratorTest, Generate12x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x33Test) {
+TEST_F(GeneratorTest, Generate12x33Test) {
   rows_ = 12;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -10465,7 +10465,7 @@ TEST_F(MazeGeneratorTest, Generate12x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x34Test) {
+TEST_F(GeneratorTest, Generate12x34Test) {
   rows_ = 12;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -10485,7 +10485,7 @@ TEST_F(MazeGeneratorTest, Generate12x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x35Test) {
+TEST_F(GeneratorTest, Generate12x35Test) {
   rows_ = 12;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -10505,7 +10505,7 @@ TEST_F(MazeGeneratorTest, Generate12x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x36Test) {
+TEST_F(GeneratorTest, Generate12x36Test) {
   rows_ = 12;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -10525,7 +10525,7 @@ TEST_F(MazeGeneratorTest, Generate12x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x37Test) {
+TEST_F(GeneratorTest, Generate12x37Test) {
   rows_ = 12;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -10545,7 +10545,7 @@ TEST_F(MazeGeneratorTest, Generate12x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x38Test) {
+TEST_F(GeneratorTest, Generate12x38Test) {
   rows_ = 12;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -10565,7 +10565,7 @@ TEST_F(MazeGeneratorTest, Generate12x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x39Test) {
+TEST_F(GeneratorTest, Generate12x39Test) {
   rows_ = 12;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -10585,7 +10585,7 @@ TEST_F(MazeGeneratorTest, Generate12x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x40Test) {
+TEST_F(GeneratorTest, Generate12x40Test) {
   rows_ = 12;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -10605,7 +10605,7 @@ TEST_F(MazeGeneratorTest, Generate12x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x41Test) {
+TEST_F(GeneratorTest, Generate12x41Test) {
   rows_ = 12;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -10625,7 +10625,7 @@ TEST_F(MazeGeneratorTest, Generate12x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x42Test) {
+TEST_F(GeneratorTest, Generate12x42Test) {
   rows_ = 12;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -10645,7 +10645,7 @@ TEST_F(MazeGeneratorTest, Generate12x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x43Test) {
+TEST_F(GeneratorTest, Generate12x43Test) {
   rows_ = 12;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -10665,7 +10665,7 @@ TEST_F(MazeGeneratorTest, Generate12x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x44Test) {
+TEST_F(GeneratorTest, Generate12x44Test) {
   rows_ = 12;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -10685,7 +10685,7 @@ TEST_F(MazeGeneratorTest, Generate12x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x45Test) {
+TEST_F(GeneratorTest, Generate12x45Test) {
   rows_ = 12;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -10705,7 +10705,7 @@ TEST_F(MazeGeneratorTest, Generate12x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x46Test) {
+TEST_F(GeneratorTest, Generate12x46Test) {
   rows_ = 12;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -10725,7 +10725,7 @@ TEST_F(MazeGeneratorTest, Generate12x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x47Test) {
+TEST_F(GeneratorTest, Generate12x47Test) {
   rows_ = 12;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -10745,7 +10745,7 @@ TEST_F(MazeGeneratorTest, Generate12x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x48Test) {
+TEST_F(GeneratorTest, Generate12x48Test) {
   rows_ = 12;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -10765,7 +10765,7 @@ TEST_F(MazeGeneratorTest, Generate12x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x49Test) {
+TEST_F(GeneratorTest, Generate12x49Test) {
   rows_ = 12;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -10785,7 +10785,7 @@ TEST_F(MazeGeneratorTest, Generate12x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate12x50Test) {
+TEST_F(GeneratorTest, Generate12x50Test) {
   rows_ = 12;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -10805,7 +10805,7 @@ TEST_F(MazeGeneratorTest, Generate12x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x2Test) {
+TEST_F(GeneratorTest, Generate13x2Test) {
   rows_ = 13;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -10825,7 +10825,7 @@ TEST_F(MazeGeneratorTest, Generate13x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x3Test) {
+TEST_F(GeneratorTest, Generate13x3Test) {
   rows_ = 13;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -10845,7 +10845,7 @@ TEST_F(MazeGeneratorTest, Generate13x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x4Test) {
+TEST_F(GeneratorTest, Generate13x4Test) {
   rows_ = 13;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -10865,7 +10865,7 @@ TEST_F(MazeGeneratorTest, Generate13x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x5Test) {
+TEST_F(GeneratorTest, Generate13x5Test) {
   rows_ = 13;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -10885,7 +10885,7 @@ TEST_F(MazeGeneratorTest, Generate13x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x6Test) {
+TEST_F(GeneratorTest, Generate13x6Test) {
   rows_ = 13;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -10905,7 +10905,7 @@ TEST_F(MazeGeneratorTest, Generate13x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x7Test) {
+TEST_F(GeneratorTest, Generate13x7Test) {
   rows_ = 13;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -10925,7 +10925,7 @@ TEST_F(MazeGeneratorTest, Generate13x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x8Test) {
+TEST_F(GeneratorTest, Generate13x8Test) {
   rows_ = 13;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -10945,7 +10945,7 @@ TEST_F(MazeGeneratorTest, Generate13x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x9Test) {
+TEST_F(GeneratorTest, Generate13x9Test) {
   rows_ = 13;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -10965,7 +10965,7 @@ TEST_F(MazeGeneratorTest, Generate13x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x10Test) {
+TEST_F(GeneratorTest, Generate13x10Test) {
   rows_ = 13;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -10985,7 +10985,7 @@ TEST_F(MazeGeneratorTest, Generate13x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x11Test) {
+TEST_F(GeneratorTest, Generate13x11Test) {
   rows_ = 13;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -11005,7 +11005,7 @@ TEST_F(MazeGeneratorTest, Generate13x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x12Test) {
+TEST_F(GeneratorTest, Generate13x12Test) {
   rows_ = 13;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -11025,7 +11025,7 @@ TEST_F(MazeGeneratorTest, Generate13x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x13Test) {
+TEST_F(GeneratorTest, Generate13x13Test) {
   rows_ = 13;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -11045,7 +11045,7 @@ TEST_F(MazeGeneratorTest, Generate13x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x14Test) {
+TEST_F(GeneratorTest, Generate13x14Test) {
   rows_ = 13;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -11065,7 +11065,7 @@ TEST_F(MazeGeneratorTest, Generate13x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x15Test) {
+TEST_F(GeneratorTest, Generate13x15Test) {
   rows_ = 13;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -11085,7 +11085,7 @@ TEST_F(MazeGeneratorTest, Generate13x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x16Test) {
+TEST_F(GeneratorTest, Generate13x16Test) {
   rows_ = 13;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -11105,7 +11105,7 @@ TEST_F(MazeGeneratorTest, Generate13x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x17Test) {
+TEST_F(GeneratorTest, Generate13x17Test) {
   rows_ = 13;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -11125,7 +11125,7 @@ TEST_F(MazeGeneratorTest, Generate13x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x18Test) {
+TEST_F(GeneratorTest, Generate13x18Test) {
   rows_ = 13;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -11145,7 +11145,7 @@ TEST_F(MazeGeneratorTest, Generate13x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x19Test) {
+TEST_F(GeneratorTest, Generate13x19Test) {
   rows_ = 13;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -11165,7 +11165,7 @@ TEST_F(MazeGeneratorTest, Generate13x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x20Test) {
+TEST_F(GeneratorTest, Generate13x20Test) {
   rows_ = 13;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -11185,7 +11185,7 @@ TEST_F(MazeGeneratorTest, Generate13x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x21Test) {
+TEST_F(GeneratorTest, Generate13x21Test) {
   rows_ = 13;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -11205,7 +11205,7 @@ TEST_F(MazeGeneratorTest, Generate13x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x22Test) {
+TEST_F(GeneratorTest, Generate13x22Test) {
   rows_ = 13;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -11225,7 +11225,7 @@ TEST_F(MazeGeneratorTest, Generate13x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x23Test) {
+TEST_F(GeneratorTest, Generate13x23Test) {
   rows_ = 13;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -11245,7 +11245,7 @@ TEST_F(MazeGeneratorTest, Generate13x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x24Test) {
+TEST_F(GeneratorTest, Generate13x24Test) {
   rows_ = 13;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -11265,7 +11265,7 @@ TEST_F(MazeGeneratorTest, Generate13x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x25Test) {
+TEST_F(GeneratorTest, Generate13x25Test) {
   rows_ = 13;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -11285,7 +11285,7 @@ TEST_F(MazeGeneratorTest, Generate13x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x26Test) {
+TEST_F(GeneratorTest, Generate13x26Test) {
   rows_ = 13;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -11305,7 +11305,7 @@ TEST_F(MazeGeneratorTest, Generate13x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x27Test) {
+TEST_F(GeneratorTest, Generate13x27Test) {
   rows_ = 13;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -11325,7 +11325,7 @@ TEST_F(MazeGeneratorTest, Generate13x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x28Test) {
+TEST_F(GeneratorTest, Generate13x28Test) {
   rows_ = 13;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -11345,7 +11345,7 @@ TEST_F(MazeGeneratorTest, Generate13x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x29Test) {
+TEST_F(GeneratorTest, Generate13x29Test) {
   rows_ = 13;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -11365,7 +11365,7 @@ TEST_F(MazeGeneratorTest, Generate13x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x30Test) {
+TEST_F(GeneratorTest, Generate13x30Test) {
   rows_ = 13;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -11385,7 +11385,7 @@ TEST_F(MazeGeneratorTest, Generate13x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x31Test) {
+TEST_F(GeneratorTest, Generate13x31Test) {
   rows_ = 13;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -11405,7 +11405,7 @@ TEST_F(MazeGeneratorTest, Generate13x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x32Test) {
+TEST_F(GeneratorTest, Generate13x32Test) {
   rows_ = 13;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -11425,7 +11425,7 @@ TEST_F(MazeGeneratorTest, Generate13x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x33Test) {
+TEST_F(GeneratorTest, Generate13x33Test) {
   rows_ = 13;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -11445,7 +11445,7 @@ TEST_F(MazeGeneratorTest, Generate13x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x34Test) {
+TEST_F(GeneratorTest, Generate13x34Test) {
   rows_ = 13;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -11465,7 +11465,7 @@ TEST_F(MazeGeneratorTest, Generate13x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x35Test) {
+TEST_F(GeneratorTest, Generate13x35Test) {
   rows_ = 13;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -11485,7 +11485,7 @@ TEST_F(MazeGeneratorTest, Generate13x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x36Test) {
+TEST_F(GeneratorTest, Generate13x36Test) {
   rows_ = 13;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -11505,7 +11505,7 @@ TEST_F(MazeGeneratorTest, Generate13x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x37Test) {
+TEST_F(GeneratorTest, Generate13x37Test) {
   rows_ = 13;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -11525,7 +11525,7 @@ TEST_F(MazeGeneratorTest, Generate13x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x38Test) {
+TEST_F(GeneratorTest, Generate13x38Test) {
   rows_ = 13;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -11545,7 +11545,7 @@ TEST_F(MazeGeneratorTest, Generate13x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x39Test) {
+TEST_F(GeneratorTest, Generate13x39Test) {
   rows_ = 13;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -11565,7 +11565,7 @@ TEST_F(MazeGeneratorTest, Generate13x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x40Test) {
+TEST_F(GeneratorTest, Generate13x40Test) {
   rows_ = 13;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -11585,7 +11585,7 @@ TEST_F(MazeGeneratorTest, Generate13x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x41Test) {
+TEST_F(GeneratorTest, Generate13x41Test) {
   rows_ = 13;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -11605,7 +11605,7 @@ TEST_F(MazeGeneratorTest, Generate13x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x42Test) {
+TEST_F(GeneratorTest, Generate13x42Test) {
   rows_ = 13;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -11625,7 +11625,7 @@ TEST_F(MazeGeneratorTest, Generate13x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x43Test) {
+TEST_F(GeneratorTest, Generate13x43Test) {
   rows_ = 13;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -11645,7 +11645,7 @@ TEST_F(MazeGeneratorTest, Generate13x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x44Test) {
+TEST_F(GeneratorTest, Generate13x44Test) {
   rows_ = 13;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -11665,7 +11665,7 @@ TEST_F(MazeGeneratorTest, Generate13x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x45Test) {
+TEST_F(GeneratorTest, Generate13x45Test) {
   rows_ = 13;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -11685,7 +11685,7 @@ TEST_F(MazeGeneratorTest, Generate13x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x46Test) {
+TEST_F(GeneratorTest, Generate13x46Test) {
   rows_ = 13;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -11705,7 +11705,7 @@ TEST_F(MazeGeneratorTest, Generate13x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x47Test) {
+TEST_F(GeneratorTest, Generate13x47Test) {
   rows_ = 13;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -11725,7 +11725,7 @@ TEST_F(MazeGeneratorTest, Generate13x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x48Test) {
+TEST_F(GeneratorTest, Generate13x48Test) {
   rows_ = 13;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -11745,7 +11745,7 @@ TEST_F(MazeGeneratorTest, Generate13x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x49Test) {
+TEST_F(GeneratorTest, Generate13x49Test) {
   rows_ = 13;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -11765,7 +11765,7 @@ TEST_F(MazeGeneratorTest, Generate13x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate13x50Test) {
+TEST_F(GeneratorTest, Generate13x50Test) {
   rows_ = 13;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -11785,7 +11785,7 @@ TEST_F(MazeGeneratorTest, Generate13x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x2Test) {
+TEST_F(GeneratorTest, Generate14x2Test) {
   rows_ = 14;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -11805,7 +11805,7 @@ TEST_F(MazeGeneratorTest, Generate14x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x3Test) {
+TEST_F(GeneratorTest, Generate14x3Test) {
   rows_ = 14;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -11825,7 +11825,7 @@ TEST_F(MazeGeneratorTest, Generate14x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x4Test) {
+TEST_F(GeneratorTest, Generate14x4Test) {
   rows_ = 14;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -11845,7 +11845,7 @@ TEST_F(MazeGeneratorTest, Generate14x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x5Test) {
+TEST_F(GeneratorTest, Generate14x5Test) {
   rows_ = 14;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -11865,7 +11865,7 @@ TEST_F(MazeGeneratorTest, Generate14x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x6Test) {
+TEST_F(GeneratorTest, Generate14x6Test) {
   rows_ = 14;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -11885,7 +11885,7 @@ TEST_F(MazeGeneratorTest, Generate14x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x7Test) {
+TEST_F(GeneratorTest, Generate14x7Test) {
   rows_ = 14;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -11905,7 +11905,7 @@ TEST_F(MazeGeneratorTest, Generate14x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x8Test) {
+TEST_F(GeneratorTest, Generate14x8Test) {
   rows_ = 14;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -11925,7 +11925,7 @@ TEST_F(MazeGeneratorTest, Generate14x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x9Test) {
+TEST_F(GeneratorTest, Generate14x9Test) {
   rows_ = 14;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -11945,7 +11945,7 @@ TEST_F(MazeGeneratorTest, Generate14x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x10Test) {
+TEST_F(GeneratorTest, Generate14x10Test) {
   rows_ = 14;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -11965,7 +11965,7 @@ TEST_F(MazeGeneratorTest, Generate14x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x11Test) {
+TEST_F(GeneratorTest, Generate14x11Test) {
   rows_ = 14;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -11985,7 +11985,7 @@ TEST_F(MazeGeneratorTest, Generate14x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x12Test) {
+TEST_F(GeneratorTest, Generate14x12Test) {
   rows_ = 14;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -12005,7 +12005,7 @@ TEST_F(MazeGeneratorTest, Generate14x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x13Test) {
+TEST_F(GeneratorTest, Generate14x13Test) {
   rows_ = 14;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -12025,7 +12025,7 @@ TEST_F(MazeGeneratorTest, Generate14x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x14Test) {
+TEST_F(GeneratorTest, Generate14x14Test) {
   rows_ = 14;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -12045,7 +12045,7 @@ TEST_F(MazeGeneratorTest, Generate14x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x15Test) {
+TEST_F(GeneratorTest, Generate14x15Test) {
   rows_ = 14;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -12065,7 +12065,7 @@ TEST_F(MazeGeneratorTest, Generate14x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x16Test) {
+TEST_F(GeneratorTest, Generate14x16Test) {
   rows_ = 14;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -12085,7 +12085,7 @@ TEST_F(MazeGeneratorTest, Generate14x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x17Test) {
+TEST_F(GeneratorTest, Generate14x17Test) {
   rows_ = 14;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -12105,7 +12105,7 @@ TEST_F(MazeGeneratorTest, Generate14x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x18Test) {
+TEST_F(GeneratorTest, Generate14x18Test) {
   rows_ = 14;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -12125,7 +12125,7 @@ TEST_F(MazeGeneratorTest, Generate14x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x19Test) {
+TEST_F(GeneratorTest, Generate14x19Test) {
   rows_ = 14;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -12145,7 +12145,7 @@ TEST_F(MazeGeneratorTest, Generate14x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x20Test) {
+TEST_F(GeneratorTest, Generate14x20Test) {
   rows_ = 14;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -12165,7 +12165,7 @@ TEST_F(MazeGeneratorTest, Generate14x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x21Test) {
+TEST_F(GeneratorTest, Generate14x21Test) {
   rows_ = 14;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -12185,7 +12185,7 @@ TEST_F(MazeGeneratorTest, Generate14x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x22Test) {
+TEST_F(GeneratorTest, Generate14x22Test) {
   rows_ = 14;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -12205,7 +12205,7 @@ TEST_F(MazeGeneratorTest, Generate14x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x23Test) {
+TEST_F(GeneratorTest, Generate14x23Test) {
   rows_ = 14;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -12225,7 +12225,7 @@ TEST_F(MazeGeneratorTest, Generate14x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x24Test) {
+TEST_F(GeneratorTest, Generate14x24Test) {
   rows_ = 14;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -12245,7 +12245,7 @@ TEST_F(MazeGeneratorTest, Generate14x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x25Test) {
+TEST_F(GeneratorTest, Generate14x25Test) {
   rows_ = 14;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -12265,7 +12265,7 @@ TEST_F(MazeGeneratorTest, Generate14x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x26Test) {
+TEST_F(GeneratorTest, Generate14x26Test) {
   rows_ = 14;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -12285,7 +12285,7 @@ TEST_F(MazeGeneratorTest, Generate14x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x27Test) {
+TEST_F(GeneratorTest, Generate14x27Test) {
   rows_ = 14;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -12305,7 +12305,7 @@ TEST_F(MazeGeneratorTest, Generate14x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x28Test) {
+TEST_F(GeneratorTest, Generate14x28Test) {
   rows_ = 14;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -12325,7 +12325,7 @@ TEST_F(MazeGeneratorTest, Generate14x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x29Test) {
+TEST_F(GeneratorTest, Generate14x29Test) {
   rows_ = 14;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -12345,7 +12345,7 @@ TEST_F(MazeGeneratorTest, Generate14x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x30Test) {
+TEST_F(GeneratorTest, Generate14x30Test) {
   rows_ = 14;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -12365,7 +12365,7 @@ TEST_F(MazeGeneratorTest, Generate14x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x31Test) {
+TEST_F(GeneratorTest, Generate14x31Test) {
   rows_ = 14;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -12385,7 +12385,7 @@ TEST_F(MazeGeneratorTest, Generate14x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x32Test) {
+TEST_F(GeneratorTest, Generate14x32Test) {
   rows_ = 14;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -12405,7 +12405,7 @@ TEST_F(MazeGeneratorTest, Generate14x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x33Test) {
+TEST_F(GeneratorTest, Generate14x33Test) {
   rows_ = 14;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -12425,7 +12425,7 @@ TEST_F(MazeGeneratorTest, Generate14x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x34Test) {
+TEST_F(GeneratorTest, Generate14x34Test) {
   rows_ = 14;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -12445,7 +12445,7 @@ TEST_F(MazeGeneratorTest, Generate14x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x35Test) {
+TEST_F(GeneratorTest, Generate14x35Test) {
   rows_ = 14;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -12465,7 +12465,7 @@ TEST_F(MazeGeneratorTest, Generate14x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x36Test) {
+TEST_F(GeneratorTest, Generate14x36Test) {
   rows_ = 14;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -12485,7 +12485,7 @@ TEST_F(MazeGeneratorTest, Generate14x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x37Test) {
+TEST_F(GeneratorTest, Generate14x37Test) {
   rows_ = 14;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -12505,7 +12505,7 @@ TEST_F(MazeGeneratorTest, Generate14x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x38Test) {
+TEST_F(GeneratorTest, Generate14x38Test) {
   rows_ = 14;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -12525,7 +12525,7 @@ TEST_F(MazeGeneratorTest, Generate14x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x39Test) {
+TEST_F(GeneratorTest, Generate14x39Test) {
   rows_ = 14;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -12545,7 +12545,7 @@ TEST_F(MazeGeneratorTest, Generate14x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x40Test) {
+TEST_F(GeneratorTest, Generate14x40Test) {
   rows_ = 14;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -12565,7 +12565,7 @@ TEST_F(MazeGeneratorTest, Generate14x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x41Test) {
+TEST_F(GeneratorTest, Generate14x41Test) {
   rows_ = 14;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -12585,7 +12585,7 @@ TEST_F(MazeGeneratorTest, Generate14x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x42Test) {
+TEST_F(GeneratorTest, Generate14x42Test) {
   rows_ = 14;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -12605,7 +12605,7 @@ TEST_F(MazeGeneratorTest, Generate14x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x43Test) {
+TEST_F(GeneratorTest, Generate14x43Test) {
   rows_ = 14;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -12625,7 +12625,7 @@ TEST_F(MazeGeneratorTest, Generate14x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x44Test) {
+TEST_F(GeneratorTest, Generate14x44Test) {
   rows_ = 14;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -12645,7 +12645,7 @@ TEST_F(MazeGeneratorTest, Generate14x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x45Test) {
+TEST_F(GeneratorTest, Generate14x45Test) {
   rows_ = 14;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -12665,7 +12665,7 @@ TEST_F(MazeGeneratorTest, Generate14x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x46Test) {
+TEST_F(GeneratorTest, Generate14x46Test) {
   rows_ = 14;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -12685,7 +12685,7 @@ TEST_F(MazeGeneratorTest, Generate14x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x47Test) {
+TEST_F(GeneratorTest, Generate14x47Test) {
   rows_ = 14;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -12705,7 +12705,7 @@ TEST_F(MazeGeneratorTest, Generate14x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x48Test) {
+TEST_F(GeneratorTest, Generate14x48Test) {
   rows_ = 14;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -12725,7 +12725,7 @@ TEST_F(MazeGeneratorTest, Generate14x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x49Test) {
+TEST_F(GeneratorTest, Generate14x49Test) {
   rows_ = 14;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -12745,7 +12745,7 @@ TEST_F(MazeGeneratorTest, Generate14x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate14x50Test) {
+TEST_F(GeneratorTest, Generate14x50Test) {
   rows_ = 14;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -12765,7 +12765,7 @@ TEST_F(MazeGeneratorTest, Generate14x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x2Test) {
+TEST_F(GeneratorTest, Generate15x2Test) {
   rows_ = 15;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -12785,7 +12785,7 @@ TEST_F(MazeGeneratorTest, Generate15x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x3Test) {
+TEST_F(GeneratorTest, Generate15x3Test) {
   rows_ = 15;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -12805,7 +12805,7 @@ TEST_F(MazeGeneratorTest, Generate15x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x4Test) {
+TEST_F(GeneratorTest, Generate15x4Test) {
   rows_ = 15;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -12825,7 +12825,7 @@ TEST_F(MazeGeneratorTest, Generate15x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x5Test) {
+TEST_F(GeneratorTest, Generate15x5Test) {
   rows_ = 15;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -12845,7 +12845,7 @@ TEST_F(MazeGeneratorTest, Generate15x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x6Test) {
+TEST_F(GeneratorTest, Generate15x6Test) {
   rows_ = 15;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -12865,7 +12865,7 @@ TEST_F(MazeGeneratorTest, Generate15x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x7Test) {
+TEST_F(GeneratorTest, Generate15x7Test) {
   rows_ = 15;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -12885,7 +12885,7 @@ TEST_F(MazeGeneratorTest, Generate15x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x8Test) {
+TEST_F(GeneratorTest, Generate15x8Test) {
   rows_ = 15;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -12905,7 +12905,7 @@ TEST_F(MazeGeneratorTest, Generate15x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x9Test) {
+TEST_F(GeneratorTest, Generate15x9Test) {
   rows_ = 15;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -12925,7 +12925,7 @@ TEST_F(MazeGeneratorTest, Generate15x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x10Test) {
+TEST_F(GeneratorTest, Generate15x10Test) {
   rows_ = 15;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -12945,7 +12945,7 @@ TEST_F(MazeGeneratorTest, Generate15x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x11Test) {
+TEST_F(GeneratorTest, Generate15x11Test) {
   rows_ = 15;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -12965,7 +12965,7 @@ TEST_F(MazeGeneratorTest, Generate15x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x12Test) {
+TEST_F(GeneratorTest, Generate15x12Test) {
   rows_ = 15;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -12985,7 +12985,7 @@ TEST_F(MazeGeneratorTest, Generate15x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x13Test) {
+TEST_F(GeneratorTest, Generate15x13Test) {
   rows_ = 15;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -13005,7 +13005,7 @@ TEST_F(MazeGeneratorTest, Generate15x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x14Test) {
+TEST_F(GeneratorTest, Generate15x14Test) {
   rows_ = 15;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -13025,7 +13025,7 @@ TEST_F(MazeGeneratorTest, Generate15x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x15Test) {
+TEST_F(GeneratorTest, Generate15x15Test) {
   rows_ = 15;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -13045,7 +13045,7 @@ TEST_F(MazeGeneratorTest, Generate15x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x16Test) {
+TEST_F(GeneratorTest, Generate15x16Test) {
   rows_ = 15;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -13065,7 +13065,7 @@ TEST_F(MazeGeneratorTest, Generate15x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x17Test) {
+TEST_F(GeneratorTest, Generate15x17Test) {
   rows_ = 15;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -13085,7 +13085,7 @@ TEST_F(MazeGeneratorTest, Generate15x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x18Test) {
+TEST_F(GeneratorTest, Generate15x18Test) {
   rows_ = 15;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -13105,7 +13105,7 @@ TEST_F(MazeGeneratorTest, Generate15x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x19Test) {
+TEST_F(GeneratorTest, Generate15x19Test) {
   rows_ = 15;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -13125,7 +13125,7 @@ TEST_F(MazeGeneratorTest, Generate15x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x20Test) {
+TEST_F(GeneratorTest, Generate15x20Test) {
   rows_ = 15;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -13145,7 +13145,7 @@ TEST_F(MazeGeneratorTest, Generate15x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x21Test) {
+TEST_F(GeneratorTest, Generate15x21Test) {
   rows_ = 15;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -13165,7 +13165,7 @@ TEST_F(MazeGeneratorTest, Generate15x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x22Test) {
+TEST_F(GeneratorTest, Generate15x22Test) {
   rows_ = 15;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -13185,7 +13185,7 @@ TEST_F(MazeGeneratorTest, Generate15x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x23Test) {
+TEST_F(GeneratorTest, Generate15x23Test) {
   rows_ = 15;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -13205,7 +13205,7 @@ TEST_F(MazeGeneratorTest, Generate15x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x24Test) {
+TEST_F(GeneratorTest, Generate15x24Test) {
   rows_ = 15;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -13225,7 +13225,7 @@ TEST_F(MazeGeneratorTest, Generate15x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x25Test) {
+TEST_F(GeneratorTest, Generate15x25Test) {
   rows_ = 15;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -13245,7 +13245,7 @@ TEST_F(MazeGeneratorTest, Generate15x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x26Test) {
+TEST_F(GeneratorTest, Generate15x26Test) {
   rows_ = 15;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -13265,7 +13265,7 @@ TEST_F(MazeGeneratorTest, Generate15x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x27Test) {
+TEST_F(GeneratorTest, Generate15x27Test) {
   rows_ = 15;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -13285,7 +13285,7 @@ TEST_F(MazeGeneratorTest, Generate15x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x28Test) {
+TEST_F(GeneratorTest, Generate15x28Test) {
   rows_ = 15;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -13305,7 +13305,7 @@ TEST_F(MazeGeneratorTest, Generate15x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x29Test) {
+TEST_F(GeneratorTest, Generate15x29Test) {
   rows_ = 15;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -13325,7 +13325,7 @@ TEST_F(MazeGeneratorTest, Generate15x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x30Test) {
+TEST_F(GeneratorTest, Generate15x30Test) {
   rows_ = 15;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -13345,7 +13345,7 @@ TEST_F(MazeGeneratorTest, Generate15x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x31Test) {
+TEST_F(GeneratorTest, Generate15x31Test) {
   rows_ = 15;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -13365,7 +13365,7 @@ TEST_F(MazeGeneratorTest, Generate15x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x32Test) {
+TEST_F(GeneratorTest, Generate15x32Test) {
   rows_ = 15;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -13385,7 +13385,7 @@ TEST_F(MazeGeneratorTest, Generate15x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x33Test) {
+TEST_F(GeneratorTest, Generate15x33Test) {
   rows_ = 15;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -13405,7 +13405,7 @@ TEST_F(MazeGeneratorTest, Generate15x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x34Test) {
+TEST_F(GeneratorTest, Generate15x34Test) {
   rows_ = 15;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -13425,7 +13425,7 @@ TEST_F(MazeGeneratorTest, Generate15x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x35Test) {
+TEST_F(GeneratorTest, Generate15x35Test) {
   rows_ = 15;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -13445,7 +13445,7 @@ TEST_F(MazeGeneratorTest, Generate15x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x36Test) {
+TEST_F(GeneratorTest, Generate15x36Test) {
   rows_ = 15;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -13465,7 +13465,7 @@ TEST_F(MazeGeneratorTest, Generate15x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x37Test) {
+TEST_F(GeneratorTest, Generate15x37Test) {
   rows_ = 15;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -13485,7 +13485,7 @@ TEST_F(MazeGeneratorTest, Generate15x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x38Test) {
+TEST_F(GeneratorTest, Generate15x38Test) {
   rows_ = 15;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -13505,7 +13505,7 @@ TEST_F(MazeGeneratorTest, Generate15x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x39Test) {
+TEST_F(GeneratorTest, Generate15x39Test) {
   rows_ = 15;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -13525,7 +13525,7 @@ TEST_F(MazeGeneratorTest, Generate15x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x40Test) {
+TEST_F(GeneratorTest, Generate15x40Test) {
   rows_ = 15;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -13545,7 +13545,7 @@ TEST_F(MazeGeneratorTest, Generate15x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x41Test) {
+TEST_F(GeneratorTest, Generate15x41Test) {
   rows_ = 15;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -13565,7 +13565,7 @@ TEST_F(MazeGeneratorTest, Generate15x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x42Test) {
+TEST_F(GeneratorTest, Generate15x42Test) {
   rows_ = 15;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -13585,7 +13585,7 @@ TEST_F(MazeGeneratorTest, Generate15x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x43Test) {
+TEST_F(GeneratorTest, Generate15x43Test) {
   rows_ = 15;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -13605,7 +13605,7 @@ TEST_F(MazeGeneratorTest, Generate15x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x44Test) {
+TEST_F(GeneratorTest, Generate15x44Test) {
   rows_ = 15;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -13625,7 +13625,7 @@ TEST_F(MazeGeneratorTest, Generate15x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x45Test) {
+TEST_F(GeneratorTest, Generate15x45Test) {
   rows_ = 15;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -13645,7 +13645,7 @@ TEST_F(MazeGeneratorTest, Generate15x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x46Test) {
+TEST_F(GeneratorTest, Generate15x46Test) {
   rows_ = 15;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -13665,7 +13665,7 @@ TEST_F(MazeGeneratorTest, Generate15x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x47Test) {
+TEST_F(GeneratorTest, Generate15x47Test) {
   rows_ = 15;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -13685,7 +13685,7 @@ TEST_F(MazeGeneratorTest, Generate15x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x48Test) {
+TEST_F(GeneratorTest, Generate15x48Test) {
   rows_ = 15;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -13705,7 +13705,7 @@ TEST_F(MazeGeneratorTest, Generate15x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x49Test) {
+TEST_F(GeneratorTest, Generate15x49Test) {
   rows_ = 15;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -13725,7 +13725,7 @@ TEST_F(MazeGeneratorTest, Generate15x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate15x50Test) {
+TEST_F(GeneratorTest, Generate15x50Test) {
   rows_ = 15;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -13745,7 +13745,7 @@ TEST_F(MazeGeneratorTest, Generate15x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x2Test) {
+TEST_F(GeneratorTest, Generate16x2Test) {
   rows_ = 16;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -13765,7 +13765,7 @@ TEST_F(MazeGeneratorTest, Generate16x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x3Test) {
+TEST_F(GeneratorTest, Generate16x3Test) {
   rows_ = 16;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -13785,7 +13785,7 @@ TEST_F(MazeGeneratorTest, Generate16x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x4Test) {
+TEST_F(GeneratorTest, Generate16x4Test) {
   rows_ = 16;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -13805,7 +13805,7 @@ TEST_F(MazeGeneratorTest, Generate16x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x5Test) {
+TEST_F(GeneratorTest, Generate16x5Test) {
   rows_ = 16;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -13825,7 +13825,7 @@ TEST_F(MazeGeneratorTest, Generate16x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x6Test) {
+TEST_F(GeneratorTest, Generate16x6Test) {
   rows_ = 16;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -13845,7 +13845,7 @@ TEST_F(MazeGeneratorTest, Generate16x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x7Test) {
+TEST_F(GeneratorTest, Generate16x7Test) {
   rows_ = 16;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -13865,7 +13865,7 @@ TEST_F(MazeGeneratorTest, Generate16x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x8Test) {
+TEST_F(GeneratorTest, Generate16x8Test) {
   rows_ = 16;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -13885,7 +13885,7 @@ TEST_F(MazeGeneratorTest, Generate16x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x9Test) {
+TEST_F(GeneratorTest, Generate16x9Test) {
   rows_ = 16;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -13905,7 +13905,7 @@ TEST_F(MazeGeneratorTest, Generate16x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x10Test) {
+TEST_F(GeneratorTest, Generate16x10Test) {
   rows_ = 16;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -13925,7 +13925,7 @@ TEST_F(MazeGeneratorTest, Generate16x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x11Test) {
+TEST_F(GeneratorTest, Generate16x11Test) {
   rows_ = 16;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -13945,7 +13945,7 @@ TEST_F(MazeGeneratorTest, Generate16x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x12Test) {
+TEST_F(GeneratorTest, Generate16x12Test) {
   rows_ = 16;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -13965,7 +13965,7 @@ TEST_F(MazeGeneratorTest, Generate16x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x13Test) {
+TEST_F(GeneratorTest, Generate16x13Test) {
   rows_ = 16;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -13985,7 +13985,7 @@ TEST_F(MazeGeneratorTest, Generate16x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x14Test) {
+TEST_F(GeneratorTest, Generate16x14Test) {
   rows_ = 16;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -14005,7 +14005,7 @@ TEST_F(MazeGeneratorTest, Generate16x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x15Test) {
+TEST_F(GeneratorTest, Generate16x15Test) {
   rows_ = 16;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -14025,7 +14025,7 @@ TEST_F(MazeGeneratorTest, Generate16x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x16Test) {
+TEST_F(GeneratorTest, Generate16x16Test) {
   rows_ = 16;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -14045,7 +14045,7 @@ TEST_F(MazeGeneratorTest, Generate16x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x17Test) {
+TEST_F(GeneratorTest, Generate16x17Test) {
   rows_ = 16;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -14065,7 +14065,7 @@ TEST_F(MazeGeneratorTest, Generate16x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x18Test) {
+TEST_F(GeneratorTest, Generate16x18Test) {
   rows_ = 16;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -14085,7 +14085,7 @@ TEST_F(MazeGeneratorTest, Generate16x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x19Test) {
+TEST_F(GeneratorTest, Generate16x19Test) {
   rows_ = 16;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -14105,7 +14105,7 @@ TEST_F(MazeGeneratorTest, Generate16x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x20Test) {
+TEST_F(GeneratorTest, Generate16x20Test) {
   rows_ = 16;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -14125,7 +14125,7 @@ TEST_F(MazeGeneratorTest, Generate16x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x21Test) {
+TEST_F(GeneratorTest, Generate16x21Test) {
   rows_ = 16;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -14145,7 +14145,7 @@ TEST_F(MazeGeneratorTest, Generate16x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x22Test) {
+TEST_F(GeneratorTest, Generate16x22Test) {
   rows_ = 16;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -14165,7 +14165,7 @@ TEST_F(MazeGeneratorTest, Generate16x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x23Test) {
+TEST_F(GeneratorTest, Generate16x23Test) {
   rows_ = 16;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -14185,7 +14185,7 @@ TEST_F(MazeGeneratorTest, Generate16x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x24Test) {
+TEST_F(GeneratorTest, Generate16x24Test) {
   rows_ = 16;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -14205,7 +14205,7 @@ TEST_F(MazeGeneratorTest, Generate16x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x25Test) {
+TEST_F(GeneratorTest, Generate16x25Test) {
   rows_ = 16;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -14225,7 +14225,7 @@ TEST_F(MazeGeneratorTest, Generate16x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x26Test) {
+TEST_F(GeneratorTest, Generate16x26Test) {
   rows_ = 16;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -14245,7 +14245,7 @@ TEST_F(MazeGeneratorTest, Generate16x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x27Test) {
+TEST_F(GeneratorTest, Generate16x27Test) {
   rows_ = 16;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -14265,7 +14265,7 @@ TEST_F(MazeGeneratorTest, Generate16x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x28Test) {
+TEST_F(GeneratorTest, Generate16x28Test) {
   rows_ = 16;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -14285,7 +14285,7 @@ TEST_F(MazeGeneratorTest, Generate16x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x29Test) {
+TEST_F(GeneratorTest, Generate16x29Test) {
   rows_ = 16;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -14305,7 +14305,7 @@ TEST_F(MazeGeneratorTest, Generate16x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x30Test) {
+TEST_F(GeneratorTest, Generate16x30Test) {
   rows_ = 16;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -14325,7 +14325,7 @@ TEST_F(MazeGeneratorTest, Generate16x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x31Test) {
+TEST_F(GeneratorTest, Generate16x31Test) {
   rows_ = 16;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -14345,7 +14345,7 @@ TEST_F(MazeGeneratorTest, Generate16x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x32Test) {
+TEST_F(GeneratorTest, Generate16x32Test) {
   rows_ = 16;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -14365,7 +14365,7 @@ TEST_F(MazeGeneratorTest, Generate16x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x33Test) {
+TEST_F(GeneratorTest, Generate16x33Test) {
   rows_ = 16;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -14385,7 +14385,7 @@ TEST_F(MazeGeneratorTest, Generate16x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x34Test) {
+TEST_F(GeneratorTest, Generate16x34Test) {
   rows_ = 16;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -14405,7 +14405,7 @@ TEST_F(MazeGeneratorTest, Generate16x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x35Test) {
+TEST_F(GeneratorTest, Generate16x35Test) {
   rows_ = 16;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -14425,7 +14425,7 @@ TEST_F(MazeGeneratorTest, Generate16x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x36Test) {
+TEST_F(GeneratorTest, Generate16x36Test) {
   rows_ = 16;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -14445,7 +14445,7 @@ TEST_F(MazeGeneratorTest, Generate16x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x37Test) {
+TEST_F(GeneratorTest, Generate16x37Test) {
   rows_ = 16;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -14465,7 +14465,7 @@ TEST_F(MazeGeneratorTest, Generate16x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x38Test) {
+TEST_F(GeneratorTest, Generate16x38Test) {
   rows_ = 16;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -14485,7 +14485,7 @@ TEST_F(MazeGeneratorTest, Generate16x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x39Test) {
+TEST_F(GeneratorTest, Generate16x39Test) {
   rows_ = 16;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -14505,7 +14505,7 @@ TEST_F(MazeGeneratorTest, Generate16x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x40Test) {
+TEST_F(GeneratorTest, Generate16x40Test) {
   rows_ = 16;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -14525,7 +14525,7 @@ TEST_F(MazeGeneratorTest, Generate16x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x41Test) {
+TEST_F(GeneratorTest, Generate16x41Test) {
   rows_ = 16;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -14545,7 +14545,7 @@ TEST_F(MazeGeneratorTest, Generate16x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x42Test) {
+TEST_F(GeneratorTest, Generate16x42Test) {
   rows_ = 16;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -14565,7 +14565,7 @@ TEST_F(MazeGeneratorTest, Generate16x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x43Test) {
+TEST_F(GeneratorTest, Generate16x43Test) {
   rows_ = 16;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -14585,7 +14585,7 @@ TEST_F(MazeGeneratorTest, Generate16x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x44Test) {
+TEST_F(GeneratorTest, Generate16x44Test) {
   rows_ = 16;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -14605,7 +14605,7 @@ TEST_F(MazeGeneratorTest, Generate16x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x45Test) {
+TEST_F(GeneratorTest, Generate16x45Test) {
   rows_ = 16;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -14625,7 +14625,7 @@ TEST_F(MazeGeneratorTest, Generate16x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x46Test) {
+TEST_F(GeneratorTest, Generate16x46Test) {
   rows_ = 16;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -14645,7 +14645,7 @@ TEST_F(MazeGeneratorTest, Generate16x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x47Test) {
+TEST_F(GeneratorTest, Generate16x47Test) {
   rows_ = 16;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -14665,7 +14665,7 @@ TEST_F(MazeGeneratorTest, Generate16x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x48Test) {
+TEST_F(GeneratorTest, Generate16x48Test) {
   rows_ = 16;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -14685,7 +14685,7 @@ TEST_F(MazeGeneratorTest, Generate16x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x49Test) {
+TEST_F(GeneratorTest, Generate16x49Test) {
   rows_ = 16;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -14705,7 +14705,7 @@ TEST_F(MazeGeneratorTest, Generate16x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate16x50Test) {
+TEST_F(GeneratorTest, Generate16x50Test) {
   rows_ = 16;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -14725,7 +14725,7 @@ TEST_F(MazeGeneratorTest, Generate16x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x2Test) {
+TEST_F(GeneratorTest, Generate17x2Test) {
   rows_ = 17;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -14745,7 +14745,7 @@ TEST_F(MazeGeneratorTest, Generate17x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x3Test) {
+TEST_F(GeneratorTest, Generate17x3Test) {
   rows_ = 17;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -14765,7 +14765,7 @@ TEST_F(MazeGeneratorTest, Generate17x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x4Test) {
+TEST_F(GeneratorTest, Generate17x4Test) {
   rows_ = 17;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -14785,7 +14785,7 @@ TEST_F(MazeGeneratorTest, Generate17x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x5Test) {
+TEST_F(GeneratorTest, Generate17x5Test) {
   rows_ = 17;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -14805,7 +14805,7 @@ TEST_F(MazeGeneratorTest, Generate17x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x6Test) {
+TEST_F(GeneratorTest, Generate17x6Test) {
   rows_ = 17;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -14825,7 +14825,7 @@ TEST_F(MazeGeneratorTest, Generate17x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x7Test) {
+TEST_F(GeneratorTest, Generate17x7Test) {
   rows_ = 17;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -14845,7 +14845,7 @@ TEST_F(MazeGeneratorTest, Generate17x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x8Test) {
+TEST_F(GeneratorTest, Generate17x8Test) {
   rows_ = 17;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -14865,7 +14865,7 @@ TEST_F(MazeGeneratorTest, Generate17x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x9Test) {
+TEST_F(GeneratorTest, Generate17x9Test) {
   rows_ = 17;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -14885,7 +14885,7 @@ TEST_F(MazeGeneratorTest, Generate17x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x10Test) {
+TEST_F(GeneratorTest, Generate17x10Test) {
   rows_ = 17;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -14905,7 +14905,7 @@ TEST_F(MazeGeneratorTest, Generate17x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x11Test) {
+TEST_F(GeneratorTest, Generate17x11Test) {
   rows_ = 17;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -14925,7 +14925,7 @@ TEST_F(MazeGeneratorTest, Generate17x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x12Test) {
+TEST_F(GeneratorTest, Generate17x12Test) {
   rows_ = 17;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -14945,7 +14945,7 @@ TEST_F(MazeGeneratorTest, Generate17x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x13Test) {
+TEST_F(GeneratorTest, Generate17x13Test) {
   rows_ = 17;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -14965,7 +14965,7 @@ TEST_F(MazeGeneratorTest, Generate17x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x14Test) {
+TEST_F(GeneratorTest, Generate17x14Test) {
   rows_ = 17;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -14985,7 +14985,7 @@ TEST_F(MazeGeneratorTest, Generate17x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x15Test) {
+TEST_F(GeneratorTest, Generate17x15Test) {
   rows_ = 17;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -15005,7 +15005,7 @@ TEST_F(MazeGeneratorTest, Generate17x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x16Test) {
+TEST_F(GeneratorTest, Generate17x16Test) {
   rows_ = 17;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -15025,7 +15025,7 @@ TEST_F(MazeGeneratorTest, Generate17x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x17Test) {
+TEST_F(GeneratorTest, Generate17x17Test) {
   rows_ = 17;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -15045,7 +15045,7 @@ TEST_F(MazeGeneratorTest, Generate17x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x18Test) {
+TEST_F(GeneratorTest, Generate17x18Test) {
   rows_ = 17;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -15065,7 +15065,7 @@ TEST_F(MazeGeneratorTest, Generate17x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x19Test) {
+TEST_F(GeneratorTest, Generate17x19Test) {
   rows_ = 17;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -15085,7 +15085,7 @@ TEST_F(MazeGeneratorTest, Generate17x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x20Test) {
+TEST_F(GeneratorTest, Generate17x20Test) {
   rows_ = 17;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -15105,7 +15105,7 @@ TEST_F(MazeGeneratorTest, Generate17x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x21Test) {
+TEST_F(GeneratorTest, Generate17x21Test) {
   rows_ = 17;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -15125,7 +15125,7 @@ TEST_F(MazeGeneratorTest, Generate17x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x22Test) {
+TEST_F(GeneratorTest, Generate17x22Test) {
   rows_ = 17;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -15145,7 +15145,7 @@ TEST_F(MazeGeneratorTest, Generate17x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x23Test) {
+TEST_F(GeneratorTest, Generate17x23Test) {
   rows_ = 17;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -15165,7 +15165,7 @@ TEST_F(MazeGeneratorTest, Generate17x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x24Test) {
+TEST_F(GeneratorTest, Generate17x24Test) {
   rows_ = 17;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -15185,7 +15185,7 @@ TEST_F(MazeGeneratorTest, Generate17x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x25Test) {
+TEST_F(GeneratorTest, Generate17x25Test) {
   rows_ = 17;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -15205,7 +15205,7 @@ TEST_F(MazeGeneratorTest, Generate17x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x26Test) {
+TEST_F(GeneratorTest, Generate17x26Test) {
   rows_ = 17;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -15225,7 +15225,7 @@ TEST_F(MazeGeneratorTest, Generate17x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x27Test) {
+TEST_F(GeneratorTest, Generate17x27Test) {
   rows_ = 17;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -15245,7 +15245,7 @@ TEST_F(MazeGeneratorTest, Generate17x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x28Test) {
+TEST_F(GeneratorTest, Generate17x28Test) {
   rows_ = 17;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -15265,7 +15265,7 @@ TEST_F(MazeGeneratorTest, Generate17x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x29Test) {
+TEST_F(GeneratorTest, Generate17x29Test) {
   rows_ = 17;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -15285,7 +15285,7 @@ TEST_F(MazeGeneratorTest, Generate17x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x30Test) {
+TEST_F(GeneratorTest, Generate17x30Test) {
   rows_ = 17;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -15305,7 +15305,7 @@ TEST_F(MazeGeneratorTest, Generate17x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x31Test) {
+TEST_F(GeneratorTest, Generate17x31Test) {
   rows_ = 17;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -15325,7 +15325,7 @@ TEST_F(MazeGeneratorTest, Generate17x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x32Test) {
+TEST_F(GeneratorTest, Generate17x32Test) {
   rows_ = 17;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -15345,7 +15345,7 @@ TEST_F(MazeGeneratorTest, Generate17x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x33Test) {
+TEST_F(GeneratorTest, Generate17x33Test) {
   rows_ = 17;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -15365,7 +15365,7 @@ TEST_F(MazeGeneratorTest, Generate17x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x34Test) {
+TEST_F(GeneratorTest, Generate17x34Test) {
   rows_ = 17;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -15385,7 +15385,7 @@ TEST_F(MazeGeneratorTest, Generate17x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x35Test) {
+TEST_F(GeneratorTest, Generate17x35Test) {
   rows_ = 17;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -15405,7 +15405,7 @@ TEST_F(MazeGeneratorTest, Generate17x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x36Test) {
+TEST_F(GeneratorTest, Generate17x36Test) {
   rows_ = 17;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -15425,7 +15425,7 @@ TEST_F(MazeGeneratorTest, Generate17x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x37Test) {
+TEST_F(GeneratorTest, Generate17x37Test) {
   rows_ = 17;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -15445,7 +15445,7 @@ TEST_F(MazeGeneratorTest, Generate17x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x38Test) {
+TEST_F(GeneratorTest, Generate17x38Test) {
   rows_ = 17;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -15465,7 +15465,7 @@ TEST_F(MazeGeneratorTest, Generate17x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x39Test) {
+TEST_F(GeneratorTest, Generate17x39Test) {
   rows_ = 17;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -15485,7 +15485,7 @@ TEST_F(MazeGeneratorTest, Generate17x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x40Test) {
+TEST_F(GeneratorTest, Generate17x40Test) {
   rows_ = 17;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -15505,7 +15505,7 @@ TEST_F(MazeGeneratorTest, Generate17x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x41Test) {
+TEST_F(GeneratorTest, Generate17x41Test) {
   rows_ = 17;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -15525,7 +15525,7 @@ TEST_F(MazeGeneratorTest, Generate17x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x42Test) {
+TEST_F(GeneratorTest, Generate17x42Test) {
   rows_ = 17;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -15545,7 +15545,7 @@ TEST_F(MazeGeneratorTest, Generate17x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x43Test) {
+TEST_F(GeneratorTest, Generate17x43Test) {
   rows_ = 17;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -15565,7 +15565,7 @@ TEST_F(MazeGeneratorTest, Generate17x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x44Test) {
+TEST_F(GeneratorTest, Generate17x44Test) {
   rows_ = 17;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -15585,7 +15585,7 @@ TEST_F(MazeGeneratorTest, Generate17x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x45Test) {
+TEST_F(GeneratorTest, Generate17x45Test) {
   rows_ = 17;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -15605,7 +15605,7 @@ TEST_F(MazeGeneratorTest, Generate17x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x46Test) {
+TEST_F(GeneratorTest, Generate17x46Test) {
   rows_ = 17;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -15625,7 +15625,7 @@ TEST_F(MazeGeneratorTest, Generate17x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x47Test) {
+TEST_F(GeneratorTest, Generate17x47Test) {
   rows_ = 17;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -15645,7 +15645,7 @@ TEST_F(MazeGeneratorTest, Generate17x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x48Test) {
+TEST_F(GeneratorTest, Generate17x48Test) {
   rows_ = 17;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -15665,7 +15665,7 @@ TEST_F(MazeGeneratorTest, Generate17x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x49Test) {
+TEST_F(GeneratorTest, Generate17x49Test) {
   rows_ = 17;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -15685,7 +15685,7 @@ TEST_F(MazeGeneratorTest, Generate17x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate17x50Test) {
+TEST_F(GeneratorTest, Generate17x50Test) {
   rows_ = 17;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -15705,7 +15705,7 @@ TEST_F(MazeGeneratorTest, Generate17x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x2Test) {
+TEST_F(GeneratorTest, Generate18x2Test) {
   rows_ = 18;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -15725,7 +15725,7 @@ TEST_F(MazeGeneratorTest, Generate18x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x3Test) {
+TEST_F(GeneratorTest, Generate18x3Test) {
   rows_ = 18;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -15745,7 +15745,7 @@ TEST_F(MazeGeneratorTest, Generate18x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x4Test) {
+TEST_F(GeneratorTest, Generate18x4Test) {
   rows_ = 18;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -15765,7 +15765,7 @@ TEST_F(MazeGeneratorTest, Generate18x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x5Test) {
+TEST_F(GeneratorTest, Generate18x5Test) {
   rows_ = 18;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -15785,7 +15785,7 @@ TEST_F(MazeGeneratorTest, Generate18x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x6Test) {
+TEST_F(GeneratorTest, Generate18x6Test) {
   rows_ = 18;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -15805,7 +15805,7 @@ TEST_F(MazeGeneratorTest, Generate18x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x7Test) {
+TEST_F(GeneratorTest, Generate18x7Test) {
   rows_ = 18;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -15825,7 +15825,7 @@ TEST_F(MazeGeneratorTest, Generate18x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x8Test) {
+TEST_F(GeneratorTest, Generate18x8Test) {
   rows_ = 18;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -15845,7 +15845,7 @@ TEST_F(MazeGeneratorTest, Generate18x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x9Test) {
+TEST_F(GeneratorTest, Generate18x9Test) {
   rows_ = 18;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -15865,7 +15865,7 @@ TEST_F(MazeGeneratorTest, Generate18x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x10Test) {
+TEST_F(GeneratorTest, Generate18x10Test) {
   rows_ = 18;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -15885,7 +15885,7 @@ TEST_F(MazeGeneratorTest, Generate18x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x11Test) {
+TEST_F(GeneratorTest, Generate18x11Test) {
   rows_ = 18;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -15905,7 +15905,7 @@ TEST_F(MazeGeneratorTest, Generate18x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x12Test) {
+TEST_F(GeneratorTest, Generate18x12Test) {
   rows_ = 18;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -15925,7 +15925,7 @@ TEST_F(MazeGeneratorTest, Generate18x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x13Test) {
+TEST_F(GeneratorTest, Generate18x13Test) {
   rows_ = 18;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -15945,7 +15945,7 @@ TEST_F(MazeGeneratorTest, Generate18x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x14Test) {
+TEST_F(GeneratorTest, Generate18x14Test) {
   rows_ = 18;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -15965,7 +15965,7 @@ TEST_F(MazeGeneratorTest, Generate18x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x15Test) {
+TEST_F(GeneratorTest, Generate18x15Test) {
   rows_ = 18;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -15985,7 +15985,7 @@ TEST_F(MazeGeneratorTest, Generate18x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x16Test) {
+TEST_F(GeneratorTest, Generate18x16Test) {
   rows_ = 18;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -16005,7 +16005,7 @@ TEST_F(MazeGeneratorTest, Generate18x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x17Test) {
+TEST_F(GeneratorTest, Generate18x17Test) {
   rows_ = 18;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -16025,7 +16025,7 @@ TEST_F(MazeGeneratorTest, Generate18x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x18Test) {
+TEST_F(GeneratorTest, Generate18x18Test) {
   rows_ = 18;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -16045,7 +16045,7 @@ TEST_F(MazeGeneratorTest, Generate18x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x19Test) {
+TEST_F(GeneratorTest, Generate18x19Test) {
   rows_ = 18;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -16065,7 +16065,7 @@ TEST_F(MazeGeneratorTest, Generate18x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x20Test) {
+TEST_F(GeneratorTest, Generate18x20Test) {
   rows_ = 18;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -16085,7 +16085,7 @@ TEST_F(MazeGeneratorTest, Generate18x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x21Test) {
+TEST_F(GeneratorTest, Generate18x21Test) {
   rows_ = 18;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -16105,7 +16105,7 @@ TEST_F(MazeGeneratorTest, Generate18x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x22Test) {
+TEST_F(GeneratorTest, Generate18x22Test) {
   rows_ = 18;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -16125,7 +16125,7 @@ TEST_F(MazeGeneratorTest, Generate18x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x23Test) {
+TEST_F(GeneratorTest, Generate18x23Test) {
   rows_ = 18;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -16145,7 +16145,7 @@ TEST_F(MazeGeneratorTest, Generate18x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x24Test) {
+TEST_F(GeneratorTest, Generate18x24Test) {
   rows_ = 18;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -16165,7 +16165,7 @@ TEST_F(MazeGeneratorTest, Generate18x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x25Test) {
+TEST_F(GeneratorTest, Generate18x25Test) {
   rows_ = 18;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -16185,7 +16185,7 @@ TEST_F(MazeGeneratorTest, Generate18x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x26Test) {
+TEST_F(GeneratorTest, Generate18x26Test) {
   rows_ = 18;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -16205,7 +16205,7 @@ TEST_F(MazeGeneratorTest, Generate18x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x27Test) {
+TEST_F(GeneratorTest, Generate18x27Test) {
   rows_ = 18;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -16225,7 +16225,7 @@ TEST_F(MazeGeneratorTest, Generate18x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x28Test) {
+TEST_F(GeneratorTest, Generate18x28Test) {
   rows_ = 18;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -16245,7 +16245,7 @@ TEST_F(MazeGeneratorTest, Generate18x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x29Test) {
+TEST_F(GeneratorTest, Generate18x29Test) {
   rows_ = 18;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -16265,7 +16265,7 @@ TEST_F(MazeGeneratorTest, Generate18x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x30Test) {
+TEST_F(GeneratorTest, Generate18x30Test) {
   rows_ = 18;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -16285,7 +16285,7 @@ TEST_F(MazeGeneratorTest, Generate18x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x31Test) {
+TEST_F(GeneratorTest, Generate18x31Test) {
   rows_ = 18;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -16305,7 +16305,7 @@ TEST_F(MazeGeneratorTest, Generate18x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x32Test) {
+TEST_F(GeneratorTest, Generate18x32Test) {
   rows_ = 18;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -16325,7 +16325,7 @@ TEST_F(MazeGeneratorTest, Generate18x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x33Test) {
+TEST_F(GeneratorTest, Generate18x33Test) {
   rows_ = 18;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -16345,7 +16345,7 @@ TEST_F(MazeGeneratorTest, Generate18x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x34Test) {
+TEST_F(GeneratorTest, Generate18x34Test) {
   rows_ = 18;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -16365,7 +16365,7 @@ TEST_F(MazeGeneratorTest, Generate18x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x35Test) {
+TEST_F(GeneratorTest, Generate18x35Test) {
   rows_ = 18;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -16385,7 +16385,7 @@ TEST_F(MazeGeneratorTest, Generate18x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x36Test) {
+TEST_F(GeneratorTest, Generate18x36Test) {
   rows_ = 18;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -16405,7 +16405,7 @@ TEST_F(MazeGeneratorTest, Generate18x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x37Test) {
+TEST_F(GeneratorTest, Generate18x37Test) {
   rows_ = 18;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -16425,7 +16425,7 @@ TEST_F(MazeGeneratorTest, Generate18x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x38Test) {
+TEST_F(GeneratorTest, Generate18x38Test) {
   rows_ = 18;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -16445,7 +16445,7 @@ TEST_F(MazeGeneratorTest, Generate18x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x39Test) {
+TEST_F(GeneratorTest, Generate18x39Test) {
   rows_ = 18;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -16465,7 +16465,7 @@ TEST_F(MazeGeneratorTest, Generate18x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x40Test) {
+TEST_F(GeneratorTest, Generate18x40Test) {
   rows_ = 18;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -16485,7 +16485,7 @@ TEST_F(MazeGeneratorTest, Generate18x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x41Test) {
+TEST_F(GeneratorTest, Generate18x41Test) {
   rows_ = 18;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -16505,7 +16505,7 @@ TEST_F(MazeGeneratorTest, Generate18x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x42Test) {
+TEST_F(GeneratorTest, Generate18x42Test) {
   rows_ = 18;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -16525,7 +16525,7 @@ TEST_F(MazeGeneratorTest, Generate18x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x43Test) {
+TEST_F(GeneratorTest, Generate18x43Test) {
   rows_ = 18;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -16545,7 +16545,7 @@ TEST_F(MazeGeneratorTest, Generate18x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x44Test) {
+TEST_F(GeneratorTest, Generate18x44Test) {
   rows_ = 18;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -16565,7 +16565,7 @@ TEST_F(MazeGeneratorTest, Generate18x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x45Test) {
+TEST_F(GeneratorTest, Generate18x45Test) {
   rows_ = 18;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -16585,7 +16585,7 @@ TEST_F(MazeGeneratorTest, Generate18x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x46Test) {
+TEST_F(GeneratorTest, Generate18x46Test) {
   rows_ = 18;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -16605,7 +16605,7 @@ TEST_F(MazeGeneratorTest, Generate18x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x47Test) {
+TEST_F(GeneratorTest, Generate18x47Test) {
   rows_ = 18;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -16625,7 +16625,7 @@ TEST_F(MazeGeneratorTest, Generate18x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x48Test) {
+TEST_F(GeneratorTest, Generate18x48Test) {
   rows_ = 18;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -16645,7 +16645,7 @@ TEST_F(MazeGeneratorTest, Generate18x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x49Test) {
+TEST_F(GeneratorTest, Generate18x49Test) {
   rows_ = 18;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -16665,7 +16665,7 @@ TEST_F(MazeGeneratorTest, Generate18x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate18x50Test) {
+TEST_F(GeneratorTest, Generate18x50Test) {
   rows_ = 18;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -16685,7 +16685,7 @@ TEST_F(MazeGeneratorTest, Generate18x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x2Test) {
+TEST_F(GeneratorTest, Generate19x2Test) {
   rows_ = 19;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -16705,7 +16705,7 @@ TEST_F(MazeGeneratorTest, Generate19x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x3Test) {
+TEST_F(GeneratorTest, Generate19x3Test) {
   rows_ = 19;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -16725,7 +16725,7 @@ TEST_F(MazeGeneratorTest, Generate19x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x4Test) {
+TEST_F(GeneratorTest, Generate19x4Test) {
   rows_ = 19;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -16745,7 +16745,7 @@ TEST_F(MazeGeneratorTest, Generate19x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x5Test) {
+TEST_F(GeneratorTest, Generate19x5Test) {
   rows_ = 19;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -16765,7 +16765,7 @@ TEST_F(MazeGeneratorTest, Generate19x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x6Test) {
+TEST_F(GeneratorTest, Generate19x6Test) {
   rows_ = 19;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -16785,7 +16785,7 @@ TEST_F(MazeGeneratorTest, Generate19x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x7Test) {
+TEST_F(GeneratorTest, Generate19x7Test) {
   rows_ = 19;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -16805,7 +16805,7 @@ TEST_F(MazeGeneratorTest, Generate19x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x8Test) {
+TEST_F(GeneratorTest, Generate19x8Test) {
   rows_ = 19;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -16825,7 +16825,7 @@ TEST_F(MazeGeneratorTest, Generate19x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x9Test) {
+TEST_F(GeneratorTest, Generate19x9Test) {
   rows_ = 19;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -16845,7 +16845,7 @@ TEST_F(MazeGeneratorTest, Generate19x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x10Test) {
+TEST_F(GeneratorTest, Generate19x10Test) {
   rows_ = 19;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -16865,7 +16865,7 @@ TEST_F(MazeGeneratorTest, Generate19x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x11Test) {
+TEST_F(GeneratorTest, Generate19x11Test) {
   rows_ = 19;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -16885,7 +16885,7 @@ TEST_F(MazeGeneratorTest, Generate19x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x12Test) {
+TEST_F(GeneratorTest, Generate19x12Test) {
   rows_ = 19;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -16905,7 +16905,7 @@ TEST_F(MazeGeneratorTest, Generate19x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x13Test) {
+TEST_F(GeneratorTest, Generate19x13Test) {
   rows_ = 19;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -16925,7 +16925,7 @@ TEST_F(MazeGeneratorTest, Generate19x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x14Test) {
+TEST_F(GeneratorTest, Generate19x14Test) {
   rows_ = 19;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -16945,7 +16945,7 @@ TEST_F(MazeGeneratorTest, Generate19x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x15Test) {
+TEST_F(GeneratorTest, Generate19x15Test) {
   rows_ = 19;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -16965,7 +16965,7 @@ TEST_F(MazeGeneratorTest, Generate19x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x16Test) {
+TEST_F(GeneratorTest, Generate19x16Test) {
   rows_ = 19;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -16985,7 +16985,7 @@ TEST_F(MazeGeneratorTest, Generate19x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x17Test) {
+TEST_F(GeneratorTest, Generate19x17Test) {
   rows_ = 19;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -17005,7 +17005,7 @@ TEST_F(MazeGeneratorTest, Generate19x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x18Test) {
+TEST_F(GeneratorTest, Generate19x18Test) {
   rows_ = 19;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -17025,7 +17025,7 @@ TEST_F(MazeGeneratorTest, Generate19x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x19Test) {
+TEST_F(GeneratorTest, Generate19x19Test) {
   rows_ = 19;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -17045,7 +17045,7 @@ TEST_F(MazeGeneratorTest, Generate19x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x20Test) {
+TEST_F(GeneratorTest, Generate19x20Test) {
   rows_ = 19;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -17065,7 +17065,7 @@ TEST_F(MazeGeneratorTest, Generate19x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x21Test) {
+TEST_F(GeneratorTest, Generate19x21Test) {
   rows_ = 19;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -17085,7 +17085,7 @@ TEST_F(MazeGeneratorTest, Generate19x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x22Test) {
+TEST_F(GeneratorTest, Generate19x22Test) {
   rows_ = 19;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -17105,7 +17105,7 @@ TEST_F(MazeGeneratorTest, Generate19x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x23Test) {
+TEST_F(GeneratorTest, Generate19x23Test) {
   rows_ = 19;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -17125,7 +17125,7 @@ TEST_F(MazeGeneratorTest, Generate19x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x24Test) {
+TEST_F(GeneratorTest, Generate19x24Test) {
   rows_ = 19;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -17145,7 +17145,7 @@ TEST_F(MazeGeneratorTest, Generate19x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x25Test) {
+TEST_F(GeneratorTest, Generate19x25Test) {
   rows_ = 19;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -17165,7 +17165,7 @@ TEST_F(MazeGeneratorTest, Generate19x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x26Test) {
+TEST_F(GeneratorTest, Generate19x26Test) {
   rows_ = 19;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -17185,7 +17185,7 @@ TEST_F(MazeGeneratorTest, Generate19x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x27Test) {
+TEST_F(GeneratorTest, Generate19x27Test) {
   rows_ = 19;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -17205,7 +17205,7 @@ TEST_F(MazeGeneratorTest, Generate19x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x28Test) {
+TEST_F(GeneratorTest, Generate19x28Test) {
   rows_ = 19;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -17225,7 +17225,7 @@ TEST_F(MazeGeneratorTest, Generate19x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x29Test) {
+TEST_F(GeneratorTest, Generate19x29Test) {
   rows_ = 19;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -17245,7 +17245,7 @@ TEST_F(MazeGeneratorTest, Generate19x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x30Test) {
+TEST_F(GeneratorTest, Generate19x30Test) {
   rows_ = 19;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -17265,7 +17265,7 @@ TEST_F(MazeGeneratorTest, Generate19x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x31Test) {
+TEST_F(GeneratorTest, Generate19x31Test) {
   rows_ = 19;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -17285,7 +17285,7 @@ TEST_F(MazeGeneratorTest, Generate19x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x32Test) {
+TEST_F(GeneratorTest, Generate19x32Test) {
   rows_ = 19;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -17305,7 +17305,7 @@ TEST_F(MazeGeneratorTest, Generate19x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x33Test) {
+TEST_F(GeneratorTest, Generate19x33Test) {
   rows_ = 19;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -17325,7 +17325,7 @@ TEST_F(MazeGeneratorTest, Generate19x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x34Test) {
+TEST_F(GeneratorTest, Generate19x34Test) {
   rows_ = 19;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -17345,7 +17345,7 @@ TEST_F(MazeGeneratorTest, Generate19x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x35Test) {
+TEST_F(GeneratorTest, Generate19x35Test) {
   rows_ = 19;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -17365,7 +17365,7 @@ TEST_F(MazeGeneratorTest, Generate19x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x36Test) {
+TEST_F(GeneratorTest, Generate19x36Test) {
   rows_ = 19;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -17385,7 +17385,7 @@ TEST_F(MazeGeneratorTest, Generate19x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x37Test) {
+TEST_F(GeneratorTest, Generate19x37Test) {
   rows_ = 19;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -17405,7 +17405,7 @@ TEST_F(MazeGeneratorTest, Generate19x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x38Test) {
+TEST_F(GeneratorTest, Generate19x38Test) {
   rows_ = 19;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -17425,7 +17425,7 @@ TEST_F(MazeGeneratorTest, Generate19x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x39Test) {
+TEST_F(GeneratorTest, Generate19x39Test) {
   rows_ = 19;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -17445,7 +17445,7 @@ TEST_F(MazeGeneratorTest, Generate19x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x40Test) {
+TEST_F(GeneratorTest, Generate19x40Test) {
   rows_ = 19;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -17465,7 +17465,7 @@ TEST_F(MazeGeneratorTest, Generate19x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x41Test) {
+TEST_F(GeneratorTest, Generate19x41Test) {
   rows_ = 19;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -17485,7 +17485,7 @@ TEST_F(MazeGeneratorTest, Generate19x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x42Test) {
+TEST_F(GeneratorTest, Generate19x42Test) {
   rows_ = 19;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -17505,7 +17505,7 @@ TEST_F(MazeGeneratorTest, Generate19x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x43Test) {
+TEST_F(GeneratorTest, Generate19x43Test) {
   rows_ = 19;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -17525,7 +17525,7 @@ TEST_F(MazeGeneratorTest, Generate19x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x44Test) {
+TEST_F(GeneratorTest, Generate19x44Test) {
   rows_ = 19;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -17545,7 +17545,7 @@ TEST_F(MazeGeneratorTest, Generate19x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x45Test) {
+TEST_F(GeneratorTest, Generate19x45Test) {
   rows_ = 19;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -17565,7 +17565,7 @@ TEST_F(MazeGeneratorTest, Generate19x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x46Test) {
+TEST_F(GeneratorTest, Generate19x46Test) {
   rows_ = 19;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -17585,7 +17585,7 @@ TEST_F(MazeGeneratorTest, Generate19x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x47Test) {
+TEST_F(GeneratorTest, Generate19x47Test) {
   rows_ = 19;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -17605,7 +17605,7 @@ TEST_F(MazeGeneratorTest, Generate19x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x48Test) {
+TEST_F(GeneratorTest, Generate19x48Test) {
   rows_ = 19;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -17625,7 +17625,7 @@ TEST_F(MazeGeneratorTest, Generate19x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x49Test) {
+TEST_F(GeneratorTest, Generate19x49Test) {
   rows_ = 19;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -17645,7 +17645,7 @@ TEST_F(MazeGeneratorTest, Generate19x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate19x50Test) {
+TEST_F(GeneratorTest, Generate19x50Test) {
   rows_ = 19;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -17665,7 +17665,7 @@ TEST_F(MazeGeneratorTest, Generate19x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x2Test) {
+TEST_F(GeneratorTest, Generate20x2Test) {
   rows_ = 20;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -17685,7 +17685,7 @@ TEST_F(MazeGeneratorTest, Generate20x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x3Test) {
+TEST_F(GeneratorTest, Generate20x3Test) {
   rows_ = 20;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -17705,7 +17705,7 @@ TEST_F(MazeGeneratorTest, Generate20x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x4Test) {
+TEST_F(GeneratorTest, Generate20x4Test) {
   rows_ = 20;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -17725,7 +17725,7 @@ TEST_F(MazeGeneratorTest, Generate20x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x5Test) {
+TEST_F(GeneratorTest, Generate20x5Test) {
   rows_ = 20;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -17745,7 +17745,7 @@ TEST_F(MazeGeneratorTest, Generate20x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x6Test) {
+TEST_F(GeneratorTest, Generate20x6Test) {
   rows_ = 20;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -17765,7 +17765,7 @@ TEST_F(MazeGeneratorTest, Generate20x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x7Test) {
+TEST_F(GeneratorTest, Generate20x7Test) {
   rows_ = 20;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -17785,7 +17785,7 @@ TEST_F(MazeGeneratorTest, Generate20x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x8Test) {
+TEST_F(GeneratorTest, Generate20x8Test) {
   rows_ = 20;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -17805,7 +17805,7 @@ TEST_F(MazeGeneratorTest, Generate20x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x9Test) {
+TEST_F(GeneratorTest, Generate20x9Test) {
   rows_ = 20;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -17825,7 +17825,7 @@ TEST_F(MazeGeneratorTest, Generate20x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x10Test) {
+TEST_F(GeneratorTest, Generate20x10Test) {
   rows_ = 20;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -17845,7 +17845,7 @@ TEST_F(MazeGeneratorTest, Generate20x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x11Test) {
+TEST_F(GeneratorTest, Generate20x11Test) {
   rows_ = 20;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -17865,7 +17865,7 @@ TEST_F(MazeGeneratorTest, Generate20x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x12Test) {
+TEST_F(GeneratorTest, Generate20x12Test) {
   rows_ = 20;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -17885,7 +17885,7 @@ TEST_F(MazeGeneratorTest, Generate20x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x13Test) {
+TEST_F(GeneratorTest, Generate20x13Test) {
   rows_ = 20;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -17905,7 +17905,7 @@ TEST_F(MazeGeneratorTest, Generate20x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x14Test) {
+TEST_F(GeneratorTest, Generate20x14Test) {
   rows_ = 20;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -17925,7 +17925,7 @@ TEST_F(MazeGeneratorTest, Generate20x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x15Test) {
+TEST_F(GeneratorTest, Generate20x15Test) {
   rows_ = 20;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -17945,7 +17945,7 @@ TEST_F(MazeGeneratorTest, Generate20x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x16Test) {
+TEST_F(GeneratorTest, Generate20x16Test) {
   rows_ = 20;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -17965,7 +17965,7 @@ TEST_F(MazeGeneratorTest, Generate20x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x17Test) {
+TEST_F(GeneratorTest, Generate20x17Test) {
   rows_ = 20;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -17985,7 +17985,7 @@ TEST_F(MazeGeneratorTest, Generate20x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x18Test) {
+TEST_F(GeneratorTest, Generate20x18Test) {
   rows_ = 20;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -18005,7 +18005,7 @@ TEST_F(MazeGeneratorTest, Generate20x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x19Test) {
+TEST_F(GeneratorTest, Generate20x19Test) {
   rows_ = 20;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -18025,7 +18025,7 @@ TEST_F(MazeGeneratorTest, Generate20x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x20Test) {
+TEST_F(GeneratorTest, Generate20x20Test) {
   rows_ = 20;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -18045,7 +18045,7 @@ TEST_F(MazeGeneratorTest, Generate20x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x21Test) {
+TEST_F(GeneratorTest, Generate20x21Test) {
   rows_ = 20;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -18065,7 +18065,7 @@ TEST_F(MazeGeneratorTest, Generate20x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x22Test) {
+TEST_F(GeneratorTest, Generate20x22Test) {
   rows_ = 20;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -18085,7 +18085,7 @@ TEST_F(MazeGeneratorTest, Generate20x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x23Test) {
+TEST_F(GeneratorTest, Generate20x23Test) {
   rows_ = 20;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -18105,7 +18105,7 @@ TEST_F(MazeGeneratorTest, Generate20x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x24Test) {
+TEST_F(GeneratorTest, Generate20x24Test) {
   rows_ = 20;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -18125,7 +18125,7 @@ TEST_F(MazeGeneratorTest, Generate20x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x25Test) {
+TEST_F(GeneratorTest, Generate20x25Test) {
   rows_ = 20;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -18145,7 +18145,7 @@ TEST_F(MazeGeneratorTest, Generate20x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x26Test) {
+TEST_F(GeneratorTest, Generate20x26Test) {
   rows_ = 20;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -18165,7 +18165,7 @@ TEST_F(MazeGeneratorTest, Generate20x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x27Test) {
+TEST_F(GeneratorTest, Generate20x27Test) {
   rows_ = 20;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -18185,7 +18185,7 @@ TEST_F(MazeGeneratorTest, Generate20x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x28Test) {
+TEST_F(GeneratorTest, Generate20x28Test) {
   rows_ = 20;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -18205,7 +18205,7 @@ TEST_F(MazeGeneratorTest, Generate20x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x29Test) {
+TEST_F(GeneratorTest, Generate20x29Test) {
   rows_ = 20;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -18225,7 +18225,7 @@ TEST_F(MazeGeneratorTest, Generate20x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x30Test) {
+TEST_F(GeneratorTest, Generate20x30Test) {
   rows_ = 20;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -18245,7 +18245,7 @@ TEST_F(MazeGeneratorTest, Generate20x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x31Test) {
+TEST_F(GeneratorTest, Generate20x31Test) {
   rows_ = 20;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -18265,7 +18265,7 @@ TEST_F(MazeGeneratorTest, Generate20x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x32Test) {
+TEST_F(GeneratorTest, Generate20x32Test) {
   rows_ = 20;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -18285,7 +18285,7 @@ TEST_F(MazeGeneratorTest, Generate20x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x33Test) {
+TEST_F(GeneratorTest, Generate20x33Test) {
   rows_ = 20;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -18305,7 +18305,7 @@ TEST_F(MazeGeneratorTest, Generate20x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x34Test) {
+TEST_F(GeneratorTest, Generate20x34Test) {
   rows_ = 20;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -18325,7 +18325,7 @@ TEST_F(MazeGeneratorTest, Generate20x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x35Test) {
+TEST_F(GeneratorTest, Generate20x35Test) {
   rows_ = 20;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -18345,7 +18345,7 @@ TEST_F(MazeGeneratorTest, Generate20x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x36Test) {
+TEST_F(GeneratorTest, Generate20x36Test) {
   rows_ = 20;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -18365,7 +18365,7 @@ TEST_F(MazeGeneratorTest, Generate20x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x37Test) {
+TEST_F(GeneratorTest, Generate20x37Test) {
   rows_ = 20;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -18385,7 +18385,7 @@ TEST_F(MazeGeneratorTest, Generate20x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x38Test) {
+TEST_F(GeneratorTest, Generate20x38Test) {
   rows_ = 20;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -18405,7 +18405,7 @@ TEST_F(MazeGeneratorTest, Generate20x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x39Test) {
+TEST_F(GeneratorTest, Generate20x39Test) {
   rows_ = 20;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -18425,7 +18425,7 @@ TEST_F(MazeGeneratorTest, Generate20x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x40Test) {
+TEST_F(GeneratorTest, Generate20x40Test) {
   rows_ = 20;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -18445,7 +18445,7 @@ TEST_F(MazeGeneratorTest, Generate20x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x41Test) {
+TEST_F(GeneratorTest, Generate20x41Test) {
   rows_ = 20;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -18465,7 +18465,7 @@ TEST_F(MazeGeneratorTest, Generate20x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x42Test) {
+TEST_F(GeneratorTest, Generate20x42Test) {
   rows_ = 20;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -18485,7 +18485,7 @@ TEST_F(MazeGeneratorTest, Generate20x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x43Test) {
+TEST_F(GeneratorTest, Generate20x43Test) {
   rows_ = 20;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -18505,7 +18505,7 @@ TEST_F(MazeGeneratorTest, Generate20x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x44Test) {
+TEST_F(GeneratorTest, Generate20x44Test) {
   rows_ = 20;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -18525,7 +18525,7 @@ TEST_F(MazeGeneratorTest, Generate20x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x45Test) {
+TEST_F(GeneratorTest, Generate20x45Test) {
   rows_ = 20;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -18545,7 +18545,7 @@ TEST_F(MazeGeneratorTest, Generate20x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x46Test) {
+TEST_F(GeneratorTest, Generate20x46Test) {
   rows_ = 20;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -18565,7 +18565,7 @@ TEST_F(MazeGeneratorTest, Generate20x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x47Test) {
+TEST_F(GeneratorTest, Generate20x47Test) {
   rows_ = 20;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -18585,7 +18585,7 @@ TEST_F(MazeGeneratorTest, Generate20x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x48Test) {
+TEST_F(GeneratorTest, Generate20x48Test) {
   rows_ = 20;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -18605,7 +18605,7 @@ TEST_F(MazeGeneratorTest, Generate20x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x49Test) {
+TEST_F(GeneratorTest, Generate20x49Test) {
   rows_ = 20;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -18625,7 +18625,7 @@ TEST_F(MazeGeneratorTest, Generate20x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate20x50Test) {
+TEST_F(GeneratorTest, Generate20x50Test) {
   rows_ = 20;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -18645,7 +18645,7 @@ TEST_F(MazeGeneratorTest, Generate20x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x2Test) {
+TEST_F(GeneratorTest, Generate21x2Test) {
   rows_ = 21;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -18665,7 +18665,7 @@ TEST_F(MazeGeneratorTest, Generate21x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x3Test) {
+TEST_F(GeneratorTest, Generate21x3Test) {
   rows_ = 21;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -18685,7 +18685,7 @@ TEST_F(MazeGeneratorTest, Generate21x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x4Test) {
+TEST_F(GeneratorTest, Generate21x4Test) {
   rows_ = 21;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -18705,7 +18705,7 @@ TEST_F(MazeGeneratorTest, Generate21x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x5Test) {
+TEST_F(GeneratorTest, Generate21x5Test) {
   rows_ = 21;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -18725,7 +18725,7 @@ TEST_F(MazeGeneratorTest, Generate21x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x6Test) {
+TEST_F(GeneratorTest, Generate21x6Test) {
   rows_ = 21;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -18745,7 +18745,7 @@ TEST_F(MazeGeneratorTest, Generate21x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x7Test) {
+TEST_F(GeneratorTest, Generate21x7Test) {
   rows_ = 21;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -18765,7 +18765,7 @@ TEST_F(MazeGeneratorTest, Generate21x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x8Test) {
+TEST_F(GeneratorTest, Generate21x8Test) {
   rows_ = 21;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -18785,7 +18785,7 @@ TEST_F(MazeGeneratorTest, Generate21x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x9Test) {
+TEST_F(GeneratorTest, Generate21x9Test) {
   rows_ = 21;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -18805,7 +18805,7 @@ TEST_F(MazeGeneratorTest, Generate21x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x10Test) {
+TEST_F(GeneratorTest, Generate21x10Test) {
   rows_ = 21;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -18825,7 +18825,7 @@ TEST_F(MazeGeneratorTest, Generate21x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x11Test) {
+TEST_F(GeneratorTest, Generate21x11Test) {
   rows_ = 21;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -18845,7 +18845,7 @@ TEST_F(MazeGeneratorTest, Generate21x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x12Test) {
+TEST_F(GeneratorTest, Generate21x12Test) {
   rows_ = 21;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -18865,7 +18865,7 @@ TEST_F(MazeGeneratorTest, Generate21x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x13Test) {
+TEST_F(GeneratorTest, Generate21x13Test) {
   rows_ = 21;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -18885,7 +18885,7 @@ TEST_F(MazeGeneratorTest, Generate21x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x14Test) {
+TEST_F(GeneratorTest, Generate21x14Test) {
   rows_ = 21;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -18905,7 +18905,7 @@ TEST_F(MazeGeneratorTest, Generate21x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x15Test) {
+TEST_F(GeneratorTest, Generate21x15Test) {
   rows_ = 21;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -18925,7 +18925,7 @@ TEST_F(MazeGeneratorTest, Generate21x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x16Test) {
+TEST_F(GeneratorTest, Generate21x16Test) {
   rows_ = 21;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -18945,7 +18945,7 @@ TEST_F(MazeGeneratorTest, Generate21x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x17Test) {
+TEST_F(GeneratorTest, Generate21x17Test) {
   rows_ = 21;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -18965,7 +18965,7 @@ TEST_F(MazeGeneratorTest, Generate21x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x18Test) {
+TEST_F(GeneratorTest, Generate21x18Test) {
   rows_ = 21;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -18985,7 +18985,7 @@ TEST_F(MazeGeneratorTest, Generate21x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x19Test) {
+TEST_F(GeneratorTest, Generate21x19Test) {
   rows_ = 21;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -19005,7 +19005,7 @@ TEST_F(MazeGeneratorTest, Generate21x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x20Test) {
+TEST_F(GeneratorTest, Generate21x20Test) {
   rows_ = 21;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -19025,7 +19025,7 @@ TEST_F(MazeGeneratorTest, Generate21x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x21Test) {
+TEST_F(GeneratorTest, Generate21x21Test) {
   rows_ = 21;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -19045,7 +19045,7 @@ TEST_F(MazeGeneratorTest, Generate21x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x22Test) {
+TEST_F(GeneratorTest, Generate21x22Test) {
   rows_ = 21;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -19065,7 +19065,7 @@ TEST_F(MazeGeneratorTest, Generate21x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x23Test) {
+TEST_F(GeneratorTest, Generate21x23Test) {
   rows_ = 21;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -19085,7 +19085,7 @@ TEST_F(MazeGeneratorTest, Generate21x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x24Test) {
+TEST_F(GeneratorTest, Generate21x24Test) {
   rows_ = 21;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -19105,7 +19105,7 @@ TEST_F(MazeGeneratorTest, Generate21x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x25Test) {
+TEST_F(GeneratorTest, Generate21x25Test) {
   rows_ = 21;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -19125,7 +19125,7 @@ TEST_F(MazeGeneratorTest, Generate21x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x26Test) {
+TEST_F(GeneratorTest, Generate21x26Test) {
   rows_ = 21;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -19145,7 +19145,7 @@ TEST_F(MazeGeneratorTest, Generate21x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x27Test) {
+TEST_F(GeneratorTest, Generate21x27Test) {
   rows_ = 21;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -19165,7 +19165,7 @@ TEST_F(MazeGeneratorTest, Generate21x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x28Test) {
+TEST_F(GeneratorTest, Generate21x28Test) {
   rows_ = 21;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -19185,7 +19185,7 @@ TEST_F(MazeGeneratorTest, Generate21x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x29Test) {
+TEST_F(GeneratorTest, Generate21x29Test) {
   rows_ = 21;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -19205,7 +19205,7 @@ TEST_F(MazeGeneratorTest, Generate21x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x30Test) {
+TEST_F(GeneratorTest, Generate21x30Test) {
   rows_ = 21;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -19225,7 +19225,7 @@ TEST_F(MazeGeneratorTest, Generate21x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x31Test) {
+TEST_F(GeneratorTest, Generate21x31Test) {
   rows_ = 21;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -19245,7 +19245,7 @@ TEST_F(MazeGeneratorTest, Generate21x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x32Test) {
+TEST_F(GeneratorTest, Generate21x32Test) {
   rows_ = 21;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -19265,7 +19265,7 @@ TEST_F(MazeGeneratorTest, Generate21x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x33Test) {
+TEST_F(GeneratorTest, Generate21x33Test) {
   rows_ = 21;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -19285,7 +19285,7 @@ TEST_F(MazeGeneratorTest, Generate21x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x34Test) {
+TEST_F(GeneratorTest, Generate21x34Test) {
   rows_ = 21;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -19305,7 +19305,7 @@ TEST_F(MazeGeneratorTest, Generate21x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x35Test) {
+TEST_F(GeneratorTest, Generate21x35Test) {
   rows_ = 21;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -19325,7 +19325,7 @@ TEST_F(MazeGeneratorTest, Generate21x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x36Test) {
+TEST_F(GeneratorTest, Generate21x36Test) {
   rows_ = 21;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -19345,7 +19345,7 @@ TEST_F(MazeGeneratorTest, Generate21x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x37Test) {
+TEST_F(GeneratorTest, Generate21x37Test) {
   rows_ = 21;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -19365,7 +19365,7 @@ TEST_F(MazeGeneratorTest, Generate21x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x38Test) {
+TEST_F(GeneratorTest, Generate21x38Test) {
   rows_ = 21;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -19385,7 +19385,7 @@ TEST_F(MazeGeneratorTest, Generate21x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x39Test) {
+TEST_F(GeneratorTest, Generate21x39Test) {
   rows_ = 21;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -19405,7 +19405,7 @@ TEST_F(MazeGeneratorTest, Generate21x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x40Test) {
+TEST_F(GeneratorTest, Generate21x40Test) {
   rows_ = 21;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -19425,7 +19425,7 @@ TEST_F(MazeGeneratorTest, Generate21x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x41Test) {
+TEST_F(GeneratorTest, Generate21x41Test) {
   rows_ = 21;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -19445,7 +19445,7 @@ TEST_F(MazeGeneratorTest, Generate21x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x42Test) {
+TEST_F(GeneratorTest, Generate21x42Test) {
   rows_ = 21;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -19465,7 +19465,7 @@ TEST_F(MazeGeneratorTest, Generate21x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x43Test) {
+TEST_F(GeneratorTest, Generate21x43Test) {
   rows_ = 21;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -19485,7 +19485,7 @@ TEST_F(MazeGeneratorTest, Generate21x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x44Test) {
+TEST_F(GeneratorTest, Generate21x44Test) {
   rows_ = 21;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -19505,7 +19505,7 @@ TEST_F(MazeGeneratorTest, Generate21x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x45Test) {
+TEST_F(GeneratorTest, Generate21x45Test) {
   rows_ = 21;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -19525,7 +19525,7 @@ TEST_F(MazeGeneratorTest, Generate21x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x46Test) {
+TEST_F(GeneratorTest, Generate21x46Test) {
   rows_ = 21;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -19545,7 +19545,7 @@ TEST_F(MazeGeneratorTest, Generate21x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x47Test) {
+TEST_F(GeneratorTest, Generate21x47Test) {
   rows_ = 21;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -19565,7 +19565,7 @@ TEST_F(MazeGeneratorTest, Generate21x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x48Test) {
+TEST_F(GeneratorTest, Generate21x48Test) {
   rows_ = 21;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -19585,7 +19585,7 @@ TEST_F(MazeGeneratorTest, Generate21x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x49Test) {
+TEST_F(GeneratorTest, Generate21x49Test) {
   rows_ = 21;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -19605,7 +19605,7 @@ TEST_F(MazeGeneratorTest, Generate21x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate21x50Test) {
+TEST_F(GeneratorTest, Generate21x50Test) {
   rows_ = 21;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -19625,7 +19625,7 @@ TEST_F(MazeGeneratorTest, Generate21x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x2Test) {
+TEST_F(GeneratorTest, Generate22x2Test) {
   rows_ = 22;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -19645,7 +19645,7 @@ TEST_F(MazeGeneratorTest, Generate22x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x3Test) {
+TEST_F(GeneratorTest, Generate22x3Test) {
   rows_ = 22;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -19665,7 +19665,7 @@ TEST_F(MazeGeneratorTest, Generate22x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x4Test) {
+TEST_F(GeneratorTest, Generate22x4Test) {
   rows_ = 22;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -19685,7 +19685,7 @@ TEST_F(MazeGeneratorTest, Generate22x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x5Test) {
+TEST_F(GeneratorTest, Generate22x5Test) {
   rows_ = 22;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -19705,7 +19705,7 @@ TEST_F(MazeGeneratorTest, Generate22x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x6Test) {
+TEST_F(GeneratorTest, Generate22x6Test) {
   rows_ = 22;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -19725,7 +19725,7 @@ TEST_F(MazeGeneratorTest, Generate22x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x7Test) {
+TEST_F(GeneratorTest, Generate22x7Test) {
   rows_ = 22;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -19745,7 +19745,7 @@ TEST_F(MazeGeneratorTest, Generate22x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x8Test) {
+TEST_F(GeneratorTest, Generate22x8Test) {
   rows_ = 22;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -19765,7 +19765,7 @@ TEST_F(MazeGeneratorTest, Generate22x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x9Test) {
+TEST_F(GeneratorTest, Generate22x9Test) {
   rows_ = 22;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -19785,7 +19785,7 @@ TEST_F(MazeGeneratorTest, Generate22x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x10Test) {
+TEST_F(GeneratorTest, Generate22x10Test) {
   rows_ = 22;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -19805,7 +19805,7 @@ TEST_F(MazeGeneratorTest, Generate22x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x11Test) {
+TEST_F(GeneratorTest, Generate22x11Test) {
   rows_ = 22;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -19825,7 +19825,7 @@ TEST_F(MazeGeneratorTest, Generate22x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x12Test) {
+TEST_F(GeneratorTest, Generate22x12Test) {
   rows_ = 22;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -19845,7 +19845,7 @@ TEST_F(MazeGeneratorTest, Generate22x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x13Test) {
+TEST_F(GeneratorTest, Generate22x13Test) {
   rows_ = 22;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -19865,7 +19865,7 @@ TEST_F(MazeGeneratorTest, Generate22x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x14Test) {
+TEST_F(GeneratorTest, Generate22x14Test) {
   rows_ = 22;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -19885,7 +19885,7 @@ TEST_F(MazeGeneratorTest, Generate22x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x15Test) {
+TEST_F(GeneratorTest, Generate22x15Test) {
   rows_ = 22;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -19905,7 +19905,7 @@ TEST_F(MazeGeneratorTest, Generate22x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x16Test) {
+TEST_F(GeneratorTest, Generate22x16Test) {
   rows_ = 22;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -19925,7 +19925,7 @@ TEST_F(MazeGeneratorTest, Generate22x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x17Test) {
+TEST_F(GeneratorTest, Generate22x17Test) {
   rows_ = 22;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -19945,7 +19945,7 @@ TEST_F(MazeGeneratorTest, Generate22x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x18Test) {
+TEST_F(GeneratorTest, Generate22x18Test) {
   rows_ = 22;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -19965,7 +19965,7 @@ TEST_F(MazeGeneratorTest, Generate22x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x19Test) {
+TEST_F(GeneratorTest, Generate22x19Test) {
   rows_ = 22;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -19985,7 +19985,7 @@ TEST_F(MazeGeneratorTest, Generate22x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x20Test) {
+TEST_F(GeneratorTest, Generate22x20Test) {
   rows_ = 22;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -20005,7 +20005,7 @@ TEST_F(MazeGeneratorTest, Generate22x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x21Test) {
+TEST_F(GeneratorTest, Generate22x21Test) {
   rows_ = 22;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -20025,7 +20025,7 @@ TEST_F(MazeGeneratorTest, Generate22x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x22Test) {
+TEST_F(GeneratorTest, Generate22x22Test) {
   rows_ = 22;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -20045,7 +20045,7 @@ TEST_F(MazeGeneratorTest, Generate22x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x23Test) {
+TEST_F(GeneratorTest, Generate22x23Test) {
   rows_ = 22;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -20065,7 +20065,7 @@ TEST_F(MazeGeneratorTest, Generate22x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x24Test) {
+TEST_F(GeneratorTest, Generate22x24Test) {
   rows_ = 22;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -20085,7 +20085,7 @@ TEST_F(MazeGeneratorTest, Generate22x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x25Test) {
+TEST_F(GeneratorTest, Generate22x25Test) {
   rows_ = 22;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -20105,7 +20105,7 @@ TEST_F(MazeGeneratorTest, Generate22x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x26Test) {
+TEST_F(GeneratorTest, Generate22x26Test) {
   rows_ = 22;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -20125,7 +20125,7 @@ TEST_F(MazeGeneratorTest, Generate22x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x27Test) {
+TEST_F(GeneratorTest, Generate22x27Test) {
   rows_ = 22;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -20145,7 +20145,7 @@ TEST_F(MazeGeneratorTest, Generate22x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x28Test) {
+TEST_F(GeneratorTest, Generate22x28Test) {
   rows_ = 22;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -20165,7 +20165,7 @@ TEST_F(MazeGeneratorTest, Generate22x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x29Test) {
+TEST_F(GeneratorTest, Generate22x29Test) {
   rows_ = 22;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -20185,7 +20185,7 @@ TEST_F(MazeGeneratorTest, Generate22x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x30Test) {
+TEST_F(GeneratorTest, Generate22x30Test) {
   rows_ = 22;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -20205,7 +20205,7 @@ TEST_F(MazeGeneratorTest, Generate22x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x31Test) {
+TEST_F(GeneratorTest, Generate22x31Test) {
   rows_ = 22;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -20225,7 +20225,7 @@ TEST_F(MazeGeneratorTest, Generate22x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x32Test) {
+TEST_F(GeneratorTest, Generate22x32Test) {
   rows_ = 22;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -20245,7 +20245,7 @@ TEST_F(MazeGeneratorTest, Generate22x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x33Test) {
+TEST_F(GeneratorTest, Generate22x33Test) {
   rows_ = 22;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -20265,7 +20265,7 @@ TEST_F(MazeGeneratorTest, Generate22x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x34Test) {
+TEST_F(GeneratorTest, Generate22x34Test) {
   rows_ = 22;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -20285,7 +20285,7 @@ TEST_F(MazeGeneratorTest, Generate22x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x35Test) {
+TEST_F(GeneratorTest, Generate22x35Test) {
   rows_ = 22;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -20305,7 +20305,7 @@ TEST_F(MazeGeneratorTest, Generate22x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x36Test) {
+TEST_F(GeneratorTest, Generate22x36Test) {
   rows_ = 22;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -20325,7 +20325,7 @@ TEST_F(MazeGeneratorTest, Generate22x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x37Test) {
+TEST_F(GeneratorTest, Generate22x37Test) {
   rows_ = 22;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -20345,7 +20345,7 @@ TEST_F(MazeGeneratorTest, Generate22x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x38Test) {
+TEST_F(GeneratorTest, Generate22x38Test) {
   rows_ = 22;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -20365,7 +20365,7 @@ TEST_F(MazeGeneratorTest, Generate22x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x39Test) {
+TEST_F(GeneratorTest, Generate22x39Test) {
   rows_ = 22;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -20385,7 +20385,7 @@ TEST_F(MazeGeneratorTest, Generate22x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x40Test) {
+TEST_F(GeneratorTest, Generate22x40Test) {
   rows_ = 22;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -20405,7 +20405,7 @@ TEST_F(MazeGeneratorTest, Generate22x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x41Test) {
+TEST_F(GeneratorTest, Generate22x41Test) {
   rows_ = 22;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -20425,7 +20425,7 @@ TEST_F(MazeGeneratorTest, Generate22x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x42Test) {
+TEST_F(GeneratorTest, Generate22x42Test) {
   rows_ = 22;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -20445,7 +20445,7 @@ TEST_F(MazeGeneratorTest, Generate22x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x43Test) {
+TEST_F(GeneratorTest, Generate22x43Test) {
   rows_ = 22;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -20465,7 +20465,7 @@ TEST_F(MazeGeneratorTest, Generate22x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x44Test) {
+TEST_F(GeneratorTest, Generate22x44Test) {
   rows_ = 22;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -20485,7 +20485,7 @@ TEST_F(MazeGeneratorTest, Generate22x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x45Test) {
+TEST_F(GeneratorTest, Generate22x45Test) {
   rows_ = 22;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -20505,7 +20505,7 @@ TEST_F(MazeGeneratorTest, Generate22x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x46Test) {
+TEST_F(GeneratorTest, Generate22x46Test) {
   rows_ = 22;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -20525,7 +20525,7 @@ TEST_F(MazeGeneratorTest, Generate22x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x47Test) {
+TEST_F(GeneratorTest, Generate22x47Test) {
   rows_ = 22;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -20545,7 +20545,7 @@ TEST_F(MazeGeneratorTest, Generate22x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x48Test) {
+TEST_F(GeneratorTest, Generate22x48Test) {
   rows_ = 22;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -20565,7 +20565,7 @@ TEST_F(MazeGeneratorTest, Generate22x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x49Test) {
+TEST_F(GeneratorTest, Generate22x49Test) {
   rows_ = 22;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -20585,7 +20585,7 @@ TEST_F(MazeGeneratorTest, Generate22x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate22x50Test) {
+TEST_F(GeneratorTest, Generate22x50Test) {
   rows_ = 22;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -20605,7 +20605,7 @@ TEST_F(MazeGeneratorTest, Generate22x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x2Test) {
+TEST_F(GeneratorTest, Generate23x2Test) {
   rows_ = 23;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -20625,7 +20625,7 @@ TEST_F(MazeGeneratorTest, Generate23x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x3Test) {
+TEST_F(GeneratorTest, Generate23x3Test) {
   rows_ = 23;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -20645,7 +20645,7 @@ TEST_F(MazeGeneratorTest, Generate23x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x4Test) {
+TEST_F(GeneratorTest, Generate23x4Test) {
   rows_ = 23;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -20665,7 +20665,7 @@ TEST_F(MazeGeneratorTest, Generate23x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x5Test) {
+TEST_F(GeneratorTest, Generate23x5Test) {
   rows_ = 23;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -20685,7 +20685,7 @@ TEST_F(MazeGeneratorTest, Generate23x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x6Test) {
+TEST_F(GeneratorTest, Generate23x6Test) {
   rows_ = 23;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -20705,7 +20705,7 @@ TEST_F(MazeGeneratorTest, Generate23x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x7Test) {
+TEST_F(GeneratorTest, Generate23x7Test) {
   rows_ = 23;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -20725,7 +20725,7 @@ TEST_F(MazeGeneratorTest, Generate23x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x8Test) {
+TEST_F(GeneratorTest, Generate23x8Test) {
   rows_ = 23;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -20745,7 +20745,7 @@ TEST_F(MazeGeneratorTest, Generate23x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x9Test) {
+TEST_F(GeneratorTest, Generate23x9Test) {
   rows_ = 23;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -20765,7 +20765,7 @@ TEST_F(MazeGeneratorTest, Generate23x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x10Test) {
+TEST_F(GeneratorTest, Generate23x10Test) {
   rows_ = 23;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -20785,7 +20785,7 @@ TEST_F(MazeGeneratorTest, Generate23x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x11Test) {
+TEST_F(GeneratorTest, Generate23x11Test) {
   rows_ = 23;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -20805,7 +20805,7 @@ TEST_F(MazeGeneratorTest, Generate23x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x12Test) {
+TEST_F(GeneratorTest, Generate23x12Test) {
   rows_ = 23;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -20825,7 +20825,7 @@ TEST_F(MazeGeneratorTest, Generate23x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x13Test) {
+TEST_F(GeneratorTest, Generate23x13Test) {
   rows_ = 23;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -20845,7 +20845,7 @@ TEST_F(MazeGeneratorTest, Generate23x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x14Test) {
+TEST_F(GeneratorTest, Generate23x14Test) {
   rows_ = 23;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -20865,7 +20865,7 @@ TEST_F(MazeGeneratorTest, Generate23x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x15Test) {
+TEST_F(GeneratorTest, Generate23x15Test) {
   rows_ = 23;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -20885,7 +20885,7 @@ TEST_F(MazeGeneratorTest, Generate23x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x16Test) {
+TEST_F(GeneratorTest, Generate23x16Test) {
   rows_ = 23;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -20905,7 +20905,7 @@ TEST_F(MazeGeneratorTest, Generate23x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x17Test) {
+TEST_F(GeneratorTest, Generate23x17Test) {
   rows_ = 23;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -20925,7 +20925,7 @@ TEST_F(MazeGeneratorTest, Generate23x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x18Test) {
+TEST_F(GeneratorTest, Generate23x18Test) {
   rows_ = 23;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -20945,7 +20945,7 @@ TEST_F(MazeGeneratorTest, Generate23x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x19Test) {
+TEST_F(GeneratorTest, Generate23x19Test) {
   rows_ = 23;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -20965,7 +20965,7 @@ TEST_F(MazeGeneratorTest, Generate23x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x20Test) {
+TEST_F(GeneratorTest, Generate23x20Test) {
   rows_ = 23;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -20985,7 +20985,7 @@ TEST_F(MazeGeneratorTest, Generate23x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x21Test) {
+TEST_F(GeneratorTest, Generate23x21Test) {
   rows_ = 23;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -21005,7 +21005,7 @@ TEST_F(MazeGeneratorTest, Generate23x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x22Test) {
+TEST_F(GeneratorTest, Generate23x22Test) {
   rows_ = 23;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -21025,7 +21025,7 @@ TEST_F(MazeGeneratorTest, Generate23x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x23Test) {
+TEST_F(GeneratorTest, Generate23x23Test) {
   rows_ = 23;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -21045,7 +21045,7 @@ TEST_F(MazeGeneratorTest, Generate23x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x24Test) {
+TEST_F(GeneratorTest, Generate23x24Test) {
   rows_ = 23;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -21065,7 +21065,7 @@ TEST_F(MazeGeneratorTest, Generate23x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x25Test) {
+TEST_F(GeneratorTest, Generate23x25Test) {
   rows_ = 23;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -21085,7 +21085,7 @@ TEST_F(MazeGeneratorTest, Generate23x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x26Test) {
+TEST_F(GeneratorTest, Generate23x26Test) {
   rows_ = 23;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -21105,7 +21105,7 @@ TEST_F(MazeGeneratorTest, Generate23x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x27Test) {
+TEST_F(GeneratorTest, Generate23x27Test) {
   rows_ = 23;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -21125,7 +21125,7 @@ TEST_F(MazeGeneratorTest, Generate23x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x28Test) {
+TEST_F(GeneratorTest, Generate23x28Test) {
   rows_ = 23;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -21145,7 +21145,7 @@ TEST_F(MazeGeneratorTest, Generate23x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x29Test) {
+TEST_F(GeneratorTest, Generate23x29Test) {
   rows_ = 23;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -21165,7 +21165,7 @@ TEST_F(MazeGeneratorTest, Generate23x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x30Test) {
+TEST_F(GeneratorTest, Generate23x30Test) {
   rows_ = 23;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -21185,7 +21185,7 @@ TEST_F(MazeGeneratorTest, Generate23x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x31Test) {
+TEST_F(GeneratorTest, Generate23x31Test) {
   rows_ = 23;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -21205,7 +21205,7 @@ TEST_F(MazeGeneratorTest, Generate23x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x32Test) {
+TEST_F(GeneratorTest, Generate23x32Test) {
   rows_ = 23;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -21225,7 +21225,7 @@ TEST_F(MazeGeneratorTest, Generate23x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x33Test) {
+TEST_F(GeneratorTest, Generate23x33Test) {
   rows_ = 23;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -21245,7 +21245,7 @@ TEST_F(MazeGeneratorTest, Generate23x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x34Test) {
+TEST_F(GeneratorTest, Generate23x34Test) {
   rows_ = 23;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -21265,7 +21265,7 @@ TEST_F(MazeGeneratorTest, Generate23x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x35Test) {
+TEST_F(GeneratorTest, Generate23x35Test) {
   rows_ = 23;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -21285,7 +21285,7 @@ TEST_F(MazeGeneratorTest, Generate23x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x36Test) {
+TEST_F(GeneratorTest, Generate23x36Test) {
   rows_ = 23;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -21305,7 +21305,7 @@ TEST_F(MazeGeneratorTest, Generate23x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x37Test) {
+TEST_F(GeneratorTest, Generate23x37Test) {
   rows_ = 23;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -21325,7 +21325,7 @@ TEST_F(MazeGeneratorTest, Generate23x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x38Test) {
+TEST_F(GeneratorTest, Generate23x38Test) {
   rows_ = 23;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -21345,7 +21345,7 @@ TEST_F(MazeGeneratorTest, Generate23x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x39Test) {
+TEST_F(GeneratorTest, Generate23x39Test) {
   rows_ = 23;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -21365,7 +21365,7 @@ TEST_F(MazeGeneratorTest, Generate23x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x40Test) {
+TEST_F(GeneratorTest, Generate23x40Test) {
   rows_ = 23;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -21385,7 +21385,7 @@ TEST_F(MazeGeneratorTest, Generate23x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x41Test) {
+TEST_F(GeneratorTest, Generate23x41Test) {
   rows_ = 23;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -21405,7 +21405,7 @@ TEST_F(MazeGeneratorTest, Generate23x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x42Test) {
+TEST_F(GeneratorTest, Generate23x42Test) {
   rows_ = 23;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -21425,7 +21425,7 @@ TEST_F(MazeGeneratorTest, Generate23x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x43Test) {
+TEST_F(GeneratorTest, Generate23x43Test) {
   rows_ = 23;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -21445,7 +21445,7 @@ TEST_F(MazeGeneratorTest, Generate23x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x44Test) {
+TEST_F(GeneratorTest, Generate23x44Test) {
   rows_ = 23;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -21465,7 +21465,7 @@ TEST_F(MazeGeneratorTest, Generate23x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x45Test) {
+TEST_F(GeneratorTest, Generate23x45Test) {
   rows_ = 23;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -21485,7 +21485,7 @@ TEST_F(MazeGeneratorTest, Generate23x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x46Test) {
+TEST_F(GeneratorTest, Generate23x46Test) {
   rows_ = 23;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -21505,7 +21505,7 @@ TEST_F(MazeGeneratorTest, Generate23x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x47Test) {
+TEST_F(GeneratorTest, Generate23x47Test) {
   rows_ = 23;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -21525,7 +21525,7 @@ TEST_F(MazeGeneratorTest, Generate23x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x48Test) {
+TEST_F(GeneratorTest, Generate23x48Test) {
   rows_ = 23;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -21545,7 +21545,7 @@ TEST_F(MazeGeneratorTest, Generate23x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x49Test) {
+TEST_F(GeneratorTest, Generate23x49Test) {
   rows_ = 23;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -21565,7 +21565,7 @@ TEST_F(MazeGeneratorTest, Generate23x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate23x50Test) {
+TEST_F(GeneratorTest, Generate23x50Test) {
   rows_ = 23;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -21585,7 +21585,7 @@ TEST_F(MazeGeneratorTest, Generate23x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x2Test) {
+TEST_F(GeneratorTest, Generate24x2Test) {
   rows_ = 24;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -21605,7 +21605,7 @@ TEST_F(MazeGeneratorTest, Generate24x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x3Test) {
+TEST_F(GeneratorTest, Generate24x3Test) {
   rows_ = 24;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -21625,7 +21625,7 @@ TEST_F(MazeGeneratorTest, Generate24x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x4Test) {
+TEST_F(GeneratorTest, Generate24x4Test) {
   rows_ = 24;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -21645,7 +21645,7 @@ TEST_F(MazeGeneratorTest, Generate24x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x5Test) {
+TEST_F(GeneratorTest, Generate24x5Test) {
   rows_ = 24;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -21665,7 +21665,7 @@ TEST_F(MazeGeneratorTest, Generate24x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x6Test) {
+TEST_F(GeneratorTest, Generate24x6Test) {
   rows_ = 24;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -21685,7 +21685,7 @@ TEST_F(MazeGeneratorTest, Generate24x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x7Test) {
+TEST_F(GeneratorTest, Generate24x7Test) {
   rows_ = 24;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -21705,7 +21705,7 @@ TEST_F(MazeGeneratorTest, Generate24x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x8Test) {
+TEST_F(GeneratorTest, Generate24x8Test) {
   rows_ = 24;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -21725,7 +21725,7 @@ TEST_F(MazeGeneratorTest, Generate24x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x9Test) {
+TEST_F(GeneratorTest, Generate24x9Test) {
   rows_ = 24;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -21745,7 +21745,7 @@ TEST_F(MazeGeneratorTest, Generate24x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x10Test) {
+TEST_F(GeneratorTest, Generate24x10Test) {
   rows_ = 24;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -21765,7 +21765,7 @@ TEST_F(MazeGeneratorTest, Generate24x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x11Test) {
+TEST_F(GeneratorTest, Generate24x11Test) {
   rows_ = 24;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -21785,7 +21785,7 @@ TEST_F(MazeGeneratorTest, Generate24x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x12Test) {
+TEST_F(GeneratorTest, Generate24x12Test) {
   rows_ = 24;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -21805,7 +21805,7 @@ TEST_F(MazeGeneratorTest, Generate24x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x13Test) {
+TEST_F(GeneratorTest, Generate24x13Test) {
   rows_ = 24;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -21825,7 +21825,7 @@ TEST_F(MazeGeneratorTest, Generate24x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x14Test) {
+TEST_F(GeneratorTest, Generate24x14Test) {
   rows_ = 24;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -21845,7 +21845,7 @@ TEST_F(MazeGeneratorTest, Generate24x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x15Test) {
+TEST_F(GeneratorTest, Generate24x15Test) {
   rows_ = 24;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -21865,7 +21865,7 @@ TEST_F(MazeGeneratorTest, Generate24x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x16Test) {
+TEST_F(GeneratorTest, Generate24x16Test) {
   rows_ = 24;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -21885,7 +21885,7 @@ TEST_F(MazeGeneratorTest, Generate24x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x17Test) {
+TEST_F(GeneratorTest, Generate24x17Test) {
   rows_ = 24;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -21905,7 +21905,7 @@ TEST_F(MazeGeneratorTest, Generate24x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x18Test) {
+TEST_F(GeneratorTest, Generate24x18Test) {
   rows_ = 24;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -21925,7 +21925,7 @@ TEST_F(MazeGeneratorTest, Generate24x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x19Test) {
+TEST_F(GeneratorTest, Generate24x19Test) {
   rows_ = 24;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -21945,7 +21945,7 @@ TEST_F(MazeGeneratorTest, Generate24x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x20Test) {
+TEST_F(GeneratorTest, Generate24x20Test) {
   rows_ = 24;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -21965,7 +21965,7 @@ TEST_F(MazeGeneratorTest, Generate24x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x21Test) {
+TEST_F(GeneratorTest, Generate24x21Test) {
   rows_ = 24;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -21985,7 +21985,7 @@ TEST_F(MazeGeneratorTest, Generate24x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x22Test) {
+TEST_F(GeneratorTest, Generate24x22Test) {
   rows_ = 24;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -22005,7 +22005,7 @@ TEST_F(MazeGeneratorTest, Generate24x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x23Test) {
+TEST_F(GeneratorTest, Generate24x23Test) {
   rows_ = 24;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -22025,7 +22025,7 @@ TEST_F(MazeGeneratorTest, Generate24x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x24Test) {
+TEST_F(GeneratorTest, Generate24x24Test) {
   rows_ = 24;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -22045,7 +22045,7 @@ TEST_F(MazeGeneratorTest, Generate24x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x25Test) {
+TEST_F(GeneratorTest, Generate24x25Test) {
   rows_ = 24;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -22065,7 +22065,7 @@ TEST_F(MazeGeneratorTest, Generate24x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x26Test) {
+TEST_F(GeneratorTest, Generate24x26Test) {
   rows_ = 24;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -22085,7 +22085,7 @@ TEST_F(MazeGeneratorTest, Generate24x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x27Test) {
+TEST_F(GeneratorTest, Generate24x27Test) {
   rows_ = 24;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -22105,7 +22105,7 @@ TEST_F(MazeGeneratorTest, Generate24x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x28Test) {
+TEST_F(GeneratorTest, Generate24x28Test) {
   rows_ = 24;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -22125,7 +22125,7 @@ TEST_F(MazeGeneratorTest, Generate24x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x29Test) {
+TEST_F(GeneratorTest, Generate24x29Test) {
   rows_ = 24;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -22145,7 +22145,7 @@ TEST_F(MazeGeneratorTest, Generate24x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x30Test) {
+TEST_F(GeneratorTest, Generate24x30Test) {
   rows_ = 24;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -22165,7 +22165,7 @@ TEST_F(MazeGeneratorTest, Generate24x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x31Test) {
+TEST_F(GeneratorTest, Generate24x31Test) {
   rows_ = 24;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -22185,7 +22185,7 @@ TEST_F(MazeGeneratorTest, Generate24x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x32Test) {
+TEST_F(GeneratorTest, Generate24x32Test) {
   rows_ = 24;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -22205,7 +22205,7 @@ TEST_F(MazeGeneratorTest, Generate24x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x33Test) {
+TEST_F(GeneratorTest, Generate24x33Test) {
   rows_ = 24;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -22225,7 +22225,7 @@ TEST_F(MazeGeneratorTest, Generate24x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x34Test) {
+TEST_F(GeneratorTest, Generate24x34Test) {
   rows_ = 24;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -22245,7 +22245,7 @@ TEST_F(MazeGeneratorTest, Generate24x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x35Test) {
+TEST_F(GeneratorTest, Generate24x35Test) {
   rows_ = 24;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -22265,7 +22265,7 @@ TEST_F(MazeGeneratorTest, Generate24x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x36Test) {
+TEST_F(GeneratorTest, Generate24x36Test) {
   rows_ = 24;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -22285,7 +22285,7 @@ TEST_F(MazeGeneratorTest, Generate24x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x37Test) {
+TEST_F(GeneratorTest, Generate24x37Test) {
   rows_ = 24;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -22305,7 +22305,7 @@ TEST_F(MazeGeneratorTest, Generate24x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x38Test) {
+TEST_F(GeneratorTest, Generate24x38Test) {
   rows_ = 24;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -22325,7 +22325,7 @@ TEST_F(MazeGeneratorTest, Generate24x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x39Test) {
+TEST_F(GeneratorTest, Generate24x39Test) {
   rows_ = 24;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -22345,7 +22345,7 @@ TEST_F(MazeGeneratorTest, Generate24x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x40Test) {
+TEST_F(GeneratorTest, Generate24x40Test) {
   rows_ = 24;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -22365,7 +22365,7 @@ TEST_F(MazeGeneratorTest, Generate24x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x41Test) {
+TEST_F(GeneratorTest, Generate24x41Test) {
   rows_ = 24;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -22385,7 +22385,7 @@ TEST_F(MazeGeneratorTest, Generate24x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x42Test) {
+TEST_F(GeneratorTest, Generate24x42Test) {
   rows_ = 24;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -22405,7 +22405,7 @@ TEST_F(MazeGeneratorTest, Generate24x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x43Test) {
+TEST_F(GeneratorTest, Generate24x43Test) {
   rows_ = 24;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -22425,7 +22425,7 @@ TEST_F(MazeGeneratorTest, Generate24x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x44Test) {
+TEST_F(GeneratorTest, Generate24x44Test) {
   rows_ = 24;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -22445,7 +22445,7 @@ TEST_F(MazeGeneratorTest, Generate24x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x45Test) {
+TEST_F(GeneratorTest, Generate24x45Test) {
   rows_ = 24;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -22465,7 +22465,7 @@ TEST_F(MazeGeneratorTest, Generate24x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x46Test) {
+TEST_F(GeneratorTest, Generate24x46Test) {
   rows_ = 24;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -22485,7 +22485,7 @@ TEST_F(MazeGeneratorTest, Generate24x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x47Test) {
+TEST_F(GeneratorTest, Generate24x47Test) {
   rows_ = 24;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -22505,7 +22505,7 @@ TEST_F(MazeGeneratorTest, Generate24x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x48Test) {
+TEST_F(GeneratorTest, Generate24x48Test) {
   rows_ = 24;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -22525,7 +22525,7 @@ TEST_F(MazeGeneratorTest, Generate24x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x49Test) {
+TEST_F(GeneratorTest, Generate24x49Test) {
   rows_ = 24;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -22545,7 +22545,7 @@ TEST_F(MazeGeneratorTest, Generate24x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate24x50Test) {
+TEST_F(GeneratorTest, Generate24x50Test) {
   rows_ = 24;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -22565,7 +22565,7 @@ TEST_F(MazeGeneratorTest, Generate24x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x2Test) {
+TEST_F(GeneratorTest, Generate25x2Test) {
   rows_ = 25;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -22585,7 +22585,7 @@ TEST_F(MazeGeneratorTest, Generate25x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x3Test) {
+TEST_F(GeneratorTest, Generate25x3Test) {
   rows_ = 25;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -22605,7 +22605,7 @@ TEST_F(MazeGeneratorTest, Generate25x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x4Test) {
+TEST_F(GeneratorTest, Generate25x4Test) {
   rows_ = 25;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -22625,7 +22625,7 @@ TEST_F(MazeGeneratorTest, Generate25x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x5Test) {
+TEST_F(GeneratorTest, Generate25x5Test) {
   rows_ = 25;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -22645,7 +22645,7 @@ TEST_F(MazeGeneratorTest, Generate25x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x6Test) {
+TEST_F(GeneratorTest, Generate25x6Test) {
   rows_ = 25;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -22665,7 +22665,7 @@ TEST_F(MazeGeneratorTest, Generate25x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x7Test) {
+TEST_F(GeneratorTest, Generate25x7Test) {
   rows_ = 25;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -22685,7 +22685,7 @@ TEST_F(MazeGeneratorTest, Generate25x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x8Test) {
+TEST_F(GeneratorTest, Generate25x8Test) {
   rows_ = 25;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -22705,7 +22705,7 @@ TEST_F(MazeGeneratorTest, Generate25x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x9Test) {
+TEST_F(GeneratorTest, Generate25x9Test) {
   rows_ = 25;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -22725,7 +22725,7 @@ TEST_F(MazeGeneratorTest, Generate25x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x10Test) {
+TEST_F(GeneratorTest, Generate25x10Test) {
   rows_ = 25;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -22745,7 +22745,7 @@ TEST_F(MazeGeneratorTest, Generate25x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x11Test) {
+TEST_F(GeneratorTest, Generate25x11Test) {
   rows_ = 25;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -22765,7 +22765,7 @@ TEST_F(MazeGeneratorTest, Generate25x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x12Test) {
+TEST_F(GeneratorTest, Generate25x12Test) {
   rows_ = 25;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -22785,7 +22785,7 @@ TEST_F(MazeGeneratorTest, Generate25x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x13Test) {
+TEST_F(GeneratorTest, Generate25x13Test) {
   rows_ = 25;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -22805,7 +22805,7 @@ TEST_F(MazeGeneratorTest, Generate25x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x14Test) {
+TEST_F(GeneratorTest, Generate25x14Test) {
   rows_ = 25;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -22825,7 +22825,7 @@ TEST_F(MazeGeneratorTest, Generate25x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x15Test) {
+TEST_F(GeneratorTest, Generate25x15Test) {
   rows_ = 25;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -22845,7 +22845,7 @@ TEST_F(MazeGeneratorTest, Generate25x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x16Test) {
+TEST_F(GeneratorTest, Generate25x16Test) {
   rows_ = 25;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -22865,7 +22865,7 @@ TEST_F(MazeGeneratorTest, Generate25x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x17Test) {
+TEST_F(GeneratorTest, Generate25x17Test) {
   rows_ = 25;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -22885,7 +22885,7 @@ TEST_F(MazeGeneratorTest, Generate25x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x18Test) {
+TEST_F(GeneratorTest, Generate25x18Test) {
   rows_ = 25;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -22905,7 +22905,7 @@ TEST_F(MazeGeneratorTest, Generate25x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x19Test) {
+TEST_F(GeneratorTest, Generate25x19Test) {
   rows_ = 25;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -22925,7 +22925,7 @@ TEST_F(MazeGeneratorTest, Generate25x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x20Test) {
+TEST_F(GeneratorTest, Generate25x20Test) {
   rows_ = 25;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -22945,7 +22945,7 @@ TEST_F(MazeGeneratorTest, Generate25x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x21Test) {
+TEST_F(GeneratorTest, Generate25x21Test) {
   rows_ = 25;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -22965,7 +22965,7 @@ TEST_F(MazeGeneratorTest, Generate25x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x22Test) {
+TEST_F(GeneratorTest, Generate25x22Test) {
   rows_ = 25;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -22985,7 +22985,7 @@ TEST_F(MazeGeneratorTest, Generate25x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x23Test) {
+TEST_F(GeneratorTest, Generate25x23Test) {
   rows_ = 25;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -23005,7 +23005,7 @@ TEST_F(MazeGeneratorTest, Generate25x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x24Test) {
+TEST_F(GeneratorTest, Generate25x24Test) {
   rows_ = 25;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -23025,7 +23025,7 @@ TEST_F(MazeGeneratorTest, Generate25x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x25Test) {
+TEST_F(GeneratorTest, Generate25x25Test) {
   rows_ = 25;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -23045,7 +23045,7 @@ TEST_F(MazeGeneratorTest, Generate25x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x26Test) {
+TEST_F(GeneratorTest, Generate25x26Test) {
   rows_ = 25;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -23065,7 +23065,7 @@ TEST_F(MazeGeneratorTest, Generate25x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x27Test) {
+TEST_F(GeneratorTest, Generate25x27Test) {
   rows_ = 25;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -23085,7 +23085,7 @@ TEST_F(MazeGeneratorTest, Generate25x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x28Test) {
+TEST_F(GeneratorTest, Generate25x28Test) {
   rows_ = 25;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -23105,7 +23105,7 @@ TEST_F(MazeGeneratorTest, Generate25x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x29Test) {
+TEST_F(GeneratorTest, Generate25x29Test) {
   rows_ = 25;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -23125,7 +23125,7 @@ TEST_F(MazeGeneratorTest, Generate25x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x30Test) {
+TEST_F(GeneratorTest, Generate25x30Test) {
   rows_ = 25;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -23145,7 +23145,7 @@ TEST_F(MazeGeneratorTest, Generate25x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x31Test) {
+TEST_F(GeneratorTest, Generate25x31Test) {
   rows_ = 25;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -23165,7 +23165,7 @@ TEST_F(MazeGeneratorTest, Generate25x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x32Test) {
+TEST_F(GeneratorTest, Generate25x32Test) {
   rows_ = 25;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -23185,7 +23185,7 @@ TEST_F(MazeGeneratorTest, Generate25x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x33Test) {
+TEST_F(GeneratorTest, Generate25x33Test) {
   rows_ = 25;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -23205,7 +23205,7 @@ TEST_F(MazeGeneratorTest, Generate25x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x34Test) {
+TEST_F(GeneratorTest, Generate25x34Test) {
   rows_ = 25;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -23225,7 +23225,7 @@ TEST_F(MazeGeneratorTest, Generate25x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x35Test) {
+TEST_F(GeneratorTest, Generate25x35Test) {
   rows_ = 25;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -23245,7 +23245,7 @@ TEST_F(MazeGeneratorTest, Generate25x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x36Test) {
+TEST_F(GeneratorTest, Generate25x36Test) {
   rows_ = 25;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -23265,7 +23265,7 @@ TEST_F(MazeGeneratorTest, Generate25x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x37Test) {
+TEST_F(GeneratorTest, Generate25x37Test) {
   rows_ = 25;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -23285,7 +23285,7 @@ TEST_F(MazeGeneratorTest, Generate25x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x38Test) {
+TEST_F(GeneratorTest, Generate25x38Test) {
   rows_ = 25;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -23305,7 +23305,7 @@ TEST_F(MazeGeneratorTest, Generate25x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x39Test) {
+TEST_F(GeneratorTest, Generate25x39Test) {
   rows_ = 25;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -23325,7 +23325,7 @@ TEST_F(MazeGeneratorTest, Generate25x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x40Test) {
+TEST_F(GeneratorTest, Generate25x40Test) {
   rows_ = 25;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -23345,7 +23345,7 @@ TEST_F(MazeGeneratorTest, Generate25x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x41Test) {
+TEST_F(GeneratorTest, Generate25x41Test) {
   rows_ = 25;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -23365,7 +23365,7 @@ TEST_F(MazeGeneratorTest, Generate25x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x42Test) {
+TEST_F(GeneratorTest, Generate25x42Test) {
   rows_ = 25;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -23385,7 +23385,7 @@ TEST_F(MazeGeneratorTest, Generate25x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x43Test) {
+TEST_F(GeneratorTest, Generate25x43Test) {
   rows_ = 25;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -23405,7 +23405,7 @@ TEST_F(MazeGeneratorTest, Generate25x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x44Test) {
+TEST_F(GeneratorTest, Generate25x44Test) {
   rows_ = 25;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -23425,7 +23425,7 @@ TEST_F(MazeGeneratorTest, Generate25x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x45Test) {
+TEST_F(GeneratorTest, Generate25x45Test) {
   rows_ = 25;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -23445,7 +23445,7 @@ TEST_F(MazeGeneratorTest, Generate25x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x46Test) {
+TEST_F(GeneratorTest, Generate25x46Test) {
   rows_ = 25;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -23465,7 +23465,7 @@ TEST_F(MazeGeneratorTest, Generate25x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x47Test) {
+TEST_F(GeneratorTest, Generate25x47Test) {
   rows_ = 25;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -23485,7 +23485,7 @@ TEST_F(MazeGeneratorTest, Generate25x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x48Test) {
+TEST_F(GeneratorTest, Generate25x48Test) {
   rows_ = 25;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -23505,7 +23505,7 @@ TEST_F(MazeGeneratorTest, Generate25x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x49Test) {
+TEST_F(GeneratorTest, Generate25x49Test) {
   rows_ = 25;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -23525,7 +23525,7 @@ TEST_F(MazeGeneratorTest, Generate25x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate25x50Test) {
+TEST_F(GeneratorTest, Generate25x50Test) {
   rows_ = 25;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -23545,7 +23545,7 @@ TEST_F(MazeGeneratorTest, Generate25x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x2Test) {
+TEST_F(GeneratorTest, Generate26x2Test) {
   rows_ = 26;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -23565,7 +23565,7 @@ TEST_F(MazeGeneratorTest, Generate26x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x3Test) {
+TEST_F(GeneratorTest, Generate26x3Test) {
   rows_ = 26;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -23585,7 +23585,7 @@ TEST_F(MazeGeneratorTest, Generate26x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x4Test) {
+TEST_F(GeneratorTest, Generate26x4Test) {
   rows_ = 26;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -23605,7 +23605,7 @@ TEST_F(MazeGeneratorTest, Generate26x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x5Test) {
+TEST_F(GeneratorTest, Generate26x5Test) {
   rows_ = 26;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -23625,7 +23625,7 @@ TEST_F(MazeGeneratorTest, Generate26x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x6Test) {
+TEST_F(GeneratorTest, Generate26x6Test) {
   rows_ = 26;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -23645,7 +23645,7 @@ TEST_F(MazeGeneratorTest, Generate26x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x7Test) {
+TEST_F(GeneratorTest, Generate26x7Test) {
   rows_ = 26;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -23665,7 +23665,7 @@ TEST_F(MazeGeneratorTest, Generate26x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x8Test) {
+TEST_F(GeneratorTest, Generate26x8Test) {
   rows_ = 26;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -23685,7 +23685,7 @@ TEST_F(MazeGeneratorTest, Generate26x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x9Test) {
+TEST_F(GeneratorTest, Generate26x9Test) {
   rows_ = 26;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -23705,7 +23705,7 @@ TEST_F(MazeGeneratorTest, Generate26x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x10Test) {
+TEST_F(GeneratorTest, Generate26x10Test) {
   rows_ = 26;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -23725,7 +23725,7 @@ TEST_F(MazeGeneratorTest, Generate26x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x11Test) {
+TEST_F(GeneratorTest, Generate26x11Test) {
   rows_ = 26;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -23745,7 +23745,7 @@ TEST_F(MazeGeneratorTest, Generate26x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x12Test) {
+TEST_F(GeneratorTest, Generate26x12Test) {
   rows_ = 26;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -23765,7 +23765,7 @@ TEST_F(MazeGeneratorTest, Generate26x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x13Test) {
+TEST_F(GeneratorTest, Generate26x13Test) {
   rows_ = 26;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -23785,7 +23785,7 @@ TEST_F(MazeGeneratorTest, Generate26x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x14Test) {
+TEST_F(GeneratorTest, Generate26x14Test) {
   rows_ = 26;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -23805,7 +23805,7 @@ TEST_F(MazeGeneratorTest, Generate26x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x15Test) {
+TEST_F(GeneratorTest, Generate26x15Test) {
   rows_ = 26;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -23825,7 +23825,7 @@ TEST_F(MazeGeneratorTest, Generate26x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x16Test) {
+TEST_F(GeneratorTest, Generate26x16Test) {
   rows_ = 26;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -23845,7 +23845,7 @@ TEST_F(MazeGeneratorTest, Generate26x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x17Test) {
+TEST_F(GeneratorTest, Generate26x17Test) {
   rows_ = 26;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -23865,7 +23865,7 @@ TEST_F(MazeGeneratorTest, Generate26x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x18Test) {
+TEST_F(GeneratorTest, Generate26x18Test) {
   rows_ = 26;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -23885,7 +23885,7 @@ TEST_F(MazeGeneratorTest, Generate26x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x19Test) {
+TEST_F(GeneratorTest, Generate26x19Test) {
   rows_ = 26;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -23905,7 +23905,7 @@ TEST_F(MazeGeneratorTest, Generate26x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x20Test) {
+TEST_F(GeneratorTest, Generate26x20Test) {
   rows_ = 26;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -23925,7 +23925,7 @@ TEST_F(MazeGeneratorTest, Generate26x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x21Test) {
+TEST_F(GeneratorTest, Generate26x21Test) {
   rows_ = 26;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -23945,7 +23945,7 @@ TEST_F(MazeGeneratorTest, Generate26x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x22Test) {
+TEST_F(GeneratorTest, Generate26x22Test) {
   rows_ = 26;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -23965,7 +23965,7 @@ TEST_F(MazeGeneratorTest, Generate26x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x23Test) {
+TEST_F(GeneratorTest, Generate26x23Test) {
   rows_ = 26;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -23985,7 +23985,7 @@ TEST_F(MazeGeneratorTest, Generate26x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x24Test) {
+TEST_F(GeneratorTest, Generate26x24Test) {
   rows_ = 26;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -24005,7 +24005,7 @@ TEST_F(MazeGeneratorTest, Generate26x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x25Test) {
+TEST_F(GeneratorTest, Generate26x25Test) {
   rows_ = 26;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -24025,7 +24025,7 @@ TEST_F(MazeGeneratorTest, Generate26x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x26Test) {
+TEST_F(GeneratorTest, Generate26x26Test) {
   rows_ = 26;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -24045,7 +24045,7 @@ TEST_F(MazeGeneratorTest, Generate26x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x27Test) {
+TEST_F(GeneratorTest, Generate26x27Test) {
   rows_ = 26;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -24065,7 +24065,7 @@ TEST_F(MazeGeneratorTest, Generate26x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x28Test) {
+TEST_F(GeneratorTest, Generate26x28Test) {
   rows_ = 26;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -24085,7 +24085,7 @@ TEST_F(MazeGeneratorTest, Generate26x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x29Test) {
+TEST_F(GeneratorTest, Generate26x29Test) {
   rows_ = 26;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -24105,7 +24105,7 @@ TEST_F(MazeGeneratorTest, Generate26x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x30Test) {
+TEST_F(GeneratorTest, Generate26x30Test) {
   rows_ = 26;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -24125,7 +24125,7 @@ TEST_F(MazeGeneratorTest, Generate26x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x31Test) {
+TEST_F(GeneratorTest, Generate26x31Test) {
   rows_ = 26;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -24145,7 +24145,7 @@ TEST_F(MazeGeneratorTest, Generate26x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x32Test) {
+TEST_F(GeneratorTest, Generate26x32Test) {
   rows_ = 26;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -24165,7 +24165,7 @@ TEST_F(MazeGeneratorTest, Generate26x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x33Test) {
+TEST_F(GeneratorTest, Generate26x33Test) {
   rows_ = 26;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -24185,7 +24185,7 @@ TEST_F(MazeGeneratorTest, Generate26x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x34Test) {
+TEST_F(GeneratorTest, Generate26x34Test) {
   rows_ = 26;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -24205,7 +24205,7 @@ TEST_F(MazeGeneratorTest, Generate26x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x35Test) {
+TEST_F(GeneratorTest, Generate26x35Test) {
   rows_ = 26;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -24225,7 +24225,7 @@ TEST_F(MazeGeneratorTest, Generate26x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x36Test) {
+TEST_F(GeneratorTest, Generate26x36Test) {
   rows_ = 26;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -24245,7 +24245,7 @@ TEST_F(MazeGeneratorTest, Generate26x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x37Test) {
+TEST_F(GeneratorTest, Generate26x37Test) {
   rows_ = 26;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -24265,7 +24265,7 @@ TEST_F(MazeGeneratorTest, Generate26x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x38Test) {
+TEST_F(GeneratorTest, Generate26x38Test) {
   rows_ = 26;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -24285,7 +24285,7 @@ TEST_F(MazeGeneratorTest, Generate26x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x39Test) {
+TEST_F(GeneratorTest, Generate26x39Test) {
   rows_ = 26;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -24305,7 +24305,7 @@ TEST_F(MazeGeneratorTest, Generate26x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x40Test) {
+TEST_F(GeneratorTest, Generate26x40Test) {
   rows_ = 26;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -24325,7 +24325,7 @@ TEST_F(MazeGeneratorTest, Generate26x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x41Test) {
+TEST_F(GeneratorTest, Generate26x41Test) {
   rows_ = 26;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -24345,7 +24345,7 @@ TEST_F(MazeGeneratorTest, Generate26x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x42Test) {
+TEST_F(GeneratorTest, Generate26x42Test) {
   rows_ = 26;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -24365,7 +24365,7 @@ TEST_F(MazeGeneratorTest, Generate26x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x43Test) {
+TEST_F(GeneratorTest, Generate26x43Test) {
   rows_ = 26;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -24385,7 +24385,7 @@ TEST_F(MazeGeneratorTest, Generate26x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x44Test) {
+TEST_F(GeneratorTest, Generate26x44Test) {
   rows_ = 26;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -24405,7 +24405,7 @@ TEST_F(MazeGeneratorTest, Generate26x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x45Test) {
+TEST_F(GeneratorTest, Generate26x45Test) {
   rows_ = 26;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -24425,7 +24425,7 @@ TEST_F(MazeGeneratorTest, Generate26x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x46Test) {
+TEST_F(GeneratorTest, Generate26x46Test) {
   rows_ = 26;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -24445,7 +24445,7 @@ TEST_F(MazeGeneratorTest, Generate26x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x47Test) {
+TEST_F(GeneratorTest, Generate26x47Test) {
   rows_ = 26;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -24465,7 +24465,7 @@ TEST_F(MazeGeneratorTest, Generate26x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x48Test) {
+TEST_F(GeneratorTest, Generate26x48Test) {
   rows_ = 26;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -24485,7 +24485,7 @@ TEST_F(MazeGeneratorTest, Generate26x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x49Test) {
+TEST_F(GeneratorTest, Generate26x49Test) {
   rows_ = 26;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -24505,7 +24505,7 @@ TEST_F(MazeGeneratorTest, Generate26x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate26x50Test) {
+TEST_F(GeneratorTest, Generate26x50Test) {
   rows_ = 26;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -24525,7 +24525,7 @@ TEST_F(MazeGeneratorTest, Generate26x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x2Test) {
+TEST_F(GeneratorTest, Generate27x2Test) {
   rows_ = 27;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -24545,7 +24545,7 @@ TEST_F(MazeGeneratorTest, Generate27x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x3Test) {
+TEST_F(GeneratorTest, Generate27x3Test) {
   rows_ = 27;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -24565,7 +24565,7 @@ TEST_F(MazeGeneratorTest, Generate27x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x4Test) {
+TEST_F(GeneratorTest, Generate27x4Test) {
   rows_ = 27;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -24585,7 +24585,7 @@ TEST_F(MazeGeneratorTest, Generate27x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x5Test) {
+TEST_F(GeneratorTest, Generate27x5Test) {
   rows_ = 27;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -24605,7 +24605,7 @@ TEST_F(MazeGeneratorTest, Generate27x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x6Test) {
+TEST_F(GeneratorTest, Generate27x6Test) {
   rows_ = 27;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -24625,7 +24625,7 @@ TEST_F(MazeGeneratorTest, Generate27x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x7Test) {
+TEST_F(GeneratorTest, Generate27x7Test) {
   rows_ = 27;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -24645,7 +24645,7 @@ TEST_F(MazeGeneratorTest, Generate27x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x8Test) {
+TEST_F(GeneratorTest, Generate27x8Test) {
   rows_ = 27;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -24665,7 +24665,7 @@ TEST_F(MazeGeneratorTest, Generate27x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x9Test) {
+TEST_F(GeneratorTest, Generate27x9Test) {
   rows_ = 27;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -24685,7 +24685,7 @@ TEST_F(MazeGeneratorTest, Generate27x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x10Test) {
+TEST_F(GeneratorTest, Generate27x10Test) {
   rows_ = 27;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -24705,7 +24705,7 @@ TEST_F(MazeGeneratorTest, Generate27x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x11Test) {
+TEST_F(GeneratorTest, Generate27x11Test) {
   rows_ = 27;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -24725,7 +24725,7 @@ TEST_F(MazeGeneratorTest, Generate27x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x12Test) {
+TEST_F(GeneratorTest, Generate27x12Test) {
   rows_ = 27;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -24745,7 +24745,7 @@ TEST_F(MazeGeneratorTest, Generate27x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x13Test) {
+TEST_F(GeneratorTest, Generate27x13Test) {
   rows_ = 27;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -24765,7 +24765,7 @@ TEST_F(MazeGeneratorTest, Generate27x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x14Test) {
+TEST_F(GeneratorTest, Generate27x14Test) {
   rows_ = 27;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -24785,7 +24785,7 @@ TEST_F(MazeGeneratorTest, Generate27x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x15Test) {
+TEST_F(GeneratorTest, Generate27x15Test) {
   rows_ = 27;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -24805,7 +24805,7 @@ TEST_F(MazeGeneratorTest, Generate27x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x16Test) {
+TEST_F(GeneratorTest, Generate27x16Test) {
   rows_ = 27;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -24825,7 +24825,7 @@ TEST_F(MazeGeneratorTest, Generate27x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x17Test) {
+TEST_F(GeneratorTest, Generate27x17Test) {
   rows_ = 27;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -24845,7 +24845,7 @@ TEST_F(MazeGeneratorTest, Generate27x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x18Test) {
+TEST_F(GeneratorTest, Generate27x18Test) {
   rows_ = 27;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -24865,7 +24865,7 @@ TEST_F(MazeGeneratorTest, Generate27x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x19Test) {
+TEST_F(GeneratorTest, Generate27x19Test) {
   rows_ = 27;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -24885,7 +24885,7 @@ TEST_F(MazeGeneratorTest, Generate27x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x20Test) {
+TEST_F(GeneratorTest, Generate27x20Test) {
   rows_ = 27;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -24905,7 +24905,7 @@ TEST_F(MazeGeneratorTest, Generate27x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x21Test) {
+TEST_F(GeneratorTest, Generate27x21Test) {
   rows_ = 27;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -24925,7 +24925,7 @@ TEST_F(MazeGeneratorTest, Generate27x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x22Test) {
+TEST_F(GeneratorTest, Generate27x22Test) {
   rows_ = 27;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -24945,7 +24945,7 @@ TEST_F(MazeGeneratorTest, Generate27x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x23Test) {
+TEST_F(GeneratorTest, Generate27x23Test) {
   rows_ = 27;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -24965,7 +24965,7 @@ TEST_F(MazeGeneratorTest, Generate27x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x24Test) {
+TEST_F(GeneratorTest, Generate27x24Test) {
   rows_ = 27;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -24985,7 +24985,7 @@ TEST_F(MazeGeneratorTest, Generate27x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x25Test) {
+TEST_F(GeneratorTest, Generate27x25Test) {
   rows_ = 27;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -25005,7 +25005,7 @@ TEST_F(MazeGeneratorTest, Generate27x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x26Test) {
+TEST_F(GeneratorTest, Generate27x26Test) {
   rows_ = 27;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -25025,7 +25025,7 @@ TEST_F(MazeGeneratorTest, Generate27x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x27Test) {
+TEST_F(GeneratorTest, Generate27x27Test) {
   rows_ = 27;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -25045,7 +25045,7 @@ TEST_F(MazeGeneratorTest, Generate27x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x28Test) {
+TEST_F(GeneratorTest, Generate27x28Test) {
   rows_ = 27;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -25065,7 +25065,7 @@ TEST_F(MazeGeneratorTest, Generate27x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x29Test) {
+TEST_F(GeneratorTest, Generate27x29Test) {
   rows_ = 27;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -25085,7 +25085,7 @@ TEST_F(MazeGeneratorTest, Generate27x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x30Test) {
+TEST_F(GeneratorTest, Generate27x30Test) {
   rows_ = 27;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -25105,7 +25105,7 @@ TEST_F(MazeGeneratorTest, Generate27x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x31Test) {
+TEST_F(GeneratorTest, Generate27x31Test) {
   rows_ = 27;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -25125,7 +25125,7 @@ TEST_F(MazeGeneratorTest, Generate27x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x32Test) {
+TEST_F(GeneratorTest, Generate27x32Test) {
   rows_ = 27;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -25145,7 +25145,7 @@ TEST_F(MazeGeneratorTest, Generate27x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x33Test) {
+TEST_F(GeneratorTest, Generate27x33Test) {
   rows_ = 27;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -25165,7 +25165,7 @@ TEST_F(MazeGeneratorTest, Generate27x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x34Test) {
+TEST_F(GeneratorTest, Generate27x34Test) {
   rows_ = 27;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -25185,7 +25185,7 @@ TEST_F(MazeGeneratorTest, Generate27x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x35Test) {
+TEST_F(GeneratorTest, Generate27x35Test) {
   rows_ = 27;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -25205,7 +25205,7 @@ TEST_F(MazeGeneratorTest, Generate27x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x36Test) {
+TEST_F(GeneratorTest, Generate27x36Test) {
   rows_ = 27;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -25225,7 +25225,7 @@ TEST_F(MazeGeneratorTest, Generate27x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x37Test) {
+TEST_F(GeneratorTest, Generate27x37Test) {
   rows_ = 27;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -25245,7 +25245,7 @@ TEST_F(MazeGeneratorTest, Generate27x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x38Test) {
+TEST_F(GeneratorTest, Generate27x38Test) {
   rows_ = 27;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -25265,7 +25265,7 @@ TEST_F(MazeGeneratorTest, Generate27x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x39Test) {
+TEST_F(GeneratorTest, Generate27x39Test) {
   rows_ = 27;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -25285,7 +25285,7 @@ TEST_F(MazeGeneratorTest, Generate27x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x40Test) {
+TEST_F(GeneratorTest, Generate27x40Test) {
   rows_ = 27;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -25305,7 +25305,7 @@ TEST_F(MazeGeneratorTest, Generate27x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x41Test) {
+TEST_F(GeneratorTest, Generate27x41Test) {
   rows_ = 27;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -25325,7 +25325,7 @@ TEST_F(MazeGeneratorTest, Generate27x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x42Test) {
+TEST_F(GeneratorTest, Generate27x42Test) {
   rows_ = 27;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -25345,7 +25345,7 @@ TEST_F(MazeGeneratorTest, Generate27x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x43Test) {
+TEST_F(GeneratorTest, Generate27x43Test) {
   rows_ = 27;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -25365,7 +25365,7 @@ TEST_F(MazeGeneratorTest, Generate27x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x44Test) {
+TEST_F(GeneratorTest, Generate27x44Test) {
   rows_ = 27;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -25385,7 +25385,7 @@ TEST_F(MazeGeneratorTest, Generate27x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x45Test) {
+TEST_F(GeneratorTest, Generate27x45Test) {
   rows_ = 27;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -25405,7 +25405,7 @@ TEST_F(MazeGeneratorTest, Generate27x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x46Test) {
+TEST_F(GeneratorTest, Generate27x46Test) {
   rows_ = 27;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -25425,7 +25425,7 @@ TEST_F(MazeGeneratorTest, Generate27x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x47Test) {
+TEST_F(GeneratorTest, Generate27x47Test) {
   rows_ = 27;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -25445,7 +25445,7 @@ TEST_F(MazeGeneratorTest, Generate27x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x48Test) {
+TEST_F(GeneratorTest, Generate27x48Test) {
   rows_ = 27;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -25465,7 +25465,7 @@ TEST_F(MazeGeneratorTest, Generate27x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x49Test) {
+TEST_F(GeneratorTest, Generate27x49Test) {
   rows_ = 27;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -25485,7 +25485,7 @@ TEST_F(MazeGeneratorTest, Generate27x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate27x50Test) {
+TEST_F(GeneratorTest, Generate27x50Test) {
   rows_ = 27;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -25505,7 +25505,7 @@ TEST_F(MazeGeneratorTest, Generate27x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x2Test) {
+TEST_F(GeneratorTest, Generate28x2Test) {
   rows_ = 28;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -25525,7 +25525,7 @@ TEST_F(MazeGeneratorTest, Generate28x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x3Test) {
+TEST_F(GeneratorTest, Generate28x3Test) {
   rows_ = 28;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -25545,7 +25545,7 @@ TEST_F(MazeGeneratorTest, Generate28x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x4Test) {
+TEST_F(GeneratorTest, Generate28x4Test) {
   rows_ = 28;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -25565,7 +25565,7 @@ TEST_F(MazeGeneratorTest, Generate28x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x5Test) {
+TEST_F(GeneratorTest, Generate28x5Test) {
   rows_ = 28;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -25585,7 +25585,7 @@ TEST_F(MazeGeneratorTest, Generate28x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x6Test) {
+TEST_F(GeneratorTest, Generate28x6Test) {
   rows_ = 28;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -25605,7 +25605,7 @@ TEST_F(MazeGeneratorTest, Generate28x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x7Test) {
+TEST_F(GeneratorTest, Generate28x7Test) {
   rows_ = 28;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -25625,7 +25625,7 @@ TEST_F(MazeGeneratorTest, Generate28x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x8Test) {
+TEST_F(GeneratorTest, Generate28x8Test) {
   rows_ = 28;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -25645,7 +25645,7 @@ TEST_F(MazeGeneratorTest, Generate28x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x9Test) {
+TEST_F(GeneratorTest, Generate28x9Test) {
   rows_ = 28;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -25665,7 +25665,7 @@ TEST_F(MazeGeneratorTest, Generate28x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x10Test) {
+TEST_F(GeneratorTest, Generate28x10Test) {
   rows_ = 28;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -25685,7 +25685,7 @@ TEST_F(MazeGeneratorTest, Generate28x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x11Test) {
+TEST_F(GeneratorTest, Generate28x11Test) {
   rows_ = 28;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -25705,7 +25705,7 @@ TEST_F(MazeGeneratorTest, Generate28x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x12Test) {
+TEST_F(GeneratorTest, Generate28x12Test) {
   rows_ = 28;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -25725,7 +25725,7 @@ TEST_F(MazeGeneratorTest, Generate28x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x13Test) {
+TEST_F(GeneratorTest, Generate28x13Test) {
   rows_ = 28;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -25745,7 +25745,7 @@ TEST_F(MazeGeneratorTest, Generate28x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x14Test) {
+TEST_F(GeneratorTest, Generate28x14Test) {
   rows_ = 28;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -25765,7 +25765,7 @@ TEST_F(MazeGeneratorTest, Generate28x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x15Test) {
+TEST_F(GeneratorTest, Generate28x15Test) {
   rows_ = 28;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -25785,7 +25785,7 @@ TEST_F(MazeGeneratorTest, Generate28x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x16Test) {
+TEST_F(GeneratorTest, Generate28x16Test) {
   rows_ = 28;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -25805,7 +25805,7 @@ TEST_F(MazeGeneratorTest, Generate28x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x17Test) {
+TEST_F(GeneratorTest, Generate28x17Test) {
   rows_ = 28;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -25825,7 +25825,7 @@ TEST_F(MazeGeneratorTest, Generate28x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x18Test) {
+TEST_F(GeneratorTest, Generate28x18Test) {
   rows_ = 28;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -25845,7 +25845,7 @@ TEST_F(MazeGeneratorTest, Generate28x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x19Test) {
+TEST_F(GeneratorTest, Generate28x19Test) {
   rows_ = 28;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -25865,7 +25865,7 @@ TEST_F(MazeGeneratorTest, Generate28x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x20Test) {
+TEST_F(GeneratorTest, Generate28x20Test) {
   rows_ = 28;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -25885,7 +25885,7 @@ TEST_F(MazeGeneratorTest, Generate28x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x21Test) {
+TEST_F(GeneratorTest, Generate28x21Test) {
   rows_ = 28;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -25905,7 +25905,7 @@ TEST_F(MazeGeneratorTest, Generate28x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x22Test) {
+TEST_F(GeneratorTest, Generate28x22Test) {
   rows_ = 28;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -25925,7 +25925,7 @@ TEST_F(MazeGeneratorTest, Generate28x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x23Test) {
+TEST_F(GeneratorTest, Generate28x23Test) {
   rows_ = 28;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -25945,7 +25945,7 @@ TEST_F(MazeGeneratorTest, Generate28x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x24Test) {
+TEST_F(GeneratorTest, Generate28x24Test) {
   rows_ = 28;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -25965,7 +25965,7 @@ TEST_F(MazeGeneratorTest, Generate28x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x25Test) {
+TEST_F(GeneratorTest, Generate28x25Test) {
   rows_ = 28;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -25985,7 +25985,7 @@ TEST_F(MazeGeneratorTest, Generate28x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x26Test) {
+TEST_F(GeneratorTest, Generate28x26Test) {
   rows_ = 28;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -26005,7 +26005,7 @@ TEST_F(MazeGeneratorTest, Generate28x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x27Test) {
+TEST_F(GeneratorTest, Generate28x27Test) {
   rows_ = 28;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -26025,7 +26025,7 @@ TEST_F(MazeGeneratorTest, Generate28x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x28Test) {
+TEST_F(GeneratorTest, Generate28x28Test) {
   rows_ = 28;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -26045,7 +26045,7 @@ TEST_F(MazeGeneratorTest, Generate28x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x29Test) {
+TEST_F(GeneratorTest, Generate28x29Test) {
   rows_ = 28;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -26065,7 +26065,7 @@ TEST_F(MazeGeneratorTest, Generate28x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x30Test) {
+TEST_F(GeneratorTest, Generate28x30Test) {
   rows_ = 28;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -26085,7 +26085,7 @@ TEST_F(MazeGeneratorTest, Generate28x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x31Test) {
+TEST_F(GeneratorTest, Generate28x31Test) {
   rows_ = 28;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -26105,7 +26105,7 @@ TEST_F(MazeGeneratorTest, Generate28x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x32Test) {
+TEST_F(GeneratorTest, Generate28x32Test) {
   rows_ = 28;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -26125,7 +26125,7 @@ TEST_F(MazeGeneratorTest, Generate28x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x33Test) {
+TEST_F(GeneratorTest, Generate28x33Test) {
   rows_ = 28;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -26145,7 +26145,7 @@ TEST_F(MazeGeneratorTest, Generate28x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x34Test) {
+TEST_F(GeneratorTest, Generate28x34Test) {
   rows_ = 28;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -26165,7 +26165,7 @@ TEST_F(MazeGeneratorTest, Generate28x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x35Test) {
+TEST_F(GeneratorTest, Generate28x35Test) {
   rows_ = 28;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -26185,7 +26185,7 @@ TEST_F(MazeGeneratorTest, Generate28x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x36Test) {
+TEST_F(GeneratorTest, Generate28x36Test) {
   rows_ = 28;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -26205,7 +26205,7 @@ TEST_F(MazeGeneratorTest, Generate28x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x37Test) {
+TEST_F(GeneratorTest, Generate28x37Test) {
   rows_ = 28;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -26225,7 +26225,7 @@ TEST_F(MazeGeneratorTest, Generate28x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x38Test) {
+TEST_F(GeneratorTest, Generate28x38Test) {
   rows_ = 28;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -26245,7 +26245,7 @@ TEST_F(MazeGeneratorTest, Generate28x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x39Test) {
+TEST_F(GeneratorTest, Generate28x39Test) {
   rows_ = 28;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -26265,7 +26265,7 @@ TEST_F(MazeGeneratorTest, Generate28x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x40Test) {
+TEST_F(GeneratorTest, Generate28x40Test) {
   rows_ = 28;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -26285,7 +26285,7 @@ TEST_F(MazeGeneratorTest, Generate28x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x41Test) {
+TEST_F(GeneratorTest, Generate28x41Test) {
   rows_ = 28;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -26305,7 +26305,7 @@ TEST_F(MazeGeneratorTest, Generate28x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x42Test) {
+TEST_F(GeneratorTest, Generate28x42Test) {
   rows_ = 28;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -26325,7 +26325,7 @@ TEST_F(MazeGeneratorTest, Generate28x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x43Test) {
+TEST_F(GeneratorTest, Generate28x43Test) {
   rows_ = 28;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -26345,7 +26345,7 @@ TEST_F(MazeGeneratorTest, Generate28x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x44Test) {
+TEST_F(GeneratorTest, Generate28x44Test) {
   rows_ = 28;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -26365,7 +26365,7 @@ TEST_F(MazeGeneratorTest, Generate28x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x45Test) {
+TEST_F(GeneratorTest, Generate28x45Test) {
   rows_ = 28;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -26385,7 +26385,7 @@ TEST_F(MazeGeneratorTest, Generate28x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x46Test) {
+TEST_F(GeneratorTest, Generate28x46Test) {
   rows_ = 28;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -26405,7 +26405,7 @@ TEST_F(MazeGeneratorTest, Generate28x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x47Test) {
+TEST_F(GeneratorTest, Generate28x47Test) {
   rows_ = 28;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -26425,7 +26425,7 @@ TEST_F(MazeGeneratorTest, Generate28x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x48Test) {
+TEST_F(GeneratorTest, Generate28x48Test) {
   rows_ = 28;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -26445,7 +26445,7 @@ TEST_F(MazeGeneratorTest, Generate28x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x49Test) {
+TEST_F(GeneratorTest, Generate28x49Test) {
   rows_ = 28;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -26465,7 +26465,7 @@ TEST_F(MazeGeneratorTest, Generate28x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate28x50Test) {
+TEST_F(GeneratorTest, Generate28x50Test) {
   rows_ = 28;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -26485,7 +26485,7 @@ TEST_F(MazeGeneratorTest, Generate28x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x2Test) {
+TEST_F(GeneratorTest, Generate29x2Test) {
   rows_ = 29;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -26505,7 +26505,7 @@ TEST_F(MazeGeneratorTest, Generate29x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x3Test) {
+TEST_F(GeneratorTest, Generate29x3Test) {
   rows_ = 29;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -26525,7 +26525,7 @@ TEST_F(MazeGeneratorTest, Generate29x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x4Test) {
+TEST_F(GeneratorTest, Generate29x4Test) {
   rows_ = 29;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -26545,7 +26545,7 @@ TEST_F(MazeGeneratorTest, Generate29x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x5Test) {
+TEST_F(GeneratorTest, Generate29x5Test) {
   rows_ = 29;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -26565,7 +26565,7 @@ TEST_F(MazeGeneratorTest, Generate29x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x6Test) {
+TEST_F(GeneratorTest, Generate29x6Test) {
   rows_ = 29;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -26585,7 +26585,7 @@ TEST_F(MazeGeneratorTest, Generate29x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x7Test) {
+TEST_F(GeneratorTest, Generate29x7Test) {
   rows_ = 29;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -26605,7 +26605,7 @@ TEST_F(MazeGeneratorTest, Generate29x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x8Test) {
+TEST_F(GeneratorTest, Generate29x8Test) {
   rows_ = 29;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -26625,7 +26625,7 @@ TEST_F(MazeGeneratorTest, Generate29x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x9Test) {
+TEST_F(GeneratorTest, Generate29x9Test) {
   rows_ = 29;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -26645,7 +26645,7 @@ TEST_F(MazeGeneratorTest, Generate29x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x10Test) {
+TEST_F(GeneratorTest, Generate29x10Test) {
   rows_ = 29;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -26665,7 +26665,7 @@ TEST_F(MazeGeneratorTest, Generate29x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x11Test) {
+TEST_F(GeneratorTest, Generate29x11Test) {
   rows_ = 29;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -26685,7 +26685,7 @@ TEST_F(MazeGeneratorTest, Generate29x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x12Test) {
+TEST_F(GeneratorTest, Generate29x12Test) {
   rows_ = 29;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -26705,7 +26705,7 @@ TEST_F(MazeGeneratorTest, Generate29x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x13Test) {
+TEST_F(GeneratorTest, Generate29x13Test) {
   rows_ = 29;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -26725,7 +26725,7 @@ TEST_F(MazeGeneratorTest, Generate29x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x14Test) {
+TEST_F(GeneratorTest, Generate29x14Test) {
   rows_ = 29;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -26745,7 +26745,7 @@ TEST_F(MazeGeneratorTest, Generate29x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x15Test) {
+TEST_F(GeneratorTest, Generate29x15Test) {
   rows_ = 29;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -26765,7 +26765,7 @@ TEST_F(MazeGeneratorTest, Generate29x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x16Test) {
+TEST_F(GeneratorTest, Generate29x16Test) {
   rows_ = 29;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -26785,7 +26785,7 @@ TEST_F(MazeGeneratorTest, Generate29x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x17Test) {
+TEST_F(GeneratorTest, Generate29x17Test) {
   rows_ = 29;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -26805,7 +26805,7 @@ TEST_F(MazeGeneratorTest, Generate29x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x18Test) {
+TEST_F(GeneratorTest, Generate29x18Test) {
   rows_ = 29;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -26825,7 +26825,7 @@ TEST_F(MazeGeneratorTest, Generate29x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x19Test) {
+TEST_F(GeneratorTest, Generate29x19Test) {
   rows_ = 29;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -26845,7 +26845,7 @@ TEST_F(MazeGeneratorTest, Generate29x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x20Test) {
+TEST_F(GeneratorTest, Generate29x20Test) {
   rows_ = 29;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -26865,7 +26865,7 @@ TEST_F(MazeGeneratorTest, Generate29x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x21Test) {
+TEST_F(GeneratorTest, Generate29x21Test) {
   rows_ = 29;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -26885,7 +26885,7 @@ TEST_F(MazeGeneratorTest, Generate29x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x22Test) {
+TEST_F(GeneratorTest, Generate29x22Test) {
   rows_ = 29;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -26905,7 +26905,7 @@ TEST_F(MazeGeneratorTest, Generate29x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x23Test) {
+TEST_F(GeneratorTest, Generate29x23Test) {
   rows_ = 29;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -26925,7 +26925,7 @@ TEST_F(MazeGeneratorTest, Generate29x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x24Test) {
+TEST_F(GeneratorTest, Generate29x24Test) {
   rows_ = 29;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -26945,7 +26945,7 @@ TEST_F(MazeGeneratorTest, Generate29x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x25Test) {
+TEST_F(GeneratorTest, Generate29x25Test) {
   rows_ = 29;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -26965,7 +26965,7 @@ TEST_F(MazeGeneratorTest, Generate29x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x26Test) {
+TEST_F(GeneratorTest, Generate29x26Test) {
   rows_ = 29;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -26985,7 +26985,7 @@ TEST_F(MazeGeneratorTest, Generate29x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x27Test) {
+TEST_F(GeneratorTest, Generate29x27Test) {
   rows_ = 29;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -27005,7 +27005,7 @@ TEST_F(MazeGeneratorTest, Generate29x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x28Test) {
+TEST_F(GeneratorTest, Generate29x28Test) {
   rows_ = 29;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -27025,7 +27025,7 @@ TEST_F(MazeGeneratorTest, Generate29x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x29Test) {
+TEST_F(GeneratorTest, Generate29x29Test) {
   rows_ = 29;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -27045,7 +27045,7 @@ TEST_F(MazeGeneratorTest, Generate29x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x30Test) {
+TEST_F(GeneratorTest, Generate29x30Test) {
   rows_ = 29;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -27065,7 +27065,7 @@ TEST_F(MazeGeneratorTest, Generate29x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x31Test) {
+TEST_F(GeneratorTest, Generate29x31Test) {
   rows_ = 29;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -27085,7 +27085,7 @@ TEST_F(MazeGeneratorTest, Generate29x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x32Test) {
+TEST_F(GeneratorTest, Generate29x32Test) {
   rows_ = 29;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -27105,7 +27105,7 @@ TEST_F(MazeGeneratorTest, Generate29x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x33Test) {
+TEST_F(GeneratorTest, Generate29x33Test) {
   rows_ = 29;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -27125,7 +27125,7 @@ TEST_F(MazeGeneratorTest, Generate29x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x34Test) {
+TEST_F(GeneratorTest, Generate29x34Test) {
   rows_ = 29;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -27145,7 +27145,7 @@ TEST_F(MazeGeneratorTest, Generate29x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x35Test) {
+TEST_F(GeneratorTest, Generate29x35Test) {
   rows_ = 29;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -27165,7 +27165,7 @@ TEST_F(MazeGeneratorTest, Generate29x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x36Test) {
+TEST_F(GeneratorTest, Generate29x36Test) {
   rows_ = 29;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -27185,7 +27185,7 @@ TEST_F(MazeGeneratorTest, Generate29x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x37Test) {
+TEST_F(GeneratorTest, Generate29x37Test) {
   rows_ = 29;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -27205,7 +27205,7 @@ TEST_F(MazeGeneratorTest, Generate29x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x38Test) {
+TEST_F(GeneratorTest, Generate29x38Test) {
   rows_ = 29;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -27225,7 +27225,7 @@ TEST_F(MazeGeneratorTest, Generate29x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x39Test) {
+TEST_F(GeneratorTest, Generate29x39Test) {
   rows_ = 29;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -27245,7 +27245,7 @@ TEST_F(MazeGeneratorTest, Generate29x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x40Test) {
+TEST_F(GeneratorTest, Generate29x40Test) {
   rows_ = 29;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -27265,7 +27265,7 @@ TEST_F(MazeGeneratorTest, Generate29x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x41Test) {
+TEST_F(GeneratorTest, Generate29x41Test) {
   rows_ = 29;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -27285,7 +27285,7 @@ TEST_F(MazeGeneratorTest, Generate29x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x42Test) {
+TEST_F(GeneratorTest, Generate29x42Test) {
   rows_ = 29;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -27305,7 +27305,7 @@ TEST_F(MazeGeneratorTest, Generate29x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x43Test) {
+TEST_F(GeneratorTest, Generate29x43Test) {
   rows_ = 29;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -27325,7 +27325,7 @@ TEST_F(MazeGeneratorTest, Generate29x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x44Test) {
+TEST_F(GeneratorTest, Generate29x44Test) {
   rows_ = 29;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -27345,7 +27345,7 @@ TEST_F(MazeGeneratorTest, Generate29x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x45Test) {
+TEST_F(GeneratorTest, Generate29x45Test) {
   rows_ = 29;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -27365,7 +27365,7 @@ TEST_F(MazeGeneratorTest, Generate29x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x46Test) {
+TEST_F(GeneratorTest, Generate29x46Test) {
   rows_ = 29;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -27385,7 +27385,7 @@ TEST_F(MazeGeneratorTest, Generate29x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x47Test) {
+TEST_F(GeneratorTest, Generate29x47Test) {
   rows_ = 29;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -27405,7 +27405,7 @@ TEST_F(MazeGeneratorTest, Generate29x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x48Test) {
+TEST_F(GeneratorTest, Generate29x48Test) {
   rows_ = 29;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -27425,7 +27425,7 @@ TEST_F(MazeGeneratorTest, Generate29x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x49Test) {
+TEST_F(GeneratorTest, Generate29x49Test) {
   rows_ = 29;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -27445,7 +27445,7 @@ TEST_F(MazeGeneratorTest, Generate29x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate29x50Test) {
+TEST_F(GeneratorTest, Generate29x50Test) {
   rows_ = 29;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -27465,7 +27465,7 @@ TEST_F(MazeGeneratorTest, Generate29x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x2Test) {
+TEST_F(GeneratorTest, Generate30x2Test) {
   rows_ = 30;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -27485,7 +27485,7 @@ TEST_F(MazeGeneratorTest, Generate30x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x3Test) {
+TEST_F(GeneratorTest, Generate30x3Test) {
   rows_ = 30;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -27505,7 +27505,7 @@ TEST_F(MazeGeneratorTest, Generate30x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x4Test) {
+TEST_F(GeneratorTest, Generate30x4Test) {
   rows_ = 30;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -27525,7 +27525,7 @@ TEST_F(MazeGeneratorTest, Generate30x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x5Test) {
+TEST_F(GeneratorTest, Generate30x5Test) {
   rows_ = 30;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -27545,7 +27545,7 @@ TEST_F(MazeGeneratorTest, Generate30x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x6Test) {
+TEST_F(GeneratorTest, Generate30x6Test) {
   rows_ = 30;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -27565,7 +27565,7 @@ TEST_F(MazeGeneratorTest, Generate30x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x7Test) {
+TEST_F(GeneratorTest, Generate30x7Test) {
   rows_ = 30;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -27585,7 +27585,7 @@ TEST_F(MazeGeneratorTest, Generate30x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x8Test) {
+TEST_F(GeneratorTest, Generate30x8Test) {
   rows_ = 30;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -27605,7 +27605,7 @@ TEST_F(MazeGeneratorTest, Generate30x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x9Test) {
+TEST_F(GeneratorTest, Generate30x9Test) {
   rows_ = 30;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -27625,7 +27625,7 @@ TEST_F(MazeGeneratorTest, Generate30x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x10Test) {
+TEST_F(GeneratorTest, Generate30x10Test) {
   rows_ = 30;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -27645,7 +27645,7 @@ TEST_F(MazeGeneratorTest, Generate30x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x11Test) {
+TEST_F(GeneratorTest, Generate30x11Test) {
   rows_ = 30;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -27665,7 +27665,7 @@ TEST_F(MazeGeneratorTest, Generate30x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x12Test) {
+TEST_F(GeneratorTest, Generate30x12Test) {
   rows_ = 30;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -27685,7 +27685,7 @@ TEST_F(MazeGeneratorTest, Generate30x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x13Test) {
+TEST_F(GeneratorTest, Generate30x13Test) {
   rows_ = 30;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -27705,7 +27705,7 @@ TEST_F(MazeGeneratorTest, Generate30x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x14Test) {
+TEST_F(GeneratorTest, Generate30x14Test) {
   rows_ = 30;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -27725,7 +27725,7 @@ TEST_F(MazeGeneratorTest, Generate30x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x15Test) {
+TEST_F(GeneratorTest, Generate30x15Test) {
   rows_ = 30;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -27745,7 +27745,7 @@ TEST_F(MazeGeneratorTest, Generate30x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x16Test) {
+TEST_F(GeneratorTest, Generate30x16Test) {
   rows_ = 30;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -27765,7 +27765,7 @@ TEST_F(MazeGeneratorTest, Generate30x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x17Test) {
+TEST_F(GeneratorTest, Generate30x17Test) {
   rows_ = 30;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -27785,7 +27785,7 @@ TEST_F(MazeGeneratorTest, Generate30x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x18Test) {
+TEST_F(GeneratorTest, Generate30x18Test) {
   rows_ = 30;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -27805,7 +27805,7 @@ TEST_F(MazeGeneratorTest, Generate30x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x19Test) {
+TEST_F(GeneratorTest, Generate30x19Test) {
   rows_ = 30;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -27825,7 +27825,7 @@ TEST_F(MazeGeneratorTest, Generate30x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x20Test) {
+TEST_F(GeneratorTest, Generate30x20Test) {
   rows_ = 30;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -27845,7 +27845,7 @@ TEST_F(MazeGeneratorTest, Generate30x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x21Test) {
+TEST_F(GeneratorTest, Generate30x21Test) {
   rows_ = 30;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -27865,7 +27865,7 @@ TEST_F(MazeGeneratorTest, Generate30x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x22Test) {
+TEST_F(GeneratorTest, Generate30x22Test) {
   rows_ = 30;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -27885,7 +27885,7 @@ TEST_F(MazeGeneratorTest, Generate30x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x23Test) {
+TEST_F(GeneratorTest, Generate30x23Test) {
   rows_ = 30;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -27905,7 +27905,7 @@ TEST_F(MazeGeneratorTest, Generate30x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x24Test) {
+TEST_F(GeneratorTest, Generate30x24Test) {
   rows_ = 30;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -27925,7 +27925,7 @@ TEST_F(MazeGeneratorTest, Generate30x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x25Test) {
+TEST_F(GeneratorTest, Generate30x25Test) {
   rows_ = 30;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -27945,7 +27945,7 @@ TEST_F(MazeGeneratorTest, Generate30x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x26Test) {
+TEST_F(GeneratorTest, Generate30x26Test) {
   rows_ = 30;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -27965,7 +27965,7 @@ TEST_F(MazeGeneratorTest, Generate30x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x27Test) {
+TEST_F(GeneratorTest, Generate30x27Test) {
   rows_ = 30;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -27985,7 +27985,7 @@ TEST_F(MazeGeneratorTest, Generate30x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x28Test) {
+TEST_F(GeneratorTest, Generate30x28Test) {
   rows_ = 30;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -28005,7 +28005,7 @@ TEST_F(MazeGeneratorTest, Generate30x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x29Test) {
+TEST_F(GeneratorTest, Generate30x29Test) {
   rows_ = 30;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -28025,7 +28025,7 @@ TEST_F(MazeGeneratorTest, Generate30x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x30Test) {
+TEST_F(GeneratorTest, Generate30x30Test) {
   rows_ = 30;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -28045,7 +28045,7 @@ TEST_F(MazeGeneratorTest, Generate30x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x31Test) {
+TEST_F(GeneratorTest, Generate30x31Test) {
   rows_ = 30;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -28065,7 +28065,7 @@ TEST_F(MazeGeneratorTest, Generate30x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x32Test) {
+TEST_F(GeneratorTest, Generate30x32Test) {
   rows_ = 30;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -28085,7 +28085,7 @@ TEST_F(MazeGeneratorTest, Generate30x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x33Test) {
+TEST_F(GeneratorTest, Generate30x33Test) {
   rows_ = 30;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -28105,7 +28105,7 @@ TEST_F(MazeGeneratorTest, Generate30x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x34Test) {
+TEST_F(GeneratorTest, Generate30x34Test) {
   rows_ = 30;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -28125,7 +28125,7 @@ TEST_F(MazeGeneratorTest, Generate30x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x35Test) {
+TEST_F(GeneratorTest, Generate30x35Test) {
   rows_ = 30;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -28145,7 +28145,7 @@ TEST_F(MazeGeneratorTest, Generate30x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x36Test) {
+TEST_F(GeneratorTest, Generate30x36Test) {
   rows_ = 30;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -28165,7 +28165,7 @@ TEST_F(MazeGeneratorTest, Generate30x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x37Test) {
+TEST_F(GeneratorTest, Generate30x37Test) {
   rows_ = 30;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -28185,7 +28185,7 @@ TEST_F(MazeGeneratorTest, Generate30x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x38Test) {
+TEST_F(GeneratorTest, Generate30x38Test) {
   rows_ = 30;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -28205,7 +28205,7 @@ TEST_F(MazeGeneratorTest, Generate30x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x39Test) {
+TEST_F(GeneratorTest, Generate30x39Test) {
   rows_ = 30;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -28225,7 +28225,7 @@ TEST_F(MazeGeneratorTest, Generate30x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x40Test) {
+TEST_F(GeneratorTest, Generate30x40Test) {
   rows_ = 30;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -28245,7 +28245,7 @@ TEST_F(MazeGeneratorTest, Generate30x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x41Test) {
+TEST_F(GeneratorTest, Generate30x41Test) {
   rows_ = 30;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -28265,7 +28265,7 @@ TEST_F(MazeGeneratorTest, Generate30x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x42Test) {
+TEST_F(GeneratorTest, Generate30x42Test) {
   rows_ = 30;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -28285,7 +28285,7 @@ TEST_F(MazeGeneratorTest, Generate30x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x43Test) {
+TEST_F(GeneratorTest, Generate30x43Test) {
   rows_ = 30;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -28305,7 +28305,7 @@ TEST_F(MazeGeneratorTest, Generate30x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x44Test) {
+TEST_F(GeneratorTest, Generate30x44Test) {
   rows_ = 30;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -28325,7 +28325,7 @@ TEST_F(MazeGeneratorTest, Generate30x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x45Test) {
+TEST_F(GeneratorTest, Generate30x45Test) {
   rows_ = 30;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -28345,7 +28345,7 @@ TEST_F(MazeGeneratorTest, Generate30x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x46Test) {
+TEST_F(GeneratorTest, Generate30x46Test) {
   rows_ = 30;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -28365,7 +28365,7 @@ TEST_F(MazeGeneratorTest, Generate30x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x47Test) {
+TEST_F(GeneratorTest, Generate30x47Test) {
   rows_ = 30;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -28385,7 +28385,7 @@ TEST_F(MazeGeneratorTest, Generate30x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x48Test) {
+TEST_F(GeneratorTest, Generate30x48Test) {
   rows_ = 30;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -28405,7 +28405,7 @@ TEST_F(MazeGeneratorTest, Generate30x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x49Test) {
+TEST_F(GeneratorTest, Generate30x49Test) {
   rows_ = 30;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -28425,7 +28425,7 @@ TEST_F(MazeGeneratorTest, Generate30x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate30x50Test) {
+TEST_F(GeneratorTest, Generate30x50Test) {
   rows_ = 30;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -28445,7 +28445,7 @@ TEST_F(MazeGeneratorTest, Generate30x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x2Test) {
+TEST_F(GeneratorTest, Generate31x2Test) {
   rows_ = 31;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -28465,7 +28465,7 @@ TEST_F(MazeGeneratorTest, Generate31x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x3Test) {
+TEST_F(GeneratorTest, Generate31x3Test) {
   rows_ = 31;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -28485,7 +28485,7 @@ TEST_F(MazeGeneratorTest, Generate31x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x4Test) {
+TEST_F(GeneratorTest, Generate31x4Test) {
   rows_ = 31;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -28505,7 +28505,7 @@ TEST_F(MazeGeneratorTest, Generate31x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x5Test) {
+TEST_F(GeneratorTest, Generate31x5Test) {
   rows_ = 31;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -28525,7 +28525,7 @@ TEST_F(MazeGeneratorTest, Generate31x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x6Test) {
+TEST_F(GeneratorTest, Generate31x6Test) {
   rows_ = 31;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -28545,7 +28545,7 @@ TEST_F(MazeGeneratorTest, Generate31x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x7Test) {
+TEST_F(GeneratorTest, Generate31x7Test) {
   rows_ = 31;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -28565,7 +28565,7 @@ TEST_F(MazeGeneratorTest, Generate31x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x8Test) {
+TEST_F(GeneratorTest, Generate31x8Test) {
   rows_ = 31;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -28585,7 +28585,7 @@ TEST_F(MazeGeneratorTest, Generate31x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x9Test) {
+TEST_F(GeneratorTest, Generate31x9Test) {
   rows_ = 31;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -28605,7 +28605,7 @@ TEST_F(MazeGeneratorTest, Generate31x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x10Test) {
+TEST_F(GeneratorTest, Generate31x10Test) {
   rows_ = 31;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -28625,7 +28625,7 @@ TEST_F(MazeGeneratorTest, Generate31x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x11Test) {
+TEST_F(GeneratorTest, Generate31x11Test) {
   rows_ = 31;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -28645,7 +28645,7 @@ TEST_F(MazeGeneratorTest, Generate31x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x12Test) {
+TEST_F(GeneratorTest, Generate31x12Test) {
   rows_ = 31;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -28665,7 +28665,7 @@ TEST_F(MazeGeneratorTest, Generate31x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x13Test) {
+TEST_F(GeneratorTest, Generate31x13Test) {
   rows_ = 31;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -28685,7 +28685,7 @@ TEST_F(MazeGeneratorTest, Generate31x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x14Test) {
+TEST_F(GeneratorTest, Generate31x14Test) {
   rows_ = 31;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -28705,7 +28705,7 @@ TEST_F(MazeGeneratorTest, Generate31x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x15Test) {
+TEST_F(GeneratorTest, Generate31x15Test) {
   rows_ = 31;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -28725,7 +28725,7 @@ TEST_F(MazeGeneratorTest, Generate31x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x16Test) {
+TEST_F(GeneratorTest, Generate31x16Test) {
   rows_ = 31;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -28745,7 +28745,7 @@ TEST_F(MazeGeneratorTest, Generate31x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x17Test) {
+TEST_F(GeneratorTest, Generate31x17Test) {
   rows_ = 31;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -28765,7 +28765,7 @@ TEST_F(MazeGeneratorTest, Generate31x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x18Test) {
+TEST_F(GeneratorTest, Generate31x18Test) {
   rows_ = 31;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -28785,7 +28785,7 @@ TEST_F(MazeGeneratorTest, Generate31x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x19Test) {
+TEST_F(GeneratorTest, Generate31x19Test) {
   rows_ = 31;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -28805,7 +28805,7 @@ TEST_F(MazeGeneratorTest, Generate31x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x20Test) {
+TEST_F(GeneratorTest, Generate31x20Test) {
   rows_ = 31;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -28825,7 +28825,7 @@ TEST_F(MazeGeneratorTest, Generate31x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x21Test) {
+TEST_F(GeneratorTest, Generate31x21Test) {
   rows_ = 31;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -28845,7 +28845,7 @@ TEST_F(MazeGeneratorTest, Generate31x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x22Test) {
+TEST_F(GeneratorTest, Generate31x22Test) {
   rows_ = 31;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -28865,7 +28865,7 @@ TEST_F(MazeGeneratorTest, Generate31x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x23Test) {
+TEST_F(GeneratorTest, Generate31x23Test) {
   rows_ = 31;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -28885,7 +28885,7 @@ TEST_F(MazeGeneratorTest, Generate31x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x24Test) {
+TEST_F(GeneratorTest, Generate31x24Test) {
   rows_ = 31;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -28905,7 +28905,7 @@ TEST_F(MazeGeneratorTest, Generate31x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x25Test) {
+TEST_F(GeneratorTest, Generate31x25Test) {
   rows_ = 31;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -28925,7 +28925,7 @@ TEST_F(MazeGeneratorTest, Generate31x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x26Test) {
+TEST_F(GeneratorTest, Generate31x26Test) {
   rows_ = 31;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -28945,7 +28945,7 @@ TEST_F(MazeGeneratorTest, Generate31x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x27Test) {
+TEST_F(GeneratorTest, Generate31x27Test) {
   rows_ = 31;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -28965,7 +28965,7 @@ TEST_F(MazeGeneratorTest, Generate31x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x28Test) {
+TEST_F(GeneratorTest, Generate31x28Test) {
   rows_ = 31;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -28985,7 +28985,7 @@ TEST_F(MazeGeneratorTest, Generate31x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x29Test) {
+TEST_F(GeneratorTest, Generate31x29Test) {
   rows_ = 31;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -29005,7 +29005,7 @@ TEST_F(MazeGeneratorTest, Generate31x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x30Test) {
+TEST_F(GeneratorTest, Generate31x30Test) {
   rows_ = 31;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -29025,7 +29025,7 @@ TEST_F(MazeGeneratorTest, Generate31x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x31Test) {
+TEST_F(GeneratorTest, Generate31x31Test) {
   rows_ = 31;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -29045,7 +29045,7 @@ TEST_F(MazeGeneratorTest, Generate31x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x32Test) {
+TEST_F(GeneratorTest, Generate31x32Test) {
   rows_ = 31;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -29065,7 +29065,7 @@ TEST_F(MazeGeneratorTest, Generate31x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x33Test) {
+TEST_F(GeneratorTest, Generate31x33Test) {
   rows_ = 31;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -29085,7 +29085,7 @@ TEST_F(MazeGeneratorTest, Generate31x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x34Test) {
+TEST_F(GeneratorTest, Generate31x34Test) {
   rows_ = 31;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -29105,7 +29105,7 @@ TEST_F(MazeGeneratorTest, Generate31x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x35Test) {
+TEST_F(GeneratorTest, Generate31x35Test) {
   rows_ = 31;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -29125,7 +29125,7 @@ TEST_F(MazeGeneratorTest, Generate31x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x36Test) {
+TEST_F(GeneratorTest, Generate31x36Test) {
   rows_ = 31;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -29145,7 +29145,7 @@ TEST_F(MazeGeneratorTest, Generate31x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x37Test) {
+TEST_F(GeneratorTest, Generate31x37Test) {
   rows_ = 31;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -29165,7 +29165,7 @@ TEST_F(MazeGeneratorTest, Generate31x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x38Test) {
+TEST_F(GeneratorTest, Generate31x38Test) {
   rows_ = 31;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -29185,7 +29185,7 @@ TEST_F(MazeGeneratorTest, Generate31x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x39Test) {
+TEST_F(GeneratorTest, Generate31x39Test) {
   rows_ = 31;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -29205,7 +29205,7 @@ TEST_F(MazeGeneratorTest, Generate31x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x40Test) {
+TEST_F(GeneratorTest, Generate31x40Test) {
   rows_ = 31;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -29225,7 +29225,7 @@ TEST_F(MazeGeneratorTest, Generate31x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x41Test) {
+TEST_F(GeneratorTest, Generate31x41Test) {
   rows_ = 31;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -29245,7 +29245,7 @@ TEST_F(MazeGeneratorTest, Generate31x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x42Test) {
+TEST_F(GeneratorTest, Generate31x42Test) {
   rows_ = 31;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -29265,7 +29265,7 @@ TEST_F(MazeGeneratorTest, Generate31x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x43Test) {
+TEST_F(GeneratorTest, Generate31x43Test) {
   rows_ = 31;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -29285,7 +29285,7 @@ TEST_F(MazeGeneratorTest, Generate31x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x44Test) {
+TEST_F(GeneratorTest, Generate31x44Test) {
   rows_ = 31;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -29305,7 +29305,7 @@ TEST_F(MazeGeneratorTest, Generate31x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x45Test) {
+TEST_F(GeneratorTest, Generate31x45Test) {
   rows_ = 31;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -29325,7 +29325,7 @@ TEST_F(MazeGeneratorTest, Generate31x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x46Test) {
+TEST_F(GeneratorTest, Generate31x46Test) {
   rows_ = 31;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -29345,7 +29345,7 @@ TEST_F(MazeGeneratorTest, Generate31x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x47Test) {
+TEST_F(GeneratorTest, Generate31x47Test) {
   rows_ = 31;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -29365,7 +29365,7 @@ TEST_F(MazeGeneratorTest, Generate31x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x48Test) {
+TEST_F(GeneratorTest, Generate31x48Test) {
   rows_ = 31;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -29385,7 +29385,7 @@ TEST_F(MazeGeneratorTest, Generate31x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x49Test) {
+TEST_F(GeneratorTest, Generate31x49Test) {
   rows_ = 31;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -29405,7 +29405,7 @@ TEST_F(MazeGeneratorTest, Generate31x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate31x50Test) {
+TEST_F(GeneratorTest, Generate31x50Test) {
   rows_ = 31;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -29425,7 +29425,7 @@ TEST_F(MazeGeneratorTest, Generate31x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x2Test) {
+TEST_F(GeneratorTest, Generate32x2Test) {
   rows_ = 32;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -29445,7 +29445,7 @@ TEST_F(MazeGeneratorTest, Generate32x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x3Test) {
+TEST_F(GeneratorTest, Generate32x3Test) {
   rows_ = 32;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -29465,7 +29465,7 @@ TEST_F(MazeGeneratorTest, Generate32x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x4Test) {
+TEST_F(GeneratorTest, Generate32x4Test) {
   rows_ = 32;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -29485,7 +29485,7 @@ TEST_F(MazeGeneratorTest, Generate32x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x5Test) {
+TEST_F(GeneratorTest, Generate32x5Test) {
   rows_ = 32;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -29505,7 +29505,7 @@ TEST_F(MazeGeneratorTest, Generate32x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x6Test) {
+TEST_F(GeneratorTest, Generate32x6Test) {
   rows_ = 32;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -29525,7 +29525,7 @@ TEST_F(MazeGeneratorTest, Generate32x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x7Test) {
+TEST_F(GeneratorTest, Generate32x7Test) {
   rows_ = 32;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -29545,7 +29545,7 @@ TEST_F(MazeGeneratorTest, Generate32x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x8Test) {
+TEST_F(GeneratorTest, Generate32x8Test) {
   rows_ = 32;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -29565,7 +29565,7 @@ TEST_F(MazeGeneratorTest, Generate32x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x9Test) {
+TEST_F(GeneratorTest, Generate32x9Test) {
   rows_ = 32;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -29585,7 +29585,7 @@ TEST_F(MazeGeneratorTest, Generate32x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x10Test) {
+TEST_F(GeneratorTest, Generate32x10Test) {
   rows_ = 32;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -29605,7 +29605,7 @@ TEST_F(MazeGeneratorTest, Generate32x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x11Test) {
+TEST_F(GeneratorTest, Generate32x11Test) {
   rows_ = 32;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -29625,7 +29625,7 @@ TEST_F(MazeGeneratorTest, Generate32x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x12Test) {
+TEST_F(GeneratorTest, Generate32x12Test) {
   rows_ = 32;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -29645,7 +29645,7 @@ TEST_F(MazeGeneratorTest, Generate32x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x13Test) {
+TEST_F(GeneratorTest, Generate32x13Test) {
   rows_ = 32;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -29665,7 +29665,7 @@ TEST_F(MazeGeneratorTest, Generate32x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x14Test) {
+TEST_F(GeneratorTest, Generate32x14Test) {
   rows_ = 32;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -29685,7 +29685,7 @@ TEST_F(MazeGeneratorTest, Generate32x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x15Test) {
+TEST_F(GeneratorTest, Generate32x15Test) {
   rows_ = 32;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -29705,7 +29705,7 @@ TEST_F(MazeGeneratorTest, Generate32x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x16Test) {
+TEST_F(GeneratorTest, Generate32x16Test) {
   rows_ = 32;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -29725,7 +29725,7 @@ TEST_F(MazeGeneratorTest, Generate32x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x17Test) {
+TEST_F(GeneratorTest, Generate32x17Test) {
   rows_ = 32;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -29745,7 +29745,7 @@ TEST_F(MazeGeneratorTest, Generate32x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x18Test) {
+TEST_F(GeneratorTest, Generate32x18Test) {
   rows_ = 32;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -29765,7 +29765,7 @@ TEST_F(MazeGeneratorTest, Generate32x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x19Test) {
+TEST_F(GeneratorTest, Generate32x19Test) {
   rows_ = 32;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -29785,7 +29785,7 @@ TEST_F(MazeGeneratorTest, Generate32x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x20Test) {
+TEST_F(GeneratorTest, Generate32x20Test) {
   rows_ = 32;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -29805,7 +29805,7 @@ TEST_F(MazeGeneratorTest, Generate32x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x21Test) {
+TEST_F(GeneratorTest, Generate32x21Test) {
   rows_ = 32;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -29825,7 +29825,7 @@ TEST_F(MazeGeneratorTest, Generate32x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x22Test) {
+TEST_F(GeneratorTest, Generate32x22Test) {
   rows_ = 32;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -29845,7 +29845,7 @@ TEST_F(MazeGeneratorTest, Generate32x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x23Test) {
+TEST_F(GeneratorTest, Generate32x23Test) {
   rows_ = 32;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -29865,7 +29865,7 @@ TEST_F(MazeGeneratorTest, Generate32x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x24Test) {
+TEST_F(GeneratorTest, Generate32x24Test) {
   rows_ = 32;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -29885,7 +29885,7 @@ TEST_F(MazeGeneratorTest, Generate32x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x25Test) {
+TEST_F(GeneratorTest, Generate32x25Test) {
   rows_ = 32;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -29905,7 +29905,7 @@ TEST_F(MazeGeneratorTest, Generate32x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x26Test) {
+TEST_F(GeneratorTest, Generate32x26Test) {
   rows_ = 32;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -29925,7 +29925,7 @@ TEST_F(MazeGeneratorTest, Generate32x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x27Test) {
+TEST_F(GeneratorTest, Generate32x27Test) {
   rows_ = 32;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -29945,7 +29945,7 @@ TEST_F(MazeGeneratorTest, Generate32x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x28Test) {
+TEST_F(GeneratorTest, Generate32x28Test) {
   rows_ = 32;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -29965,7 +29965,7 @@ TEST_F(MazeGeneratorTest, Generate32x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x29Test) {
+TEST_F(GeneratorTest, Generate32x29Test) {
   rows_ = 32;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -29985,7 +29985,7 @@ TEST_F(MazeGeneratorTest, Generate32x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x30Test) {
+TEST_F(GeneratorTest, Generate32x30Test) {
   rows_ = 32;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -30005,7 +30005,7 @@ TEST_F(MazeGeneratorTest, Generate32x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x31Test) {
+TEST_F(GeneratorTest, Generate32x31Test) {
   rows_ = 32;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -30025,7 +30025,7 @@ TEST_F(MazeGeneratorTest, Generate32x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x32Test) {
+TEST_F(GeneratorTest, Generate32x32Test) {
   rows_ = 32;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -30045,7 +30045,7 @@ TEST_F(MazeGeneratorTest, Generate32x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x33Test) {
+TEST_F(GeneratorTest, Generate32x33Test) {
   rows_ = 32;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -30065,7 +30065,7 @@ TEST_F(MazeGeneratorTest, Generate32x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x34Test) {
+TEST_F(GeneratorTest, Generate32x34Test) {
   rows_ = 32;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -30085,7 +30085,7 @@ TEST_F(MazeGeneratorTest, Generate32x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x35Test) {
+TEST_F(GeneratorTest, Generate32x35Test) {
   rows_ = 32;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -30105,7 +30105,7 @@ TEST_F(MazeGeneratorTest, Generate32x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x36Test) {
+TEST_F(GeneratorTest, Generate32x36Test) {
   rows_ = 32;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -30125,7 +30125,7 @@ TEST_F(MazeGeneratorTest, Generate32x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x37Test) {
+TEST_F(GeneratorTest, Generate32x37Test) {
   rows_ = 32;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -30145,7 +30145,7 @@ TEST_F(MazeGeneratorTest, Generate32x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x38Test) {
+TEST_F(GeneratorTest, Generate32x38Test) {
   rows_ = 32;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -30165,7 +30165,7 @@ TEST_F(MazeGeneratorTest, Generate32x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x39Test) {
+TEST_F(GeneratorTest, Generate32x39Test) {
   rows_ = 32;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -30185,7 +30185,7 @@ TEST_F(MazeGeneratorTest, Generate32x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x40Test) {
+TEST_F(GeneratorTest, Generate32x40Test) {
   rows_ = 32;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -30205,7 +30205,7 @@ TEST_F(MazeGeneratorTest, Generate32x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x41Test) {
+TEST_F(GeneratorTest, Generate32x41Test) {
   rows_ = 32;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -30225,7 +30225,7 @@ TEST_F(MazeGeneratorTest, Generate32x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x42Test) {
+TEST_F(GeneratorTest, Generate32x42Test) {
   rows_ = 32;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -30245,7 +30245,7 @@ TEST_F(MazeGeneratorTest, Generate32x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x43Test) {
+TEST_F(GeneratorTest, Generate32x43Test) {
   rows_ = 32;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -30265,7 +30265,7 @@ TEST_F(MazeGeneratorTest, Generate32x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x44Test) {
+TEST_F(GeneratorTest, Generate32x44Test) {
   rows_ = 32;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -30285,7 +30285,7 @@ TEST_F(MazeGeneratorTest, Generate32x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x45Test) {
+TEST_F(GeneratorTest, Generate32x45Test) {
   rows_ = 32;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -30305,7 +30305,7 @@ TEST_F(MazeGeneratorTest, Generate32x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x46Test) {
+TEST_F(GeneratorTest, Generate32x46Test) {
   rows_ = 32;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -30325,7 +30325,7 @@ TEST_F(MazeGeneratorTest, Generate32x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x47Test) {
+TEST_F(GeneratorTest, Generate32x47Test) {
   rows_ = 32;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -30345,7 +30345,7 @@ TEST_F(MazeGeneratorTest, Generate32x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x48Test) {
+TEST_F(GeneratorTest, Generate32x48Test) {
   rows_ = 32;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -30365,7 +30365,7 @@ TEST_F(MazeGeneratorTest, Generate32x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x49Test) {
+TEST_F(GeneratorTest, Generate32x49Test) {
   rows_ = 32;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -30385,7 +30385,7 @@ TEST_F(MazeGeneratorTest, Generate32x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate32x50Test) {
+TEST_F(GeneratorTest, Generate32x50Test) {
   rows_ = 32;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -30405,7 +30405,7 @@ TEST_F(MazeGeneratorTest, Generate32x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x2Test) {
+TEST_F(GeneratorTest, Generate33x2Test) {
   rows_ = 33;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -30425,7 +30425,7 @@ TEST_F(MazeGeneratorTest, Generate33x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x3Test) {
+TEST_F(GeneratorTest, Generate33x3Test) {
   rows_ = 33;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -30445,7 +30445,7 @@ TEST_F(MazeGeneratorTest, Generate33x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x4Test) {
+TEST_F(GeneratorTest, Generate33x4Test) {
   rows_ = 33;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -30465,7 +30465,7 @@ TEST_F(MazeGeneratorTest, Generate33x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x5Test) {
+TEST_F(GeneratorTest, Generate33x5Test) {
   rows_ = 33;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -30485,7 +30485,7 @@ TEST_F(MazeGeneratorTest, Generate33x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x6Test) {
+TEST_F(GeneratorTest, Generate33x6Test) {
   rows_ = 33;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -30505,7 +30505,7 @@ TEST_F(MazeGeneratorTest, Generate33x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x7Test) {
+TEST_F(GeneratorTest, Generate33x7Test) {
   rows_ = 33;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -30525,7 +30525,7 @@ TEST_F(MazeGeneratorTest, Generate33x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x8Test) {
+TEST_F(GeneratorTest, Generate33x8Test) {
   rows_ = 33;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -30545,7 +30545,7 @@ TEST_F(MazeGeneratorTest, Generate33x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x9Test) {
+TEST_F(GeneratorTest, Generate33x9Test) {
   rows_ = 33;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -30565,7 +30565,7 @@ TEST_F(MazeGeneratorTest, Generate33x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x10Test) {
+TEST_F(GeneratorTest, Generate33x10Test) {
   rows_ = 33;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -30585,7 +30585,7 @@ TEST_F(MazeGeneratorTest, Generate33x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x11Test) {
+TEST_F(GeneratorTest, Generate33x11Test) {
   rows_ = 33;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -30605,7 +30605,7 @@ TEST_F(MazeGeneratorTest, Generate33x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x12Test) {
+TEST_F(GeneratorTest, Generate33x12Test) {
   rows_ = 33;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -30625,7 +30625,7 @@ TEST_F(MazeGeneratorTest, Generate33x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x13Test) {
+TEST_F(GeneratorTest, Generate33x13Test) {
   rows_ = 33;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -30645,7 +30645,7 @@ TEST_F(MazeGeneratorTest, Generate33x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x14Test) {
+TEST_F(GeneratorTest, Generate33x14Test) {
   rows_ = 33;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -30665,7 +30665,7 @@ TEST_F(MazeGeneratorTest, Generate33x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x15Test) {
+TEST_F(GeneratorTest, Generate33x15Test) {
   rows_ = 33;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -30685,7 +30685,7 @@ TEST_F(MazeGeneratorTest, Generate33x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x16Test) {
+TEST_F(GeneratorTest, Generate33x16Test) {
   rows_ = 33;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -30705,7 +30705,7 @@ TEST_F(MazeGeneratorTest, Generate33x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x17Test) {
+TEST_F(GeneratorTest, Generate33x17Test) {
   rows_ = 33;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -30725,7 +30725,7 @@ TEST_F(MazeGeneratorTest, Generate33x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x18Test) {
+TEST_F(GeneratorTest, Generate33x18Test) {
   rows_ = 33;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -30745,7 +30745,7 @@ TEST_F(MazeGeneratorTest, Generate33x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x19Test) {
+TEST_F(GeneratorTest, Generate33x19Test) {
   rows_ = 33;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -30765,7 +30765,7 @@ TEST_F(MazeGeneratorTest, Generate33x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x20Test) {
+TEST_F(GeneratorTest, Generate33x20Test) {
   rows_ = 33;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -30785,7 +30785,7 @@ TEST_F(MazeGeneratorTest, Generate33x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x21Test) {
+TEST_F(GeneratorTest, Generate33x21Test) {
   rows_ = 33;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -30805,7 +30805,7 @@ TEST_F(MazeGeneratorTest, Generate33x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x22Test) {
+TEST_F(GeneratorTest, Generate33x22Test) {
   rows_ = 33;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -30825,7 +30825,7 @@ TEST_F(MazeGeneratorTest, Generate33x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x23Test) {
+TEST_F(GeneratorTest, Generate33x23Test) {
   rows_ = 33;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -30845,7 +30845,7 @@ TEST_F(MazeGeneratorTest, Generate33x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x24Test) {
+TEST_F(GeneratorTest, Generate33x24Test) {
   rows_ = 33;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -30865,7 +30865,7 @@ TEST_F(MazeGeneratorTest, Generate33x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x25Test) {
+TEST_F(GeneratorTest, Generate33x25Test) {
   rows_ = 33;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -30885,7 +30885,7 @@ TEST_F(MazeGeneratorTest, Generate33x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x26Test) {
+TEST_F(GeneratorTest, Generate33x26Test) {
   rows_ = 33;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -30905,7 +30905,7 @@ TEST_F(MazeGeneratorTest, Generate33x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x27Test) {
+TEST_F(GeneratorTest, Generate33x27Test) {
   rows_ = 33;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -30925,7 +30925,7 @@ TEST_F(MazeGeneratorTest, Generate33x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x28Test) {
+TEST_F(GeneratorTest, Generate33x28Test) {
   rows_ = 33;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -30945,7 +30945,7 @@ TEST_F(MazeGeneratorTest, Generate33x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x29Test) {
+TEST_F(GeneratorTest, Generate33x29Test) {
   rows_ = 33;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -30965,7 +30965,7 @@ TEST_F(MazeGeneratorTest, Generate33x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x30Test) {
+TEST_F(GeneratorTest, Generate33x30Test) {
   rows_ = 33;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -30985,7 +30985,7 @@ TEST_F(MazeGeneratorTest, Generate33x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x31Test) {
+TEST_F(GeneratorTest, Generate33x31Test) {
   rows_ = 33;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -31005,7 +31005,7 @@ TEST_F(MazeGeneratorTest, Generate33x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x32Test) {
+TEST_F(GeneratorTest, Generate33x32Test) {
   rows_ = 33;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -31025,7 +31025,7 @@ TEST_F(MazeGeneratorTest, Generate33x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x33Test) {
+TEST_F(GeneratorTest, Generate33x33Test) {
   rows_ = 33;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -31045,7 +31045,7 @@ TEST_F(MazeGeneratorTest, Generate33x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x34Test) {
+TEST_F(GeneratorTest, Generate33x34Test) {
   rows_ = 33;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -31065,7 +31065,7 @@ TEST_F(MazeGeneratorTest, Generate33x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x35Test) {
+TEST_F(GeneratorTest, Generate33x35Test) {
   rows_ = 33;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -31085,7 +31085,7 @@ TEST_F(MazeGeneratorTest, Generate33x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x36Test) {
+TEST_F(GeneratorTest, Generate33x36Test) {
   rows_ = 33;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -31105,7 +31105,7 @@ TEST_F(MazeGeneratorTest, Generate33x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x37Test) {
+TEST_F(GeneratorTest, Generate33x37Test) {
   rows_ = 33;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -31125,7 +31125,7 @@ TEST_F(MazeGeneratorTest, Generate33x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x38Test) {
+TEST_F(GeneratorTest, Generate33x38Test) {
   rows_ = 33;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -31145,7 +31145,7 @@ TEST_F(MazeGeneratorTest, Generate33x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x39Test) {
+TEST_F(GeneratorTest, Generate33x39Test) {
   rows_ = 33;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -31165,7 +31165,7 @@ TEST_F(MazeGeneratorTest, Generate33x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x40Test) {
+TEST_F(GeneratorTest, Generate33x40Test) {
   rows_ = 33;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -31185,7 +31185,7 @@ TEST_F(MazeGeneratorTest, Generate33x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x41Test) {
+TEST_F(GeneratorTest, Generate33x41Test) {
   rows_ = 33;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -31205,7 +31205,7 @@ TEST_F(MazeGeneratorTest, Generate33x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x42Test) {
+TEST_F(GeneratorTest, Generate33x42Test) {
   rows_ = 33;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -31225,7 +31225,7 @@ TEST_F(MazeGeneratorTest, Generate33x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x43Test) {
+TEST_F(GeneratorTest, Generate33x43Test) {
   rows_ = 33;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -31245,7 +31245,7 @@ TEST_F(MazeGeneratorTest, Generate33x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x44Test) {
+TEST_F(GeneratorTest, Generate33x44Test) {
   rows_ = 33;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -31265,7 +31265,7 @@ TEST_F(MazeGeneratorTest, Generate33x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x45Test) {
+TEST_F(GeneratorTest, Generate33x45Test) {
   rows_ = 33;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -31285,7 +31285,7 @@ TEST_F(MazeGeneratorTest, Generate33x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x46Test) {
+TEST_F(GeneratorTest, Generate33x46Test) {
   rows_ = 33;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -31305,7 +31305,7 @@ TEST_F(MazeGeneratorTest, Generate33x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x47Test) {
+TEST_F(GeneratorTest, Generate33x47Test) {
   rows_ = 33;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -31325,7 +31325,7 @@ TEST_F(MazeGeneratorTest, Generate33x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x48Test) {
+TEST_F(GeneratorTest, Generate33x48Test) {
   rows_ = 33;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -31345,7 +31345,7 @@ TEST_F(MazeGeneratorTest, Generate33x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x49Test) {
+TEST_F(GeneratorTest, Generate33x49Test) {
   rows_ = 33;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -31365,7 +31365,7 @@ TEST_F(MazeGeneratorTest, Generate33x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate33x50Test) {
+TEST_F(GeneratorTest, Generate33x50Test) {
   rows_ = 33;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -31385,7 +31385,7 @@ TEST_F(MazeGeneratorTest, Generate33x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x2Test) {
+TEST_F(GeneratorTest, Generate34x2Test) {
   rows_ = 34;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -31405,7 +31405,7 @@ TEST_F(MazeGeneratorTest, Generate34x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x3Test) {
+TEST_F(GeneratorTest, Generate34x3Test) {
   rows_ = 34;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -31425,7 +31425,7 @@ TEST_F(MazeGeneratorTest, Generate34x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x4Test) {
+TEST_F(GeneratorTest, Generate34x4Test) {
   rows_ = 34;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -31445,7 +31445,7 @@ TEST_F(MazeGeneratorTest, Generate34x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x5Test) {
+TEST_F(GeneratorTest, Generate34x5Test) {
   rows_ = 34;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -31465,7 +31465,7 @@ TEST_F(MazeGeneratorTest, Generate34x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x6Test) {
+TEST_F(GeneratorTest, Generate34x6Test) {
   rows_ = 34;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -31485,7 +31485,7 @@ TEST_F(MazeGeneratorTest, Generate34x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x7Test) {
+TEST_F(GeneratorTest, Generate34x7Test) {
   rows_ = 34;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -31505,7 +31505,7 @@ TEST_F(MazeGeneratorTest, Generate34x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x8Test) {
+TEST_F(GeneratorTest, Generate34x8Test) {
   rows_ = 34;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -31525,7 +31525,7 @@ TEST_F(MazeGeneratorTest, Generate34x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x9Test) {
+TEST_F(GeneratorTest, Generate34x9Test) {
   rows_ = 34;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -31545,7 +31545,7 @@ TEST_F(MazeGeneratorTest, Generate34x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x10Test) {
+TEST_F(GeneratorTest, Generate34x10Test) {
   rows_ = 34;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -31565,7 +31565,7 @@ TEST_F(MazeGeneratorTest, Generate34x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x11Test) {
+TEST_F(GeneratorTest, Generate34x11Test) {
   rows_ = 34;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -31585,7 +31585,7 @@ TEST_F(MazeGeneratorTest, Generate34x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x12Test) {
+TEST_F(GeneratorTest, Generate34x12Test) {
   rows_ = 34;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -31605,7 +31605,7 @@ TEST_F(MazeGeneratorTest, Generate34x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x13Test) {
+TEST_F(GeneratorTest, Generate34x13Test) {
   rows_ = 34;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -31625,7 +31625,7 @@ TEST_F(MazeGeneratorTest, Generate34x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x14Test) {
+TEST_F(GeneratorTest, Generate34x14Test) {
   rows_ = 34;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -31645,7 +31645,7 @@ TEST_F(MazeGeneratorTest, Generate34x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x15Test) {
+TEST_F(GeneratorTest, Generate34x15Test) {
   rows_ = 34;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -31665,7 +31665,7 @@ TEST_F(MazeGeneratorTest, Generate34x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x16Test) {
+TEST_F(GeneratorTest, Generate34x16Test) {
   rows_ = 34;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -31685,7 +31685,7 @@ TEST_F(MazeGeneratorTest, Generate34x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x17Test) {
+TEST_F(GeneratorTest, Generate34x17Test) {
   rows_ = 34;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -31705,7 +31705,7 @@ TEST_F(MazeGeneratorTest, Generate34x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x18Test) {
+TEST_F(GeneratorTest, Generate34x18Test) {
   rows_ = 34;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -31725,7 +31725,7 @@ TEST_F(MazeGeneratorTest, Generate34x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x19Test) {
+TEST_F(GeneratorTest, Generate34x19Test) {
   rows_ = 34;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -31745,7 +31745,7 @@ TEST_F(MazeGeneratorTest, Generate34x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x20Test) {
+TEST_F(GeneratorTest, Generate34x20Test) {
   rows_ = 34;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -31765,7 +31765,7 @@ TEST_F(MazeGeneratorTest, Generate34x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x21Test) {
+TEST_F(GeneratorTest, Generate34x21Test) {
   rows_ = 34;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -31785,7 +31785,7 @@ TEST_F(MazeGeneratorTest, Generate34x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x22Test) {
+TEST_F(GeneratorTest, Generate34x22Test) {
   rows_ = 34;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -31805,7 +31805,7 @@ TEST_F(MazeGeneratorTest, Generate34x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x23Test) {
+TEST_F(GeneratorTest, Generate34x23Test) {
   rows_ = 34;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -31825,7 +31825,7 @@ TEST_F(MazeGeneratorTest, Generate34x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x24Test) {
+TEST_F(GeneratorTest, Generate34x24Test) {
   rows_ = 34;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -31845,7 +31845,7 @@ TEST_F(MazeGeneratorTest, Generate34x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x25Test) {
+TEST_F(GeneratorTest, Generate34x25Test) {
   rows_ = 34;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -31865,7 +31865,7 @@ TEST_F(MazeGeneratorTest, Generate34x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x26Test) {
+TEST_F(GeneratorTest, Generate34x26Test) {
   rows_ = 34;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -31885,7 +31885,7 @@ TEST_F(MazeGeneratorTest, Generate34x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x27Test) {
+TEST_F(GeneratorTest, Generate34x27Test) {
   rows_ = 34;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -31905,7 +31905,7 @@ TEST_F(MazeGeneratorTest, Generate34x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x28Test) {
+TEST_F(GeneratorTest, Generate34x28Test) {
   rows_ = 34;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -31925,7 +31925,7 @@ TEST_F(MazeGeneratorTest, Generate34x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x29Test) {
+TEST_F(GeneratorTest, Generate34x29Test) {
   rows_ = 34;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -31945,7 +31945,7 @@ TEST_F(MazeGeneratorTest, Generate34x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x30Test) {
+TEST_F(GeneratorTest, Generate34x30Test) {
   rows_ = 34;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -31965,7 +31965,7 @@ TEST_F(MazeGeneratorTest, Generate34x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x31Test) {
+TEST_F(GeneratorTest, Generate34x31Test) {
   rows_ = 34;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -31985,7 +31985,7 @@ TEST_F(MazeGeneratorTest, Generate34x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x32Test) {
+TEST_F(GeneratorTest, Generate34x32Test) {
   rows_ = 34;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -32005,7 +32005,7 @@ TEST_F(MazeGeneratorTest, Generate34x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x33Test) {
+TEST_F(GeneratorTest, Generate34x33Test) {
   rows_ = 34;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -32025,7 +32025,7 @@ TEST_F(MazeGeneratorTest, Generate34x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x34Test) {
+TEST_F(GeneratorTest, Generate34x34Test) {
   rows_ = 34;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -32045,7 +32045,7 @@ TEST_F(MazeGeneratorTest, Generate34x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x35Test) {
+TEST_F(GeneratorTest, Generate34x35Test) {
   rows_ = 34;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -32065,7 +32065,7 @@ TEST_F(MazeGeneratorTest, Generate34x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x36Test) {
+TEST_F(GeneratorTest, Generate34x36Test) {
   rows_ = 34;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -32085,7 +32085,7 @@ TEST_F(MazeGeneratorTest, Generate34x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x37Test) {
+TEST_F(GeneratorTest, Generate34x37Test) {
   rows_ = 34;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -32105,7 +32105,7 @@ TEST_F(MazeGeneratorTest, Generate34x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x38Test) {
+TEST_F(GeneratorTest, Generate34x38Test) {
   rows_ = 34;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -32125,7 +32125,7 @@ TEST_F(MazeGeneratorTest, Generate34x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x39Test) {
+TEST_F(GeneratorTest, Generate34x39Test) {
   rows_ = 34;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -32145,7 +32145,7 @@ TEST_F(MazeGeneratorTest, Generate34x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x40Test) {
+TEST_F(GeneratorTest, Generate34x40Test) {
   rows_ = 34;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -32165,7 +32165,7 @@ TEST_F(MazeGeneratorTest, Generate34x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x41Test) {
+TEST_F(GeneratorTest, Generate34x41Test) {
   rows_ = 34;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -32185,7 +32185,7 @@ TEST_F(MazeGeneratorTest, Generate34x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x42Test) {
+TEST_F(GeneratorTest, Generate34x42Test) {
   rows_ = 34;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -32205,7 +32205,7 @@ TEST_F(MazeGeneratorTest, Generate34x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x43Test) {
+TEST_F(GeneratorTest, Generate34x43Test) {
   rows_ = 34;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -32225,7 +32225,7 @@ TEST_F(MazeGeneratorTest, Generate34x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x44Test) {
+TEST_F(GeneratorTest, Generate34x44Test) {
   rows_ = 34;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -32245,7 +32245,7 @@ TEST_F(MazeGeneratorTest, Generate34x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x45Test) {
+TEST_F(GeneratorTest, Generate34x45Test) {
   rows_ = 34;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -32265,7 +32265,7 @@ TEST_F(MazeGeneratorTest, Generate34x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x46Test) {
+TEST_F(GeneratorTest, Generate34x46Test) {
   rows_ = 34;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -32285,7 +32285,7 @@ TEST_F(MazeGeneratorTest, Generate34x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x47Test) {
+TEST_F(GeneratorTest, Generate34x47Test) {
   rows_ = 34;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -32305,7 +32305,7 @@ TEST_F(MazeGeneratorTest, Generate34x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x48Test) {
+TEST_F(GeneratorTest, Generate34x48Test) {
   rows_ = 34;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -32325,7 +32325,7 @@ TEST_F(MazeGeneratorTest, Generate34x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x49Test) {
+TEST_F(GeneratorTest, Generate34x49Test) {
   rows_ = 34;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -32345,7 +32345,7 @@ TEST_F(MazeGeneratorTest, Generate34x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate34x50Test) {
+TEST_F(GeneratorTest, Generate34x50Test) {
   rows_ = 34;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -32365,7 +32365,7 @@ TEST_F(MazeGeneratorTest, Generate34x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x2Test) {
+TEST_F(GeneratorTest, Generate35x2Test) {
   rows_ = 35;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -32385,7 +32385,7 @@ TEST_F(MazeGeneratorTest, Generate35x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x3Test) {
+TEST_F(GeneratorTest, Generate35x3Test) {
   rows_ = 35;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -32405,7 +32405,7 @@ TEST_F(MazeGeneratorTest, Generate35x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x4Test) {
+TEST_F(GeneratorTest, Generate35x4Test) {
   rows_ = 35;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -32425,7 +32425,7 @@ TEST_F(MazeGeneratorTest, Generate35x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x5Test) {
+TEST_F(GeneratorTest, Generate35x5Test) {
   rows_ = 35;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -32445,7 +32445,7 @@ TEST_F(MazeGeneratorTest, Generate35x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x6Test) {
+TEST_F(GeneratorTest, Generate35x6Test) {
   rows_ = 35;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -32465,7 +32465,7 @@ TEST_F(MazeGeneratorTest, Generate35x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x7Test) {
+TEST_F(GeneratorTest, Generate35x7Test) {
   rows_ = 35;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -32485,7 +32485,7 @@ TEST_F(MazeGeneratorTest, Generate35x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x8Test) {
+TEST_F(GeneratorTest, Generate35x8Test) {
   rows_ = 35;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -32505,7 +32505,7 @@ TEST_F(MazeGeneratorTest, Generate35x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x9Test) {
+TEST_F(GeneratorTest, Generate35x9Test) {
   rows_ = 35;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -32525,7 +32525,7 @@ TEST_F(MazeGeneratorTest, Generate35x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x10Test) {
+TEST_F(GeneratorTest, Generate35x10Test) {
   rows_ = 35;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -32545,7 +32545,7 @@ TEST_F(MazeGeneratorTest, Generate35x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x11Test) {
+TEST_F(GeneratorTest, Generate35x11Test) {
   rows_ = 35;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -32565,7 +32565,7 @@ TEST_F(MazeGeneratorTest, Generate35x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x12Test) {
+TEST_F(GeneratorTest, Generate35x12Test) {
   rows_ = 35;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -32585,7 +32585,7 @@ TEST_F(MazeGeneratorTest, Generate35x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x13Test) {
+TEST_F(GeneratorTest, Generate35x13Test) {
   rows_ = 35;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -32605,7 +32605,7 @@ TEST_F(MazeGeneratorTest, Generate35x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x14Test) {
+TEST_F(GeneratorTest, Generate35x14Test) {
   rows_ = 35;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -32625,7 +32625,7 @@ TEST_F(MazeGeneratorTest, Generate35x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x15Test) {
+TEST_F(GeneratorTest, Generate35x15Test) {
   rows_ = 35;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -32645,7 +32645,7 @@ TEST_F(MazeGeneratorTest, Generate35x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x16Test) {
+TEST_F(GeneratorTest, Generate35x16Test) {
   rows_ = 35;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -32665,7 +32665,7 @@ TEST_F(MazeGeneratorTest, Generate35x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x17Test) {
+TEST_F(GeneratorTest, Generate35x17Test) {
   rows_ = 35;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -32685,7 +32685,7 @@ TEST_F(MazeGeneratorTest, Generate35x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x18Test) {
+TEST_F(GeneratorTest, Generate35x18Test) {
   rows_ = 35;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -32705,7 +32705,7 @@ TEST_F(MazeGeneratorTest, Generate35x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x19Test) {
+TEST_F(GeneratorTest, Generate35x19Test) {
   rows_ = 35;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -32725,7 +32725,7 @@ TEST_F(MazeGeneratorTest, Generate35x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x20Test) {
+TEST_F(GeneratorTest, Generate35x20Test) {
   rows_ = 35;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -32745,7 +32745,7 @@ TEST_F(MazeGeneratorTest, Generate35x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x21Test) {
+TEST_F(GeneratorTest, Generate35x21Test) {
   rows_ = 35;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -32765,7 +32765,7 @@ TEST_F(MazeGeneratorTest, Generate35x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x22Test) {
+TEST_F(GeneratorTest, Generate35x22Test) {
   rows_ = 35;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -32785,7 +32785,7 @@ TEST_F(MazeGeneratorTest, Generate35x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x23Test) {
+TEST_F(GeneratorTest, Generate35x23Test) {
   rows_ = 35;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -32805,7 +32805,7 @@ TEST_F(MazeGeneratorTest, Generate35x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x24Test) {
+TEST_F(GeneratorTest, Generate35x24Test) {
   rows_ = 35;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -32825,7 +32825,7 @@ TEST_F(MazeGeneratorTest, Generate35x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x25Test) {
+TEST_F(GeneratorTest, Generate35x25Test) {
   rows_ = 35;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -32845,7 +32845,7 @@ TEST_F(MazeGeneratorTest, Generate35x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x26Test) {
+TEST_F(GeneratorTest, Generate35x26Test) {
   rows_ = 35;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -32865,7 +32865,7 @@ TEST_F(MazeGeneratorTest, Generate35x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x27Test) {
+TEST_F(GeneratorTest, Generate35x27Test) {
   rows_ = 35;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -32885,7 +32885,7 @@ TEST_F(MazeGeneratorTest, Generate35x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x28Test) {
+TEST_F(GeneratorTest, Generate35x28Test) {
   rows_ = 35;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -32905,7 +32905,7 @@ TEST_F(MazeGeneratorTest, Generate35x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x29Test) {
+TEST_F(GeneratorTest, Generate35x29Test) {
   rows_ = 35;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -32925,7 +32925,7 @@ TEST_F(MazeGeneratorTest, Generate35x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x30Test) {
+TEST_F(GeneratorTest, Generate35x30Test) {
   rows_ = 35;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -32945,7 +32945,7 @@ TEST_F(MazeGeneratorTest, Generate35x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x31Test) {
+TEST_F(GeneratorTest, Generate35x31Test) {
   rows_ = 35;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -32965,7 +32965,7 @@ TEST_F(MazeGeneratorTest, Generate35x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x32Test) {
+TEST_F(GeneratorTest, Generate35x32Test) {
   rows_ = 35;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -32985,7 +32985,7 @@ TEST_F(MazeGeneratorTest, Generate35x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x33Test) {
+TEST_F(GeneratorTest, Generate35x33Test) {
   rows_ = 35;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -33005,7 +33005,7 @@ TEST_F(MazeGeneratorTest, Generate35x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x34Test) {
+TEST_F(GeneratorTest, Generate35x34Test) {
   rows_ = 35;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -33025,7 +33025,7 @@ TEST_F(MazeGeneratorTest, Generate35x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x35Test) {
+TEST_F(GeneratorTest, Generate35x35Test) {
   rows_ = 35;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -33045,7 +33045,7 @@ TEST_F(MazeGeneratorTest, Generate35x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x36Test) {
+TEST_F(GeneratorTest, Generate35x36Test) {
   rows_ = 35;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -33065,7 +33065,7 @@ TEST_F(MazeGeneratorTest, Generate35x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x37Test) {
+TEST_F(GeneratorTest, Generate35x37Test) {
   rows_ = 35;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -33085,7 +33085,7 @@ TEST_F(MazeGeneratorTest, Generate35x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x38Test) {
+TEST_F(GeneratorTest, Generate35x38Test) {
   rows_ = 35;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -33105,7 +33105,7 @@ TEST_F(MazeGeneratorTest, Generate35x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x39Test) {
+TEST_F(GeneratorTest, Generate35x39Test) {
   rows_ = 35;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -33125,7 +33125,7 @@ TEST_F(MazeGeneratorTest, Generate35x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x40Test) {
+TEST_F(GeneratorTest, Generate35x40Test) {
   rows_ = 35;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -33145,7 +33145,7 @@ TEST_F(MazeGeneratorTest, Generate35x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x41Test) {
+TEST_F(GeneratorTest, Generate35x41Test) {
   rows_ = 35;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -33165,7 +33165,7 @@ TEST_F(MazeGeneratorTest, Generate35x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x42Test) {
+TEST_F(GeneratorTest, Generate35x42Test) {
   rows_ = 35;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -33185,7 +33185,7 @@ TEST_F(MazeGeneratorTest, Generate35x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x43Test) {
+TEST_F(GeneratorTest, Generate35x43Test) {
   rows_ = 35;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -33205,7 +33205,7 @@ TEST_F(MazeGeneratorTest, Generate35x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x44Test) {
+TEST_F(GeneratorTest, Generate35x44Test) {
   rows_ = 35;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -33225,7 +33225,7 @@ TEST_F(MazeGeneratorTest, Generate35x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x45Test) {
+TEST_F(GeneratorTest, Generate35x45Test) {
   rows_ = 35;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -33245,7 +33245,7 @@ TEST_F(MazeGeneratorTest, Generate35x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x46Test) {
+TEST_F(GeneratorTest, Generate35x46Test) {
   rows_ = 35;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -33265,7 +33265,7 @@ TEST_F(MazeGeneratorTest, Generate35x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x47Test) {
+TEST_F(GeneratorTest, Generate35x47Test) {
   rows_ = 35;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -33285,7 +33285,7 @@ TEST_F(MazeGeneratorTest, Generate35x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x48Test) {
+TEST_F(GeneratorTest, Generate35x48Test) {
   rows_ = 35;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -33305,7 +33305,7 @@ TEST_F(MazeGeneratorTest, Generate35x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x49Test) {
+TEST_F(GeneratorTest, Generate35x49Test) {
   rows_ = 35;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -33325,7 +33325,7 @@ TEST_F(MazeGeneratorTest, Generate35x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate35x50Test) {
+TEST_F(GeneratorTest, Generate35x50Test) {
   rows_ = 35;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -33345,7 +33345,7 @@ TEST_F(MazeGeneratorTest, Generate35x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x2Test) {
+TEST_F(GeneratorTest, Generate36x2Test) {
   rows_ = 36;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -33365,7 +33365,7 @@ TEST_F(MazeGeneratorTest, Generate36x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x3Test) {
+TEST_F(GeneratorTest, Generate36x3Test) {
   rows_ = 36;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -33385,7 +33385,7 @@ TEST_F(MazeGeneratorTest, Generate36x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x4Test) {
+TEST_F(GeneratorTest, Generate36x4Test) {
   rows_ = 36;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -33405,7 +33405,7 @@ TEST_F(MazeGeneratorTest, Generate36x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x5Test) {
+TEST_F(GeneratorTest, Generate36x5Test) {
   rows_ = 36;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -33425,7 +33425,7 @@ TEST_F(MazeGeneratorTest, Generate36x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x6Test) {
+TEST_F(GeneratorTest, Generate36x6Test) {
   rows_ = 36;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -33445,7 +33445,7 @@ TEST_F(MazeGeneratorTest, Generate36x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x7Test) {
+TEST_F(GeneratorTest, Generate36x7Test) {
   rows_ = 36;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -33465,7 +33465,7 @@ TEST_F(MazeGeneratorTest, Generate36x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x8Test) {
+TEST_F(GeneratorTest, Generate36x8Test) {
   rows_ = 36;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -33485,7 +33485,7 @@ TEST_F(MazeGeneratorTest, Generate36x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x9Test) {
+TEST_F(GeneratorTest, Generate36x9Test) {
   rows_ = 36;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -33505,7 +33505,7 @@ TEST_F(MazeGeneratorTest, Generate36x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x10Test) {
+TEST_F(GeneratorTest, Generate36x10Test) {
   rows_ = 36;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -33525,7 +33525,7 @@ TEST_F(MazeGeneratorTest, Generate36x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x11Test) {
+TEST_F(GeneratorTest, Generate36x11Test) {
   rows_ = 36;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -33545,7 +33545,7 @@ TEST_F(MazeGeneratorTest, Generate36x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x12Test) {
+TEST_F(GeneratorTest, Generate36x12Test) {
   rows_ = 36;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -33565,7 +33565,7 @@ TEST_F(MazeGeneratorTest, Generate36x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x13Test) {
+TEST_F(GeneratorTest, Generate36x13Test) {
   rows_ = 36;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -33585,7 +33585,7 @@ TEST_F(MazeGeneratorTest, Generate36x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x14Test) {
+TEST_F(GeneratorTest, Generate36x14Test) {
   rows_ = 36;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -33605,7 +33605,7 @@ TEST_F(MazeGeneratorTest, Generate36x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x15Test) {
+TEST_F(GeneratorTest, Generate36x15Test) {
   rows_ = 36;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -33625,7 +33625,7 @@ TEST_F(MazeGeneratorTest, Generate36x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x16Test) {
+TEST_F(GeneratorTest, Generate36x16Test) {
   rows_ = 36;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -33645,7 +33645,7 @@ TEST_F(MazeGeneratorTest, Generate36x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x17Test) {
+TEST_F(GeneratorTest, Generate36x17Test) {
   rows_ = 36;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -33665,7 +33665,7 @@ TEST_F(MazeGeneratorTest, Generate36x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x18Test) {
+TEST_F(GeneratorTest, Generate36x18Test) {
   rows_ = 36;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -33685,7 +33685,7 @@ TEST_F(MazeGeneratorTest, Generate36x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x19Test) {
+TEST_F(GeneratorTest, Generate36x19Test) {
   rows_ = 36;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -33705,7 +33705,7 @@ TEST_F(MazeGeneratorTest, Generate36x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x20Test) {
+TEST_F(GeneratorTest, Generate36x20Test) {
   rows_ = 36;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -33725,7 +33725,7 @@ TEST_F(MazeGeneratorTest, Generate36x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x21Test) {
+TEST_F(GeneratorTest, Generate36x21Test) {
   rows_ = 36;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -33745,7 +33745,7 @@ TEST_F(MazeGeneratorTest, Generate36x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x22Test) {
+TEST_F(GeneratorTest, Generate36x22Test) {
   rows_ = 36;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -33765,7 +33765,7 @@ TEST_F(MazeGeneratorTest, Generate36x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x23Test) {
+TEST_F(GeneratorTest, Generate36x23Test) {
   rows_ = 36;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -33785,7 +33785,7 @@ TEST_F(MazeGeneratorTest, Generate36x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x24Test) {
+TEST_F(GeneratorTest, Generate36x24Test) {
   rows_ = 36;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -33805,7 +33805,7 @@ TEST_F(MazeGeneratorTest, Generate36x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x25Test) {
+TEST_F(GeneratorTest, Generate36x25Test) {
   rows_ = 36;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -33825,7 +33825,7 @@ TEST_F(MazeGeneratorTest, Generate36x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x26Test) {
+TEST_F(GeneratorTest, Generate36x26Test) {
   rows_ = 36;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -33845,7 +33845,7 @@ TEST_F(MazeGeneratorTest, Generate36x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x27Test) {
+TEST_F(GeneratorTest, Generate36x27Test) {
   rows_ = 36;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -33865,7 +33865,7 @@ TEST_F(MazeGeneratorTest, Generate36x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x28Test) {
+TEST_F(GeneratorTest, Generate36x28Test) {
   rows_ = 36;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -33885,7 +33885,7 @@ TEST_F(MazeGeneratorTest, Generate36x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x29Test) {
+TEST_F(GeneratorTest, Generate36x29Test) {
   rows_ = 36;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -33905,7 +33905,7 @@ TEST_F(MazeGeneratorTest, Generate36x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x30Test) {
+TEST_F(GeneratorTest, Generate36x30Test) {
   rows_ = 36;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -33925,7 +33925,7 @@ TEST_F(MazeGeneratorTest, Generate36x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x31Test) {
+TEST_F(GeneratorTest, Generate36x31Test) {
   rows_ = 36;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -33945,7 +33945,7 @@ TEST_F(MazeGeneratorTest, Generate36x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x32Test) {
+TEST_F(GeneratorTest, Generate36x32Test) {
   rows_ = 36;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -33965,7 +33965,7 @@ TEST_F(MazeGeneratorTest, Generate36x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x33Test) {
+TEST_F(GeneratorTest, Generate36x33Test) {
   rows_ = 36;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -33985,7 +33985,7 @@ TEST_F(MazeGeneratorTest, Generate36x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x34Test) {
+TEST_F(GeneratorTest, Generate36x34Test) {
   rows_ = 36;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -34005,7 +34005,7 @@ TEST_F(MazeGeneratorTest, Generate36x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x35Test) {
+TEST_F(GeneratorTest, Generate36x35Test) {
   rows_ = 36;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -34025,7 +34025,7 @@ TEST_F(MazeGeneratorTest, Generate36x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x36Test) {
+TEST_F(GeneratorTest, Generate36x36Test) {
   rows_ = 36;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -34045,7 +34045,7 @@ TEST_F(MazeGeneratorTest, Generate36x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x37Test) {
+TEST_F(GeneratorTest, Generate36x37Test) {
   rows_ = 36;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -34065,7 +34065,7 @@ TEST_F(MazeGeneratorTest, Generate36x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x38Test) {
+TEST_F(GeneratorTest, Generate36x38Test) {
   rows_ = 36;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -34085,7 +34085,7 @@ TEST_F(MazeGeneratorTest, Generate36x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x39Test) {
+TEST_F(GeneratorTest, Generate36x39Test) {
   rows_ = 36;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -34105,7 +34105,7 @@ TEST_F(MazeGeneratorTest, Generate36x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x40Test) {
+TEST_F(GeneratorTest, Generate36x40Test) {
   rows_ = 36;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -34125,7 +34125,7 @@ TEST_F(MazeGeneratorTest, Generate36x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x41Test) {
+TEST_F(GeneratorTest, Generate36x41Test) {
   rows_ = 36;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -34145,7 +34145,7 @@ TEST_F(MazeGeneratorTest, Generate36x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x42Test) {
+TEST_F(GeneratorTest, Generate36x42Test) {
   rows_ = 36;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -34165,7 +34165,7 @@ TEST_F(MazeGeneratorTest, Generate36x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x43Test) {
+TEST_F(GeneratorTest, Generate36x43Test) {
   rows_ = 36;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -34185,7 +34185,7 @@ TEST_F(MazeGeneratorTest, Generate36x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x44Test) {
+TEST_F(GeneratorTest, Generate36x44Test) {
   rows_ = 36;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -34205,7 +34205,7 @@ TEST_F(MazeGeneratorTest, Generate36x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x45Test) {
+TEST_F(GeneratorTest, Generate36x45Test) {
   rows_ = 36;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -34225,7 +34225,7 @@ TEST_F(MazeGeneratorTest, Generate36x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x46Test) {
+TEST_F(GeneratorTest, Generate36x46Test) {
   rows_ = 36;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -34245,7 +34245,7 @@ TEST_F(MazeGeneratorTest, Generate36x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x47Test) {
+TEST_F(GeneratorTest, Generate36x47Test) {
   rows_ = 36;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -34265,7 +34265,7 @@ TEST_F(MazeGeneratorTest, Generate36x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x48Test) {
+TEST_F(GeneratorTest, Generate36x48Test) {
   rows_ = 36;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -34285,7 +34285,7 @@ TEST_F(MazeGeneratorTest, Generate36x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x49Test) {
+TEST_F(GeneratorTest, Generate36x49Test) {
   rows_ = 36;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -34305,7 +34305,7 @@ TEST_F(MazeGeneratorTest, Generate36x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate36x50Test) {
+TEST_F(GeneratorTest, Generate36x50Test) {
   rows_ = 36;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -34325,7 +34325,7 @@ TEST_F(MazeGeneratorTest, Generate36x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x2Test) {
+TEST_F(GeneratorTest, Generate37x2Test) {
   rows_ = 37;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -34345,7 +34345,7 @@ TEST_F(MazeGeneratorTest, Generate37x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x3Test) {
+TEST_F(GeneratorTest, Generate37x3Test) {
   rows_ = 37;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -34365,7 +34365,7 @@ TEST_F(MazeGeneratorTest, Generate37x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x4Test) {
+TEST_F(GeneratorTest, Generate37x4Test) {
   rows_ = 37;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -34385,7 +34385,7 @@ TEST_F(MazeGeneratorTest, Generate37x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x5Test) {
+TEST_F(GeneratorTest, Generate37x5Test) {
   rows_ = 37;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -34405,7 +34405,7 @@ TEST_F(MazeGeneratorTest, Generate37x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x6Test) {
+TEST_F(GeneratorTest, Generate37x6Test) {
   rows_ = 37;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -34425,7 +34425,7 @@ TEST_F(MazeGeneratorTest, Generate37x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x7Test) {
+TEST_F(GeneratorTest, Generate37x7Test) {
   rows_ = 37;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -34445,7 +34445,7 @@ TEST_F(MazeGeneratorTest, Generate37x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x8Test) {
+TEST_F(GeneratorTest, Generate37x8Test) {
   rows_ = 37;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -34465,7 +34465,7 @@ TEST_F(MazeGeneratorTest, Generate37x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x9Test) {
+TEST_F(GeneratorTest, Generate37x9Test) {
   rows_ = 37;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -34485,7 +34485,7 @@ TEST_F(MazeGeneratorTest, Generate37x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x10Test) {
+TEST_F(GeneratorTest, Generate37x10Test) {
   rows_ = 37;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -34505,7 +34505,7 @@ TEST_F(MazeGeneratorTest, Generate37x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x11Test) {
+TEST_F(GeneratorTest, Generate37x11Test) {
   rows_ = 37;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -34525,7 +34525,7 @@ TEST_F(MazeGeneratorTest, Generate37x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x12Test) {
+TEST_F(GeneratorTest, Generate37x12Test) {
   rows_ = 37;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -34545,7 +34545,7 @@ TEST_F(MazeGeneratorTest, Generate37x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x13Test) {
+TEST_F(GeneratorTest, Generate37x13Test) {
   rows_ = 37;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -34565,7 +34565,7 @@ TEST_F(MazeGeneratorTest, Generate37x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x14Test) {
+TEST_F(GeneratorTest, Generate37x14Test) {
   rows_ = 37;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -34585,7 +34585,7 @@ TEST_F(MazeGeneratorTest, Generate37x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x15Test) {
+TEST_F(GeneratorTest, Generate37x15Test) {
   rows_ = 37;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -34605,7 +34605,7 @@ TEST_F(MazeGeneratorTest, Generate37x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x16Test) {
+TEST_F(GeneratorTest, Generate37x16Test) {
   rows_ = 37;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -34625,7 +34625,7 @@ TEST_F(MazeGeneratorTest, Generate37x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x17Test) {
+TEST_F(GeneratorTest, Generate37x17Test) {
   rows_ = 37;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -34645,7 +34645,7 @@ TEST_F(MazeGeneratorTest, Generate37x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x18Test) {
+TEST_F(GeneratorTest, Generate37x18Test) {
   rows_ = 37;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -34665,7 +34665,7 @@ TEST_F(MazeGeneratorTest, Generate37x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x19Test) {
+TEST_F(GeneratorTest, Generate37x19Test) {
   rows_ = 37;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -34685,7 +34685,7 @@ TEST_F(MazeGeneratorTest, Generate37x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x20Test) {
+TEST_F(GeneratorTest, Generate37x20Test) {
   rows_ = 37;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -34705,7 +34705,7 @@ TEST_F(MazeGeneratorTest, Generate37x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x21Test) {
+TEST_F(GeneratorTest, Generate37x21Test) {
   rows_ = 37;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -34725,7 +34725,7 @@ TEST_F(MazeGeneratorTest, Generate37x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x22Test) {
+TEST_F(GeneratorTest, Generate37x22Test) {
   rows_ = 37;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -34745,7 +34745,7 @@ TEST_F(MazeGeneratorTest, Generate37x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x23Test) {
+TEST_F(GeneratorTest, Generate37x23Test) {
   rows_ = 37;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -34765,7 +34765,7 @@ TEST_F(MazeGeneratorTest, Generate37x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x24Test) {
+TEST_F(GeneratorTest, Generate37x24Test) {
   rows_ = 37;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -34785,7 +34785,7 @@ TEST_F(MazeGeneratorTest, Generate37x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x25Test) {
+TEST_F(GeneratorTest, Generate37x25Test) {
   rows_ = 37;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -34805,7 +34805,7 @@ TEST_F(MazeGeneratorTest, Generate37x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x26Test) {
+TEST_F(GeneratorTest, Generate37x26Test) {
   rows_ = 37;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -34825,7 +34825,7 @@ TEST_F(MazeGeneratorTest, Generate37x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x27Test) {
+TEST_F(GeneratorTest, Generate37x27Test) {
   rows_ = 37;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -34845,7 +34845,7 @@ TEST_F(MazeGeneratorTest, Generate37x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x28Test) {
+TEST_F(GeneratorTest, Generate37x28Test) {
   rows_ = 37;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -34865,7 +34865,7 @@ TEST_F(MazeGeneratorTest, Generate37x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x29Test) {
+TEST_F(GeneratorTest, Generate37x29Test) {
   rows_ = 37;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -34885,7 +34885,7 @@ TEST_F(MazeGeneratorTest, Generate37x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x30Test) {
+TEST_F(GeneratorTest, Generate37x30Test) {
   rows_ = 37;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -34905,7 +34905,7 @@ TEST_F(MazeGeneratorTest, Generate37x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x31Test) {
+TEST_F(GeneratorTest, Generate37x31Test) {
   rows_ = 37;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -34925,7 +34925,7 @@ TEST_F(MazeGeneratorTest, Generate37x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x32Test) {
+TEST_F(GeneratorTest, Generate37x32Test) {
   rows_ = 37;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -34945,7 +34945,7 @@ TEST_F(MazeGeneratorTest, Generate37x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x33Test) {
+TEST_F(GeneratorTest, Generate37x33Test) {
   rows_ = 37;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -34965,7 +34965,7 @@ TEST_F(MazeGeneratorTest, Generate37x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x34Test) {
+TEST_F(GeneratorTest, Generate37x34Test) {
   rows_ = 37;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -34985,7 +34985,7 @@ TEST_F(MazeGeneratorTest, Generate37x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x35Test) {
+TEST_F(GeneratorTest, Generate37x35Test) {
   rows_ = 37;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -35005,7 +35005,7 @@ TEST_F(MazeGeneratorTest, Generate37x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x36Test) {
+TEST_F(GeneratorTest, Generate37x36Test) {
   rows_ = 37;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -35025,7 +35025,7 @@ TEST_F(MazeGeneratorTest, Generate37x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x37Test) {
+TEST_F(GeneratorTest, Generate37x37Test) {
   rows_ = 37;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -35045,7 +35045,7 @@ TEST_F(MazeGeneratorTest, Generate37x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x38Test) {
+TEST_F(GeneratorTest, Generate37x38Test) {
   rows_ = 37;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -35065,7 +35065,7 @@ TEST_F(MazeGeneratorTest, Generate37x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x39Test) {
+TEST_F(GeneratorTest, Generate37x39Test) {
   rows_ = 37;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -35085,7 +35085,7 @@ TEST_F(MazeGeneratorTest, Generate37x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x40Test) {
+TEST_F(GeneratorTest, Generate37x40Test) {
   rows_ = 37;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -35105,7 +35105,7 @@ TEST_F(MazeGeneratorTest, Generate37x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x41Test) {
+TEST_F(GeneratorTest, Generate37x41Test) {
   rows_ = 37;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -35125,7 +35125,7 @@ TEST_F(MazeGeneratorTest, Generate37x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x42Test) {
+TEST_F(GeneratorTest, Generate37x42Test) {
   rows_ = 37;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -35145,7 +35145,7 @@ TEST_F(MazeGeneratorTest, Generate37x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x43Test) {
+TEST_F(GeneratorTest, Generate37x43Test) {
   rows_ = 37;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -35165,7 +35165,7 @@ TEST_F(MazeGeneratorTest, Generate37x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x44Test) {
+TEST_F(GeneratorTest, Generate37x44Test) {
   rows_ = 37;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -35185,7 +35185,7 @@ TEST_F(MazeGeneratorTest, Generate37x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x45Test) {
+TEST_F(GeneratorTest, Generate37x45Test) {
   rows_ = 37;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -35205,7 +35205,7 @@ TEST_F(MazeGeneratorTest, Generate37x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x46Test) {
+TEST_F(GeneratorTest, Generate37x46Test) {
   rows_ = 37;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -35225,7 +35225,7 @@ TEST_F(MazeGeneratorTest, Generate37x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x47Test) {
+TEST_F(GeneratorTest, Generate37x47Test) {
   rows_ = 37;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -35245,7 +35245,7 @@ TEST_F(MazeGeneratorTest, Generate37x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x48Test) {
+TEST_F(GeneratorTest, Generate37x48Test) {
   rows_ = 37;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -35265,7 +35265,7 @@ TEST_F(MazeGeneratorTest, Generate37x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x49Test) {
+TEST_F(GeneratorTest, Generate37x49Test) {
   rows_ = 37;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -35285,7 +35285,7 @@ TEST_F(MazeGeneratorTest, Generate37x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate37x50Test) {
+TEST_F(GeneratorTest, Generate37x50Test) {
   rows_ = 37;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -35305,7 +35305,7 @@ TEST_F(MazeGeneratorTest, Generate37x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x2Test) {
+TEST_F(GeneratorTest, Generate38x2Test) {
   rows_ = 38;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -35325,7 +35325,7 @@ TEST_F(MazeGeneratorTest, Generate38x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x3Test) {
+TEST_F(GeneratorTest, Generate38x3Test) {
   rows_ = 38;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -35345,7 +35345,7 @@ TEST_F(MazeGeneratorTest, Generate38x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x4Test) {
+TEST_F(GeneratorTest, Generate38x4Test) {
   rows_ = 38;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -35365,7 +35365,7 @@ TEST_F(MazeGeneratorTest, Generate38x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x5Test) {
+TEST_F(GeneratorTest, Generate38x5Test) {
   rows_ = 38;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -35385,7 +35385,7 @@ TEST_F(MazeGeneratorTest, Generate38x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x6Test) {
+TEST_F(GeneratorTest, Generate38x6Test) {
   rows_ = 38;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -35405,7 +35405,7 @@ TEST_F(MazeGeneratorTest, Generate38x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x7Test) {
+TEST_F(GeneratorTest, Generate38x7Test) {
   rows_ = 38;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -35425,7 +35425,7 @@ TEST_F(MazeGeneratorTest, Generate38x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x8Test) {
+TEST_F(GeneratorTest, Generate38x8Test) {
   rows_ = 38;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -35445,7 +35445,7 @@ TEST_F(MazeGeneratorTest, Generate38x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x9Test) {
+TEST_F(GeneratorTest, Generate38x9Test) {
   rows_ = 38;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -35465,7 +35465,7 @@ TEST_F(MazeGeneratorTest, Generate38x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x10Test) {
+TEST_F(GeneratorTest, Generate38x10Test) {
   rows_ = 38;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -35485,7 +35485,7 @@ TEST_F(MazeGeneratorTest, Generate38x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x11Test) {
+TEST_F(GeneratorTest, Generate38x11Test) {
   rows_ = 38;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -35505,7 +35505,7 @@ TEST_F(MazeGeneratorTest, Generate38x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x12Test) {
+TEST_F(GeneratorTest, Generate38x12Test) {
   rows_ = 38;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -35525,7 +35525,7 @@ TEST_F(MazeGeneratorTest, Generate38x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x13Test) {
+TEST_F(GeneratorTest, Generate38x13Test) {
   rows_ = 38;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -35545,7 +35545,7 @@ TEST_F(MazeGeneratorTest, Generate38x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x14Test) {
+TEST_F(GeneratorTest, Generate38x14Test) {
   rows_ = 38;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -35565,7 +35565,7 @@ TEST_F(MazeGeneratorTest, Generate38x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x15Test) {
+TEST_F(GeneratorTest, Generate38x15Test) {
   rows_ = 38;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -35585,7 +35585,7 @@ TEST_F(MazeGeneratorTest, Generate38x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x16Test) {
+TEST_F(GeneratorTest, Generate38x16Test) {
   rows_ = 38;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -35605,7 +35605,7 @@ TEST_F(MazeGeneratorTest, Generate38x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x17Test) {
+TEST_F(GeneratorTest, Generate38x17Test) {
   rows_ = 38;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -35625,7 +35625,7 @@ TEST_F(MazeGeneratorTest, Generate38x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x18Test) {
+TEST_F(GeneratorTest, Generate38x18Test) {
   rows_ = 38;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -35645,7 +35645,7 @@ TEST_F(MazeGeneratorTest, Generate38x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x19Test) {
+TEST_F(GeneratorTest, Generate38x19Test) {
   rows_ = 38;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -35665,7 +35665,7 @@ TEST_F(MazeGeneratorTest, Generate38x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x20Test) {
+TEST_F(GeneratorTest, Generate38x20Test) {
   rows_ = 38;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -35685,7 +35685,7 @@ TEST_F(MazeGeneratorTest, Generate38x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x21Test) {
+TEST_F(GeneratorTest, Generate38x21Test) {
   rows_ = 38;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -35705,7 +35705,7 @@ TEST_F(MazeGeneratorTest, Generate38x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x22Test) {
+TEST_F(GeneratorTest, Generate38x22Test) {
   rows_ = 38;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -35725,7 +35725,7 @@ TEST_F(MazeGeneratorTest, Generate38x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x23Test) {
+TEST_F(GeneratorTest, Generate38x23Test) {
   rows_ = 38;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -35745,7 +35745,7 @@ TEST_F(MazeGeneratorTest, Generate38x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x24Test) {
+TEST_F(GeneratorTest, Generate38x24Test) {
   rows_ = 38;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -35765,7 +35765,7 @@ TEST_F(MazeGeneratorTest, Generate38x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x25Test) {
+TEST_F(GeneratorTest, Generate38x25Test) {
   rows_ = 38;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -35785,7 +35785,7 @@ TEST_F(MazeGeneratorTest, Generate38x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x26Test) {
+TEST_F(GeneratorTest, Generate38x26Test) {
   rows_ = 38;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -35805,7 +35805,7 @@ TEST_F(MazeGeneratorTest, Generate38x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x27Test) {
+TEST_F(GeneratorTest, Generate38x27Test) {
   rows_ = 38;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -35825,7 +35825,7 @@ TEST_F(MazeGeneratorTest, Generate38x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x28Test) {
+TEST_F(GeneratorTest, Generate38x28Test) {
   rows_ = 38;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -35845,7 +35845,7 @@ TEST_F(MazeGeneratorTest, Generate38x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x29Test) {
+TEST_F(GeneratorTest, Generate38x29Test) {
   rows_ = 38;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -35865,7 +35865,7 @@ TEST_F(MazeGeneratorTest, Generate38x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x30Test) {
+TEST_F(GeneratorTest, Generate38x30Test) {
   rows_ = 38;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -35885,7 +35885,7 @@ TEST_F(MazeGeneratorTest, Generate38x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x31Test) {
+TEST_F(GeneratorTest, Generate38x31Test) {
   rows_ = 38;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -35905,7 +35905,7 @@ TEST_F(MazeGeneratorTest, Generate38x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x32Test) {
+TEST_F(GeneratorTest, Generate38x32Test) {
   rows_ = 38;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -35925,7 +35925,7 @@ TEST_F(MazeGeneratorTest, Generate38x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x33Test) {
+TEST_F(GeneratorTest, Generate38x33Test) {
   rows_ = 38;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -35945,7 +35945,7 @@ TEST_F(MazeGeneratorTest, Generate38x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x34Test) {
+TEST_F(GeneratorTest, Generate38x34Test) {
   rows_ = 38;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -35965,7 +35965,7 @@ TEST_F(MazeGeneratorTest, Generate38x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x35Test) {
+TEST_F(GeneratorTest, Generate38x35Test) {
   rows_ = 38;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -35985,7 +35985,7 @@ TEST_F(MazeGeneratorTest, Generate38x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x36Test) {
+TEST_F(GeneratorTest, Generate38x36Test) {
   rows_ = 38;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -36005,7 +36005,7 @@ TEST_F(MazeGeneratorTest, Generate38x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x37Test) {
+TEST_F(GeneratorTest, Generate38x37Test) {
   rows_ = 38;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -36025,7 +36025,7 @@ TEST_F(MazeGeneratorTest, Generate38x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x38Test) {
+TEST_F(GeneratorTest, Generate38x38Test) {
   rows_ = 38;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -36045,7 +36045,7 @@ TEST_F(MazeGeneratorTest, Generate38x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x39Test) {
+TEST_F(GeneratorTest, Generate38x39Test) {
   rows_ = 38;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -36065,7 +36065,7 @@ TEST_F(MazeGeneratorTest, Generate38x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x40Test) {
+TEST_F(GeneratorTest, Generate38x40Test) {
   rows_ = 38;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -36085,7 +36085,7 @@ TEST_F(MazeGeneratorTest, Generate38x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x41Test) {
+TEST_F(GeneratorTest, Generate38x41Test) {
   rows_ = 38;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -36105,7 +36105,7 @@ TEST_F(MazeGeneratorTest, Generate38x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x42Test) {
+TEST_F(GeneratorTest, Generate38x42Test) {
   rows_ = 38;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -36125,7 +36125,7 @@ TEST_F(MazeGeneratorTest, Generate38x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x43Test) {
+TEST_F(GeneratorTest, Generate38x43Test) {
   rows_ = 38;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -36145,7 +36145,7 @@ TEST_F(MazeGeneratorTest, Generate38x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x44Test) {
+TEST_F(GeneratorTest, Generate38x44Test) {
   rows_ = 38;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -36165,7 +36165,7 @@ TEST_F(MazeGeneratorTest, Generate38x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x45Test) {
+TEST_F(GeneratorTest, Generate38x45Test) {
   rows_ = 38;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -36185,7 +36185,7 @@ TEST_F(MazeGeneratorTest, Generate38x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x46Test) {
+TEST_F(GeneratorTest, Generate38x46Test) {
   rows_ = 38;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -36205,7 +36205,7 @@ TEST_F(MazeGeneratorTest, Generate38x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x47Test) {
+TEST_F(GeneratorTest, Generate38x47Test) {
   rows_ = 38;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -36225,7 +36225,7 @@ TEST_F(MazeGeneratorTest, Generate38x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x48Test) {
+TEST_F(GeneratorTest, Generate38x48Test) {
   rows_ = 38;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -36245,7 +36245,7 @@ TEST_F(MazeGeneratorTest, Generate38x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x49Test) {
+TEST_F(GeneratorTest, Generate38x49Test) {
   rows_ = 38;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -36265,7 +36265,7 @@ TEST_F(MazeGeneratorTest, Generate38x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate38x50Test) {
+TEST_F(GeneratorTest, Generate38x50Test) {
   rows_ = 38;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -36285,7 +36285,7 @@ TEST_F(MazeGeneratorTest, Generate38x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x2Test) {
+TEST_F(GeneratorTest, Generate39x2Test) {
   rows_ = 39;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -36305,7 +36305,7 @@ TEST_F(MazeGeneratorTest, Generate39x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x3Test) {
+TEST_F(GeneratorTest, Generate39x3Test) {
   rows_ = 39;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -36325,7 +36325,7 @@ TEST_F(MazeGeneratorTest, Generate39x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x4Test) {
+TEST_F(GeneratorTest, Generate39x4Test) {
   rows_ = 39;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -36345,7 +36345,7 @@ TEST_F(MazeGeneratorTest, Generate39x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x5Test) {
+TEST_F(GeneratorTest, Generate39x5Test) {
   rows_ = 39;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -36365,7 +36365,7 @@ TEST_F(MazeGeneratorTest, Generate39x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x6Test) {
+TEST_F(GeneratorTest, Generate39x6Test) {
   rows_ = 39;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -36385,7 +36385,7 @@ TEST_F(MazeGeneratorTest, Generate39x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x7Test) {
+TEST_F(GeneratorTest, Generate39x7Test) {
   rows_ = 39;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -36405,7 +36405,7 @@ TEST_F(MazeGeneratorTest, Generate39x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x8Test) {
+TEST_F(GeneratorTest, Generate39x8Test) {
   rows_ = 39;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -36425,7 +36425,7 @@ TEST_F(MazeGeneratorTest, Generate39x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x9Test) {
+TEST_F(GeneratorTest, Generate39x9Test) {
   rows_ = 39;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -36445,7 +36445,7 @@ TEST_F(MazeGeneratorTest, Generate39x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x10Test) {
+TEST_F(GeneratorTest, Generate39x10Test) {
   rows_ = 39;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -36465,7 +36465,7 @@ TEST_F(MazeGeneratorTest, Generate39x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x11Test) {
+TEST_F(GeneratorTest, Generate39x11Test) {
   rows_ = 39;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -36485,7 +36485,7 @@ TEST_F(MazeGeneratorTest, Generate39x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x12Test) {
+TEST_F(GeneratorTest, Generate39x12Test) {
   rows_ = 39;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -36505,7 +36505,7 @@ TEST_F(MazeGeneratorTest, Generate39x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x13Test) {
+TEST_F(GeneratorTest, Generate39x13Test) {
   rows_ = 39;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -36525,7 +36525,7 @@ TEST_F(MazeGeneratorTest, Generate39x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x14Test) {
+TEST_F(GeneratorTest, Generate39x14Test) {
   rows_ = 39;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -36545,7 +36545,7 @@ TEST_F(MazeGeneratorTest, Generate39x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x15Test) {
+TEST_F(GeneratorTest, Generate39x15Test) {
   rows_ = 39;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -36565,7 +36565,7 @@ TEST_F(MazeGeneratorTest, Generate39x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x16Test) {
+TEST_F(GeneratorTest, Generate39x16Test) {
   rows_ = 39;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -36585,7 +36585,7 @@ TEST_F(MazeGeneratorTest, Generate39x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x17Test) {
+TEST_F(GeneratorTest, Generate39x17Test) {
   rows_ = 39;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -36605,7 +36605,7 @@ TEST_F(MazeGeneratorTest, Generate39x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x18Test) {
+TEST_F(GeneratorTest, Generate39x18Test) {
   rows_ = 39;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -36625,7 +36625,7 @@ TEST_F(MazeGeneratorTest, Generate39x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x19Test) {
+TEST_F(GeneratorTest, Generate39x19Test) {
   rows_ = 39;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -36645,7 +36645,7 @@ TEST_F(MazeGeneratorTest, Generate39x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x20Test) {
+TEST_F(GeneratorTest, Generate39x20Test) {
   rows_ = 39;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -36665,7 +36665,7 @@ TEST_F(MazeGeneratorTest, Generate39x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x21Test) {
+TEST_F(GeneratorTest, Generate39x21Test) {
   rows_ = 39;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -36685,7 +36685,7 @@ TEST_F(MazeGeneratorTest, Generate39x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x22Test) {
+TEST_F(GeneratorTest, Generate39x22Test) {
   rows_ = 39;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -36705,7 +36705,7 @@ TEST_F(MazeGeneratorTest, Generate39x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x23Test) {
+TEST_F(GeneratorTest, Generate39x23Test) {
   rows_ = 39;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -36725,7 +36725,7 @@ TEST_F(MazeGeneratorTest, Generate39x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x24Test) {
+TEST_F(GeneratorTest, Generate39x24Test) {
   rows_ = 39;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -36745,7 +36745,7 @@ TEST_F(MazeGeneratorTest, Generate39x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x25Test) {
+TEST_F(GeneratorTest, Generate39x25Test) {
   rows_ = 39;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -36765,7 +36765,7 @@ TEST_F(MazeGeneratorTest, Generate39x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x26Test) {
+TEST_F(GeneratorTest, Generate39x26Test) {
   rows_ = 39;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -36785,7 +36785,7 @@ TEST_F(MazeGeneratorTest, Generate39x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x27Test) {
+TEST_F(GeneratorTest, Generate39x27Test) {
   rows_ = 39;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -36805,7 +36805,7 @@ TEST_F(MazeGeneratorTest, Generate39x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x28Test) {
+TEST_F(GeneratorTest, Generate39x28Test) {
   rows_ = 39;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -36825,7 +36825,7 @@ TEST_F(MazeGeneratorTest, Generate39x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x29Test) {
+TEST_F(GeneratorTest, Generate39x29Test) {
   rows_ = 39;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -36845,7 +36845,7 @@ TEST_F(MazeGeneratorTest, Generate39x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x30Test) {
+TEST_F(GeneratorTest, Generate39x30Test) {
   rows_ = 39;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -36865,7 +36865,7 @@ TEST_F(MazeGeneratorTest, Generate39x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x31Test) {
+TEST_F(GeneratorTest, Generate39x31Test) {
   rows_ = 39;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -36885,7 +36885,7 @@ TEST_F(MazeGeneratorTest, Generate39x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x32Test) {
+TEST_F(GeneratorTest, Generate39x32Test) {
   rows_ = 39;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -36905,7 +36905,7 @@ TEST_F(MazeGeneratorTest, Generate39x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x33Test) {
+TEST_F(GeneratorTest, Generate39x33Test) {
   rows_ = 39;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -36925,7 +36925,7 @@ TEST_F(MazeGeneratorTest, Generate39x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x34Test) {
+TEST_F(GeneratorTest, Generate39x34Test) {
   rows_ = 39;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -36945,7 +36945,7 @@ TEST_F(MazeGeneratorTest, Generate39x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x35Test) {
+TEST_F(GeneratorTest, Generate39x35Test) {
   rows_ = 39;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -36965,7 +36965,7 @@ TEST_F(MazeGeneratorTest, Generate39x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x36Test) {
+TEST_F(GeneratorTest, Generate39x36Test) {
   rows_ = 39;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -36985,7 +36985,7 @@ TEST_F(MazeGeneratorTest, Generate39x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x37Test) {
+TEST_F(GeneratorTest, Generate39x37Test) {
   rows_ = 39;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -37005,7 +37005,7 @@ TEST_F(MazeGeneratorTest, Generate39x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x38Test) {
+TEST_F(GeneratorTest, Generate39x38Test) {
   rows_ = 39;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -37025,7 +37025,7 @@ TEST_F(MazeGeneratorTest, Generate39x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x39Test) {
+TEST_F(GeneratorTest, Generate39x39Test) {
   rows_ = 39;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -37045,7 +37045,7 @@ TEST_F(MazeGeneratorTest, Generate39x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x40Test) {
+TEST_F(GeneratorTest, Generate39x40Test) {
   rows_ = 39;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -37065,7 +37065,7 @@ TEST_F(MazeGeneratorTest, Generate39x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x41Test) {
+TEST_F(GeneratorTest, Generate39x41Test) {
   rows_ = 39;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -37085,7 +37085,7 @@ TEST_F(MazeGeneratorTest, Generate39x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x42Test) {
+TEST_F(GeneratorTest, Generate39x42Test) {
   rows_ = 39;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -37105,7 +37105,7 @@ TEST_F(MazeGeneratorTest, Generate39x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x43Test) {
+TEST_F(GeneratorTest, Generate39x43Test) {
   rows_ = 39;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -37125,7 +37125,7 @@ TEST_F(MazeGeneratorTest, Generate39x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x44Test) {
+TEST_F(GeneratorTest, Generate39x44Test) {
   rows_ = 39;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -37145,7 +37145,7 @@ TEST_F(MazeGeneratorTest, Generate39x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x45Test) {
+TEST_F(GeneratorTest, Generate39x45Test) {
   rows_ = 39;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -37165,7 +37165,7 @@ TEST_F(MazeGeneratorTest, Generate39x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x46Test) {
+TEST_F(GeneratorTest, Generate39x46Test) {
   rows_ = 39;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -37185,7 +37185,7 @@ TEST_F(MazeGeneratorTest, Generate39x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x47Test) {
+TEST_F(GeneratorTest, Generate39x47Test) {
   rows_ = 39;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -37205,7 +37205,7 @@ TEST_F(MazeGeneratorTest, Generate39x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x48Test) {
+TEST_F(GeneratorTest, Generate39x48Test) {
   rows_ = 39;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -37225,7 +37225,7 @@ TEST_F(MazeGeneratorTest, Generate39x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x49Test) {
+TEST_F(GeneratorTest, Generate39x49Test) {
   rows_ = 39;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -37245,7 +37245,7 @@ TEST_F(MazeGeneratorTest, Generate39x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate39x50Test) {
+TEST_F(GeneratorTest, Generate39x50Test) {
   rows_ = 39;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -37265,7 +37265,7 @@ TEST_F(MazeGeneratorTest, Generate39x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x2Test) {
+TEST_F(GeneratorTest, Generate40x2Test) {
   rows_ = 40;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -37285,7 +37285,7 @@ TEST_F(MazeGeneratorTest, Generate40x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x3Test) {
+TEST_F(GeneratorTest, Generate40x3Test) {
   rows_ = 40;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -37305,7 +37305,7 @@ TEST_F(MazeGeneratorTest, Generate40x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x4Test) {
+TEST_F(GeneratorTest, Generate40x4Test) {
   rows_ = 40;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -37325,7 +37325,7 @@ TEST_F(MazeGeneratorTest, Generate40x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x5Test) {
+TEST_F(GeneratorTest, Generate40x5Test) {
   rows_ = 40;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -37345,7 +37345,7 @@ TEST_F(MazeGeneratorTest, Generate40x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x6Test) {
+TEST_F(GeneratorTest, Generate40x6Test) {
   rows_ = 40;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -37365,7 +37365,7 @@ TEST_F(MazeGeneratorTest, Generate40x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x7Test) {
+TEST_F(GeneratorTest, Generate40x7Test) {
   rows_ = 40;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -37385,7 +37385,7 @@ TEST_F(MazeGeneratorTest, Generate40x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x8Test) {
+TEST_F(GeneratorTest, Generate40x8Test) {
   rows_ = 40;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -37405,7 +37405,7 @@ TEST_F(MazeGeneratorTest, Generate40x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x9Test) {
+TEST_F(GeneratorTest, Generate40x9Test) {
   rows_ = 40;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -37425,7 +37425,7 @@ TEST_F(MazeGeneratorTest, Generate40x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x10Test) {
+TEST_F(GeneratorTest, Generate40x10Test) {
   rows_ = 40;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -37445,7 +37445,7 @@ TEST_F(MazeGeneratorTest, Generate40x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x11Test) {
+TEST_F(GeneratorTest, Generate40x11Test) {
   rows_ = 40;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -37465,7 +37465,7 @@ TEST_F(MazeGeneratorTest, Generate40x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x12Test) {
+TEST_F(GeneratorTest, Generate40x12Test) {
   rows_ = 40;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -37485,7 +37485,7 @@ TEST_F(MazeGeneratorTest, Generate40x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x13Test) {
+TEST_F(GeneratorTest, Generate40x13Test) {
   rows_ = 40;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -37505,7 +37505,7 @@ TEST_F(MazeGeneratorTest, Generate40x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x14Test) {
+TEST_F(GeneratorTest, Generate40x14Test) {
   rows_ = 40;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -37525,7 +37525,7 @@ TEST_F(MazeGeneratorTest, Generate40x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x15Test) {
+TEST_F(GeneratorTest, Generate40x15Test) {
   rows_ = 40;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -37545,7 +37545,7 @@ TEST_F(MazeGeneratorTest, Generate40x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x16Test) {
+TEST_F(GeneratorTest, Generate40x16Test) {
   rows_ = 40;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -37565,7 +37565,7 @@ TEST_F(MazeGeneratorTest, Generate40x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x17Test) {
+TEST_F(GeneratorTest, Generate40x17Test) {
   rows_ = 40;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -37585,7 +37585,7 @@ TEST_F(MazeGeneratorTest, Generate40x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x18Test) {
+TEST_F(GeneratorTest, Generate40x18Test) {
   rows_ = 40;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -37605,7 +37605,7 @@ TEST_F(MazeGeneratorTest, Generate40x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x19Test) {
+TEST_F(GeneratorTest, Generate40x19Test) {
   rows_ = 40;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -37625,7 +37625,7 @@ TEST_F(MazeGeneratorTest, Generate40x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x20Test) {
+TEST_F(GeneratorTest, Generate40x20Test) {
   rows_ = 40;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -37645,7 +37645,7 @@ TEST_F(MazeGeneratorTest, Generate40x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x21Test) {
+TEST_F(GeneratorTest, Generate40x21Test) {
   rows_ = 40;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -37665,7 +37665,7 @@ TEST_F(MazeGeneratorTest, Generate40x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x22Test) {
+TEST_F(GeneratorTest, Generate40x22Test) {
   rows_ = 40;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -37685,7 +37685,7 @@ TEST_F(MazeGeneratorTest, Generate40x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x23Test) {
+TEST_F(GeneratorTest, Generate40x23Test) {
   rows_ = 40;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -37705,7 +37705,7 @@ TEST_F(MazeGeneratorTest, Generate40x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x24Test) {
+TEST_F(GeneratorTest, Generate40x24Test) {
   rows_ = 40;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -37725,7 +37725,7 @@ TEST_F(MazeGeneratorTest, Generate40x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x25Test) {
+TEST_F(GeneratorTest, Generate40x25Test) {
   rows_ = 40;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -37745,7 +37745,7 @@ TEST_F(MazeGeneratorTest, Generate40x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x26Test) {
+TEST_F(GeneratorTest, Generate40x26Test) {
   rows_ = 40;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -37765,7 +37765,7 @@ TEST_F(MazeGeneratorTest, Generate40x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x27Test) {
+TEST_F(GeneratorTest, Generate40x27Test) {
   rows_ = 40;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -37785,7 +37785,7 @@ TEST_F(MazeGeneratorTest, Generate40x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x28Test) {
+TEST_F(GeneratorTest, Generate40x28Test) {
   rows_ = 40;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -37805,7 +37805,7 @@ TEST_F(MazeGeneratorTest, Generate40x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x29Test) {
+TEST_F(GeneratorTest, Generate40x29Test) {
   rows_ = 40;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -37825,7 +37825,7 @@ TEST_F(MazeGeneratorTest, Generate40x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x30Test) {
+TEST_F(GeneratorTest, Generate40x30Test) {
   rows_ = 40;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -37845,7 +37845,7 @@ TEST_F(MazeGeneratorTest, Generate40x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x31Test) {
+TEST_F(GeneratorTest, Generate40x31Test) {
   rows_ = 40;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -37865,7 +37865,7 @@ TEST_F(MazeGeneratorTest, Generate40x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x32Test) {
+TEST_F(GeneratorTest, Generate40x32Test) {
   rows_ = 40;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -37885,7 +37885,7 @@ TEST_F(MazeGeneratorTest, Generate40x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x33Test) {
+TEST_F(GeneratorTest, Generate40x33Test) {
   rows_ = 40;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -37905,7 +37905,7 @@ TEST_F(MazeGeneratorTest, Generate40x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x34Test) {
+TEST_F(GeneratorTest, Generate40x34Test) {
   rows_ = 40;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -37925,7 +37925,7 @@ TEST_F(MazeGeneratorTest, Generate40x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x35Test) {
+TEST_F(GeneratorTest, Generate40x35Test) {
   rows_ = 40;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -37945,7 +37945,7 @@ TEST_F(MazeGeneratorTest, Generate40x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x36Test) {
+TEST_F(GeneratorTest, Generate40x36Test) {
   rows_ = 40;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -37965,7 +37965,7 @@ TEST_F(MazeGeneratorTest, Generate40x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x37Test) {
+TEST_F(GeneratorTest, Generate40x37Test) {
   rows_ = 40;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -37985,7 +37985,7 @@ TEST_F(MazeGeneratorTest, Generate40x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x38Test) {
+TEST_F(GeneratorTest, Generate40x38Test) {
   rows_ = 40;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -38005,7 +38005,7 @@ TEST_F(MazeGeneratorTest, Generate40x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x39Test) {
+TEST_F(GeneratorTest, Generate40x39Test) {
   rows_ = 40;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -38025,7 +38025,7 @@ TEST_F(MazeGeneratorTest, Generate40x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x40Test) {
+TEST_F(GeneratorTest, Generate40x40Test) {
   rows_ = 40;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -38045,7 +38045,7 @@ TEST_F(MazeGeneratorTest, Generate40x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x41Test) {
+TEST_F(GeneratorTest, Generate40x41Test) {
   rows_ = 40;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -38065,7 +38065,7 @@ TEST_F(MazeGeneratorTest, Generate40x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x42Test) {
+TEST_F(GeneratorTest, Generate40x42Test) {
   rows_ = 40;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -38085,7 +38085,7 @@ TEST_F(MazeGeneratorTest, Generate40x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x43Test) {
+TEST_F(GeneratorTest, Generate40x43Test) {
   rows_ = 40;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -38105,7 +38105,7 @@ TEST_F(MazeGeneratorTest, Generate40x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x44Test) {
+TEST_F(GeneratorTest, Generate40x44Test) {
   rows_ = 40;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -38125,7 +38125,7 @@ TEST_F(MazeGeneratorTest, Generate40x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x45Test) {
+TEST_F(GeneratorTest, Generate40x45Test) {
   rows_ = 40;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -38145,7 +38145,7 @@ TEST_F(MazeGeneratorTest, Generate40x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x46Test) {
+TEST_F(GeneratorTest, Generate40x46Test) {
   rows_ = 40;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -38165,7 +38165,7 @@ TEST_F(MazeGeneratorTest, Generate40x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x47Test) {
+TEST_F(GeneratorTest, Generate40x47Test) {
   rows_ = 40;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -38185,7 +38185,7 @@ TEST_F(MazeGeneratorTest, Generate40x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x48Test) {
+TEST_F(GeneratorTest, Generate40x48Test) {
   rows_ = 40;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -38205,7 +38205,7 @@ TEST_F(MazeGeneratorTest, Generate40x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x49Test) {
+TEST_F(GeneratorTest, Generate40x49Test) {
   rows_ = 40;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -38225,7 +38225,7 @@ TEST_F(MazeGeneratorTest, Generate40x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate40x50Test) {
+TEST_F(GeneratorTest, Generate40x50Test) {
   rows_ = 40;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -38245,7 +38245,7 @@ TEST_F(MazeGeneratorTest, Generate40x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x2Test) {
+TEST_F(GeneratorTest, Generate41x2Test) {
   rows_ = 41;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -38265,7 +38265,7 @@ TEST_F(MazeGeneratorTest, Generate41x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x3Test) {
+TEST_F(GeneratorTest, Generate41x3Test) {
   rows_ = 41;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -38285,7 +38285,7 @@ TEST_F(MazeGeneratorTest, Generate41x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x4Test) {
+TEST_F(GeneratorTest, Generate41x4Test) {
   rows_ = 41;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -38305,7 +38305,7 @@ TEST_F(MazeGeneratorTest, Generate41x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x5Test) {
+TEST_F(GeneratorTest, Generate41x5Test) {
   rows_ = 41;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -38325,7 +38325,7 @@ TEST_F(MazeGeneratorTest, Generate41x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x6Test) {
+TEST_F(GeneratorTest, Generate41x6Test) {
   rows_ = 41;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -38345,7 +38345,7 @@ TEST_F(MazeGeneratorTest, Generate41x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x7Test) {
+TEST_F(GeneratorTest, Generate41x7Test) {
   rows_ = 41;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -38365,7 +38365,7 @@ TEST_F(MazeGeneratorTest, Generate41x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x8Test) {
+TEST_F(GeneratorTest, Generate41x8Test) {
   rows_ = 41;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -38385,7 +38385,7 @@ TEST_F(MazeGeneratorTest, Generate41x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x9Test) {
+TEST_F(GeneratorTest, Generate41x9Test) {
   rows_ = 41;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -38405,7 +38405,7 @@ TEST_F(MazeGeneratorTest, Generate41x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x10Test) {
+TEST_F(GeneratorTest, Generate41x10Test) {
   rows_ = 41;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -38425,7 +38425,7 @@ TEST_F(MazeGeneratorTest, Generate41x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x11Test) {
+TEST_F(GeneratorTest, Generate41x11Test) {
   rows_ = 41;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -38445,7 +38445,7 @@ TEST_F(MazeGeneratorTest, Generate41x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x12Test) {
+TEST_F(GeneratorTest, Generate41x12Test) {
   rows_ = 41;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -38465,7 +38465,7 @@ TEST_F(MazeGeneratorTest, Generate41x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x13Test) {
+TEST_F(GeneratorTest, Generate41x13Test) {
   rows_ = 41;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -38485,7 +38485,7 @@ TEST_F(MazeGeneratorTest, Generate41x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x14Test) {
+TEST_F(GeneratorTest, Generate41x14Test) {
   rows_ = 41;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -38505,7 +38505,7 @@ TEST_F(MazeGeneratorTest, Generate41x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x15Test) {
+TEST_F(GeneratorTest, Generate41x15Test) {
   rows_ = 41;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -38525,7 +38525,7 @@ TEST_F(MazeGeneratorTest, Generate41x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x16Test) {
+TEST_F(GeneratorTest, Generate41x16Test) {
   rows_ = 41;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -38545,7 +38545,7 @@ TEST_F(MazeGeneratorTest, Generate41x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x17Test) {
+TEST_F(GeneratorTest, Generate41x17Test) {
   rows_ = 41;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -38565,7 +38565,7 @@ TEST_F(MazeGeneratorTest, Generate41x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x18Test) {
+TEST_F(GeneratorTest, Generate41x18Test) {
   rows_ = 41;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -38585,7 +38585,7 @@ TEST_F(MazeGeneratorTest, Generate41x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x19Test) {
+TEST_F(GeneratorTest, Generate41x19Test) {
   rows_ = 41;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -38605,7 +38605,7 @@ TEST_F(MazeGeneratorTest, Generate41x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x20Test) {
+TEST_F(GeneratorTest, Generate41x20Test) {
   rows_ = 41;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -38625,7 +38625,7 @@ TEST_F(MazeGeneratorTest, Generate41x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x21Test) {
+TEST_F(GeneratorTest, Generate41x21Test) {
   rows_ = 41;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -38645,7 +38645,7 @@ TEST_F(MazeGeneratorTest, Generate41x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x22Test) {
+TEST_F(GeneratorTest, Generate41x22Test) {
   rows_ = 41;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -38665,7 +38665,7 @@ TEST_F(MazeGeneratorTest, Generate41x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x23Test) {
+TEST_F(GeneratorTest, Generate41x23Test) {
   rows_ = 41;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -38685,7 +38685,7 @@ TEST_F(MazeGeneratorTest, Generate41x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x24Test) {
+TEST_F(GeneratorTest, Generate41x24Test) {
   rows_ = 41;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -38705,7 +38705,7 @@ TEST_F(MazeGeneratorTest, Generate41x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x25Test) {
+TEST_F(GeneratorTest, Generate41x25Test) {
   rows_ = 41;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -38725,7 +38725,7 @@ TEST_F(MazeGeneratorTest, Generate41x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x26Test) {
+TEST_F(GeneratorTest, Generate41x26Test) {
   rows_ = 41;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -38745,7 +38745,7 @@ TEST_F(MazeGeneratorTest, Generate41x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x27Test) {
+TEST_F(GeneratorTest, Generate41x27Test) {
   rows_ = 41;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -38765,7 +38765,7 @@ TEST_F(MazeGeneratorTest, Generate41x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x28Test) {
+TEST_F(GeneratorTest, Generate41x28Test) {
   rows_ = 41;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -38785,7 +38785,7 @@ TEST_F(MazeGeneratorTest, Generate41x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x29Test) {
+TEST_F(GeneratorTest, Generate41x29Test) {
   rows_ = 41;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -38805,7 +38805,7 @@ TEST_F(MazeGeneratorTest, Generate41x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x30Test) {
+TEST_F(GeneratorTest, Generate41x30Test) {
   rows_ = 41;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -38825,7 +38825,7 @@ TEST_F(MazeGeneratorTest, Generate41x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x31Test) {
+TEST_F(GeneratorTest, Generate41x31Test) {
   rows_ = 41;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -38845,7 +38845,7 @@ TEST_F(MazeGeneratorTest, Generate41x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x32Test) {
+TEST_F(GeneratorTest, Generate41x32Test) {
   rows_ = 41;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -38865,7 +38865,7 @@ TEST_F(MazeGeneratorTest, Generate41x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x33Test) {
+TEST_F(GeneratorTest, Generate41x33Test) {
   rows_ = 41;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -38885,7 +38885,7 @@ TEST_F(MazeGeneratorTest, Generate41x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x34Test) {
+TEST_F(GeneratorTest, Generate41x34Test) {
   rows_ = 41;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -38905,7 +38905,7 @@ TEST_F(MazeGeneratorTest, Generate41x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x35Test) {
+TEST_F(GeneratorTest, Generate41x35Test) {
   rows_ = 41;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -38925,7 +38925,7 @@ TEST_F(MazeGeneratorTest, Generate41x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x36Test) {
+TEST_F(GeneratorTest, Generate41x36Test) {
   rows_ = 41;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -38945,7 +38945,7 @@ TEST_F(MazeGeneratorTest, Generate41x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x37Test) {
+TEST_F(GeneratorTest, Generate41x37Test) {
   rows_ = 41;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -38965,7 +38965,7 @@ TEST_F(MazeGeneratorTest, Generate41x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x38Test) {
+TEST_F(GeneratorTest, Generate41x38Test) {
   rows_ = 41;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -38985,7 +38985,7 @@ TEST_F(MazeGeneratorTest, Generate41x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x39Test) {
+TEST_F(GeneratorTest, Generate41x39Test) {
   rows_ = 41;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -39005,7 +39005,7 @@ TEST_F(MazeGeneratorTest, Generate41x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x40Test) {
+TEST_F(GeneratorTest, Generate41x40Test) {
   rows_ = 41;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -39025,7 +39025,7 @@ TEST_F(MazeGeneratorTest, Generate41x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x41Test) {
+TEST_F(GeneratorTest, Generate41x41Test) {
   rows_ = 41;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -39045,7 +39045,7 @@ TEST_F(MazeGeneratorTest, Generate41x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x42Test) {
+TEST_F(GeneratorTest, Generate41x42Test) {
   rows_ = 41;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -39065,7 +39065,7 @@ TEST_F(MazeGeneratorTest, Generate41x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x43Test) {
+TEST_F(GeneratorTest, Generate41x43Test) {
   rows_ = 41;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -39085,7 +39085,7 @@ TEST_F(MazeGeneratorTest, Generate41x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x44Test) {
+TEST_F(GeneratorTest, Generate41x44Test) {
   rows_ = 41;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -39105,7 +39105,7 @@ TEST_F(MazeGeneratorTest, Generate41x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x45Test) {
+TEST_F(GeneratorTest, Generate41x45Test) {
   rows_ = 41;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -39125,7 +39125,7 @@ TEST_F(MazeGeneratorTest, Generate41x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x46Test) {
+TEST_F(GeneratorTest, Generate41x46Test) {
   rows_ = 41;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -39145,7 +39145,7 @@ TEST_F(MazeGeneratorTest, Generate41x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x47Test) {
+TEST_F(GeneratorTest, Generate41x47Test) {
   rows_ = 41;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -39165,7 +39165,7 @@ TEST_F(MazeGeneratorTest, Generate41x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x48Test) {
+TEST_F(GeneratorTest, Generate41x48Test) {
   rows_ = 41;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -39185,7 +39185,7 @@ TEST_F(MazeGeneratorTest, Generate41x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x49Test) {
+TEST_F(GeneratorTest, Generate41x49Test) {
   rows_ = 41;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -39205,7 +39205,7 @@ TEST_F(MazeGeneratorTest, Generate41x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate41x50Test) {
+TEST_F(GeneratorTest, Generate41x50Test) {
   rows_ = 41;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -39225,7 +39225,7 @@ TEST_F(MazeGeneratorTest, Generate41x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x2Test) {
+TEST_F(GeneratorTest, Generate42x2Test) {
   rows_ = 42;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -39245,7 +39245,7 @@ TEST_F(MazeGeneratorTest, Generate42x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x3Test) {
+TEST_F(GeneratorTest, Generate42x3Test) {
   rows_ = 42;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -39265,7 +39265,7 @@ TEST_F(MazeGeneratorTest, Generate42x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x4Test) {
+TEST_F(GeneratorTest, Generate42x4Test) {
   rows_ = 42;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -39285,7 +39285,7 @@ TEST_F(MazeGeneratorTest, Generate42x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x5Test) {
+TEST_F(GeneratorTest, Generate42x5Test) {
   rows_ = 42;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -39305,7 +39305,7 @@ TEST_F(MazeGeneratorTest, Generate42x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x6Test) {
+TEST_F(GeneratorTest, Generate42x6Test) {
   rows_ = 42;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -39325,7 +39325,7 @@ TEST_F(MazeGeneratorTest, Generate42x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x7Test) {
+TEST_F(GeneratorTest, Generate42x7Test) {
   rows_ = 42;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -39345,7 +39345,7 @@ TEST_F(MazeGeneratorTest, Generate42x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x8Test) {
+TEST_F(GeneratorTest, Generate42x8Test) {
   rows_ = 42;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -39365,7 +39365,7 @@ TEST_F(MazeGeneratorTest, Generate42x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x9Test) {
+TEST_F(GeneratorTest, Generate42x9Test) {
   rows_ = 42;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -39385,7 +39385,7 @@ TEST_F(MazeGeneratorTest, Generate42x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x10Test) {
+TEST_F(GeneratorTest, Generate42x10Test) {
   rows_ = 42;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -39405,7 +39405,7 @@ TEST_F(MazeGeneratorTest, Generate42x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x11Test) {
+TEST_F(GeneratorTest, Generate42x11Test) {
   rows_ = 42;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -39425,7 +39425,7 @@ TEST_F(MazeGeneratorTest, Generate42x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x12Test) {
+TEST_F(GeneratorTest, Generate42x12Test) {
   rows_ = 42;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -39445,7 +39445,7 @@ TEST_F(MazeGeneratorTest, Generate42x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x13Test) {
+TEST_F(GeneratorTest, Generate42x13Test) {
   rows_ = 42;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -39465,7 +39465,7 @@ TEST_F(MazeGeneratorTest, Generate42x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x14Test) {
+TEST_F(GeneratorTest, Generate42x14Test) {
   rows_ = 42;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -39485,7 +39485,7 @@ TEST_F(MazeGeneratorTest, Generate42x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x15Test) {
+TEST_F(GeneratorTest, Generate42x15Test) {
   rows_ = 42;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -39505,7 +39505,7 @@ TEST_F(MazeGeneratorTest, Generate42x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x16Test) {
+TEST_F(GeneratorTest, Generate42x16Test) {
   rows_ = 42;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -39525,7 +39525,7 @@ TEST_F(MazeGeneratorTest, Generate42x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x17Test) {
+TEST_F(GeneratorTest, Generate42x17Test) {
   rows_ = 42;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -39545,7 +39545,7 @@ TEST_F(MazeGeneratorTest, Generate42x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x18Test) {
+TEST_F(GeneratorTest, Generate42x18Test) {
   rows_ = 42;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -39565,7 +39565,7 @@ TEST_F(MazeGeneratorTest, Generate42x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x19Test) {
+TEST_F(GeneratorTest, Generate42x19Test) {
   rows_ = 42;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -39585,7 +39585,7 @@ TEST_F(MazeGeneratorTest, Generate42x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x20Test) {
+TEST_F(GeneratorTest, Generate42x20Test) {
   rows_ = 42;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -39605,7 +39605,7 @@ TEST_F(MazeGeneratorTest, Generate42x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x21Test) {
+TEST_F(GeneratorTest, Generate42x21Test) {
   rows_ = 42;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -39625,7 +39625,7 @@ TEST_F(MazeGeneratorTest, Generate42x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x22Test) {
+TEST_F(GeneratorTest, Generate42x22Test) {
   rows_ = 42;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -39645,7 +39645,7 @@ TEST_F(MazeGeneratorTest, Generate42x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x23Test) {
+TEST_F(GeneratorTest, Generate42x23Test) {
   rows_ = 42;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -39665,7 +39665,7 @@ TEST_F(MazeGeneratorTest, Generate42x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x24Test) {
+TEST_F(GeneratorTest, Generate42x24Test) {
   rows_ = 42;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -39685,7 +39685,7 @@ TEST_F(MazeGeneratorTest, Generate42x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x25Test) {
+TEST_F(GeneratorTest, Generate42x25Test) {
   rows_ = 42;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -39705,7 +39705,7 @@ TEST_F(MazeGeneratorTest, Generate42x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x26Test) {
+TEST_F(GeneratorTest, Generate42x26Test) {
   rows_ = 42;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -39725,7 +39725,7 @@ TEST_F(MazeGeneratorTest, Generate42x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x27Test) {
+TEST_F(GeneratorTest, Generate42x27Test) {
   rows_ = 42;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -39745,7 +39745,7 @@ TEST_F(MazeGeneratorTest, Generate42x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x28Test) {
+TEST_F(GeneratorTest, Generate42x28Test) {
   rows_ = 42;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -39765,7 +39765,7 @@ TEST_F(MazeGeneratorTest, Generate42x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x29Test) {
+TEST_F(GeneratorTest, Generate42x29Test) {
   rows_ = 42;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -39785,7 +39785,7 @@ TEST_F(MazeGeneratorTest, Generate42x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x30Test) {
+TEST_F(GeneratorTest, Generate42x30Test) {
   rows_ = 42;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -39805,7 +39805,7 @@ TEST_F(MazeGeneratorTest, Generate42x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x31Test) {
+TEST_F(GeneratorTest, Generate42x31Test) {
   rows_ = 42;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -39825,7 +39825,7 @@ TEST_F(MazeGeneratorTest, Generate42x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x32Test) {
+TEST_F(GeneratorTest, Generate42x32Test) {
   rows_ = 42;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -39845,7 +39845,7 @@ TEST_F(MazeGeneratorTest, Generate42x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x33Test) {
+TEST_F(GeneratorTest, Generate42x33Test) {
   rows_ = 42;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -39865,7 +39865,7 @@ TEST_F(MazeGeneratorTest, Generate42x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x34Test) {
+TEST_F(GeneratorTest, Generate42x34Test) {
   rows_ = 42;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -39885,7 +39885,7 @@ TEST_F(MazeGeneratorTest, Generate42x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x35Test) {
+TEST_F(GeneratorTest, Generate42x35Test) {
   rows_ = 42;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -39905,7 +39905,7 @@ TEST_F(MazeGeneratorTest, Generate42x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x36Test) {
+TEST_F(GeneratorTest, Generate42x36Test) {
   rows_ = 42;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -39925,7 +39925,7 @@ TEST_F(MazeGeneratorTest, Generate42x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x37Test) {
+TEST_F(GeneratorTest, Generate42x37Test) {
   rows_ = 42;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -39945,7 +39945,7 @@ TEST_F(MazeGeneratorTest, Generate42x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x38Test) {
+TEST_F(GeneratorTest, Generate42x38Test) {
   rows_ = 42;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -39965,7 +39965,7 @@ TEST_F(MazeGeneratorTest, Generate42x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x39Test) {
+TEST_F(GeneratorTest, Generate42x39Test) {
   rows_ = 42;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -39985,7 +39985,7 @@ TEST_F(MazeGeneratorTest, Generate42x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x40Test) {
+TEST_F(GeneratorTest, Generate42x40Test) {
   rows_ = 42;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -40005,7 +40005,7 @@ TEST_F(MazeGeneratorTest, Generate42x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x41Test) {
+TEST_F(GeneratorTest, Generate42x41Test) {
   rows_ = 42;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -40025,7 +40025,7 @@ TEST_F(MazeGeneratorTest, Generate42x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x42Test) {
+TEST_F(GeneratorTest, Generate42x42Test) {
   rows_ = 42;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -40045,7 +40045,7 @@ TEST_F(MazeGeneratorTest, Generate42x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x43Test) {
+TEST_F(GeneratorTest, Generate42x43Test) {
   rows_ = 42;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -40065,7 +40065,7 @@ TEST_F(MazeGeneratorTest, Generate42x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x44Test) {
+TEST_F(GeneratorTest, Generate42x44Test) {
   rows_ = 42;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -40085,7 +40085,7 @@ TEST_F(MazeGeneratorTest, Generate42x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x45Test) {
+TEST_F(GeneratorTest, Generate42x45Test) {
   rows_ = 42;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -40105,7 +40105,7 @@ TEST_F(MazeGeneratorTest, Generate42x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x46Test) {
+TEST_F(GeneratorTest, Generate42x46Test) {
   rows_ = 42;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -40125,7 +40125,7 @@ TEST_F(MazeGeneratorTest, Generate42x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x47Test) {
+TEST_F(GeneratorTest, Generate42x47Test) {
   rows_ = 42;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -40145,7 +40145,7 @@ TEST_F(MazeGeneratorTest, Generate42x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x48Test) {
+TEST_F(GeneratorTest, Generate42x48Test) {
   rows_ = 42;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -40165,7 +40165,7 @@ TEST_F(MazeGeneratorTest, Generate42x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x49Test) {
+TEST_F(GeneratorTest, Generate42x49Test) {
   rows_ = 42;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -40185,7 +40185,7 @@ TEST_F(MazeGeneratorTest, Generate42x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate42x50Test) {
+TEST_F(GeneratorTest, Generate42x50Test) {
   rows_ = 42;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -40205,7 +40205,7 @@ TEST_F(MazeGeneratorTest, Generate42x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x2Test) {
+TEST_F(GeneratorTest, Generate43x2Test) {
   rows_ = 43;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -40225,7 +40225,7 @@ TEST_F(MazeGeneratorTest, Generate43x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x3Test) {
+TEST_F(GeneratorTest, Generate43x3Test) {
   rows_ = 43;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -40245,7 +40245,7 @@ TEST_F(MazeGeneratorTest, Generate43x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x4Test) {
+TEST_F(GeneratorTest, Generate43x4Test) {
   rows_ = 43;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -40265,7 +40265,7 @@ TEST_F(MazeGeneratorTest, Generate43x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x5Test) {
+TEST_F(GeneratorTest, Generate43x5Test) {
   rows_ = 43;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -40285,7 +40285,7 @@ TEST_F(MazeGeneratorTest, Generate43x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x6Test) {
+TEST_F(GeneratorTest, Generate43x6Test) {
   rows_ = 43;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -40305,7 +40305,7 @@ TEST_F(MazeGeneratorTest, Generate43x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x7Test) {
+TEST_F(GeneratorTest, Generate43x7Test) {
   rows_ = 43;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -40325,7 +40325,7 @@ TEST_F(MazeGeneratorTest, Generate43x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x8Test) {
+TEST_F(GeneratorTest, Generate43x8Test) {
   rows_ = 43;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -40345,7 +40345,7 @@ TEST_F(MazeGeneratorTest, Generate43x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x9Test) {
+TEST_F(GeneratorTest, Generate43x9Test) {
   rows_ = 43;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -40365,7 +40365,7 @@ TEST_F(MazeGeneratorTest, Generate43x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x10Test) {
+TEST_F(GeneratorTest, Generate43x10Test) {
   rows_ = 43;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -40385,7 +40385,7 @@ TEST_F(MazeGeneratorTest, Generate43x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x11Test) {
+TEST_F(GeneratorTest, Generate43x11Test) {
   rows_ = 43;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -40405,7 +40405,7 @@ TEST_F(MazeGeneratorTest, Generate43x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x12Test) {
+TEST_F(GeneratorTest, Generate43x12Test) {
   rows_ = 43;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -40425,7 +40425,7 @@ TEST_F(MazeGeneratorTest, Generate43x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x13Test) {
+TEST_F(GeneratorTest, Generate43x13Test) {
   rows_ = 43;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -40445,7 +40445,7 @@ TEST_F(MazeGeneratorTest, Generate43x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x14Test) {
+TEST_F(GeneratorTest, Generate43x14Test) {
   rows_ = 43;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -40465,7 +40465,7 @@ TEST_F(MazeGeneratorTest, Generate43x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x15Test) {
+TEST_F(GeneratorTest, Generate43x15Test) {
   rows_ = 43;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -40485,7 +40485,7 @@ TEST_F(MazeGeneratorTest, Generate43x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x16Test) {
+TEST_F(GeneratorTest, Generate43x16Test) {
   rows_ = 43;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -40505,7 +40505,7 @@ TEST_F(MazeGeneratorTest, Generate43x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x17Test) {
+TEST_F(GeneratorTest, Generate43x17Test) {
   rows_ = 43;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -40525,7 +40525,7 @@ TEST_F(MazeGeneratorTest, Generate43x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x18Test) {
+TEST_F(GeneratorTest, Generate43x18Test) {
   rows_ = 43;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -40545,7 +40545,7 @@ TEST_F(MazeGeneratorTest, Generate43x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x19Test) {
+TEST_F(GeneratorTest, Generate43x19Test) {
   rows_ = 43;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -40565,7 +40565,7 @@ TEST_F(MazeGeneratorTest, Generate43x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x20Test) {
+TEST_F(GeneratorTest, Generate43x20Test) {
   rows_ = 43;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -40585,7 +40585,7 @@ TEST_F(MazeGeneratorTest, Generate43x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x21Test) {
+TEST_F(GeneratorTest, Generate43x21Test) {
   rows_ = 43;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -40605,7 +40605,7 @@ TEST_F(MazeGeneratorTest, Generate43x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x22Test) {
+TEST_F(GeneratorTest, Generate43x22Test) {
   rows_ = 43;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -40625,7 +40625,7 @@ TEST_F(MazeGeneratorTest, Generate43x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x23Test) {
+TEST_F(GeneratorTest, Generate43x23Test) {
   rows_ = 43;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -40645,7 +40645,7 @@ TEST_F(MazeGeneratorTest, Generate43x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x24Test) {
+TEST_F(GeneratorTest, Generate43x24Test) {
   rows_ = 43;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -40665,7 +40665,7 @@ TEST_F(MazeGeneratorTest, Generate43x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x25Test) {
+TEST_F(GeneratorTest, Generate43x25Test) {
   rows_ = 43;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -40685,7 +40685,7 @@ TEST_F(MazeGeneratorTest, Generate43x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x26Test) {
+TEST_F(GeneratorTest, Generate43x26Test) {
   rows_ = 43;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -40705,7 +40705,7 @@ TEST_F(MazeGeneratorTest, Generate43x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x27Test) {
+TEST_F(GeneratorTest, Generate43x27Test) {
   rows_ = 43;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -40725,7 +40725,7 @@ TEST_F(MazeGeneratorTest, Generate43x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x28Test) {
+TEST_F(GeneratorTest, Generate43x28Test) {
   rows_ = 43;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -40745,7 +40745,7 @@ TEST_F(MazeGeneratorTest, Generate43x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x29Test) {
+TEST_F(GeneratorTest, Generate43x29Test) {
   rows_ = 43;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -40765,7 +40765,7 @@ TEST_F(MazeGeneratorTest, Generate43x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x30Test) {
+TEST_F(GeneratorTest, Generate43x30Test) {
   rows_ = 43;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -40785,7 +40785,7 @@ TEST_F(MazeGeneratorTest, Generate43x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x31Test) {
+TEST_F(GeneratorTest, Generate43x31Test) {
   rows_ = 43;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -40805,7 +40805,7 @@ TEST_F(MazeGeneratorTest, Generate43x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x32Test) {
+TEST_F(GeneratorTest, Generate43x32Test) {
   rows_ = 43;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -40825,7 +40825,7 @@ TEST_F(MazeGeneratorTest, Generate43x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x33Test) {
+TEST_F(GeneratorTest, Generate43x33Test) {
   rows_ = 43;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -40845,7 +40845,7 @@ TEST_F(MazeGeneratorTest, Generate43x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x34Test) {
+TEST_F(GeneratorTest, Generate43x34Test) {
   rows_ = 43;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -40865,7 +40865,7 @@ TEST_F(MazeGeneratorTest, Generate43x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x35Test) {
+TEST_F(GeneratorTest, Generate43x35Test) {
   rows_ = 43;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -40885,7 +40885,7 @@ TEST_F(MazeGeneratorTest, Generate43x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x36Test) {
+TEST_F(GeneratorTest, Generate43x36Test) {
   rows_ = 43;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -40905,7 +40905,7 @@ TEST_F(MazeGeneratorTest, Generate43x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x37Test) {
+TEST_F(GeneratorTest, Generate43x37Test) {
   rows_ = 43;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -40925,7 +40925,7 @@ TEST_F(MazeGeneratorTest, Generate43x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x38Test) {
+TEST_F(GeneratorTest, Generate43x38Test) {
   rows_ = 43;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -40945,7 +40945,7 @@ TEST_F(MazeGeneratorTest, Generate43x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x39Test) {
+TEST_F(GeneratorTest, Generate43x39Test) {
   rows_ = 43;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -40965,7 +40965,7 @@ TEST_F(MazeGeneratorTest, Generate43x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x40Test) {
+TEST_F(GeneratorTest, Generate43x40Test) {
   rows_ = 43;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -40985,7 +40985,7 @@ TEST_F(MazeGeneratorTest, Generate43x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x41Test) {
+TEST_F(GeneratorTest, Generate43x41Test) {
   rows_ = 43;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -41005,7 +41005,7 @@ TEST_F(MazeGeneratorTest, Generate43x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x42Test) {
+TEST_F(GeneratorTest, Generate43x42Test) {
   rows_ = 43;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -41025,7 +41025,7 @@ TEST_F(MazeGeneratorTest, Generate43x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x43Test) {
+TEST_F(GeneratorTest, Generate43x43Test) {
   rows_ = 43;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -41045,7 +41045,7 @@ TEST_F(MazeGeneratorTest, Generate43x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x44Test) {
+TEST_F(GeneratorTest, Generate43x44Test) {
   rows_ = 43;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -41065,7 +41065,7 @@ TEST_F(MazeGeneratorTest, Generate43x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x45Test) {
+TEST_F(GeneratorTest, Generate43x45Test) {
   rows_ = 43;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -41085,7 +41085,7 @@ TEST_F(MazeGeneratorTest, Generate43x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x46Test) {
+TEST_F(GeneratorTest, Generate43x46Test) {
   rows_ = 43;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -41105,7 +41105,7 @@ TEST_F(MazeGeneratorTest, Generate43x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x47Test) {
+TEST_F(GeneratorTest, Generate43x47Test) {
   rows_ = 43;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -41125,7 +41125,7 @@ TEST_F(MazeGeneratorTest, Generate43x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x48Test) {
+TEST_F(GeneratorTest, Generate43x48Test) {
   rows_ = 43;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -41145,7 +41145,7 @@ TEST_F(MazeGeneratorTest, Generate43x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x49Test) {
+TEST_F(GeneratorTest, Generate43x49Test) {
   rows_ = 43;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -41165,7 +41165,7 @@ TEST_F(MazeGeneratorTest, Generate43x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate43x50Test) {
+TEST_F(GeneratorTest, Generate43x50Test) {
   rows_ = 43;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -41185,7 +41185,7 @@ TEST_F(MazeGeneratorTest, Generate43x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x2Test) {
+TEST_F(GeneratorTest, Generate44x2Test) {
   rows_ = 44;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -41205,7 +41205,7 @@ TEST_F(MazeGeneratorTest, Generate44x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x3Test) {
+TEST_F(GeneratorTest, Generate44x3Test) {
   rows_ = 44;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -41225,7 +41225,7 @@ TEST_F(MazeGeneratorTest, Generate44x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x4Test) {
+TEST_F(GeneratorTest, Generate44x4Test) {
   rows_ = 44;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -41245,7 +41245,7 @@ TEST_F(MazeGeneratorTest, Generate44x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x5Test) {
+TEST_F(GeneratorTest, Generate44x5Test) {
   rows_ = 44;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -41265,7 +41265,7 @@ TEST_F(MazeGeneratorTest, Generate44x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x6Test) {
+TEST_F(GeneratorTest, Generate44x6Test) {
   rows_ = 44;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -41285,7 +41285,7 @@ TEST_F(MazeGeneratorTest, Generate44x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x7Test) {
+TEST_F(GeneratorTest, Generate44x7Test) {
   rows_ = 44;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -41305,7 +41305,7 @@ TEST_F(MazeGeneratorTest, Generate44x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x8Test) {
+TEST_F(GeneratorTest, Generate44x8Test) {
   rows_ = 44;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -41325,7 +41325,7 @@ TEST_F(MazeGeneratorTest, Generate44x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x9Test) {
+TEST_F(GeneratorTest, Generate44x9Test) {
   rows_ = 44;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -41345,7 +41345,7 @@ TEST_F(MazeGeneratorTest, Generate44x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x10Test) {
+TEST_F(GeneratorTest, Generate44x10Test) {
   rows_ = 44;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -41365,7 +41365,7 @@ TEST_F(MazeGeneratorTest, Generate44x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x11Test) {
+TEST_F(GeneratorTest, Generate44x11Test) {
   rows_ = 44;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -41385,7 +41385,7 @@ TEST_F(MazeGeneratorTest, Generate44x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x12Test) {
+TEST_F(GeneratorTest, Generate44x12Test) {
   rows_ = 44;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -41405,7 +41405,7 @@ TEST_F(MazeGeneratorTest, Generate44x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x13Test) {
+TEST_F(GeneratorTest, Generate44x13Test) {
   rows_ = 44;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -41425,7 +41425,7 @@ TEST_F(MazeGeneratorTest, Generate44x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x14Test) {
+TEST_F(GeneratorTest, Generate44x14Test) {
   rows_ = 44;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -41445,7 +41445,7 @@ TEST_F(MazeGeneratorTest, Generate44x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x15Test) {
+TEST_F(GeneratorTest, Generate44x15Test) {
   rows_ = 44;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -41465,7 +41465,7 @@ TEST_F(MazeGeneratorTest, Generate44x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x16Test) {
+TEST_F(GeneratorTest, Generate44x16Test) {
   rows_ = 44;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -41485,7 +41485,7 @@ TEST_F(MazeGeneratorTest, Generate44x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x17Test) {
+TEST_F(GeneratorTest, Generate44x17Test) {
   rows_ = 44;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -41505,7 +41505,7 @@ TEST_F(MazeGeneratorTest, Generate44x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x18Test) {
+TEST_F(GeneratorTest, Generate44x18Test) {
   rows_ = 44;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -41525,7 +41525,7 @@ TEST_F(MazeGeneratorTest, Generate44x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x19Test) {
+TEST_F(GeneratorTest, Generate44x19Test) {
   rows_ = 44;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -41545,7 +41545,7 @@ TEST_F(MazeGeneratorTest, Generate44x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x20Test) {
+TEST_F(GeneratorTest, Generate44x20Test) {
   rows_ = 44;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -41565,7 +41565,7 @@ TEST_F(MazeGeneratorTest, Generate44x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x21Test) {
+TEST_F(GeneratorTest, Generate44x21Test) {
   rows_ = 44;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -41585,7 +41585,7 @@ TEST_F(MazeGeneratorTest, Generate44x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x22Test) {
+TEST_F(GeneratorTest, Generate44x22Test) {
   rows_ = 44;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -41605,7 +41605,7 @@ TEST_F(MazeGeneratorTest, Generate44x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x23Test) {
+TEST_F(GeneratorTest, Generate44x23Test) {
   rows_ = 44;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -41625,7 +41625,7 @@ TEST_F(MazeGeneratorTest, Generate44x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x24Test) {
+TEST_F(GeneratorTest, Generate44x24Test) {
   rows_ = 44;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -41645,7 +41645,7 @@ TEST_F(MazeGeneratorTest, Generate44x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x25Test) {
+TEST_F(GeneratorTest, Generate44x25Test) {
   rows_ = 44;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -41665,7 +41665,7 @@ TEST_F(MazeGeneratorTest, Generate44x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x26Test) {
+TEST_F(GeneratorTest, Generate44x26Test) {
   rows_ = 44;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -41685,7 +41685,7 @@ TEST_F(MazeGeneratorTest, Generate44x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x27Test) {
+TEST_F(GeneratorTest, Generate44x27Test) {
   rows_ = 44;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -41705,7 +41705,7 @@ TEST_F(MazeGeneratorTest, Generate44x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x28Test) {
+TEST_F(GeneratorTest, Generate44x28Test) {
   rows_ = 44;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -41725,7 +41725,7 @@ TEST_F(MazeGeneratorTest, Generate44x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x29Test) {
+TEST_F(GeneratorTest, Generate44x29Test) {
   rows_ = 44;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -41745,7 +41745,7 @@ TEST_F(MazeGeneratorTest, Generate44x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x30Test) {
+TEST_F(GeneratorTest, Generate44x30Test) {
   rows_ = 44;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -41765,7 +41765,7 @@ TEST_F(MazeGeneratorTest, Generate44x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x31Test) {
+TEST_F(GeneratorTest, Generate44x31Test) {
   rows_ = 44;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -41785,7 +41785,7 @@ TEST_F(MazeGeneratorTest, Generate44x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x32Test) {
+TEST_F(GeneratorTest, Generate44x32Test) {
   rows_ = 44;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -41805,7 +41805,7 @@ TEST_F(MazeGeneratorTest, Generate44x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x33Test) {
+TEST_F(GeneratorTest, Generate44x33Test) {
   rows_ = 44;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -41825,7 +41825,7 @@ TEST_F(MazeGeneratorTest, Generate44x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x34Test) {
+TEST_F(GeneratorTest, Generate44x34Test) {
   rows_ = 44;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -41845,7 +41845,7 @@ TEST_F(MazeGeneratorTest, Generate44x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x35Test) {
+TEST_F(GeneratorTest, Generate44x35Test) {
   rows_ = 44;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -41865,7 +41865,7 @@ TEST_F(MazeGeneratorTest, Generate44x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x36Test) {
+TEST_F(GeneratorTest, Generate44x36Test) {
   rows_ = 44;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -41885,7 +41885,7 @@ TEST_F(MazeGeneratorTest, Generate44x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x37Test) {
+TEST_F(GeneratorTest, Generate44x37Test) {
   rows_ = 44;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -41905,7 +41905,7 @@ TEST_F(MazeGeneratorTest, Generate44x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x38Test) {
+TEST_F(GeneratorTest, Generate44x38Test) {
   rows_ = 44;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -41925,7 +41925,7 @@ TEST_F(MazeGeneratorTest, Generate44x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x39Test) {
+TEST_F(GeneratorTest, Generate44x39Test) {
   rows_ = 44;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -41945,7 +41945,7 @@ TEST_F(MazeGeneratorTest, Generate44x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x40Test) {
+TEST_F(GeneratorTest, Generate44x40Test) {
   rows_ = 44;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -41965,7 +41965,7 @@ TEST_F(MazeGeneratorTest, Generate44x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x41Test) {
+TEST_F(GeneratorTest, Generate44x41Test) {
   rows_ = 44;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -41985,7 +41985,7 @@ TEST_F(MazeGeneratorTest, Generate44x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x42Test) {
+TEST_F(GeneratorTest, Generate44x42Test) {
   rows_ = 44;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -42005,7 +42005,7 @@ TEST_F(MazeGeneratorTest, Generate44x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x43Test) {
+TEST_F(GeneratorTest, Generate44x43Test) {
   rows_ = 44;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -42025,7 +42025,7 @@ TEST_F(MazeGeneratorTest, Generate44x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x44Test) {
+TEST_F(GeneratorTest, Generate44x44Test) {
   rows_ = 44;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -42045,7 +42045,7 @@ TEST_F(MazeGeneratorTest, Generate44x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x45Test) {
+TEST_F(GeneratorTest, Generate44x45Test) {
   rows_ = 44;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -42065,7 +42065,7 @@ TEST_F(MazeGeneratorTest, Generate44x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x46Test) {
+TEST_F(GeneratorTest, Generate44x46Test) {
   rows_ = 44;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -42085,7 +42085,7 @@ TEST_F(MazeGeneratorTest, Generate44x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x47Test) {
+TEST_F(GeneratorTest, Generate44x47Test) {
   rows_ = 44;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -42105,7 +42105,7 @@ TEST_F(MazeGeneratorTest, Generate44x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x48Test) {
+TEST_F(GeneratorTest, Generate44x48Test) {
   rows_ = 44;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -42125,7 +42125,7 @@ TEST_F(MazeGeneratorTest, Generate44x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x49Test) {
+TEST_F(GeneratorTest, Generate44x49Test) {
   rows_ = 44;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -42145,7 +42145,7 @@ TEST_F(MazeGeneratorTest, Generate44x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate44x50Test) {
+TEST_F(GeneratorTest, Generate44x50Test) {
   rows_ = 44;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -42165,7 +42165,7 @@ TEST_F(MazeGeneratorTest, Generate44x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x2Test) {
+TEST_F(GeneratorTest, Generate45x2Test) {
   rows_ = 45;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -42185,7 +42185,7 @@ TEST_F(MazeGeneratorTest, Generate45x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x3Test) {
+TEST_F(GeneratorTest, Generate45x3Test) {
   rows_ = 45;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -42205,7 +42205,7 @@ TEST_F(MazeGeneratorTest, Generate45x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x4Test) {
+TEST_F(GeneratorTest, Generate45x4Test) {
   rows_ = 45;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -42225,7 +42225,7 @@ TEST_F(MazeGeneratorTest, Generate45x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x5Test) {
+TEST_F(GeneratorTest, Generate45x5Test) {
   rows_ = 45;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -42245,7 +42245,7 @@ TEST_F(MazeGeneratorTest, Generate45x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x6Test) {
+TEST_F(GeneratorTest, Generate45x6Test) {
   rows_ = 45;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -42265,7 +42265,7 @@ TEST_F(MazeGeneratorTest, Generate45x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x7Test) {
+TEST_F(GeneratorTest, Generate45x7Test) {
   rows_ = 45;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -42285,7 +42285,7 @@ TEST_F(MazeGeneratorTest, Generate45x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x8Test) {
+TEST_F(GeneratorTest, Generate45x8Test) {
   rows_ = 45;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -42305,7 +42305,7 @@ TEST_F(MazeGeneratorTest, Generate45x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x9Test) {
+TEST_F(GeneratorTest, Generate45x9Test) {
   rows_ = 45;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -42325,7 +42325,7 @@ TEST_F(MazeGeneratorTest, Generate45x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x10Test) {
+TEST_F(GeneratorTest, Generate45x10Test) {
   rows_ = 45;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -42345,7 +42345,7 @@ TEST_F(MazeGeneratorTest, Generate45x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x11Test) {
+TEST_F(GeneratorTest, Generate45x11Test) {
   rows_ = 45;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -42365,7 +42365,7 @@ TEST_F(MazeGeneratorTest, Generate45x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x12Test) {
+TEST_F(GeneratorTest, Generate45x12Test) {
   rows_ = 45;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -42385,7 +42385,7 @@ TEST_F(MazeGeneratorTest, Generate45x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x13Test) {
+TEST_F(GeneratorTest, Generate45x13Test) {
   rows_ = 45;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -42405,7 +42405,7 @@ TEST_F(MazeGeneratorTest, Generate45x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x14Test) {
+TEST_F(GeneratorTest, Generate45x14Test) {
   rows_ = 45;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -42425,7 +42425,7 @@ TEST_F(MazeGeneratorTest, Generate45x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x15Test) {
+TEST_F(GeneratorTest, Generate45x15Test) {
   rows_ = 45;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -42445,7 +42445,7 @@ TEST_F(MazeGeneratorTest, Generate45x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x16Test) {
+TEST_F(GeneratorTest, Generate45x16Test) {
   rows_ = 45;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -42465,7 +42465,7 @@ TEST_F(MazeGeneratorTest, Generate45x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x17Test) {
+TEST_F(GeneratorTest, Generate45x17Test) {
   rows_ = 45;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -42485,7 +42485,7 @@ TEST_F(MazeGeneratorTest, Generate45x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x18Test) {
+TEST_F(GeneratorTest, Generate45x18Test) {
   rows_ = 45;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -42505,7 +42505,7 @@ TEST_F(MazeGeneratorTest, Generate45x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x19Test) {
+TEST_F(GeneratorTest, Generate45x19Test) {
   rows_ = 45;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -42525,7 +42525,7 @@ TEST_F(MazeGeneratorTest, Generate45x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x20Test) {
+TEST_F(GeneratorTest, Generate45x20Test) {
   rows_ = 45;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -42545,7 +42545,7 @@ TEST_F(MazeGeneratorTest, Generate45x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x21Test) {
+TEST_F(GeneratorTest, Generate45x21Test) {
   rows_ = 45;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -42565,7 +42565,7 @@ TEST_F(MazeGeneratorTest, Generate45x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x22Test) {
+TEST_F(GeneratorTest, Generate45x22Test) {
   rows_ = 45;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -42585,7 +42585,7 @@ TEST_F(MazeGeneratorTest, Generate45x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x23Test) {
+TEST_F(GeneratorTest, Generate45x23Test) {
   rows_ = 45;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -42605,7 +42605,7 @@ TEST_F(MazeGeneratorTest, Generate45x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x24Test) {
+TEST_F(GeneratorTest, Generate45x24Test) {
   rows_ = 45;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -42625,7 +42625,7 @@ TEST_F(MazeGeneratorTest, Generate45x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x25Test) {
+TEST_F(GeneratorTest, Generate45x25Test) {
   rows_ = 45;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -42645,7 +42645,7 @@ TEST_F(MazeGeneratorTest, Generate45x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x26Test) {
+TEST_F(GeneratorTest, Generate45x26Test) {
   rows_ = 45;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -42665,7 +42665,7 @@ TEST_F(MazeGeneratorTest, Generate45x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x27Test) {
+TEST_F(GeneratorTest, Generate45x27Test) {
   rows_ = 45;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -42685,7 +42685,7 @@ TEST_F(MazeGeneratorTest, Generate45x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x28Test) {
+TEST_F(GeneratorTest, Generate45x28Test) {
   rows_ = 45;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -42705,7 +42705,7 @@ TEST_F(MazeGeneratorTest, Generate45x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x29Test) {
+TEST_F(GeneratorTest, Generate45x29Test) {
   rows_ = 45;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -42725,7 +42725,7 @@ TEST_F(MazeGeneratorTest, Generate45x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x30Test) {
+TEST_F(GeneratorTest, Generate45x30Test) {
   rows_ = 45;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -42745,7 +42745,7 @@ TEST_F(MazeGeneratorTest, Generate45x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x31Test) {
+TEST_F(GeneratorTest, Generate45x31Test) {
   rows_ = 45;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -42765,7 +42765,7 @@ TEST_F(MazeGeneratorTest, Generate45x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x32Test) {
+TEST_F(GeneratorTest, Generate45x32Test) {
   rows_ = 45;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -42785,7 +42785,7 @@ TEST_F(MazeGeneratorTest, Generate45x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x33Test) {
+TEST_F(GeneratorTest, Generate45x33Test) {
   rows_ = 45;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -42805,7 +42805,7 @@ TEST_F(MazeGeneratorTest, Generate45x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x34Test) {
+TEST_F(GeneratorTest, Generate45x34Test) {
   rows_ = 45;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -42825,7 +42825,7 @@ TEST_F(MazeGeneratorTest, Generate45x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x35Test) {
+TEST_F(GeneratorTest, Generate45x35Test) {
   rows_ = 45;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -42845,7 +42845,7 @@ TEST_F(MazeGeneratorTest, Generate45x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x36Test) {
+TEST_F(GeneratorTest, Generate45x36Test) {
   rows_ = 45;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -42865,7 +42865,7 @@ TEST_F(MazeGeneratorTest, Generate45x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x37Test) {
+TEST_F(GeneratorTest, Generate45x37Test) {
   rows_ = 45;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -42885,7 +42885,7 @@ TEST_F(MazeGeneratorTest, Generate45x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x38Test) {
+TEST_F(GeneratorTest, Generate45x38Test) {
   rows_ = 45;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -42905,7 +42905,7 @@ TEST_F(MazeGeneratorTest, Generate45x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x39Test) {
+TEST_F(GeneratorTest, Generate45x39Test) {
   rows_ = 45;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -42925,7 +42925,7 @@ TEST_F(MazeGeneratorTest, Generate45x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x40Test) {
+TEST_F(GeneratorTest, Generate45x40Test) {
   rows_ = 45;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -42945,7 +42945,7 @@ TEST_F(MazeGeneratorTest, Generate45x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x41Test) {
+TEST_F(GeneratorTest, Generate45x41Test) {
   rows_ = 45;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -42965,7 +42965,7 @@ TEST_F(MazeGeneratorTest, Generate45x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x42Test) {
+TEST_F(GeneratorTest, Generate45x42Test) {
   rows_ = 45;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -42985,7 +42985,7 @@ TEST_F(MazeGeneratorTest, Generate45x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x43Test) {
+TEST_F(GeneratorTest, Generate45x43Test) {
   rows_ = 45;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -43005,7 +43005,7 @@ TEST_F(MazeGeneratorTest, Generate45x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x44Test) {
+TEST_F(GeneratorTest, Generate45x44Test) {
   rows_ = 45;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -43025,7 +43025,7 @@ TEST_F(MazeGeneratorTest, Generate45x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x45Test) {
+TEST_F(GeneratorTest, Generate45x45Test) {
   rows_ = 45;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -43045,7 +43045,7 @@ TEST_F(MazeGeneratorTest, Generate45x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x46Test) {
+TEST_F(GeneratorTest, Generate45x46Test) {
   rows_ = 45;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -43065,7 +43065,7 @@ TEST_F(MazeGeneratorTest, Generate45x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x47Test) {
+TEST_F(GeneratorTest, Generate45x47Test) {
   rows_ = 45;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -43085,7 +43085,7 @@ TEST_F(MazeGeneratorTest, Generate45x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x48Test) {
+TEST_F(GeneratorTest, Generate45x48Test) {
   rows_ = 45;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -43105,7 +43105,7 @@ TEST_F(MazeGeneratorTest, Generate45x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x49Test) {
+TEST_F(GeneratorTest, Generate45x49Test) {
   rows_ = 45;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -43125,7 +43125,7 @@ TEST_F(MazeGeneratorTest, Generate45x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate45x50Test) {
+TEST_F(GeneratorTest, Generate45x50Test) {
   rows_ = 45;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -43145,7 +43145,7 @@ TEST_F(MazeGeneratorTest, Generate45x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x2Test) {
+TEST_F(GeneratorTest, Generate46x2Test) {
   rows_ = 46;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -43165,7 +43165,7 @@ TEST_F(MazeGeneratorTest, Generate46x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x3Test) {
+TEST_F(GeneratorTest, Generate46x3Test) {
   rows_ = 46;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -43185,7 +43185,7 @@ TEST_F(MazeGeneratorTest, Generate46x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x4Test) {
+TEST_F(GeneratorTest, Generate46x4Test) {
   rows_ = 46;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -43205,7 +43205,7 @@ TEST_F(MazeGeneratorTest, Generate46x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x5Test) {
+TEST_F(GeneratorTest, Generate46x5Test) {
   rows_ = 46;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -43225,7 +43225,7 @@ TEST_F(MazeGeneratorTest, Generate46x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x6Test) {
+TEST_F(GeneratorTest, Generate46x6Test) {
   rows_ = 46;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -43245,7 +43245,7 @@ TEST_F(MazeGeneratorTest, Generate46x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x7Test) {
+TEST_F(GeneratorTest, Generate46x7Test) {
   rows_ = 46;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -43265,7 +43265,7 @@ TEST_F(MazeGeneratorTest, Generate46x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x8Test) {
+TEST_F(GeneratorTest, Generate46x8Test) {
   rows_ = 46;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -43285,7 +43285,7 @@ TEST_F(MazeGeneratorTest, Generate46x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x9Test) {
+TEST_F(GeneratorTest, Generate46x9Test) {
   rows_ = 46;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -43305,7 +43305,7 @@ TEST_F(MazeGeneratorTest, Generate46x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x10Test) {
+TEST_F(GeneratorTest, Generate46x10Test) {
   rows_ = 46;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -43325,7 +43325,7 @@ TEST_F(MazeGeneratorTest, Generate46x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x11Test) {
+TEST_F(GeneratorTest, Generate46x11Test) {
   rows_ = 46;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -43345,7 +43345,7 @@ TEST_F(MazeGeneratorTest, Generate46x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x12Test) {
+TEST_F(GeneratorTest, Generate46x12Test) {
   rows_ = 46;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -43365,7 +43365,7 @@ TEST_F(MazeGeneratorTest, Generate46x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x13Test) {
+TEST_F(GeneratorTest, Generate46x13Test) {
   rows_ = 46;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -43385,7 +43385,7 @@ TEST_F(MazeGeneratorTest, Generate46x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x14Test) {
+TEST_F(GeneratorTest, Generate46x14Test) {
   rows_ = 46;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -43405,7 +43405,7 @@ TEST_F(MazeGeneratorTest, Generate46x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x15Test) {
+TEST_F(GeneratorTest, Generate46x15Test) {
   rows_ = 46;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -43425,7 +43425,7 @@ TEST_F(MazeGeneratorTest, Generate46x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x16Test) {
+TEST_F(GeneratorTest, Generate46x16Test) {
   rows_ = 46;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -43445,7 +43445,7 @@ TEST_F(MazeGeneratorTest, Generate46x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x17Test) {
+TEST_F(GeneratorTest, Generate46x17Test) {
   rows_ = 46;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -43465,7 +43465,7 @@ TEST_F(MazeGeneratorTest, Generate46x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x18Test) {
+TEST_F(GeneratorTest, Generate46x18Test) {
   rows_ = 46;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -43485,7 +43485,7 @@ TEST_F(MazeGeneratorTest, Generate46x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x19Test) {
+TEST_F(GeneratorTest, Generate46x19Test) {
   rows_ = 46;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -43505,7 +43505,7 @@ TEST_F(MazeGeneratorTest, Generate46x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x20Test) {
+TEST_F(GeneratorTest, Generate46x20Test) {
   rows_ = 46;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -43525,7 +43525,7 @@ TEST_F(MazeGeneratorTest, Generate46x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x21Test) {
+TEST_F(GeneratorTest, Generate46x21Test) {
   rows_ = 46;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -43545,7 +43545,7 @@ TEST_F(MazeGeneratorTest, Generate46x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x22Test) {
+TEST_F(GeneratorTest, Generate46x22Test) {
   rows_ = 46;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -43565,7 +43565,7 @@ TEST_F(MazeGeneratorTest, Generate46x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x23Test) {
+TEST_F(GeneratorTest, Generate46x23Test) {
   rows_ = 46;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -43585,7 +43585,7 @@ TEST_F(MazeGeneratorTest, Generate46x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x24Test) {
+TEST_F(GeneratorTest, Generate46x24Test) {
   rows_ = 46;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -43605,7 +43605,7 @@ TEST_F(MazeGeneratorTest, Generate46x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x25Test) {
+TEST_F(GeneratorTest, Generate46x25Test) {
   rows_ = 46;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -43625,7 +43625,7 @@ TEST_F(MazeGeneratorTest, Generate46x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x26Test) {
+TEST_F(GeneratorTest, Generate46x26Test) {
   rows_ = 46;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -43645,7 +43645,7 @@ TEST_F(MazeGeneratorTest, Generate46x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x27Test) {
+TEST_F(GeneratorTest, Generate46x27Test) {
   rows_ = 46;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -43665,7 +43665,7 @@ TEST_F(MazeGeneratorTest, Generate46x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x28Test) {
+TEST_F(GeneratorTest, Generate46x28Test) {
   rows_ = 46;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -43685,7 +43685,7 @@ TEST_F(MazeGeneratorTest, Generate46x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x29Test) {
+TEST_F(GeneratorTest, Generate46x29Test) {
   rows_ = 46;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -43705,7 +43705,7 @@ TEST_F(MazeGeneratorTest, Generate46x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x30Test) {
+TEST_F(GeneratorTest, Generate46x30Test) {
   rows_ = 46;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -43725,7 +43725,7 @@ TEST_F(MazeGeneratorTest, Generate46x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x31Test) {
+TEST_F(GeneratorTest, Generate46x31Test) {
   rows_ = 46;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -43745,7 +43745,7 @@ TEST_F(MazeGeneratorTest, Generate46x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x32Test) {
+TEST_F(GeneratorTest, Generate46x32Test) {
   rows_ = 46;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -43765,7 +43765,7 @@ TEST_F(MazeGeneratorTest, Generate46x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x33Test) {
+TEST_F(GeneratorTest, Generate46x33Test) {
   rows_ = 46;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -43785,7 +43785,7 @@ TEST_F(MazeGeneratorTest, Generate46x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x34Test) {
+TEST_F(GeneratorTest, Generate46x34Test) {
   rows_ = 46;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -43805,7 +43805,7 @@ TEST_F(MazeGeneratorTest, Generate46x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x35Test) {
+TEST_F(GeneratorTest, Generate46x35Test) {
   rows_ = 46;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -43825,7 +43825,7 @@ TEST_F(MazeGeneratorTest, Generate46x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x36Test) {
+TEST_F(GeneratorTest, Generate46x36Test) {
   rows_ = 46;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -43845,7 +43845,7 @@ TEST_F(MazeGeneratorTest, Generate46x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x37Test) {
+TEST_F(GeneratorTest, Generate46x37Test) {
   rows_ = 46;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -43865,7 +43865,7 @@ TEST_F(MazeGeneratorTest, Generate46x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x38Test) {
+TEST_F(GeneratorTest, Generate46x38Test) {
   rows_ = 46;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -43885,7 +43885,7 @@ TEST_F(MazeGeneratorTest, Generate46x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x39Test) {
+TEST_F(GeneratorTest, Generate46x39Test) {
   rows_ = 46;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -43905,7 +43905,7 @@ TEST_F(MazeGeneratorTest, Generate46x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x40Test) {
+TEST_F(GeneratorTest, Generate46x40Test) {
   rows_ = 46;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -43925,7 +43925,7 @@ TEST_F(MazeGeneratorTest, Generate46x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x41Test) {
+TEST_F(GeneratorTest, Generate46x41Test) {
   rows_ = 46;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -43945,7 +43945,7 @@ TEST_F(MazeGeneratorTest, Generate46x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x42Test) {
+TEST_F(GeneratorTest, Generate46x42Test) {
   rows_ = 46;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -43965,7 +43965,7 @@ TEST_F(MazeGeneratorTest, Generate46x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x43Test) {
+TEST_F(GeneratorTest, Generate46x43Test) {
   rows_ = 46;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -43985,7 +43985,7 @@ TEST_F(MazeGeneratorTest, Generate46x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x44Test) {
+TEST_F(GeneratorTest, Generate46x44Test) {
   rows_ = 46;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -44005,7 +44005,7 @@ TEST_F(MazeGeneratorTest, Generate46x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x45Test) {
+TEST_F(GeneratorTest, Generate46x45Test) {
   rows_ = 46;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -44025,7 +44025,7 @@ TEST_F(MazeGeneratorTest, Generate46x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x46Test) {
+TEST_F(GeneratorTest, Generate46x46Test) {
   rows_ = 46;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -44045,7 +44045,7 @@ TEST_F(MazeGeneratorTest, Generate46x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x47Test) {
+TEST_F(GeneratorTest, Generate46x47Test) {
   rows_ = 46;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -44065,7 +44065,7 @@ TEST_F(MazeGeneratorTest, Generate46x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x48Test) {
+TEST_F(GeneratorTest, Generate46x48Test) {
   rows_ = 46;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -44085,7 +44085,7 @@ TEST_F(MazeGeneratorTest, Generate46x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x49Test) {
+TEST_F(GeneratorTest, Generate46x49Test) {
   rows_ = 46;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -44105,7 +44105,7 @@ TEST_F(MazeGeneratorTest, Generate46x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate46x50Test) {
+TEST_F(GeneratorTest, Generate46x50Test) {
   rows_ = 46;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -44125,7 +44125,7 @@ TEST_F(MazeGeneratorTest, Generate46x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x2Test) {
+TEST_F(GeneratorTest, Generate47x2Test) {
   rows_ = 47;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -44145,7 +44145,7 @@ TEST_F(MazeGeneratorTest, Generate47x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x3Test) {
+TEST_F(GeneratorTest, Generate47x3Test) {
   rows_ = 47;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -44165,7 +44165,7 @@ TEST_F(MazeGeneratorTest, Generate47x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x4Test) {
+TEST_F(GeneratorTest, Generate47x4Test) {
   rows_ = 47;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -44185,7 +44185,7 @@ TEST_F(MazeGeneratorTest, Generate47x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x5Test) {
+TEST_F(GeneratorTest, Generate47x5Test) {
   rows_ = 47;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -44205,7 +44205,7 @@ TEST_F(MazeGeneratorTest, Generate47x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x6Test) {
+TEST_F(GeneratorTest, Generate47x6Test) {
   rows_ = 47;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -44225,7 +44225,7 @@ TEST_F(MazeGeneratorTest, Generate47x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x7Test) {
+TEST_F(GeneratorTest, Generate47x7Test) {
   rows_ = 47;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -44245,7 +44245,7 @@ TEST_F(MazeGeneratorTest, Generate47x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x8Test) {
+TEST_F(GeneratorTest, Generate47x8Test) {
   rows_ = 47;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -44265,7 +44265,7 @@ TEST_F(MazeGeneratorTest, Generate47x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x9Test) {
+TEST_F(GeneratorTest, Generate47x9Test) {
   rows_ = 47;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -44285,7 +44285,7 @@ TEST_F(MazeGeneratorTest, Generate47x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x10Test) {
+TEST_F(GeneratorTest, Generate47x10Test) {
   rows_ = 47;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -44305,7 +44305,7 @@ TEST_F(MazeGeneratorTest, Generate47x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x11Test) {
+TEST_F(GeneratorTest, Generate47x11Test) {
   rows_ = 47;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -44325,7 +44325,7 @@ TEST_F(MazeGeneratorTest, Generate47x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x12Test) {
+TEST_F(GeneratorTest, Generate47x12Test) {
   rows_ = 47;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -44345,7 +44345,7 @@ TEST_F(MazeGeneratorTest, Generate47x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x13Test) {
+TEST_F(GeneratorTest, Generate47x13Test) {
   rows_ = 47;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -44365,7 +44365,7 @@ TEST_F(MazeGeneratorTest, Generate47x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x14Test) {
+TEST_F(GeneratorTest, Generate47x14Test) {
   rows_ = 47;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -44385,7 +44385,7 @@ TEST_F(MazeGeneratorTest, Generate47x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x15Test) {
+TEST_F(GeneratorTest, Generate47x15Test) {
   rows_ = 47;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -44405,7 +44405,7 @@ TEST_F(MazeGeneratorTest, Generate47x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x16Test) {
+TEST_F(GeneratorTest, Generate47x16Test) {
   rows_ = 47;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -44425,7 +44425,7 @@ TEST_F(MazeGeneratorTest, Generate47x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x17Test) {
+TEST_F(GeneratorTest, Generate47x17Test) {
   rows_ = 47;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -44445,7 +44445,7 @@ TEST_F(MazeGeneratorTest, Generate47x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x18Test) {
+TEST_F(GeneratorTest, Generate47x18Test) {
   rows_ = 47;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -44465,7 +44465,7 @@ TEST_F(MazeGeneratorTest, Generate47x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x19Test) {
+TEST_F(GeneratorTest, Generate47x19Test) {
   rows_ = 47;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -44485,7 +44485,7 @@ TEST_F(MazeGeneratorTest, Generate47x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x20Test) {
+TEST_F(GeneratorTest, Generate47x20Test) {
   rows_ = 47;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -44505,7 +44505,7 @@ TEST_F(MazeGeneratorTest, Generate47x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x21Test) {
+TEST_F(GeneratorTest, Generate47x21Test) {
   rows_ = 47;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -44525,7 +44525,7 @@ TEST_F(MazeGeneratorTest, Generate47x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x22Test) {
+TEST_F(GeneratorTest, Generate47x22Test) {
   rows_ = 47;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -44545,7 +44545,7 @@ TEST_F(MazeGeneratorTest, Generate47x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x23Test) {
+TEST_F(GeneratorTest, Generate47x23Test) {
   rows_ = 47;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -44565,7 +44565,7 @@ TEST_F(MazeGeneratorTest, Generate47x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x24Test) {
+TEST_F(GeneratorTest, Generate47x24Test) {
   rows_ = 47;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -44585,7 +44585,7 @@ TEST_F(MazeGeneratorTest, Generate47x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x25Test) {
+TEST_F(GeneratorTest, Generate47x25Test) {
   rows_ = 47;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -44605,7 +44605,7 @@ TEST_F(MazeGeneratorTest, Generate47x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x26Test) {
+TEST_F(GeneratorTest, Generate47x26Test) {
   rows_ = 47;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -44625,7 +44625,7 @@ TEST_F(MazeGeneratorTest, Generate47x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x27Test) {
+TEST_F(GeneratorTest, Generate47x27Test) {
   rows_ = 47;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -44645,7 +44645,7 @@ TEST_F(MazeGeneratorTest, Generate47x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x28Test) {
+TEST_F(GeneratorTest, Generate47x28Test) {
   rows_ = 47;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -44665,7 +44665,7 @@ TEST_F(MazeGeneratorTest, Generate47x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x29Test) {
+TEST_F(GeneratorTest, Generate47x29Test) {
   rows_ = 47;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -44685,7 +44685,7 @@ TEST_F(MazeGeneratorTest, Generate47x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x30Test) {
+TEST_F(GeneratorTest, Generate47x30Test) {
   rows_ = 47;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -44705,7 +44705,7 @@ TEST_F(MazeGeneratorTest, Generate47x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x31Test) {
+TEST_F(GeneratorTest, Generate47x31Test) {
   rows_ = 47;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -44725,7 +44725,7 @@ TEST_F(MazeGeneratorTest, Generate47x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x32Test) {
+TEST_F(GeneratorTest, Generate47x32Test) {
   rows_ = 47;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -44745,7 +44745,7 @@ TEST_F(MazeGeneratorTest, Generate47x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x33Test) {
+TEST_F(GeneratorTest, Generate47x33Test) {
   rows_ = 47;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -44765,7 +44765,7 @@ TEST_F(MazeGeneratorTest, Generate47x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x34Test) {
+TEST_F(GeneratorTest, Generate47x34Test) {
   rows_ = 47;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -44785,7 +44785,7 @@ TEST_F(MazeGeneratorTest, Generate47x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x35Test) {
+TEST_F(GeneratorTest, Generate47x35Test) {
   rows_ = 47;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -44805,7 +44805,7 @@ TEST_F(MazeGeneratorTest, Generate47x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x36Test) {
+TEST_F(GeneratorTest, Generate47x36Test) {
   rows_ = 47;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -44825,7 +44825,7 @@ TEST_F(MazeGeneratorTest, Generate47x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x37Test) {
+TEST_F(GeneratorTest, Generate47x37Test) {
   rows_ = 47;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -44845,7 +44845,7 @@ TEST_F(MazeGeneratorTest, Generate47x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x38Test) {
+TEST_F(GeneratorTest, Generate47x38Test) {
   rows_ = 47;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -44865,7 +44865,7 @@ TEST_F(MazeGeneratorTest, Generate47x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x39Test) {
+TEST_F(GeneratorTest, Generate47x39Test) {
   rows_ = 47;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -44885,7 +44885,7 @@ TEST_F(MazeGeneratorTest, Generate47x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x40Test) {
+TEST_F(GeneratorTest, Generate47x40Test) {
   rows_ = 47;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -44905,7 +44905,7 @@ TEST_F(MazeGeneratorTest, Generate47x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x41Test) {
+TEST_F(GeneratorTest, Generate47x41Test) {
   rows_ = 47;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -44925,7 +44925,7 @@ TEST_F(MazeGeneratorTest, Generate47x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x42Test) {
+TEST_F(GeneratorTest, Generate47x42Test) {
   rows_ = 47;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -44945,7 +44945,7 @@ TEST_F(MazeGeneratorTest, Generate47x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x43Test) {
+TEST_F(GeneratorTest, Generate47x43Test) {
   rows_ = 47;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -44965,7 +44965,7 @@ TEST_F(MazeGeneratorTest, Generate47x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x44Test) {
+TEST_F(GeneratorTest, Generate47x44Test) {
   rows_ = 47;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -44985,7 +44985,7 @@ TEST_F(MazeGeneratorTest, Generate47x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x45Test) {
+TEST_F(GeneratorTest, Generate47x45Test) {
   rows_ = 47;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -45005,7 +45005,7 @@ TEST_F(MazeGeneratorTest, Generate47x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x46Test) {
+TEST_F(GeneratorTest, Generate47x46Test) {
   rows_ = 47;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -45025,7 +45025,7 @@ TEST_F(MazeGeneratorTest, Generate47x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x47Test) {
+TEST_F(GeneratorTest, Generate47x47Test) {
   rows_ = 47;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -45045,7 +45045,7 @@ TEST_F(MazeGeneratorTest, Generate47x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x48Test) {
+TEST_F(GeneratorTest, Generate47x48Test) {
   rows_ = 47;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -45065,7 +45065,7 @@ TEST_F(MazeGeneratorTest, Generate47x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x49Test) {
+TEST_F(GeneratorTest, Generate47x49Test) {
   rows_ = 47;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -45085,7 +45085,7 @@ TEST_F(MazeGeneratorTest, Generate47x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate47x50Test) {
+TEST_F(GeneratorTest, Generate47x50Test) {
   rows_ = 47;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -45105,7 +45105,7 @@ TEST_F(MazeGeneratorTest, Generate47x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x2Test) {
+TEST_F(GeneratorTest, Generate48x2Test) {
   rows_ = 48;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -45125,7 +45125,7 @@ TEST_F(MazeGeneratorTest, Generate48x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x3Test) {
+TEST_F(GeneratorTest, Generate48x3Test) {
   rows_ = 48;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -45145,7 +45145,7 @@ TEST_F(MazeGeneratorTest, Generate48x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x4Test) {
+TEST_F(GeneratorTest, Generate48x4Test) {
   rows_ = 48;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -45165,7 +45165,7 @@ TEST_F(MazeGeneratorTest, Generate48x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x5Test) {
+TEST_F(GeneratorTest, Generate48x5Test) {
   rows_ = 48;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -45185,7 +45185,7 @@ TEST_F(MazeGeneratorTest, Generate48x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x6Test) {
+TEST_F(GeneratorTest, Generate48x6Test) {
   rows_ = 48;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -45205,7 +45205,7 @@ TEST_F(MazeGeneratorTest, Generate48x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x7Test) {
+TEST_F(GeneratorTest, Generate48x7Test) {
   rows_ = 48;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -45225,7 +45225,7 @@ TEST_F(MazeGeneratorTest, Generate48x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x8Test) {
+TEST_F(GeneratorTest, Generate48x8Test) {
   rows_ = 48;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -45245,7 +45245,7 @@ TEST_F(MazeGeneratorTest, Generate48x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x9Test) {
+TEST_F(GeneratorTest, Generate48x9Test) {
   rows_ = 48;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -45265,7 +45265,7 @@ TEST_F(MazeGeneratorTest, Generate48x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x10Test) {
+TEST_F(GeneratorTest, Generate48x10Test) {
   rows_ = 48;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -45285,7 +45285,7 @@ TEST_F(MazeGeneratorTest, Generate48x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x11Test) {
+TEST_F(GeneratorTest, Generate48x11Test) {
   rows_ = 48;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -45305,7 +45305,7 @@ TEST_F(MazeGeneratorTest, Generate48x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x12Test) {
+TEST_F(GeneratorTest, Generate48x12Test) {
   rows_ = 48;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -45325,7 +45325,7 @@ TEST_F(MazeGeneratorTest, Generate48x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x13Test) {
+TEST_F(GeneratorTest, Generate48x13Test) {
   rows_ = 48;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -45345,7 +45345,7 @@ TEST_F(MazeGeneratorTest, Generate48x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x14Test) {
+TEST_F(GeneratorTest, Generate48x14Test) {
   rows_ = 48;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -45365,7 +45365,7 @@ TEST_F(MazeGeneratorTest, Generate48x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x15Test) {
+TEST_F(GeneratorTest, Generate48x15Test) {
   rows_ = 48;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -45385,7 +45385,7 @@ TEST_F(MazeGeneratorTest, Generate48x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x16Test) {
+TEST_F(GeneratorTest, Generate48x16Test) {
   rows_ = 48;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -45405,7 +45405,7 @@ TEST_F(MazeGeneratorTest, Generate48x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x17Test) {
+TEST_F(GeneratorTest, Generate48x17Test) {
   rows_ = 48;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -45425,7 +45425,7 @@ TEST_F(MazeGeneratorTest, Generate48x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x18Test) {
+TEST_F(GeneratorTest, Generate48x18Test) {
   rows_ = 48;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -45445,7 +45445,7 @@ TEST_F(MazeGeneratorTest, Generate48x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x19Test) {
+TEST_F(GeneratorTest, Generate48x19Test) {
   rows_ = 48;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -45465,7 +45465,7 @@ TEST_F(MazeGeneratorTest, Generate48x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x20Test) {
+TEST_F(GeneratorTest, Generate48x20Test) {
   rows_ = 48;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -45485,7 +45485,7 @@ TEST_F(MazeGeneratorTest, Generate48x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x21Test) {
+TEST_F(GeneratorTest, Generate48x21Test) {
   rows_ = 48;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -45505,7 +45505,7 @@ TEST_F(MazeGeneratorTest, Generate48x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x22Test) {
+TEST_F(GeneratorTest, Generate48x22Test) {
   rows_ = 48;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -45525,7 +45525,7 @@ TEST_F(MazeGeneratorTest, Generate48x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x23Test) {
+TEST_F(GeneratorTest, Generate48x23Test) {
   rows_ = 48;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -45545,7 +45545,7 @@ TEST_F(MazeGeneratorTest, Generate48x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x24Test) {
+TEST_F(GeneratorTest, Generate48x24Test) {
   rows_ = 48;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -45565,7 +45565,7 @@ TEST_F(MazeGeneratorTest, Generate48x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x25Test) {
+TEST_F(GeneratorTest, Generate48x25Test) {
   rows_ = 48;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -45585,7 +45585,7 @@ TEST_F(MazeGeneratorTest, Generate48x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x26Test) {
+TEST_F(GeneratorTest, Generate48x26Test) {
   rows_ = 48;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -45605,7 +45605,7 @@ TEST_F(MazeGeneratorTest, Generate48x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x27Test) {
+TEST_F(GeneratorTest, Generate48x27Test) {
   rows_ = 48;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -45625,7 +45625,7 @@ TEST_F(MazeGeneratorTest, Generate48x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x28Test) {
+TEST_F(GeneratorTest, Generate48x28Test) {
   rows_ = 48;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -45645,7 +45645,7 @@ TEST_F(MazeGeneratorTest, Generate48x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x29Test) {
+TEST_F(GeneratorTest, Generate48x29Test) {
   rows_ = 48;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -45665,7 +45665,7 @@ TEST_F(MazeGeneratorTest, Generate48x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x30Test) {
+TEST_F(GeneratorTest, Generate48x30Test) {
   rows_ = 48;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -45685,7 +45685,7 @@ TEST_F(MazeGeneratorTest, Generate48x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x31Test) {
+TEST_F(GeneratorTest, Generate48x31Test) {
   rows_ = 48;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -45705,7 +45705,7 @@ TEST_F(MazeGeneratorTest, Generate48x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x32Test) {
+TEST_F(GeneratorTest, Generate48x32Test) {
   rows_ = 48;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -45725,7 +45725,7 @@ TEST_F(MazeGeneratorTest, Generate48x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x33Test) {
+TEST_F(GeneratorTest, Generate48x33Test) {
   rows_ = 48;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -45745,7 +45745,7 @@ TEST_F(MazeGeneratorTest, Generate48x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x34Test) {
+TEST_F(GeneratorTest, Generate48x34Test) {
   rows_ = 48;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -45765,7 +45765,7 @@ TEST_F(MazeGeneratorTest, Generate48x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x35Test) {
+TEST_F(GeneratorTest, Generate48x35Test) {
   rows_ = 48;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -45785,7 +45785,7 @@ TEST_F(MazeGeneratorTest, Generate48x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x36Test) {
+TEST_F(GeneratorTest, Generate48x36Test) {
   rows_ = 48;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -45805,7 +45805,7 @@ TEST_F(MazeGeneratorTest, Generate48x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x37Test) {
+TEST_F(GeneratorTest, Generate48x37Test) {
   rows_ = 48;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -45825,7 +45825,7 @@ TEST_F(MazeGeneratorTest, Generate48x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x38Test) {
+TEST_F(GeneratorTest, Generate48x38Test) {
   rows_ = 48;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -45845,7 +45845,7 @@ TEST_F(MazeGeneratorTest, Generate48x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x39Test) {
+TEST_F(GeneratorTest, Generate48x39Test) {
   rows_ = 48;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -45865,7 +45865,7 @@ TEST_F(MazeGeneratorTest, Generate48x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x40Test) {
+TEST_F(GeneratorTest, Generate48x40Test) {
   rows_ = 48;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -45885,7 +45885,7 @@ TEST_F(MazeGeneratorTest, Generate48x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x41Test) {
+TEST_F(GeneratorTest, Generate48x41Test) {
   rows_ = 48;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -45905,7 +45905,7 @@ TEST_F(MazeGeneratorTest, Generate48x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x42Test) {
+TEST_F(GeneratorTest, Generate48x42Test) {
   rows_ = 48;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -45925,7 +45925,7 @@ TEST_F(MazeGeneratorTest, Generate48x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x43Test) {
+TEST_F(GeneratorTest, Generate48x43Test) {
   rows_ = 48;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -45945,7 +45945,7 @@ TEST_F(MazeGeneratorTest, Generate48x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x44Test) {
+TEST_F(GeneratorTest, Generate48x44Test) {
   rows_ = 48;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -45965,7 +45965,7 @@ TEST_F(MazeGeneratorTest, Generate48x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x45Test) {
+TEST_F(GeneratorTest, Generate48x45Test) {
   rows_ = 48;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -45985,7 +45985,7 @@ TEST_F(MazeGeneratorTest, Generate48x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x46Test) {
+TEST_F(GeneratorTest, Generate48x46Test) {
   rows_ = 48;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -46005,7 +46005,7 @@ TEST_F(MazeGeneratorTest, Generate48x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x47Test) {
+TEST_F(GeneratorTest, Generate48x47Test) {
   rows_ = 48;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -46025,7 +46025,7 @@ TEST_F(MazeGeneratorTest, Generate48x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x48Test) {
+TEST_F(GeneratorTest, Generate48x48Test) {
   rows_ = 48;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -46045,7 +46045,7 @@ TEST_F(MazeGeneratorTest, Generate48x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x49Test) {
+TEST_F(GeneratorTest, Generate48x49Test) {
   rows_ = 48;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -46065,7 +46065,7 @@ TEST_F(MazeGeneratorTest, Generate48x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate48x50Test) {
+TEST_F(GeneratorTest, Generate48x50Test) {
   rows_ = 48;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -46085,7 +46085,7 @@ TEST_F(MazeGeneratorTest, Generate48x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x2Test) {
+TEST_F(GeneratorTest, Generate49x2Test) {
   rows_ = 49;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -46105,7 +46105,7 @@ TEST_F(MazeGeneratorTest, Generate49x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x3Test) {
+TEST_F(GeneratorTest, Generate49x3Test) {
   rows_ = 49;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -46125,7 +46125,7 @@ TEST_F(MazeGeneratorTest, Generate49x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x4Test) {
+TEST_F(GeneratorTest, Generate49x4Test) {
   rows_ = 49;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -46145,7 +46145,7 @@ TEST_F(MazeGeneratorTest, Generate49x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x5Test) {
+TEST_F(GeneratorTest, Generate49x5Test) {
   rows_ = 49;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -46165,7 +46165,7 @@ TEST_F(MazeGeneratorTest, Generate49x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x6Test) {
+TEST_F(GeneratorTest, Generate49x6Test) {
   rows_ = 49;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -46185,7 +46185,7 @@ TEST_F(MazeGeneratorTest, Generate49x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x7Test) {
+TEST_F(GeneratorTest, Generate49x7Test) {
   rows_ = 49;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -46205,7 +46205,7 @@ TEST_F(MazeGeneratorTest, Generate49x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x8Test) {
+TEST_F(GeneratorTest, Generate49x8Test) {
   rows_ = 49;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -46225,7 +46225,7 @@ TEST_F(MazeGeneratorTest, Generate49x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x9Test) {
+TEST_F(GeneratorTest, Generate49x9Test) {
   rows_ = 49;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -46245,7 +46245,7 @@ TEST_F(MazeGeneratorTest, Generate49x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x10Test) {
+TEST_F(GeneratorTest, Generate49x10Test) {
   rows_ = 49;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -46265,7 +46265,7 @@ TEST_F(MazeGeneratorTest, Generate49x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x11Test) {
+TEST_F(GeneratorTest, Generate49x11Test) {
   rows_ = 49;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -46285,7 +46285,7 @@ TEST_F(MazeGeneratorTest, Generate49x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x12Test) {
+TEST_F(GeneratorTest, Generate49x12Test) {
   rows_ = 49;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -46305,7 +46305,7 @@ TEST_F(MazeGeneratorTest, Generate49x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x13Test) {
+TEST_F(GeneratorTest, Generate49x13Test) {
   rows_ = 49;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -46325,7 +46325,7 @@ TEST_F(MazeGeneratorTest, Generate49x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x14Test) {
+TEST_F(GeneratorTest, Generate49x14Test) {
   rows_ = 49;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -46345,7 +46345,7 @@ TEST_F(MazeGeneratorTest, Generate49x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x15Test) {
+TEST_F(GeneratorTest, Generate49x15Test) {
   rows_ = 49;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -46365,7 +46365,7 @@ TEST_F(MazeGeneratorTest, Generate49x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x16Test) {
+TEST_F(GeneratorTest, Generate49x16Test) {
   rows_ = 49;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -46385,7 +46385,7 @@ TEST_F(MazeGeneratorTest, Generate49x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x17Test) {
+TEST_F(GeneratorTest, Generate49x17Test) {
   rows_ = 49;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -46405,7 +46405,7 @@ TEST_F(MazeGeneratorTest, Generate49x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x18Test) {
+TEST_F(GeneratorTest, Generate49x18Test) {
   rows_ = 49;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -46425,7 +46425,7 @@ TEST_F(MazeGeneratorTest, Generate49x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x19Test) {
+TEST_F(GeneratorTest, Generate49x19Test) {
   rows_ = 49;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -46445,7 +46445,7 @@ TEST_F(MazeGeneratorTest, Generate49x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x20Test) {
+TEST_F(GeneratorTest, Generate49x20Test) {
   rows_ = 49;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -46465,7 +46465,7 @@ TEST_F(MazeGeneratorTest, Generate49x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x21Test) {
+TEST_F(GeneratorTest, Generate49x21Test) {
   rows_ = 49;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -46485,7 +46485,7 @@ TEST_F(MazeGeneratorTest, Generate49x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x22Test) {
+TEST_F(GeneratorTest, Generate49x22Test) {
   rows_ = 49;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -46505,7 +46505,7 @@ TEST_F(MazeGeneratorTest, Generate49x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x23Test) {
+TEST_F(GeneratorTest, Generate49x23Test) {
   rows_ = 49;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -46525,7 +46525,7 @@ TEST_F(MazeGeneratorTest, Generate49x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x24Test) {
+TEST_F(GeneratorTest, Generate49x24Test) {
   rows_ = 49;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -46545,7 +46545,7 @@ TEST_F(MazeGeneratorTest, Generate49x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x25Test) {
+TEST_F(GeneratorTest, Generate49x25Test) {
   rows_ = 49;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -46565,7 +46565,7 @@ TEST_F(MazeGeneratorTest, Generate49x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x26Test) {
+TEST_F(GeneratorTest, Generate49x26Test) {
   rows_ = 49;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -46585,7 +46585,7 @@ TEST_F(MazeGeneratorTest, Generate49x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x27Test) {
+TEST_F(GeneratorTest, Generate49x27Test) {
   rows_ = 49;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -46605,7 +46605,7 @@ TEST_F(MazeGeneratorTest, Generate49x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x28Test) {
+TEST_F(GeneratorTest, Generate49x28Test) {
   rows_ = 49;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -46625,7 +46625,7 @@ TEST_F(MazeGeneratorTest, Generate49x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x29Test) {
+TEST_F(GeneratorTest, Generate49x29Test) {
   rows_ = 49;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -46645,7 +46645,7 @@ TEST_F(MazeGeneratorTest, Generate49x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x30Test) {
+TEST_F(GeneratorTest, Generate49x30Test) {
   rows_ = 49;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -46665,7 +46665,7 @@ TEST_F(MazeGeneratorTest, Generate49x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x31Test) {
+TEST_F(GeneratorTest, Generate49x31Test) {
   rows_ = 49;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -46685,7 +46685,7 @@ TEST_F(MazeGeneratorTest, Generate49x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x32Test) {
+TEST_F(GeneratorTest, Generate49x32Test) {
   rows_ = 49;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -46705,7 +46705,7 @@ TEST_F(MazeGeneratorTest, Generate49x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x33Test) {
+TEST_F(GeneratorTest, Generate49x33Test) {
   rows_ = 49;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -46725,7 +46725,7 @@ TEST_F(MazeGeneratorTest, Generate49x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x34Test) {
+TEST_F(GeneratorTest, Generate49x34Test) {
   rows_ = 49;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -46745,7 +46745,7 @@ TEST_F(MazeGeneratorTest, Generate49x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x35Test) {
+TEST_F(GeneratorTest, Generate49x35Test) {
   rows_ = 49;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -46765,7 +46765,7 @@ TEST_F(MazeGeneratorTest, Generate49x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x36Test) {
+TEST_F(GeneratorTest, Generate49x36Test) {
   rows_ = 49;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -46785,7 +46785,7 @@ TEST_F(MazeGeneratorTest, Generate49x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x37Test) {
+TEST_F(GeneratorTest, Generate49x37Test) {
   rows_ = 49;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -46805,7 +46805,7 @@ TEST_F(MazeGeneratorTest, Generate49x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x38Test) {
+TEST_F(GeneratorTest, Generate49x38Test) {
   rows_ = 49;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -46825,7 +46825,7 @@ TEST_F(MazeGeneratorTest, Generate49x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x39Test) {
+TEST_F(GeneratorTest, Generate49x39Test) {
   rows_ = 49;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -46845,7 +46845,7 @@ TEST_F(MazeGeneratorTest, Generate49x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x40Test) {
+TEST_F(GeneratorTest, Generate49x40Test) {
   rows_ = 49;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -46865,7 +46865,7 @@ TEST_F(MazeGeneratorTest, Generate49x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x41Test) {
+TEST_F(GeneratorTest, Generate49x41Test) {
   rows_ = 49;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -46885,7 +46885,7 @@ TEST_F(MazeGeneratorTest, Generate49x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x42Test) {
+TEST_F(GeneratorTest, Generate49x42Test) {
   rows_ = 49;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -46905,7 +46905,7 @@ TEST_F(MazeGeneratorTest, Generate49x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x43Test) {
+TEST_F(GeneratorTest, Generate49x43Test) {
   rows_ = 49;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -46925,7 +46925,7 @@ TEST_F(MazeGeneratorTest, Generate49x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x44Test) {
+TEST_F(GeneratorTest, Generate49x44Test) {
   rows_ = 49;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -46945,7 +46945,7 @@ TEST_F(MazeGeneratorTest, Generate49x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x45Test) {
+TEST_F(GeneratorTest, Generate49x45Test) {
   rows_ = 49;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -46965,7 +46965,7 @@ TEST_F(MazeGeneratorTest, Generate49x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x46Test) {
+TEST_F(GeneratorTest, Generate49x46Test) {
   rows_ = 49;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -46985,7 +46985,7 @@ TEST_F(MazeGeneratorTest, Generate49x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x47Test) {
+TEST_F(GeneratorTest, Generate49x47Test) {
   rows_ = 49;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -47005,7 +47005,7 @@ TEST_F(MazeGeneratorTest, Generate49x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x48Test) {
+TEST_F(GeneratorTest, Generate49x48Test) {
   rows_ = 49;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -47025,7 +47025,7 @@ TEST_F(MazeGeneratorTest, Generate49x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x49Test) {
+TEST_F(GeneratorTest, Generate49x49Test) {
   rows_ = 49;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -47045,7 +47045,7 @@ TEST_F(MazeGeneratorTest, Generate49x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate49x50Test) {
+TEST_F(GeneratorTest, Generate49x50Test) {
   rows_ = 49;
   cols_ = 50;
   facade_.generate(rows_, cols_);
@@ -47065,7 +47065,7 @@ TEST_F(MazeGeneratorTest, Generate49x50Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x2Test) {
+TEST_F(GeneratorTest, Generate50x2Test) {
   rows_ = 50;
   cols_ = 2;
   facade_.generate(rows_, cols_);
@@ -47085,7 +47085,7 @@ TEST_F(MazeGeneratorTest, Generate50x2Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x3Test) {
+TEST_F(GeneratorTest, Generate50x3Test) {
   rows_ = 50;
   cols_ = 3;
   facade_.generate(rows_, cols_);
@@ -47105,7 +47105,7 @@ TEST_F(MazeGeneratorTest, Generate50x3Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x4Test) {
+TEST_F(GeneratorTest, Generate50x4Test) {
   rows_ = 50;
   cols_ = 4;
   facade_.generate(rows_, cols_);
@@ -47125,7 +47125,7 @@ TEST_F(MazeGeneratorTest, Generate50x4Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x5Test) {
+TEST_F(GeneratorTest, Generate50x5Test) {
   rows_ = 50;
   cols_ = 5;
   facade_.generate(rows_, cols_);
@@ -47145,7 +47145,7 @@ TEST_F(MazeGeneratorTest, Generate50x5Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x6Test) {
+TEST_F(GeneratorTest, Generate50x6Test) {
   rows_ = 50;
   cols_ = 6;
   facade_.generate(rows_, cols_);
@@ -47165,7 +47165,7 @@ TEST_F(MazeGeneratorTest, Generate50x6Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x7Test) {
+TEST_F(GeneratorTest, Generate50x7Test) {
   rows_ = 50;
   cols_ = 7;
   facade_.generate(rows_, cols_);
@@ -47185,7 +47185,7 @@ TEST_F(MazeGeneratorTest, Generate50x7Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x8Test) {
+TEST_F(GeneratorTest, Generate50x8Test) {
   rows_ = 50;
   cols_ = 8;
   facade_.generate(rows_, cols_);
@@ -47205,7 +47205,7 @@ TEST_F(MazeGeneratorTest, Generate50x8Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x9Test) {
+TEST_F(GeneratorTest, Generate50x9Test) {
   rows_ = 50;
   cols_ = 9;
   facade_.generate(rows_, cols_);
@@ -47225,7 +47225,7 @@ TEST_F(MazeGeneratorTest, Generate50x9Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x10Test) {
+TEST_F(GeneratorTest, Generate50x10Test) {
   rows_ = 50;
   cols_ = 10;
   facade_.generate(rows_, cols_);
@@ -47245,7 +47245,7 @@ TEST_F(MazeGeneratorTest, Generate50x10Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x11Test) {
+TEST_F(GeneratorTest, Generate50x11Test) {
   rows_ = 50;
   cols_ = 11;
   facade_.generate(rows_, cols_);
@@ -47265,7 +47265,7 @@ TEST_F(MazeGeneratorTest, Generate50x11Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x12Test) {
+TEST_F(GeneratorTest, Generate50x12Test) {
   rows_ = 50;
   cols_ = 12;
   facade_.generate(rows_, cols_);
@@ -47285,7 +47285,7 @@ TEST_F(MazeGeneratorTest, Generate50x12Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x13Test) {
+TEST_F(GeneratorTest, Generate50x13Test) {
   rows_ = 50;
   cols_ = 13;
   facade_.generate(rows_, cols_);
@@ -47305,7 +47305,7 @@ TEST_F(MazeGeneratorTest, Generate50x13Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x14Test) {
+TEST_F(GeneratorTest, Generate50x14Test) {
   rows_ = 50;
   cols_ = 14;
   facade_.generate(rows_, cols_);
@@ -47325,7 +47325,7 @@ TEST_F(MazeGeneratorTest, Generate50x14Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x15Test) {
+TEST_F(GeneratorTest, Generate50x15Test) {
   rows_ = 50;
   cols_ = 15;
   facade_.generate(rows_, cols_);
@@ -47345,7 +47345,7 @@ TEST_F(MazeGeneratorTest, Generate50x15Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x16Test) {
+TEST_F(GeneratorTest, Generate50x16Test) {
   rows_ = 50;
   cols_ = 16;
   facade_.generate(rows_, cols_);
@@ -47365,7 +47365,7 @@ TEST_F(MazeGeneratorTest, Generate50x16Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x17Test) {
+TEST_F(GeneratorTest, Generate50x17Test) {
   rows_ = 50;
   cols_ = 17;
   facade_.generate(rows_, cols_);
@@ -47385,7 +47385,7 @@ TEST_F(MazeGeneratorTest, Generate50x17Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x18Test) {
+TEST_F(GeneratorTest, Generate50x18Test) {
   rows_ = 50;
   cols_ = 18;
   facade_.generate(rows_, cols_);
@@ -47405,7 +47405,7 @@ TEST_F(MazeGeneratorTest, Generate50x18Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x19Test) {
+TEST_F(GeneratorTest, Generate50x19Test) {
   rows_ = 50;
   cols_ = 19;
   facade_.generate(rows_, cols_);
@@ -47425,7 +47425,7 @@ TEST_F(MazeGeneratorTest, Generate50x19Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x20Test) {
+TEST_F(GeneratorTest, Generate50x20Test) {
   rows_ = 50;
   cols_ = 20;
   facade_.generate(rows_, cols_);
@@ -47445,7 +47445,7 @@ TEST_F(MazeGeneratorTest, Generate50x20Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x21Test) {
+TEST_F(GeneratorTest, Generate50x21Test) {
   rows_ = 50;
   cols_ = 21;
   facade_.generate(rows_, cols_);
@@ -47465,7 +47465,7 @@ TEST_F(MazeGeneratorTest, Generate50x21Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x22Test) {
+TEST_F(GeneratorTest, Generate50x22Test) {
   rows_ = 50;
   cols_ = 22;
   facade_.generate(rows_, cols_);
@@ -47485,7 +47485,7 @@ TEST_F(MazeGeneratorTest, Generate50x22Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x23Test) {
+TEST_F(GeneratorTest, Generate50x23Test) {
   rows_ = 50;
   cols_ = 23;
   facade_.generate(rows_, cols_);
@@ -47505,7 +47505,7 @@ TEST_F(MazeGeneratorTest, Generate50x23Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x24Test) {
+TEST_F(GeneratorTest, Generate50x24Test) {
   rows_ = 50;
   cols_ = 24;
   facade_.generate(rows_, cols_);
@@ -47525,7 +47525,7 @@ TEST_F(MazeGeneratorTest, Generate50x24Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x25Test) {
+TEST_F(GeneratorTest, Generate50x25Test) {
   rows_ = 50;
   cols_ = 25;
   facade_.generate(rows_, cols_);
@@ -47545,7 +47545,7 @@ TEST_F(MazeGeneratorTest, Generate50x25Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x26Test) {
+TEST_F(GeneratorTest, Generate50x26Test) {
   rows_ = 50;
   cols_ = 26;
   facade_.generate(rows_, cols_);
@@ -47565,7 +47565,7 @@ TEST_F(MazeGeneratorTest, Generate50x26Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x27Test) {
+TEST_F(GeneratorTest, Generate50x27Test) {
   rows_ = 50;
   cols_ = 27;
   facade_.generate(rows_, cols_);
@@ -47585,7 +47585,7 @@ TEST_F(MazeGeneratorTest, Generate50x27Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x28Test) {
+TEST_F(GeneratorTest, Generate50x28Test) {
   rows_ = 50;
   cols_ = 28;
   facade_.generate(rows_, cols_);
@@ -47605,7 +47605,7 @@ TEST_F(MazeGeneratorTest, Generate50x28Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x29Test) {
+TEST_F(GeneratorTest, Generate50x29Test) {
   rows_ = 50;
   cols_ = 29;
   facade_.generate(rows_, cols_);
@@ -47625,7 +47625,7 @@ TEST_F(MazeGeneratorTest, Generate50x29Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x30Test) {
+TEST_F(GeneratorTest, Generate50x30Test) {
   rows_ = 50;
   cols_ = 30;
   facade_.generate(rows_, cols_);
@@ -47645,7 +47645,7 @@ TEST_F(MazeGeneratorTest, Generate50x30Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x31Test) {
+TEST_F(GeneratorTest, Generate50x31Test) {
   rows_ = 50;
   cols_ = 31;
   facade_.generate(rows_, cols_);
@@ -47665,7 +47665,7 @@ TEST_F(MazeGeneratorTest, Generate50x31Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x32Test) {
+TEST_F(GeneratorTest, Generate50x32Test) {
   rows_ = 50;
   cols_ = 32;
   facade_.generate(rows_, cols_);
@@ -47685,7 +47685,7 @@ TEST_F(MazeGeneratorTest, Generate50x32Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x33Test) {
+TEST_F(GeneratorTest, Generate50x33Test) {
   rows_ = 50;
   cols_ = 33;
   facade_.generate(rows_, cols_);
@@ -47705,7 +47705,7 @@ TEST_F(MazeGeneratorTest, Generate50x33Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x34Test) {
+TEST_F(GeneratorTest, Generate50x34Test) {
   rows_ = 50;
   cols_ = 34;
   facade_.generate(rows_, cols_);
@@ -47725,7 +47725,7 @@ TEST_F(MazeGeneratorTest, Generate50x34Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x35Test) {
+TEST_F(GeneratorTest, Generate50x35Test) {
   rows_ = 50;
   cols_ = 35;
   facade_.generate(rows_, cols_);
@@ -47745,7 +47745,7 @@ TEST_F(MazeGeneratorTest, Generate50x35Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x36Test) {
+TEST_F(GeneratorTest, Generate50x36Test) {
   rows_ = 50;
   cols_ = 36;
   facade_.generate(rows_, cols_);
@@ -47765,7 +47765,7 @@ TEST_F(MazeGeneratorTest, Generate50x36Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x37Test) {
+TEST_F(GeneratorTest, Generate50x37Test) {
   rows_ = 50;
   cols_ = 37;
   facade_.generate(rows_, cols_);
@@ -47785,7 +47785,7 @@ TEST_F(MazeGeneratorTest, Generate50x37Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x38Test) {
+TEST_F(GeneratorTest, Generate50x38Test) {
   rows_ = 50;
   cols_ = 38;
   facade_.generate(rows_, cols_);
@@ -47805,7 +47805,7 @@ TEST_F(MazeGeneratorTest, Generate50x38Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x39Test) {
+TEST_F(GeneratorTest, Generate50x39Test) {
   rows_ = 50;
   cols_ = 39;
   facade_.generate(rows_, cols_);
@@ -47825,7 +47825,7 @@ TEST_F(MazeGeneratorTest, Generate50x39Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x40Test) {
+TEST_F(GeneratorTest, Generate50x40Test) {
   rows_ = 50;
   cols_ = 40;
   facade_.generate(rows_, cols_);
@@ -47845,7 +47845,7 @@ TEST_F(MazeGeneratorTest, Generate50x40Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x41Test) {
+TEST_F(GeneratorTest, Generate50x41Test) {
   rows_ = 50;
   cols_ = 41;
   facade_.generate(rows_, cols_);
@@ -47865,7 +47865,7 @@ TEST_F(MazeGeneratorTest, Generate50x41Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x42Test) {
+TEST_F(GeneratorTest, Generate50x42Test) {
   rows_ = 50;
   cols_ = 42;
   facade_.generate(rows_, cols_);
@@ -47885,7 +47885,7 @@ TEST_F(MazeGeneratorTest, Generate50x42Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x43Test) {
+TEST_F(GeneratorTest, Generate50x43Test) {
   rows_ = 50;
   cols_ = 43;
   facade_.generate(rows_, cols_);
@@ -47905,7 +47905,7 @@ TEST_F(MazeGeneratorTest, Generate50x43Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x44Test) {
+TEST_F(GeneratorTest, Generate50x44Test) {
   rows_ = 50;
   cols_ = 44;
   facade_.generate(rows_, cols_);
@@ -47925,7 +47925,7 @@ TEST_F(MazeGeneratorTest, Generate50x44Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x45Test) {
+TEST_F(GeneratorTest, Generate50x45Test) {
   rows_ = 50;
   cols_ = 45;
   facade_.generate(rows_, cols_);
@@ -47945,7 +47945,7 @@ TEST_F(MazeGeneratorTest, Generate50x45Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x46Test) {
+TEST_F(GeneratorTest, Generate50x46Test) {
   rows_ = 50;
   cols_ = 46;
   facade_.generate(rows_, cols_);
@@ -47965,7 +47965,7 @@ TEST_F(MazeGeneratorTest, Generate50x46Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x47Test) {
+TEST_F(GeneratorTest, Generate50x47Test) {
   rows_ = 50;
   cols_ = 47;
   facade_.generate(rows_, cols_);
@@ -47985,7 +47985,7 @@ TEST_F(MazeGeneratorTest, Generate50x47Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x48Test) {
+TEST_F(GeneratorTest, Generate50x48Test) {
   rows_ = 50;
   cols_ = 48;
   facade_.generate(rows_, cols_);
@@ -48005,7 +48005,7 @@ TEST_F(MazeGeneratorTest, Generate50x48Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x49Test) {
+TEST_F(GeneratorTest, Generate50x49Test) {
   rows_ = 50;
   cols_ = 49;
   facade_.generate(rows_, cols_);
@@ -48025,7 +48025,7 @@ TEST_F(MazeGeneratorTest, Generate50x49Test) {
   EXPECT_EQ(facade_.maze().cols(), cols_);
 }
 
-TEST_F(MazeGeneratorTest, Generate50x50Test) {
+TEST_F(GeneratorTest, Generate50x50Test) {
   rows_ = 50;
   cols_ = 50;
   facade_.generate(rows_, cols_);

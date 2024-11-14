@@ -70,6 +70,8 @@
         "qgroupbox": "cpp",
         "qwidget": "cpp",
         "qdebug": "cpp",
-        "codecvt": "cpp"
+        "codecvt": "cpp",
+        "qgridlayout": "cpp",
+        "qhboxlayout": "cpp"
     }
 }

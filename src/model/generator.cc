@@ -1,7 +1,7 @@
 /**
- * @file maze_generator.cc
+ * @file generator.cc
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
- * @brief Implementation file for the MazeGenerator class
+ * @brief Implementation file for the Generator class
  * @version 1.0
  * @date 2024-11-04
  *
@@ -17,9 +17,9 @@
 
 namespace s21 {
 
-MazeGenerator::MazeGenerator(Maze* maze) : maze_{maze} {}
+Generator::Generator(Maze* maze) : maze_{maze} {}
 
-void MazeGenerator::generate() {
+void Generator::generate() {
   initFirstRow();
 
   for (int row = 0; row < maze_->rows_ - 1; ++row) {
@@ -32,13 +32,13 @@ void MazeGenerator::generate() {
   clearGenerator();
 }
 
-void MazeGenerator::initFirstRow() {
+void Generator::initFirstRow() {
   for (int col = 0; col < maze_->cols_; ++col) {
     sets_.emplace_back(0);
   }
 }
 
-void MazeGenerator::setUnique() {
+void Generator::setUnique() {
   for (int col = 0; col < maze_->cols_; ++col) {
     if (!sets_[col]) {
       sets_[col] = counter_;
@@ -47,7 +47,7 @@ void MazeGenerator::setUnique() {
   }
 }
 
-bool MazeGenerator::randomBool() {
+bool Generator::randomBool() {
   static std::random_device rd;
   static std::mt19937 gen(rd());
   std::uniform_int_distribution<int> dist(0, 1);
@@ -55,7 +55,7 @@ bool MazeGenerator::randomBool() {
   return dist(gen);
 }
 
-void MazeGenerator::createSet(int index, int element) {
+void Generator::createSet(int index, int element) {
   int set = sets_[index + 1];
   for (int col = 0; col < maze_->cols_; ++col) {
     if (sets_[col] == set) {
@@ -64,7 +64,7 @@ void MazeGenerator::createSet(int index, int element) {
   }
 }
 
-bool MazeGenerator::isSingleElementInSet(int element) {
+bool Generator::isSingleElementInSet(int element) {
   int count{0};
 
   for (int col = 0; col < maze_->cols_; ++col) {
@@ -76,7 +76,7 @@ bool MazeGenerator::isSingleElementInSet(int element) {
   return count == 1;
 }
 
-int MazeGenerator::countHorizontalWalls(int row, int element) {
+int Generator::countHorizontalWalls(int row, int element) {
   int count{0};
 
   for (int col = 0; col < maze_->cols_; ++col) {
@@ -87,7 +87,7 @@ int MazeGenerator::countHorizontalWalls(int row, int element) {
   return count;
 }
 
-void MazeGenerator::avoidBottomWallIfIsolated(int row) {
+void Generator::avoidBottomWallIfIsolated(int row) {
   for (int col = 0; col < maze_->cols_; ++col) {
     if (countHorizontalWalls(row, sets_[col]) == 0) {
       maze_->h_walls_[row][col] = false;
@@ -95,14 +95,14 @@ void MazeGenerator::avoidBottomWallIfIsolated(int row) {
   }
 }
 
-void MazeGenerator::prepareRowForGeneration(int row) {
+void Generator::prepareRowForGeneration(int row) {
   for (int col = 0; col < maze_->cols_; ++col) {
     if (maze_->h_walls_[row][col]) {
       sets_[col] = 0;
     }
   }
 }
-void MazeGenerator::generateVerticalWalls(int row) {
+void Generator::generateVerticalWalls(int row) {
   for (int col = 0; col < maze_->cols_ - 1; ++col) {
     bool choise = randomBool();
     if (choise || sets_[col] == sets_[col + 1]) {
@@ -115,7 +115,7 @@ void MazeGenerator::generateVerticalWalls(int row) {
   maze_->v_walls_[row][maze_->cols_ - 1] = true;
 }
 
-void MazeGenerator::generateHorizontalWalls(int row) {
+void Generator::generateHorizontalWalls(int row) {
   for (int col = 0; col < maze_->cols_; ++col) {
     bool choise = randomBool();
 
@@ -127,13 +127,13 @@ void MazeGenerator::generateHorizontalWalls(int row) {
   avoidBottomWallIfIsolated(row);
 }
 
-void MazeGenerator::generateLastRow() {
+void Generator::generateLastRow() {
   setUnique();
   generateVerticalWalls(maze_->rows_ - 1);
   checkEndLine();
 }
 
-void MazeGenerator::checkEndLine() {
+void Generator::checkEndLine() {
   for (int col = 0; col < maze_->cols_ - 1; ++col) {
     if (sets_[col] != sets_[col + 1]) {
       maze_->v_walls_[maze_->rows_ - 1][col] = false;
@@ -144,7 +144,7 @@ void MazeGenerator::checkEndLine() {
   maze_->h_walls_[maze_->rows_ - 1][maze_->cols_ - 1] = true;
 }
 
-void MazeGenerator::clearGenerator() {
+void Generator::clearGenerator() {
   counter_ = 1;
   sets_.clear();
 }

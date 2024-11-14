@@ -1,5 +1,5 @@
 /**
- * @file maze_save_test.cc
+ * @file save_test.cc
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
  * @brief Implementation file for the FileHandler::save
  * @version 1.0
@@ -17,19 +17,19 @@
 
 namespace Test {
 
-class FileSaverTest : public ::testing::Test {
+class SaverTest : public ::testing::Test {
  protected:
   void TearDown() override {
     std::remove(input_.c_str());
     std::remove(output_.c_str());
   }
 
-  s21::MazeFacade facade_;
+  s21::Facade facade_;
   std::string input_ = "input.txt";
   std::string output_ = "output.txt";
 };
 
-TEST_F(FileSaverTest, SaveToFile2x2Test) {
+TEST_F(SaverTest, SaveToFile2x2Test) {
   std::ofstream file(input_);
   file << "2 2\n";
   file << "1 1\n";
@@ -57,7 +57,7 @@ TEST_F(FileSaverTest, SaveToFile2x2Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile2x3Test) {
+TEST_F(SaverTest, SaveToFile2x3Test) {
   std::ofstream file(input_);
   file << "2 3\n";
   file << "0 0 1\n";
@@ -85,7 +85,7 @@ TEST_F(FileSaverTest, SaveToFile2x3Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile2x4Test) {
+TEST_F(SaverTest, SaveToFile2x4Test) {
   std::ofstream file(input_);
   file << "2 4\n";
   file << "1 0 0 1\n";
@@ -113,7 +113,7 @@ TEST_F(FileSaverTest, SaveToFile2x4Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile2x5Test) {
+TEST_F(SaverTest, SaveToFile2x5Test) {
   std::ofstream file(input_);
   file << "2 5\n";
   file << "1 1 1 1 1\n";
@@ -141,7 +141,7 @@ TEST_F(FileSaverTest, SaveToFile2x5Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile2x6Test) {
+TEST_F(SaverTest, SaveToFile2x6Test) {
   std::ofstream file(input_);
   file << "2 6\n";
   file << "0 1 0 0 0 1\n";
@@ -169,7 +169,7 @@ TEST_F(FileSaverTest, SaveToFile2x6Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile2x7Test) {
+TEST_F(SaverTest, SaveToFile2x7Test) {
   std::ofstream file(input_);
   file << "2 7\n";
   file << "0 0 0 0 1 0 1\n";
@@ -197,7 +197,7 @@ TEST_F(FileSaverTest, SaveToFile2x7Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile2x8Test) {
+TEST_F(SaverTest, SaveToFile2x8Test) {
   std::ofstream file(input_);
   file << "2 8\n";
   file << "1 0 0 1 0 0 1 1\n";
@@ -225,7 +225,7 @@ TEST_F(FileSaverTest, SaveToFile2x8Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile2x9Test) {
+TEST_F(SaverTest, SaveToFile2x9Test) {
   std::ofstream file(input_);
   file << "2 9\n";
   file << "0 1 1 1 1 0 1 0 1\n";
@@ -253,7 +253,7 @@ TEST_F(FileSaverTest, SaveToFile2x9Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile2x10Test) {
+TEST_F(SaverTest, SaveToFile2x10Test) {
   std::ofstream file(input_);
   file << "2 10\n";
   file << "1 0 0 1 0 0 1 1 1 1\n";
@@ -281,7 +281,7 @@ TEST_F(FileSaverTest, SaveToFile2x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile3x2Test) {
+TEST_F(SaverTest, SaveToFile3x2Test) {
   std::ofstream file(input_);
   file << "3 2\n";
   file << "0 1\n";
@@ -311,7 +311,7 @@ TEST_F(FileSaverTest, SaveToFile3x2Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile3x3Test) {
+TEST_F(SaverTest, SaveToFile3x3Test) {
   std::ofstream file(input_);
   file << "3 3\n";
   file << "0 0 1\n";
@@ -341,7 +341,7 @@ TEST_F(FileSaverTest, SaveToFile3x3Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile3x4Test) {
+TEST_F(SaverTest, SaveToFile3x4Test) {
   std::ofstream file(input_);
   file << "3 4\n";
   file << "1 1 0 1\n";
@@ -371,7 +371,7 @@ TEST_F(FileSaverTest, SaveToFile3x4Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile3x5Test) {
+TEST_F(SaverTest, SaveToFile3x5Test) {
   std::ofstream file(input_);
   file << "3 5\n";
   file << "1 0 0 0 1\n";
@@ -401,7 +401,7 @@ TEST_F(FileSaverTest, SaveToFile3x5Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile3x6Test) {
+TEST_F(SaverTest, SaveToFile3x6Test) {
   std::ofstream file(input_);
   file << "3 6\n";
   file << "1 1 0 0 0 1\n";
@@ -431,7 +431,7 @@ TEST_F(FileSaverTest, SaveToFile3x6Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile3x7Test) {
+TEST_F(SaverTest, SaveToFile3x7Test) {
   std::ofstream file(input_);
   file << "3 7\n";
   file << "1 0 0 1 1 1 1\n";
@@ -461,7 +461,7 @@ TEST_F(FileSaverTest, SaveToFile3x7Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile3x8Test) {
+TEST_F(SaverTest, SaveToFile3x8Test) {
   std::ofstream file(input_);
   file << "3 8\n";
   file << "1 0 1 1 0 1 0 1\n";
@@ -491,7 +491,7 @@ TEST_F(FileSaverTest, SaveToFile3x8Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile3x9Test) {
+TEST_F(SaverTest, SaveToFile3x9Test) {
   std::ofstream file(input_);
   file << "3 9\n";
   file << "1 0 0 1 0 0 0 0 1\n";
@@ -521,7 +521,7 @@ TEST_F(FileSaverTest, SaveToFile3x9Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile3x10Test) {
+TEST_F(SaverTest, SaveToFile3x10Test) {
   std::ofstream file(input_);
   file << "3 10\n";
   file << "1 0 0 0 0 0 0 0 0 1\n";
@@ -551,7 +551,7 @@ TEST_F(FileSaverTest, SaveToFile3x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile4x2Test) {
+TEST_F(SaverTest, SaveToFile4x2Test) {
   std::ofstream file(input_);
   file << "4 2\n";
   file << "0 1\n";
@@ -583,7 +583,7 @@ TEST_F(FileSaverTest, SaveToFile4x2Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile4x3Test) {
+TEST_F(SaverTest, SaveToFile4x3Test) {
   std::ofstream file(input_);
   file << "4 3\n";
   file << "1 0 1\n";
@@ -615,7 +615,7 @@ TEST_F(FileSaverTest, SaveToFile4x3Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile4x4Test) {
+TEST_F(SaverTest, SaveToFile4x4Test) {
   std::ofstream file(input_);
   file << "4 4\n";
   file << "1 1 0 1\n";
@@ -647,7 +647,7 @@ TEST_F(FileSaverTest, SaveToFile4x4Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile4x5Test) {
+TEST_F(SaverTest, SaveToFile4x5Test) {
   std::ofstream file(input_);
   file << "4 5\n";
   file << "0 1 0 1 1\n";
@@ -679,7 +679,7 @@ TEST_F(FileSaverTest, SaveToFile4x5Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile4x6Test) {
+TEST_F(SaverTest, SaveToFile4x6Test) {
   std::ofstream file(input_);
   file << "4 6\n";
   file << "0 0 0 0 1 1\n";
@@ -711,7 +711,7 @@ TEST_F(FileSaverTest, SaveToFile4x6Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile4x7Test) {
+TEST_F(SaverTest, SaveToFile4x7Test) {
   std::ofstream file(input_);
   file << "4 7\n";
   file << "1 0 0 0 0 0 1\n";
@@ -743,7 +743,7 @@ TEST_F(FileSaverTest, SaveToFile4x7Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile4x8Test) {
+TEST_F(SaverTest, SaveToFile4x8Test) {
   std::ofstream file(input_);
   file << "4 8\n";
   file << "1 0 0 0 1 0 1 1\n";
@@ -775,7 +775,7 @@ TEST_F(FileSaverTest, SaveToFile4x8Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile4x9Test) {
+TEST_F(SaverTest, SaveToFile4x9Test) {
   std::ofstream file(input_);
   file << "4 9\n";
   file << "1 1 0 1 1 1 1 1 1\n";
@@ -807,7 +807,7 @@ TEST_F(FileSaverTest, SaveToFile4x9Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile4x10Test) {
+TEST_F(SaverTest, SaveToFile4x10Test) {
   std::ofstream file(input_);
   file << "4 10\n";
   file << "0 0 0 1 0 0 1 1 1 1\n";
@@ -839,7 +839,7 @@ TEST_F(FileSaverTest, SaveToFile4x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile5x2Test) {
+TEST_F(SaverTest, SaveToFile5x2Test) {
   std::ofstream file(input_);
   file << "5 2\n";
   file << "0 1\n";
@@ -873,7 +873,7 @@ TEST_F(FileSaverTest, SaveToFile5x2Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile5x3Test) {
+TEST_F(SaverTest, SaveToFile5x3Test) {
   std::ofstream file(input_);
   file << "5 3\n";
   file << "1 0 1\n";
@@ -907,7 +907,7 @@ TEST_F(FileSaverTest, SaveToFile5x3Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile5x4Test) {
+TEST_F(SaverTest, SaveToFile5x4Test) {
   std::ofstream file(input_);
   file << "5 4\n";
   file << "1 1 1 1\n";
@@ -941,7 +941,7 @@ TEST_F(FileSaverTest, SaveToFile5x4Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile5x5Test) {
+TEST_F(SaverTest, SaveToFile5x5Test) {
   std::ofstream file(input_);
   file << "5 5\n";
   file << "1 1 1 0 1\n";
@@ -975,7 +975,7 @@ TEST_F(FileSaverTest, SaveToFile5x5Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile5x6Test) {
+TEST_F(SaverTest, SaveToFile5x6Test) {
   std::ofstream file(input_);
   file << "5 6\n";
   file << "0 1 0 1 1 1\n";
@@ -1009,7 +1009,7 @@ TEST_F(FileSaverTest, SaveToFile5x6Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile5x7Test) {
+TEST_F(SaverTest, SaveToFile5x7Test) {
   std::ofstream file(input_);
   file << "5 7\n";
   file << "0 0 0 1 0 0 1\n";
@@ -1043,7 +1043,7 @@ TEST_F(FileSaverTest, SaveToFile5x7Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile5x8Test) {
+TEST_F(SaverTest, SaveToFile5x8Test) {
   std::ofstream file(input_);
   file << "5 8\n";
   file << "1 0 0 0 1 1 0 1\n";
@@ -1077,7 +1077,7 @@ TEST_F(FileSaverTest, SaveToFile5x8Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile5x9Test) {
+TEST_F(SaverTest, SaveToFile5x9Test) {
   std::ofstream file(input_);
   file << "5 9\n";
   file << "0 0 1 0 1 1 0 1 1\n";
@@ -1111,7 +1111,7 @@ TEST_F(FileSaverTest, SaveToFile5x9Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile5x10Test) {
+TEST_F(SaverTest, SaveToFile5x10Test) {
   std::ofstream file(input_);
   file << "5 10\n";
   file << "0 1 1 1 1 0 1 0 1 1\n";
@@ -1145,7 +1145,7 @@ TEST_F(FileSaverTest, SaveToFile5x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile6x2Test) {
+TEST_F(SaverTest, SaveToFile6x2Test) {
   std::ofstream file(input_);
   file << "6 2\n";
   file << "0 1\n";
@@ -1181,7 +1181,7 @@ TEST_F(FileSaverTest, SaveToFile6x2Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile6x3Test) {
+TEST_F(SaverTest, SaveToFile6x3Test) {
   std::ofstream file(input_);
   file << "6 3\n";
   file << "1 0 1\n";
@@ -1217,7 +1217,7 @@ TEST_F(FileSaverTest, SaveToFile6x3Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile6x4Test) {
+TEST_F(SaverTest, SaveToFile6x4Test) {
   std::ofstream file(input_);
   file << "6 4\n";
   file << "0 1 0 1\n";
@@ -1253,7 +1253,7 @@ TEST_F(FileSaverTest, SaveToFile6x4Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile6x5Test) {
+TEST_F(SaverTest, SaveToFile6x5Test) {
   std::ofstream file(input_);
   file << "6 5\n";
   file << "0 0 1 1 1\n";
@@ -1289,7 +1289,7 @@ TEST_F(FileSaverTest, SaveToFile6x5Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile6x6Test) {
+TEST_F(SaverTest, SaveToFile6x6Test) {
   std::ofstream file(input_);
   file << "6 6\n";
   file << "1 1 1 1 0 1\n";
@@ -1325,7 +1325,7 @@ TEST_F(FileSaverTest, SaveToFile6x6Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile6x7Test) {
+TEST_F(SaverTest, SaveToFile6x7Test) {
   std::ofstream file(input_);
   file << "6 7\n";
   file << "0 1 0 1 0 0 1\n";
@@ -1361,7 +1361,7 @@ TEST_F(FileSaverTest, SaveToFile6x7Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile6x8Test) {
+TEST_F(SaverTest, SaveToFile6x8Test) {
   std::ofstream file(input_);
   file << "6 8\n";
   file << "0 0 1 0 0 1 1 1\n";
@@ -1397,7 +1397,7 @@ TEST_F(FileSaverTest, SaveToFile6x8Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile6x9Test) {
+TEST_F(SaverTest, SaveToFile6x9Test) {
   std::ofstream file(input_);
   file << "6 9\n";
   file << "1 1 1 0 0 0 0 0 1\n";
@@ -1433,7 +1433,7 @@ TEST_F(FileSaverTest, SaveToFile6x9Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile6x10Test) {
+TEST_F(SaverTest, SaveToFile6x10Test) {
   std::ofstream file(input_);
   file << "6 10\n";
   file << "0 0 0 0 0 0 1 1 0 1\n";
@@ -1469,7 +1469,7 @@ TEST_F(FileSaverTest, SaveToFile6x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile7x2Test) {
+TEST_F(SaverTest, SaveToFile7x2Test) {
   std::ofstream file(input_);
   file << "7 2\n";
   file << "1 1\n";
@@ -1507,7 +1507,7 @@ TEST_F(FileSaverTest, SaveToFile7x2Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile7x3Test) {
+TEST_F(SaverTest, SaveToFile7x3Test) {
   std::ofstream file(input_);
   file << "7 3\n";
   file << "1 0 1\n";
@@ -1545,7 +1545,7 @@ TEST_F(FileSaverTest, SaveToFile7x3Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile7x4Test) {
+TEST_F(SaverTest, SaveToFile7x4Test) {
   std::ofstream file(input_);
   file << "7 4\n";
   file << "1 1 1 1\n";
@@ -1583,7 +1583,7 @@ TEST_F(FileSaverTest, SaveToFile7x4Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile7x5Test) {
+TEST_F(SaverTest, SaveToFile7x5Test) {
   std::ofstream file(input_);
   file << "7 5\n";
   file << "0 0 1 0 1\n";
@@ -1621,7 +1621,7 @@ TEST_F(FileSaverTest, SaveToFile7x5Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile7x6Test) {
+TEST_F(SaverTest, SaveToFile7x6Test) {
   std::ofstream file(input_);
   file << "7 6\n";
   file << "0 1 0 0 0 1\n";
@@ -1659,7 +1659,7 @@ TEST_F(FileSaverTest, SaveToFile7x6Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile7x7Test) {
+TEST_F(SaverTest, SaveToFile7x7Test) {
   std::ofstream file(input_);
   file << "7 7\n";
   file << "1 0 0 1 1 0 1\n";
@@ -1697,7 +1697,7 @@ TEST_F(FileSaverTest, SaveToFile7x7Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile7x8Test) {
+TEST_F(SaverTest, SaveToFile7x8Test) {
   std::ofstream file(input_);
   file << "7 8\n";
   file << "0 0 1 0 0 1 1 1\n";
@@ -1735,7 +1735,7 @@ TEST_F(FileSaverTest, SaveToFile7x8Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile7x9Test) {
+TEST_F(SaverTest, SaveToFile7x9Test) {
   std::ofstream file(input_);
   file << "7 9\n";
   file << "0 1 1 0 0 0 1 1 1\n";
@@ -1773,7 +1773,7 @@ TEST_F(FileSaverTest, SaveToFile7x9Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile7x10Test) {
+TEST_F(SaverTest, SaveToFile7x10Test) {
   std::ofstream file(input_);
   file << "7 10\n";
   file << "1 1 0 0 0 1 0 1 0 1\n";
@@ -1811,7 +1811,7 @@ TEST_F(FileSaverTest, SaveToFile7x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile8x2Test) {
+TEST_F(SaverTest, SaveToFile8x2Test) {
   std::ofstream file(input_);
   file << "8 2\n";
   file << "0 1\n";
@@ -1851,7 +1851,7 @@ TEST_F(FileSaverTest, SaveToFile8x2Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile8x3Test) {
+TEST_F(SaverTest, SaveToFile8x3Test) {
   std::ofstream file(input_);
   file << "8 3\n";
   file << "0 1 1\n";
@@ -1891,7 +1891,7 @@ TEST_F(FileSaverTest, SaveToFile8x3Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile8x4Test) {
+TEST_F(SaverTest, SaveToFile8x4Test) {
   std::ofstream file(input_);
   file << "8 4\n";
   file << "0 1 1 1\n";
@@ -1931,7 +1931,7 @@ TEST_F(FileSaverTest, SaveToFile8x4Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile8x5Test) {
+TEST_F(SaverTest, SaveToFile8x5Test) {
   std::ofstream file(input_);
   file << "8 5\n";
   file << "1 1 1 0 1\n";
@@ -1971,7 +1971,7 @@ TEST_F(FileSaverTest, SaveToFile8x5Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile8x6Test) {
+TEST_F(SaverTest, SaveToFile8x6Test) {
   std::ofstream file(input_);
   file << "8 6\n";
   file << "1 0 0 0 1 1\n";
@@ -2011,7 +2011,7 @@ TEST_F(FileSaverTest, SaveToFile8x6Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile8x7Test) {
+TEST_F(SaverTest, SaveToFile8x7Test) {
   std::ofstream file(input_);
   file << "8 7\n";
   file << "0 1 1 0 0 1 1\n";
@@ -2051,7 +2051,7 @@ TEST_F(FileSaverTest, SaveToFile8x7Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile8x8Test) {
+TEST_F(SaverTest, SaveToFile8x8Test) {
   std::ofstream file(input_);
   file << "8 8\n";
   file << "1 1 1 1 0 0 1 1\n";
@@ -2091,7 +2091,7 @@ TEST_F(FileSaverTest, SaveToFile8x8Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile8x9Test) {
+TEST_F(SaverTest, SaveToFile8x9Test) {
   std::ofstream file(input_);
   file << "8 9\n";
   file << "0 1 1 1 0 0 0 0 1\n";
@@ -2131,7 +2131,7 @@ TEST_F(FileSaverTest, SaveToFile8x9Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile8x10Test) {
+TEST_F(SaverTest, SaveToFile8x10Test) {
   std::ofstream file(input_);
   file << "8 10\n";
   file << "0 1 1 1 0 0 1 1 0 1\n";
@@ -2171,7 +2171,7 @@ TEST_F(FileSaverTest, SaveToFile8x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile9x2Test) {
+TEST_F(SaverTest, SaveToFile9x2Test) {
   std::ofstream file(input_);
   file << "9 2\n";
   file << "1 1\n";
@@ -2213,7 +2213,7 @@ TEST_F(FileSaverTest, SaveToFile9x2Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile9x3Test) {
+TEST_F(SaverTest, SaveToFile9x3Test) {
   std::ofstream file(input_);
   file << "9 3\n";
   file << "1 1 1\n";
@@ -2255,7 +2255,7 @@ TEST_F(FileSaverTest, SaveToFile9x3Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile9x4Test) {
+TEST_F(SaverTest, SaveToFile9x4Test) {
   std::ofstream file(input_);
   file << "9 4\n";
   file << "0 1 1 1\n";
@@ -2297,7 +2297,7 @@ TEST_F(FileSaverTest, SaveToFile9x4Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile9x5Test) {
+TEST_F(SaverTest, SaveToFile9x5Test) {
   std::ofstream file(input_);
   file << "9 5\n";
   file << "0 0 1 1 1\n";
@@ -2339,7 +2339,7 @@ TEST_F(FileSaverTest, SaveToFile9x5Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile9x6Test) {
+TEST_F(SaverTest, SaveToFile9x6Test) {
   std::ofstream file(input_);
   file << "9 6\n";
   file << "0 0 0 0 1 1\n";
@@ -2381,7 +2381,7 @@ TEST_F(FileSaverTest, SaveToFile9x6Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile9x7Test) {
+TEST_F(SaverTest, SaveToFile9x7Test) {
   std::ofstream file(input_);
   file << "9 7\n";
   file << "1 1 0 1 0 0 1\n";
@@ -2423,7 +2423,7 @@ TEST_F(FileSaverTest, SaveToFile9x7Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile9x8Test) {
+TEST_F(SaverTest, SaveToFile9x8Test) {
   std::ofstream file(input_);
   file << "9 8\n";
   file << "1 0 1 0 1 1 1 1\n";
@@ -2465,7 +2465,7 @@ TEST_F(FileSaverTest, SaveToFile9x8Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile9x9Test) {
+TEST_F(SaverTest, SaveToFile9x9Test) {
   std::ofstream file(input_);
   file << "9 9\n";
   file << "0 1 1 1 1 0 1 1 1\n";
@@ -2507,7 +2507,7 @@ TEST_F(FileSaverTest, SaveToFile9x9Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile9x10Test) {
+TEST_F(SaverTest, SaveToFile9x10Test) {
   std::ofstream file(input_);
   file << "9 10\n";
   file << "1 0 0 1 0 1 1 1 1 1\n";
@@ -2549,7 +2549,7 @@ TEST_F(FileSaverTest, SaveToFile9x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x2Test) {
+TEST_F(SaverTest, SaveToFile10x2Test) {
   std::ofstream file(input_);
   file << "10 2\n";
   file << "1 1\n";
@@ -2593,7 +2593,7 @@ TEST_F(FileSaverTest, SaveToFile10x2Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x3Test) {
+TEST_F(SaverTest, SaveToFile10x3Test) {
   std::ofstream file(input_);
   file << "10 3\n";
   file << "0 0 1\n";
@@ -2637,7 +2637,7 @@ TEST_F(FileSaverTest, SaveToFile10x3Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x4Test) {
+TEST_F(SaverTest, SaveToFile10x4Test) {
   std::ofstream file(input_);
   file << "10 4\n";
   file << "0 0 0 1\n";
@@ -2681,7 +2681,7 @@ TEST_F(FileSaverTest, SaveToFile10x4Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x5Test) {
+TEST_F(SaverTest, SaveToFile10x5Test) {
   std::ofstream file(input_);
   file << "10 5\n";
   file << "0 1 1 0 1\n";
@@ -2725,7 +2725,7 @@ TEST_F(FileSaverTest, SaveToFile10x5Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x6Test) {
+TEST_F(SaverTest, SaveToFile10x6Test) {
   std::ofstream file(input_);
   file << "10 6\n";
   file << "1 0 1 0 0 1\n";
@@ -2769,7 +2769,7 @@ TEST_F(FileSaverTest, SaveToFile10x6Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x7Test) {
+TEST_F(SaverTest, SaveToFile10x7Test) {
   std::ofstream file(input_);
   file << "10 7\n";
   file << "0 0 1 0 1 1 1\n";
@@ -2813,7 +2813,7 @@ TEST_F(FileSaverTest, SaveToFile10x7Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x8Test) {
+TEST_F(SaverTest, SaveToFile10x8Test) {
   std::ofstream file(input_);
   file << "10 8\n";
   file << "0 0 1 0 1 0 1 1\n";
@@ -2857,7 +2857,7 @@ TEST_F(FileSaverTest, SaveToFile10x8Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x9Test) {
+TEST_F(SaverTest, SaveToFile10x9Test) {
   std::ofstream file(input_);
   file << "10 9\n";
   file << "1 0 1 1 0 1 1 0 1\n";
@@ -2901,7 +2901,7 @@ TEST_F(FileSaverTest, SaveToFile10x9Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x10Test) {
+TEST_F(SaverTest, SaveToFile10x10Test) {
   std::ofstream file(input_);
   file << "10 10\n";
   file << "0 1 1 1 1 0 0 1 0 1\n";
@@ -2945,7 +2945,7 @@ TEST_F(FileSaverTest, SaveToFile10x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x11Test) {
+TEST_F(SaverTest, SaveToFile10x11Test) {
   std::ofstream file(input_);
   file << "10 11\n";
   file << "0 1 0 1 0 0 0 1 1 1 1\n";
@@ -2989,7 +2989,7 @@ TEST_F(FileSaverTest, SaveToFile10x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x12Test) {
+TEST_F(SaverTest, SaveToFile10x12Test) {
   std::ofstream file(input_);
   file << "10 12\n";
   file << "0 1 1 0 1 0 1 0 1 1 1 1\n";
@@ -3033,7 +3033,7 @@ TEST_F(FileSaverTest, SaveToFile10x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x13Test) {
+TEST_F(SaverTest, SaveToFile10x13Test) {
   std::ofstream file(input_);
   file << "10 13\n";
   file << "0 0 0 1 1 0 1 1 1 0 0 1 1\n";
@@ -3077,7 +3077,7 @@ TEST_F(FileSaverTest, SaveToFile10x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x14Test) {
+TEST_F(SaverTest, SaveToFile10x14Test) {
   std::ofstream file(input_);
   file << "10 14\n";
   file << "1 0 1 0 0 1 1 0 1 0 1 1 0 1\n";
@@ -3121,7 +3121,7 @@ TEST_F(FileSaverTest, SaveToFile10x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x15Test) {
+TEST_F(SaverTest, SaveToFile10x15Test) {
   std::ofstream file(input_);
   file << "10 15\n";
   file << "0 1 1 0 1 1 0 1 1 1 0 1 1 1 1\n";
@@ -3165,7 +3165,7 @@ TEST_F(FileSaverTest, SaveToFile10x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x16Test) {
+TEST_F(SaverTest, SaveToFile10x16Test) {
   std::ofstream file(input_);
   file << "10 16\n";
   file << "0 1 1 0 0 1 0 0 1 1 1 1 0 1 1 1\n";
@@ -3209,7 +3209,7 @@ TEST_F(FileSaverTest, SaveToFile10x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x17Test) {
+TEST_F(SaverTest, SaveToFile10x17Test) {
   std::ofstream file(input_);
   file << "10 17\n";
   file << "1 1 0 0 0 1 1 1 1 0 0 0 1 1 1 1 1\n";
@@ -3253,7 +3253,7 @@ TEST_F(FileSaverTest, SaveToFile10x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x18Test) {
+TEST_F(SaverTest, SaveToFile10x18Test) {
   std::ofstream file(input_);
   file << "10 18\n";
   file << "0 1 0 1 1 0 0 0 0 0 1 0 1 1 1 0 1 1\n";
@@ -3297,7 +3297,7 @@ TEST_F(FileSaverTest, SaveToFile10x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x19Test) {
+TEST_F(SaverTest, SaveToFile10x19Test) {
   std::ofstream file(input_);
   file << "10 19\n";
   file << "1 1 1 1 0 0 0 0 0 0 1 1 0 1 0 1 0 0 1\n";
@@ -3341,7 +3341,7 @@ TEST_F(FileSaverTest, SaveToFile10x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x20Test) {
+TEST_F(SaverTest, SaveToFile10x20Test) {
   std::ofstream file(input_);
   file << "10 20\n";
   file << "0 0 0 0 1 0 1 0 1 1 1 1 1 0 0 1 1 0 0 1\n";
@@ -3385,7 +3385,7 @@ TEST_F(FileSaverTest, SaveToFile10x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x21Test) {
+TEST_F(SaverTest, SaveToFile10x21Test) {
   std::ofstream file(input_);
   file << "10 21\n";
   file << "0 1 0 1 1 1 0 0 1 1 1 1 0 0 1 0 0 0 0 1 1\n";
@@ -3429,7 +3429,7 @@ TEST_F(FileSaverTest, SaveToFile10x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x22Test) {
+TEST_F(SaverTest, SaveToFile10x22Test) {
   std::ofstream file(input_);
   file << "10 22\n";
   file << "0 1 1 0 1 0 1 1 0 1 0 1 1 0 0 0 1 1 0 0 0 1\n";
@@ -3473,7 +3473,7 @@ TEST_F(FileSaverTest, SaveToFile10x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x23Test) {
+TEST_F(SaverTest, SaveToFile10x23Test) {
   std::ofstream file(input_);
   file << "10 23\n";
   file << "1 0 1 1 1 0 1 1 1 1 0 1 1 1 1 0 0 0 1 0 0 1 1\n";
@@ -3517,7 +3517,7 @@ TEST_F(FileSaverTest, SaveToFile10x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x24Test) {
+TEST_F(SaverTest, SaveToFile10x24Test) {
   std::ofstream file(input_);
   file << "10 24\n";
   file << "0 1 0 1 1 0 0 1 1 1 0 0 0 1 1 0 1 0 1 0 1 0 0 1\n";
@@ -3561,7 +3561,7 @@ TEST_F(FileSaverTest, SaveToFile10x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x25Test) {
+TEST_F(SaverTest, SaveToFile10x25Test) {
   std::ofstream file(input_);
   file << "10 25\n";
   file << "1 0 0 1 0 0 0 1 0 1 1 0 0 1 1 0 0 0 1 1 1 0 1 1 1\n";
@@ -3605,7 +3605,7 @@ TEST_F(FileSaverTest, SaveToFile10x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x26Test) {
+TEST_F(SaverTest, SaveToFile10x26Test) {
   std::ofstream file(input_);
   file << "10 26\n";
   file << "1 1 1 0 1 0 0 0 0 1 1 0 0 1 0 1 1 0 0 1 0 0 0 0 1 1\n";
@@ -3649,7 +3649,7 @@ TEST_F(FileSaverTest, SaveToFile10x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x27Test) {
+TEST_F(SaverTest, SaveToFile10x27Test) {
   std::ofstream file(input_);
   file << "10 27\n";
   file << "0 1 0 1 1 1 0 0 1 0 0 0 0 0 1 1 0 0 1 1 0 0 0 0 0 1 1\n";
@@ -3693,7 +3693,7 @@ TEST_F(FileSaverTest, SaveToFile10x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x28Test) {
+TEST_F(SaverTest, SaveToFile10x28Test) {
   std::ofstream file(input_);
   file << "10 28\n";
   file << "0 1 1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 1 0 1 1 1 0 0 1 1 1 1\n";
@@ -3737,7 +3737,7 @@ TEST_F(FileSaverTest, SaveToFile10x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x29Test) {
+TEST_F(SaverTest, SaveToFile10x29Test) {
   std::ofstream file(input_);
   file << "10 29\n";
   file << "1 1 1 1 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 1 1 1 0 1 1\n";
@@ -3781,7 +3781,7 @@ TEST_F(FileSaverTest, SaveToFile10x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile10x30Test) {
+TEST_F(SaverTest, SaveToFile10x30Test) {
   std::ofstream file(input_);
   file << "10 30\n";
   file << "0 1 0 0 1 1 1 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 1 0 1 0 1 1\n";
@@ -3825,7 +3825,7 @@ TEST_F(FileSaverTest, SaveToFile10x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x10Test) {
+TEST_F(SaverTest, SaveToFile11x10Test) {
   std::ofstream file(input_);
   file << "11 10\n";
   file << "1 1 1 0 0 1 0 1 1 1\n";
@@ -3871,7 +3871,7 @@ TEST_F(FileSaverTest, SaveToFile11x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x11Test) {
+TEST_F(SaverTest, SaveToFile11x11Test) {
   std::ofstream file(input_);
   file << "11 11\n";
   file << "1 1 1 1 0 1 0 1 0 1 1\n";
@@ -3917,7 +3917,7 @@ TEST_F(FileSaverTest, SaveToFile11x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x12Test) {
+TEST_F(SaverTest, SaveToFile11x12Test) {
   std::ofstream file(input_);
   file << "11 12\n";
   file << "1 0 1 1 0 0 1 1 1 1 0 1\n";
@@ -3963,7 +3963,7 @@ TEST_F(FileSaverTest, SaveToFile11x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x13Test) {
+TEST_F(SaverTest, SaveToFile11x13Test) {
   std::ofstream file(input_);
   file << "11 13\n";
   file << "0 1 1 0 1 1 0 1 0 0 1 0 1\n";
@@ -4009,7 +4009,7 @@ TEST_F(FileSaverTest, SaveToFile11x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x14Test) {
+TEST_F(SaverTest, SaveToFile11x14Test) {
   std::ofstream file(input_);
   file << "11 14\n";
   file << "0 0 1 1 0 1 0 0 0 1 1 1 1 1\n";
@@ -4055,7 +4055,7 @@ TEST_F(FileSaverTest, SaveToFile11x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x15Test) {
+TEST_F(SaverTest, SaveToFile11x15Test) {
   std::ofstream file(input_);
   file << "11 15\n";
   file << "0 1 0 0 1 0 0 1 0 1 1 1 0 0 1\n";
@@ -4101,7 +4101,7 @@ TEST_F(FileSaverTest, SaveToFile11x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x16Test) {
+TEST_F(SaverTest, SaveToFile11x16Test) {
   std::ofstream file(input_);
   file << "11 16\n";
   file << "1 1 1 0 1 0 0 0 0 0 1 0 0 1 1 1\n";
@@ -4147,7 +4147,7 @@ TEST_F(FileSaverTest, SaveToFile11x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x17Test) {
+TEST_F(SaverTest, SaveToFile11x17Test) {
   std::ofstream file(input_);
   file << "11 17\n";
   file << "0 1 0 1 1 0 0 1 1 0 1 0 0 1 1 0 1\n";
@@ -4193,7 +4193,7 @@ TEST_F(FileSaverTest, SaveToFile11x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x18Test) {
+TEST_F(SaverTest, SaveToFile11x18Test) {
   std::ofstream file(input_);
   file << "11 18\n";
   file << "1 1 0 0 0 1 1 0 0 0 0 1 1 1 1 1 0 1\n";
@@ -4239,7 +4239,7 @@ TEST_F(FileSaverTest, SaveToFile11x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x19Test) {
+TEST_F(SaverTest, SaveToFile11x19Test) {
   std::ofstream file(input_);
   file << "11 19\n";
   file << "1 0 0 0 1 0 1 1 1 1 0 1 1 1 0 1 0 1 1\n";
@@ -4285,7 +4285,7 @@ TEST_F(FileSaverTest, SaveToFile11x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x20Test) {
+TEST_F(SaverTest, SaveToFile11x20Test) {
   std::ofstream file(input_);
   file << "11 20\n";
   file << "0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 1 1 1\n";
@@ -4331,7 +4331,7 @@ TEST_F(FileSaverTest, SaveToFile11x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x21Test) {
+TEST_F(SaverTest, SaveToFile11x21Test) {
   std::ofstream file(input_);
   file << "11 21\n";
   file << "0 0 0 1 0 1 0 0 0 0 1 0 0 1 0 0 0 1 1 1 1\n";
@@ -4377,7 +4377,7 @@ TEST_F(FileSaverTest, SaveToFile11x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x22Test) {
+TEST_F(SaverTest, SaveToFile11x22Test) {
   std::ofstream file(input_);
   file << "11 22\n";
   file << "0 1 1 1 0 1 1 1 0 1 1 0 1 0 1 1 1 1 0 1 0 1\n";
@@ -4423,7 +4423,7 @@ TEST_F(FileSaverTest, SaveToFile11x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x23Test) {
+TEST_F(SaverTest, SaveToFile11x23Test) {
   std::ofstream file(input_);
   file << "11 23\n";
   file << "0 1 1 0 0 1 1 1 0 1 1 1 0 0 0 0 1 0 0 0 0 0 1\n";
@@ -4469,7 +4469,7 @@ TEST_F(FileSaverTest, SaveToFile11x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x24Test) {
+TEST_F(SaverTest, SaveToFile11x24Test) {
   std::ofstream file(input_);
   file << "11 24\n";
   file << "1 0 1 0 0 0 1 0 0 1 0 1 1 1 0 1 0 0 1 0 1 0 0 1\n";
@@ -4515,7 +4515,7 @@ TEST_F(FileSaverTest, SaveToFile11x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x25Test) {
+TEST_F(SaverTest, SaveToFile11x25Test) {
   std::ofstream file(input_);
   file << "11 25\n";
   file << "1 0 1 1 1 0 1 1 1 0 0 1 0 0 0 0 0 0 0 1 1 1 0 0 1\n";
@@ -4561,7 +4561,7 @@ TEST_F(FileSaverTest, SaveToFile11x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x26Test) {
+TEST_F(SaverTest, SaveToFile11x26Test) {
   std::ofstream file(input_);
   file << "11 26\n";
   file << "1 0 1 0 0 0 1 0 1 1 1 0 1 0 0 0 1 1 0 1 1 1 0 1 0 1\n";
@@ -4607,7 +4607,7 @@ TEST_F(FileSaverTest, SaveToFile11x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x27Test) {
+TEST_F(SaverTest, SaveToFile11x27Test) {
   std::ofstream file(input_);
   file << "11 27\n";
   file << "1 0 0 1 1 0 0 1 1 0 0 1 1 0 1 1 0 1 1 1 1 0 1 0 0 0 1\n";
@@ -4653,7 +4653,7 @@ TEST_F(FileSaverTest, SaveToFile11x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x28Test) {
+TEST_F(SaverTest, SaveToFile11x28Test) {
   std::ofstream file(input_);
   file << "11 28\n";
   file << "1 0 1 0 1 1 1 0 0 0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 0 1 1 1\n";
@@ -4699,7 +4699,7 @@ TEST_F(FileSaverTest, SaveToFile11x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x29Test) {
+TEST_F(SaverTest, SaveToFile11x29Test) {
   std::ofstream file(input_);
   file << "11 29\n";
   file << "1 0 0 0 1 1 1 0 0 1 1 0 1 1 1 0 1 0 1 1 0 0 1 1 1 0 1 0 1\n";
@@ -4745,7 +4745,7 @@ TEST_F(FileSaverTest, SaveToFile11x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile11x30Test) {
+TEST_F(SaverTest, SaveToFile11x30Test) {
   std::ofstream file(input_);
   file << "11 30\n";
   file << "1 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 1 1\n";
@@ -4791,7 +4791,7 @@ TEST_F(FileSaverTest, SaveToFile11x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x10Test) {
+TEST_F(SaverTest, SaveToFile12x10Test) {
   std::ofstream file(input_);
   file << "12 10\n";
   file << "0 0 1 0 0 0 1 0 0 1\n";
@@ -4839,7 +4839,7 @@ TEST_F(FileSaverTest, SaveToFile12x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x11Test) {
+TEST_F(SaverTest, SaveToFile12x11Test) {
   std::ofstream file(input_);
   file << "12 11\n";
   file << "0 0 1 1 1 0 0 1 1 0 1\n";
@@ -4887,7 +4887,7 @@ TEST_F(FileSaverTest, SaveToFile12x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x12Test) {
+TEST_F(SaverTest, SaveToFile12x12Test) {
   std::ofstream file(input_);
   file << "12 12\n";
   file << "0 1 1 1 0 0 1 1 0 0 0 1\n";
@@ -4935,7 +4935,7 @@ TEST_F(FileSaverTest, SaveToFile12x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x13Test) {
+TEST_F(SaverTest, SaveToFile12x13Test) {
   std::ofstream file(input_);
   file << "12 13\n";
   file << "0 0 0 0 1 0 1 1 1 0 0 0 1\n";
@@ -4983,7 +4983,7 @@ TEST_F(FileSaverTest, SaveToFile12x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x14Test) {
+TEST_F(SaverTest, SaveToFile12x14Test) {
   std::ofstream file(input_);
   file << "12 14\n";
   file << "1 1 0 1 0 1 1 1 1 0 1 1 0 1\n";
@@ -5031,7 +5031,7 @@ TEST_F(FileSaverTest, SaveToFile12x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x15Test) {
+TEST_F(SaverTest, SaveToFile12x15Test) {
   std::ofstream file(input_);
   file << "12 15\n";
   file << "1 0 1 0 0 0 0 1 1 1 1 1 1 1 1\n";
@@ -5079,7 +5079,7 @@ TEST_F(FileSaverTest, SaveToFile12x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x16Test) {
+TEST_F(SaverTest, SaveToFile12x16Test) {
   std::ofstream file(input_);
   file << "12 16\n";
   file << "1 0 0 1 1 1 0 1 0 1 1 1 1 1 1 1\n";
@@ -5127,7 +5127,7 @@ TEST_F(FileSaverTest, SaveToFile12x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x17Test) {
+TEST_F(SaverTest, SaveToFile12x17Test) {
   std::ofstream file(input_);
   file << "12 17\n";
   file << "1 1 1 1 1 1 1 0 1 1 0 0 0 1 1 0 1\n";
@@ -5175,7 +5175,7 @@ TEST_F(FileSaverTest, SaveToFile12x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x18Test) {
+TEST_F(SaverTest, SaveToFile12x18Test) {
   std::ofstream file(input_);
   file << "12 18\n";
   file << "1 1 1 1 1 0 0 1 0 0 1 1 0 1 0 0 1 1\n";
@@ -5223,7 +5223,7 @@ TEST_F(FileSaverTest, SaveToFile12x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x19Test) {
+TEST_F(SaverTest, SaveToFile12x19Test) {
   std::ofstream file(input_);
   file << "12 19\n";
   file << "1 0 1 1 0 0 1 1 1 0 0 1 1 1 0 1 0 0 1\n";
@@ -5271,7 +5271,7 @@ TEST_F(FileSaverTest, SaveToFile12x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x20Test) {
+TEST_F(SaverTest, SaveToFile12x20Test) {
   std::ofstream file(input_);
   file << "12 20\n";
   file << "0 1 0 0 1 0 1 1 1 1 1 0 0 0 0 0 0 1 0 1\n";
@@ -5319,7 +5319,7 @@ TEST_F(FileSaverTest, SaveToFile12x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x21Test) {
+TEST_F(SaverTest, SaveToFile12x21Test) {
   std::ofstream file(input_);
   file << "12 21\n";
   file << "0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 1 0 1\n";
@@ -5367,7 +5367,7 @@ TEST_F(FileSaverTest, SaveToFile12x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x22Test) {
+TEST_F(SaverTest, SaveToFile12x22Test) {
   std::ofstream file(input_);
   file << "12 22\n";
   file << "0 0 0 1 0 0 1 0 1 1 0 0 0 0 0 1 0 0 1 1 1 1\n";
@@ -5415,7 +5415,7 @@ TEST_F(FileSaverTest, SaveToFile12x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x23Test) {
+TEST_F(SaverTest, SaveToFile12x23Test) {
   std::ofstream file(input_);
   file << "12 23\n";
   file << "1 0 1 0 0 1 0 0 1 0 1 0 0 0 0 1 0 0 1 1 0 1 1\n";
@@ -5463,7 +5463,7 @@ TEST_F(FileSaverTest, SaveToFile12x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x24Test) {
+TEST_F(SaverTest, SaveToFile12x24Test) {
   std::ofstream file(input_);
   file << "12 24\n";
   file << "1 0 0 0 1 0 1 0 1 0 0 0 0 0 1 0 0 1 1 0 1 0 0 1\n";
@@ -5511,7 +5511,7 @@ TEST_F(FileSaverTest, SaveToFile12x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x25Test) {
+TEST_F(SaverTest, SaveToFile12x25Test) {
   std::ofstream file(input_);
   file << "12 25\n";
   file << "1 1 1 1 1 1 0 0 0 0 0 1 0 1 1 1 1 1 1 0 1 0 0 1 1\n";
@@ -5559,7 +5559,7 @@ TEST_F(FileSaverTest, SaveToFile12x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x26Test) {
+TEST_F(SaverTest, SaveToFile12x26Test) {
   std::ofstream file(input_);
   file << "12 26\n";
   file << "0 0 1 0 1 1 1 0 1 0 1 0 0 0 1 1 0 1 0 0 1 0 0 0 0 1\n";
@@ -5607,7 +5607,7 @@ TEST_F(FileSaverTest, SaveToFile12x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x27Test) {
+TEST_F(SaverTest, SaveToFile12x27Test) {
   std::ofstream file(input_);
   file << "12 27\n";
   file << "1 1 1 0 0 1 0 0 1 0 1 1 0 1 0 0 1 0 0 0 0 0 0 0 1 0 1\n";
@@ -5655,7 +5655,7 @@ TEST_F(FileSaverTest, SaveToFile12x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x28Test) {
+TEST_F(SaverTest, SaveToFile12x28Test) {
   std::ofstream file(input_);
   file << "12 28\n";
   file << "0 1 0 0 1 1 0 1 0 0 0 0 1 1 1 0 0 0 0 1 1 0 1 1 1 1 0 1\n";
@@ -5703,7 +5703,7 @@ TEST_F(FileSaverTest, SaveToFile12x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x29Test) {
+TEST_F(SaverTest, SaveToFile12x29Test) {
   std::ofstream file(input_);
   file << "12 29\n";
   file << "0 0 1 1 0 1 1 0 1 1 0 1 1 1 0 0 1 0 1 1 0 0 1 0 1 0 1 1 1\n";
@@ -5751,7 +5751,7 @@ TEST_F(FileSaverTest, SaveToFile12x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile12x30Test) {
+TEST_F(SaverTest, SaveToFile12x30Test) {
   std::ofstream file(input_);
   file << "12 30\n";
   file << "1 0 0 0 0 1 1 0 1 1 0 0 0 0 1 1 0 1 0 1 1 1 1 0 0 0 1 1 1 1\n";
@@ -5799,7 +5799,7 @@ TEST_F(FileSaverTest, SaveToFile12x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x10Test) {
+TEST_F(SaverTest, SaveToFile13x10Test) {
   std::ofstream file(input_);
   file << "13 10\n";
   file << "0 1 1 1 0 0 1 0 1 1\n";
@@ -5849,7 +5849,7 @@ TEST_F(FileSaverTest, SaveToFile13x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x11Test) {
+TEST_F(SaverTest, SaveToFile13x11Test) {
   std::ofstream file(input_);
   file << "13 11\n";
   file << "0 1 0 0 1 0 0 0 1 1 1\n";
@@ -5899,7 +5899,7 @@ TEST_F(FileSaverTest, SaveToFile13x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x12Test) {
+TEST_F(SaverTest, SaveToFile13x12Test) {
   std::ofstream file(input_);
   file << "13 12\n";
   file << "1 1 0 1 1 0 1 1 0 1 1 1\n";
@@ -5949,7 +5949,7 @@ TEST_F(FileSaverTest, SaveToFile13x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x13Test) {
+TEST_F(SaverTest, SaveToFile13x13Test) {
   std::ofstream file(input_);
   file << "13 13\n";
   file << "0 1 0 1 0 0 1 1 1 1 0 0 1\n";
@@ -5999,7 +5999,7 @@ TEST_F(FileSaverTest, SaveToFile13x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x14Test) {
+TEST_F(SaverTest, SaveToFile13x14Test) {
   std::ofstream file(input_);
   file << "13 14\n";
   file << "1 0 1 0 0 1 0 1 1 1 1 1 1 1\n";
@@ -6049,7 +6049,7 @@ TEST_F(FileSaverTest, SaveToFile13x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x15Test) {
+TEST_F(SaverTest, SaveToFile13x15Test) {
   std::ofstream file(input_);
   file << "13 15\n";
   file << "0 0 0 0 0 0 1 1 1 1 0 0 0 1 1\n";
@@ -6099,7 +6099,7 @@ TEST_F(FileSaverTest, SaveToFile13x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x16Test) {
+TEST_F(SaverTest, SaveToFile13x16Test) {
   std::ofstream file(input_);
   file << "13 16\n";
   file << "0 0 1 1 1 0 0 1 1 1 1 1 0 1 0 1\n";
@@ -6149,7 +6149,7 @@ TEST_F(FileSaverTest, SaveToFile13x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x17Test) {
+TEST_F(SaverTest, SaveToFile13x17Test) {
   std::ofstream file(input_);
   file << "13 17\n";
   file << "1 1 0 0 0 1 0 1 1 0 0 1 0 0 0 1 1\n";
@@ -6199,7 +6199,7 @@ TEST_F(FileSaverTest, SaveToFile13x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x18Test) {
+TEST_F(SaverTest, SaveToFile13x18Test) {
   std::ofstream file(input_);
   file << "13 18\n";
   file << "0 0 1 1 1 1 1 1 0 1 0 0 0 1 0 1 1 1\n";
@@ -6249,7 +6249,7 @@ TEST_F(FileSaverTest, SaveToFile13x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x19Test) {
+TEST_F(SaverTest, SaveToFile13x19Test) {
   std::ofstream file(input_);
   file << "13 19\n";
   file << "1 1 1 1 1 0 1 0 1 1 0 0 1 1 0 0 0 0 1\n";
@@ -6299,7 +6299,7 @@ TEST_F(FileSaverTest, SaveToFile13x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x20Test) {
+TEST_F(SaverTest, SaveToFile13x20Test) {
   std::ofstream file(input_);
   file << "13 20\n";
   file << "1 0 0 1 1 0 0 1 0 1 0 1 1 1 0 0 0 0 1 1\n";
@@ -6349,7 +6349,7 @@ TEST_F(FileSaverTest, SaveToFile13x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x21Test) {
+TEST_F(SaverTest, SaveToFile13x21Test) {
   std::ofstream file(input_);
   file << "13 21\n";
   file << "0 1 0 1 0 0 0 0 1 0 1 0 1 0 0 1 0 0 0 0 1\n";
@@ -6399,7 +6399,7 @@ TEST_F(FileSaverTest, SaveToFile13x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x22Test) {
+TEST_F(SaverTest, SaveToFile13x22Test) {
   std::ofstream file(input_);
   file << "13 22\n";
   file << "1 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 1 1\n";
@@ -6449,7 +6449,7 @@ TEST_F(FileSaverTest, SaveToFile13x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x23Test) {
+TEST_F(SaverTest, SaveToFile13x23Test) {
   std::ofstream file(input_);
   file << "13 23\n";
   file << "0 1 1 0 1 1 0 1 1 1 0 0 0 0 1 1 1 0 1 1 1 0 1\n";
@@ -6499,7 +6499,7 @@ TEST_F(FileSaverTest, SaveToFile13x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x24Test) {
+TEST_F(SaverTest, SaveToFile13x24Test) {
   std::ofstream file(input_);
   file << "13 24\n";
   file << "0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 1 0 1 1 0 0 0 0 1\n";
@@ -6549,7 +6549,7 @@ TEST_F(FileSaverTest, SaveToFile13x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x25Test) {
+TEST_F(SaverTest, SaveToFile13x25Test) {
   std::ofstream file(input_);
   file << "13 25\n";
   file << "1 1 1 1 0 0 1 1 1 0 0 1 1 1 0 1 0 1 1 0 1 0 1 0 1\n";
@@ -6599,7 +6599,7 @@ TEST_F(FileSaverTest, SaveToFile13x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x26Test) {
+TEST_F(SaverTest, SaveToFile13x26Test) {
   std::ofstream file(input_);
   file << "13 26\n";
   file << "0 1 1 1 1 1 1 0 1 0 0 1 0 1 0 1 0 0 0 1 1 1 0 1 1 1\n";
@@ -6649,7 +6649,7 @@ TEST_F(FileSaverTest, SaveToFile13x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x27Test) {
+TEST_F(SaverTest, SaveToFile13x27Test) {
   std::ofstream file(input_);
   file << "13 27\n";
   file << "1 0 0 1 0 0 0 0 1 0 1 0 1 1 0 1 0 0 0 0 1 1 1 0 1 1 1\n";
@@ -6699,7 +6699,7 @@ TEST_F(FileSaverTest, SaveToFile13x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x28Test) {
+TEST_F(SaverTest, SaveToFile13x28Test) {
   std::ofstream file(input_);
   file << "13 28\n";
   file << "0 1 0 0 0 1 1 1 0 1 1 0 0 1 0 0 0 0 1 1 1 0 0 1 0 1 0 1\n";
@@ -6749,7 +6749,7 @@ TEST_F(FileSaverTest, SaveToFile13x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x29Test) {
+TEST_F(SaverTest, SaveToFile13x29Test) {
   std::ofstream file(input_);
   file << "13 29\n";
   file << "1 0 1 1 1 1 1 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 1 0 1 1 1\n";
@@ -6799,7 +6799,7 @@ TEST_F(FileSaverTest, SaveToFile13x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile13x30Test) {
+TEST_F(SaverTest, SaveToFile13x30Test) {
   std::ofstream file(input_);
   file << "13 30\n";
   file << "0 1 0 0 1 1 1 0 0 1 0 1 1 1 1 0 0 1 0 0 0 1 1 1 1 1 0 0 1 1\n";
@@ -6849,7 +6849,7 @@ TEST_F(FileSaverTest, SaveToFile13x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x10Test) {
+TEST_F(SaverTest, SaveToFile14x10Test) {
   std::ofstream file(input_);
   file << "14 10\n";
   file << "0 1 1 0 0 1 0 0 0 1\n";
@@ -6901,7 +6901,7 @@ TEST_F(FileSaverTest, SaveToFile14x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x11Test) {
+TEST_F(SaverTest, SaveToFile14x11Test) {
   std::ofstream file(input_);
   file << "14 11\n";
   file << "1 1 0 1 0 0 0 1 0 1 1\n";
@@ -6953,7 +6953,7 @@ TEST_F(FileSaverTest, SaveToFile14x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x12Test) {
+TEST_F(SaverTest, SaveToFile14x12Test) {
   std::ofstream file(input_);
   file << "14 12\n";
   file << "1 1 1 0 0 1 1 0 0 0 0 1\n";
@@ -7005,7 +7005,7 @@ TEST_F(FileSaverTest, SaveToFile14x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x13Test) {
+TEST_F(SaverTest, SaveToFile14x13Test) {
   std::ofstream file(input_);
   file << "14 13\n";
   file << "0 1 0 1 1 1 0 1 0 1 0 0 1\n";
@@ -7057,7 +7057,7 @@ TEST_F(FileSaverTest, SaveToFile14x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x14Test) {
+TEST_F(SaverTest, SaveToFile14x14Test) {
   std::ofstream file(input_);
   file << "14 14\n";
   file << "1 1 0 0 0 0 0 0 0 1 0 1 0 1\n";
@@ -7109,7 +7109,7 @@ TEST_F(FileSaverTest, SaveToFile14x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x15Test) {
+TEST_F(SaverTest, SaveToFile14x15Test) {
   std::ofstream file(input_);
   file << "14 15\n";
   file << "1 0 1 0 1 0 1 1 0 0 0 1 1 0 1\n";
@@ -7161,7 +7161,7 @@ TEST_F(FileSaverTest, SaveToFile14x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x16Test) {
+TEST_F(SaverTest, SaveToFile14x16Test) {
   std::ofstream file(input_);
   file << "14 16\n";
   file << "1 1 1 1 1 0 1 0 1 0 0 0 1 1 0 1\n";
@@ -7213,7 +7213,7 @@ TEST_F(FileSaverTest, SaveToFile14x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x17Test) {
+TEST_F(SaverTest, SaveToFile14x17Test) {
   std::ofstream file(input_);
   file << "14 17\n";
   file << "1 1 0 1 1 0 0 0 1 0 1 0 0 1 0 1 1\n";
@@ -7265,7 +7265,7 @@ TEST_F(FileSaverTest, SaveToFile14x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x18Test) {
+TEST_F(SaverTest, SaveToFile14x18Test) {
   std::ofstream file(input_);
   file << "14 18\n";
   file << "0 1 0 0 1 1 0 1 1 1 1 1 1 1 0 1 0 1\n";
@@ -7317,7 +7317,7 @@ TEST_F(FileSaverTest, SaveToFile14x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x19Test) {
+TEST_F(SaverTest, SaveToFile14x19Test) {
   std::ofstream file(input_);
   file << "14 19\n";
   file << "1 0 0 0 0 1 0 1 1 1 0 0 0 1 1 1 1 0 1\n";
@@ -7369,7 +7369,7 @@ TEST_F(FileSaverTest, SaveToFile14x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x20Test) {
+TEST_F(SaverTest, SaveToFile14x20Test) {
   std::ofstream file(input_);
   file << "14 20\n";
   file << "0 0 1 0 1 0 0 0 0 1 1 0 1 1 0 1 1 1 1 1\n";
@@ -7421,7 +7421,7 @@ TEST_F(FileSaverTest, SaveToFile14x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x21Test) {
+TEST_F(SaverTest, SaveToFile14x21Test) {
   std::ofstream file(input_);
   file << "14 21\n";
   file << "1 1 0 0 1 1 0 1 0 1 1 0 0 0 1 0 0 1 0 0 1\n";
@@ -7473,7 +7473,7 @@ TEST_F(FileSaverTest, SaveToFile14x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x22Test) {
+TEST_F(SaverTest, SaveToFile14x22Test) {
   std::ofstream file(input_);
   file << "14 22\n";
   file << "0 1 0 0 0 0 1 1 0 1 1 0 0 0 1 0 1 0 1 0 0 1\n";
@@ -7525,7 +7525,7 @@ TEST_F(FileSaverTest, SaveToFile14x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x23Test) {
+TEST_F(SaverTest, SaveToFile14x23Test) {
   std::ofstream file(input_);
   file << "14 23\n";
   file << "1 0 1 1 0 1 1 1 0 0 1 0 0 1 0 1 0 1 1 1 0 1 1\n";
@@ -7577,7 +7577,7 @@ TEST_F(FileSaverTest, SaveToFile14x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x24Test) {
+TEST_F(SaverTest, SaveToFile14x24Test) {
   std::ofstream file(input_);
   file << "14 24\n";
   file << "1 0 0 0 1 1 0 0 0 0 1 1 0 0 0 1 1 1 1 1 0 1 1 1\n";
@@ -7629,7 +7629,7 @@ TEST_F(FileSaverTest, SaveToFile14x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x25Test) {
+TEST_F(SaverTest, SaveToFile14x25Test) {
   std::ofstream file(input_);
   file << "14 25\n";
   file << "1 0 0 1 0 0 1 1 1 0 0 1 0 0 0 1 1 1 0 1 1 0 0 1 1\n";
@@ -7681,7 +7681,7 @@ TEST_F(FileSaverTest, SaveToFile14x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x26Test) {
+TEST_F(SaverTest, SaveToFile14x26Test) {
   std::ofstream file(input_);
   file << "14 26\n";
   file << "1 1 1 0 0 1 0 0 1 1 1 1 0 1 0 1 0 1 1 1 0 0 1 1 0 1\n";
@@ -7733,7 +7733,7 @@ TEST_F(FileSaverTest, SaveToFile14x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x27Test) {
+TEST_F(SaverTest, SaveToFile14x27Test) {
   std::ofstream file(input_);
   file << "14 27\n";
   file << "1 1 0 1 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 1 1 1 0 1\n";
@@ -7785,7 +7785,7 @@ TEST_F(FileSaverTest, SaveToFile14x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x28Test) {
+TEST_F(SaverTest, SaveToFile14x28Test) {
   std::ofstream file(input_);
   file << "14 28\n";
   file << "1 0 1 1 1 1 0 0 1 0 1 1 0 1 0 0 0 0 0 0 1 0 1 1 1 1 1 1\n";
@@ -7837,7 +7837,7 @@ TEST_F(FileSaverTest, SaveToFile14x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x29Test) {
+TEST_F(SaverTest, SaveToFile14x29Test) {
   std::ofstream file(input_);
   file << "14 29\n";
   file << "1 1 0 1 1 1 0 0 1 0 1 1 0 1 1 0 1 0 1 1 1 0 0 1 1 0 0 1 1\n";
@@ -7889,7 +7889,7 @@ TEST_F(FileSaverTest, SaveToFile14x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile14x30Test) {
+TEST_F(SaverTest, SaveToFile14x30Test) {
   std::ofstream file(input_);
   file << "14 30\n";
   file << "0 1 1 1 1 0 0 0 1 0 0 1 1 1 1 0 0 1 0 0 0 1 1 0 1 1 0 0 0 1\n";
@@ -7941,7 +7941,7 @@ TEST_F(FileSaverTest, SaveToFile14x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x10Test) {
+TEST_F(SaverTest, SaveToFile15x10Test) {
   std::ofstream file(input_);
   file << "15 10\n";
   file << "0 0 0 1 0 0 0 0 1 1\n";
@@ -7995,7 +7995,7 @@ TEST_F(FileSaverTest, SaveToFile15x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x11Test) {
+TEST_F(SaverTest, SaveToFile15x11Test) {
   std::ofstream file(input_);
   file << "15 11\n";
   file << "1 0 1 0 0 1 1 1 0 1 1\n";
@@ -8049,7 +8049,7 @@ TEST_F(FileSaverTest, SaveToFile15x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x12Test) {
+TEST_F(SaverTest, SaveToFile15x12Test) {
   std::ofstream file(input_);
   file << "15 12\n";
   file << "0 1 1 1 0 1 0 1 1 0 0 1\n";
@@ -8103,7 +8103,7 @@ TEST_F(FileSaverTest, SaveToFile15x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x13Test) {
+TEST_F(SaverTest, SaveToFile15x13Test) {
   std::ofstream file(input_);
   file << "15 13\n";
   file << "1 0 1 0 1 1 0 0 0 1 1 0 1\n";
@@ -8157,7 +8157,7 @@ TEST_F(FileSaverTest, SaveToFile15x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x14Test) {
+TEST_F(SaverTest, SaveToFile15x14Test) {
   std::ofstream file(input_);
   file << "15 14\n";
   file << "0 1 0 0 1 1 0 0 1 1 0 0 1 1\n";
@@ -8211,7 +8211,7 @@ TEST_F(FileSaverTest, SaveToFile15x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x15Test) {
+TEST_F(SaverTest, SaveToFile15x15Test) {
   std::ofstream file(input_);
   file << "15 15\n";
   file << "1 0 1 0 0 0 0 0 1 0 1 0 1 0 1\n";
@@ -8265,7 +8265,7 @@ TEST_F(FileSaverTest, SaveToFile15x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x16Test) {
+TEST_F(SaverTest, SaveToFile15x16Test) {
   std::ofstream file(input_);
   file << "15 16\n";
   file << "0 1 1 1 1 1 0 0 0 1 0 0 1 0 0 1\n";
@@ -8319,7 +8319,7 @@ TEST_F(FileSaverTest, SaveToFile15x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x17Test) {
+TEST_F(SaverTest, SaveToFile15x17Test) {
   std::ofstream file(input_);
   file << "15 17\n";
   file << "1 0 0 0 0 0 1 1 0 0 1 0 1 0 1 0 1\n";
@@ -8373,7 +8373,7 @@ TEST_F(FileSaverTest, SaveToFile15x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x18Test) {
+TEST_F(SaverTest, SaveToFile15x18Test) {
   std::ofstream file(input_);
   file << "15 18\n";
   file << "1 0 0 1 0 1 1 0 1 1 0 1 0 1 0 0 1 1\n";
@@ -8427,7 +8427,7 @@ TEST_F(FileSaverTest, SaveToFile15x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x19Test) {
+TEST_F(SaverTest, SaveToFile15x19Test) {
   std::ofstream file(input_);
   file << "15 19\n";
   file << "1 1 1 0 0 0 0 0 1 0 1 1 0 1 0 0 1 1 1\n";
@@ -8481,7 +8481,7 @@ TEST_F(FileSaverTest, SaveToFile15x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x20Test) {
+TEST_F(SaverTest, SaveToFile15x20Test) {
   std::ofstream file(input_);
   file << "15 20\n";
   file << "0 1 0 1 1 0 0 1 0 0 0 0 0 1 1 1 1 0 1 1\n";
@@ -8535,7 +8535,7 @@ TEST_F(FileSaverTest, SaveToFile15x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x21Test) {
+TEST_F(SaverTest, SaveToFile15x21Test) {
   std::ofstream file(input_);
   file << "15 21\n";
   file << "1 1 0 0 0 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1\n";
@@ -8589,7 +8589,7 @@ TEST_F(FileSaverTest, SaveToFile15x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x22Test) {
+TEST_F(SaverTest, SaveToFile15x22Test) {
   std::ofstream file(input_);
   file << "15 22\n";
   file << "1 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 1 1 1 0 0 1\n";
@@ -8643,7 +8643,7 @@ TEST_F(FileSaverTest, SaveToFile15x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x23Test) {
+TEST_F(SaverTest, SaveToFile15x23Test) {
   std::ofstream file(input_);
   file << "15 23\n";
   file << "1 0 0 1 1 1 1 0 1 0 0 1 1 0 1 0 0 0 1 1 0 1 1\n";
@@ -8697,7 +8697,7 @@ TEST_F(FileSaverTest, SaveToFile15x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x24Test) {
+TEST_F(SaverTest, SaveToFile15x24Test) {
   std::ofstream file(input_);
   file << "15 24\n";
   file << "1 0 0 1 1 0 0 0 1 1 1 0 0 1 1 1 0 0 1 1 0 1 1 1\n";
@@ -8751,7 +8751,7 @@ TEST_F(FileSaverTest, SaveToFile15x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x25Test) {
+TEST_F(SaverTest, SaveToFile15x25Test) {
   std::ofstream file(input_);
   file << "15 25\n";
   file << "1 1 0 1 0 0 1 1 0 1 1 0 1 1 1 0 1 1 1 1 0 1 0 1 1\n";
@@ -8805,7 +8805,7 @@ TEST_F(FileSaverTest, SaveToFile15x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x26Test) {
+TEST_F(SaverTest, SaveToFile15x26Test) {
   std::ofstream file(input_);
   file << "15 26\n";
   file << "0 1 0 1 0 1 0 0 0 0 0 1 1 1 0 1 1 1 0 0 0 1 1 0 0 1\n";
@@ -8859,7 +8859,7 @@ TEST_F(FileSaverTest, SaveToFile15x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x27Test) {
+TEST_F(SaverTest, SaveToFile15x27Test) {
   std::ofstream file(input_);
   file << "15 27\n";
   file << "0 0 0 1 1 0 1 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 1 1 1 0 1\n";
@@ -8913,7 +8913,7 @@ TEST_F(FileSaverTest, SaveToFile15x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x28Test) {
+TEST_F(SaverTest, SaveToFile15x28Test) {
   std::ofstream file(input_);
   file << "15 28\n";
   file << "0 0 0 1 0 1 1 0 0 0 1 0 0 1 1 0 1 0 0 0 0 1 1 0 0 1 1 1\n";
@@ -8967,7 +8967,7 @@ TEST_F(FileSaverTest, SaveToFile15x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x29Test) {
+TEST_F(SaverTest, SaveToFile15x29Test) {
   std::ofstream file(input_);
   file << "15 29\n";
   file << "0 1 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 0 1 1 1 0 0 1 1 1 0 1 1\n";
@@ -9021,7 +9021,7 @@ TEST_F(FileSaverTest, SaveToFile15x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile15x30Test) {
+TEST_F(SaverTest, SaveToFile15x30Test) {
   std::ofstream file(input_);
   file << "15 30\n";
   file << "1 0 0 1 1 1 1 0 1 0 1 0 1 1 0 1 0 1 1 0 1 0 1 0 1 1 1 1 0 1\n";
@@ -9075,7 +9075,7 @@ TEST_F(FileSaverTest, SaveToFile15x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x10Test) {
+TEST_F(SaverTest, SaveToFile16x10Test) {
   std::ofstream file(input_);
   file << "16 10\n";
   file << "1 0 0 1 0 0 1 0 0 1\n";
@@ -9131,7 +9131,7 @@ TEST_F(FileSaverTest, SaveToFile16x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x11Test) {
+TEST_F(SaverTest, SaveToFile16x11Test) {
   std::ofstream file(input_);
   file << "16 11\n";
   file << "1 1 0 1 0 1 0 1 0 1 1\n";
@@ -9187,7 +9187,7 @@ TEST_F(FileSaverTest, SaveToFile16x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x12Test) {
+TEST_F(SaverTest, SaveToFile16x12Test) {
   std::ofstream file(input_);
   file << "16 12\n";
   file << "0 1 1 0 1 1 1 0 0 1 1 1\n";
@@ -9243,7 +9243,7 @@ TEST_F(FileSaverTest, SaveToFile16x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x13Test) {
+TEST_F(SaverTest, SaveToFile16x13Test) {
   std::ofstream file(input_);
   file << "16 13\n";
   file << "1 0 0 0 0 0 1 0 0 0 0 1 1\n";
@@ -9299,7 +9299,7 @@ TEST_F(FileSaverTest, SaveToFile16x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x14Test) {
+TEST_F(SaverTest, SaveToFile16x14Test) {
   std::ofstream file(input_);
   file << "16 14\n";
   file << "1 0 1 1 0 1 1 1 1 0 1 1 0 1\n";
@@ -9355,7 +9355,7 @@ TEST_F(FileSaverTest, SaveToFile16x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x15Test) {
+TEST_F(SaverTest, SaveToFile16x15Test) {
   std::ofstream file(input_);
   file << "16 15\n";
   file << "0 1 0 0 0 1 0 1 1 1 1 0 0 1 1\n";
@@ -9411,7 +9411,7 @@ TEST_F(FileSaverTest, SaveToFile16x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x16Test) {
+TEST_F(SaverTest, SaveToFile16x16Test) {
   std::ofstream file(input_);
   file << "16 16\n";
   file << "0 0 1 1 0 0 1 1 1 1 0 1 0 1 1 1\n";
@@ -9467,7 +9467,7 @@ TEST_F(FileSaverTest, SaveToFile16x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x17Test) {
+TEST_F(SaverTest, SaveToFile16x17Test) {
   std::ofstream file(input_);
   file << "16 17\n";
   file << "0 0 1 1 0 0 0 0 1 1 0 1 1 0 1 1 1\n";
@@ -9523,7 +9523,7 @@ TEST_F(FileSaverTest, SaveToFile16x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x18Test) {
+TEST_F(SaverTest, SaveToFile16x18Test) {
   std::ofstream file(input_);
   file << "16 18\n";
   file << "1 0 0 0 1 1 1 1 1 0 1 0 0 0 1 0 1 1\n";
@@ -9579,7 +9579,7 @@ TEST_F(FileSaverTest, SaveToFile16x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x19Test) {
+TEST_F(SaverTest, SaveToFile16x19Test) {
   std::ofstream file(input_);
   file << "16 19\n";
   file << "1 1 0 0 0 1 0 0 1 1 1 1 0 1 0 1 1 1 1\n";
@@ -9635,7 +9635,7 @@ TEST_F(FileSaverTest, SaveToFile16x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x20Test) {
+TEST_F(SaverTest, SaveToFile16x20Test) {
   std::ofstream file(input_);
   file << "16 20\n";
   file << "1 1 1 1 0 0 1 1 0 0 1 1 0 0 1 0 1 1 1 1\n";
@@ -9691,7 +9691,7 @@ TEST_F(FileSaverTest, SaveToFile16x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x21Test) {
+TEST_F(SaverTest, SaveToFile16x21Test) {
   std::ofstream file(input_);
   file << "16 21\n";
   file << "1 1 0 1 1 0 0 1 0 1 0 0 0 0 1 1 0 0 1 1 1\n";
@@ -9747,7 +9747,7 @@ TEST_F(FileSaverTest, SaveToFile16x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x22Test) {
+TEST_F(SaverTest, SaveToFile16x22Test) {
   std::ofstream file(input_);
   file << "16 22\n";
   file << "1 0 0 1 0 1 1 0 1 0 1 1 1 0 1 1 1 1 1 0 1 1\n";
@@ -9803,7 +9803,7 @@ TEST_F(FileSaverTest, SaveToFile16x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x23Test) {
+TEST_F(SaverTest, SaveToFile16x23Test) {
   std::ofstream file(input_);
   file << "16 23\n";
   file << "1 1 0 1 1 0 1 1 1 1 1 1 0 0 1 1 0 0 1 0 1 1 1\n";
@@ -9859,7 +9859,7 @@ TEST_F(FileSaverTest, SaveToFile16x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x24Test) {
+TEST_F(SaverTest, SaveToFile16x24Test) {
   std::ofstream file(input_);
   file << "16 24\n";
   file << "0 1 0 0 1 1 0 1 1 1 1 1 0 0 0 1 0 1 1 1 0 1 1 1\n";
@@ -9915,7 +9915,7 @@ TEST_F(FileSaverTest, SaveToFile16x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x25Test) {
+TEST_F(SaverTest, SaveToFile16x25Test) {
   std::ofstream file(input_);
   file << "16 25\n";
   file << "1 0 0 1 1 0 1 0 0 0 1 1 0 1 1 0 0 0 0 1 1 0 0 0 1\n";
@@ -9971,7 +9971,7 @@ TEST_F(FileSaverTest, SaveToFile16x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x26Test) {
+TEST_F(SaverTest, SaveToFile16x26Test) {
   std::ofstream file(input_);
   file << "16 26\n";
   file << "1 1 0 0 1 1 1 1 0 0 0 1 1 0 0 1 0 0 1 1 1 0 1 0 1 1\n";
@@ -10027,7 +10027,7 @@ TEST_F(FileSaverTest, SaveToFile16x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x27Test) {
+TEST_F(SaverTest, SaveToFile16x27Test) {
   std::ofstream file(input_);
   file << "16 27\n";
   file << "0 1 0 1 0 1 1 0 0 1 0 1 1 0 1 0 0 1 1 0 0 0 1 1 0 1 1\n";
@@ -10083,7 +10083,7 @@ TEST_F(FileSaverTest, SaveToFile16x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x28Test) {
+TEST_F(SaverTest, SaveToFile16x28Test) {
   std::ofstream file(input_);
   file << "16 28\n";
   file << "0 1 1 1 0 0 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 0 0 0 1 0 0 1\n";
@@ -10139,7 +10139,7 @@ TEST_F(FileSaverTest, SaveToFile16x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x29Test) {
+TEST_F(SaverTest, SaveToFile16x29Test) {
   std::ofstream file(input_);
   file << "16 29\n";
   file << "1 1 1 0 0 0 0 1 1 1 1 0 0 1 0 0 1 1 0 0 0 1 0 1 0 1 0 1 1\n";
@@ -10195,7 +10195,7 @@ TEST_F(FileSaverTest, SaveToFile16x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile16x30Test) {
+TEST_F(SaverTest, SaveToFile16x30Test) {
   std::ofstream file(input_);
   file << "16 30\n";
   file << "1 0 0 0 0 0 1 0 1 1 0 1 0 1 0 1 1 0 0 0 1 0 1 1 1 0 0 0 1 1\n";
@@ -10251,7 +10251,7 @@ TEST_F(FileSaverTest, SaveToFile16x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x10Test) {
+TEST_F(SaverTest, SaveToFile17x10Test) {
   std::ofstream file(input_);
   file << "17 10\n";
   file << "0 0 0 1 0 1 1 1 0 1\n";
@@ -10309,7 +10309,7 @@ TEST_F(FileSaverTest, SaveToFile17x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x11Test) {
+TEST_F(SaverTest, SaveToFile17x11Test) {
   std::ofstream file(input_);
   file << "17 11\n";
   file << "1 1 0 1 0 1 1 0 0 1 1\n";
@@ -10367,7 +10367,7 @@ TEST_F(FileSaverTest, SaveToFile17x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x12Test) {
+TEST_F(SaverTest, SaveToFile17x12Test) {
   std::ofstream file(input_);
   file << "17 12\n";
   file << "1 1 1 1 1 1 0 0 1 1 1 1\n";
@@ -10425,7 +10425,7 @@ TEST_F(FileSaverTest, SaveToFile17x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x13Test) {
+TEST_F(SaverTest, SaveToFile17x13Test) {
   std::ofstream file(input_);
   file << "17 13\n";
   file << "0 1 0 1 0 1 1 1 1 1 0 1 1\n";
@@ -10483,7 +10483,7 @@ TEST_F(FileSaverTest, SaveToFile17x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x14Test) {
+TEST_F(SaverTest, SaveToFile17x14Test) {
   std::ofstream file(input_);
   file << "17 14\n";
   file << "1 0 1 0 0 0 1 1 1 1 0 1 1 1\n";
@@ -10541,7 +10541,7 @@ TEST_F(FileSaverTest, SaveToFile17x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x15Test) {
+TEST_F(SaverTest, SaveToFile17x15Test) {
   std::ofstream file(input_);
   file << "17 15\n";
   file << "0 0 0 0 1 1 0 1 1 1 0 0 1 0 1\n";
@@ -10599,7 +10599,7 @@ TEST_F(FileSaverTest, SaveToFile17x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x16Test) {
+TEST_F(SaverTest, SaveToFile17x16Test) {
   std::ofstream file(input_);
   file << "17 16\n";
   file << "0 0 0 1 1 0 0 1 1 0 0 1 1 0 1 1\n";
@@ -10657,7 +10657,7 @@ TEST_F(FileSaverTest, SaveToFile17x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x17Test) {
+TEST_F(SaverTest, SaveToFile17x17Test) {
   std::ofstream file(input_);
   file << "17 17\n";
   file << "1 0 1 0 0 0 1 1 0 0 1 1 0 1 1 1 1\n";
@@ -10715,7 +10715,7 @@ TEST_F(FileSaverTest, SaveToFile17x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x18Test) {
+TEST_F(SaverTest, SaveToFile17x18Test) {
   std::ofstream file(input_);
   file << "17 18\n";
   file << "1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 1 1\n";
@@ -10773,7 +10773,7 @@ TEST_F(FileSaverTest, SaveToFile17x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x19Test) {
+TEST_F(SaverTest, SaveToFile17x19Test) {
   std::ofstream file(input_);
   file << "17 19\n";
   file << "0 0 0 1 1 1 0 1 1 0 0 0 0 0 1 0 0 0 1\n";
@@ -10831,7 +10831,7 @@ TEST_F(FileSaverTest, SaveToFile17x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x20Test) {
+TEST_F(SaverTest, SaveToFile17x20Test) {
   std::ofstream file(input_);
   file << "17 20\n";
   file << "1 0 1 1 0 0 0 1 1 1 1 1 1 0 0 1 1 0 0 1\n";
@@ -10889,7 +10889,7 @@ TEST_F(FileSaverTest, SaveToFile17x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x21Test) {
+TEST_F(SaverTest, SaveToFile17x21Test) {
   std::ofstream file(input_);
   file << "17 21\n";
   file << "1 1 0 0 1 1 0 0 1 0 0 0 0 1 1 1 1 0 0 0 1\n";
@@ -10947,7 +10947,7 @@ TEST_F(FileSaverTest, SaveToFile17x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x22Test) {
+TEST_F(SaverTest, SaveToFile17x22Test) {
   std::ofstream file(input_);
   file << "17 22\n";
   file << "1 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 1 1 1 1 0 1\n";
@@ -11005,7 +11005,7 @@ TEST_F(FileSaverTest, SaveToFile17x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x23Test) {
+TEST_F(SaverTest, SaveToFile17x23Test) {
   std::ofstream file(input_);
   file << "17 23\n";
   file << "1 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 1 1 0 1\n";
@@ -11063,7 +11063,7 @@ TEST_F(FileSaverTest, SaveToFile17x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x24Test) {
+TEST_F(SaverTest, SaveToFile17x24Test) {
   std::ofstream file(input_);
   file << "17 24\n";
   file << "0 1 0 0 0 0 1 1 1 0 0 1 0 0 1 1 0 0 1 1 0 1 0 1\n";
@@ -11121,7 +11121,7 @@ TEST_F(FileSaverTest, SaveToFile17x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x25Test) {
+TEST_F(SaverTest, SaveToFile17x25Test) {
   std::ofstream file(input_);
   file << "17 25\n";
   file << "0 1 0 1 1 0 0 1 1 1 0 1 1 1 1 0 0 1 1 1 0 1 0 0 1\n";
@@ -11179,7 +11179,7 @@ TEST_F(FileSaverTest, SaveToFile17x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x26Test) {
+TEST_F(SaverTest, SaveToFile17x26Test) {
   std::ofstream file(input_);
   file << "17 26\n";
   file << "1 1 1 1 1 1 0 0 0 1 0 1 0 1 0 1 0 1 0 0 1 1 1 0 0 1\n";
@@ -11237,7 +11237,7 @@ TEST_F(FileSaverTest, SaveToFile17x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x27Test) {
+TEST_F(SaverTest, SaveToFile17x27Test) {
   std::ofstream file(input_);
   file << "17 27\n";
   file << "1 1 1 0 0 0 0 1 0 0 1 1 0 1 1 0 1 1 1 1 1 0 0 0 1 0 1\n";
@@ -11295,7 +11295,7 @@ TEST_F(FileSaverTest, SaveToFile17x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x28Test) {
+TEST_F(SaverTest, SaveToFile17x28Test) {
   std::ofstream file(input_);
   file << "17 28\n";
   file << "0 1 0 0 1 0 0 1 0 1 1 1 1 0 0 0 1 0 1 1 0 0 1 0 1 1 1 1\n";
@@ -11353,7 +11353,7 @@ TEST_F(FileSaverTest, SaveToFile17x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x29Test) {
+TEST_F(SaverTest, SaveToFile17x29Test) {
   std::ofstream file(input_);
   file << "17 29\n";
   file << "1 1 1 0 1 0 1 0 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 1 0 1 1 1 1\n";
@@ -11411,7 +11411,7 @@ TEST_F(FileSaverTest, SaveToFile17x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile17x30Test) {
+TEST_F(SaverTest, SaveToFile17x30Test) {
   std::ofstream file(input_);
   file << "17 30\n";
   file << "0 0 1 0 1 0 1 1 1 1 0 1 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 1 1\n";
@@ -11469,7 +11469,7 @@ TEST_F(FileSaverTest, SaveToFile17x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x10Test) {
+TEST_F(SaverTest, SaveToFile18x10Test) {
   std::ofstream file(input_);
   file << "18 10\n";
   file << "1 1 1 1 1 1 1 1 0 1\n";
@@ -11529,7 +11529,7 @@ TEST_F(FileSaverTest, SaveToFile18x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x11Test) {
+TEST_F(SaverTest, SaveToFile18x11Test) {
   std::ofstream file(input_);
   file << "18 11\n";
   file << "0 0 1 0 0 1 1 1 0 1 1\n";
@@ -11589,7 +11589,7 @@ TEST_F(FileSaverTest, SaveToFile18x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x12Test) {
+TEST_F(SaverTest, SaveToFile18x12Test) {
   std::ofstream file(input_);
   file << "18 12\n";
   file << "1 0 1 0 0 0 1 0 0 0 0 1\n";
@@ -11649,7 +11649,7 @@ TEST_F(FileSaverTest, SaveToFile18x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x13Test) {
+TEST_F(SaverTest, SaveToFile18x13Test) {
   std::ofstream file(input_);
   file << "18 13\n";
   file << "0 0 1 1 0 0 0 0 0 1 1 0 1\n";
@@ -11709,7 +11709,7 @@ TEST_F(FileSaverTest, SaveToFile18x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x14Test) {
+TEST_F(SaverTest, SaveToFile18x14Test) {
   std::ofstream file(input_);
   file << "18 14\n";
   file << "0 1 1 0 1 1 1 1 0 1 1 0 0 1\n";
@@ -11769,7 +11769,7 @@ TEST_F(FileSaverTest, SaveToFile18x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x15Test) {
+TEST_F(SaverTest, SaveToFile18x15Test) {
   std::ofstream file(input_);
   file << "18 15\n";
   file << "1 0 0 1 1 0 1 0 1 0 1 0 1 0 1\n";
@@ -11829,7 +11829,7 @@ TEST_F(FileSaverTest, SaveToFile18x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x16Test) {
+TEST_F(SaverTest, SaveToFile18x16Test) {
   std::ofstream file(input_);
   file << "18 16\n";
   file << "1 1 1 0 1 1 1 1 0 1 0 1 0 1 1 1\n";
@@ -11889,7 +11889,7 @@ TEST_F(FileSaverTest, SaveToFile18x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x17Test) {
+TEST_F(SaverTest, SaveToFile18x17Test) {
   std::ofstream file(input_);
   file << "18 17\n";
   file << "0 0 1 1 1 0 0 1 0 0 0 1 1 0 0 1 1\n";
@@ -11949,7 +11949,7 @@ TEST_F(FileSaverTest, SaveToFile18x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x18Test) {
+TEST_F(SaverTest, SaveToFile18x18Test) {
   std::ofstream file(input_);
   file << "18 18\n";
   file << "0 0 0 0 0 1 0 0 0 1 1 0 1 0 1 0 1 1\n";
@@ -12009,7 +12009,7 @@ TEST_F(FileSaverTest, SaveToFile18x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x19Test) {
+TEST_F(SaverTest, SaveToFile18x19Test) {
   std::ofstream file(input_);
   file << "18 19\n";
   file << "0 1 0 1 0 1 0 0 0 1 1 0 0 0 1 0 0 1 1\n";
@@ -12069,7 +12069,7 @@ TEST_F(FileSaverTest, SaveToFile18x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x20Test) {
+TEST_F(SaverTest, SaveToFile18x20Test) {
   std::ofstream file(input_);
   file << "18 20\n";
   file << "1 0 0 0 1 1 0 1 1 1 0 0 1 1 0 1 0 1 0 1\n";
@@ -12129,7 +12129,7 @@ TEST_F(FileSaverTest, SaveToFile18x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x21Test) {
+TEST_F(SaverTest, SaveToFile18x21Test) {
   std::ofstream file(input_);
   file << "18 21\n";
   file << "0 1 1 0 1 0 1 0 0 0 0 1 0 1 0 1 1 0 1 1 1\n";
@@ -12189,7 +12189,7 @@ TEST_F(FileSaverTest, SaveToFile18x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x22Test) {
+TEST_F(SaverTest, SaveToFile18x22Test) {
   std::ofstream file(input_);
   file << "18 22\n";
   file << "0 1 0 1 0 1 1 0 1 0 1 1 1 1 1 1 1 0 0 1 0 1\n";
@@ -12249,7 +12249,7 @@ TEST_F(FileSaverTest, SaveToFile18x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x23Test) {
+TEST_F(SaverTest, SaveToFile18x23Test) {
   std::ofstream file(input_);
   file << "18 23\n";
   file << "1 0 0 0 1 1 1 0 1 1 1 0 0 0 0 0 0 1 1 0 0 0 1\n";
@@ -12309,7 +12309,7 @@ TEST_F(FileSaverTest, SaveToFile18x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x24Test) {
+TEST_F(SaverTest, SaveToFile18x24Test) {
   std::ofstream file(input_);
   file << "18 24\n";
   file << "1 1 1 1 0 0 0 0 0 1 0 1 1 1 0 1 1 1 0 0 0 0 0 1\n";
@@ -12369,7 +12369,7 @@ TEST_F(FileSaverTest, SaveToFile18x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x25Test) {
+TEST_F(SaverTest, SaveToFile18x25Test) {
   std::ofstream file(input_);
   file << "18 25\n";
   file << "1 1 0 1 0 1 1 1 1 0 0 1 0 0 1 1 1 0 0 1 1 1 0 1 1\n";
@@ -12429,7 +12429,7 @@ TEST_F(FileSaverTest, SaveToFile18x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x26Test) {
+TEST_F(SaverTest, SaveToFile18x26Test) {
   std::ofstream file(input_);
   file << "18 26\n";
   file << "1 0 0 1 0 1 1 0 1 1 1 0 1 0 0 0 1 0 0 1 1 1 1 1 0 1\n";
@@ -12489,7 +12489,7 @@ TEST_F(FileSaverTest, SaveToFile18x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x27Test) {
+TEST_F(SaverTest, SaveToFile18x27Test) {
   std::ofstream file(input_);
   file << "18 27\n";
   file << "1 0 0 1 1 0 1 1 1 1 1 1 0 0 1 0 0 1 0 0 0 1 1 1 0 1 1\n";
@@ -12549,7 +12549,7 @@ TEST_F(FileSaverTest, SaveToFile18x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x28Test) {
+TEST_F(SaverTest, SaveToFile18x28Test) {
   std::ofstream file(input_);
   file << "18 28\n";
   file << "0 1 0 1 1 0 0 0 1 1 0 0 1 0 0 1 1 0 1 1 1 1 0 0 0 1 0 1\n";
@@ -12609,7 +12609,7 @@ TEST_F(FileSaverTest, SaveToFile18x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x29Test) {
+TEST_F(SaverTest, SaveToFile18x29Test) {
   std::ofstream file(input_);
   file << "18 29\n";
   file << "1 0 1 1 1 0 1 0 0 1 1 1 1 0 0 1 1 0 0 1 0 1 0 1 0 1 0 1 1\n";
@@ -12669,7 +12669,7 @@ TEST_F(FileSaverTest, SaveToFile18x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile18x30Test) {
+TEST_F(SaverTest, SaveToFile18x30Test) {
   std::ofstream file(input_);
   file << "18 30\n";
   file << "1 1 1 1 1 0 1 0 0 1 0 0 0 1 0 1 1 0 1 0 1 1 1 0 0 0 1 0 1 1\n";
@@ -12729,7 +12729,7 @@ TEST_F(FileSaverTest, SaveToFile18x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x10Test) {
+TEST_F(SaverTest, SaveToFile19x10Test) {
   std::ofstream file(input_);
   file << "19 10\n";
   file << "1 0 1 0 1 1 0 0 1 1\n";
@@ -12791,7 +12791,7 @@ TEST_F(FileSaverTest, SaveToFile19x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x11Test) {
+TEST_F(SaverTest, SaveToFile19x11Test) {
   std::ofstream file(input_);
   file << "19 11\n";
   file << "1 1 0 0 0 0 1 1 1 0 1\n";
@@ -12853,7 +12853,7 @@ TEST_F(FileSaverTest, SaveToFile19x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x12Test) {
+TEST_F(SaverTest, SaveToFile19x12Test) {
   std::ofstream file(input_);
   file << "19 12\n";
   file << "1 0 1 0 1 1 0 1 0 0 0 1\n";
@@ -12915,7 +12915,7 @@ TEST_F(FileSaverTest, SaveToFile19x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x13Test) {
+TEST_F(SaverTest, SaveToFile19x13Test) {
   std::ofstream file(input_);
   file << "19 13\n";
   file << "1 1 1 0 0 0 0 1 1 0 0 0 1\n";
@@ -12977,7 +12977,7 @@ TEST_F(FileSaverTest, SaveToFile19x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x14Test) {
+TEST_F(SaverTest, SaveToFile19x14Test) {
   std::ofstream file(input_);
   file << "19 14\n";
   file << "1 0 0 1 0 0 0 0 0 0 1 1 1 1\n";
@@ -13039,7 +13039,7 @@ TEST_F(FileSaverTest, SaveToFile19x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x15Test) {
+TEST_F(SaverTest, SaveToFile19x15Test) {
   std::ofstream file(input_);
   file << "19 15\n";
   file << "0 0 1 1 0 0 1 1 1 0 1 0 0 1 1\n";
@@ -13101,7 +13101,7 @@ TEST_F(FileSaverTest, SaveToFile19x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x16Test) {
+TEST_F(SaverTest, SaveToFile19x16Test) {
   std::ofstream file(input_);
   file << "19 16\n";
   file << "1 1 1 1 0 1 0 1 0 1 1 0 0 0 0 1\n";
@@ -13163,7 +13163,7 @@ TEST_F(FileSaverTest, SaveToFile19x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x17Test) {
+TEST_F(SaverTest, SaveToFile19x17Test) {
   std::ofstream file(input_);
   file << "19 17\n";
   file << "0 1 0 1 1 1 0 1 1 1 0 0 0 1 0 1 1\n";
@@ -13225,7 +13225,7 @@ TEST_F(FileSaverTest, SaveToFile19x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x18Test) {
+TEST_F(SaverTest, SaveToFile19x18Test) {
   std::ofstream file(input_);
   file << "19 18\n";
   file << "0 0 0 1 1 1 1 1 0 0 1 0 1 0 1 0 0 1\n";
@@ -13287,7 +13287,7 @@ TEST_F(FileSaverTest, SaveToFile19x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x19Test) {
+TEST_F(SaverTest, SaveToFile19x19Test) {
   std::ofstream file(input_);
   file << "19 19\n";
   file << "0 1 1 0 1 1 1 1 1 1 1 0 0 1 1 0 0 1 1\n";
@@ -13349,7 +13349,7 @@ TEST_F(FileSaverTest, SaveToFile19x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x20Test) {
+TEST_F(SaverTest, SaveToFile19x20Test) {
   std::ofstream file(input_);
   file << "19 20\n";
   file << "1 1 1 0 1 1 1 0 0 1 0 1 1 0 0 0 0 0 1 1\n";
@@ -13411,7 +13411,7 @@ TEST_F(FileSaverTest, SaveToFile19x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x21Test) {
+TEST_F(SaverTest, SaveToFile19x21Test) {
   std::ofstream file(input_);
   file << "19 21\n";
   file << "1 0 0 1 1 1 0 0 0 1 1 0 0 0 0 0 0 0 1 1 1\n";
@@ -13473,7 +13473,7 @@ TEST_F(FileSaverTest, SaveToFile19x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x22Test) {
+TEST_F(SaverTest, SaveToFile19x22Test) {
   std::ofstream file(input_);
   file << "19 22\n";
   file << "1 0 1 0 0 0 0 0 0 0 0 1 1 0 1 1 1 1 0 0 1 1\n";
@@ -13535,7 +13535,7 @@ TEST_F(FileSaverTest, SaveToFile19x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x23Test) {
+TEST_F(SaverTest, SaveToFile19x23Test) {
   std::ofstream file(input_);
   file << "19 23\n";
   file << "0 0 1 1 1 0 1 0 1 0 1 0 0 0 0 1 0 0 1 1 1 0 1\n";
@@ -13597,7 +13597,7 @@ TEST_F(FileSaverTest, SaveToFile19x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x24Test) {
+TEST_F(SaverTest, SaveToFile19x24Test) {
   std::ofstream file(input_);
   file << "19 24\n";
   file << "0 0 1 1 1 1 0 0 1 1 0 0 0 1 0 0 1 1 0 0 0 1 1 1\n";
@@ -13659,7 +13659,7 @@ TEST_F(FileSaverTest, SaveToFile19x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x25Test) {
+TEST_F(SaverTest, SaveToFile19x25Test) {
   std::ofstream file(input_);
   file << "19 25\n";
   file << "1 1 0 1 1 0 0 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 0 1\n";
@@ -13721,7 +13721,7 @@ TEST_F(FileSaverTest, SaveToFile19x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x26Test) {
+TEST_F(SaverTest, SaveToFile19x26Test) {
   std::ofstream file(input_);
   file << "19 26\n";
   file << "0 1 1 0 0 0 0 0 1 1 0 1 1 1 0 1 1 0 1 1 1 0 0 0 1 1\n";
@@ -13783,7 +13783,7 @@ TEST_F(FileSaverTest, SaveToFile19x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x27Test) {
+TEST_F(SaverTest, SaveToFile19x27Test) {
   std::ofstream file(input_);
   file << "19 27\n";
   file << "0 0 1 1 1 1 0 1 0 1 1 0 0 0 0 0 1 0 0 1 0 0 0 1 0 1 1\n";
@@ -13845,7 +13845,7 @@ TEST_F(FileSaverTest, SaveToFile19x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x28Test) {
+TEST_F(SaverTest, SaveToFile19x28Test) {
   std::ofstream file(input_);
   file << "19 28\n";
   file << "1 1 0 1 1 0 1 0 0 1 1 1 1 0 0 1 0 0 0 0 1 1 0 1 0 1 1 1\n";
@@ -13907,7 +13907,7 @@ TEST_F(FileSaverTest, SaveToFile19x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x29Test) {
+TEST_F(SaverTest, SaveToFile19x29Test) {
   std::ofstream file(input_);
   file << "19 29\n";
   file << "0 0 1 1 0 1 0 1 1 1 0 0 1 0 1 0 1 1 1 1 0 0 1 0 1 1 0 1 1\n";
@@ -13969,7 +13969,7 @@ TEST_F(FileSaverTest, SaveToFile19x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile19x30Test) {
+TEST_F(SaverTest, SaveToFile19x30Test) {
   std::ofstream file(input_);
   file << "19 30\n";
   file << "0 0 0 0 1 0 0 1 0 1 0 0 1 1 1 1 0 0 1 0 0 1 0 1 0 1 0 0 1 1\n";
@@ -14031,7 +14031,7 @@ TEST_F(FileSaverTest, SaveToFile19x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x10Test) {
+TEST_F(SaverTest, SaveToFile20x10Test) {
   std::ofstream file(input_);
   file << "20 10\n";
   file << "0 1 0 0 0 1 0 1 1 1\n";
@@ -14095,7 +14095,7 @@ TEST_F(FileSaverTest, SaveToFile20x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x11Test) {
+TEST_F(SaverTest, SaveToFile20x11Test) {
   std::ofstream file(input_);
   file << "20 11\n";
   file << "1 0 1 0 1 1 0 1 1 0 1\n";
@@ -14159,7 +14159,7 @@ TEST_F(FileSaverTest, SaveToFile20x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x12Test) {
+TEST_F(SaverTest, SaveToFile20x12Test) {
   std::ofstream file(input_);
   file << "20 12\n";
   file << "1 0 1 0 1 1 0 1 0 0 1 1\n";
@@ -14223,7 +14223,7 @@ TEST_F(FileSaverTest, SaveToFile20x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x13Test) {
+TEST_F(SaverTest, SaveToFile20x13Test) {
   std::ofstream file(input_);
   file << "20 13\n";
   file << "1 0 0 0 1 1 0 0 1 0 0 0 1\n";
@@ -14287,7 +14287,7 @@ TEST_F(FileSaverTest, SaveToFile20x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x14Test) {
+TEST_F(SaverTest, SaveToFile20x14Test) {
   std::ofstream file(input_);
   file << "20 14\n";
   file << "1 0 0 0 0 0 0 1 1 0 0 0 0 1\n";
@@ -14351,7 +14351,7 @@ TEST_F(FileSaverTest, SaveToFile20x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x15Test) {
+TEST_F(SaverTest, SaveToFile20x15Test) {
   std::ofstream file(input_);
   file << "20 15\n";
   file << "1 0 1 1 0 1 1 1 0 0 1 1 1 1 1\n";
@@ -14415,7 +14415,7 @@ TEST_F(FileSaverTest, SaveToFile20x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x16Test) {
+TEST_F(SaverTest, SaveToFile20x16Test) {
   std::ofstream file(input_);
   file << "20 16\n";
   file << "1 1 1 1 1 0 1 1 1 1 0 1 0 0 0 1\n";
@@ -14479,7 +14479,7 @@ TEST_F(FileSaverTest, SaveToFile20x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x17Test) {
+TEST_F(SaverTest, SaveToFile20x17Test) {
   std::ofstream file(input_);
   file << "20 17\n";
   file << "0 1 1 1 0 0 0 0 0 1 1 1 1 0 1 1 1\n";
@@ -14543,7 +14543,7 @@ TEST_F(FileSaverTest, SaveToFile20x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x18Test) {
+TEST_F(SaverTest, SaveToFile20x18Test) {
   std::ofstream file(input_);
   file << "20 18\n";
   file << "1 1 1 1 0 0 0 1 0 1 1 0 1 1 1 1 1 1\n";
@@ -14607,7 +14607,7 @@ TEST_F(FileSaverTest, SaveToFile20x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x19Test) {
+TEST_F(SaverTest, SaveToFile20x19Test) {
   std::ofstream file(input_);
   file << "20 19\n";
   file << "1 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 0 0 1\n";
@@ -14671,7 +14671,7 @@ TEST_F(FileSaverTest, SaveToFile20x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x20Test) {
+TEST_F(SaverTest, SaveToFile20x20Test) {
   std::ofstream file(input_);
   file << "20 20\n";
   file << "1 1 1 1 1 0 1 1 0 0 0 1 1 1 1 0 1 0 1 1\n";
@@ -14735,7 +14735,7 @@ TEST_F(FileSaverTest, SaveToFile20x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x21Test) {
+TEST_F(SaverTest, SaveToFile20x21Test) {
   std::ofstream file(input_);
   file << "20 21\n";
   file << "1 0 1 0 1 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1\n";
@@ -14799,7 +14799,7 @@ TEST_F(FileSaverTest, SaveToFile20x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x22Test) {
+TEST_F(SaverTest, SaveToFile20x22Test) {
   std::ofstream file(input_);
   file << "20 22\n";
   file << "1 0 1 0 0 1 0 0 1 1 1 1 1 0 1 1 0 0 1 1 0 1\n";
@@ -14863,7 +14863,7 @@ TEST_F(FileSaverTest, SaveToFile20x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x23Test) {
+TEST_F(SaverTest, SaveToFile20x23Test) {
   std::ofstream file(input_);
   file << "20 23\n";
   file << "0 0 0 1 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 0 0 1 1\n";
@@ -14927,7 +14927,7 @@ TEST_F(FileSaverTest, SaveToFile20x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x24Test) {
+TEST_F(SaverTest, SaveToFile20x24Test) {
   std::ofstream file(input_);
   file << "20 24\n";
   file << "0 1 1 0 0 0 0 1 1 0 1 0 0 0 1 1 1 0 1 0 0 0 1 1\n";
@@ -14991,7 +14991,7 @@ TEST_F(FileSaverTest, SaveToFile20x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x25Test) {
+TEST_F(SaverTest, SaveToFile20x25Test) {
   std::ofstream file(input_);
   file << "20 25\n";
   file << "1 1 1 0 0 1 0 1 0 0 0 1 0 0 0 1 1 0 1 1 1 1 1 0 1\n";
@@ -15055,7 +15055,7 @@ TEST_F(FileSaverTest, SaveToFile20x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x26Test) {
+TEST_F(SaverTest, SaveToFile20x26Test) {
   std::ofstream file(input_);
   file << "20 26\n";
   file << "1 0 1 0 1 0 0 1 0 0 0 0 1 0 0 1 1 0 1 0 0 1 1 0 1 1\n";
@@ -15119,7 +15119,7 @@ TEST_F(FileSaverTest, SaveToFile20x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x27Test) {
+TEST_F(SaverTest, SaveToFile20x27Test) {
   std::ofstream file(input_);
   file << "20 27\n";
   file << "0 1 0 1 0 1 0 0 1 1 0 1 1 1 1 0 1 0 0 1 1 0 0 1 0 1 1\n";
@@ -15183,7 +15183,7 @@ TEST_F(FileSaverTest, SaveToFile20x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x28Test) {
+TEST_F(SaverTest, SaveToFile20x28Test) {
   std::ofstream file(input_);
   file << "20 28\n";
   file << "0 1 0 1 1 0 0 1 1 1 0 0 1 1 1 0 1 1 1 1 0 1 1 1 0 1 1 1\n";
@@ -15247,7 +15247,7 @@ TEST_F(FileSaverTest, SaveToFile20x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x29Test) {
+TEST_F(SaverTest, SaveToFile20x29Test) {
   std::ofstream file(input_);
   file << "20 29\n";
   file << "1 0 1 1 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 1 1 0 1 0 0 1 1 1 1\n";
@@ -15311,7 +15311,7 @@ TEST_F(FileSaverTest, SaveToFile20x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile20x30Test) {
+TEST_F(SaverTest, SaveToFile20x30Test) {
   std::ofstream file(input_);
   file << "20 30\n";
   file << "0 1 0 1 0 0 0 1 1 0 0 1 1 1 1 0 0 0 0 1 0 0 1 1 0 1 0 0 0 1\n";
@@ -15375,7 +15375,7 @@ TEST_F(FileSaverTest, SaveToFile20x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x10Test) {
+TEST_F(SaverTest, SaveToFile21x10Test) {
   std::ofstream file(input_);
   file << "21 10\n";
   file << "1 0 0 1 1 1 0 1 1 1\n";
@@ -15441,7 +15441,7 @@ TEST_F(FileSaverTest, SaveToFile21x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x11Test) {
+TEST_F(SaverTest, SaveToFile21x11Test) {
   std::ofstream file(input_);
   file << "21 11\n";
   file << "1 1 0 0 1 0 1 0 0 0 1\n";
@@ -15507,7 +15507,7 @@ TEST_F(FileSaverTest, SaveToFile21x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x12Test) {
+TEST_F(SaverTest, SaveToFile21x12Test) {
   std::ofstream file(input_);
   file << "21 12\n";
   file << "1 0 1 1 0 0 1 1 1 0 1 1\n";
@@ -15573,7 +15573,7 @@ TEST_F(FileSaverTest, SaveToFile21x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x13Test) {
+TEST_F(SaverTest, SaveToFile21x13Test) {
   std::ofstream file(input_);
   file << "21 13\n";
   file << "0 1 0 0 0 0 0 0 0 0 0 0 1\n";
@@ -15639,7 +15639,7 @@ TEST_F(FileSaverTest, SaveToFile21x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x14Test) {
+TEST_F(SaverTest, SaveToFile21x14Test) {
   std::ofstream file(input_);
   file << "21 14\n";
   file << "0 0 1 0 0 1 1 1 1 1 1 1 0 1\n";
@@ -15705,7 +15705,7 @@ TEST_F(FileSaverTest, SaveToFile21x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x15Test) {
+TEST_F(SaverTest, SaveToFile21x15Test) {
   std::ofstream file(input_);
   file << "21 15\n";
   file << "0 0 1 0 0 1 0 1 0 1 0 1 1 1 1\n";
@@ -15771,7 +15771,7 @@ TEST_F(FileSaverTest, SaveToFile21x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x16Test) {
+TEST_F(SaverTest, SaveToFile21x16Test) {
   std::ofstream file(input_);
   file << "21 16\n";
   file << "0 1 0 0 0 1 0 0 0 0 1 1 0 1 1 1\n";
@@ -15837,7 +15837,7 @@ TEST_F(FileSaverTest, SaveToFile21x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x17Test) {
+TEST_F(SaverTest, SaveToFile21x17Test) {
   std::ofstream file(input_);
   file << "21 17\n";
   file << "0 1 1 0 0 1 1 1 1 1 0 1 1 0 1 0 1\n";
@@ -15903,7 +15903,7 @@ TEST_F(FileSaverTest, SaveToFile21x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x18Test) {
+TEST_F(SaverTest, SaveToFile21x18Test) {
   std::ofstream file(input_);
   file << "21 18\n";
   file << "1 0 1 0 1 0 0 0 1 0 1 0 1 0 0 1 0 1\n";
@@ -15969,7 +15969,7 @@ TEST_F(FileSaverTest, SaveToFile21x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x19Test) {
+TEST_F(SaverTest, SaveToFile21x19Test) {
   std::ofstream file(input_);
   file << "21 19\n";
   file << "0 1 0 1 1 0 0 0 1 0 1 1 0 1 1 0 0 0 1\n";
@@ -16035,7 +16035,7 @@ TEST_F(FileSaverTest, SaveToFile21x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x20Test) {
+TEST_F(SaverTest, SaveToFile21x20Test) {
   std::ofstream file(input_);
   file << "21 20\n";
   file << "1 1 1 1 0 1 1 0 0 1 0 1 0 1 1 1 1 1 0 1\n";
@@ -16101,7 +16101,7 @@ TEST_F(FileSaverTest, SaveToFile21x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x21Test) {
+TEST_F(SaverTest, SaveToFile21x21Test) {
   std::ofstream file(input_);
   file << "21 21\n";
   file << "0 1 1 0 0 1 0 0 1 1 1 1 1 1 0 1 1 0 1 0 1\n";
@@ -16167,7 +16167,7 @@ TEST_F(FileSaverTest, SaveToFile21x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x22Test) {
+TEST_F(SaverTest, SaveToFile21x22Test) {
   std::ofstream file(input_);
   file << "21 22\n";
   file << "0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 1 1 0 1 0 1 1\n";
@@ -16233,7 +16233,7 @@ TEST_F(FileSaverTest, SaveToFile21x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x23Test) {
+TEST_F(SaverTest, SaveToFile21x23Test) {
   std::ofstream file(input_);
   file << "21 23\n";
   file << "0 1 1 0 1 1 0 0 0 1 1 1 1 0 0 0 0 1 1 0 0 0 1\n";
@@ -16299,7 +16299,7 @@ TEST_F(FileSaverTest, SaveToFile21x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x24Test) {
+TEST_F(SaverTest, SaveToFile21x24Test) {
   std::ofstream file(input_);
   file << "21 24\n";
   file << "1 1 1 0 0 1 1 0 0 0 1 0 1 0 0 0 0 0 1 1 1 0 0 1\n";
@@ -16365,7 +16365,7 @@ TEST_F(FileSaverTest, SaveToFile21x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x25Test) {
+TEST_F(SaverTest, SaveToFile21x25Test) {
   std::ofstream file(input_);
   file << "21 25\n";
   file << "1 1 1 0 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 1\n";
@@ -16431,7 +16431,7 @@ TEST_F(FileSaverTest, SaveToFile21x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x26Test) {
+TEST_F(SaverTest, SaveToFile21x26Test) {
   std::ofstream file(input_);
   file << "21 26\n";
   file << "1 0 0 1 1 0 0 0 1 1 0 1 1 0 1 0 1 0 0 0 1 0 0 1 1 1\n";
@@ -16497,7 +16497,7 @@ TEST_F(FileSaverTest, SaveToFile21x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x27Test) {
+TEST_F(SaverTest, SaveToFile21x27Test) {
   std::ofstream file(input_);
   file << "21 27\n";
   file << "0 1 1 1 1 0 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 0 1\n";
@@ -16563,7 +16563,7 @@ TEST_F(FileSaverTest, SaveToFile21x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x28Test) {
+TEST_F(SaverTest, SaveToFile21x28Test) {
   std::ofstream file(input_);
   file << "21 28\n";
   file << "0 1 1 0 0 0 0 1 0 1 1 0 1 1 0 1 1 1 1 0 1 1 1 1 0 1 1 1\n";
@@ -16629,7 +16629,7 @@ TEST_F(FileSaverTest, SaveToFile21x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x29Test) {
+TEST_F(SaverTest, SaveToFile21x29Test) {
   std::ofstream file(input_);
   file << "21 29\n";
   file << "1 1 0 1 0 1 1 1 1 0 1 1 1 0 1 0 1 0 1 0 1 0 0 1 0 0 0 0 1\n";
@@ -16695,7 +16695,7 @@ TEST_F(FileSaverTest, SaveToFile21x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile21x30Test) {
+TEST_F(SaverTest, SaveToFile21x30Test) {
   std::ofstream file(input_);
   file << "21 30\n";
   file << "1 1 1 0 1 0 1 1 1 1 1 1 0 1 1 1 0 0 0 1 0 1 0 1 0 1 1 0 1 1\n";
@@ -16761,7 +16761,7 @@ TEST_F(FileSaverTest, SaveToFile21x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x10Test) {
+TEST_F(SaverTest, SaveToFile22x10Test) {
   std::ofstream file(input_);
   file << "22 10\n";
   file << "1 0 0 1 1 1 1 0 0 1\n";
@@ -16829,7 +16829,7 @@ TEST_F(FileSaverTest, SaveToFile22x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x11Test) {
+TEST_F(SaverTest, SaveToFile22x11Test) {
   std::ofstream file(input_);
   file << "22 11\n";
   file << "0 1 1 1 0 0 1 0 0 0 1\n";
@@ -16897,7 +16897,7 @@ TEST_F(FileSaverTest, SaveToFile22x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x12Test) {
+TEST_F(SaverTest, SaveToFile22x12Test) {
   std::ofstream file(input_);
   file << "22 12\n";
   file << "1 1 0 1 1 0 0 0 1 0 1 1\n";
@@ -16965,7 +16965,7 @@ TEST_F(FileSaverTest, SaveToFile22x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x13Test) {
+TEST_F(SaverTest, SaveToFile22x13Test) {
   std::ofstream file(input_);
   file << "22 13\n";
   file << "0 0 0 1 0 0 0 1 0 1 0 1 1\n";
@@ -17033,7 +17033,7 @@ TEST_F(FileSaverTest, SaveToFile22x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x14Test) {
+TEST_F(SaverTest, SaveToFile22x14Test) {
   std::ofstream file(input_);
   file << "22 14\n";
   file << "0 1 1 1 1 0 0 0 1 1 0 1 0 1\n";
@@ -17101,7 +17101,7 @@ TEST_F(FileSaverTest, SaveToFile22x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x15Test) {
+TEST_F(SaverTest, SaveToFile22x15Test) {
   std::ofstream file(input_);
   file << "22 15\n";
   file << "0 1 1 0 0 0 1 1 1 1 1 1 1 1 1\n";
@@ -17169,7 +17169,7 @@ TEST_F(FileSaverTest, SaveToFile22x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x16Test) {
+TEST_F(SaverTest, SaveToFile22x16Test) {
   std::ofstream file(input_);
   file << "22 16\n";
   file << "1 0 0 0 1 0 1 1 1 1 1 0 0 1 0 1\n";
@@ -17237,7 +17237,7 @@ TEST_F(FileSaverTest, SaveToFile22x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x17Test) {
+TEST_F(SaverTest, SaveToFile22x17Test) {
   std::ofstream file(input_);
   file << "22 17\n";
   file << "0 1 1 0 1 0 1 0 1 1 0 0 1 0 0 0 1\n";
@@ -17305,7 +17305,7 @@ TEST_F(FileSaverTest, SaveToFile22x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x18Test) {
+TEST_F(SaverTest, SaveToFile22x18Test) {
   std::ofstream file(input_);
   file << "22 18\n";
   file << "1 0 0 1 1 0 0 1 1 1 1 1 1 1 1 1 0 1\n";
@@ -17373,7 +17373,7 @@ TEST_F(FileSaverTest, SaveToFile22x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x19Test) {
+TEST_F(SaverTest, SaveToFile22x19Test) {
   std::ofstream file(input_);
   file << "22 19\n";
   file << "1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 1 1 0 1\n";
@@ -17441,7 +17441,7 @@ TEST_F(FileSaverTest, SaveToFile22x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x20Test) {
+TEST_F(SaverTest, SaveToFile22x20Test) {
   std::ofstream file(input_);
   file << "22 20\n";
   file << "0 0 1 1 1 1 0 0 1 0 0 0 1 0 0 0 1 1 1 1\n";
@@ -17509,7 +17509,7 @@ TEST_F(FileSaverTest, SaveToFile22x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x21Test) {
+TEST_F(SaverTest, SaveToFile22x21Test) {
   std::ofstream file(input_);
   file << "22 21\n";
   file << "0 0 0 1 0 1 1 1 1 1 0 0 1 0 1 0 1 1 0 1 1\n";
@@ -17577,7 +17577,7 @@ TEST_F(FileSaverTest, SaveToFile22x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x22Test) {
+TEST_F(SaverTest, SaveToFile22x22Test) {
   std::ofstream file(input_);
   file << "22 22\n";
   file << "1 0 1 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 0 1\n";
@@ -17645,7 +17645,7 @@ TEST_F(FileSaverTest, SaveToFile22x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x23Test) {
+TEST_F(SaverTest, SaveToFile22x23Test) {
   std::ofstream file(input_);
   file << "22 23\n";
   file << "1 0 1 0 1 1 1 0 0 1 0 1 0 1 1 1 0 1 0 0 0 0 1\n";
@@ -17713,7 +17713,7 @@ TEST_F(FileSaverTest, SaveToFile22x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x24Test) {
+TEST_F(SaverTest, SaveToFile22x24Test) {
   std::ofstream file(input_);
   file << "22 24\n";
   file << "1 0 0 1 0 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 1\n";
@@ -17781,7 +17781,7 @@ TEST_F(FileSaverTest, SaveToFile22x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x25Test) {
+TEST_F(SaverTest, SaveToFile22x25Test) {
   std::ofstream file(input_);
   file << "22 25\n";
   file << "1 1 0 0 1 0 1 1 1 0 1 1 0 0 0 1 0 1 1 1 0 0 0 1 1\n";
@@ -17849,7 +17849,7 @@ TEST_F(FileSaverTest, SaveToFile22x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x26Test) {
+TEST_F(SaverTest, SaveToFile22x26Test) {
   std::ofstream file(input_);
   file << "22 26\n";
   file << "0 1 0 1 0 1 0 0 0 1 0 1 1 1 0 0 0 0 1 1 0 1 0 0 1 1\n";
@@ -17917,7 +17917,7 @@ TEST_F(FileSaverTest, SaveToFile22x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x27Test) {
+TEST_F(SaverTest, SaveToFile22x27Test) {
   std::ofstream file(input_);
   file << "22 27\n";
   file << "0 0 1 0 0 1 1 0 1 1 1 1 1 1 0 1 1 0 1 1 1 0 0 1 0 1 1\n";
@@ -17985,7 +17985,7 @@ TEST_F(FileSaverTest, SaveToFile22x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x28Test) {
+TEST_F(SaverTest, SaveToFile22x28Test) {
   std::ofstream file(input_);
   file << "22 28\n";
   file << "0 0 0 1 1 0 0 0 1 1 1 1 0 1 0 0 0 1 1 1 1 0 0 1 1 0 1 1\n";
@@ -18053,7 +18053,7 @@ TEST_F(FileSaverTest, SaveToFile22x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x29Test) {
+TEST_F(SaverTest, SaveToFile22x29Test) {
   std::ofstream file(input_);
   file << "22 29\n";
   file << "1 0 1 1 0 1 0 1 1 0 0 1 0 1 0 1 0 0 0 0 0 1 1 1 1 1 0 1 1\n";
@@ -18121,7 +18121,7 @@ TEST_F(FileSaverTest, SaveToFile22x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile22x30Test) {
+TEST_F(SaverTest, SaveToFile22x30Test) {
   std::ofstream file(input_);
   file << "22 30\n";
   file << "1 1 0 0 0 1 1 1 1 0 1 0 0 0 1 1 1 0 0 0 1 0 0 0 0 1 1 0 1 1\n";
@@ -18189,7 +18189,7 @@ TEST_F(FileSaverTest, SaveToFile22x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x10Test) {
+TEST_F(SaverTest, SaveToFile23x10Test) {
   std::ofstream file(input_);
   file << "23 10\n";
   file << "1 1 1 0 1 1 0 1 1 1\n";
@@ -18259,7 +18259,7 @@ TEST_F(FileSaverTest, SaveToFile23x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x11Test) {
+TEST_F(SaverTest, SaveToFile23x11Test) {
   std::ofstream file(input_);
   file << "23 11\n";
   file << "1 1 1 1 0 1 0 1 0 0 1\n";
@@ -18329,7 +18329,7 @@ TEST_F(FileSaverTest, SaveToFile23x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x12Test) {
+TEST_F(SaverTest, SaveToFile23x12Test) {
   std::ofstream file(input_);
   file << "23 12\n";
   file << "1 0 0 0 1 0 1 0 1 1 1 1\n";
@@ -18399,7 +18399,7 @@ TEST_F(FileSaverTest, SaveToFile23x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x13Test) {
+TEST_F(SaverTest, SaveToFile23x13Test) {
   std::ofstream file(input_);
   file << "23 13\n";
   file << "1 0 1 0 1 0 0 1 1 0 0 0 1\n";
@@ -18469,7 +18469,7 @@ TEST_F(FileSaverTest, SaveToFile23x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x14Test) {
+TEST_F(SaverTest, SaveToFile23x14Test) {
   std::ofstream file(input_);
   file << "23 14\n";
   file << "0 0 1 1 0 0 0 0 0 1 1 1 1 1\n";
@@ -18539,7 +18539,7 @@ TEST_F(FileSaverTest, SaveToFile23x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x15Test) {
+TEST_F(SaverTest, SaveToFile23x15Test) {
   std::ofstream file(input_);
   file << "23 15\n";
   file << "1 0 0 0 1 0 0 1 0 1 1 1 0 1 1\n";
@@ -18609,7 +18609,7 @@ TEST_F(FileSaverTest, SaveToFile23x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x16Test) {
+TEST_F(SaverTest, SaveToFile23x16Test) {
   std::ofstream file(input_);
   file << "23 16\n";
   file << "1 1 0 0 1 1 0 0 0 1 1 1 1 0 0 1\n";
@@ -18679,7 +18679,7 @@ TEST_F(FileSaverTest, SaveToFile23x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x17Test) {
+TEST_F(SaverTest, SaveToFile23x17Test) {
   std::ofstream file(input_);
   file << "23 17\n";
   file << "0 0 1 0 1 1 0 0 1 0 0 1 0 0 0 1 1\n";
@@ -18749,7 +18749,7 @@ TEST_F(FileSaverTest, SaveToFile23x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x18Test) {
+TEST_F(SaverTest, SaveToFile23x18Test) {
   std::ofstream file(input_);
   file << "23 18\n";
   file << "1 1 0 1 1 1 1 0 0 1 0 1 1 0 0 1 1 1\n";
@@ -18819,7 +18819,7 @@ TEST_F(FileSaverTest, SaveToFile23x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x19Test) {
+TEST_F(SaverTest, SaveToFile23x19Test) {
   std::ofstream file(input_);
   file << "23 19\n";
   file << "1 0 1 0 0 1 0 0 0 0 0 1 0 0 1 1 1 1 1\n";
@@ -18889,7 +18889,7 @@ TEST_F(FileSaverTest, SaveToFile23x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x20Test) {
+TEST_F(SaverTest, SaveToFile23x20Test) {
   std::ofstream file(input_);
   file << "23 20\n";
   file << "1 0 0 1 1 1 0 1 1 1 0 0 1 0 0 0 1 1 0 1\n";
@@ -18959,7 +18959,7 @@ TEST_F(FileSaverTest, SaveToFile23x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x21Test) {
+TEST_F(SaverTest, SaveToFile23x21Test) {
   std::ofstream file(input_);
   file << "23 21\n";
   file << "0 0 0 0 1 1 1 1 1 1 0 1 0 1 1 1 0 1 1 0 1\n";
@@ -19029,7 +19029,7 @@ TEST_F(FileSaverTest, SaveToFile23x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x22Test) {
+TEST_F(SaverTest, SaveToFile23x22Test) {
   std::ofstream file(input_);
   file << "23 22\n";
   file << "0 1 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 1 1 0 1\n";
@@ -19099,7 +19099,7 @@ TEST_F(FileSaverTest, SaveToFile23x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x23Test) {
+TEST_F(SaverTest, SaveToFile23x23Test) {
   std::ofstream file(input_);
   file << "23 23\n";
   file << "0 0 1 0 1 1 0 1 1 0 0 0 0 0 0 1 1 0 1 0 1 0 1\n";
@@ -19169,7 +19169,7 @@ TEST_F(FileSaverTest, SaveToFile23x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x24Test) {
+TEST_F(SaverTest, SaveToFile23x24Test) {
   std::ofstream file(input_);
   file << "23 24\n";
   file << "1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 0 1 0 1 0 0 0 0 1\n";
@@ -19239,7 +19239,7 @@ TEST_F(FileSaverTest, SaveToFile23x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x25Test) {
+TEST_F(SaverTest, SaveToFile23x25Test) {
   std::ofstream file(input_);
   file << "23 25\n";
   file << "1 1 0 1 1 1 0 1 0 1 1 1 0 0 1 1 0 1 1 0 0 1 0 0 1\n";
@@ -19309,7 +19309,7 @@ TEST_F(FileSaverTest, SaveToFile23x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x26Test) {
+TEST_F(SaverTest, SaveToFile23x26Test) {
   std::ofstream file(input_);
   file << "23 26\n";
   file << "0 0 0 0 1 0 1 0 0 1 0 1 0 0 1 1 1 0 1 0 0 0 0 0 1 1\n";
@@ -19379,7 +19379,7 @@ TEST_F(FileSaverTest, SaveToFile23x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x27Test) {
+TEST_F(SaverTest, SaveToFile23x27Test) {
   std::ofstream file(input_);
   file << "23 27\n";
   file << "1 1 1 1 0 0 1 1 0 1 1 0 0 1 1 1 1 1 1 0 1 1 0 0 0 0 1\n";
@@ -19449,7 +19449,7 @@ TEST_F(FileSaverTest, SaveToFile23x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x28Test) {
+TEST_F(SaverTest, SaveToFile23x28Test) {
   std::ofstream file(input_);
   file << "23 28\n";
   file << "0 0 0 1 1 0 1 0 0 1 0 1 1 0 1 1 0 1 0 1 0 0 1 0 0 0 0 1\n";
@@ -19519,7 +19519,7 @@ TEST_F(FileSaverTest, SaveToFile23x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x29Test) {
+TEST_F(SaverTest, SaveToFile23x29Test) {
   std::ofstream file(input_);
   file << "23 29\n";
   file << "0 1 1 0 0 0 1 0 1 1 1 1 1 0 0 1 1 0 0 0 1 1 1 0 1 1 0 1 1\n";
@@ -19589,7 +19589,7 @@ TEST_F(FileSaverTest, SaveToFile23x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile23x30Test) {
+TEST_F(SaverTest, SaveToFile23x30Test) {
   std::ofstream file(input_);
   file << "23 30\n";
   file << "0 0 1 1 0 1 0 1 1 0 0 0 1 0 0 0 1 1 1 1 1 0 1 0 0 1 0 1 0 1\n";
@@ -19659,7 +19659,7 @@ TEST_F(FileSaverTest, SaveToFile23x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x10Test) {
+TEST_F(SaverTest, SaveToFile24x10Test) {
   std::ofstream file(input_);
   file << "24 10\n";
   file << "0 1 1 0 0 1 0 1 0 1\n";
@@ -19731,7 +19731,7 @@ TEST_F(FileSaverTest, SaveToFile24x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x11Test) {
+TEST_F(SaverTest, SaveToFile24x11Test) {
   std::ofstream file(input_);
   file << "24 11\n";
   file << "1 1 1 1 0 1 0 0 0 1 1\n";
@@ -19803,7 +19803,7 @@ TEST_F(FileSaverTest, SaveToFile24x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x12Test) {
+TEST_F(SaverTest, SaveToFile24x12Test) {
   std::ofstream file(input_);
   file << "24 12\n";
   file << "0 1 1 0 1 1 0 0 1 1 0 1\n";
@@ -19875,7 +19875,7 @@ TEST_F(FileSaverTest, SaveToFile24x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x13Test) {
+TEST_F(SaverTest, SaveToFile24x13Test) {
   std::ofstream file(input_);
   file << "24 13\n";
   file << "1 0 1 0 1 1 1 0 1 0 1 0 1\n";
@@ -19947,7 +19947,7 @@ TEST_F(FileSaverTest, SaveToFile24x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x14Test) {
+TEST_F(SaverTest, SaveToFile24x14Test) {
   std::ofstream file(input_);
   file << "24 14\n";
   file << "1 0 1 1 0 1 0 0 1 1 1 0 0 1\n";
@@ -20019,7 +20019,7 @@ TEST_F(FileSaverTest, SaveToFile24x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x15Test) {
+TEST_F(SaverTest, SaveToFile24x15Test) {
   std::ofstream file(input_);
   file << "24 15\n";
   file << "1 0 0 1 1 0 1 0 0 0 0 1 1 0 1\n";
@@ -20091,7 +20091,7 @@ TEST_F(FileSaverTest, SaveToFile24x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x16Test) {
+TEST_F(SaverTest, SaveToFile24x16Test) {
   std::ofstream file(input_);
   file << "24 16\n";
   file << "0 0 1 1 0 1 1 0 0 1 0 0 0 1 0 1\n";
@@ -20163,7 +20163,7 @@ TEST_F(FileSaverTest, SaveToFile24x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x17Test) {
+TEST_F(SaverTest, SaveToFile24x17Test) {
   std::ofstream file(input_);
   file << "24 17\n";
   file << "1 1 1 0 1 0 0 1 0 0 0 1 0 1 1 1 1\n";
@@ -20235,7 +20235,7 @@ TEST_F(FileSaverTest, SaveToFile24x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x18Test) {
+TEST_F(SaverTest, SaveToFile24x18Test) {
   std::ofstream file(input_);
   file << "24 18\n";
   file << "1 1 0 1 0 1 0 0 0 1 1 0 0 0 1 0 1 1\n";
@@ -20307,7 +20307,7 @@ TEST_F(FileSaverTest, SaveToFile24x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x19Test) {
+TEST_F(SaverTest, SaveToFile24x19Test) {
   std::ofstream file(input_);
   file << "24 19\n";
   file << "1 1 1 0 1 1 0 0 1 1 0 0 0 1 0 0 1 0 1\n";
@@ -20379,7 +20379,7 @@ TEST_F(FileSaverTest, SaveToFile24x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x20Test) {
+TEST_F(SaverTest, SaveToFile24x20Test) {
   std::ofstream file(input_);
   file << "24 20\n";
   file << "0 1 1 1 0 0 0 1 1 0 0 0 0 1 1 1 0 0 1 1\n";
@@ -20451,7 +20451,7 @@ TEST_F(FileSaverTest, SaveToFile24x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x21Test) {
+TEST_F(SaverTest, SaveToFile24x21Test) {
   std::ofstream file(input_);
   file << "24 21\n";
   file << "0 1 1 1 1 0 0 0 0 1 1 0 1 0 1 1 0 0 0 0 1\n";
@@ -20523,7 +20523,7 @@ TEST_F(FileSaverTest, SaveToFile24x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x22Test) {
+TEST_F(SaverTest, SaveToFile24x22Test) {
   std::ofstream file(input_);
   file << "24 22\n";
   file << "1 0 0 1 1 0 1 0 0 1 0 0 0 1 0 1 0 0 0 0 0 1\n";
@@ -20595,7 +20595,7 @@ TEST_F(FileSaverTest, SaveToFile24x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x23Test) {
+TEST_F(SaverTest, SaveToFile24x23Test) {
   std::ofstream file(input_);
   file << "24 23\n";
   file << "0 1 1 0 0 1 0 1 1 0 0 1 0 1 0 0 1 0 1 1 1 0 1\n";
@@ -20667,7 +20667,7 @@ TEST_F(FileSaverTest, SaveToFile24x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x24Test) {
+TEST_F(SaverTest, SaveToFile24x24Test) {
   std::ofstream file(input_);
   file << "24 24\n";
   file << "0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 1 1 1\n";
@@ -20739,7 +20739,7 @@ TEST_F(FileSaverTest, SaveToFile24x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x25Test) {
+TEST_F(SaverTest, SaveToFile24x25Test) {
   std::ofstream file(input_);
   file << "24 25\n";
   file << "0 1 0 1 1 1 1 1 0 0 0 1 1 0 1 1 0 1 1 0 1 0 1 1 1\n";
@@ -20811,7 +20811,7 @@ TEST_F(FileSaverTest, SaveToFile24x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x26Test) {
+TEST_F(SaverTest, SaveToFile24x26Test) {
   std::ofstream file(input_);
   file << "24 26\n";
   file << "1 0 0 1 0 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 1\n";
@@ -20883,7 +20883,7 @@ TEST_F(FileSaverTest, SaveToFile24x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x27Test) {
+TEST_F(SaverTest, SaveToFile24x27Test) {
   std::ofstream file(input_);
   file << "24 27\n";
   file << "1 1 0 0 1 0 1 0 0 0 1 1 1 1 0 1 1 0 0 1 0 1 0 1 0 1 1\n";
@@ -20955,7 +20955,7 @@ TEST_F(FileSaverTest, SaveToFile24x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x28Test) {
+TEST_F(SaverTest, SaveToFile24x28Test) {
   std::ofstream file(input_);
   file << "24 28\n";
   file << "1 1 0 0 0 0 0 1 0 1 0 1 0 1 1 1 1 0 0 0 0 1 0 1 1 1 1 1\n";
@@ -21027,7 +21027,7 @@ TEST_F(FileSaverTest, SaveToFile24x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x29Test) {
+TEST_F(SaverTest, SaveToFile24x29Test) {
   std::ofstream file(input_);
   file << "24 29\n";
   file << "0 1 1 1 0 0 1 1 0 1 1 1 0 1 0 1 1 0 1 1 1 1 0 0 0 0 1 1 1\n";
@@ -21099,7 +21099,7 @@ TEST_F(FileSaverTest, SaveToFile24x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile24x30Test) {
+TEST_F(SaverTest, SaveToFile24x30Test) {
   std::ofstream file(input_);
   file << "24 30\n";
   file << "0 0 1 1 0 1 1 1 0 0 0 0 1 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 1 1\n";
@@ -21171,7 +21171,7 @@ TEST_F(FileSaverTest, SaveToFile24x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x10Test) {
+TEST_F(SaverTest, SaveToFile25x10Test) {
   std::ofstream file(input_);
   file << "25 10\n";
   file << "0 1 0 0 1 1 0 0 1 1\n";
@@ -21245,7 +21245,7 @@ TEST_F(FileSaverTest, SaveToFile25x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x11Test) {
+TEST_F(SaverTest, SaveToFile25x11Test) {
   std::ofstream file(input_);
   file << "25 11\n";
   file << "1 0 1 0 0 0 0 0 0 0 1\n";
@@ -21319,7 +21319,7 @@ TEST_F(FileSaverTest, SaveToFile25x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x12Test) {
+TEST_F(SaverTest, SaveToFile25x12Test) {
   std::ofstream file(input_);
   file << "25 12\n";
   file << "0 0 1 0 1 1 1 1 0 1 0 1\n";
@@ -21393,7 +21393,7 @@ TEST_F(FileSaverTest, SaveToFile25x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x13Test) {
+TEST_F(SaverTest, SaveToFile25x13Test) {
   std::ofstream file(input_);
   file << "25 13\n";
   file << "0 1 1 0 1 1 0 1 1 1 1 1 1\n";
@@ -21467,7 +21467,7 @@ TEST_F(FileSaverTest, SaveToFile25x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x14Test) {
+TEST_F(SaverTest, SaveToFile25x14Test) {
   std::ofstream file(input_);
   file << "25 14\n";
   file << "0 1 0 1 1 0 1 0 0 1 0 0 0 1\n";
@@ -21541,7 +21541,7 @@ TEST_F(FileSaverTest, SaveToFile25x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x15Test) {
+TEST_F(SaverTest, SaveToFile25x15Test) {
   std::ofstream file(input_);
   file << "25 15\n";
   file << "0 0 1 1 0 0 0 0 1 0 1 1 1 0 1\n";
@@ -21615,7 +21615,7 @@ TEST_F(FileSaverTest, SaveToFile25x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x16Test) {
+TEST_F(SaverTest, SaveToFile25x16Test) {
   std::ofstream file(input_);
   file << "25 16\n";
   file << "0 1 0 1 1 1 1 0 1 0 0 1 1 1 1 1\n";
@@ -21689,7 +21689,7 @@ TEST_F(FileSaverTest, SaveToFile25x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x17Test) {
+TEST_F(SaverTest, SaveToFile25x17Test) {
   std::ofstream file(input_);
   file << "25 17\n";
   file << "0 0 1 0 1 1 1 1 1 0 1 0 1 1 0 0 1\n";
@@ -21763,7 +21763,7 @@ TEST_F(FileSaverTest, SaveToFile25x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x18Test) {
+TEST_F(SaverTest, SaveToFile25x18Test) {
   std::ofstream file(input_);
   file << "25 18\n";
   file << "1 0 0 0 0 0 1 1 1 1 0 0 1 1 1 0 1 1\n";
@@ -21837,7 +21837,7 @@ TEST_F(FileSaverTest, SaveToFile25x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x19Test) {
+TEST_F(SaverTest, SaveToFile25x19Test) {
   std::ofstream file(input_);
   file << "25 19\n";
   file << "0 0 0 0 0 1 0 0 1 1 0 1 1 0 1 0 0 0 1\n";
@@ -21911,7 +21911,7 @@ TEST_F(FileSaverTest, SaveToFile25x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x20Test) {
+TEST_F(SaverTest, SaveToFile25x20Test) {
   std::ofstream file(input_);
   file << "25 20\n";
   file << "1 1 0 1 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 1\n";
@@ -21985,7 +21985,7 @@ TEST_F(FileSaverTest, SaveToFile25x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x21Test) {
+TEST_F(SaverTest, SaveToFile25x21Test) {
   std::ofstream file(input_);
   file << "25 21\n";
   file << "1 0 1 1 1 1 1 0 0 1 1 1 0 0 0 0 1 0 1 0 1\n";
@@ -22059,7 +22059,7 @@ TEST_F(FileSaverTest, SaveToFile25x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x22Test) {
+TEST_F(SaverTest, SaveToFile25x22Test) {
   std::ofstream file(input_);
   file << "25 22\n";
   file << "0 0 1 0 1 1 1 1 1 0 0 1 0 0 0 1 0 1 1 1 1 1\n";
@@ -22133,7 +22133,7 @@ TEST_F(FileSaverTest, SaveToFile25x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x23Test) {
+TEST_F(SaverTest, SaveToFile25x23Test) {
   std::ofstream file(input_);
   file << "25 23\n";
   file << "1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1\n";
@@ -22207,7 +22207,7 @@ TEST_F(FileSaverTest, SaveToFile25x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x24Test) {
+TEST_F(SaverTest, SaveToFile25x24Test) {
   std::ofstream file(input_);
   file << "25 24\n";
   file << "0 0 0 1 1 1 0 1 1 1 1 1 0 0 1 0 0 0 0 1 0 1 1 1\n";
@@ -22281,7 +22281,7 @@ TEST_F(FileSaverTest, SaveToFile25x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x25Test) {
+TEST_F(SaverTest, SaveToFile25x25Test) {
   std::ofstream file(input_);
   file << "25 25\n";
   file << "0 0 1 0 1 0 0 1 0 0 1 1 0 1 1 1 1 1 1 0 0 0 0 0 1\n";
@@ -22355,7 +22355,7 @@ TEST_F(FileSaverTest, SaveToFile25x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x26Test) {
+TEST_F(SaverTest, SaveToFile25x26Test) {
   std::ofstream file(input_);
   file << "25 26\n";
   file << "1 0 1 1 1 1 0 0 0 0 1 0 1 1 0 1 1 0 1 1 0 0 0 0 0 1\n";
@@ -22429,7 +22429,7 @@ TEST_F(FileSaverTest, SaveToFile25x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x27Test) {
+TEST_F(SaverTest, SaveToFile25x27Test) {
   std::ofstream file(input_);
   file << "25 27\n";
   file << "1 0 1 0 1 0 0 1 1 0 0 0 1 1 0 0 1 0 0 0 1 0 1 1 0 0 1\n";
@@ -22503,7 +22503,7 @@ TEST_F(FileSaverTest, SaveToFile25x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x28Test) {
+TEST_F(SaverTest, SaveToFile25x28Test) {
   std::ofstream file(input_);
   file << "25 28\n";
   file << "0 1 1 1 0 0 0 1 1 1 0 1 1 1 0 1 1 0 1 1 0 1 1 1 1 0 1 1\n";
@@ -22577,7 +22577,7 @@ TEST_F(FileSaverTest, SaveToFile25x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x29Test) {
+TEST_F(SaverTest, SaveToFile25x29Test) {
   std::ofstream file(input_);
   file << "25 29\n";
   file << "1 1 0 0 1 1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 1 1 0 1 0 0 0 0 1\n";
@@ -22651,7 +22651,7 @@ TEST_F(FileSaverTest, SaveToFile25x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile25x30Test) {
+TEST_F(SaverTest, SaveToFile25x30Test) {
   std::ofstream file(input_);
   file << "25 30\n";
   file << "0 0 1 0 1 0 0 1 1 0 1 1 0 0 0 1 1 0 0 1 0 0 1 0 0 0 1 1 1 1\n";
@@ -22725,7 +22725,7 @@ TEST_F(FileSaverTest, SaveToFile25x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x10Test) {
+TEST_F(SaverTest, SaveToFile26x10Test) {
   std::ofstream file(input_);
   file << "26 10\n";
   file << "0 1 1 1 0 1 1 0 1 1\n";
@@ -22801,7 +22801,7 @@ TEST_F(FileSaverTest, SaveToFile26x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x11Test) {
+TEST_F(SaverTest, SaveToFile26x11Test) {
   std::ofstream file(input_);
   file << "26 11\n";
   file << "1 1 0 1 1 1 0 0 0 1 1\n";
@@ -22877,7 +22877,7 @@ TEST_F(FileSaverTest, SaveToFile26x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x12Test) {
+TEST_F(SaverTest, SaveToFile26x12Test) {
   std::ofstream file(input_);
   file << "26 12\n";
   file << "0 0 0 0 1 1 0 1 1 0 1 1\n";
@@ -22953,7 +22953,7 @@ TEST_F(FileSaverTest, SaveToFile26x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x13Test) {
+TEST_F(SaverTest, SaveToFile26x13Test) {
   std::ofstream file(input_);
   file << "26 13\n";
   file << "1 0 1 0 1 1 1 0 1 0 0 0 1\n";
@@ -23029,7 +23029,7 @@ TEST_F(FileSaverTest, SaveToFile26x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x14Test) {
+TEST_F(SaverTest, SaveToFile26x14Test) {
   std::ofstream file(input_);
   file << "26 14\n";
   file << "1 1 0 0 0 1 0 1 0 0 1 1 0 1\n";
@@ -23105,7 +23105,7 @@ TEST_F(FileSaverTest, SaveToFile26x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x15Test) {
+TEST_F(SaverTest, SaveToFile26x15Test) {
   std::ofstream file(input_);
   file << "26 15\n";
   file << "0 0 1 1 0 0 1 1 0 0 0 0 0 0 1\n";
@@ -23181,7 +23181,7 @@ TEST_F(FileSaverTest, SaveToFile26x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x16Test) {
+TEST_F(SaverTest, SaveToFile26x16Test) {
   std::ofstream file(input_);
   file << "26 16\n";
   file << "0 1 0 1 0 1 0 1 1 0 1 1 1 0 0 1\n";
@@ -23257,7 +23257,7 @@ TEST_F(FileSaverTest, SaveToFile26x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x17Test) {
+TEST_F(SaverTest, SaveToFile26x17Test) {
   std::ofstream file(input_);
   file << "26 17\n";
   file << "0 1 1 0 0 1 1 0 1 0 0 1 0 1 1 1 1\n";
@@ -23333,7 +23333,7 @@ TEST_F(FileSaverTest, SaveToFile26x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x18Test) {
+TEST_F(SaverTest, SaveToFile26x18Test) {
   std::ofstream file(input_);
   file << "26 18\n";
   file << "0 0 1 0 1 0 1 1 0 1 1 1 0 1 0 0 1 1\n";
@@ -23409,7 +23409,7 @@ TEST_F(FileSaverTest, SaveToFile26x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x19Test) {
+TEST_F(SaverTest, SaveToFile26x19Test) {
   std::ofstream file(input_);
   file << "26 19\n";
   file << "1 0 1 0 1 1 1 0 1 0 0 1 1 1 1 1 0 0 1\n";
@@ -23485,7 +23485,7 @@ TEST_F(FileSaverTest, SaveToFile26x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x20Test) {
+TEST_F(SaverTest, SaveToFile26x20Test) {
   std::ofstream file(input_);
   file << "26 20\n";
   file << "1 1 0 0 0 0 1 1 1 0 1 0 0 1 0 1 0 0 0 1\n";
@@ -23561,7 +23561,7 @@ TEST_F(FileSaverTest, SaveToFile26x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x21Test) {
+TEST_F(SaverTest, SaveToFile26x21Test) {
   std::ofstream file(input_);
   file << "26 21\n";
   file << "0 1 0 0 1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1\n";
@@ -23637,7 +23637,7 @@ TEST_F(FileSaverTest, SaveToFile26x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x22Test) {
+TEST_F(SaverTest, SaveToFile26x22Test) {
   std::ofstream file(input_);
   file << "26 22\n";
   file << "0 0 0 1 1 0 1 0 1 1 0 0 1 0 1 1 0 0 0 0 0 1\n";
@@ -23713,7 +23713,7 @@ TEST_F(FileSaverTest, SaveToFile26x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x23Test) {
+TEST_F(SaverTest, SaveToFile26x23Test) {
   std::ofstream file(input_);
   file << "26 23\n";
   file << "1 1 1 1 1 1 1 1 1 0 0 0 0 1 0 1 1 1 0 1 0 0 1\n";
@@ -23789,7 +23789,7 @@ TEST_F(FileSaverTest, SaveToFile26x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x24Test) {
+TEST_F(SaverTest, SaveToFile26x24Test) {
   std::ofstream file(input_);
   file << "26 24\n";
   file << "1 1 0 1 1 1 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 1 1\n";
@@ -23865,7 +23865,7 @@ TEST_F(FileSaverTest, SaveToFile26x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x25Test) {
+TEST_F(SaverTest, SaveToFile26x25Test) {
   std::ofstream file(input_);
   file << "26 25\n";
   file << "0 0 0 1 1 1 0 1 0 0 1 0 1 0 1 0 1 0 1 0 0 1 1 0 1\n";
@@ -23941,7 +23941,7 @@ TEST_F(FileSaverTest, SaveToFile26x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x26Test) {
+TEST_F(SaverTest, SaveToFile26x26Test) {
   std::ofstream file(input_);
   file << "26 26\n";
   file << "1 1 0 1 0 1 0 0 0 1 0 0 0 1 1 1 1 1 0 1 0 1 0 0 0 1\n";
@@ -24017,7 +24017,7 @@ TEST_F(FileSaverTest, SaveToFile26x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x27Test) {
+TEST_F(SaverTest, SaveToFile26x27Test) {
   std::ofstream file(input_);
   file << "26 27\n";
   file << "1 0 1 1 1 1 1 1 0 0 0 0 0 1 0 0 1 1 0 1 1 0 0 0 1 1 1\n";
@@ -24093,7 +24093,7 @@ TEST_F(FileSaverTest, SaveToFile26x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x28Test) {
+TEST_F(SaverTest, SaveToFile26x28Test) {
   std::ofstream file(input_);
   file << "26 28\n";
   file << "0 0 0 1 1 1 0 1 1 0 1 1 1 1 1 0 1 0 1 0 1 0 1 1 1 0 0 1\n";
@@ -24169,7 +24169,7 @@ TEST_F(FileSaverTest, SaveToFile26x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x29Test) {
+TEST_F(SaverTest, SaveToFile26x29Test) {
   std::ofstream file(input_);
   file << "26 29\n";
   file << "0 0 1 1 1 1 1 0 1 0 0 1 0 1 1 0 0 1 0 1 0 1 1 0 1 0 1 1 1\n";
@@ -24245,7 +24245,7 @@ TEST_F(FileSaverTest, SaveToFile26x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile26x30Test) {
+TEST_F(SaverTest, SaveToFile26x30Test) {
   std::ofstream file(input_);
   file << "26 30\n";
   file << "0 1 1 1 0 1 0 1 0 1 0 1 1 1 1 0 0 0 1 0 1 1 1 1 1 0 1 0 1 1\n";
@@ -24321,7 +24321,7 @@ TEST_F(FileSaverTest, SaveToFile26x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x10Test) {
+TEST_F(SaverTest, SaveToFile27x10Test) {
   std::ofstream file(input_);
   file << "27 10\n";
   file << "0 0 0 0 1 0 1 0 1 1\n";
@@ -24399,7 +24399,7 @@ TEST_F(FileSaverTest, SaveToFile27x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x11Test) {
+TEST_F(SaverTest, SaveToFile27x11Test) {
   std::ofstream file(input_);
   file << "27 11\n";
   file << "1 1 1 1 1 1 1 1 1 1 1\n";
@@ -24477,7 +24477,7 @@ TEST_F(FileSaverTest, SaveToFile27x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x12Test) {
+TEST_F(SaverTest, SaveToFile27x12Test) {
   std::ofstream file(input_);
   file << "27 12\n";
   file << "0 1 0 1 0 1 0 1 1 0 1 1\n";
@@ -24555,7 +24555,7 @@ TEST_F(FileSaverTest, SaveToFile27x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x13Test) {
+TEST_F(SaverTest, SaveToFile27x13Test) {
   std::ofstream file(input_);
   file << "27 13\n";
   file << "0 0 0 1 0 1 1 0 1 0 0 0 1\n";
@@ -24633,7 +24633,7 @@ TEST_F(FileSaverTest, SaveToFile27x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x14Test) {
+TEST_F(SaverTest, SaveToFile27x14Test) {
   std::ofstream file(input_);
   file << "27 14\n";
   file << "1 1 0 0 1 0 0 1 1 0 0 1 1 1\n";
@@ -24711,7 +24711,7 @@ TEST_F(FileSaverTest, SaveToFile27x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x15Test) {
+TEST_F(SaverTest, SaveToFile27x15Test) {
   std::ofstream file(input_);
   file << "27 15\n";
   file << "0 0 0 1 1 0 0 0 1 0 1 0 1 1 1\n";
@@ -24789,7 +24789,7 @@ TEST_F(FileSaverTest, SaveToFile27x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x16Test) {
+TEST_F(SaverTest, SaveToFile27x16Test) {
   std::ofstream file(input_);
   file << "27 16\n";
   file << "1 0 1 0 1 1 1 0 1 0 1 0 0 1 1 1\n";
@@ -24867,7 +24867,7 @@ TEST_F(FileSaverTest, SaveToFile27x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x17Test) {
+TEST_F(SaverTest, SaveToFile27x17Test) {
   std::ofstream file(input_);
   file << "27 17\n";
   file << "0 1 1 0 1 1 0 1 1 0 0 0 1 1 0 0 1\n";
@@ -24945,7 +24945,7 @@ TEST_F(FileSaverTest, SaveToFile27x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x18Test) {
+TEST_F(SaverTest, SaveToFile27x18Test) {
   std::ofstream file(input_);
   file << "27 18\n";
   file << "1 1 1 1 0 0 0 1 1 1 1 0 0 1 1 1 1 1\n";
@@ -25023,7 +25023,7 @@ TEST_F(FileSaverTest, SaveToFile27x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x19Test) {
+TEST_F(SaverTest, SaveToFile27x19Test) {
   std::ofstream file(input_);
   file << "27 19\n";
   file << "0 0 0 0 1 1 0 0 0 1 1 0 0 0 0 0 0 0 1\n";
@@ -25101,7 +25101,7 @@ TEST_F(FileSaverTest, SaveToFile27x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x20Test) {
+TEST_F(SaverTest, SaveToFile27x20Test) {
   std::ofstream file(input_);
   file << "27 20\n";
   file << "0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 0 0 0 1\n";
@@ -25179,7 +25179,7 @@ TEST_F(FileSaverTest, SaveToFile27x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x21Test) {
+TEST_F(SaverTest, SaveToFile27x21Test) {
   std::ofstream file(input_);
   file << "27 21\n";
   file << "1 0 0 0 0 1 1 0 1 0 1 1 1 0 0 0 1 0 0 0 1\n";
@@ -25257,7 +25257,7 @@ TEST_F(FileSaverTest, SaveToFile27x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x22Test) {
+TEST_F(SaverTest, SaveToFile27x22Test) {
   std::ofstream file(input_);
   file << "27 22\n";
   file << "1 0 1 0 1 0 0 0 0 0 0 1 0 0 1 0 1 0 1 1 0 1\n";
@@ -25335,7 +25335,7 @@ TEST_F(FileSaverTest, SaveToFile27x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x23Test) {
+TEST_F(SaverTest, SaveToFile27x23Test) {
   std::ofstream file(input_);
   file << "27 23\n";
   file << "0 1 1 1 0 1 1 0 0 0 1 1 0 1 1 0 1 1 1 0 0 1 1\n";
@@ -25413,7 +25413,7 @@ TEST_F(FileSaverTest, SaveToFile27x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x24Test) {
+TEST_F(SaverTest, SaveToFile27x24Test) {
   std::ofstream file(input_);
   file << "27 24\n";
   file << "0 1 0 1 1 0 1 1 0 1 1 1 0 1 1 0 0 1 0 1 0 0 1 1\n";
@@ -25491,7 +25491,7 @@ TEST_F(FileSaverTest, SaveToFile27x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x25Test) {
+TEST_F(SaverTest, SaveToFile27x25Test) {
   std::ofstream file(input_);
   file << "27 25\n";
   file << "0 1 0 1 0 0 0 0 0 1 1 1 1 0 1 1 0 1 1 0 1 0 0 1 1\n";
@@ -25569,7 +25569,7 @@ TEST_F(FileSaverTest, SaveToFile27x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x26Test) {
+TEST_F(SaverTest, SaveToFile27x26Test) {
   std::ofstream file(input_);
   file << "27 26\n";
   file << "1 1 1 1 1 0 0 0 0 1 0 0 1 1 1 1 0 0 0 0 0 1 1 1 0 1\n";
@@ -25647,7 +25647,7 @@ TEST_F(FileSaverTest, SaveToFile27x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x27Test) {
+TEST_F(SaverTest, SaveToFile27x27Test) {
   std::ofstream file(input_);
   file << "27 27\n";
   file << "0 1 0 0 0 0 1 1 0 0 0 1 0 0 0 0 0 1 1 1 1 1 0 1 0 1 1\n";
@@ -25725,7 +25725,7 @@ TEST_F(FileSaverTest, SaveToFile27x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x28Test) {
+TEST_F(SaverTest, SaveToFile27x28Test) {
   std::ofstream file(input_);
   file << "27 28\n";
   file << "1 0 1 1 1 1 1 1 0 0 0 1 1 0 1 0 0 0 0 1 1 0 0 1 1 1 1 1\n";
@@ -25803,7 +25803,7 @@ TEST_F(FileSaverTest, SaveToFile27x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x29Test) {
+TEST_F(SaverTest, SaveToFile27x29Test) {
   std::ofstream file(input_);
   file << "27 29\n";
   file << "1 1 0 0 0 1 0 1 1 0 1 1 0 1 1 0 1 1 1 0 1 1 0 1 1 0 1 1 1\n";
@@ -25881,7 +25881,7 @@ TEST_F(FileSaverTest, SaveToFile27x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile27x30Test) {
+TEST_F(SaverTest, SaveToFile27x30Test) {
   std::ofstream file(input_);
   file << "27 30\n";
   file << "0 0 1 0 1 0 0 1 1 0 1 0 1 0 0 0 0 0 1 0 1 0 1 0 1 0 0 0 1 1\n";
@@ -25959,7 +25959,7 @@ TEST_F(FileSaverTest, SaveToFile27x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x10Test) {
+TEST_F(SaverTest, SaveToFile28x10Test) {
   std::ofstream file(input_);
   file << "28 10\n";
   file << "0 1 1 1 0 1 1 1 1 1\n";
@@ -26039,7 +26039,7 @@ TEST_F(FileSaverTest, SaveToFile28x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x11Test) {
+TEST_F(SaverTest, SaveToFile28x11Test) {
   std::ofstream file(input_);
   file << "28 11\n";
   file << "1 1 1 1 0 0 0 0 0 1 1\n";
@@ -26119,7 +26119,7 @@ TEST_F(FileSaverTest, SaveToFile28x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x12Test) {
+TEST_F(SaverTest, SaveToFile28x12Test) {
   std::ofstream file(input_);
   file << "28 12\n";
   file << "1 1 1 1 0 1 0 0 1 0 1 1\n";
@@ -26199,7 +26199,7 @@ TEST_F(FileSaverTest, SaveToFile28x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x13Test) {
+TEST_F(SaverTest, SaveToFile28x13Test) {
   std::ofstream file(input_);
   file << "28 13\n";
   file << "1 0 1 0 1 1 0 1 0 0 0 0 1\n";
@@ -26279,7 +26279,7 @@ TEST_F(FileSaverTest, SaveToFile28x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x14Test) {
+TEST_F(SaverTest, SaveToFile28x14Test) {
   std::ofstream file(input_);
   file << "28 14\n";
   file << "0 1 0 1 0 1 1 1 0 0 0 0 1 1\n";
@@ -26359,7 +26359,7 @@ TEST_F(FileSaverTest, SaveToFile28x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x15Test) {
+TEST_F(SaverTest, SaveToFile28x15Test) {
   std::ofstream file(input_);
   file << "28 15\n";
   file << "1 1 1 1 1 0 0 0 0 1 0 0 0 0 1\n";
@@ -26439,7 +26439,7 @@ TEST_F(FileSaverTest, SaveToFile28x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x16Test) {
+TEST_F(SaverTest, SaveToFile28x16Test) {
   std::ofstream file(input_);
   file << "28 16\n";
   file << "0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 1\n";
@@ -26519,7 +26519,7 @@ TEST_F(FileSaverTest, SaveToFile28x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x17Test) {
+TEST_F(SaverTest, SaveToFile28x17Test) {
   std::ofstream file(input_);
   file << "28 17\n";
   file << "0 1 1 1 0 1 1 1 1 1 0 1 1 1 0 0 1\n";
@@ -26599,7 +26599,7 @@ TEST_F(FileSaverTest, SaveToFile28x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x18Test) {
+TEST_F(SaverTest, SaveToFile28x18Test) {
   std::ofstream file(input_);
   file << "28 18\n";
   file << "0 0 0 0 0 0 1 0 0 1 0 0 1 0 1 0 0 1\n";
@@ -26679,7 +26679,7 @@ TEST_F(FileSaverTest, SaveToFile28x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x19Test) {
+TEST_F(SaverTest, SaveToFile28x19Test) {
   std::ofstream file(input_);
   file << "28 19\n";
   file << "0 0 1 1 0 1 0 0 0 0 0 0 0 1 1 1 1 0 1\n";
@@ -26759,7 +26759,7 @@ TEST_F(FileSaverTest, SaveToFile28x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x20Test) {
+TEST_F(SaverTest, SaveToFile28x20Test) {
   std::ofstream file(input_);
   file << "28 20\n";
   file << "1 0 1 1 1 0 0 1 0 0 1 0 1 1 1 1 1 0 0 1\n";
@@ -26839,7 +26839,7 @@ TEST_F(FileSaverTest, SaveToFile28x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x21Test) {
+TEST_F(SaverTest, SaveToFile28x21Test) {
   std::ofstream file(input_);
   file << "28 21\n";
   file << "0 0 0 1 0 1 1 1 1 1 0 1 0 1 0 0 0 0 1 0 1\n";
@@ -26919,7 +26919,7 @@ TEST_F(FileSaverTest, SaveToFile28x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x22Test) {
+TEST_F(SaverTest, SaveToFile28x22Test) {
   std::ofstream file(input_);
   file << "28 22\n";
   file << "0 0 0 1 0 0 0 0 1 0 1 0 0 0 1 1 1 0 1 0 1 1\n";
@@ -26999,7 +26999,7 @@ TEST_F(FileSaverTest, SaveToFile28x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x23Test) {
+TEST_F(SaverTest, SaveToFile28x23Test) {
   std::ofstream file(input_);
   file << "28 23\n";
   file << "1 0 0 1 1 1 1 0 1 1 0 0 0 0 1 1 1 0 1 1 1 0 1\n";
@@ -27079,7 +27079,7 @@ TEST_F(FileSaverTest, SaveToFile28x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x24Test) {
+TEST_F(SaverTest, SaveToFile28x24Test) {
   std::ofstream file(input_);
   file << "28 24\n";
   file << "1 1 0 0 1 0 0 0 1 1 1 1 1 0 0 1 1 1 0 1 0 1 0 1\n";
@@ -27159,7 +27159,7 @@ TEST_F(FileSaverTest, SaveToFile28x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x25Test) {
+TEST_F(SaverTest, SaveToFile28x25Test) {
   std::ofstream file(input_);
   file << "28 25\n";
   file << "0 1 0 1 1 1 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 1 1 1\n";
@@ -27239,7 +27239,7 @@ TEST_F(FileSaverTest, SaveToFile28x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x26Test) {
+TEST_F(SaverTest, SaveToFile28x26Test) {
   std::ofstream file(input_);
   file << "28 26\n";
   file << "1 1 0 1 0 1 0 0 1 0 1 0 1 0 1 1 1 1 1 0 0 1 0 1 1 1\n";
@@ -27319,7 +27319,7 @@ TEST_F(FileSaverTest, SaveToFile28x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x27Test) {
+TEST_F(SaverTest, SaveToFile28x27Test) {
   std::ofstream file(input_);
   file << "28 27\n";
   file << "0 0 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 0 1 1 1 1 1 1 0 1 1\n";
@@ -27399,7 +27399,7 @@ TEST_F(FileSaverTest, SaveToFile28x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x28Test) {
+TEST_F(SaverTest, SaveToFile28x28Test) {
   std::ofstream file(input_);
   file << "28 28\n";
   file << "0 1 1 1 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 1 1 0 1 1 0 1 1 1\n";
@@ -27479,7 +27479,7 @@ TEST_F(FileSaverTest, SaveToFile28x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x29Test) {
+TEST_F(SaverTest, SaveToFile28x29Test) {
   std::ofstream file(input_);
   file << "28 29\n";
   file << "0 1 1 1 1 0 1 1 0 1 0 0 1 1 1 1 1 1 1 1 1 0 1 1 0 0 1 1 1\n";
@@ -27559,7 +27559,7 @@ TEST_F(FileSaverTest, SaveToFile28x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile28x30Test) {
+TEST_F(SaverTest, SaveToFile28x30Test) {
   std::ofstream file(input_);
   file << "28 30\n";
   file << "1 0 1 0 0 1 0 0 0 0 1 1 1 1 1 1 0 1 0 1 0 1 1 1 0 1 1 1 0 1\n";
@@ -27639,7 +27639,7 @@ TEST_F(FileSaverTest, SaveToFile28x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x10Test) {
+TEST_F(SaverTest, SaveToFile29x10Test) {
   std::ofstream file(input_);
   file << "29 10\n";
   file << "1 0 0 0 1 0 1 0 0 1\n";
@@ -27721,7 +27721,7 @@ TEST_F(FileSaverTest, SaveToFile29x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x11Test) {
+TEST_F(SaverTest, SaveToFile29x11Test) {
   std::ofstream file(input_);
   file << "29 11\n";
   file << "1 0 0 0 0 0 1 0 1 0 1\n";
@@ -27803,7 +27803,7 @@ TEST_F(FileSaverTest, SaveToFile29x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x12Test) {
+TEST_F(SaverTest, SaveToFile29x12Test) {
   std::ofstream file(input_);
   file << "29 12\n";
   file << "1 1 0 0 1 0 0 0 0 1 0 1\n";
@@ -27885,7 +27885,7 @@ TEST_F(FileSaverTest, SaveToFile29x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x13Test) {
+TEST_F(SaverTest, SaveToFile29x13Test) {
   std::ofstream file(input_);
   file << "29 13\n";
   file << "1 1 0 1 0 0 1 1 0 1 0 1 1\n";
@@ -27967,7 +27967,7 @@ TEST_F(FileSaverTest, SaveToFile29x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x14Test) {
+TEST_F(SaverTest, SaveToFile29x14Test) {
   std::ofstream file(input_);
   file << "29 14\n";
   file << "1 1 1 1 1 1 1 0 0 1 1 1 1 1\n";
@@ -28049,7 +28049,7 @@ TEST_F(FileSaverTest, SaveToFile29x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x15Test) {
+TEST_F(SaverTest, SaveToFile29x15Test) {
   std::ofstream file(input_);
   file << "29 15\n";
   file << "1 1 0 1 0 1 1 0 1 1 0 1 0 0 1\n";
@@ -28131,7 +28131,7 @@ TEST_F(FileSaverTest, SaveToFile29x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x16Test) {
+TEST_F(SaverTest, SaveToFile29x16Test) {
   std::ofstream file(input_);
   file << "29 16\n";
   file << "1 1 0 1 1 1 1 1 1 0 0 0 0 0 1 1\n";
@@ -28213,7 +28213,7 @@ TEST_F(FileSaverTest, SaveToFile29x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x17Test) {
+TEST_F(SaverTest, SaveToFile29x17Test) {
   std::ofstream file(input_);
   file << "29 17\n";
   file << "0 0 1 1 0 1 0 0 1 1 0 1 0 0 1 1 1\n";
@@ -28295,7 +28295,7 @@ TEST_F(FileSaverTest, SaveToFile29x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x18Test) {
+TEST_F(SaverTest, SaveToFile29x18Test) {
   std::ofstream file(input_);
   file << "29 18\n";
   file << "1 0 1 1 1 0 0 0 0 0 0 1 0 0 0 1 0 1\n";
@@ -28377,7 +28377,7 @@ TEST_F(FileSaverTest, SaveToFile29x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x19Test) {
+TEST_F(SaverTest, SaveToFile29x19Test) {
   std::ofstream file(input_);
   file << "29 19\n";
   file << "0 0 0 0 1 0 0 0 1 1 0 1 0 0 0 1 0 0 1\n";
@@ -28459,7 +28459,7 @@ TEST_F(FileSaverTest, SaveToFile29x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x20Test) {
+TEST_F(SaverTest, SaveToFile29x20Test) {
   std::ofstream file(input_);
   file << "29 20\n";
   file << "1 0 0 0 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1\n";
@@ -28541,7 +28541,7 @@ TEST_F(FileSaverTest, SaveToFile29x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x21Test) {
+TEST_F(SaverTest, SaveToFile29x21Test) {
   std::ofstream file(input_);
   file << "29 21\n";
   file << "1 0 1 1 1 1 1 0 0 0 0 1 0 1 1 1 0 0 1 1 1\n";
@@ -28623,7 +28623,7 @@ TEST_F(FileSaverTest, SaveToFile29x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x22Test) {
+TEST_F(SaverTest, SaveToFile29x22Test) {
   std::ofstream file(input_);
   file << "29 22\n";
   file << "1 1 0 0 0 1 0 0 1 0 1 1 0 0 0 0 0 1 0 1 1 1\n";
@@ -28705,7 +28705,7 @@ TEST_F(FileSaverTest, SaveToFile29x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x23Test) {
+TEST_F(SaverTest, SaveToFile29x23Test) {
   std::ofstream file(input_);
   file << "29 23\n";
   file << "1 1 1 1 0 1 1 0 0 0 1 0 0 0 0 0 1 1 1 1 0 1 1\n";
@@ -28787,7 +28787,7 @@ TEST_F(FileSaverTest, SaveToFile29x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x24Test) {
+TEST_F(SaverTest, SaveToFile29x24Test) {
   std::ofstream file(input_);
   file << "29 24\n";
   file << "0 0 1 1 0 0 1 1 1 0 0 1 0 1 0 1 1 0 1 1 0 0 0 1\n";
@@ -28869,7 +28869,7 @@ TEST_F(FileSaverTest, SaveToFile29x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x25Test) {
+TEST_F(SaverTest, SaveToFile29x25Test) {
   std::ofstream file(input_);
   file << "29 25\n";
   file << "0 0 1 0 0 0 1 1 0 0 1 0 1 0 1 1 0 1 1 0 1 0 1 1 1\n";
@@ -28951,7 +28951,7 @@ TEST_F(FileSaverTest, SaveToFile29x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x26Test) {
+TEST_F(SaverTest, SaveToFile29x26Test) {
   std::ofstream file(input_);
   file << "29 26\n";
   file << "1 0 0 1 0 1 0 0 0 1 1 0 0 0 1 0 0 1 1 1 1 0 0 0 0 1\n";
@@ -29033,7 +29033,7 @@ TEST_F(FileSaverTest, SaveToFile29x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x27Test) {
+TEST_F(SaverTest, SaveToFile29x27Test) {
   std::ofstream file(input_);
   file << "29 27\n";
   file << "1 0 1 1 1 1 0 1 0 1 0 1 0 1 1 0 1 1 0 0 1 1 0 0 0 1 1\n";
@@ -29115,7 +29115,7 @@ TEST_F(FileSaverTest, SaveToFile29x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x28Test) {
+TEST_F(SaverTest, SaveToFile29x28Test) {
   std::ofstream file(input_);
   file << "29 28\n";
   file << "0 1 0 1 0 1 0 0 1 0 0 0 0 1 1 0 1 0 1 1 0 0 0 0 1 0 1 1\n";
@@ -29197,7 +29197,7 @@ TEST_F(FileSaverTest, SaveToFile29x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x29Test) {
+TEST_F(SaverTest, SaveToFile29x29Test) {
   std::ofstream file(input_);
   file << "29 29\n";
   file << "0 1 0 1 1 0 1 0 1 0 1 1 1 0 0 1 1 1 1 0 0 0 1 0 1 0 1 1 1\n";
@@ -29279,7 +29279,7 @@ TEST_F(FileSaverTest, SaveToFile29x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile29x30Test) {
+TEST_F(SaverTest, SaveToFile29x30Test) {
   std::ofstream file(input_);
   file << "29 30\n";
   file << "1 1 1 1 1 0 1 1 0 1 1 1 1 0 1 1 1 1 1 1 0 1 0 0 0 1 0 1 0 1\n";
@@ -29361,7 +29361,7 @@ TEST_F(FileSaverTest, SaveToFile29x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x10Test) {
+TEST_F(SaverTest, SaveToFile30x10Test) {
   std::ofstream file(input_);
   file << "30 10\n";
   file << "1 1 1 1 1 1 0 0 0 1\n";
@@ -29445,7 +29445,7 @@ TEST_F(FileSaverTest, SaveToFile30x10Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x11Test) {
+TEST_F(SaverTest, SaveToFile30x11Test) {
   std::ofstream file(input_);
   file << "30 11\n";
   file << "1 1 0 1 0 0 0 0 0 1 1\n";
@@ -29529,7 +29529,7 @@ TEST_F(FileSaverTest, SaveToFile30x11Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x12Test) {
+TEST_F(SaverTest, SaveToFile30x12Test) {
   std::ofstream file(input_);
   file << "30 12\n";
   file << "0 1 1 0 0 1 1 0 0 0 0 1\n";
@@ -29613,7 +29613,7 @@ TEST_F(FileSaverTest, SaveToFile30x12Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x13Test) {
+TEST_F(SaverTest, SaveToFile30x13Test) {
   std::ofstream file(input_);
   file << "30 13\n";
   file << "0 0 1 1 1 0 1 1 1 0 0 1 1\n";
@@ -29697,7 +29697,7 @@ TEST_F(FileSaverTest, SaveToFile30x13Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x14Test) {
+TEST_F(SaverTest, SaveToFile30x14Test) {
   std::ofstream file(input_);
   file << "30 14\n";
   file << "1 0 0 0 1 0 1 0 1 0 0 0 1 1\n";
@@ -29781,7 +29781,7 @@ TEST_F(FileSaverTest, SaveToFile30x14Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x15Test) {
+TEST_F(SaverTest, SaveToFile30x15Test) {
   std::ofstream file(input_);
   file << "30 15\n";
   file << "1 0 1 0 1 0 1 1 0 1 0 0 0 1 1\n";
@@ -29865,7 +29865,7 @@ TEST_F(FileSaverTest, SaveToFile30x15Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x16Test) {
+TEST_F(SaverTest, SaveToFile30x16Test) {
   std::ofstream file(input_);
   file << "30 16\n";
   file << "1 0 1 1 1 1 1 1 0 1 0 0 0 1 1 1\n";
@@ -29949,7 +29949,7 @@ TEST_F(FileSaverTest, SaveToFile30x16Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x17Test) {
+TEST_F(SaverTest, SaveToFile30x17Test) {
   std::ofstream file(input_);
   file << "30 17\n";
   file << "0 0 0 0 1 1 0 1 0 0 0 0 1 1 1 0 1\n";
@@ -30033,7 +30033,7 @@ TEST_F(FileSaverTest, SaveToFile30x17Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x18Test) {
+TEST_F(SaverTest, SaveToFile30x18Test) {
   std::ofstream file(input_);
   file << "30 18\n";
   file << "0 0 1 0 0 1 1 1 0 0 1 1 1 1 0 0 1 1\n";
@@ -30117,7 +30117,7 @@ TEST_F(FileSaverTest, SaveToFile30x18Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x19Test) {
+TEST_F(SaverTest, SaveToFile30x19Test) {
   std::ofstream file(input_);
   file << "30 19\n";
   file << "0 0 1 0 0 1 1 1 0 1 0 0 0 0 1 0 0 1 1\n";
@@ -30201,7 +30201,7 @@ TEST_F(FileSaverTest, SaveToFile30x19Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x20Test) {
+TEST_F(SaverTest, SaveToFile30x20Test) {
   std::ofstream file(input_);
   file << "30 20\n";
   file << "1 1 1 1 1 0 1 1 0 1 0 0 1 0 0 1 1 1 0 1\n";
@@ -30285,7 +30285,7 @@ TEST_F(FileSaverTest, SaveToFile30x20Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x21Test) {
+TEST_F(SaverTest, SaveToFile30x21Test) {
   std::ofstream file(input_);
   file << "30 21\n";
   file << "0 1 1 0 1 1 1 0 1 1 0 1 0 0 0 0 0 1 0 0 1\n";
@@ -30369,7 +30369,7 @@ TEST_F(FileSaverTest, SaveToFile30x21Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x22Test) {
+TEST_F(SaverTest, SaveToFile30x22Test) {
   std::ofstream file(input_);
   file << "30 22\n";
   file << "0 0 1 0 0 1 1 0 0 1 1 1 1 0 1 0 0 1 1 0 1 1\n";
@@ -30453,7 +30453,7 @@ TEST_F(FileSaverTest, SaveToFile30x22Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x23Test) {
+TEST_F(SaverTest, SaveToFile30x23Test) {
   std::ofstream file(input_);
   file << "30 23\n";
   file << "0 0 1 0 0 0 1 0 1 1 0 1 0 0 0 0 1 0 0 1 1 0 1\n";
@@ -30537,7 +30537,7 @@ TEST_F(FileSaverTest, SaveToFile30x23Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x24Test) {
+TEST_F(SaverTest, SaveToFile30x24Test) {
   std::ofstream file(input_);
   file << "30 24\n";
   file << "0 0 0 1 0 1 0 0 0 0 1 0 1 0 1 0 1 0 1 0 1 0 0 1\n";
@@ -30621,7 +30621,7 @@ TEST_F(FileSaverTest, SaveToFile30x24Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x25Test) {
+TEST_F(SaverTest, SaveToFile30x25Test) {
   std::ofstream file(input_);
   file << "30 25\n";
   file << "1 0 0 0 0 1 1 1 1 0 0 1 1 0 0 1 1 0 1 0 1 1 1 0 1\n";
@@ -30705,7 +30705,7 @@ TEST_F(FileSaverTest, SaveToFile30x25Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x26Test) {
+TEST_F(SaverTest, SaveToFile30x26Test) {
   std::ofstream file(input_);
   file << "30 26\n";
   file << "1 1 1 1 1 0 1 0 1 0 0 0 1 1 1 1 1 1 0 1 0 1 0 1 0 1\n";
@@ -30789,7 +30789,7 @@ TEST_F(FileSaverTest, SaveToFile30x26Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x27Test) {
+TEST_F(SaverTest, SaveToFile30x27Test) {
   std::ofstream file(input_);
   file << "30 27\n";
   file << "1 1 0 1 1 0 0 0 1 1 0 0 0 0 1 1 1 0 1 1 1 1 1 1 0 0 1\n";
@@ -30873,7 +30873,7 @@ TEST_F(FileSaverTest, SaveToFile30x27Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x28Test) {
+TEST_F(SaverTest, SaveToFile30x28Test) {
   std::ofstream file(input_);
   file << "30 28\n";
   file << "1 1 0 1 1 1 0 1 0 0 1 1 0 1 1 1 1 1 1 1 0 0 1 1 0 0 0 1\n";
@@ -30957,7 +30957,7 @@ TEST_F(FileSaverTest, SaveToFile30x28Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x29Test) {
+TEST_F(SaverTest, SaveToFile30x29Test) {
   std::ofstream file(input_);
   file << "30 29\n";
   file << "1 0 0 0 0 1 1 1 0 1 1 0 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1\n";
@@ -31041,7 +31041,7 @@ TEST_F(FileSaverTest, SaveToFile30x29Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile30x30Test) {
+TEST_F(SaverTest, SaveToFile30x30Test) {
   std::ofstream file(input_);
   file << "30 30\n";
   file << "1 0 1 0 1 0 1 0 1 0 0 0 0 0 1 0 1 0 1 1 0 1 0 1 1 0 1 1 1 1\n";
@@ -31125,7 +31125,7 @@ TEST_F(FileSaverTest, SaveToFile30x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x30Test) {
+TEST_F(SaverTest, SaveToFile48x30Test) {
   std::ofstream file(input_);
   file << "48 30\n";
   file << "1 0 1 0 1 0 1 1 0 0 0 0 0 1 1 0 1 1 0 0 0 0 0 0 1 1 1 1 0 1\n";
@@ -31245,7 +31245,7 @@ TEST_F(FileSaverTest, SaveToFile48x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x31Test) {
+TEST_F(SaverTest, SaveToFile48x31Test) {
   std::ofstream file(input_);
   file << "48 31\n";
   file << "1 0 0 0 1 0 0 1 1 0 1 0 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 1\n";
@@ -31365,7 +31365,7 @@ TEST_F(FileSaverTest, SaveToFile48x31Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x32Test) {
+TEST_F(SaverTest, SaveToFile48x32Test) {
   std::ofstream file(input_);
   file << "48 32\n";
   file << "0 1 1 1 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 0 1 0 1 1\n";
@@ -31485,7 +31485,7 @@ TEST_F(FileSaverTest, SaveToFile48x32Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x33Test) {
+TEST_F(SaverTest, SaveToFile48x33Test) {
   std::ofstream file(input_);
   file << "48 33\n";
   file << "0 0 1 0 0 0 0 0 1 1 0 0 1 1 0 1 1 0 1 0 1 1 0 1 1 1 0 1 0 0 1 0 1\n";
@@ -31606,7 +31606,7 @@ TEST_F(FileSaverTest, SaveToFile48x33Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x34Test) {
+TEST_F(SaverTest, SaveToFile48x34Test) {
   std::ofstream file(input_);
   file << "48 34\n";
   file << "0 0 0 1 0 0 1 0 1 0 1 1 1 0 0 1 1 1 0 1 1 0 0 1 1 1 0 0 0 1 0 1 1 "
@@ -31822,7 +31822,7 @@ TEST_F(FileSaverTest, SaveToFile48x34Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x35Test) {
+TEST_F(SaverTest, SaveToFile48x35Test) {
   std::ofstream file(input_);
   file << "48 35\n";
   file << "1 1 0 0 1 1 0 0 0 0 1 1 0 1 0 0 0 0 0 1 1 0 0 1 0 1 0 0 0 1 1 0 1 1 "
@@ -32038,7 +32038,7 @@ TEST_F(FileSaverTest, SaveToFile48x35Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x36Test) {
+TEST_F(SaverTest, SaveToFile48x36Test) {
   std::ofstream file(input_);
   file << "48 36\n";
   file << "1 0 1 0 1 0 1 0 0 1 0 1 1 1 0 0 0 0 1 0 0 1 0 0 0 1 1 0 1 1 0 0 1 1 "
@@ -32254,7 +32254,7 @@ TEST_F(FileSaverTest, SaveToFile48x36Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x37Test) {
+TEST_F(SaverTest, SaveToFile48x37Test) {
   std::ofstream file(input_);
   file << "48 37\n";
   file << "0 0 0 0 0 1 1 1 1 1 0 0 0 1 0 0 0 1 1 1 1 0 1 1 0 0 1 0 1 1 1 0 0 0 "
@@ -32470,7 +32470,7 @@ TEST_F(FileSaverTest, SaveToFile48x37Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x38Test) {
+TEST_F(SaverTest, SaveToFile48x38Test) {
   std::ofstream file(input_);
   file << "48 38\n";
   file << "0 1 1 1 0 0 1 0 0 0 1 1 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 1 1 1 0 1 0 "
@@ -32686,7 +32686,7 @@ TEST_F(FileSaverTest, SaveToFile48x38Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x39Test) {
+TEST_F(SaverTest, SaveToFile48x39Test) {
   std::ofstream file(input_);
   file << "48 39\n";
   file << "0 1 1 0 0 0 0 1 1 1 1 0 0 0 0 1 1 0 0 1 1 1 1 0 1 1 0 1 0 1 1 1 0 1 "
@@ -32902,7 +32902,7 @@ TEST_F(FileSaverTest, SaveToFile48x39Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x40Test) {
+TEST_F(SaverTest, SaveToFile48x40Test) {
   std::ofstream file(input_);
   file << "48 40\n";
   file << "1 1 0 1 1 0 1 1 1 1 1 0 0 1 0 0 1 1 0 0 1 0 0 0 1 1 1 1 1 1 0 1 0 0 "
@@ -33118,7 +33118,7 @@ TEST_F(FileSaverTest, SaveToFile48x40Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x41Test) {
+TEST_F(SaverTest, SaveToFile48x41Test) {
   std::ofstream file(input_);
   file << "48 41\n";
   file << "0 1 1 1 0 0 0 1 0 0 0 1 0 0 0 0 0 1 1 1 1 1 0 1 0 0 1 1 0 1 0 1 1 1 "
@@ -33334,7 +33334,7 @@ TEST_F(FileSaverTest, SaveToFile48x41Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x42Test) {
+TEST_F(SaverTest, SaveToFile48x42Test) {
   std::ofstream file(input_);
   file << "48 42\n";
   file << "0 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 1 0 0 0 0 1 1 0 0 0 1 0 1 0 0 1 0 0 "
@@ -33550,7 +33550,7 @@ TEST_F(FileSaverTest, SaveToFile48x42Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x43Test) {
+TEST_F(SaverTest, SaveToFile48x43Test) {
   std::ofstream file(input_);
   file << "48 43\n";
   file << "0 1 1 0 0 0 0 1 1 0 1 0 1 0 1 0 1 0 0 0 1 0 0 1 1 1 1 1 0 0 0 1 1 0 "
@@ -33766,7 +33766,7 @@ TEST_F(FileSaverTest, SaveToFile48x43Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x44Test) {
+TEST_F(SaverTest, SaveToFile48x44Test) {
   std::ofstream file(input_);
   file << "48 44\n";
   file << "1 1 0 0 1 0 1 1 0 0 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 0 1 0 1 0 0 "
@@ -33982,7 +33982,7 @@ TEST_F(FileSaverTest, SaveToFile48x44Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x45Test) {
+TEST_F(SaverTest, SaveToFile48x45Test) {
   std::ofstream file(input_);
   file << "48 45\n";
   file << "1 1 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 1 1 1 1 0 1 1 1 1 0 1 0 1 0 1 0 1 "
@@ -34198,7 +34198,7 @@ TEST_F(FileSaverTest, SaveToFile48x45Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x46Test) {
+TEST_F(SaverTest, SaveToFile48x46Test) {
   std::ofstream file(input_);
   file << "48 46\n";
   file << "0 0 1 0 0 0 1 0 0 1 1 0 0 1 1 1 0 1 1 0 1 0 1 1 0 1 1 0 1 0 1 1 0 0 "
@@ -34414,7 +34414,7 @@ TEST_F(FileSaverTest, SaveToFile48x46Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x47Test) {
+TEST_F(SaverTest, SaveToFile48x47Test) {
   std::ofstream file(input_);
   file << "48 47\n";
   file << "0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 0 1 1 0 1 1 0 0 0 1 0 0 1 0 0 1 0 0 "
@@ -34630,7 +34630,7 @@ TEST_F(FileSaverTest, SaveToFile48x47Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x48Test) {
+TEST_F(SaverTest, SaveToFile48x48Test) {
   std::ofstream file(input_);
   file << "48 48\n";
   file << "0 1 0 0 0 1 1 1 0 0 0 0 1 0 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 "
@@ -34846,7 +34846,7 @@ TEST_F(FileSaverTest, SaveToFile48x48Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x49Test) {
+TEST_F(SaverTest, SaveToFile48x49Test) {
   std::ofstream file(input_);
   file << "48 49\n";
   file << "1 0 1 1 0 1 0 1 0 0 1 0 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 0 1 1 1 0 1 "
@@ -35062,7 +35062,7 @@ TEST_F(FileSaverTest, SaveToFile48x49Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile48x50Test) {
+TEST_F(SaverTest, SaveToFile48x50Test) {
   std::ofstream file(input_);
   file << "48 50\n";
   file << "1 0 1 0 1 0 0 0 1 0 0 0 1 1 1 0 0 1 1 1 0 1 1 1 0 1 1 0 1 1 1 0 0 1 "
@@ -35278,7 +35278,7 @@ TEST_F(FileSaverTest, SaveToFile48x50Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x30Test) {
+TEST_F(SaverTest, SaveToFile49x30Test) {
   std::ofstream file(input_);
   file << "49 30\n";
   file << "0 0 0 1 0 1 1 0 1 1 0 1 0 0 0 1 0 1 0 0 0 1 0 1 1 0 1 1 1 1\n";
@@ -35400,7 +35400,7 @@ TEST_F(FileSaverTest, SaveToFile49x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x31Test) {
+TEST_F(SaverTest, SaveToFile49x31Test) {
   std::ofstream file(input_);
   file << "49 31\n";
   file << "1 0 0 1 1 1 0 1 1 0 0 0 0 1 1 1 1 0 0 1 0 1 1 0 0 1 1 0 1 1 1\n";
@@ -35522,7 +35522,7 @@ TEST_F(FileSaverTest, SaveToFile49x31Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x32Test) {
+TEST_F(SaverTest, SaveToFile49x32Test) {
   std::ofstream file(input_);
   file << "49 32\n";
   file << "0 0 0 0 1 0 1 1 1 0 0 0 0 1 1 1 0 0 0 1 1 1 1 1 1 0 1 0 0 1 1 1\n";
@@ -35644,7 +35644,7 @@ TEST_F(FileSaverTest, SaveToFile49x32Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x33Test) {
+TEST_F(SaverTest, SaveToFile49x33Test) {
   std::ofstream file(input_);
   file << "49 33\n";
   file << "0 0 0 0 1 1 0 0 1 1 0 0 0 0 1 1 1 0 0 0 1 1 0 1 0 1 1 1 1 1 0 1 1\n";
@@ -35767,7 +35767,7 @@ TEST_F(FileSaverTest, SaveToFile49x33Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x34Test) {
+TEST_F(SaverTest, SaveToFile49x34Test) {
   std::ofstream file(input_);
   file << "49 34\n";
   file << "1 1 1 0 0 0 0 1 0 1 1 0 1 1 1 0 1 1 0 0 0 0 0 0 0 1 0 0 1 1 1 1 0 "
@@ -35987,7 +35987,7 @@ TEST_F(FileSaverTest, SaveToFile49x34Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x35Test) {
+TEST_F(SaverTest, SaveToFile49x35Test) {
   std::ofstream file(input_);
   file << "49 35\n";
   file << "1 0 1 1 1 1 1 1 1 1 0 1 1 1 0 1 0 0 1 0 1 0 1 0 0 0 1 0 1 0 1 1 0 1 "
@@ -36207,7 +36207,7 @@ TEST_F(FileSaverTest, SaveToFile49x35Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x36Test) {
+TEST_F(SaverTest, SaveToFile49x36Test) {
   std::ofstream file(input_);
   file << "49 36\n";
   file << "1 1 0 1 1 0 0 1 0 1 1 0 1 1 1 0 0 1 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 "
@@ -36427,7 +36427,7 @@ TEST_F(FileSaverTest, SaveToFile49x36Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x37Test) {
+TEST_F(SaverTest, SaveToFile49x37Test) {
   std::ofstream file(input_);
   file << "49 37\n";
   file << "0 0 1 0 1 1 0 0 1 1 0 1 1 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 "
@@ -36647,7 +36647,7 @@ TEST_F(FileSaverTest, SaveToFile49x37Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x38Test) {
+TEST_F(SaverTest, SaveToFile49x38Test) {
   std::ofstream file(input_);
   file << "49 38\n";
   file << "1 1 1 0 1 0 0 1 1 1 0 1 0 1 0 1 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1 1 0 "
@@ -36867,7 +36867,7 @@ TEST_F(FileSaverTest, SaveToFile49x38Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x39Test) {
+TEST_F(SaverTest, SaveToFile49x39Test) {
   std::ofstream file(input_);
   file << "49 39\n";
   file << "1 1 1 0 1 0 1 1 0 0 0 0 1 1 0 0 0 0 1 0 1 1 0 1 1 1 0 0 0 0 1 0 0 1 "
@@ -37087,7 +37087,7 @@ TEST_F(FileSaverTest, SaveToFile49x39Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x40Test) {
+TEST_F(SaverTest, SaveToFile49x40Test) {
   std::ofstream file(input_);
   file << "49 40\n";
   file << "1 1 1 0 1 0 1 0 1 1 1 1 1 0 0 0 1 0 0 1 1 0 0 1 1 0 1 1 0 0 0 0 1 0 "
@@ -37307,7 +37307,7 @@ TEST_F(FileSaverTest, SaveToFile49x40Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x41Test) {
+TEST_F(SaverTest, SaveToFile49x41Test) {
   std::ofstream file(input_);
   file << "49 41\n";
   file << "1 0 0 1 1 0 1 1 0 1 0 0 1 1 1 1 1 0 1 0 1 1 0 0 1 1 0 0 1 0 1 0 1 1 "
@@ -37527,7 +37527,7 @@ TEST_F(FileSaverTest, SaveToFile49x41Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x42Test) {
+TEST_F(SaverTest, SaveToFile49x42Test) {
   std::ofstream file(input_);
   file << "49 42\n";
   file << "1 1 1 1 0 0 1 0 1 1 0 0 0 0 0 1 0 1 0 1 0 1 0 0 0 0 1 1 0 1 1 0 1 0 "
@@ -37747,7 +37747,7 @@ TEST_F(FileSaverTest, SaveToFile49x42Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x43Test) {
+TEST_F(SaverTest, SaveToFile49x43Test) {
   std::ofstream file(input_);
   file << "49 43\n";
   file << "0 0 0 0 0 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 0 "
@@ -37967,7 +37967,7 @@ TEST_F(FileSaverTest, SaveToFile49x43Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x44Test) {
+TEST_F(SaverTest, SaveToFile49x44Test) {
   std::ofstream file(input_);
   file << "49 44\n";
   file << "0 0 0 1 1 1 1 0 1 1 1 0 0 1 0 0 1 1 1 0 1 0 1 0 1 1 1 0 0 1 0 0 1 1 "
@@ -38187,7 +38187,7 @@ TEST_F(FileSaverTest, SaveToFile49x44Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x45Test) {
+TEST_F(SaverTest, SaveToFile49x45Test) {
   std::ofstream file(input_);
   file << "49 45\n";
   file << "0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 0 1 0 1 0 0 0 1 1 1 1 0 1 0 1 1 0 "
@@ -38407,7 +38407,7 @@ TEST_F(FileSaverTest, SaveToFile49x45Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x46Test) {
+TEST_F(SaverTest, SaveToFile49x46Test) {
   std::ofstream file(input_);
   file << "49 46\n";
   file << "1 1 0 1 1 0 0 0 1 0 1 0 1 0 0 1 1 0 0 0 1 0 0 1 0 1 0 1 0 0 1 0 0 1 "
@@ -38627,7 +38627,7 @@ TEST_F(FileSaverTest, SaveToFile49x46Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x47Test) {
+TEST_F(SaverTest, SaveToFile49x47Test) {
   std::ofstream file(input_);
   file << "49 47\n";
   file << "0 0 0 1 1 1 1 1 0 1 0 0 1 0 0 1 1 0 1 0 1 0 0 1 1 0 0 1 0 1 1 0 0 1 "
@@ -38847,7 +38847,7 @@ TEST_F(FileSaverTest, SaveToFile49x47Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x48Test) {
+TEST_F(SaverTest, SaveToFile49x48Test) {
   std::ofstream file(input_);
   file << "49 48\n";
   file << "1 0 0 1 1 0 1 0 0 0 0 1 0 0 1 1 0 1 1 1 0 0 1 1 1 0 1 1 0 0 1 1 0 1 "
@@ -39067,7 +39067,7 @@ TEST_F(FileSaverTest, SaveToFile49x48Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x49Test) {
+TEST_F(SaverTest, SaveToFile49x49Test) {
   std::ofstream file(input_);
   file << "49 49\n";
   file << "0 0 1 0 0 0 1 1 0 1 1 1 1 1 0 0 0 0 1 1 1 0 0 1 1 1 0 0 0 1 0 0 0 0 "
@@ -39287,7 +39287,7 @@ TEST_F(FileSaverTest, SaveToFile49x49Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile49x50Test) {
+TEST_F(SaverTest, SaveToFile49x50Test) {
   std::ofstream file(input_);
   file << "49 50\n";
   file << "0 0 1 0 1 1 0 1 1 1 0 1 0 1 0 0 1 0 1 0 0 0 0 1 1 1 1 1 1 1 0 0 0 1 "
@@ -39507,7 +39507,7 @@ TEST_F(FileSaverTest, SaveToFile49x50Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x30Test) {
+TEST_F(SaverTest, SaveToFile50x30Test) {
   std::ofstream file(input_);
   file << "50 30\n";
   file << "0 0 0 1 1 1 1 1 1 1 0 1 1 0 1 0 0 1 1 0 0 1 0 1 0 1 1 0 1 1\n";
@@ -39631,7 +39631,7 @@ TEST_F(FileSaverTest, SaveToFile50x30Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x31Test) {
+TEST_F(SaverTest, SaveToFile50x31Test) {
   std::ofstream file(input_);
   file << "50 31\n";
   file << "1 0 0 0 1 1 1 1 0 0 1 1 0 1 0 0 1 1 1 0 1 0 1 1 1 0 1 1 0 0 1\n";
@@ -39755,7 +39755,7 @@ TEST_F(FileSaverTest, SaveToFile50x31Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x32Test) {
+TEST_F(SaverTest, SaveToFile50x32Test) {
   std::ofstream file(input_);
   file << "50 32\n";
   file << "1 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 0 0 1 0 0 1 0 1 1 0 0 1\n";
@@ -39879,7 +39879,7 @@ TEST_F(FileSaverTest, SaveToFile50x32Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x33Test) {
+TEST_F(SaverTest, SaveToFile50x33Test) {
   std::ofstream file(input_);
   file << "50 33\n";
   file << "0 1 1 1 1 0 0 0 1 0 0 1 0 0 1 1 0 0 0 1 1 1 1 1 0 1 1 1 1 0 0 1 1\n";
@@ -40004,7 +40004,7 @@ TEST_F(FileSaverTest, SaveToFile50x33Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x34Test) {
+TEST_F(SaverTest, SaveToFile50x34Test) {
   std::ofstream file(input_);
   file << "50 34\n";
   file << "1 1 0 0 1 1 0 1 1 0 0 1 1 0 0 1 0 0 1 1 1 0 0 0 0 0 0 1 1 1 0 0 1 "
@@ -40228,7 +40228,7 @@ TEST_F(FileSaverTest, SaveToFile50x34Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x35Test) {
+TEST_F(SaverTest, SaveToFile50x35Test) {
   std::ofstream file(input_);
   file << "50 35\n";
   file << "0 0 1 0 1 1 0 1 1 1 1 1 1 0 0 1 1 1 1 1 0 1 1 0 0 0 0 0 0 0 0 0 1 0 "
@@ -40452,7 +40452,7 @@ TEST_F(FileSaverTest, SaveToFile50x35Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x36Test) {
+TEST_F(SaverTest, SaveToFile50x36Test) {
   std::ofstream file(input_);
   file << "50 36\n";
   file << "1 0 0 1 0 0 0 0 0 0 1 0 1 1 0 1 0 0 0 1 0 0 1 1 0 1 1 0 0 1 0 1 1 1 "
@@ -40676,7 +40676,7 @@ TEST_F(FileSaverTest, SaveToFile50x36Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x37Test) {
+TEST_F(SaverTest, SaveToFile50x37Test) {
   std::ofstream file(input_);
   file << "50 37\n";
   file << "0 0 1 0 0 0 1 0 1 1 1 0 0 1 0 1 0 1 0 0 1 1 0 0 0 1 1 1 1 1 0 1 1 1 "
@@ -40900,7 +40900,7 @@ TEST_F(FileSaverTest, SaveToFile50x37Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x38Test) {
+TEST_F(SaverTest, SaveToFile50x38Test) {
   std::ofstream file(input_);
   file << "50 38\n";
   file << "1 0 1 1 0 0 1 1 0 1 1 0 0 1 0 1 1 0 1 0 0 1 0 0 0 0 0 1 1 1 1 0 0 0 "
@@ -41124,7 +41124,7 @@ TEST_F(FileSaverTest, SaveToFile50x38Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x39Test) {
+TEST_F(SaverTest, SaveToFile50x39Test) {
   std::ofstream file(input_);
   file << "50 39\n";
   file << "1 1 0 0 0 0 1 0 0 0 0 1 1 1 1 1 0 1 1 0 0 1 0 0 1 0 0 0 0 0 0 1 1 1 "
@@ -41348,7 +41348,7 @@ TEST_F(FileSaverTest, SaveToFile50x39Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x40Test) {
+TEST_F(SaverTest, SaveToFile50x40Test) {
   std::ofstream file(input_);
   file << "50 40\n";
   file << "1 0 0 0 0 1 0 0 1 0 0 0 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 "
@@ -41572,7 +41572,7 @@ TEST_F(FileSaverTest, SaveToFile50x40Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x41Test) {
+TEST_F(SaverTest, SaveToFile50x41Test) {
   std::ofstream file(input_);
   file << "50 41\n";
   file << "1 0 1 1 0 0 0 1 0 1 1 1 0 0 0 1 0 0 1 0 1 1 1 0 0 1 1 1 1 1 1 1 1 1 "
@@ -41796,7 +41796,7 @@ TEST_F(FileSaverTest, SaveToFile50x41Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x42Test) {
+TEST_F(SaverTest, SaveToFile50x42Test) {
   std::ofstream file(input_);
   file << "50 42\n";
   file << "0 1 1 1 1 1 0 1 1 1 1 1 0 0 1 0 0 1 0 1 0 1 0 0 0 0 1 1 1 0 0 0 0 0 "
@@ -42020,7 +42020,7 @@ TEST_F(FileSaverTest, SaveToFile50x42Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x43Test) {
+TEST_F(SaverTest, SaveToFile50x43Test) {
   std::ofstream file(input_);
   file << "50 43\n";
   file << "0 0 0 1 0 1 1 0 0 0 0 1 1 1 0 1 0 0 0 1 1 0 0 0 1 0 0 0 1 1 1 1 1 0 "
@@ -42244,7 +42244,7 @@ TEST_F(FileSaverTest, SaveToFile50x43Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x44Test) {
+TEST_F(SaverTest, SaveToFile50x44Test) {
   std::ofstream file(input_);
   file << "50 44\n";
   file << "0 0 0 0 1 1 1 0 1 1 0 0 1 1 1 1 1 0 0 1 0 0 0 1 0 1 1 1 0 0 0 0 1 0 "
@@ -42468,7 +42468,7 @@ TEST_F(FileSaverTest, SaveToFile50x44Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x45Test) {
+TEST_F(SaverTest, SaveToFile50x45Test) {
   std::ofstream file(input_);
   file << "50 45\n";
   file << "1 1 1 0 0 1 0 1 1 0 0 1 0 0 1 1 0 1 0 1 1 1 0 0 0 0 1 0 0 0 0 1 1 0 "
@@ -42692,7 +42692,7 @@ TEST_F(FileSaverTest, SaveToFile50x45Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x46Test) {
+TEST_F(SaverTest, SaveToFile50x46Test) {
   std::ofstream file(input_);
   file << "50 46\n";
   file << "0 1 1 1 1 1 1 1 1 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 0 1 0 0 1 0 1 0 "
@@ -42916,7 +42916,7 @@ TEST_F(FileSaverTest, SaveToFile50x46Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x47Test) {
+TEST_F(SaverTest, SaveToFile50x47Test) {
   std::ofstream file(input_);
   file << "50 47\n";
   file << "0 1 0 0 1 1 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 1 0 1 0 0 0 0 1 1 0 0 1 1 "
@@ -43140,7 +43140,7 @@ TEST_F(FileSaverTest, SaveToFile50x47Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x48Test) {
+TEST_F(SaverTest, SaveToFile50x48Test) {
   std::ofstream file(input_);
   file << "50 48\n";
   file << "1 0 1 1 1 0 0 1 0 0 0 0 1 0 1 0 1 1 0 0 1 1 0 0 0 0 0 1 0 0 1 0 0 0 "
@@ -43364,7 +43364,7 @@ TEST_F(FileSaverTest, SaveToFile50x48Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x49Test) {
+TEST_F(SaverTest, SaveToFile50x49Test) {
   std::ofstream file(input_);
   file << "50 49\n";
   file << "0 1 1 0 1 1 0 1 0 0 0 0 1 0 0 1 1 0 1 1 0 0 0 1 0 0 0 1 0 1 1 1 1 1 "
@@ -43588,7 +43588,7 @@ TEST_F(FileSaverTest, SaveToFile50x49Test) {
   std::remove(output_.c_str());
 }
 
-TEST_F(FileSaverTest, SaveToFile50x50Test) {
+TEST_F(SaverTest, SaveToFile50x50Test) {
   std::ofstream file(input_);
   file << "50 50\n";
   file << "1 1 1 1 0 1 1 1 1 0 1 0 1 1 0 1 1 1 1 1 0 0 1 1 0 0 0 0 0 0 1 0 1 1 "

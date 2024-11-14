@@ -1,7 +1,7 @@
 /**
- * @file maze_generator.h
+ * @file generator.h
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
- * @brief Header file for the MazeGenerator class
+ * @brief Header file for the Generator class
  * @version 1.0
  * @date 2024-11-04
  *
@@ -9,8 +9,8 @@
  *
  */
 
-#ifndef SRC_INCLUDE_MODEL_MAZE_GENERATOR_H_
-#define SRC_INCLUDE_MODEL_MAZE_GENERATOR_H_
+#ifndef SRC_INCLUDE_MODEL_GENERATOR_H_
+#define SRC_INCLUDE_MODEL_GENERATOR_H_
 
 #include <vector>
 
@@ -18,13 +18,13 @@
 
 namespace s21 {
 
-class MazeGenerator {
+class Generator {
  public:
   using Vector = std::vector<int>;
   using WallVector = std::vector<bool>;
   using WallMatrix = std::vector<WallVector>;
 
-  explicit MazeGenerator(Maze* maze);
+  explicit Generator(Maze* maze);
   void generate();
 
  private:
@@ -48,4 +48,4 @@ class MazeGenerator {
 };
 
 }  // namespace s21
-#endif  // SRC_INCLUDE_MODEL_MAZE_GENERATOR_H_
+#endif  // SRC_INCLUDE_MODEL_GENERATOR_H_

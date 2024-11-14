@@ -36,10 +36,10 @@ set(TEST_HEADERS
 )
 
 set(TEST_SOURCES
-  ${TEST_SOURCE_DIR}/maze_load_test.cc
-  ${TEST_SOURCE_DIR}/maze_save_test.cc
-  ${TEST_SOURCE_DIR}/maze_generator_test.cc
-  ${TEST_SOURCE_DIR}/maze_solver_test.cc
+  ${TEST_SOURCE_DIR}/load_test.cc
+  ${TEST_SOURCE_DIR}/save_test.cc
+  ${TEST_SOURCE_DIR}/generator_test.cc
+  ${TEST_SOURCE_DIR}/solver_test.cc
 )
 
 find_package(GTest REQUIRED)

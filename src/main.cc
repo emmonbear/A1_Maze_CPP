@@ -11,11 +11,11 @@
 
 #include <QApplication>
 
-#include "include/view/maze_tab.h"
+#include "include/view/main_window.h"
 
 int main(int argc, char *argv[]) {
   QApplication app(argc, argv);
-  s21::MazeTab w;
+  s21::MainWindow w;
   w.show();
 
   return app.exec();

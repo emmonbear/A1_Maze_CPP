@@ -42,9 +42,9 @@ class Maze {
   WallMatrix h_walls_{};
   Path path_{};
 
-  friend class MazeGenerator;
+  friend class Generator;
   friend class FileHandler;
-  friend class MazeSolver;
+  friend class Solver;
 };
 }  // namespace s21
 

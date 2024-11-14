@@ -1,7 +1,7 @@
 /**
- * @file maze_solver.h
+ * @file solver.h
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
- * @brief Header file for the MazeSolver class
+ * @brief Header file for the Solver class
  * @version 1.0
  * @date 2024-11-05
  *
@@ -9,8 +9,8 @@
  *
  */
 
-#ifndef SRC_INCLUDE_MODEL_MAZE_SOLVER_H_
-#define SRC_INCLUDE_MODEL_MAZE_SOLVER_H_
+#ifndef SRC_INCLUDE_MODEL_SOLVER_H_
+#define SRC_INCLUDE_MODEL_SOLVER_H_
 
 #include <array>
 #include <unordered_map>
@@ -19,9 +19,9 @@
 
 #include "include/model/maze.h"
 namespace s21 {
-class MazeSolver {
+class Solver {
  public:
-  MazeSolver(Maze* maze, Maze::Point start, Maze::Point end);
+  Solver(Maze* maze, Maze::Point start, Maze::Point end);
   void solve();
 
  private:
@@ -43,4 +43,4 @@ class MazeSolver {
 };
 }  // namespace s21
 
-#endif  // SRC_INCLUDE_MODEL_MAZE_SOLVER_H_
+#endif  // SRC_INCLUDE_MODEL_SOLVER_H_

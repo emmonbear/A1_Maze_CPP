@@ -1,7 +1,7 @@
 /**
- * @file maze_solver_test.cc
+ * @file solver_test.cc
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
- * @brief
+ * @brief Implementation file for the Solver class tests
  * @version 1.0
  * @date 2024-11-13
  *
@@ -17,7 +17,7 @@
 
 namespace Test {
 
-class FileSolverTest : public ::testing::Test {
+class SolverTest : public ::testing::Test {
  protected:
   void SetUp() override {
     std::ofstream file{filename_};
@@ -328,11 +328,11 @@ class FileSolverTest : public ::testing::Test {
 
   void TearDown() override { std::remove(filename_.c_str()); }
 
-  s21::MazeFacade facade_;
+  s21::Facade facade_;
   std::string filename_ = "test_maze.txt";
 };
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To0_0) {
+TEST_F(SolverTest, SolveMazeFrom0_0To0_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {0, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -341,7 +341,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To0_0) {
   EXPECT_EQ(path[0].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To0_1) {
+TEST_F(SolverTest, SolveMazeFrom0_0To0_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {0, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -352,7 +352,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To0_1) {
   EXPECT_EQ(path[1].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To0_2) {
+TEST_F(SolverTest, SolveMazeFrom0_0To0_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {0, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -389,7 +389,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To0_2) {
   EXPECT_EQ(path[14].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To0_3) {
+TEST_F(SolverTest, SolveMazeFrom0_0To0_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {0, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -424,7 +424,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To0_3) {
   EXPECT_EQ(path[13].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To0_4) {
+TEST_F(SolverTest, SolveMazeFrom0_0To0_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {0, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -457,7 +457,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To0_4) {
   EXPECT_EQ(path[12].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To0_5) {
+TEST_F(SolverTest, SolveMazeFrom0_0To0_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {0, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -492,7 +492,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To0_5) {
   EXPECT_EQ(path[13].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To0_6) {
+TEST_F(SolverTest, SolveMazeFrom0_0To0_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {0, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -529,7 +529,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To0_6) {
   EXPECT_EQ(path[14].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To0_7) {
+TEST_F(SolverTest, SolveMazeFrom0_0To0_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {0, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -568,7 +568,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To0_7) {
   EXPECT_EQ(path[15].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To0_8) {
+TEST_F(SolverTest, SolveMazeFrom0_0To0_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {0, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -613,7 +613,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To0_8) {
   EXPECT_EQ(path[18].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To0_9) {
+TEST_F(SolverTest, SolveMazeFrom0_0To0_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {0, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -660,7 +660,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To0_9) {
   EXPECT_EQ(path[19].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To1_0) {
+TEST_F(SolverTest, SolveMazeFrom0_0To1_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {1, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -671,7 +671,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To1_0) {
   EXPECT_EQ(path[1].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To1_1) {
+TEST_F(SolverTest, SolveMazeFrom0_0To1_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {1, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -684,7 +684,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To1_1) {
   EXPECT_EQ(path[2].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To1_2) {
+TEST_F(SolverTest, SolveMazeFrom0_0To1_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {1, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -723,7 +723,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To1_2) {
   EXPECT_EQ(path[15].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To1_3) {
+TEST_F(SolverTest, SolveMazeFrom0_0To1_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {1, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -760,7 +760,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To1_3) {
   EXPECT_EQ(path[14].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To1_4) {
+TEST_F(SolverTest, SolveMazeFrom0_0To1_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {1, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -791,7 +791,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To1_4) {
   EXPECT_EQ(path[11].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To1_5) {
+TEST_F(SolverTest, SolveMazeFrom0_0To1_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {1, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -824,7 +824,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To1_5) {
   EXPECT_EQ(path[12].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To1_6) {
+TEST_F(SolverTest, SolveMazeFrom0_0To1_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {1, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -867,7 +867,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To1_6) {
   EXPECT_EQ(path[17].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To1_7) {
+TEST_F(SolverTest, SolveMazeFrom0_0To1_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {1, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -908,7 +908,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To1_7) {
   EXPECT_EQ(path[16].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To1_8) {
+TEST_F(SolverTest, SolveMazeFrom0_0To1_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {1, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -951,7 +951,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To1_8) {
   EXPECT_EQ(path[17].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To1_9) {
+TEST_F(SolverTest, SolveMazeFrom0_0To1_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {1, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -996,7 +996,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To1_9) {
   EXPECT_EQ(path[18].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To2_0) {
+TEST_F(SolverTest, SolveMazeFrom0_0To2_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {2, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -1009,7 +1009,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To2_0) {
   EXPECT_EQ(path[2].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To2_1) {
+TEST_F(SolverTest, SolveMazeFrom0_0To2_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {2, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -1036,7 +1036,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To2_1) {
   EXPECT_EQ(path[9].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To2_2) {
+TEST_F(SolverTest, SolveMazeFrom0_0To2_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {2, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -1061,7 +1061,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To2_2) {
   EXPECT_EQ(path[8].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To2_3) {
+TEST_F(SolverTest, SolveMazeFrom0_0To2_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {2, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -1088,7 +1088,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To2_3) {
   EXPECT_EQ(path[9].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To2_4) {
+TEST_F(SolverTest, SolveMazeFrom0_0To2_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {2, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -1117,7 +1117,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To2_4) {
   EXPECT_EQ(path[10].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To2_5) {
+TEST_F(SolverTest, SolveMazeFrom0_0To2_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {2, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -1148,7 +1148,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To2_5) {
   EXPECT_EQ(path[11].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To2_6) {
+TEST_F(SolverTest, SolveMazeFrom0_0To2_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {2, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -1185,7 +1185,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To2_6) {
   EXPECT_EQ(path[14].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To2_7) {
+TEST_F(SolverTest, SolveMazeFrom0_0To2_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {2, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -1224,7 +1224,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To2_7) {
   EXPECT_EQ(path[15].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To2_8) {
+TEST_F(SolverTest, SolveMazeFrom0_0To2_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {2, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -1265,7 +1265,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To2_8) {
   EXPECT_EQ(path[16].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To2_9) {
+TEST_F(SolverTest, SolveMazeFrom0_0To2_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {2, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -1312,7 +1312,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To2_9) {
   EXPECT_EQ(path[19].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To3_0) {
+TEST_F(SolverTest, SolveMazeFrom0_0To3_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {3, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -1327,7 +1327,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To3_0) {
   EXPECT_EQ(path[3].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To3_1) {
+TEST_F(SolverTest, SolveMazeFrom0_0To3_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {3, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -1348,7 +1348,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To3_1) {
   EXPECT_EQ(path[6].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To3_2) {
+TEST_F(SolverTest, SolveMazeFrom0_0To3_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {3, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -1371,7 +1371,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To3_2) {
   EXPECT_EQ(path[7].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To3_3) {
+TEST_F(SolverTest, SolveMazeFrom0_0To3_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {3, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -1396,7 +1396,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To3_3) {
   EXPECT_EQ(path[8].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To3_4) {
+TEST_F(SolverTest, SolveMazeFrom0_0To3_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {3, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -1423,7 +1423,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To3_4) {
   EXPECT_EQ(path[9].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To3_5) {
+TEST_F(SolverTest, SolveMazeFrom0_0To3_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {3, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -1456,7 +1456,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To3_5) {
   EXPECT_EQ(path[12].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To3_6) {
+TEST_F(SolverTest, SolveMazeFrom0_0To3_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {3, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -1491,7 +1491,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To3_6) {
   EXPECT_EQ(path[13].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To3_7) {
+TEST_F(SolverTest, SolveMazeFrom0_0To3_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {3, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -1528,7 +1528,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To3_7) {
   EXPECT_EQ(path[14].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To3_8) {
+TEST_F(SolverTest, SolveMazeFrom0_0To3_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {3, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -1567,7 +1567,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To3_8) {
   EXPECT_EQ(path[15].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To3_9) {
+TEST_F(SolverTest, SolveMazeFrom0_0To3_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {3, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -1912,7 +1912,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To3_9) {
   EXPECT_EQ(path[168].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To4_0) {
+TEST_F(SolverTest, SolveMazeFrom0_0To4_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {4, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -1929,7 +1929,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To4_0) {
   EXPECT_EQ(path[4].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To4_1) {
+TEST_F(SolverTest, SolveMazeFrom0_0To4_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {4, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -1948,7 +1948,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To4_1) {
   EXPECT_EQ(path[5].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To4_2) {
+TEST_F(SolverTest, SolveMazeFrom0_0To4_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {4, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -1969,7 +1969,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To4_2) {
   EXPECT_EQ(path[6].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To4_3) {
+TEST_F(SolverTest, SolveMazeFrom0_0To4_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {4, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -1992,7 +1992,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To4_3) {
   EXPECT_EQ(path[7].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To4_4) {
+TEST_F(SolverTest, SolveMazeFrom0_0To4_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {4, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -2021,7 +2021,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To4_4) {
   EXPECT_EQ(path[10].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To4_5) {
+TEST_F(SolverTest, SolveMazeFrom0_0To4_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {4, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -2056,7 +2056,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To4_5) {
   EXPECT_EQ(path[13].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To4_6) {
+TEST_F(SolverTest, SolveMazeFrom0_0To4_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {4, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -2101,7 +2101,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To4_6) {
   EXPECT_EQ(path[18].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To4_7) {
+TEST_F(SolverTest, SolveMazeFrom0_0To4_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {4, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -2144,7 +2144,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To4_7) {
   EXPECT_EQ(path[17].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To4_8) {
+TEST_F(SolverTest, SolveMazeFrom0_0To4_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {4, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -2185,7 +2185,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To4_8) {
   EXPECT_EQ(path[16].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To4_9) {
+TEST_F(SolverTest, SolveMazeFrom0_0To4_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {4, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -2524,7 +2524,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To4_9) {
   EXPECT_EQ(path[165].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To5_0) {
+TEST_F(SolverTest, SolveMazeFrom0_0To5_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {5, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -2543,7 +2543,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To5_0) {
   EXPECT_EQ(path[5].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To5_1) {
+TEST_F(SolverTest, SolveMazeFrom0_0To5_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {5, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -2564,7 +2564,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To5_1) {
   EXPECT_EQ(path[6].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To5_2) {
+TEST_F(SolverTest, SolveMazeFrom0_0To5_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {5, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -2587,7 +2587,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To5_2) {
   EXPECT_EQ(path[7].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To5_3) {
+TEST_F(SolverTest, SolveMazeFrom0_0To5_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {5, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -2612,7 +2612,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To5_3) {
   EXPECT_EQ(path[8].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To5_4) {
+TEST_F(SolverTest, SolveMazeFrom0_0To5_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {5, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -2651,7 +2651,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To5_4) {
   EXPECT_EQ(path[15].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To5_5) {
+TEST_F(SolverTest, SolveMazeFrom0_0To5_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {5, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -2688,7 +2688,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To5_5) {
   EXPECT_EQ(path[14].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To5_6) {
+TEST_F(SolverTest, SolveMazeFrom0_0To5_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {5, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -2727,7 +2727,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To5_6) {
   EXPECT_EQ(path[15].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To5_7) {
+TEST_F(SolverTest, SolveMazeFrom0_0To5_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {5, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -2768,7 +2768,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To5_7) {
   EXPECT_EQ(path[16].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To5_8) {
+TEST_F(SolverTest, SolveMazeFrom0_0To5_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {5, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -2811,7 +2811,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To5_8) {
   EXPECT_EQ(path[17].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To5_9) {
+TEST_F(SolverTest, SolveMazeFrom0_0To5_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {5, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -3148,7 +3148,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To5_9) {
   EXPECT_EQ(path[164].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To6_0) {
+TEST_F(SolverTest, SolveMazeFrom0_0To6_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {6, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -3169,7 +3169,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To6_0) {
   EXPECT_EQ(path[6].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To6_1) {
+TEST_F(SolverTest, SolveMazeFrom0_0To6_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {6, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -3192,7 +3192,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To6_1) {
   EXPECT_EQ(path[7].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To6_2) {
+TEST_F(SolverTest, SolveMazeFrom0_0To6_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {6, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -3217,7 +3217,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To6_2) {
   EXPECT_EQ(path[8].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To6_3) {
+TEST_F(SolverTest, SolveMazeFrom0_0To6_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {6, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -3244,7 +3244,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To6_3) {
   EXPECT_EQ(path[9].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To6_4) {
+TEST_F(SolverTest, SolveMazeFrom0_0To6_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {6, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -3285,7 +3285,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To6_4) {
   EXPECT_EQ(path[16].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To6_5) {
+TEST_F(SolverTest, SolveMazeFrom0_0To6_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {6, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -3324,7 +3324,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To6_5) {
   EXPECT_EQ(path[15].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To6_6) {
+TEST_F(SolverTest, SolveMazeFrom0_0To6_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {6, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -3365,7 +3365,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To6_6) {
   EXPECT_EQ(path[16].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To6_7) {
+TEST_F(SolverTest, SolveMazeFrom0_0To6_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {6, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -3408,7 +3408,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To6_7) {
   EXPECT_EQ(path[17].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To6_8) {
+TEST_F(SolverTest, SolveMazeFrom0_0To6_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {6, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -3453,7 +3453,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To6_8) {
   EXPECT_EQ(path[18].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To6_9) {
+TEST_F(SolverTest, SolveMazeFrom0_0To6_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {6, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -3788,7 +3788,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To6_9) {
   EXPECT_EQ(path[163].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To7_0) {
+TEST_F(SolverTest, SolveMazeFrom0_0To7_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {7, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -3811,7 +3811,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To7_0) {
   EXPECT_EQ(path[7].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To7_1) {
+TEST_F(SolverTest, SolveMazeFrom0_0To7_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {7, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -3840,7 +3840,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To7_1) {
   EXPECT_EQ(path[10].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To7_2) {
+TEST_F(SolverTest, SolveMazeFrom0_0To7_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {7, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -3867,7 +3867,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To7_2) {
   EXPECT_EQ(path[9].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To7_3) {
+TEST_F(SolverTest, SolveMazeFrom0_0To7_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {7, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -3924,7 +3924,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To7_3) {
   EXPECT_EQ(path[24].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To7_4) {
+TEST_F(SolverTest, SolveMazeFrom0_0To7_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {7, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -3979,7 +3979,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To7_4) {
   EXPECT_EQ(path[23].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To7_5) {
+TEST_F(SolverTest, SolveMazeFrom0_0To7_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {7, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -4028,7 +4028,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To7_5) {
   EXPECT_EQ(path[20].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To7_6) {
+TEST_F(SolverTest, SolveMazeFrom0_0To7_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {7, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -4075,7 +4075,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To7_6) {
   EXPECT_EQ(path[19].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To7_7) {
+TEST_F(SolverTest, SolveMazeFrom0_0To7_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {7, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -4120,7 +4120,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To7_7) {
   EXPECT_EQ(path[18].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To7_8) {
+TEST_F(SolverTest, SolveMazeFrom0_0To7_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {7, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -4167,7 +4167,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To7_8) {
   EXPECT_EQ(path[19].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To7_9) {
+TEST_F(SolverTest, SolveMazeFrom0_0To7_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {7, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -4504,7 +4504,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To7_9) {
   EXPECT_EQ(path[164].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To8_0) {
+TEST_F(SolverTest, SolveMazeFrom0_0To8_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {8, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -4541,7 +4541,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To8_0) {
   EXPECT_EQ(path[14].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To8_1) {
+TEST_F(SolverTest, SolveMazeFrom0_0To8_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {8, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -4572,7 +4572,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To8_1) {
   EXPECT_EQ(path[11].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To8_2) {
+TEST_F(SolverTest, SolveMazeFrom0_0To8_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {8, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -4633,7 +4633,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To8_2) {
   EXPECT_EQ(path[26].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To8_3) {
+TEST_F(SolverTest, SolveMazeFrom0_0To8_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {8, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -4692,7 +4692,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To8_3) {
   EXPECT_EQ(path[25].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To8_4) {
+TEST_F(SolverTest, SolveMazeFrom0_0To8_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {8, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -4745,7 +4745,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To8_4) {
   EXPECT_EQ(path[22].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To8_5) {
+TEST_F(SolverTest, SolveMazeFrom0_0To8_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {8, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -4796,7 +4796,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To8_5) {
   EXPECT_EQ(path[21].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To8_6) {
+TEST_F(SolverTest, SolveMazeFrom0_0To8_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {8, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -4873,7 +4873,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To8_6) {
   EXPECT_EQ(path[34].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To8_7) {
+TEST_F(SolverTest, SolveMazeFrom0_0To8_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {8, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -4952,7 +4952,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To8_7) {
   EXPECT_EQ(path[35].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To8_8) {
+TEST_F(SolverTest, SolveMazeFrom0_0To8_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {8, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -5285,7 +5285,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To8_8) {
   EXPECT_EQ(path[162].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To8_9) {
+TEST_F(SolverTest, SolveMazeFrom0_0To8_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {8, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -5620,7 +5620,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To8_9) {
   EXPECT_EQ(path[163].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To9_0) {
+TEST_F(SolverTest, SolveMazeFrom0_0To9_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {9, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -5655,7 +5655,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To9_0) {
   EXPECT_EQ(path[13].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To9_1) {
+TEST_F(SolverTest, SolveMazeFrom0_0To9_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {9, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -5688,7 +5688,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To9_1) {
   EXPECT_EQ(path[12].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To9_2) {
+TEST_F(SolverTest, SolveMazeFrom0_0To9_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {9, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -5751,7 +5751,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To9_2) {
   EXPECT_EQ(path[27].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To9_3) {
+TEST_F(SolverTest, SolveMazeFrom0_0To9_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {9, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -5796,7 +5796,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To9_3) {
   EXPECT_EQ(path[18].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To9_4) {
+TEST_F(SolverTest, SolveMazeFrom0_0To9_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {9, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -5843,7 +5843,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To9_4) {
   EXPECT_EQ(path[19].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To9_5) {
+TEST_F(SolverTest, SolveMazeFrom0_0To9_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {9, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -5920,7 +5920,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To9_5) {
   EXPECT_EQ(path[34].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To9_6) {
+TEST_F(SolverTest, SolveMazeFrom0_0To9_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {9, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -5995,7 +5995,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To9_6) {
   EXPECT_EQ(path[33].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To9_7) {
+TEST_F(SolverTest, SolveMazeFrom0_0To9_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {9, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -6072,7 +6072,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To9_7) {
   EXPECT_EQ(path[34].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To9_8) {
+TEST_F(SolverTest, SolveMazeFrom0_0To9_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {9, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -6403,7 +6403,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To9_8) {
   EXPECT_EQ(path[161].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_0To9_9) {
+TEST_F(SolverTest, SolveMazeFrom0_0To9_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 0}, {9, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -6736,7 +6736,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_0To9_9) {
   EXPECT_EQ(path[162].second, 0);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To0_0) {
+TEST_F(SolverTest, SolveMazeFrom0_1To0_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {0, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -6747,7 +6747,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To0_0) {
   EXPECT_EQ(path[1].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To0_1) {
+TEST_F(SolverTest, SolveMazeFrom0_1To0_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {0, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -6756,7 +6756,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To0_1) {
   EXPECT_EQ(path[0].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To0_2) {
+TEST_F(SolverTest, SolveMazeFrom0_1To0_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {0, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -6795,7 +6795,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To0_2) {
   EXPECT_EQ(path[15].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To0_3) {
+TEST_F(SolverTest, SolveMazeFrom0_1To0_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {0, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -6832,7 +6832,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To0_3) {
   EXPECT_EQ(path[14].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To0_4) {
+TEST_F(SolverTest, SolveMazeFrom0_1To0_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {0, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -6867,7 +6867,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To0_4) {
   EXPECT_EQ(path[13].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To0_5) {
+TEST_F(SolverTest, SolveMazeFrom0_1To0_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {0, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -6904,7 +6904,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To0_5) {
   EXPECT_EQ(path[14].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To0_6) {
+TEST_F(SolverTest, SolveMazeFrom0_1To0_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {0, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -6943,7 +6943,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To0_6) {
   EXPECT_EQ(path[15].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To0_7) {
+TEST_F(SolverTest, SolveMazeFrom0_1To0_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {0, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -6984,7 +6984,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To0_7) {
   EXPECT_EQ(path[16].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To0_8) {
+TEST_F(SolverTest, SolveMazeFrom0_1To0_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {0, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -7031,7 +7031,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To0_8) {
   EXPECT_EQ(path[19].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To0_9) {
+TEST_F(SolverTest, SolveMazeFrom0_1To0_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {0, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -7080,7 +7080,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To0_9) {
   EXPECT_EQ(path[20].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To1_0) {
+TEST_F(SolverTest, SolveMazeFrom0_1To1_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {1, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -7093,7 +7093,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To1_0) {
   EXPECT_EQ(path[2].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To1_1) {
+TEST_F(SolverTest, SolveMazeFrom0_1To1_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {1, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -7108,7 +7108,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To1_1) {
   EXPECT_EQ(path[3].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To1_2) {
+TEST_F(SolverTest, SolveMazeFrom0_1To1_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {1, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -7149,7 +7149,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To1_2) {
   EXPECT_EQ(path[16].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To1_3) {
+TEST_F(SolverTest, SolveMazeFrom0_1To1_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {1, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -7188,7 +7188,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To1_3) {
   EXPECT_EQ(path[15].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To1_4) {
+TEST_F(SolverTest, SolveMazeFrom0_1To1_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {1, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -7221,7 +7221,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To1_4) {
   EXPECT_EQ(path[12].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To1_5) {
+TEST_F(SolverTest, SolveMazeFrom0_1To1_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {1, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -7256,7 +7256,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To1_5) {
   EXPECT_EQ(path[13].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To1_6) {
+TEST_F(SolverTest, SolveMazeFrom0_1To1_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {1, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -7301,7 +7301,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To1_6) {
   EXPECT_EQ(path[18].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To1_7) {
+TEST_F(SolverTest, SolveMazeFrom0_1To1_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {1, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -7344,7 +7344,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To1_7) {
   EXPECT_EQ(path[17].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To1_8) {
+TEST_F(SolverTest, SolveMazeFrom0_1To1_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {1, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -7389,7 +7389,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To1_8) {
   EXPECT_EQ(path[18].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To1_9) {
+TEST_F(SolverTest, SolveMazeFrom0_1To1_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {1, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -7436,7 +7436,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To1_9) {
   EXPECT_EQ(path[19].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To2_0) {
+TEST_F(SolverTest, SolveMazeFrom0_1To2_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {2, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -7451,7 +7451,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To2_0) {
   EXPECT_EQ(path[3].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To2_1) {
+TEST_F(SolverTest, SolveMazeFrom0_1To2_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {2, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -7480,7 +7480,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To2_1) {
   EXPECT_EQ(path[10].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To2_2) {
+TEST_F(SolverTest, SolveMazeFrom0_1To2_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {2, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -7507,7 +7507,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To2_2) {
   EXPECT_EQ(path[9].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To2_3) {
+TEST_F(SolverTest, SolveMazeFrom0_1To2_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {2, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -7536,7 +7536,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To2_3) {
   EXPECT_EQ(path[10].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To2_4) {
+TEST_F(SolverTest, SolveMazeFrom0_1To2_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {2, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -7567,7 +7567,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To2_4) {
   EXPECT_EQ(path[11].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To2_5) {
+TEST_F(SolverTest, SolveMazeFrom0_1To2_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {2, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -7600,7 +7600,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To2_5) {
   EXPECT_EQ(path[12].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To2_6) {
+TEST_F(SolverTest, SolveMazeFrom0_1To2_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {2, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -7639,7 +7639,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To2_6) {
   EXPECT_EQ(path[15].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To2_7) {
+TEST_F(SolverTest, SolveMazeFrom0_1To2_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {2, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -7680,7 +7680,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To2_7) {
   EXPECT_EQ(path[16].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To2_8) {
+TEST_F(SolverTest, SolveMazeFrom0_1To2_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {2, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -7723,7 +7723,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To2_8) {
   EXPECT_EQ(path[17].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To2_9) {
+TEST_F(SolverTest, SolveMazeFrom0_1To2_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {2, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -7772,7 +7772,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To2_9) {
   EXPECT_EQ(path[20].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To3_0) {
+TEST_F(SolverTest, SolveMazeFrom0_1To3_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {3, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -7789,7 +7789,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To3_0) {
   EXPECT_EQ(path[4].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To3_1) {
+TEST_F(SolverTest, SolveMazeFrom0_1To3_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {3, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -7812,7 +7812,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To3_1) {
   EXPECT_EQ(path[7].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To3_2) {
+TEST_F(SolverTest, SolveMazeFrom0_1To3_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {3, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -7837,7 +7837,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To3_2) {
   EXPECT_EQ(path[8].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To3_3) {
+TEST_F(SolverTest, SolveMazeFrom0_1To3_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {3, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -7864,7 +7864,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To3_3) {
   EXPECT_EQ(path[9].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To3_4) {
+TEST_F(SolverTest, SolveMazeFrom0_1To3_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {3, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -7893,7 +7893,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To3_4) {
   EXPECT_EQ(path[10].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To3_5) {
+TEST_F(SolverTest, SolveMazeFrom0_1To3_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {3, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -7928,7 +7928,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To3_5) {
   EXPECT_EQ(path[13].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To3_6) {
+TEST_F(SolverTest, SolveMazeFrom0_1To3_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {3, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -7965,7 +7965,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To3_6) {
   EXPECT_EQ(path[14].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To3_7) {
+TEST_F(SolverTest, SolveMazeFrom0_1To3_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {3, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -8004,7 +8004,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To3_7) {
   EXPECT_EQ(path[15].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To3_8) {
+TEST_F(SolverTest, SolveMazeFrom0_1To3_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {3, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -8045,7 +8045,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To3_8) {
   EXPECT_EQ(path[16].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To3_9) {
+TEST_F(SolverTest, SolveMazeFrom0_1To3_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {3, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -8392,7 +8392,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To3_9) {
   EXPECT_EQ(path[169].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To4_0) {
+TEST_F(SolverTest, SolveMazeFrom0_1To4_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {4, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -8411,7 +8411,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To4_0) {
   EXPECT_EQ(path[5].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To4_1) {
+TEST_F(SolverTest, SolveMazeFrom0_1To4_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {4, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -8432,7 +8432,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To4_1) {
   EXPECT_EQ(path[6].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To4_2) {
+TEST_F(SolverTest, SolveMazeFrom0_1To4_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {4, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -8455,7 +8455,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To4_2) {
   EXPECT_EQ(path[7].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To4_3) {
+TEST_F(SolverTest, SolveMazeFrom0_1To4_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {4, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -8480,7 +8480,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To4_3) {
   EXPECT_EQ(path[8].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To4_4) {
+TEST_F(SolverTest, SolveMazeFrom0_1To4_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {4, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -8511,7 +8511,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To4_4) {
   EXPECT_EQ(path[11].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To4_5) {
+TEST_F(SolverTest, SolveMazeFrom0_1To4_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {4, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -8548,7 +8548,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To4_5) {
   EXPECT_EQ(path[14].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To4_6) {
+TEST_F(SolverTest, SolveMazeFrom0_1To4_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {4, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -8595,7 +8595,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To4_6) {
   EXPECT_EQ(path[19].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To4_7) {
+TEST_F(SolverTest, SolveMazeFrom0_1To4_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {4, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -8640,7 +8640,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To4_7) {
   EXPECT_EQ(path[18].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To4_8) {
+TEST_F(SolverTest, SolveMazeFrom0_1To4_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {4, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -8683,7 +8683,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To4_8) {
   EXPECT_EQ(path[17].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To4_9) {
+TEST_F(SolverTest, SolveMazeFrom0_1To4_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {4, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -9024,7 +9024,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To4_9) {
   EXPECT_EQ(path[166].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To5_0) {
+TEST_F(SolverTest, SolveMazeFrom0_1To5_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {5, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -9045,7 +9045,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To5_0) {
   EXPECT_EQ(path[6].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To5_1) {
+TEST_F(SolverTest, SolveMazeFrom0_1To5_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {5, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -9068,7 +9068,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To5_1) {
   EXPECT_EQ(path[7].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To5_2) {
+TEST_F(SolverTest, SolveMazeFrom0_1To5_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {5, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -9093,7 +9093,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To5_2) {
   EXPECT_EQ(path[8].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To5_3) {
+TEST_F(SolverTest, SolveMazeFrom0_1To5_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {5, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -9120,7 +9120,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To5_3) {
   EXPECT_EQ(path[9].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To5_4) {
+TEST_F(SolverTest, SolveMazeFrom0_1To5_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {5, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -9161,7 +9161,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To5_4) {
   EXPECT_EQ(path[16].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To5_5) {
+TEST_F(SolverTest, SolveMazeFrom0_1To5_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {5, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -9200,7 +9200,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To5_5) {
   EXPECT_EQ(path[15].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To5_6) {
+TEST_F(SolverTest, SolveMazeFrom0_1To5_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {5, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -9241,7 +9241,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To5_6) {
   EXPECT_EQ(path[16].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To5_7) {
+TEST_F(SolverTest, SolveMazeFrom0_1To5_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {5, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -9284,7 +9284,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To5_7) {
   EXPECT_EQ(path[17].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To5_8) {
+TEST_F(SolverTest, SolveMazeFrom0_1To5_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {5, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -9329,7 +9329,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To5_8) {
   EXPECT_EQ(path[18].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To5_9) {
+TEST_F(SolverTest, SolveMazeFrom0_1To5_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {5, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -9668,7 +9668,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To5_9) {
   EXPECT_EQ(path[165].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To6_0) {
+TEST_F(SolverTest, SolveMazeFrom0_1To6_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {6, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -9691,7 +9691,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To6_0) {
   EXPECT_EQ(path[7].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To6_1) {
+TEST_F(SolverTest, SolveMazeFrom0_1To6_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {6, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -9716,7 +9716,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To6_1) {
   EXPECT_EQ(path[8].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To6_2) {
+TEST_F(SolverTest, SolveMazeFrom0_1To6_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {6, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -9743,7 +9743,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To6_2) {
   EXPECT_EQ(path[9].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To6_3) {
+TEST_F(SolverTest, SolveMazeFrom0_1To6_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {6, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -9772,7 +9772,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To6_3) {
   EXPECT_EQ(path[10].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To6_4) {
+TEST_F(SolverTest, SolveMazeFrom0_1To6_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {6, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -9815,7 +9815,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To6_4) {
   EXPECT_EQ(path[17].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To6_5) {
+TEST_F(SolverTest, SolveMazeFrom0_1To6_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {6, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -9856,7 +9856,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To6_5) {
   EXPECT_EQ(path[16].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To6_6) {
+TEST_F(SolverTest, SolveMazeFrom0_1To6_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {6, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -9899,7 +9899,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To6_6) {
   EXPECT_EQ(path[17].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To6_7) {
+TEST_F(SolverTest, SolveMazeFrom0_1To6_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {6, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -9944,7 +9944,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To6_7) {
   EXPECT_EQ(path[18].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To6_8) {
+TEST_F(SolverTest, SolveMazeFrom0_1To6_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {6, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -9991,7 +9991,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To6_8) {
   EXPECT_EQ(path[19].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To6_9) {
+TEST_F(SolverTest, SolveMazeFrom0_1To6_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {6, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -10328,7 +10328,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To6_9) {
   EXPECT_EQ(path[164].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To7_0) {
+TEST_F(SolverTest, SolveMazeFrom0_1To7_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {7, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -10353,7 +10353,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To7_0) {
   EXPECT_EQ(path[8].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To7_1) {
+TEST_F(SolverTest, SolveMazeFrom0_1To7_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {7, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -10384,7 +10384,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To7_1) {
   EXPECT_EQ(path[11].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To7_2) {
+TEST_F(SolverTest, SolveMazeFrom0_1To7_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {7, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -10413,7 +10413,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To7_2) {
   EXPECT_EQ(path[10].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To7_3) {
+TEST_F(SolverTest, SolveMazeFrom0_1To7_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {7, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -10472,7 +10472,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To7_3) {
   EXPECT_EQ(path[25].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To7_4) {
+TEST_F(SolverTest, SolveMazeFrom0_1To7_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {7, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -10529,7 +10529,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To7_4) {
   EXPECT_EQ(path[24].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To7_5) {
+TEST_F(SolverTest, SolveMazeFrom0_1To7_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {7, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -10580,7 +10580,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To7_5) {
   EXPECT_EQ(path[21].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To7_6) {
+TEST_F(SolverTest, SolveMazeFrom0_1To7_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {7, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -10629,7 +10629,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To7_6) {
   EXPECT_EQ(path[20].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To7_7) {
+TEST_F(SolverTest, SolveMazeFrom0_1To7_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {7, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -10676,7 +10676,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To7_7) {
   EXPECT_EQ(path[19].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To7_8) {
+TEST_F(SolverTest, SolveMazeFrom0_1To7_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {7, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -10725,7 +10725,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To7_8) {
   EXPECT_EQ(path[20].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To7_9) {
+TEST_F(SolverTest, SolveMazeFrom0_1To7_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {7, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -11064,7 +11064,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To7_9) {
   EXPECT_EQ(path[165].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To8_0) {
+TEST_F(SolverTest, SolveMazeFrom0_1To8_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {8, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -11103,7 +11103,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To8_0) {
   EXPECT_EQ(path[15].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To8_1) {
+TEST_F(SolverTest, SolveMazeFrom0_1To8_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {8, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -11136,7 +11136,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To8_1) {
   EXPECT_EQ(path[12].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To8_2) {
+TEST_F(SolverTest, SolveMazeFrom0_1To8_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {8, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -11199,7 +11199,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To8_2) {
   EXPECT_EQ(path[27].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To8_3) {
+TEST_F(SolverTest, SolveMazeFrom0_1To8_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {8, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -11260,7 +11260,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To8_3) {
   EXPECT_EQ(path[26].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To8_4) {
+TEST_F(SolverTest, SolveMazeFrom0_1To8_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {8, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -11315,7 +11315,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To8_4) {
   EXPECT_EQ(path[23].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To8_5) {
+TEST_F(SolverTest, SolveMazeFrom0_1To8_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {8, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -11368,7 +11368,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To8_5) {
   EXPECT_EQ(path[22].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To8_6) {
+TEST_F(SolverTest, SolveMazeFrom0_1To8_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {8, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -11447,7 +11447,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To8_6) {
   EXPECT_EQ(path[35].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To8_7) {
+TEST_F(SolverTest, SolveMazeFrom0_1To8_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {8, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -11528,7 +11528,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To8_7) {
   EXPECT_EQ(path[36].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To8_8) {
+TEST_F(SolverTest, SolveMazeFrom0_1To8_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {8, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -11863,7 +11863,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To8_8) {
   EXPECT_EQ(path[163].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To8_9) {
+TEST_F(SolverTest, SolveMazeFrom0_1To8_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {8, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -12200,7 +12200,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To8_9) {
   EXPECT_EQ(path[164].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To9_0) {
+TEST_F(SolverTest, SolveMazeFrom0_1To9_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {9, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -12237,7 +12237,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To9_0) {
   EXPECT_EQ(path[14].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To9_1) {
+TEST_F(SolverTest, SolveMazeFrom0_1To9_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {9, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -12272,7 +12272,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To9_1) {
   EXPECT_EQ(path[13].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To9_2) {
+TEST_F(SolverTest, SolveMazeFrom0_1To9_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {9, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -12337,7 +12337,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To9_2) {
   EXPECT_EQ(path[28].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To9_3) {
+TEST_F(SolverTest, SolveMazeFrom0_1To9_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {9, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -12384,7 +12384,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To9_3) {
   EXPECT_EQ(path[19].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To9_4) {
+TEST_F(SolverTest, SolveMazeFrom0_1To9_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {9, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -12433,7 +12433,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To9_4) {
   EXPECT_EQ(path[20].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To9_5) {
+TEST_F(SolverTest, SolveMazeFrom0_1To9_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {9, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -12512,7 +12512,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To9_5) {
   EXPECT_EQ(path[35].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To9_6) {
+TEST_F(SolverTest, SolveMazeFrom0_1To9_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {9, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -12589,7 +12589,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To9_6) {
   EXPECT_EQ(path[34].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To9_7) {
+TEST_F(SolverTest, SolveMazeFrom0_1To9_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {9, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -12668,7 +12668,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To9_7) {
   EXPECT_EQ(path[35].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To9_8) {
+TEST_F(SolverTest, SolveMazeFrom0_1To9_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {9, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -13001,7 +13001,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To9_8) {
   EXPECT_EQ(path[162].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_1To9_9) {
+TEST_F(SolverTest, SolveMazeFrom0_1To9_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 1}, {9, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -13336,7 +13336,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_1To9_9) {
   EXPECT_EQ(path[163].second, 1);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To0_0) {
+TEST_F(SolverTest, SolveMazeFrom0_2To0_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {0, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -13373,7 +13373,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To0_0) {
   EXPECT_EQ(path[14].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To0_1) {
+TEST_F(SolverTest, SolveMazeFrom0_2To0_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {0, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -13412,7 +13412,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To0_1) {
   EXPECT_EQ(path[15].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To0_2) {
+TEST_F(SolverTest, SolveMazeFrom0_2To0_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {0, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -13421,7 +13421,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To0_2) {
   EXPECT_EQ(path[0].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To0_3) {
+TEST_F(SolverTest, SolveMazeFrom0_2To0_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {0, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -13432,7 +13432,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To0_3) {
   EXPECT_EQ(path[1].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To0_4) {
+TEST_F(SolverTest, SolveMazeFrom0_2To0_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {0, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -13445,7 +13445,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To0_4) {
   EXPECT_EQ(path[2].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To0_5) {
+TEST_F(SolverTest, SolveMazeFrom0_2To0_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {0, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -13460,7 +13460,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To0_5) {
   EXPECT_EQ(path[3].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To0_6) {
+TEST_F(SolverTest, SolveMazeFrom0_2To0_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {0, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -13477,7 +13477,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To0_6) {
   EXPECT_EQ(path[4].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To0_7) {
+TEST_F(SolverTest, SolveMazeFrom0_2To0_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {0, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -13496,7 +13496,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To0_7) {
   EXPECT_EQ(path[5].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To0_8) {
+TEST_F(SolverTest, SolveMazeFrom0_2To0_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {0, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -13529,7 +13529,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To0_8) {
   EXPECT_EQ(path[12].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To0_9) {
+TEST_F(SolverTest, SolveMazeFrom0_2To0_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {0, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -13564,7 +13564,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To0_9) {
   EXPECT_EQ(path[13].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To1_0) {
+TEST_F(SolverTest, SolveMazeFrom0_2To1_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {1, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -13599,7 +13599,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To1_0) {
   EXPECT_EQ(path[13].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To1_1) {
+TEST_F(SolverTest, SolveMazeFrom0_2To1_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {1, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -13636,7 +13636,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To1_1) {
   EXPECT_EQ(path[14].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To1_2) {
+TEST_F(SolverTest, SolveMazeFrom0_2To1_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {1, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -13651,7 +13651,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To1_2) {
   EXPECT_EQ(path[3].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To1_3) {
+TEST_F(SolverTest, SolveMazeFrom0_2To1_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {1, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -13664,7 +13664,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To1_3) {
   EXPECT_EQ(path[2].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To1_4) {
+TEST_F(SolverTest, SolveMazeFrom0_2To1_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {1, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -13679,7 +13679,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To1_4) {
   EXPECT_EQ(path[3].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To1_5) {
+TEST_F(SolverTest, SolveMazeFrom0_2To1_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {1, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -13700,7 +13700,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To1_5) {
   EXPECT_EQ(path[6].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To1_6) {
+TEST_F(SolverTest, SolveMazeFrom0_2To1_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {1, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -13731,7 +13731,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To1_6) {
   EXPECT_EQ(path[11].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To1_7) {
+TEST_F(SolverTest, SolveMazeFrom0_2To1_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {1, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -13760,7 +13760,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To1_7) {
   EXPECT_EQ(path[10].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To1_8) {
+TEST_F(SolverTest, SolveMazeFrom0_2To1_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {1, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -13791,7 +13791,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To1_8) {
   EXPECT_EQ(path[11].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To1_9) {
+TEST_F(SolverTest, SolveMazeFrom0_2To1_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {1, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -13824,7 +13824,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To1_9) {
   EXPECT_EQ(path[12].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To2_0) {
+TEST_F(SolverTest, SolveMazeFrom0_2To2_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {2, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -13857,7 +13857,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To2_0) {
   EXPECT_EQ(path[12].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To2_1) {
+TEST_F(SolverTest, SolveMazeFrom0_2To2_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {2, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -13892,7 +13892,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To2_1) {
   EXPECT_EQ(path[13].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To2_2) {
+TEST_F(SolverTest, SolveMazeFrom0_2To2_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {2, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -13925,7 +13925,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To2_2) {
   EXPECT_EQ(path[12].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To2_3) {
+TEST_F(SolverTest, SolveMazeFrom0_2To2_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {2, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -13960,7 +13960,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To2_3) {
   EXPECT_EQ(path[13].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To2_4) {
+TEST_F(SolverTest, SolveMazeFrom0_2To2_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {2, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -13977,7 +13977,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To2_4) {
   EXPECT_EQ(path[4].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To2_5) {
+TEST_F(SolverTest, SolveMazeFrom0_2To2_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {2, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -13996,7 +13996,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To2_5) {
   EXPECT_EQ(path[5].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To2_6) {
+TEST_F(SolverTest, SolveMazeFrom0_2To2_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {2, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -14021,7 +14021,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To2_6) {
   EXPECT_EQ(path[8].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To2_7) {
+TEST_F(SolverTest, SolveMazeFrom0_2To2_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {2, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -14048,7 +14048,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To2_7) {
   EXPECT_EQ(path[9].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To2_8) {
+TEST_F(SolverTest, SolveMazeFrom0_2To2_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {2, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -14077,7 +14077,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To2_8) {
   EXPECT_EQ(path[10].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To2_9) {
+TEST_F(SolverTest, SolveMazeFrom0_2To2_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {2, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -14112,7 +14112,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To2_9) {
   EXPECT_EQ(path[13].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To3_0) {
+TEST_F(SolverTest, SolveMazeFrom0_2To3_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {3, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -14143,7 +14143,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To3_0) {
   EXPECT_EQ(path[11].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To3_1) {
+TEST_F(SolverTest, SolveMazeFrom0_2To3_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {3, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -14172,7 +14172,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To3_1) {
   EXPECT_EQ(path[10].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To3_2) {
+TEST_F(SolverTest, SolveMazeFrom0_2To3_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {3, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -14203,7 +14203,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To3_2) {
   EXPECT_EQ(path[11].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To3_3) {
+TEST_F(SolverTest, SolveMazeFrom0_2To3_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {3, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -14224,7 +14224,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To3_3) {
   EXPECT_EQ(path[6].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To3_4) {
+TEST_F(SolverTest, SolveMazeFrom0_2To3_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {3, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -14243,7 +14243,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To3_4) {
   EXPECT_EQ(path[5].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To3_5) {
+TEST_F(SolverTest, SolveMazeFrom0_2To3_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {3, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -14264,7 +14264,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To3_5) {
   EXPECT_EQ(path[6].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To3_6) {
+TEST_F(SolverTest, SolveMazeFrom0_2To3_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {3, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -14287,7 +14287,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To3_6) {
   EXPECT_EQ(path[7].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To3_7) {
+TEST_F(SolverTest, SolveMazeFrom0_2To3_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {3, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -14312,7 +14312,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To3_7) {
   EXPECT_EQ(path[8].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To3_8) {
+TEST_F(SolverTest, SolveMazeFrom0_2To3_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {3, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -14339,7 +14339,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To3_8) {
   EXPECT_EQ(path[9].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To3_9) {
+TEST_F(SolverTest, SolveMazeFrom0_2To3_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {3, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -14688,7 +14688,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To3_9) {
   EXPECT_EQ(path[170].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To4_0) {
+TEST_F(SolverTest, SolveMazeFrom0_2To4_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {4, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -14717,7 +14717,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To4_0) {
   EXPECT_EQ(path[10].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To4_1) {
+TEST_F(SolverTest, SolveMazeFrom0_2To4_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {4, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -14744,7 +14744,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To4_1) {
   EXPECT_EQ(path[9].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To4_2) {
+TEST_F(SolverTest, SolveMazeFrom0_2To4_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {4, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -14769,7 +14769,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To4_2) {
   EXPECT_EQ(path[8].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To4_3) {
+TEST_F(SolverTest, SolveMazeFrom0_2To4_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {4, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -14792,7 +14792,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To4_3) {
   EXPECT_EQ(path[7].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To4_4) {
+TEST_F(SolverTest, SolveMazeFrom0_2To4_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {4, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -14813,7 +14813,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To4_4) {
   EXPECT_EQ(path[6].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To4_5) {
+TEST_F(SolverTest, SolveMazeFrom0_2To4_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {4, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -14836,7 +14836,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To4_5) {
   EXPECT_EQ(path[7].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To4_6) {
+TEST_F(SolverTest, SolveMazeFrom0_2To4_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {4, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -14869,7 +14869,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To4_6) {
   EXPECT_EQ(path[12].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To4_7) {
+TEST_F(SolverTest, SolveMazeFrom0_2To4_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {4, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -14900,7 +14900,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To4_7) {
   EXPECT_EQ(path[11].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To4_8) {
+TEST_F(SolverTest, SolveMazeFrom0_2To4_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {4, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -14929,7 +14929,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To4_8) {
   EXPECT_EQ(path[10].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To4_9) {
+TEST_F(SolverTest, SolveMazeFrom0_2To4_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {4, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -15272,7 +15272,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To4_9) {
   EXPECT_EQ(path[167].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To5_0) {
+TEST_F(SolverTest, SolveMazeFrom0_2To5_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {5, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -15303,7 +15303,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To5_0) {
   EXPECT_EQ(path[11].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To5_1) {
+TEST_F(SolverTest, SolveMazeFrom0_2To5_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {5, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -15336,7 +15336,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To5_1) {
   EXPECT_EQ(path[12].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To5_2) {
+TEST_F(SolverTest, SolveMazeFrom0_2To5_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {5, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -15363,7 +15363,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To5_2) {
   EXPECT_EQ(path[9].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To5_3) {
+TEST_F(SolverTest, SolveMazeFrom0_2To5_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {5, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -15392,7 +15392,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To5_3) {
   EXPECT_EQ(path[10].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To5_4) {
+TEST_F(SolverTest, SolveMazeFrom0_2To5_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {5, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -15419,7 +15419,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To5_4) {
   EXPECT_EQ(path[9].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To5_5) {
+TEST_F(SolverTest, SolveMazeFrom0_2To5_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {5, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -15444,7 +15444,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To5_5) {
   EXPECT_EQ(path[8].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To5_6) {
+TEST_F(SolverTest, SolveMazeFrom0_2To5_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {5, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -15471,7 +15471,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To5_6) {
   EXPECT_EQ(path[9].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To5_7) {
+TEST_F(SolverTest, SolveMazeFrom0_2To5_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {5, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -15500,7 +15500,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To5_7) {
   EXPECT_EQ(path[10].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To5_8) {
+TEST_F(SolverTest, SolveMazeFrom0_2To5_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {5, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -15531,7 +15531,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To5_8) {
   EXPECT_EQ(path[11].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To5_9) {
+TEST_F(SolverTest, SolveMazeFrom0_2To5_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {5, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -15872,7 +15872,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To5_9) {
   EXPECT_EQ(path[166].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To6_0) {
+TEST_F(SolverTest, SolveMazeFrom0_2To6_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {6, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -15905,7 +15905,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To6_0) {
   EXPECT_EQ(path[12].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To6_1) {
+TEST_F(SolverTest, SolveMazeFrom0_2To6_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {6, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -15940,7 +15940,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To6_1) {
   EXPECT_EQ(path[13].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To6_2) {
+TEST_F(SolverTest, SolveMazeFrom0_2To6_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {6, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -15969,7 +15969,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To6_2) {
   EXPECT_EQ(path[10].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To6_3) {
+TEST_F(SolverTest, SolveMazeFrom0_2To6_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {6, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -16000,7 +16000,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To6_3) {
   EXPECT_EQ(path[11].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To6_4) {
+TEST_F(SolverTest, SolveMazeFrom0_2To6_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {6, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -16029,7 +16029,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To6_4) {
   EXPECT_EQ(path[10].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To6_5) {
+TEST_F(SolverTest, SolveMazeFrom0_2To6_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {6, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -16056,7 +16056,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To6_5) {
   EXPECT_EQ(path[9].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To6_6) {
+TEST_F(SolverTest, SolveMazeFrom0_2To6_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {6, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -16085,7 +16085,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To6_6) {
   EXPECT_EQ(path[10].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To6_7) {
+TEST_F(SolverTest, SolveMazeFrom0_2To6_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {6, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -16116,7 +16116,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To6_7) {
   EXPECT_EQ(path[11].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To6_8) {
+TEST_F(SolverTest, SolveMazeFrom0_2To6_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {6, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -16149,7 +16149,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To6_8) {
   EXPECT_EQ(path[12].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To6_9) {
+TEST_F(SolverTest, SolveMazeFrom0_2To6_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {6, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -16488,7 +16488,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To6_9) {
   EXPECT_EQ(path[165].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To7_0) {
+TEST_F(SolverTest, SolveMazeFrom0_2To7_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {7, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -16523,7 +16523,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To7_0) {
   EXPECT_EQ(path[13].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To7_1) {
+TEST_F(SolverTest, SolveMazeFrom0_2To7_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {7, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -16556,7 +16556,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To7_1) {
   EXPECT_EQ(path[12].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To7_2) {
+TEST_F(SolverTest, SolveMazeFrom0_2To7_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {7, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -16587,7 +16587,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To7_2) {
   EXPECT_EQ(path[11].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To7_3) {
+TEST_F(SolverTest, SolveMazeFrom0_2To7_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {7, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -16632,7 +16632,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To7_3) {
   EXPECT_EQ(path[18].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To7_4) {
+TEST_F(SolverTest, SolveMazeFrom0_2To7_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {7, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -16675,7 +16675,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To7_4) {
   EXPECT_EQ(path[17].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To7_5) {
+TEST_F(SolverTest, SolveMazeFrom0_2To7_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {7, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -16712,7 +16712,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To7_5) {
   EXPECT_EQ(path[14].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To7_6) {
+TEST_F(SolverTest, SolveMazeFrom0_2To7_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {7, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -16747,7 +16747,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To7_6) {
   EXPECT_EQ(path[13].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To7_7) {
+TEST_F(SolverTest, SolveMazeFrom0_2To7_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {7, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -16780,7 +16780,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To7_7) {
   EXPECT_EQ(path[12].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To7_8) {
+TEST_F(SolverTest, SolveMazeFrom0_2To7_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {7, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -16815,7 +16815,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To7_8) {
   EXPECT_EQ(path[13].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To7_9) {
+TEST_F(SolverTest, SolveMazeFrom0_2To7_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {7, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -17156,7 +17156,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To7_9) {
   EXPECT_EQ(path[166].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To8_0) {
+TEST_F(SolverTest, SolveMazeFrom0_2To8_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {8, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -17197,7 +17197,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To8_0) {
   EXPECT_EQ(path[16].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To8_1) {
+TEST_F(SolverTest, SolveMazeFrom0_2To8_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {8, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -17232,7 +17232,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To8_1) {
   EXPECT_EQ(path[13].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To8_2) {
+TEST_F(SolverTest, SolveMazeFrom0_2To8_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {8, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -17281,7 +17281,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To8_2) {
   EXPECT_EQ(path[20].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To8_3) {
+TEST_F(SolverTest, SolveMazeFrom0_2To8_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {8, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -17328,7 +17328,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To8_3) {
   EXPECT_EQ(path[19].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To8_4) {
+TEST_F(SolverTest, SolveMazeFrom0_2To8_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {8, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -17369,7 +17369,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To8_4) {
   EXPECT_EQ(path[16].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To8_5) {
+TEST_F(SolverTest, SolveMazeFrom0_2To8_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {8, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -17408,7 +17408,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To8_5) {
   EXPECT_EQ(path[15].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To8_6) {
+TEST_F(SolverTest, SolveMazeFrom0_2To8_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {8, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -17489,7 +17489,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To8_6) {
   EXPECT_EQ(path[36].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To8_7) {
+TEST_F(SolverTest, SolveMazeFrom0_2To8_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {8, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -17572,7 +17572,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To8_7) {
   EXPECT_EQ(path[37].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To8_8) {
+TEST_F(SolverTest, SolveMazeFrom0_2To8_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {8, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -17909,7 +17909,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To8_8) {
   EXPECT_EQ(path[164].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To8_9) {
+TEST_F(SolverTest, SolveMazeFrom0_2To8_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {8, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -18248,7 +18248,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To8_9) {
   EXPECT_EQ(path[165].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To9_0) {
+TEST_F(SolverTest, SolveMazeFrom0_2To9_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {9, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -18287,7 +18287,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To9_0) {
   EXPECT_EQ(path[15].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To9_1) {
+TEST_F(SolverTest, SolveMazeFrom0_2To9_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {9, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -18324,7 +18324,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To9_1) {
   EXPECT_EQ(path[14].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To9_2) {
+TEST_F(SolverTest, SolveMazeFrom0_2To9_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {9, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -18375,7 +18375,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To9_2) {
   EXPECT_EQ(path[21].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To9_3) {
+TEST_F(SolverTest, SolveMazeFrom0_2To9_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {9, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -18424,7 +18424,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To9_3) {
   EXPECT_EQ(path[20].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To9_4) {
+TEST_F(SolverTest, SolveMazeFrom0_2To9_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {9, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -18475,7 +18475,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To9_4) {
   EXPECT_EQ(path[21].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To9_5) {
+TEST_F(SolverTest, SolveMazeFrom0_2To9_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {9, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -18556,7 +18556,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To9_5) {
   EXPECT_EQ(path[36].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To9_6) {
+TEST_F(SolverTest, SolveMazeFrom0_2To9_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {9, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -18635,7 +18635,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To9_6) {
   EXPECT_EQ(path[35].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To9_7) {
+TEST_F(SolverTest, SolveMazeFrom0_2To9_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {9, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -18716,7 +18716,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To9_7) {
   EXPECT_EQ(path[36].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To9_8) {
+TEST_F(SolverTest, SolveMazeFrom0_2To9_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {9, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -19051,7 +19051,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To9_8) {
   EXPECT_EQ(path[163].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_2To9_9) {
+TEST_F(SolverTest, SolveMazeFrom0_2To9_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 2}, {9, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -19388,7 +19388,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_2To9_9) {
   EXPECT_EQ(path[164].second, 2);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To0_0) {
+TEST_F(SolverTest, SolveMazeFrom0_3To0_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {0, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -19423,7 +19423,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To0_0) {
   EXPECT_EQ(path[13].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To0_1) {
+TEST_F(SolverTest, SolveMazeFrom0_3To0_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {0, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -19460,7 +19460,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To0_1) {
   EXPECT_EQ(path[14].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To0_2) {
+TEST_F(SolverTest, SolveMazeFrom0_3To0_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {0, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -19471,7 +19471,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To0_2) {
   EXPECT_EQ(path[1].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To0_3) {
+TEST_F(SolverTest, SolveMazeFrom0_3To0_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {0, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -19480,7 +19480,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To0_3) {
   EXPECT_EQ(path[0].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To0_4) {
+TEST_F(SolverTest, SolveMazeFrom0_3To0_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {0, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -19491,7 +19491,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To0_4) {
   EXPECT_EQ(path[1].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To0_5) {
+TEST_F(SolverTest, SolveMazeFrom0_3To0_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {0, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -19504,7 +19504,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To0_5) {
   EXPECT_EQ(path[2].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To0_6) {
+TEST_F(SolverTest, SolveMazeFrom0_3To0_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {0, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -19519,7 +19519,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To0_6) {
   EXPECT_EQ(path[3].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To0_7) {
+TEST_F(SolverTest, SolveMazeFrom0_3To0_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {0, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -19536,7 +19536,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To0_7) {
   EXPECT_EQ(path[4].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To0_8) {
+TEST_F(SolverTest, SolveMazeFrom0_3To0_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {0, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -19567,7 +19567,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To0_8) {
   EXPECT_EQ(path[11].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To0_9) {
+TEST_F(SolverTest, SolveMazeFrom0_3To0_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {0, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -19600,7 +19600,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To0_9) {
   EXPECT_EQ(path[12].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To1_0) {
+TEST_F(SolverTest, SolveMazeFrom0_3To1_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {1, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -19633,7 +19633,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To1_0) {
   EXPECT_EQ(path[12].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To1_1) {
+TEST_F(SolverTest, SolveMazeFrom0_3To1_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {1, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -19668,7 +19668,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To1_1) {
   EXPECT_EQ(path[13].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To1_2) {
+TEST_F(SolverTest, SolveMazeFrom0_3To1_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {1, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -19681,7 +19681,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To1_2) {
   EXPECT_EQ(path[2].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To1_3) {
+TEST_F(SolverTest, SolveMazeFrom0_3To1_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {1, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -19692,7 +19692,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To1_3) {
   EXPECT_EQ(path[1].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To1_4) {
+TEST_F(SolverTest, SolveMazeFrom0_3To1_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {1, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -19705,7 +19705,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To1_4) {
   EXPECT_EQ(path[2].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To1_5) {
+TEST_F(SolverTest, SolveMazeFrom0_3To1_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {1, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -19724,7 +19724,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To1_5) {
   EXPECT_EQ(path[5].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To1_6) {
+TEST_F(SolverTest, SolveMazeFrom0_3To1_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {1, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -19753,7 +19753,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To1_6) {
   EXPECT_EQ(path[10].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To1_7) {
+TEST_F(SolverTest, SolveMazeFrom0_3To1_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {1, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -19780,7 +19780,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To1_7) {
   EXPECT_EQ(path[9].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To1_8) {
+TEST_F(SolverTest, SolveMazeFrom0_3To1_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {1, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -19809,7 +19809,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To1_8) {
   EXPECT_EQ(path[10].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To1_9) {
+TEST_F(SolverTest, SolveMazeFrom0_3To1_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {1, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -19840,7 +19840,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To1_9) {
   EXPECT_EQ(path[11].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To2_0) {
+TEST_F(SolverTest, SolveMazeFrom0_3To2_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {2, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -19871,7 +19871,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To2_0) {
   EXPECT_EQ(path[11].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To2_1) {
+TEST_F(SolverTest, SolveMazeFrom0_3To2_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {2, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -19904,7 +19904,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To2_1) {
   EXPECT_EQ(path[12].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To2_2) {
+TEST_F(SolverTest, SolveMazeFrom0_3To2_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {2, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -19935,7 +19935,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To2_2) {
   EXPECT_EQ(path[11].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To2_3) {
+TEST_F(SolverTest, SolveMazeFrom0_3To2_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {2, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -19968,7 +19968,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To2_3) {
   EXPECT_EQ(path[12].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To2_4) {
+TEST_F(SolverTest, SolveMazeFrom0_3To2_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {2, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -19983,7 +19983,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To2_4) {
   EXPECT_EQ(path[3].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To2_5) {
+TEST_F(SolverTest, SolveMazeFrom0_3To2_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {2, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -20000,7 +20000,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To2_5) {
   EXPECT_EQ(path[4].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To2_6) {
+TEST_F(SolverTest, SolveMazeFrom0_3To2_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {2, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -20023,7 +20023,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To2_6) {
   EXPECT_EQ(path[7].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To2_7) {
+TEST_F(SolverTest, SolveMazeFrom0_3To2_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {2, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -20048,7 +20048,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To2_7) {
   EXPECT_EQ(path[8].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To2_8) {
+TEST_F(SolverTest, SolveMazeFrom0_3To2_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {2, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -20075,7 +20075,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To2_8) {
   EXPECT_EQ(path[9].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To2_9) {
+TEST_F(SolverTest, SolveMazeFrom0_3To2_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {2, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -20108,7 +20108,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To2_9) {
   EXPECT_EQ(path[12].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To3_0) {
+TEST_F(SolverTest, SolveMazeFrom0_3To3_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {3, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -20137,7 +20137,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To3_0) {
   EXPECT_EQ(path[10].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To3_1) {
+TEST_F(SolverTest, SolveMazeFrom0_3To3_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {3, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -20164,7 +20164,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To3_1) {
   EXPECT_EQ(path[9].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To3_2) {
+TEST_F(SolverTest, SolveMazeFrom0_3To3_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {3, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -20193,7 +20193,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To3_2) {
   EXPECT_EQ(path[10].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To3_3) {
+TEST_F(SolverTest, SolveMazeFrom0_3To3_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {3, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -20212,7 +20212,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To3_3) {
   EXPECT_EQ(path[5].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To3_4) {
+TEST_F(SolverTest, SolveMazeFrom0_3To3_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {3, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -20229,7 +20229,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To3_4) {
   EXPECT_EQ(path[4].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To3_5) {
+TEST_F(SolverTest, SolveMazeFrom0_3To3_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {3, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -20248,7 +20248,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To3_5) {
   EXPECT_EQ(path[5].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To3_6) {
+TEST_F(SolverTest, SolveMazeFrom0_3To3_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {3, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -20269,7 +20269,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To3_6) {
   EXPECT_EQ(path[6].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To3_7) {
+TEST_F(SolverTest, SolveMazeFrom0_3To3_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {3, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -20292,7 +20292,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To3_7) {
   EXPECT_EQ(path[7].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To3_8) {
+TEST_F(SolverTest, SolveMazeFrom0_3To3_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {3, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -20317,7 +20317,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To3_8) {
   EXPECT_EQ(path[8].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To3_9) {
+TEST_F(SolverTest, SolveMazeFrom0_3To3_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {3, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -20664,7 +20664,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To3_9) {
   EXPECT_EQ(path[169].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To4_0) {
+TEST_F(SolverTest, SolveMazeFrom0_3To4_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {4, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -20691,7 +20691,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To4_0) {
   EXPECT_EQ(path[9].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To4_1) {
+TEST_F(SolverTest, SolveMazeFrom0_3To4_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {4, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -20716,7 +20716,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To4_1) {
   EXPECT_EQ(path[8].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To4_2) {
+TEST_F(SolverTest, SolveMazeFrom0_3To4_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {4, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -20739,7 +20739,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To4_2) {
   EXPECT_EQ(path[7].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To4_3) {
+TEST_F(SolverTest, SolveMazeFrom0_3To4_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {4, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -20760,7 +20760,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To4_3) {
   EXPECT_EQ(path[6].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To4_4) {
+TEST_F(SolverTest, SolveMazeFrom0_3To4_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {4, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -20779,7 +20779,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To4_4) {
   EXPECT_EQ(path[5].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To4_5) {
+TEST_F(SolverTest, SolveMazeFrom0_3To4_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {4, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -20800,7 +20800,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To4_5) {
   EXPECT_EQ(path[6].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To4_6) {
+TEST_F(SolverTest, SolveMazeFrom0_3To4_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {4, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -20831,7 +20831,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To4_6) {
   EXPECT_EQ(path[11].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To4_7) {
+TEST_F(SolverTest, SolveMazeFrom0_3To4_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {4, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -20860,7 +20860,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To4_7) {
   EXPECT_EQ(path[10].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To4_8) {
+TEST_F(SolverTest, SolveMazeFrom0_3To4_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {4, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -20887,7 +20887,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To4_8) {
   EXPECT_EQ(path[9].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To4_9) {
+TEST_F(SolverTest, SolveMazeFrom0_3To4_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {4, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -21228,7 +21228,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To4_9) {
   EXPECT_EQ(path[166].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To5_0) {
+TEST_F(SolverTest, SolveMazeFrom0_3To5_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {5, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -21257,7 +21257,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To5_0) {
   EXPECT_EQ(path[10].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To5_1) {
+TEST_F(SolverTest, SolveMazeFrom0_3To5_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {5, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -21288,7 +21288,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To5_1) {
   EXPECT_EQ(path[11].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To5_2) {
+TEST_F(SolverTest, SolveMazeFrom0_3To5_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {5, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -21313,7 +21313,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To5_2) {
   EXPECT_EQ(path[8].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To5_3) {
+TEST_F(SolverTest, SolveMazeFrom0_3To5_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {5, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -21340,7 +21340,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To5_3) {
   EXPECT_EQ(path[9].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To5_4) {
+TEST_F(SolverTest, SolveMazeFrom0_3To5_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {5, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -21365,7 +21365,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To5_4) {
   EXPECT_EQ(path[8].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To5_5) {
+TEST_F(SolverTest, SolveMazeFrom0_3To5_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {5, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -21388,7 +21388,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To5_5) {
   EXPECT_EQ(path[7].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To5_6) {
+TEST_F(SolverTest, SolveMazeFrom0_3To5_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {5, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -21413,7 +21413,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To5_6) {
   EXPECT_EQ(path[8].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To5_7) {
+TEST_F(SolverTest, SolveMazeFrom0_3To5_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {5, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -21440,7 +21440,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To5_7) {
   EXPECT_EQ(path[9].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To5_8) {
+TEST_F(SolverTest, SolveMazeFrom0_3To5_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {5, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -21469,7 +21469,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To5_8) {
   EXPECT_EQ(path[10].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To5_9) {
+TEST_F(SolverTest, SolveMazeFrom0_3To5_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {5, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -21808,7 +21808,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To5_9) {
   EXPECT_EQ(path[165].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To6_0) {
+TEST_F(SolverTest, SolveMazeFrom0_3To6_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {6, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -21839,7 +21839,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To6_0) {
   EXPECT_EQ(path[11].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To6_1) {
+TEST_F(SolverTest, SolveMazeFrom0_3To6_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {6, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -21872,7 +21872,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To6_1) {
   EXPECT_EQ(path[12].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To6_2) {
+TEST_F(SolverTest, SolveMazeFrom0_3To6_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {6, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -21899,7 +21899,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To6_2) {
   EXPECT_EQ(path[9].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To6_3) {
+TEST_F(SolverTest, SolveMazeFrom0_3To6_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {6, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -21928,7 +21928,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To6_3) {
   EXPECT_EQ(path[10].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To6_4) {
+TEST_F(SolverTest, SolveMazeFrom0_3To6_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {6, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -21955,7 +21955,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To6_4) {
   EXPECT_EQ(path[9].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To6_5) {
+TEST_F(SolverTest, SolveMazeFrom0_3To6_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {6, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -21980,7 +21980,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To6_5) {
   EXPECT_EQ(path[8].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To6_6) {
+TEST_F(SolverTest, SolveMazeFrom0_3To6_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {6, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -22007,7 +22007,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To6_6) {
   EXPECT_EQ(path[9].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To6_7) {
+TEST_F(SolverTest, SolveMazeFrom0_3To6_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {6, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -22036,7 +22036,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To6_7) {
   EXPECT_EQ(path[10].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To6_8) {
+TEST_F(SolverTest, SolveMazeFrom0_3To6_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {6, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -22067,7 +22067,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To6_8) {
   EXPECT_EQ(path[11].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To6_9) {
+TEST_F(SolverTest, SolveMazeFrom0_3To6_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {6, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -22404,7 +22404,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To6_9) {
   EXPECT_EQ(path[164].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To7_0) {
+TEST_F(SolverTest, SolveMazeFrom0_3To7_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {7, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -22437,7 +22437,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To7_0) {
   EXPECT_EQ(path[12].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To7_1) {
+TEST_F(SolverTest, SolveMazeFrom0_3To7_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {7, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -22468,7 +22468,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To7_1) {
   EXPECT_EQ(path[11].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To7_2) {
+TEST_F(SolverTest, SolveMazeFrom0_3To7_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {7, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -22497,7 +22497,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To7_2) {
   EXPECT_EQ(path[10].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To7_3) {
+TEST_F(SolverTest, SolveMazeFrom0_3To7_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {7, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -22540,7 +22540,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To7_3) {
   EXPECT_EQ(path[17].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To7_4) {
+TEST_F(SolverTest, SolveMazeFrom0_3To7_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {7, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -22581,7 +22581,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To7_4) {
   EXPECT_EQ(path[16].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To7_5) {
+TEST_F(SolverTest, SolveMazeFrom0_3To7_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {7, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -22616,7 +22616,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To7_5) {
   EXPECT_EQ(path[13].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To7_6) {
+TEST_F(SolverTest, SolveMazeFrom0_3To7_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {7, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -22649,7 +22649,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To7_6) {
   EXPECT_EQ(path[12].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To7_7) {
+TEST_F(SolverTest, SolveMazeFrom0_3To7_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {7, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -22680,7 +22680,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To7_7) {
   EXPECT_EQ(path[11].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To7_8) {
+TEST_F(SolverTest, SolveMazeFrom0_3To7_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {7, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -22713,7 +22713,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To7_8) {
   EXPECT_EQ(path[12].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To7_9) {
+TEST_F(SolverTest, SolveMazeFrom0_3To7_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {7, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -23052,7 +23052,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To7_9) {
   EXPECT_EQ(path[165].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To8_0) {
+TEST_F(SolverTest, SolveMazeFrom0_3To8_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {8, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -23091,7 +23091,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To8_0) {
   EXPECT_EQ(path[15].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To8_1) {
+TEST_F(SolverTest, SolveMazeFrom0_3To8_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {8, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -23124,7 +23124,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To8_1) {
   EXPECT_EQ(path[12].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To8_2) {
+TEST_F(SolverTest, SolveMazeFrom0_3To8_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {8, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -23171,7 +23171,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To8_2) {
   EXPECT_EQ(path[19].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To8_3) {
+TEST_F(SolverTest, SolveMazeFrom0_3To8_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {8, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -23216,7 +23216,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To8_3) {
   EXPECT_EQ(path[18].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To8_4) {
+TEST_F(SolverTest, SolveMazeFrom0_3To8_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {8, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -23255,7 +23255,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To8_4) {
   EXPECT_EQ(path[15].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To8_5) {
+TEST_F(SolverTest, SolveMazeFrom0_3To8_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {8, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -23292,7 +23292,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To8_5) {
   EXPECT_EQ(path[14].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To8_6) {
+TEST_F(SolverTest, SolveMazeFrom0_3To8_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {8, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -23371,7 +23371,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To8_6) {
   EXPECT_EQ(path[35].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To8_7) {
+TEST_F(SolverTest, SolveMazeFrom0_3To8_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {8, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -23452,7 +23452,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To8_7) {
   EXPECT_EQ(path[36].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To8_8) {
+TEST_F(SolverTest, SolveMazeFrom0_3To8_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {8, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -23787,7 +23787,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To8_8) {
   EXPECT_EQ(path[163].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To8_9) {
+TEST_F(SolverTest, SolveMazeFrom0_3To8_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {8, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -24124,7 +24124,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To8_9) {
   EXPECT_EQ(path[164].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To9_0) {
+TEST_F(SolverTest, SolveMazeFrom0_3To9_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {9, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -24161,7 +24161,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To9_0) {
   EXPECT_EQ(path[14].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To9_1) {
+TEST_F(SolverTest, SolveMazeFrom0_3To9_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {9, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -24196,7 +24196,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To9_1) {
   EXPECT_EQ(path[13].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To9_2) {
+TEST_F(SolverTest, SolveMazeFrom0_3To9_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {9, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -24245,7 +24245,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To9_2) {
   EXPECT_EQ(path[20].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To9_3) {
+TEST_F(SolverTest, SolveMazeFrom0_3To9_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {9, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -24292,7 +24292,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To9_3) {
   EXPECT_EQ(path[19].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To9_4) {
+TEST_F(SolverTest, SolveMazeFrom0_3To9_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {9, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -24341,7 +24341,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To9_4) {
   EXPECT_EQ(path[20].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To9_5) {
+TEST_F(SolverTest, SolveMazeFrom0_3To9_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {9, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -24420,7 +24420,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To9_5) {
   EXPECT_EQ(path[35].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To9_6) {
+TEST_F(SolverTest, SolveMazeFrom0_3To9_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {9, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -24497,7 +24497,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To9_6) {
   EXPECT_EQ(path[34].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To9_7) {
+TEST_F(SolverTest, SolveMazeFrom0_3To9_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {9, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -24576,7 +24576,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To9_7) {
   EXPECT_EQ(path[35].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To9_8) {
+TEST_F(SolverTest, SolveMazeFrom0_3To9_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {9, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -24909,7 +24909,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To9_8) {
   EXPECT_EQ(path[162].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_3To9_9) {
+TEST_F(SolverTest, SolveMazeFrom0_3To9_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 3}, {9, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -25244,7 +25244,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_3To9_9) {
   EXPECT_EQ(path[163].second, 3);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To0_0) {
+TEST_F(SolverTest, SolveMazeFrom0_4To0_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {0, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -25277,7 +25277,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To0_0) {
   EXPECT_EQ(path[12].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To0_1) {
+TEST_F(SolverTest, SolveMazeFrom0_4To0_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {0, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -25312,7 +25312,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To0_1) {
   EXPECT_EQ(path[13].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To0_2) {
+TEST_F(SolverTest, SolveMazeFrom0_4To0_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {0, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -25325,7 +25325,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To0_2) {
   EXPECT_EQ(path[2].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To0_3) {
+TEST_F(SolverTest, SolveMazeFrom0_4To0_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {0, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -25336,7 +25336,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To0_3) {
   EXPECT_EQ(path[1].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To0_4) {
+TEST_F(SolverTest, SolveMazeFrom0_4To0_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {0, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -25345,7 +25345,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To0_4) {
   EXPECT_EQ(path[0].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To0_5) {
+TEST_F(SolverTest, SolveMazeFrom0_4To0_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {0, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -25356,7 +25356,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To0_5) {
   EXPECT_EQ(path[1].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To0_6) {
+TEST_F(SolverTest, SolveMazeFrom0_4To0_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {0, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -25369,7 +25369,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To0_6) {
   EXPECT_EQ(path[2].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To0_7) {
+TEST_F(SolverTest, SolveMazeFrom0_4To0_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {0, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -25384,7 +25384,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To0_7) {
   EXPECT_EQ(path[3].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To0_8) {
+TEST_F(SolverTest, SolveMazeFrom0_4To0_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {0, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -25413,7 +25413,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To0_8) {
   EXPECT_EQ(path[10].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To0_9) {
+TEST_F(SolverTest, SolveMazeFrom0_4To0_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {0, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -25444,7 +25444,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To0_9) {
   EXPECT_EQ(path[11].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To1_0) {
+TEST_F(SolverTest, SolveMazeFrom0_4To1_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {1, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -25475,7 +25475,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To1_0) {
   EXPECT_EQ(path[11].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To1_1) {
+TEST_F(SolverTest, SolveMazeFrom0_4To1_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {1, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -25508,7 +25508,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To1_1) {
   EXPECT_EQ(path[12].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To1_2) {
+TEST_F(SolverTest, SolveMazeFrom0_4To1_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {1, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -25523,7 +25523,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To1_2) {
   EXPECT_EQ(path[3].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To1_3) {
+TEST_F(SolverTest, SolveMazeFrom0_4To1_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {1, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -25536,7 +25536,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To1_3) {
   EXPECT_EQ(path[2].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To1_4) {
+TEST_F(SolverTest, SolveMazeFrom0_4To1_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {1, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -25547,7 +25547,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To1_4) {
   EXPECT_EQ(path[1].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To1_5) {
+TEST_F(SolverTest, SolveMazeFrom0_4To1_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {1, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -25564,7 +25564,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To1_5) {
   EXPECT_EQ(path[4].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To1_6) {
+TEST_F(SolverTest, SolveMazeFrom0_4To1_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {1, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -25591,7 +25591,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To1_6) {
   EXPECT_EQ(path[9].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To1_7) {
+TEST_F(SolverTest, SolveMazeFrom0_4To1_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {1, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -25616,7 +25616,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To1_7) {
   EXPECT_EQ(path[8].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To1_8) {
+TEST_F(SolverTest, SolveMazeFrom0_4To1_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {1, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -25643,7 +25643,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To1_8) {
   EXPECT_EQ(path[9].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To1_9) {
+TEST_F(SolverTest, SolveMazeFrom0_4To1_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {1, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -25672,7 +25672,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To1_9) {
   EXPECT_EQ(path[10].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To2_0) {
+TEST_F(SolverTest, SolveMazeFrom0_4To2_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {2, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -25701,7 +25701,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To2_0) {
   EXPECT_EQ(path[10].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To2_1) {
+TEST_F(SolverTest, SolveMazeFrom0_4To2_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {2, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -25732,7 +25732,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To2_1) {
   EXPECT_EQ(path[11].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To2_2) {
+TEST_F(SolverTest, SolveMazeFrom0_4To2_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {2, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -25761,7 +25761,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To2_2) {
   EXPECT_EQ(path[10].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To2_3) {
+TEST_F(SolverTest, SolveMazeFrom0_4To2_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {2, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -25792,7 +25792,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To2_3) {
   EXPECT_EQ(path[11].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To2_4) {
+TEST_F(SolverTest, SolveMazeFrom0_4To2_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {2, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -25805,7 +25805,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To2_4) {
   EXPECT_EQ(path[2].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To2_5) {
+TEST_F(SolverTest, SolveMazeFrom0_4To2_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {2, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -25820,7 +25820,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To2_5) {
   EXPECT_EQ(path[3].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To2_6) {
+TEST_F(SolverTest, SolveMazeFrom0_4To2_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {2, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -25841,7 +25841,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To2_6) {
   EXPECT_EQ(path[6].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To2_7) {
+TEST_F(SolverTest, SolveMazeFrom0_4To2_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {2, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -25864,7 +25864,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To2_7) {
   EXPECT_EQ(path[7].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To2_8) {
+TEST_F(SolverTest, SolveMazeFrom0_4To2_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {2, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -25889,7 +25889,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To2_8) {
   EXPECT_EQ(path[8].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To2_9) {
+TEST_F(SolverTest, SolveMazeFrom0_4To2_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {2, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -25920,7 +25920,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To2_9) {
   EXPECT_EQ(path[11].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To3_0) {
+TEST_F(SolverTest, SolveMazeFrom0_4To3_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {3, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -25947,7 +25947,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To3_0) {
   EXPECT_EQ(path[9].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To3_1) {
+TEST_F(SolverTest, SolveMazeFrom0_4To3_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {3, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -25972,7 +25972,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To3_1) {
   EXPECT_EQ(path[8].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To3_2) {
+TEST_F(SolverTest, SolveMazeFrom0_4To3_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {3, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -25999,7 +25999,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To3_2) {
   EXPECT_EQ(path[9].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To3_3) {
+TEST_F(SolverTest, SolveMazeFrom0_4To3_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {3, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -26016,7 +26016,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To3_3) {
   EXPECT_EQ(path[4].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To3_4) {
+TEST_F(SolverTest, SolveMazeFrom0_4To3_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {3, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -26031,7 +26031,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To3_4) {
   EXPECT_EQ(path[3].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To3_5) {
+TEST_F(SolverTest, SolveMazeFrom0_4To3_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {3, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -26048,7 +26048,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To3_5) {
   EXPECT_EQ(path[4].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To3_6) {
+TEST_F(SolverTest, SolveMazeFrom0_4To3_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {3, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -26067,7 +26067,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To3_6) {
   EXPECT_EQ(path[5].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To3_7) {
+TEST_F(SolverTest, SolveMazeFrom0_4To3_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {3, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -26088,7 +26088,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To3_7) {
   EXPECT_EQ(path[6].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To3_8) {
+TEST_F(SolverTest, SolveMazeFrom0_4To3_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {3, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -26111,7 +26111,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To3_8) {
   EXPECT_EQ(path[7].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To3_9) {
+TEST_F(SolverTest, SolveMazeFrom0_4To3_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {3, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -26456,7 +26456,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To3_9) {
   EXPECT_EQ(path[168].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To4_0) {
+TEST_F(SolverTest, SolveMazeFrom0_4To4_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {4, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -26481,7 +26481,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To4_0) {
   EXPECT_EQ(path[8].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To4_1) {
+TEST_F(SolverTest, SolveMazeFrom0_4To4_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {4, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -26504,7 +26504,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To4_1) {
   EXPECT_EQ(path[7].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To4_2) {
+TEST_F(SolverTest, SolveMazeFrom0_4To4_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {4, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -26525,7 +26525,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To4_2) {
   EXPECT_EQ(path[6].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To4_3) {
+TEST_F(SolverTest, SolveMazeFrom0_4To4_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {4, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -26544,7 +26544,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To4_3) {
   EXPECT_EQ(path[5].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To4_4) {
+TEST_F(SolverTest, SolveMazeFrom0_4To4_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {4, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -26561,7 +26561,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To4_4) {
   EXPECT_EQ(path[4].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To4_5) {
+TEST_F(SolverTest, SolveMazeFrom0_4To4_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {4, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -26580,7 +26580,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To4_5) {
   EXPECT_EQ(path[5].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To4_6) {
+TEST_F(SolverTest, SolveMazeFrom0_4To4_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {4, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -26609,7 +26609,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To4_6) {
   EXPECT_EQ(path[10].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To4_7) {
+TEST_F(SolverTest, SolveMazeFrom0_4To4_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {4, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -26636,7 +26636,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To4_7) {
   EXPECT_EQ(path[9].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To4_8) {
+TEST_F(SolverTest, SolveMazeFrom0_4To4_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {4, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -26661,7 +26661,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To4_8) {
   EXPECT_EQ(path[8].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To4_9) {
+TEST_F(SolverTest, SolveMazeFrom0_4To4_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {4, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -27000,7 +27000,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To4_9) {
   EXPECT_EQ(path[165].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To5_0) {
+TEST_F(SolverTest, SolveMazeFrom0_4To5_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {5, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -27027,7 +27027,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To5_0) {
   EXPECT_EQ(path[9].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To5_1) {
+TEST_F(SolverTest, SolveMazeFrom0_4To5_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {5, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -27056,7 +27056,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To5_1) {
   EXPECT_EQ(path[10].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To5_2) {
+TEST_F(SolverTest, SolveMazeFrom0_4To5_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {5, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -27079,7 +27079,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To5_2) {
   EXPECT_EQ(path[7].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To5_3) {
+TEST_F(SolverTest, SolveMazeFrom0_4To5_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {5, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -27104,7 +27104,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To5_3) {
   EXPECT_EQ(path[8].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To5_4) {
+TEST_F(SolverTest, SolveMazeFrom0_4To5_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {5, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -27127,7 +27127,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To5_4) {
   EXPECT_EQ(path[7].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To5_5) {
+TEST_F(SolverTest, SolveMazeFrom0_4To5_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {5, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -27148,7 +27148,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To5_5) {
   EXPECT_EQ(path[6].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To5_6) {
+TEST_F(SolverTest, SolveMazeFrom0_4To5_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {5, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -27171,7 +27171,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To5_6) {
   EXPECT_EQ(path[7].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To5_7) {
+TEST_F(SolverTest, SolveMazeFrom0_4To5_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {5, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -27196,7 +27196,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To5_7) {
   EXPECT_EQ(path[8].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To5_8) {
+TEST_F(SolverTest, SolveMazeFrom0_4To5_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {5, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -27223,7 +27223,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To5_8) {
   EXPECT_EQ(path[9].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To5_9) {
+TEST_F(SolverTest, SolveMazeFrom0_4To5_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {5, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -27560,7 +27560,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To5_9) {
   EXPECT_EQ(path[164].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To6_0) {
+TEST_F(SolverTest, SolveMazeFrom0_4To6_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {6, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -27589,7 +27589,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To6_0) {
   EXPECT_EQ(path[10].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To6_1) {
+TEST_F(SolverTest, SolveMazeFrom0_4To6_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {6, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -27620,7 +27620,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To6_1) {
   EXPECT_EQ(path[11].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To6_2) {
+TEST_F(SolverTest, SolveMazeFrom0_4To6_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {6, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -27645,7 +27645,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To6_2) {
   EXPECT_EQ(path[8].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To6_3) {
+TEST_F(SolverTest, SolveMazeFrom0_4To6_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {6, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -27672,7 +27672,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To6_3) {
   EXPECT_EQ(path[9].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To6_4) {
+TEST_F(SolverTest, SolveMazeFrom0_4To6_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {6, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -27697,7 +27697,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To6_4) {
   EXPECT_EQ(path[8].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To6_5) {
+TEST_F(SolverTest, SolveMazeFrom0_4To6_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {6, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -27720,7 +27720,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To6_5) {
   EXPECT_EQ(path[7].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To6_6) {
+TEST_F(SolverTest, SolveMazeFrom0_4To6_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {6, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -27745,7 +27745,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To6_6) {
   EXPECT_EQ(path[8].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To6_7) {
+TEST_F(SolverTest, SolveMazeFrom0_4To6_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {6, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -27772,7 +27772,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To6_7) {
   EXPECT_EQ(path[9].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To6_8) {
+TEST_F(SolverTest, SolveMazeFrom0_4To6_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {6, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -27801,7 +27801,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To6_8) {
   EXPECT_EQ(path[10].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To6_9) {
+TEST_F(SolverTest, SolveMazeFrom0_4To6_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {6, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -28136,7 +28136,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To6_9) {
   EXPECT_EQ(path[163].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To7_0) {
+TEST_F(SolverTest, SolveMazeFrom0_4To7_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {7, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -28167,7 +28167,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To7_0) {
   EXPECT_EQ(path[11].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To7_1) {
+TEST_F(SolverTest, SolveMazeFrom0_4To7_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {7, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -28196,7 +28196,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To7_1) {
   EXPECT_EQ(path[10].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To7_2) {
+TEST_F(SolverTest, SolveMazeFrom0_4To7_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {7, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -28223,7 +28223,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To7_2) {
   EXPECT_EQ(path[9].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To7_3) {
+TEST_F(SolverTest, SolveMazeFrom0_4To7_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {7, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -28264,7 +28264,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To7_3) {
   EXPECT_EQ(path[16].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To7_4) {
+TEST_F(SolverTest, SolveMazeFrom0_4To7_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {7, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -28303,7 +28303,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To7_4) {
   EXPECT_EQ(path[15].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To7_5) {
+TEST_F(SolverTest, SolveMazeFrom0_4To7_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {7, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -28336,7 +28336,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To7_5) {
   EXPECT_EQ(path[12].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To7_6) {
+TEST_F(SolverTest, SolveMazeFrom0_4To7_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {7, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -28367,7 +28367,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To7_6) {
   EXPECT_EQ(path[11].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To7_7) {
+TEST_F(SolverTest, SolveMazeFrom0_4To7_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {7, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -28396,7 +28396,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To7_7) {
   EXPECT_EQ(path[10].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To7_8) {
+TEST_F(SolverTest, SolveMazeFrom0_4To7_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {7, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -28427,7 +28427,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To7_8) {
   EXPECT_EQ(path[11].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To7_9) {
+TEST_F(SolverTest, SolveMazeFrom0_4To7_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {7, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -28764,7 +28764,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To7_9) {
   EXPECT_EQ(path[164].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To8_0) {
+TEST_F(SolverTest, SolveMazeFrom0_4To8_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {8, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -28801,7 +28801,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To8_0) {
   EXPECT_EQ(path[14].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To8_1) {
+TEST_F(SolverTest, SolveMazeFrom0_4To8_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {8, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -28832,7 +28832,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To8_1) {
   EXPECT_EQ(path[11].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To8_2) {
+TEST_F(SolverTest, SolveMazeFrom0_4To8_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {8, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -28877,7 +28877,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To8_2) {
   EXPECT_EQ(path[18].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To8_3) {
+TEST_F(SolverTest, SolveMazeFrom0_4To8_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {8, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -28920,7 +28920,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To8_3) {
   EXPECT_EQ(path[17].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To8_4) {
+TEST_F(SolverTest, SolveMazeFrom0_4To8_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {8, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -28957,7 +28957,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To8_4) {
   EXPECT_EQ(path[14].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To8_5) {
+TEST_F(SolverTest, SolveMazeFrom0_4To8_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {8, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -28992,7 +28992,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To8_5) {
   EXPECT_EQ(path[13].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To8_6) {
+TEST_F(SolverTest, SolveMazeFrom0_4To8_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {8, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -29069,7 +29069,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To8_6) {
   EXPECT_EQ(path[34].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To8_7) {
+TEST_F(SolverTest, SolveMazeFrom0_4To8_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {8, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -29148,7 +29148,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To8_7) {
   EXPECT_EQ(path[35].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To8_8) {
+TEST_F(SolverTest, SolveMazeFrom0_4To8_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {8, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -29481,7 +29481,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To8_8) {
   EXPECT_EQ(path[162].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To8_9) {
+TEST_F(SolverTest, SolveMazeFrom0_4To8_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {8, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -29816,7 +29816,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To8_9) {
   EXPECT_EQ(path[163].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To9_0) {
+TEST_F(SolverTest, SolveMazeFrom0_4To9_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {9, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -29851,7 +29851,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To9_0) {
   EXPECT_EQ(path[13].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To9_1) {
+TEST_F(SolverTest, SolveMazeFrom0_4To9_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {9, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -29884,7 +29884,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To9_1) {
   EXPECT_EQ(path[12].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To9_2) {
+TEST_F(SolverTest, SolveMazeFrom0_4To9_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {9, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -29931,7 +29931,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To9_2) {
   EXPECT_EQ(path[19].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To9_3) {
+TEST_F(SolverTest, SolveMazeFrom0_4To9_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {9, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -29976,7 +29976,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To9_3) {
   EXPECT_EQ(path[18].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To9_4) {
+TEST_F(SolverTest, SolveMazeFrom0_4To9_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {9, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -30023,7 +30023,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To9_4) {
   EXPECT_EQ(path[19].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To9_5) {
+TEST_F(SolverTest, SolveMazeFrom0_4To9_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {9, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -30100,7 +30100,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To9_5) {
   EXPECT_EQ(path[34].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To9_6) {
+TEST_F(SolverTest, SolveMazeFrom0_4To9_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {9, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -30175,7 +30175,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To9_6) {
   EXPECT_EQ(path[33].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To9_7) {
+TEST_F(SolverTest, SolveMazeFrom0_4To9_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {9, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -30252,7 +30252,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To9_7) {
   EXPECT_EQ(path[34].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To9_8) {
+TEST_F(SolverTest, SolveMazeFrom0_4To9_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {9, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -30583,7 +30583,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To9_8) {
   EXPECT_EQ(path[161].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_4To9_9) {
+TEST_F(SolverTest, SolveMazeFrom0_4To9_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 4}, {9, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -30916,7 +30916,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_4To9_9) {
   EXPECT_EQ(path[162].second, 4);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To0_0) {
+TEST_F(SolverTest, SolveMazeFrom0_5To0_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {0, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -30951,7 +30951,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To0_0) {
   EXPECT_EQ(path[13].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To0_1) {
+TEST_F(SolverTest, SolveMazeFrom0_5To0_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {0, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -30988,7 +30988,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To0_1) {
   EXPECT_EQ(path[14].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To0_2) {
+TEST_F(SolverTest, SolveMazeFrom0_5To0_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {0, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -31003,7 +31003,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To0_2) {
   EXPECT_EQ(path[3].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To0_3) {
+TEST_F(SolverTest, SolveMazeFrom0_5To0_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {0, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -31016,7 +31016,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To0_3) {
   EXPECT_EQ(path[2].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To0_4) {
+TEST_F(SolverTest, SolveMazeFrom0_5To0_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {0, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -31027,7 +31027,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To0_4) {
   EXPECT_EQ(path[1].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To0_5) {
+TEST_F(SolverTest, SolveMazeFrom0_5To0_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {0, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -31036,7 +31036,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To0_5) {
   EXPECT_EQ(path[0].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To0_6) {
+TEST_F(SolverTest, SolveMazeFrom0_5To0_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {0, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -31047,7 +31047,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To0_6) {
   EXPECT_EQ(path[1].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To0_7) {
+TEST_F(SolverTest, SolveMazeFrom0_5To0_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {0, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -31060,7 +31060,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To0_7) {
   EXPECT_EQ(path[2].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To0_8) {
+TEST_F(SolverTest, SolveMazeFrom0_5To0_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {0, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -31091,7 +31091,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To0_8) {
   EXPECT_EQ(path[11].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To0_9) {
+TEST_F(SolverTest, SolveMazeFrom0_5To0_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {0, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -31124,7 +31124,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To0_9) {
   EXPECT_EQ(path[12].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To1_0) {
+TEST_F(SolverTest, SolveMazeFrom0_5To1_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {1, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -31157,7 +31157,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To1_0) {
   EXPECT_EQ(path[12].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To1_1) {
+TEST_F(SolverTest, SolveMazeFrom0_5To1_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {1, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -31192,7 +31192,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To1_1) {
   EXPECT_EQ(path[13].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To1_2) {
+TEST_F(SolverTest, SolveMazeFrom0_5To1_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {1, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -31209,7 +31209,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To1_2) {
   EXPECT_EQ(path[4].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To1_3) {
+TEST_F(SolverTest, SolveMazeFrom0_5To1_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {1, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -31224,7 +31224,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To1_3) {
   EXPECT_EQ(path[3].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To1_4) {
+TEST_F(SolverTest, SolveMazeFrom0_5To1_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {1, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -31237,7 +31237,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To1_4) {
   EXPECT_EQ(path[2].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To1_5) {
+TEST_F(SolverTest, SolveMazeFrom0_5To1_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {1, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -31256,7 +31256,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To1_5) {
   EXPECT_EQ(path[5].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To1_6) {
+TEST_F(SolverTest, SolveMazeFrom0_5To1_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {1, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -31285,7 +31285,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To1_6) {
   EXPECT_EQ(path[10].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To1_7) {
+TEST_F(SolverTest, SolveMazeFrom0_5To1_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {1, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -31312,7 +31312,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To1_7) {
   EXPECT_EQ(path[9].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To1_8) {
+TEST_F(SolverTest, SolveMazeFrom0_5To1_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {1, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -31341,7 +31341,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To1_8) {
   EXPECT_EQ(path[10].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To1_9) {
+TEST_F(SolverTest, SolveMazeFrom0_5To1_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {1, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -31372,7 +31372,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To1_9) {
   EXPECT_EQ(path[11].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To2_0) {
+TEST_F(SolverTest, SolveMazeFrom0_5To2_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {2, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -31403,7 +31403,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To2_0) {
   EXPECT_EQ(path[11].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To2_1) {
+TEST_F(SolverTest, SolveMazeFrom0_5To2_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {2, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -31436,7 +31436,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To2_1) {
   EXPECT_EQ(path[12].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To2_2) {
+TEST_F(SolverTest, SolveMazeFrom0_5To2_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {2, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -31467,7 +31467,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To2_2) {
   EXPECT_EQ(path[11].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To2_3) {
+TEST_F(SolverTest, SolveMazeFrom0_5To2_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {2, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -31500,7 +31500,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To2_3) {
   EXPECT_EQ(path[12].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To2_4) {
+TEST_F(SolverTest, SolveMazeFrom0_5To2_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {2, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -31515,7 +31515,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To2_4) {
   EXPECT_EQ(path[3].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To2_5) {
+TEST_F(SolverTest, SolveMazeFrom0_5To2_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {2, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -31532,7 +31532,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To2_5) {
   EXPECT_EQ(path[4].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To2_6) {
+TEST_F(SolverTest, SolveMazeFrom0_5To2_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {2, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -31555,7 +31555,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To2_6) {
   EXPECT_EQ(path[7].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To2_7) {
+TEST_F(SolverTest, SolveMazeFrom0_5To2_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {2, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -31580,7 +31580,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To2_7) {
   EXPECT_EQ(path[8].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To2_8) {
+TEST_F(SolverTest, SolveMazeFrom0_5To2_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {2, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -31607,7 +31607,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To2_8) {
   EXPECT_EQ(path[9].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To2_9) {
+TEST_F(SolverTest, SolveMazeFrom0_5To2_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {2, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -31640,7 +31640,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To2_9) {
   EXPECT_EQ(path[12].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To3_0) {
+TEST_F(SolverTest, SolveMazeFrom0_5To3_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {3, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -31669,7 +31669,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To3_0) {
   EXPECT_EQ(path[10].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To3_1) {
+TEST_F(SolverTest, SolveMazeFrom0_5To3_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {3, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -31696,7 +31696,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To3_1) {
   EXPECT_EQ(path[9].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To3_2) {
+TEST_F(SolverTest, SolveMazeFrom0_5To3_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {3, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -31725,7 +31725,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To3_2) {
   EXPECT_EQ(path[10].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To3_3) {
+TEST_F(SolverTest, SolveMazeFrom0_5To3_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {3, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -31744,7 +31744,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To3_3) {
   EXPECT_EQ(path[5].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To3_4) {
+TEST_F(SolverTest, SolveMazeFrom0_5To3_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {3, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -31761,7 +31761,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To3_4) {
   EXPECT_EQ(path[4].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To3_5) {
+TEST_F(SolverTest, SolveMazeFrom0_5To3_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {3, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -31780,7 +31780,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To3_5) {
   EXPECT_EQ(path[5].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To3_6) {
+TEST_F(SolverTest, SolveMazeFrom0_5To3_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {3, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -31801,7 +31801,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To3_6) {
   EXPECT_EQ(path[6].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To3_7) {
+TEST_F(SolverTest, SolveMazeFrom0_5To3_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {3, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -31824,7 +31824,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To3_7) {
   EXPECT_EQ(path[7].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To3_8) {
+TEST_F(SolverTest, SolveMazeFrom0_5To3_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {3, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -31849,7 +31849,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To3_8) {
   EXPECT_EQ(path[8].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To3_9) {
+TEST_F(SolverTest, SolveMazeFrom0_5To3_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {3, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -32196,7 +32196,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To3_9) {
   EXPECT_EQ(path[169].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To4_0) {
+TEST_F(SolverTest, SolveMazeFrom0_5To4_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {4, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -32223,7 +32223,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To4_0) {
   EXPECT_EQ(path[9].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To4_1) {
+TEST_F(SolverTest, SolveMazeFrom0_5To4_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {4, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -32248,7 +32248,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To4_1) {
   EXPECT_EQ(path[8].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To4_2) {
+TEST_F(SolverTest, SolveMazeFrom0_5To4_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {4, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -32271,7 +32271,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To4_2) {
   EXPECT_EQ(path[7].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To4_3) {
+TEST_F(SolverTest, SolveMazeFrom0_5To4_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {4, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -32292,7 +32292,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To4_3) {
   EXPECT_EQ(path[6].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To4_4) {
+TEST_F(SolverTest, SolveMazeFrom0_5To4_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {4, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -32311,7 +32311,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To4_4) {
   EXPECT_EQ(path[5].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To4_5) {
+TEST_F(SolverTest, SolveMazeFrom0_5To4_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {4, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -32332,7 +32332,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To4_5) {
   EXPECT_EQ(path[6].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To4_6) {
+TEST_F(SolverTest, SolveMazeFrom0_5To4_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {4, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -32363,7 +32363,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To4_6) {
   EXPECT_EQ(path[11].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To4_7) {
+TEST_F(SolverTest, SolveMazeFrom0_5To4_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {4, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -32392,7 +32392,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To4_7) {
   EXPECT_EQ(path[10].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To4_8) {
+TEST_F(SolverTest, SolveMazeFrom0_5To4_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {4, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -32419,7 +32419,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To4_8) {
   EXPECT_EQ(path[9].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To4_9) {
+TEST_F(SolverTest, SolveMazeFrom0_5To4_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {4, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -32760,7 +32760,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To4_9) {
   EXPECT_EQ(path[166].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To5_0) {
+TEST_F(SolverTest, SolveMazeFrom0_5To5_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {5, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -32789,7 +32789,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To5_0) {
   EXPECT_EQ(path[10].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To5_1) {
+TEST_F(SolverTest, SolveMazeFrom0_5To5_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {5, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -32820,7 +32820,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To5_1) {
   EXPECT_EQ(path[11].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To5_2) {
+TEST_F(SolverTest, SolveMazeFrom0_5To5_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {5, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -32845,7 +32845,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To5_2) {
   EXPECT_EQ(path[8].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To5_3) {
+TEST_F(SolverTest, SolveMazeFrom0_5To5_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {5, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -32872,7 +32872,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To5_3) {
   EXPECT_EQ(path[9].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To5_4) {
+TEST_F(SolverTest, SolveMazeFrom0_5To5_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {5, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -32897,7 +32897,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To5_4) {
   EXPECT_EQ(path[8].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To5_5) {
+TEST_F(SolverTest, SolveMazeFrom0_5To5_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {5, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -32920,7 +32920,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To5_5) {
   EXPECT_EQ(path[7].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To5_6) {
+TEST_F(SolverTest, SolveMazeFrom0_5To5_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {5, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -32945,7 +32945,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To5_6) {
   EXPECT_EQ(path[8].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To5_7) {
+TEST_F(SolverTest, SolveMazeFrom0_5To5_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {5, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -32972,7 +32972,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To5_7) {
   EXPECT_EQ(path[9].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To5_8) {
+TEST_F(SolverTest, SolveMazeFrom0_5To5_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {5, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -33001,7 +33001,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To5_8) {
   EXPECT_EQ(path[10].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To5_9) {
+TEST_F(SolverTest, SolveMazeFrom0_5To5_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {5, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -33340,7 +33340,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To5_9) {
   EXPECT_EQ(path[165].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To6_0) {
+TEST_F(SolverTest, SolveMazeFrom0_5To6_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {6, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -33371,7 +33371,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To6_0) {
   EXPECT_EQ(path[11].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To6_1) {
+TEST_F(SolverTest, SolveMazeFrom0_5To6_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {6, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -33404,7 +33404,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To6_1) {
   EXPECT_EQ(path[12].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To6_2) {
+TEST_F(SolverTest, SolveMazeFrom0_5To6_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {6, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -33431,7 +33431,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To6_2) {
   EXPECT_EQ(path[9].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To6_3) {
+TEST_F(SolverTest, SolveMazeFrom0_5To6_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {6, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -33460,7 +33460,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To6_3) {
   EXPECT_EQ(path[10].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To6_4) {
+TEST_F(SolverTest, SolveMazeFrom0_5To6_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {6, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -33487,7 +33487,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To6_4) {
   EXPECT_EQ(path[9].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To6_5) {
+TEST_F(SolverTest, SolveMazeFrom0_5To6_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {6, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -33512,7 +33512,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To6_5) {
   EXPECT_EQ(path[8].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To6_6) {
+TEST_F(SolverTest, SolveMazeFrom0_5To6_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {6, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -33539,7 +33539,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To6_6) {
   EXPECT_EQ(path[9].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To6_7) {
+TEST_F(SolverTest, SolveMazeFrom0_5To6_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {6, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -33568,7 +33568,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To6_7) {
   EXPECT_EQ(path[10].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To6_8) {
+TEST_F(SolverTest, SolveMazeFrom0_5To6_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {6, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -33599,7 +33599,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To6_8) {
   EXPECT_EQ(path[11].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To6_9) {
+TEST_F(SolverTest, SolveMazeFrom0_5To6_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {6, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -33936,7 +33936,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To6_9) {
   EXPECT_EQ(path[164].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To7_0) {
+TEST_F(SolverTest, SolveMazeFrom0_5To7_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {7, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -33969,7 +33969,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To7_0) {
   EXPECT_EQ(path[12].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To7_1) {
+TEST_F(SolverTest, SolveMazeFrom0_5To7_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {7, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -34000,7 +34000,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To7_1) {
   EXPECT_EQ(path[11].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To7_2) {
+TEST_F(SolverTest, SolveMazeFrom0_5To7_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {7, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -34029,7 +34029,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To7_2) {
   EXPECT_EQ(path[10].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To7_3) {
+TEST_F(SolverTest, SolveMazeFrom0_5To7_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {7, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -34072,7 +34072,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To7_3) {
   EXPECT_EQ(path[17].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To7_4) {
+TEST_F(SolverTest, SolveMazeFrom0_5To7_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {7, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -34113,7 +34113,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To7_4) {
   EXPECT_EQ(path[16].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To7_5) {
+TEST_F(SolverTest, SolveMazeFrom0_5To7_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {7, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -34148,7 +34148,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To7_5) {
   EXPECT_EQ(path[13].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To7_6) {
+TEST_F(SolverTest, SolveMazeFrom0_5To7_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {7, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -34181,7 +34181,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To7_6) {
   EXPECT_EQ(path[12].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To7_7) {
+TEST_F(SolverTest, SolveMazeFrom0_5To7_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {7, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -34212,7 +34212,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To7_7) {
   EXPECT_EQ(path[11].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To7_8) {
+TEST_F(SolverTest, SolveMazeFrom0_5To7_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {7, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -34245,7 +34245,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To7_8) {
   EXPECT_EQ(path[12].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To7_9) {
+TEST_F(SolverTest, SolveMazeFrom0_5To7_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {7, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -34584,7 +34584,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To7_9) {
   EXPECT_EQ(path[165].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To8_0) {
+TEST_F(SolverTest, SolveMazeFrom0_5To8_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {8, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -34623,7 +34623,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To8_0) {
   EXPECT_EQ(path[15].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To8_1) {
+TEST_F(SolverTest, SolveMazeFrom0_5To8_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {8, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -34656,7 +34656,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To8_1) {
   EXPECT_EQ(path[12].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To8_2) {
+TEST_F(SolverTest, SolveMazeFrom0_5To8_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {8, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -34703,7 +34703,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To8_2) {
   EXPECT_EQ(path[19].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To8_3) {
+TEST_F(SolverTest, SolveMazeFrom0_5To8_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {8, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -34748,7 +34748,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To8_3) {
   EXPECT_EQ(path[18].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To8_4) {
+TEST_F(SolverTest, SolveMazeFrom0_5To8_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {8, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -34787,7 +34787,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To8_4) {
   EXPECT_EQ(path[15].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To8_5) {
+TEST_F(SolverTest, SolveMazeFrom0_5To8_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {8, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -34824,7 +34824,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To8_5) {
   EXPECT_EQ(path[14].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To8_6) {
+TEST_F(SolverTest, SolveMazeFrom0_5To8_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {8, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -34903,7 +34903,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To8_6) {
   EXPECT_EQ(path[35].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To8_7) {
+TEST_F(SolverTest, SolveMazeFrom0_5To8_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {8, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -34984,7 +34984,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To8_7) {
   EXPECT_EQ(path[36].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To8_8) {
+TEST_F(SolverTest, SolveMazeFrom0_5To8_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {8, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -35319,7 +35319,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To8_8) {
   EXPECT_EQ(path[163].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To8_9) {
+TEST_F(SolverTest, SolveMazeFrom0_5To8_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {8, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -35656,7 +35656,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To8_9) {
   EXPECT_EQ(path[164].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To9_0) {
+TEST_F(SolverTest, SolveMazeFrom0_5To9_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {9, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -35693,7 +35693,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To9_0) {
   EXPECT_EQ(path[14].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To9_1) {
+TEST_F(SolverTest, SolveMazeFrom0_5To9_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {9, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -35728,7 +35728,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To9_1) {
   EXPECT_EQ(path[13].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To9_2) {
+TEST_F(SolverTest, SolveMazeFrom0_5To9_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {9, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -35777,7 +35777,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To9_2) {
   EXPECT_EQ(path[20].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To9_3) {
+TEST_F(SolverTest, SolveMazeFrom0_5To9_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {9, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -35824,7 +35824,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To9_3) {
   EXPECT_EQ(path[19].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To9_4) {
+TEST_F(SolverTest, SolveMazeFrom0_5To9_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {9, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -35873,7 +35873,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To9_4) {
   EXPECT_EQ(path[20].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To9_5) {
+TEST_F(SolverTest, SolveMazeFrom0_5To9_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {9, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -35952,7 +35952,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To9_5) {
   EXPECT_EQ(path[35].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To9_6) {
+TEST_F(SolverTest, SolveMazeFrom0_5To9_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {9, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -36029,7 +36029,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To9_6) {
   EXPECT_EQ(path[34].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To9_7) {
+TEST_F(SolverTest, SolveMazeFrom0_5To9_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {9, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -36108,7 +36108,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To9_7) {
   EXPECT_EQ(path[35].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To9_8) {
+TEST_F(SolverTest, SolveMazeFrom0_5To9_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {9, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -36441,7 +36441,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To9_8) {
   EXPECT_EQ(path[162].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_5To9_9) {
+TEST_F(SolverTest, SolveMazeFrom0_5To9_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 5}, {9, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -36776,7 +36776,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_5To9_9) {
   EXPECT_EQ(path[163].second, 5);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To0_0) {
+TEST_F(SolverTest, SolveMazeFrom0_6To0_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {0, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -36813,7 +36813,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To0_0) {
   EXPECT_EQ(path[14].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To0_1) {
+TEST_F(SolverTest, SolveMazeFrom0_6To0_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {0, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -36852,7 +36852,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To0_1) {
   EXPECT_EQ(path[15].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To0_2) {
+TEST_F(SolverTest, SolveMazeFrom0_6To0_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {0, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -36869,7 +36869,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To0_2) {
   EXPECT_EQ(path[4].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To0_3) {
+TEST_F(SolverTest, SolveMazeFrom0_6To0_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {0, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -36884,7 +36884,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To0_3) {
   EXPECT_EQ(path[3].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To0_4) {
+TEST_F(SolverTest, SolveMazeFrom0_6To0_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {0, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -36897,7 +36897,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To0_4) {
   EXPECT_EQ(path[2].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To0_5) {
+TEST_F(SolverTest, SolveMazeFrom0_6To0_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {0, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -36908,7 +36908,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To0_5) {
   EXPECT_EQ(path[1].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To0_6) {
+TEST_F(SolverTest, SolveMazeFrom0_6To0_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {0, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -36917,7 +36917,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To0_6) {
   EXPECT_EQ(path[0].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To0_7) {
+TEST_F(SolverTest, SolveMazeFrom0_6To0_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {0, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -36928,7 +36928,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To0_7) {
   EXPECT_EQ(path[1].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To0_8) {
+TEST_F(SolverTest, SolveMazeFrom0_6To0_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {0, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -36961,7 +36961,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To0_8) {
   EXPECT_EQ(path[12].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To0_9) {
+TEST_F(SolverTest, SolveMazeFrom0_6To0_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {0, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -36996,7 +36996,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To0_9) {
   EXPECT_EQ(path[13].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To1_0) {
+TEST_F(SolverTest, SolveMazeFrom0_6To1_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {1, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -37031,7 +37031,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To1_0) {
   EXPECT_EQ(path[13].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To1_1) {
+TEST_F(SolverTest, SolveMazeFrom0_6To1_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {1, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -37068,7 +37068,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To1_1) {
   EXPECT_EQ(path[14].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To1_2) {
+TEST_F(SolverTest, SolveMazeFrom0_6To1_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {1, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -37087,7 +37087,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To1_2) {
   EXPECT_EQ(path[5].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To1_3) {
+TEST_F(SolverTest, SolveMazeFrom0_6To1_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {1, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -37104,7 +37104,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To1_3) {
   EXPECT_EQ(path[4].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To1_4) {
+TEST_F(SolverTest, SolveMazeFrom0_6To1_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {1, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -37119,7 +37119,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To1_4) {
   EXPECT_EQ(path[3].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To1_5) {
+TEST_F(SolverTest, SolveMazeFrom0_6To1_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {1, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -37140,7 +37140,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To1_5) {
   EXPECT_EQ(path[6].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To1_6) {
+TEST_F(SolverTest, SolveMazeFrom0_6To1_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {1, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -37171,7 +37171,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To1_6) {
   EXPECT_EQ(path[11].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To1_7) {
+TEST_F(SolverTest, SolveMazeFrom0_6To1_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {1, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -37200,7 +37200,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To1_7) {
   EXPECT_EQ(path[10].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To1_8) {
+TEST_F(SolverTest, SolveMazeFrom0_6To1_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {1, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -37231,7 +37231,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To1_8) {
   EXPECT_EQ(path[11].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To1_9) {
+TEST_F(SolverTest, SolveMazeFrom0_6To1_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {1, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -37264,7 +37264,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To1_9) {
   EXPECT_EQ(path[12].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To2_0) {
+TEST_F(SolverTest, SolveMazeFrom0_6To2_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {2, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -37297,7 +37297,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To2_0) {
   EXPECT_EQ(path[12].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To2_1) {
+TEST_F(SolverTest, SolveMazeFrom0_6To2_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {2, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -37332,7 +37332,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To2_1) {
   EXPECT_EQ(path[13].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To2_2) {
+TEST_F(SolverTest, SolveMazeFrom0_6To2_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {2, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -37365,7 +37365,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To2_2) {
   EXPECT_EQ(path[12].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To2_3) {
+TEST_F(SolverTest, SolveMazeFrom0_6To2_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {2, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -37400,7 +37400,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To2_3) {
   EXPECT_EQ(path[13].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To2_4) {
+TEST_F(SolverTest, SolveMazeFrom0_6To2_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {2, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -37417,7 +37417,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To2_4) {
   EXPECT_EQ(path[4].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To2_5) {
+TEST_F(SolverTest, SolveMazeFrom0_6To2_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {2, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -37436,7 +37436,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To2_5) {
   EXPECT_EQ(path[5].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To2_6) {
+TEST_F(SolverTest, SolveMazeFrom0_6To2_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {2, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -37461,7 +37461,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To2_6) {
   EXPECT_EQ(path[8].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To2_7) {
+TEST_F(SolverTest, SolveMazeFrom0_6To2_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {2, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -37488,7 +37488,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To2_7) {
   EXPECT_EQ(path[9].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To2_8) {
+TEST_F(SolverTest, SolveMazeFrom0_6To2_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {2, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -37517,7 +37517,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To2_8) {
   EXPECT_EQ(path[10].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To2_9) {
+TEST_F(SolverTest, SolveMazeFrom0_6To2_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {2, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -37552,7 +37552,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To2_9) {
   EXPECT_EQ(path[13].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To3_0) {
+TEST_F(SolverTest, SolveMazeFrom0_6To3_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {3, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -37583,7 +37583,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To3_0) {
   EXPECT_EQ(path[11].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To3_1) {
+TEST_F(SolverTest, SolveMazeFrom0_6To3_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {3, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -37612,7 +37612,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To3_1) {
   EXPECT_EQ(path[10].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To3_2) {
+TEST_F(SolverTest, SolveMazeFrom0_6To3_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {3, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -37643,7 +37643,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To3_2) {
   EXPECT_EQ(path[11].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To3_3) {
+TEST_F(SolverTest, SolveMazeFrom0_6To3_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {3, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -37664,7 +37664,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To3_3) {
   EXPECT_EQ(path[6].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To3_4) {
+TEST_F(SolverTest, SolveMazeFrom0_6To3_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {3, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -37683,7 +37683,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To3_4) {
   EXPECT_EQ(path[5].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To3_5) {
+TEST_F(SolverTest, SolveMazeFrom0_6To3_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {3, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -37704,7 +37704,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To3_5) {
   EXPECT_EQ(path[6].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To3_6) {
+TEST_F(SolverTest, SolveMazeFrom0_6To3_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {3, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -37727,7 +37727,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To3_6) {
   EXPECT_EQ(path[7].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To3_7) {
+TEST_F(SolverTest, SolveMazeFrom0_6To3_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {3, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -37752,7 +37752,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To3_7) {
   EXPECT_EQ(path[8].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To3_8) {
+TEST_F(SolverTest, SolveMazeFrom0_6To3_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {3, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -37779,7 +37779,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To3_8) {
   EXPECT_EQ(path[9].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To3_9) {
+TEST_F(SolverTest, SolveMazeFrom0_6To3_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {3, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -38128,7 +38128,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To3_9) {
   EXPECT_EQ(path[170].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To4_0) {
+TEST_F(SolverTest, SolveMazeFrom0_6To4_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {4, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -38157,7 +38157,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To4_0) {
   EXPECT_EQ(path[10].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To4_1) {
+TEST_F(SolverTest, SolveMazeFrom0_6To4_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {4, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -38184,7 +38184,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To4_1) {
   EXPECT_EQ(path[9].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To4_2) {
+TEST_F(SolverTest, SolveMazeFrom0_6To4_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {4, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -38209,7 +38209,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To4_2) {
   EXPECT_EQ(path[8].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To4_3) {
+TEST_F(SolverTest, SolveMazeFrom0_6To4_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {4, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -38232,7 +38232,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To4_3) {
   EXPECT_EQ(path[7].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To4_4) {
+TEST_F(SolverTest, SolveMazeFrom0_6To4_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {4, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -38253,7 +38253,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To4_4) {
   EXPECT_EQ(path[6].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To4_5) {
+TEST_F(SolverTest, SolveMazeFrom0_6To4_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {4, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -38276,7 +38276,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To4_5) {
   EXPECT_EQ(path[7].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To4_6) {
+TEST_F(SolverTest, SolveMazeFrom0_6To4_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {4, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -38309,7 +38309,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To4_6) {
   EXPECT_EQ(path[12].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To4_7) {
+TEST_F(SolverTest, SolveMazeFrom0_6To4_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {4, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -38340,7 +38340,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To4_7) {
   EXPECT_EQ(path[11].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To4_8) {
+TEST_F(SolverTest, SolveMazeFrom0_6To4_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {4, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -38369,7 +38369,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To4_8) {
   EXPECT_EQ(path[10].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To4_9) {
+TEST_F(SolverTest, SolveMazeFrom0_6To4_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {4, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -38712,7 +38712,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To4_9) {
   EXPECT_EQ(path[167].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To5_0) {
+TEST_F(SolverTest, SolveMazeFrom0_6To5_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {5, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -38743,7 +38743,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To5_0) {
   EXPECT_EQ(path[11].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To5_1) {
+TEST_F(SolverTest, SolveMazeFrom0_6To5_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {5, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -38776,7 +38776,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To5_1) {
   EXPECT_EQ(path[12].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To5_2) {
+TEST_F(SolverTest, SolveMazeFrom0_6To5_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {5, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -38803,7 +38803,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To5_2) {
   EXPECT_EQ(path[9].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To5_3) {
+TEST_F(SolverTest, SolveMazeFrom0_6To5_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {5, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -38832,7 +38832,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To5_3) {
   EXPECT_EQ(path[10].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To5_4) {
+TEST_F(SolverTest, SolveMazeFrom0_6To5_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {5, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -38859,7 +38859,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To5_4) {
   EXPECT_EQ(path[9].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To5_5) {
+TEST_F(SolverTest, SolveMazeFrom0_6To5_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {5, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -38884,7 +38884,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To5_5) {
   EXPECT_EQ(path[8].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To5_6) {
+TEST_F(SolverTest, SolveMazeFrom0_6To5_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {5, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -38911,7 +38911,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To5_6) {
   EXPECT_EQ(path[9].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To5_7) {
+TEST_F(SolverTest, SolveMazeFrom0_6To5_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {5, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -38940,7 +38940,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To5_7) {
   EXPECT_EQ(path[10].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To5_8) {
+TEST_F(SolverTest, SolveMazeFrom0_6To5_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {5, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -38971,7 +38971,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To5_8) {
   EXPECT_EQ(path[11].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To5_9) {
+TEST_F(SolverTest, SolveMazeFrom0_6To5_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {5, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -39312,7 +39312,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To5_9) {
   EXPECT_EQ(path[166].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To6_0) {
+TEST_F(SolverTest, SolveMazeFrom0_6To6_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {6, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -39345,7 +39345,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To6_0) {
   EXPECT_EQ(path[12].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To6_1) {
+TEST_F(SolverTest, SolveMazeFrom0_6To6_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {6, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -39380,7 +39380,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To6_1) {
   EXPECT_EQ(path[13].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To6_2) {
+TEST_F(SolverTest, SolveMazeFrom0_6To6_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {6, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -39409,7 +39409,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To6_2) {
   EXPECT_EQ(path[10].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To6_3) {
+TEST_F(SolverTest, SolveMazeFrom0_6To6_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {6, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -39440,7 +39440,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To6_3) {
   EXPECT_EQ(path[11].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To6_4) {
+TEST_F(SolverTest, SolveMazeFrom0_6To6_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {6, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -39469,7 +39469,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To6_4) {
   EXPECT_EQ(path[10].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To6_5) {
+TEST_F(SolverTest, SolveMazeFrom0_6To6_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {6, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -39496,7 +39496,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To6_5) {
   EXPECT_EQ(path[9].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To6_6) {
+TEST_F(SolverTest, SolveMazeFrom0_6To6_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {6, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -39525,7 +39525,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To6_6) {
   EXPECT_EQ(path[10].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To6_7) {
+TEST_F(SolverTest, SolveMazeFrom0_6To6_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {6, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -39556,7 +39556,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To6_7) {
   EXPECT_EQ(path[11].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To6_8) {
+TEST_F(SolverTest, SolveMazeFrom0_6To6_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {6, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -39589,7 +39589,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To6_8) {
   EXPECT_EQ(path[12].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To6_9) {
+TEST_F(SolverTest, SolveMazeFrom0_6To6_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {6, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -39928,7 +39928,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To6_9) {
   EXPECT_EQ(path[165].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To7_0) {
+TEST_F(SolverTest, SolveMazeFrom0_6To7_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {7, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -39963,7 +39963,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To7_0) {
   EXPECT_EQ(path[13].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To7_1) {
+TEST_F(SolverTest, SolveMazeFrom0_6To7_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {7, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -39996,7 +39996,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To7_1) {
   EXPECT_EQ(path[12].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To7_2) {
+TEST_F(SolverTest, SolveMazeFrom0_6To7_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {7, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -40027,7 +40027,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To7_2) {
   EXPECT_EQ(path[11].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To7_3) {
+TEST_F(SolverTest, SolveMazeFrom0_6To7_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {7, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -40072,7 +40072,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To7_3) {
   EXPECT_EQ(path[18].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To7_4) {
+TEST_F(SolverTest, SolveMazeFrom0_6To7_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {7, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -40115,7 +40115,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To7_4) {
   EXPECT_EQ(path[17].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To7_5) {
+TEST_F(SolverTest, SolveMazeFrom0_6To7_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {7, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -40152,7 +40152,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To7_5) {
   EXPECT_EQ(path[14].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To7_6) {
+TEST_F(SolverTest, SolveMazeFrom0_6To7_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {7, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -40187,7 +40187,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To7_6) {
   EXPECT_EQ(path[13].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To7_7) {
+TEST_F(SolverTest, SolveMazeFrom0_6To7_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {7, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -40220,7 +40220,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To7_7) {
   EXPECT_EQ(path[12].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To7_8) {
+TEST_F(SolverTest, SolveMazeFrom0_6To7_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {7, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -40255,7 +40255,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To7_8) {
   EXPECT_EQ(path[13].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To7_9) {
+TEST_F(SolverTest, SolveMazeFrom0_6To7_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {7, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -40596,7 +40596,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To7_9) {
   EXPECT_EQ(path[166].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To8_0) {
+TEST_F(SolverTest, SolveMazeFrom0_6To8_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {8, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -40637,7 +40637,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To8_0) {
   EXPECT_EQ(path[16].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To8_1) {
+TEST_F(SolverTest, SolveMazeFrom0_6To8_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {8, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -40672,7 +40672,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To8_1) {
   EXPECT_EQ(path[13].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To8_2) {
+TEST_F(SolverTest, SolveMazeFrom0_6To8_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {8, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -40721,7 +40721,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To8_2) {
   EXPECT_EQ(path[20].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To8_3) {
+TEST_F(SolverTest, SolveMazeFrom0_6To8_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {8, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -40768,7 +40768,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To8_3) {
   EXPECT_EQ(path[19].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To8_4) {
+TEST_F(SolverTest, SolveMazeFrom0_6To8_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {8, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -40809,7 +40809,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To8_4) {
   EXPECT_EQ(path[16].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To8_5) {
+TEST_F(SolverTest, SolveMazeFrom0_6To8_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {8, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -40848,7 +40848,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To8_5) {
   EXPECT_EQ(path[15].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To8_6) {
+TEST_F(SolverTest, SolveMazeFrom0_6To8_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {8, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -40929,7 +40929,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To8_6) {
   EXPECT_EQ(path[36].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To8_7) {
+TEST_F(SolverTest, SolveMazeFrom0_6To8_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {8, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -41012,7 +41012,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To8_7) {
   EXPECT_EQ(path[37].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To8_8) {
+TEST_F(SolverTest, SolveMazeFrom0_6To8_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {8, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -41349,7 +41349,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To8_8) {
   EXPECT_EQ(path[164].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To8_9) {
+TEST_F(SolverTest, SolveMazeFrom0_6To8_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {8, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -41688,7 +41688,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To8_9) {
   EXPECT_EQ(path[165].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To9_0) {
+TEST_F(SolverTest, SolveMazeFrom0_6To9_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {9, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -41727,7 +41727,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To9_0) {
   EXPECT_EQ(path[15].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To9_1) {
+TEST_F(SolverTest, SolveMazeFrom0_6To9_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {9, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -41764,7 +41764,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To9_1) {
   EXPECT_EQ(path[14].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To9_2) {
+TEST_F(SolverTest, SolveMazeFrom0_6To9_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {9, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -41815,7 +41815,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To9_2) {
   EXPECT_EQ(path[21].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To9_3) {
+TEST_F(SolverTest, SolveMazeFrom0_6To9_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {9, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -41864,7 +41864,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To9_3) {
   EXPECT_EQ(path[20].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To9_4) {
+TEST_F(SolverTest, SolveMazeFrom0_6To9_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {9, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -41915,7 +41915,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To9_4) {
   EXPECT_EQ(path[21].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To9_5) {
+TEST_F(SolverTest, SolveMazeFrom0_6To9_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {9, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -41996,7 +41996,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To9_5) {
   EXPECT_EQ(path[36].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To9_6) {
+TEST_F(SolverTest, SolveMazeFrom0_6To9_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {9, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -42075,7 +42075,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To9_6) {
   EXPECT_EQ(path[35].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To9_7) {
+TEST_F(SolverTest, SolveMazeFrom0_6To9_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {9, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -42156,7 +42156,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To9_7) {
   EXPECT_EQ(path[36].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To9_8) {
+TEST_F(SolverTest, SolveMazeFrom0_6To9_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {9, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -42491,7 +42491,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To9_8) {
   EXPECT_EQ(path[163].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_6To9_9) {
+TEST_F(SolverTest, SolveMazeFrom0_6To9_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 6}, {9, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -42828,7 +42828,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_6To9_9) {
   EXPECT_EQ(path[164].second, 6);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To0_0) {
+TEST_F(SolverTest, SolveMazeFrom0_7To0_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {0, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -42867,7 +42867,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To0_0) {
   EXPECT_EQ(path[15].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To0_1) {
+TEST_F(SolverTest, SolveMazeFrom0_7To0_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {0, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -42908,7 +42908,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To0_1) {
   EXPECT_EQ(path[16].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To0_2) {
+TEST_F(SolverTest, SolveMazeFrom0_7To0_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {0, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -42927,7 +42927,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To0_2) {
   EXPECT_EQ(path[5].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To0_3) {
+TEST_F(SolverTest, SolveMazeFrom0_7To0_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {0, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -42944,7 +42944,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To0_3) {
   EXPECT_EQ(path[4].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To0_4) {
+TEST_F(SolverTest, SolveMazeFrom0_7To0_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {0, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -42959,7 +42959,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To0_4) {
   EXPECT_EQ(path[3].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To0_5) {
+TEST_F(SolverTest, SolveMazeFrom0_7To0_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {0, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -42972,7 +42972,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To0_5) {
   EXPECT_EQ(path[2].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To0_6) {
+TEST_F(SolverTest, SolveMazeFrom0_7To0_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {0, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -42983,7 +42983,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To0_6) {
   EXPECT_EQ(path[1].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To0_7) {
+TEST_F(SolverTest, SolveMazeFrom0_7To0_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {0, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -42992,7 +42992,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To0_7) {
   EXPECT_EQ(path[0].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To0_8) {
+TEST_F(SolverTest, SolveMazeFrom0_7To0_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {0, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -43027,7 +43027,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To0_8) {
   EXPECT_EQ(path[13].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To0_9) {
+TEST_F(SolverTest, SolveMazeFrom0_7To0_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {0, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -43064,7 +43064,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To0_9) {
   EXPECT_EQ(path[14].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To1_0) {
+TEST_F(SolverTest, SolveMazeFrom0_7To1_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {1, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -43101,7 +43101,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To1_0) {
   EXPECT_EQ(path[14].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To1_1) {
+TEST_F(SolverTest, SolveMazeFrom0_7To1_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {1, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -43140,7 +43140,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To1_1) {
   EXPECT_EQ(path[15].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To1_2) {
+TEST_F(SolverTest, SolveMazeFrom0_7To1_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {1, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -43161,7 +43161,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To1_2) {
   EXPECT_EQ(path[6].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To1_3) {
+TEST_F(SolverTest, SolveMazeFrom0_7To1_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {1, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -43180,7 +43180,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To1_3) {
   EXPECT_EQ(path[5].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To1_4) {
+TEST_F(SolverTest, SolveMazeFrom0_7To1_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {1, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -43197,7 +43197,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To1_4) {
   EXPECT_EQ(path[4].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To1_5) {
+TEST_F(SolverTest, SolveMazeFrom0_7To1_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {1, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -43220,7 +43220,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To1_5) {
   EXPECT_EQ(path[7].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To1_6) {
+TEST_F(SolverTest, SolveMazeFrom0_7To1_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {1, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -43253,7 +43253,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To1_6) {
   EXPECT_EQ(path[12].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To1_7) {
+TEST_F(SolverTest, SolveMazeFrom0_7To1_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {1, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -43284,7 +43284,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To1_7) {
   EXPECT_EQ(path[11].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To1_8) {
+TEST_F(SolverTest, SolveMazeFrom0_7To1_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {1, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -43317,7 +43317,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To1_8) {
   EXPECT_EQ(path[12].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To1_9) {
+TEST_F(SolverTest, SolveMazeFrom0_7To1_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {1, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -43352,7 +43352,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To1_9) {
   EXPECT_EQ(path[13].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To2_0) {
+TEST_F(SolverTest, SolveMazeFrom0_7To2_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {2, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -43387,7 +43387,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To2_0) {
   EXPECT_EQ(path[13].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To2_1) {
+TEST_F(SolverTest, SolveMazeFrom0_7To2_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {2, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -43424,7 +43424,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To2_1) {
   EXPECT_EQ(path[14].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To2_2) {
+TEST_F(SolverTest, SolveMazeFrom0_7To2_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {2, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -43459,7 +43459,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To2_2) {
   EXPECT_EQ(path[13].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To2_3) {
+TEST_F(SolverTest, SolveMazeFrom0_7To2_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {2, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -43496,7 +43496,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To2_3) {
   EXPECT_EQ(path[14].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To2_4) {
+TEST_F(SolverTest, SolveMazeFrom0_7To2_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {2, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -43515,7 +43515,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To2_4) {
   EXPECT_EQ(path[5].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To2_5) {
+TEST_F(SolverTest, SolveMazeFrom0_7To2_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {2, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -43536,7 +43536,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To2_5) {
   EXPECT_EQ(path[6].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To2_6) {
+TEST_F(SolverTest, SolveMazeFrom0_7To2_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {2, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -43563,7 +43563,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To2_6) {
   EXPECT_EQ(path[9].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To2_7) {
+TEST_F(SolverTest, SolveMazeFrom0_7To2_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {2, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -43592,7 +43592,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To2_7) {
   EXPECT_EQ(path[10].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To2_8) {
+TEST_F(SolverTest, SolveMazeFrom0_7To2_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {2, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -43623,7 +43623,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To2_8) {
   EXPECT_EQ(path[11].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To2_9) {
+TEST_F(SolverTest, SolveMazeFrom0_7To2_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {2, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -43660,7 +43660,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To2_9) {
   EXPECT_EQ(path[14].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To3_0) {
+TEST_F(SolverTest, SolveMazeFrom0_7To3_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {3, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -43693,7 +43693,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To3_0) {
   EXPECT_EQ(path[12].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To3_1) {
+TEST_F(SolverTest, SolveMazeFrom0_7To3_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {3, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -43724,7 +43724,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To3_1) {
   EXPECT_EQ(path[11].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To3_2) {
+TEST_F(SolverTest, SolveMazeFrom0_7To3_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {3, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -43757,7 +43757,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To3_2) {
   EXPECT_EQ(path[12].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To3_3) {
+TEST_F(SolverTest, SolveMazeFrom0_7To3_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {3, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -43780,7 +43780,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To3_3) {
   EXPECT_EQ(path[7].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To3_4) {
+TEST_F(SolverTest, SolveMazeFrom0_7To3_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {3, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -43801,7 +43801,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To3_4) {
   EXPECT_EQ(path[6].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To3_5) {
+TEST_F(SolverTest, SolveMazeFrom0_7To3_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {3, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -43824,7 +43824,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To3_5) {
   EXPECT_EQ(path[7].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To3_6) {
+TEST_F(SolverTest, SolveMazeFrom0_7To3_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {3, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -43849,7 +43849,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To3_6) {
   EXPECT_EQ(path[8].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To3_7) {
+TEST_F(SolverTest, SolveMazeFrom0_7To3_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {3, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -43876,7 +43876,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To3_7) {
   EXPECT_EQ(path[9].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To3_8) {
+TEST_F(SolverTest, SolveMazeFrom0_7To3_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {3, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -43905,7 +43905,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To3_8) {
   EXPECT_EQ(path[10].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To3_9) {
+TEST_F(SolverTest, SolveMazeFrom0_7To3_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {3, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -44256,7 +44256,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To3_9) {
   EXPECT_EQ(path[171].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To4_0) {
+TEST_F(SolverTest, SolveMazeFrom0_7To4_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {4, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -44287,7 +44287,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To4_0) {
   EXPECT_EQ(path[11].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To4_1) {
+TEST_F(SolverTest, SolveMazeFrom0_7To4_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {4, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -44316,7 +44316,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To4_1) {
   EXPECT_EQ(path[10].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To4_2) {
+TEST_F(SolverTest, SolveMazeFrom0_7To4_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {4, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -44343,7 +44343,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To4_2) {
   EXPECT_EQ(path[9].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To4_3) {
+TEST_F(SolverTest, SolveMazeFrom0_7To4_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {4, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -44368,7 +44368,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To4_3) {
   EXPECT_EQ(path[8].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To4_4) {
+TEST_F(SolverTest, SolveMazeFrom0_7To4_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {4, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -44391,7 +44391,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To4_4) {
   EXPECT_EQ(path[7].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To4_5) {
+TEST_F(SolverTest, SolveMazeFrom0_7To4_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {4, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -44416,7 +44416,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To4_5) {
   EXPECT_EQ(path[8].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To4_6) {
+TEST_F(SolverTest, SolveMazeFrom0_7To4_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {4, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -44451,7 +44451,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To4_6) {
   EXPECT_EQ(path[13].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To4_7) {
+TEST_F(SolverTest, SolveMazeFrom0_7To4_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {4, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -44484,7 +44484,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To4_7) {
   EXPECT_EQ(path[12].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To4_8) {
+TEST_F(SolverTest, SolveMazeFrom0_7To4_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {4, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -44515,7 +44515,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To4_8) {
   EXPECT_EQ(path[11].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To4_9) {
+TEST_F(SolverTest, SolveMazeFrom0_7To4_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {4, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -44860,7 +44860,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To4_9) {
   EXPECT_EQ(path[168].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To5_0) {
+TEST_F(SolverTest, SolveMazeFrom0_7To5_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {5, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -44893,7 +44893,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To5_0) {
   EXPECT_EQ(path[12].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To5_1) {
+TEST_F(SolverTest, SolveMazeFrom0_7To5_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {5, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -44928,7 +44928,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To5_1) {
   EXPECT_EQ(path[13].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To5_2) {
+TEST_F(SolverTest, SolveMazeFrom0_7To5_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {5, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -44957,7 +44957,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To5_2) {
   EXPECT_EQ(path[10].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To5_3) {
+TEST_F(SolverTest, SolveMazeFrom0_7To5_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {5, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -44988,7 +44988,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To5_3) {
   EXPECT_EQ(path[11].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To5_4) {
+TEST_F(SolverTest, SolveMazeFrom0_7To5_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {5, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -45017,7 +45017,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To5_4) {
   EXPECT_EQ(path[10].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To5_5) {
+TEST_F(SolverTest, SolveMazeFrom0_7To5_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {5, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -45044,7 +45044,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To5_5) {
   EXPECT_EQ(path[9].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To5_6) {
+TEST_F(SolverTest, SolveMazeFrom0_7To5_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {5, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -45073,7 +45073,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To5_6) {
   EXPECT_EQ(path[10].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To5_7) {
+TEST_F(SolverTest, SolveMazeFrom0_7To5_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {5, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -45104,7 +45104,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To5_7) {
   EXPECT_EQ(path[11].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To5_8) {
+TEST_F(SolverTest, SolveMazeFrom0_7To5_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {5, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -45137,7 +45137,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To5_8) {
   EXPECT_EQ(path[12].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To5_9) {
+TEST_F(SolverTest, SolveMazeFrom0_7To5_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {5, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -45480,7 +45480,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To5_9) {
   EXPECT_EQ(path[167].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To6_0) {
+TEST_F(SolverTest, SolveMazeFrom0_7To6_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {6, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -45515,7 +45515,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To6_0) {
   EXPECT_EQ(path[13].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To6_1) {
+TEST_F(SolverTest, SolveMazeFrom0_7To6_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {6, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -45552,7 +45552,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To6_1) {
   EXPECT_EQ(path[14].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To6_2) {
+TEST_F(SolverTest, SolveMazeFrom0_7To6_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {6, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -45583,7 +45583,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To6_2) {
   EXPECT_EQ(path[11].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To6_3) {
+TEST_F(SolverTest, SolveMazeFrom0_7To6_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {6, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -45616,7 +45616,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To6_3) {
   EXPECT_EQ(path[12].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To6_4) {
+TEST_F(SolverTest, SolveMazeFrom0_7To6_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {6, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -45647,7 +45647,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To6_4) {
   EXPECT_EQ(path[11].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To6_5) {
+TEST_F(SolverTest, SolveMazeFrom0_7To6_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {6, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -45676,7 +45676,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To6_5) {
   EXPECT_EQ(path[10].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To6_6) {
+TEST_F(SolverTest, SolveMazeFrom0_7To6_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {6, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -45707,7 +45707,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To6_6) {
   EXPECT_EQ(path[11].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To6_7) {
+TEST_F(SolverTest, SolveMazeFrom0_7To6_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {6, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -45740,7 +45740,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To6_7) {
   EXPECT_EQ(path[12].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To6_8) {
+TEST_F(SolverTest, SolveMazeFrom0_7To6_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {6, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -45775,7 +45775,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To6_8) {
   EXPECT_EQ(path[13].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To6_9) {
+TEST_F(SolverTest, SolveMazeFrom0_7To6_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {6, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -46116,7 +46116,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To6_9) {
   EXPECT_EQ(path[166].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To7_0) {
+TEST_F(SolverTest, SolveMazeFrom0_7To7_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {7, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -46153,7 +46153,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To7_0) {
   EXPECT_EQ(path[14].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To7_1) {
+TEST_F(SolverTest, SolveMazeFrom0_7To7_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {7, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -46188,7 +46188,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To7_1) {
   EXPECT_EQ(path[13].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To7_2) {
+TEST_F(SolverTest, SolveMazeFrom0_7To7_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {7, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -46221,7 +46221,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To7_2) {
   EXPECT_EQ(path[12].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To7_3) {
+TEST_F(SolverTest, SolveMazeFrom0_7To7_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {7, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -46268,7 +46268,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To7_3) {
   EXPECT_EQ(path[19].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To7_4) {
+TEST_F(SolverTest, SolveMazeFrom0_7To7_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {7, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -46313,7 +46313,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To7_4) {
   EXPECT_EQ(path[18].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To7_5) {
+TEST_F(SolverTest, SolveMazeFrom0_7To7_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {7, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -46352,7 +46352,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To7_5) {
   EXPECT_EQ(path[15].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To7_6) {
+TEST_F(SolverTest, SolveMazeFrom0_7To7_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {7, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -46389,7 +46389,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To7_6) {
   EXPECT_EQ(path[14].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To7_7) {
+TEST_F(SolverTest, SolveMazeFrom0_7To7_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {7, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -46424,7 +46424,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To7_7) {
   EXPECT_EQ(path[13].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To7_8) {
+TEST_F(SolverTest, SolveMazeFrom0_7To7_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {7, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -46461,7 +46461,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To7_8) {
   EXPECT_EQ(path[14].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To7_9) {
+TEST_F(SolverTest, SolveMazeFrom0_7To7_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {7, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -46804,7 +46804,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To7_9) {
   EXPECT_EQ(path[167].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To8_0) {
+TEST_F(SolverTest, SolveMazeFrom0_7To8_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {8, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -46847,7 +46847,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To8_0) {
   EXPECT_EQ(path[17].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To8_1) {
+TEST_F(SolverTest, SolveMazeFrom0_7To8_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {8, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -46884,7 +46884,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To8_1) {
   EXPECT_EQ(path[14].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To8_2) {
+TEST_F(SolverTest, SolveMazeFrom0_7To8_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {8, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -46935,7 +46935,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To8_2) {
   EXPECT_EQ(path[21].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To8_3) {
+TEST_F(SolverTest, SolveMazeFrom0_7To8_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {8, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -46984,7 +46984,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To8_3) {
   EXPECT_EQ(path[20].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To8_4) {
+TEST_F(SolverTest, SolveMazeFrom0_7To8_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {8, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -47027,7 +47027,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To8_4) {
   EXPECT_EQ(path[17].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To8_5) {
+TEST_F(SolverTest, SolveMazeFrom0_7To8_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {8, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -47068,7 +47068,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To8_5) {
   EXPECT_EQ(path[16].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To8_6) {
+TEST_F(SolverTest, SolveMazeFrom0_7To8_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {8, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -47151,7 +47151,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To8_6) {
   EXPECT_EQ(path[37].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To8_7) {
+TEST_F(SolverTest, SolveMazeFrom0_7To8_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {8, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -47236,7 +47236,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To8_7) {
   EXPECT_EQ(path[38].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To8_8) {
+TEST_F(SolverTest, SolveMazeFrom0_7To8_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {8, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -47575,7 +47575,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To8_8) {
   EXPECT_EQ(path[165].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To8_9) {
+TEST_F(SolverTest, SolveMazeFrom0_7To8_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {8, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -47916,7 +47916,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To8_9) {
   EXPECT_EQ(path[166].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To9_0) {
+TEST_F(SolverTest, SolveMazeFrom0_7To9_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {9, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -47957,7 +47957,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To9_0) {
   EXPECT_EQ(path[16].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To9_1) {
+TEST_F(SolverTest, SolveMazeFrom0_7To9_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {9, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -47996,7 +47996,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To9_1) {
   EXPECT_EQ(path[15].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To9_2) {
+TEST_F(SolverTest, SolveMazeFrom0_7To9_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {9, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -48049,7 +48049,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To9_2) {
   EXPECT_EQ(path[22].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To9_3) {
+TEST_F(SolverTest, SolveMazeFrom0_7To9_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {9, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -48100,7 +48100,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To9_3) {
   EXPECT_EQ(path[21].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To9_4) {
+TEST_F(SolverTest, SolveMazeFrom0_7To9_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {9, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -48153,7 +48153,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To9_4) {
   EXPECT_EQ(path[22].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To9_5) {
+TEST_F(SolverTest, SolveMazeFrom0_7To9_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {9, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -48236,7 +48236,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To9_5) {
   EXPECT_EQ(path[37].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To9_6) {
+TEST_F(SolverTest, SolveMazeFrom0_7To9_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {9, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -48317,7 +48317,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To9_6) {
   EXPECT_EQ(path[36].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To9_7) {
+TEST_F(SolverTest, SolveMazeFrom0_7To9_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {9, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -48400,7 +48400,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To9_7) {
   EXPECT_EQ(path[37].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To9_8) {
+TEST_F(SolverTest, SolveMazeFrom0_7To9_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {9, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -48737,7 +48737,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To9_8) {
   EXPECT_EQ(path[164].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_7To9_9) {
+TEST_F(SolverTest, SolveMazeFrom0_7To9_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 7}, {9, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -49076,7 +49076,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_7To9_9) {
   EXPECT_EQ(path[165].second, 7);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To0_0) {
+TEST_F(SolverTest, SolveMazeFrom0_8To0_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {0, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -49121,7 +49121,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To0_0) {
   EXPECT_EQ(path[18].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To0_1) {
+TEST_F(SolverTest, SolveMazeFrom0_8To0_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {0, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -49168,7 +49168,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To0_1) {
   EXPECT_EQ(path[19].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To0_2) {
+TEST_F(SolverTest, SolveMazeFrom0_8To0_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {0, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -49201,7 +49201,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To0_2) {
   EXPECT_EQ(path[12].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To0_3) {
+TEST_F(SolverTest, SolveMazeFrom0_8To0_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {0, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -49232,7 +49232,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To0_3) {
   EXPECT_EQ(path[11].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To0_4) {
+TEST_F(SolverTest, SolveMazeFrom0_8To0_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {0, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -49261,7 +49261,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To0_4) {
   EXPECT_EQ(path[10].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To0_5) {
+TEST_F(SolverTest, SolveMazeFrom0_8To0_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {0, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -49292,7 +49292,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To0_5) {
   EXPECT_EQ(path[11].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To0_6) {
+TEST_F(SolverTest, SolveMazeFrom0_8To0_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {0, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -49325,7 +49325,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To0_6) {
   EXPECT_EQ(path[12].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To0_7) {
+TEST_F(SolverTest, SolveMazeFrom0_8To0_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {0, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -49360,7 +49360,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To0_7) {
   EXPECT_EQ(path[13].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To0_8) {
+TEST_F(SolverTest, SolveMazeFrom0_8To0_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {0, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -49369,7 +49369,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To0_8) {
   EXPECT_EQ(path[0].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To0_9) {
+TEST_F(SolverTest, SolveMazeFrom0_8To0_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {0, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -49380,7 +49380,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To0_9) {
   EXPECT_EQ(path[1].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To1_0) {
+TEST_F(SolverTest, SolveMazeFrom0_8To1_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {1, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -49423,7 +49423,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To1_0) {
   EXPECT_EQ(path[17].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To1_1) {
+TEST_F(SolverTest, SolveMazeFrom0_8To1_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {1, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -49468,7 +49468,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To1_1) {
   EXPECT_EQ(path[18].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To1_2) {
+TEST_F(SolverTest, SolveMazeFrom0_8To1_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {1, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -49503,7 +49503,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To1_2) {
   EXPECT_EQ(path[13].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To1_3) {
+TEST_F(SolverTest, SolveMazeFrom0_8To1_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {1, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -49536,7 +49536,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To1_3) {
   EXPECT_EQ(path[12].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To1_4) {
+TEST_F(SolverTest, SolveMazeFrom0_8To1_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {1, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -49563,7 +49563,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To1_4) {
   EXPECT_EQ(path[9].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To1_5) {
+TEST_F(SolverTest, SolveMazeFrom0_8To1_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {1, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -49588,7 +49588,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To1_5) {
   EXPECT_EQ(path[8].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To1_6) {
+TEST_F(SolverTest, SolveMazeFrom0_8To1_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {1, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -49611,7 +49611,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To1_6) {
   EXPECT_EQ(path[7].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To1_7) {
+TEST_F(SolverTest, SolveMazeFrom0_8To1_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {1, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -49632,7 +49632,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To1_7) {
   EXPECT_EQ(path[6].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To1_8) {
+TEST_F(SolverTest, SolveMazeFrom0_8To1_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {1, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -49643,7 +49643,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To1_8) {
   EXPECT_EQ(path[1].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To1_9) {
+TEST_F(SolverTest, SolveMazeFrom0_8To1_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {1, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -49656,7 +49656,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To1_9) {
   EXPECT_EQ(path[2].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To2_0) {
+TEST_F(SolverTest, SolveMazeFrom0_8To2_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {2, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -49697,7 +49697,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To2_0) {
   EXPECT_EQ(path[16].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To2_1) {
+TEST_F(SolverTest, SolveMazeFrom0_8To2_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {2, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -49740,7 +49740,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To2_1) {
   EXPECT_EQ(path[17].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To2_2) {
+TEST_F(SolverTest, SolveMazeFrom0_8To2_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {2, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -49781,7 +49781,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To2_2) {
   EXPECT_EQ(path[16].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To2_3) {
+TEST_F(SolverTest, SolveMazeFrom0_8To2_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {2, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -49824,7 +49824,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To2_3) {
   EXPECT_EQ(path[17].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To2_4) {
+TEST_F(SolverTest, SolveMazeFrom0_8To2_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {2, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -49849,7 +49849,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To2_4) {
   EXPECT_EQ(path[8].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To2_5) {
+TEST_F(SolverTest, SolveMazeFrom0_8To2_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {2, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -49872,7 +49872,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To2_5) {
   EXPECT_EQ(path[7].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To2_6) {
+TEST_F(SolverTest, SolveMazeFrom0_8To2_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {2, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -49893,7 +49893,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To2_6) {
   EXPECT_EQ(path[6].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To2_7) {
+TEST_F(SolverTest, SolveMazeFrom0_8To2_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {2, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -49912,7 +49912,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To2_7) {
   EXPECT_EQ(path[5].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To2_8) {
+TEST_F(SolverTest, SolveMazeFrom0_8To2_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {2, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -49925,7 +49925,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To2_8) {
   EXPECT_EQ(path[2].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To2_9) {
+TEST_F(SolverTest, SolveMazeFrom0_8To2_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {2, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -49940,7 +49940,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To2_9) {
   EXPECT_EQ(path[3].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To3_0) {
+TEST_F(SolverTest, SolveMazeFrom0_8To3_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {3, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -49979,7 +49979,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To3_0) {
   EXPECT_EQ(path[15].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To3_1) {
+TEST_F(SolverTest, SolveMazeFrom0_8To3_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {3, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -50016,7 +50016,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To3_1) {
   EXPECT_EQ(path[14].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To3_2) {
+TEST_F(SolverTest, SolveMazeFrom0_8To3_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {3, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -50055,7 +50055,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To3_2) {
   EXPECT_EQ(path[15].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To3_3) {
+TEST_F(SolverTest, SolveMazeFrom0_8To3_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {3, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -50084,7 +50084,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To3_3) {
   EXPECT_EQ(path[10].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To3_4) {
+TEST_F(SolverTest, SolveMazeFrom0_8To3_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {3, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -50111,7 +50111,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To3_4) {
   EXPECT_EQ(path[9].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To3_5) {
+TEST_F(SolverTest, SolveMazeFrom0_8To3_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {3, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -50132,7 +50132,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To3_5) {
   EXPECT_EQ(path[6].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To3_6) {
+TEST_F(SolverTest, SolveMazeFrom0_8To3_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {3, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -50151,7 +50151,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To3_6) {
   EXPECT_EQ(path[5].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To3_7) {
+TEST_F(SolverTest, SolveMazeFrom0_8To3_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {3, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -50168,7 +50168,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To3_7) {
   EXPECT_EQ(path[4].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To3_8) {
+TEST_F(SolverTest, SolveMazeFrom0_8To3_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {3, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -50183,7 +50183,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To3_8) {
   EXPECT_EQ(path[3].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To3_9) {
+TEST_F(SolverTest, SolveMazeFrom0_8To3_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {3, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -50540,7 +50540,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To3_9) {
   EXPECT_EQ(path[174].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To4_0) {
+TEST_F(SolverTest, SolveMazeFrom0_8To4_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {4, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -50577,7 +50577,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To4_0) {
   EXPECT_EQ(path[14].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To4_1) {
+TEST_F(SolverTest, SolveMazeFrom0_8To4_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {4, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -50612,7 +50612,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To4_1) {
   EXPECT_EQ(path[13].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To4_2) {
+TEST_F(SolverTest, SolveMazeFrom0_8To4_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {4, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -50645,7 +50645,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To4_2) {
   EXPECT_EQ(path[12].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To4_3) {
+TEST_F(SolverTest, SolveMazeFrom0_8To4_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {4, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -50676,7 +50676,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To4_3) {
   EXPECT_EQ(path[11].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To4_4) {
+TEST_F(SolverTest, SolveMazeFrom0_8To4_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {4, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -50705,7 +50705,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To4_4) {
   EXPECT_EQ(path[10].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To4_5) {
+TEST_F(SolverTest, SolveMazeFrom0_8To4_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {4, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -50728,7 +50728,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To4_5) {
   EXPECT_EQ(path[7].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To4_6) {
+TEST_F(SolverTest, SolveMazeFrom0_8To4_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {4, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -50761,7 +50761,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To4_6) {
   EXPECT_EQ(path[12].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To4_7) {
+TEST_F(SolverTest, SolveMazeFrom0_8To4_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {4, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -50792,7 +50792,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To4_7) {
   EXPECT_EQ(path[11].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To4_8) {
+TEST_F(SolverTest, SolveMazeFrom0_8To4_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {4, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -50809,7 +50809,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To4_8) {
   EXPECT_EQ(path[4].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To4_9) {
+TEST_F(SolverTest, SolveMazeFrom0_8To4_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {4, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -51160,7 +51160,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To4_9) {
   EXPECT_EQ(path[171].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To5_0) {
+TEST_F(SolverTest, SolveMazeFrom0_8To5_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {5, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -51199,7 +51199,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To5_0) {
   EXPECT_EQ(path[15].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To5_1) {
+TEST_F(SolverTest, SolveMazeFrom0_8To5_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {5, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -51240,7 +51240,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To5_1) {
   EXPECT_EQ(path[16].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To5_2) {
+TEST_F(SolverTest, SolveMazeFrom0_8To5_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {5, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -51275,7 +51275,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To5_2) {
   EXPECT_EQ(path[13].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To5_3) {
+TEST_F(SolverTest, SolveMazeFrom0_8To5_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {5, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -51312,7 +51312,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To5_3) {
   EXPECT_EQ(path[14].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To5_4) {
+TEST_F(SolverTest, SolveMazeFrom0_8To5_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {5, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -51339,7 +51339,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To5_4) {
   EXPECT_EQ(path[9].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To5_5) {
+TEST_F(SolverTest, SolveMazeFrom0_8To5_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {5, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -51364,7 +51364,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To5_5) {
   EXPECT_EQ(path[8].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To5_6) {
+TEST_F(SolverTest, SolveMazeFrom0_8To5_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {5, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -51391,7 +51391,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To5_6) {
   EXPECT_EQ(path[9].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To5_7) {
+TEST_F(SolverTest, SolveMazeFrom0_8To5_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {5, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -51420,7 +51420,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To5_7) {
   EXPECT_EQ(path[10].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To5_8) {
+TEST_F(SolverTest, SolveMazeFrom0_8To5_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {5, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -51451,7 +51451,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To5_8) {
   EXPECT_EQ(path[11].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To5_9) {
+TEST_F(SolverTest, SolveMazeFrom0_8To5_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {5, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -51800,7 +51800,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To5_9) {
   EXPECT_EQ(path[170].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To6_0) {
+TEST_F(SolverTest, SolveMazeFrom0_8To6_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {6, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -51841,7 +51841,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To6_0) {
   EXPECT_EQ(path[16].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To6_1) {
+TEST_F(SolverTest, SolveMazeFrom0_8To6_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {6, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -51884,7 +51884,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To6_1) {
   EXPECT_EQ(path[17].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To6_2) {
+TEST_F(SolverTest, SolveMazeFrom0_8To6_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {6, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -51921,7 +51921,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To6_2) {
   EXPECT_EQ(path[14].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To6_3) {
+TEST_F(SolverTest, SolveMazeFrom0_8To6_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {6, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -51960,7 +51960,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To6_3) {
   EXPECT_EQ(path[15].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To6_4) {
+TEST_F(SolverTest, SolveMazeFrom0_8To6_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {6, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -51989,7 +51989,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To6_4) {
   EXPECT_EQ(path[10].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To6_5) {
+TEST_F(SolverTest, SolveMazeFrom0_8To6_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {6, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -52016,7 +52016,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To6_5) {
   EXPECT_EQ(path[9].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To6_6) {
+TEST_F(SolverTest, SolveMazeFrom0_8To6_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {6, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -52045,7 +52045,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To6_6) {
   EXPECT_EQ(path[10].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To6_7) {
+TEST_F(SolverTest, SolveMazeFrom0_8To6_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {6, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -52076,7 +52076,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To6_7) {
   EXPECT_EQ(path[11].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To6_8) {
+TEST_F(SolverTest, SolveMazeFrom0_8To6_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {6, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -52109,7 +52109,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To6_8) {
   EXPECT_EQ(path[12].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To6_9) {
+TEST_F(SolverTest, SolveMazeFrom0_8To6_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {6, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -52456,7 +52456,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To6_9) {
   EXPECT_EQ(path[169].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To7_0) {
+TEST_F(SolverTest, SolveMazeFrom0_8To7_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {7, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -52499,7 +52499,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To7_0) {
   EXPECT_EQ(path[17].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To7_1) {
+TEST_F(SolverTest, SolveMazeFrom0_8To7_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {7, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -52540,7 +52540,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To7_1) {
   EXPECT_EQ(path[16].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To7_2) {
+TEST_F(SolverTest, SolveMazeFrom0_8To7_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {7, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -52579,7 +52579,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To7_2) {
   EXPECT_EQ(path[15].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To7_3) {
+TEST_F(SolverTest, SolveMazeFrom0_8To7_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {7, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -52624,7 +52624,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To7_3) {
   EXPECT_EQ(path[18].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To7_4) {
+TEST_F(SolverTest, SolveMazeFrom0_8To7_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {7, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -52667,7 +52667,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To7_4) {
   EXPECT_EQ(path[17].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To7_5) {
+TEST_F(SolverTest, SolveMazeFrom0_8To7_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {7, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -52704,7 +52704,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To7_5) {
   EXPECT_EQ(path[14].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To7_6) {
+TEST_F(SolverTest, SolveMazeFrom0_8To7_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {7, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -52739,7 +52739,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To7_6) {
   EXPECT_EQ(path[13].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To7_7) {
+TEST_F(SolverTest, SolveMazeFrom0_8To7_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {7, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -52772,7 +52772,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To7_7) {
   EXPECT_EQ(path[12].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To7_8) {
+TEST_F(SolverTest, SolveMazeFrom0_8To7_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {7, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -52807,7 +52807,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To7_8) {
   EXPECT_EQ(path[13].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To7_9) {
+TEST_F(SolverTest, SolveMazeFrom0_8To7_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {7, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -53156,7 +53156,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To7_9) {
   EXPECT_EQ(path[170].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To8_0) {
+TEST_F(SolverTest, SolveMazeFrom0_8To8_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {8, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -53205,7 +53205,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To8_0) {
   EXPECT_EQ(path[20].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To8_1) {
+TEST_F(SolverTest, SolveMazeFrom0_8To8_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {8, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -53248,7 +53248,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To8_1) {
   EXPECT_EQ(path[17].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To8_2) {
+TEST_F(SolverTest, SolveMazeFrom0_8To8_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {8, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -53297,7 +53297,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To8_2) {
   EXPECT_EQ(path[20].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To8_3) {
+TEST_F(SolverTest, SolveMazeFrom0_8To8_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {8, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -53344,7 +53344,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To8_3) {
   EXPECT_EQ(path[19].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To8_4) {
+TEST_F(SolverTest, SolveMazeFrom0_8To8_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {8, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -53385,7 +53385,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To8_4) {
   EXPECT_EQ(path[16].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To8_5) {
+TEST_F(SolverTest, SolveMazeFrom0_8To8_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {8, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -53424,7 +53424,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To8_5) {
   EXPECT_EQ(path[15].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To8_6) {
+TEST_F(SolverTest, SolveMazeFrom0_8To8_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {8, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -53513,7 +53513,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To8_6) {
   EXPECT_EQ(path[40].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To8_7) {
+TEST_F(SolverTest, SolveMazeFrom0_8To8_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {8, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -53604,7 +53604,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To8_7) {
   EXPECT_EQ(path[41].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To8_8) {
+TEST_F(SolverTest, SolveMazeFrom0_8To8_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {8, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -53949,7 +53949,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To8_8) {
   EXPECT_EQ(path[168].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To8_9) {
+TEST_F(SolverTest, SolveMazeFrom0_8To8_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {8, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -54296,7 +54296,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To8_9) {
   EXPECT_EQ(path[169].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To9_0) {
+TEST_F(SolverTest, SolveMazeFrom0_8To9_0) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {9, 0});
   s21::Maze::Path path = facade_.maze().path();
@@ -54343,7 +54343,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To9_0) {
   EXPECT_EQ(path[19].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To9_1) {
+TEST_F(SolverTest, SolveMazeFrom0_8To9_1) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {9, 1});
   s21::Maze::Path path = facade_.maze().path();
@@ -54388,7 +54388,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To9_1) {
   EXPECT_EQ(path[18].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To9_2) {
+TEST_F(SolverTest, SolveMazeFrom0_8To9_2) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {9, 2});
   s21::Maze::Path path = facade_.maze().path();
@@ -54439,7 +54439,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To9_2) {
   EXPECT_EQ(path[21].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To9_3) {
+TEST_F(SolverTest, SolveMazeFrom0_8To9_3) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {9, 3});
   s21::Maze::Path path = facade_.maze().path();
@@ -54496,7 +54496,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To9_3) {
   EXPECT_EQ(path[24].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To9_4) {
+TEST_F(SolverTest, SolveMazeFrom0_8To9_4) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {9, 4});
   s21::Maze::Path path = facade_.maze().path();
@@ -54555,7 +54555,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To9_4) {
   EXPECT_EQ(path[25].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To9_5) {
+TEST_F(SolverTest, SolveMazeFrom0_8To9_5) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {9, 5});
   s21::Maze::Path path = facade_.maze().path();
@@ -54644,7 +54644,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To9_5) {
   EXPECT_EQ(path[40].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To9_6) {
+TEST_F(SolverTest, SolveMazeFrom0_8To9_6) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {9, 6});
   s21::Maze::Path path = facade_.maze().path();
@@ -54731,7 +54731,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To9_6) {
   EXPECT_EQ(path[39].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To9_7) {
+TEST_F(SolverTest, SolveMazeFrom0_8To9_7) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {9, 7});
   s21::Maze::Path path = facade_.maze().path();
@@ -54820,7 +54820,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To9_7) {
   EXPECT_EQ(path[40].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To9_8) {
+TEST_F(SolverTest, SolveMazeFrom0_8To9_8) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {9, 8});
   s21::Maze::Path path = facade_.maze().path();
@@ -55163,7 +55163,7 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To9_8) {
   EXPECT_EQ(path[167].second, 8);
 }
 
-TEST_F(FileSolverTest, SolveMazeFrom0_8To9_9) {
+TEST_F(SolverTest, SolveMazeFrom0_8To9_9) {
   facade_.loadFromFile(filename_);
   facade_.solve({0, 8}, {9, 9});
   s21::Maze::Path path = facade_.maze().path();
@@ -55508,8 +55508,8 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To9_9) {
   EXPECT_EQ(path[168].second, 8);
 }
 
-TEST(FileSolverEdgeTest, NoSolutionTest) {
-  s21::MazeFacade facade;
+TEST(SolverEdgeTest, NoSolutionTest) {
+  s21::Facade facade;
   std::string filename{"test"};
   std::ofstream file(filename);
 

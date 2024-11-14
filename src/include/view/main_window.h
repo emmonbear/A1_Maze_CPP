@@ -12,11 +12,13 @@
 #ifndef SRC_INCLUDE_VIEW_MAIN_WINDOW_H_
 #define SRC_INCLUDE_VIEW_MAIN_WINDOW_H_
 
-#include <QTabWidget>
+#include <QGridLayout>
+#include <QPushButton>
+#include <QSpinBox>
 #include <QWidget>
 
-#include "include/view/cave_tab.h"
-#include "include/view/maze_tab.h"
+#include "include/controller/facade.h"
+#include "include/view/renderer.h"
 
 namespace s21 {
 
@@ -27,14 +29,34 @@ class MainWindow : public QWidget {
   explicit MainWindow(QWidget* parent = nullptr);
   ~MainWindow();
 
- private:
-  QTabWidget* tab_widget_;
-  MazeTab* maze_tab_;
-  CaveTab* cave_tab_;
-
   void initWindow();
-  void setupMainWindow();
-  void setupTabWidget();
+
+ private slots:
+  void onOpenFileButtonClicked();
+  void onGenerateButtonClicked();
+  void onSaveButtonClicked();
+  void onSolveButtonClicked();
+
+ private:
+  Facade* facade_;
+  Renderer* renderer_;
+
+  QPushButton* open_file_btn_;
+  QPushButton* generate_btn_;
+  QPushButton* save_btn_;
+  QPushButton* solve_btn_;
+  QSpinBox* rows_spin_box_;
+  QSpinBox* cols_spin_box_;
+  QSpinBox* start_row_spin_box_;
+  QSpinBox* start_col_spin_box_;
+  QSpinBox* end_row_spin_box_;
+  QSpinBox* end_col_spin_box_;
+
+  void setupLayouts();
+  void setupVerticalLayout(QVBoxLayout* v_layout);
+  void setupButtonLayout(QGridLayout* button_layout);
+  void updateSolveSpinBoxRanges();
+  void updateGenerateSpinBoxRanges();
 };
 }  // namespace s21
 

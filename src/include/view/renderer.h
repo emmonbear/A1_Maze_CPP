@@ -1,7 +1,7 @@
 /**
- * @file maze_renderer.h
+ * @file renderer.h
  * @author Moskalev Ilya (moskalevilua1998@gmail.com)
- * @brief Header file for the MazeRenderer class
+ * @brief Header file for the Renderer class
  * @version 1.0
  * @date 2024-11-10
  *
@@ -9,8 +9,8 @@
  *
  */
 
-#ifndef SRC_INCLUDE_VIEW_MAZE_RENDERER_H_
-#define SRC_INCLUDE_VIEW_MAZE_RENDERER_H_
+#ifndef SRC_INCLUDE_VIEW_RENDERER_H_
+#define SRC_INCLUDE_VIEW_RENDERER_H_
 
 #include <QImage>
 #include <QPaintEvent>
@@ -21,12 +21,12 @@
 
 namespace s21 {
 
-class MazeRenderer : public QWidget {
+class Renderer : public QWidget {
   Q_OBJECT
 
  public:
-  explicit MazeRenderer(QWidget* parent = nullptr, const Maze& maze = Maze());
-  ~MazeRenderer();
+  explicit Renderer(QWidget* parent = nullptr, const Maze& maze = Maze());
+  ~Renderer();
 
   void drawMaze();
   void clearMaze();
@@ -51,4 +51,4 @@ class MazeRenderer : public QWidget {
 };
 }  // namespace s21
 
-#endif  // SRC_INCLUDE_VIEW_MAZE_RENDERER_H_
+#endif  // SRC_INCLUDE_VIEW_RENDERER_H_
