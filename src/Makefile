@@ -76,4 +76,5 @@ gcov_report: test
 	cd $(TEST_BIN_DIR) && \
   gcovr $(GCOVR_HTML) && \
 	gcovr $(GCOVR_TXT)
-	xdg-open $(TEST_BIN_DIR)/coverage.html
+	cat $(TEST_BIN_DIR)/coverage.txt
+	
