@@ -55507,4 +55507,28 @@ TEST_F(FileSolverTest, SolveMazeFrom0_8To9_9) {
   EXPECT_EQ(path[168].first, 0);
   EXPECT_EQ(path[168].second, 8);
 }
+
+TEST(FileSolverEdgeTest, NoSolutionTest) {
+  s21::MazeFacade facade;
+  std::string filename{"test"};
+  std::ofstream file(filename);
+
+  file << "3 3\n";
+  file << "1 1 1\n";
+  file << "0 1 1\n";
+  file << "0 0 1\n";
+  file << "1 0 0\n";
+  file << "0 1 0\n";
+  file << "1 1 1\n";
+  file.close();
+
+  facade.loadFromFile(filename);
+  try {
+    facade.solve({0, 0}, {0, 1});
+  } catch (const std::runtime_error& e) {
+    EXPECT_STREQ(e.what(), "No solution found for the maze.");
+  }
+
+  std::remove(filename.c_str());
+}
 }  // namespace Test
