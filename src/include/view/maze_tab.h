@@ -17,7 +17,7 @@
 #include <QSpinBox>
 #include <QWidget>
 
-#include "include/controller/maze_facade.h"
+#include "include/controller/facade.h"
 #include "include/view/maze_renderer.h"
 
 namespace s21 {

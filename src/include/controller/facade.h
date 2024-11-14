@@ -16,8 +16,8 @@
 
 #include "include/model/file_handler.h"
 #include "include/model/maze.h"
-#include "include/model/maze_generator.h"
-#include "include/model/maze_solver.h"
+#include "include/model/generator.h"
+#include "include/model/solver.h"
 
 namespace s21 {
 

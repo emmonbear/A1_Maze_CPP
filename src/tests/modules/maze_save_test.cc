@@ -12,7 +12,7 @@
 #include <fstream>
 #include <string>
 
-#include "include/controller/maze_facade.h"
+#include "include/controller/facade.h"
 #include "tests/include/main_test.h"
 
 namespace Test {

@@ -9,7 +9,7 @@
  *
  */
 
-#include "include/model/maze_solver.h"
+#include "include/model/solver.h"
 
 #include <stdexcept>
 #include <string>

@@ -13,21 +13,21 @@ set(TEST_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/modules)
 
 set(MODEL
   ${MODEL_DIR}/file_handler.cc
-  ${MODEL_DIR}/maze_generator.cc
-  ${MODEL_DIR}/maze_solver.cc
+  ${MODEL_DIR}/generator.cc
+  ${MODEL_DIR}/solver.cc
   ${MODEL_DIR}/maze.cc
 )
 
 set(CONTROLLER
-  ${CONTROLLER_DIR}/maze_facade.cc
+  ${CONTROLLER_DIR}/facade.cc
 )
 
 set(HEADERS
   ${INCLUDE_DIR}/model/file_handler.h
-  ${INCLUDE_DIR}/model/maze_generator.h
-  ${INCLUDE_DIR}/model/maze_solver.h
+  ${INCLUDE_DIR}/model/generator.h
+  ${INCLUDE_DIR}/model/solver.h
   ${INCLUDE_DIR}/model/maze.h
-  ${INCLUDE_DIR}/controller/maze_facade.h
+  ${INCLUDE_DIR}/controller/facade.h
 
 )
 

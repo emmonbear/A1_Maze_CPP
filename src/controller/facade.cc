@@ -9,7 +9,7 @@
  *
  */
 
-#include "include/controller/maze_facade.h"
+#include "include/controller/facade.h"
 
 #include <string>
 

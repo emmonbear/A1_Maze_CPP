@@ -130,6 +130,9 @@ void MazeTab::initWindow() {
   rows_spin_box_->setMaximum(50);
   cols_spin_box_->setMinimum(2);
   cols_spin_box_->setMaximum(50);
+
+  setFixedSize(750, 660);
+  setStyleSheet(Settings::background_style);
 }
 
 void MazeTab::setupLayouts() {

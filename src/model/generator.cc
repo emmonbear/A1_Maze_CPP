@@ -9,7 +9,7 @@
  *
  */
 
-#include "include/model/maze_generator.h"
+#include "include/model/generator.h"
 
 #include <fstream>
 #include <random>
