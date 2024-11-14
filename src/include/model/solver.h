@@ -18,7 +18,13 @@
 #include <vector>
 
 #include "include/model/maze.h"
+
 namespace s21 {
+
+/**
+ * @class Solver
+ * @brief Solves the maze using a depth-first search algorithm.
+ */
 class Solver {
  public:
   Solver(Maze* maze, Maze::Point start, Maze::Point end);
@@ -35,10 +41,20 @@ class Solver {
   bool dfs(int row, int col);
   bool canMoveTo(int row, int col, direction dir);
 
+  /**
+   * @brief Array of possible directions.
+   */
   static constexpr std::array<direction, 4> directions = {
       direction::kLeft, direction::kRight, direction::kUp, direction::kDown};
 
+  /**
+   * @brief Array of row deltas for each direction.
+   */
   static constexpr std::array<int, 4> row_deltas = {0, 0, -1, 1};
+
+  /**
+   * @brief Array of column deltas for each direction.
+   */
   static constexpr std::array<int, 4> col_deltas = {-1, 1, 0, 0};
 };
 }  // namespace s21

@@ -14,13 +14,31 @@
 
 namespace s21 {
 
+/**
+ * @class Settings
+ * @brief Contains various settings for the application's UI.
+ */
 class Settings {
  public:
+  /**
+   * @brief Background style for the widget.
+   */
   static constexpr const char* background_style =
       "QWidget { background-color: #171421; }";
 
+  /**
+   * @brief Width of the buttons.
+   */
   static constexpr int btn_width = 150;
+
+  /**
+   * @brief Height of the buttons.
+   */
   static constexpr int btn_height = 50;
+
+  /**
+   * @brief Style for the buttons.
+   */
   static constexpr const char* btn_style =
       "QPushButton { "
       "background-color: #26A168; "
@@ -35,31 +53,9 @@ class Settings {
       "color: #26A168; "
       "}";
 
-  static constexpr const char* tab_style =
-      "QTabWidget::pane { "
-      "border: 1px solid #171421; "
-      "} "
-      "QTabBar::tab { "
-      "background-color: #171421; "
-      "color: #26A168; "
-      "font-weight: bold; "
-      "font-size: 28px; "
-      "border: none; "
-      "border-top-left-radius: 10px; "
-      "border-top-right-radius: 10px; "
-      "min-width: 120px; "
-      "padding: 10px; "
-      "} "
-      "QTabBar::tab:selected { "
-      "background-color: #26A168; "
-      "color: #171421; "
-      "font-weight: bold; "
-      "font-size: 28px; "
-      "border: none; "
-      "border-top-left-radius: 10px; "
-      "border-top-right-radius: 10px; "
-      "}";
-
+  /**
+   * @brief Style for the spin boxes.
+   */
   static constexpr const char* spinbox_style =
       "QSpinBox { "
       "background-color: #171421; "
@@ -84,9 +80,19 @@ class Settings {
       "background-color: #171421; "
       "}";
 
-  static constexpr const char* map_style = "border: 2px color: #171421";
+  /**
+   * @brief Green color code.
+   */
   static constexpr const char* green = "#26A168";
+
+  /**
+   * @brief Black color code.
+   */
   static constexpr const char* black = "#171421";
+
+  /**
+   * @brief Size of the render area.
+   */
   static constexpr int render_size = 500;
 };
 }  // namespace s21

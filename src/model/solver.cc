@@ -16,12 +16,22 @@
 
 namespace s21 {
 
+/**
+ * @brief Constructs a Solver object.
+ * @param maze Pointer to the maze to be solved.
+ * @param start The starting point in the maze.
+ * @param end The ending point in the maze.
+ */
 Solver::Solver(Maze* maze, Maze::Point start, Maze::Point end)
     : maze_{maze},
       start_{start},
       end_{end},
       visited_(maze_->rows_, Maze::WallVector(maze_->cols_, false)) {}
 
+/**
+ * @brief Solves the maze.
+ * @throws std::runtime_error if no solution is found for the maze.
+ */
 void Solver::solve() {
   maze_->free_path();
   if (!dfs(start_.first, start_.second)) {
@@ -29,6 +39,12 @@ void Solver::solve() {
   }
 }
 
+/**
+ * @brief Performs a depth-first search to find the path.
+ * @param row The current row.
+ * @param col The current column.
+ * @return True if a path is found, false otherwise.
+ */
 bool Solver::dfs(int row, int col) {
   if (row < 0 || row >= maze_->rows() || col < 0 || col >= maze_->cols() ||
       visited_[row][col]) {
@@ -54,6 +70,13 @@ bool Solver::dfs(int row, int col) {
   return false;
 }
 
+/**
+ * @brief Checks if a move to a specific direction is possible.
+ * @param row The current row.
+ * @param col The current column.
+ * @param dir The direction to move.
+ * @return True if the move is possible, false otherwise.
+ */
 bool Solver::canMoveTo(int row, int col, direction dir) {
   switch (dir) {
     case direction::kLeft:

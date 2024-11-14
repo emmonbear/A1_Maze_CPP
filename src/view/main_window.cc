@@ -23,6 +23,10 @@
 
 namespace s21 {
 
+/**
+ * @brief Constructs a MainWindow object.
+ * @param parent The parent widget.
+ */
 MainWindow::MainWindow(QWidget* parent) : QWidget(parent) {
   initWindow();
   setupLayouts();
@@ -40,8 +44,11 @@ MainWindow::MainWindow(QWidget* parent) : QWidget(parent) {
           &MainWindow::onSolveButtonClicked);
 }
 
-MainWindow::~MainWindow() {}
+MainWindow::~MainWindow() { delete facade_; }
 
+/**
+ * @brief Handles the click event of the open file button.
+ */
 void MainWindow::onOpenFileButtonClicked() {
   QString file_path = QFileDialog::getOpenFileName(
       nullptr, "Open Maze File", "../datasets", "Text Files (*.txt)");
@@ -60,6 +67,9 @@ void MainWindow::onOpenFileButtonClicked() {
   }
 }
 
+/**
+ * @brief Handles the click event of the generate button.
+ */
 void MainWindow::onGenerateButtonClicked() {
   renderer_->clearMaze();
   facade_->generate(rows_spin_box_->value(), cols_spin_box_->value());
@@ -67,6 +77,9 @@ void MainWindow::onGenerateButtonClicked() {
   updateSolveSpinBoxRanges();
 }
 
+/**
+ * @brief Handles the click event of the save button.
+ */
 void MainWindow::onSaveButtonClicked() {
   QString file_path = QFileDialog::getSaveFileName(nullptr, "", "../datasets",
                                                    "Text Files (*.txt)");
@@ -78,6 +91,9 @@ void MainWindow::onSaveButtonClicked() {
   }
 }
 
+/**
+ * @brief Handles the click event of the solve button.
+ */
 void MainWindow::onSolveButtonClicked() {
   int start_row = start_row_spin_box_->value();
   int start_col = start_col_spin_box_->value();
@@ -92,6 +108,9 @@ void MainWindow::onSolveButtonClicked() {
   }
 }
 
+/**
+ * @brief Initializes the main window.
+ */
 void MainWindow::initWindow() {
   facade_ = new Facade();
   renderer_ = new Renderer(this, facade_->maze());
@@ -135,6 +154,9 @@ void MainWindow::initWindow() {
   setStyleSheet(Settings::background_style);
 }
 
+/**
+ * @brief Sets up the layouts for the main window.
+ */
 void MainWindow::setupLayouts() {
   QVBoxLayout* main_layout = new QVBoxLayout(this);
   QHBoxLayout* h_layout = new QHBoxLayout();
@@ -155,6 +177,10 @@ void MainWindow::setupLayouts() {
   setLayout(main_layout);
 }
 
+/**
+ * @brief Sets up the vertical layout.
+ * @param v_layout The vertical layout to set up.
+ */
 void MainWindow::setupVerticalLayout(QVBoxLayout* v_layout) {
   QLabel* generate_label = new QLabel("GENERATE", this);
   QLabel* solve_label = new QLabel("SOLVE", this);
@@ -197,6 +223,10 @@ void MainWindow::setupVerticalLayout(QVBoxLayout* v_layout) {
   v_layout->addLayout(solve_form_layout);
 }
 
+/**
+ * @brief Sets up the button layout.
+ * @param button_layout The button layout to set up.
+ */
 void MainWindow::setupButtonLayout(QGridLayout* button_layout) {
   button_layout->addWidget(open_file_btn_, 0, 0);
   button_layout->addWidget(save_btn_, 1, 0);
@@ -204,6 +234,9 @@ void MainWindow::setupButtonLayout(QGridLayout* button_layout) {
   button_layout->addWidget(solve_btn_, 1, 1);
 }
 
+/**
+ * @brief Updates the ranges of the solve spin boxes.
+ */
 void MainWindow::updateSolveSpinBoxRanges() {
   int rows = facade_->maze().rows() - 1;
   int cols = facade_->maze().cols() - 1;
@@ -224,6 +257,9 @@ void MainWindow::updateSolveSpinBoxRanges() {
   end_col_spin_box_->setValue(cols);
 }
 
+/**
+ * @brief Updates the ranges of the generate spin boxes.
+ */
 void MainWindow::updateGenerateSpinBoxRanges() {
   rows_spin_box_->setValue(facade_->maze().rows());
   cols_spin_box_->setValue(facade_->maze().cols());

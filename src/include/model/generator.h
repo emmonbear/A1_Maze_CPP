@@ -20,9 +20,7 @@ namespace s21 {
 
 class Generator {
  public:
-  using Vector = std::vector<int>;
-  using WallVector = std::vector<bool>;
-  using WallMatrix = std::vector<WallVector>;
+  using Vector = std::vector<int>;  ///< Alias for a vector of integers.
 
   explicit Generator(Maze* maze);
   void generate();

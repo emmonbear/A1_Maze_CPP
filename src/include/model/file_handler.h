@@ -17,6 +17,11 @@
 #include "include/model/maze.h"
 
 namespace s21 {
+
+/**
+ * @class FileHandler
+ * @brief Handles file operations for the Maze class.
+ */
 class FileHandler {
  public:
   static void load(Maze* maze, const std::string& filename);

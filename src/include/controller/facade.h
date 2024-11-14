@@ -21,6 +21,11 @@
 
 namespace s21 {
 
+/**
+ * @class Facade
+ * @brief Provides a simplified interface for generating, loading, saving, and
+ * solving a maze.
+ */
 class Facade {
  public:
   void generate(int rows, int cols);

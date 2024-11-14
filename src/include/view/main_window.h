@@ -22,6 +22,10 @@
 
 namespace s21 {
 
+/**
+ * @class MainWindow
+ * @brief The main window of the application.
+ */
 class MainWindow : public QWidget {
   Q_OBJECT
 

@@ -18,12 +18,16 @@
 
 namespace s21 {
 
+/**
+ * @class Maze
+ * @brief Represents a maze with walls and a path.
+ */
 class Maze {
  public:
-  using Point = std::pair<int, int>;
-  using Path = std::vector<Point>;
-  using WallVector = std::vector<bool>;
-  using WallMatrix = std::vector<WallVector>;
+  using Point = std::pair<int, int>;     ///< Alias for a point in the maze.
+  using Path = std::vector<Point>;       ///< Alias for a path in the maze.
+  using WallVector = std::vector<bool>;  ///< Alias for a vector of walls.
+  using WallMatrix = std::vector<WallVector>;  ///< Alias for a matrix of walls.
 
   inline int rows() const { return rows_; }
   inline int cols() const { return cols_; }

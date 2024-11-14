@@ -21,6 +21,10 @@
 
 namespace s21 {
 
+/**
+ * @class Renderer
+ * @brief Renders the maze on the screen.
+ */
 class Renderer : public QWidget {
   Q_OBJECT
 
@@ -47,7 +51,6 @@ class Renderer : public QWidget {
   void drawRightWall(QPainter* p, int row, int col, int x, int y);
   void drawBottomWall(QPainter* p, int row, int col, int x, int y);
   void calculateCellSize();
-  // void clearPath();
 };
 }  // namespace s21
 
