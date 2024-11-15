@@ -36,7 +36,7 @@ Renderer::~Renderer() {}
  */
 void Renderer::setupWindow() {
   setWindowTitle("Maze Renderer");
-  setFixedSize(Settings::render_size, Settings::render_size);
+  setFixedSize(Settings::kRenderAreaSize, Settings::kRenderAreaSize);
 
   image_ = QImage(size(), QImage::Format_ARGB32_Premultiplied);
 }
@@ -44,7 +44,7 @@ void Renderer::setupWindow() {
 /**
  * @brief Clears the maze.
  */
-void Renderer::clearMaze() { image_.fill(QColor(Settings::black)); }
+void Renderer::clearMaze() { image_.fill(QColor(Settings::kBlack)); }
 
 /**
  * @brief Handles the paint event.
@@ -151,7 +151,7 @@ void Renderer::drawBottomWall(QPainter* p, int row, int col, int x, int y) {
 void Renderer::calculateCellSize() {
   int max_dimension = std::max(maze_.rows(), maze_.cols());
 
-  cell_size_ = Settings::render_size / max_dimension;
+  cell_size_ = Settings::kRenderAreaSize / max_dimension;
 }
 
 /**
@@ -162,7 +162,7 @@ void Renderer::drawPath() {
   drawMaze();
   Maze::Path path = maze_.path();
   QPainter p(&image_);
-  p.setPen(QPen(QColor(Settings::green), 3));
+  p.setPen(QPen(QColor(Settings::kGreen), 3));
 
   for (size_t i = 0; i < path.size() - 1; ++i) {
     int x1 = path[i].second * cell_size_ + cell_size_ / 2;

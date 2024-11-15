@@ -61,8 +61,8 @@ void MainWindow::onOpenFileButtonClicked() {
       updateGenerateSpinBoxRanges();
       updateSolveSpinBoxRanges();
     } catch (const std::runtime_error& e) {
-      QMessageBox::critical(this, "File upload error",
-                            QString("Incorrect file format: %1").arg(e.what()));
+      setUpMessageBox("File upload error",
+                      QString("Incorrect file format: %1").arg(e.what()));
     }
   }
 }
@@ -104,7 +104,7 @@ void MainWindow::onSolveButtonClicked() {
     facade_->solve({start_row, start_col}, {end_row, end_col});
     renderer_->drawPath();
   } catch (const std::runtime_error& e) {
-    QMessageBox::critical(this, "Maze solve error", QString(e.what()));
+    setUpMessageBox("Maze solve error", QString(e.what()));
   }
 }
 
@@ -127,16 +127,16 @@ void MainWindow::initWindow() {
   end_row_spin_box_ = new QSpinBox(this);
   end_col_spin_box_ = new QSpinBox(this);
 
-  open_file_btn_->setStyleSheet(Settings::btn_style);
-  generate_btn_->setStyleSheet(Settings::btn_style);
-  save_btn_->setStyleSheet(Settings::btn_style);
-  solve_btn_->setStyleSheet(Settings::btn_style);
-  rows_spin_box_->setStyleSheet(Settings::spinbox_style);
-  cols_spin_box_->setStyleSheet(Settings::spinbox_style);
-  start_row_spin_box_->setStyleSheet(Settings::spinbox_style);
-  start_col_spin_box_->setStyleSheet(Settings::spinbox_style);
-  end_row_spin_box_->setStyleSheet(Settings::spinbox_style);
-  end_col_spin_box_->setStyleSheet(Settings::spinbox_style);
+  open_file_btn_->setStyleSheet(Settings::kBtnStyle);
+  generate_btn_->setStyleSheet(Settings::kBtnStyle);
+  save_btn_->setStyleSheet(Settings::kBtnStyle);
+  solve_btn_->setStyleSheet(Settings::kBtnStyle);
+  rows_spin_box_->setStyleSheet(Settings::kSpinboxStyle);
+  cols_spin_box_->setStyleSheet(Settings::kSpinboxStyle);
+  start_row_spin_box_->setStyleSheet(Settings::kSpinboxStyle);
+  start_col_spin_box_->setStyleSheet(Settings::kSpinboxStyle);
+  end_row_spin_box_->setStyleSheet(Settings::kSpinboxStyle);
+  end_col_spin_box_->setStyleSheet(Settings::kSpinboxStyle);
 
   rows_spin_box_->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
   cols_spin_box_->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -151,7 +151,7 @@ void MainWindow::initWindow() {
   cols_spin_box_->setMaximum(50);
 
   setFixedSize(750, 660);
-  setStyleSheet(Settings::background_style);
+  setStyleSheet(Settings::kBackgroundStyle);
 }
 
 /**
@@ -190,15 +190,13 @@ void MainWindow::setupVerticalLayout(QVBoxLayout* v_layout) {
   QLabel* end_label = new QLabel("End:", this);
 
   generate_label->setAlignment(Qt::AlignCenter);
-  generate_label->setStyleSheet(
-      "font-weight: bold; color: #26A168;font-size: 24px;");
+  generate_label->setStyleSheet(Settings::kGreenLabelStyle);
   solve_label->setAlignment(Qt::AlignCenter);
-  solve_label->setStyleSheet(
-      "font-weight: bold; color: #26A168;font-size: 24px;");
-  start_label->setStyleSheet("font-size: 24px;");
-  end_label->setStyleSheet("font-size: 24px;");
-  rows_label->setStyleSheet("font-size: 24px;");
-  cols_label->setStyleSheet("font-size: 24px;");
+  solve_label->setStyleSheet(Settings::kGreenLabelStyle);
+  start_label->setStyleSheet(Settings::kWhiteLabelStyle);
+  end_label->setStyleSheet(Settings::kWhiteLabelStyle);
+  rows_label->setStyleSheet(Settings::kWhiteLabelStyle);
+  cols_label->setStyleSheet(Settings::kWhiteLabelStyle);
   v_layout->addWidget(generate_label);
 
   QFormLayout* generate_form_layout = new QFormLayout();
@@ -265,4 +263,12 @@ void MainWindow::updateGenerateSpinBoxRanges() {
   cols_spin_box_->setValue(facade_->maze().cols());
 }
 
+void MainWindow::setUpMessageBox(const QString& title, const QString& text) {
+  QMessageBox messageBox;
+  messageBox.setIcon(QMessageBox::Critical);
+  messageBox.setWindowTitle(title);
+  messageBox.setText(text);
+  messageBox.setStyleSheet(Settings::kMessageBoxStyle);
+  messageBox.exec();
+}
 }  // namespace s21

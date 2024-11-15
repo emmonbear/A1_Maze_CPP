@@ -58,9 +58,9 @@ bool Solver::dfs(int row, int col) {
     return true;
   }
 
-  for (int i = 0; i < 4; ++i) {
-    if (canMoveTo(row, col, directions[i])) {
-      if (dfs(row + row_deltas[i], col + col_deltas[i])) {
+  for (int i = 0; i < kNumberDirections; ++i) {
+    if (canMoveTo(row, col, kDirections[i])) {
+      if (dfs(row + kRowDeltas[i], col + kColDeltas[i])) {
         maze_->push_path(row, col);
         return true;
       }

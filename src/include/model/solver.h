@@ -41,21 +41,24 @@ class Solver {
   bool dfs(int row, int col);
   bool canMoveTo(int row, int col, direction dir);
 
+  static constexpr int kNumberDirections{4};
   /**
    * @brief Array of possible directions.
    */
-  static constexpr std::array<direction, 4> directions = {
+  static constexpr std::array<direction, kNumberDirections> kDirections = {
       direction::kLeft, direction::kRight, direction::kUp, direction::kDown};
 
   /**
    * @brief Array of row deltas for each direction.
    */
-  static constexpr std::array<int, 4> row_deltas = {0, 0, -1, 1};
+  static constexpr std::array<int, kNumberDirections> kRowDeltas = {0, 0, -1,
+                                                                    1};
 
   /**
    * @brief Array of column deltas for each direction.
    */
-  static constexpr std::array<int, 4> col_deltas = {-1, 1, 0, 0};
+  static constexpr std::array<int, kNumberDirections> kColDeltas = {-1, 1, 0,
+                                                                    0};
 };
 }  // namespace s21
 

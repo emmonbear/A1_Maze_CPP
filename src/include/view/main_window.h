@@ -61,6 +61,7 @@ class MainWindow : public QWidget {
   void setupButtonLayout(QGridLayout* button_layout);
   void updateSolveSpinBoxRanges();
   void updateGenerateSpinBoxRanges();
+  void setUpMessageBox(const QString& title, const QString& text);
 };
 }  // namespace s21
 

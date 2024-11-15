@@ -23,23 +23,13 @@ class Settings {
   /**
    * @brief Background style for the widget.
    */
-  static constexpr const char* background_style =
+  static constexpr const char* kBackgroundStyle =
       "QWidget { background-color: #171421; }";
-
-  /**
-   * @brief Width of the buttons.
-   */
-  static constexpr int btn_width = 150;
-
-  /**
-   * @brief Height of the buttons.
-   */
-  static constexpr int btn_height = 50;
 
   /**
    * @brief Style for the buttons.
    */
-  static constexpr const char* btn_style =
+  static constexpr const char* kBtnStyle =
       "QPushButton { "
       "background-color: #26A168; "
       "color: #171421; "
@@ -56,7 +46,7 @@ class Settings {
   /**
    * @brief Style for the spin boxes.
    */
-  static constexpr const char* spinbox_style =
+  static constexpr const char* kSpinboxStyle =
       "QSpinBox { "
       "background-color: #171421; "
       "color: #ffffff; "
@@ -80,20 +70,29 @@ class Settings {
       "background-color: #171421; "
       "}";
 
+  static constexpr const char* kGreenLabelStyle =
+      "font-weight: bold; color: #26A168;font-size: 24px;";
+
+  static constexpr const char* kWhiteLabelStyle =
+      "color: #ffffff;font-size: 24px;";
+
+  static constexpr const char* kMessageBoxStyle =
+      "QMessageBox { background-color: #171421; color: white; }";
+
   /**
    * @brief Green color code.
    */
-  static constexpr const char* green = "#26A168";
+  static constexpr const char* kGreen = "#26A168";
 
   /**
    * @brief Black color code.
    */
-  static constexpr const char* black = "#171421";
+  static constexpr const char* kBlack = "#171421";
 
   /**
    * @brief Size of the render area.
    */
-  static constexpr int render_size = 500;
+  static constexpr int kRenderAreaSize = 500;
 };
 }  // namespace s21
 
