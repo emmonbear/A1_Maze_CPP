@@ -36,26 +36,26 @@ class Solver {
   Maze::Point end_;
   Maze::WallMatrix visited_;
 
-  enum class direction { kUp, kDown, kLeft, kRight };
+  enum class Direction { kUp, kDown, kLeft, kRight };
 
   bool dfs(int row, int col);
-  bool canMoveTo(int row, int col, direction dir);
+  bool canMoveTo(int row, int col, Direction dir);
 
   static constexpr int kNumberDirections{4};
   /**
-   * @brief Array of possible directions.
+   * @brief Array of possible Directions.
    */
-  static constexpr std::array<direction, kNumberDirections> kDirections = {
-      direction::kLeft, direction::kRight, direction::kUp, direction::kDown};
+  static constexpr std::array<Direction, kNumberDirections> kDirections = {
+      Direction::kLeft, Direction::kRight, Direction::kUp, Direction::kDown};
 
   /**
-   * @brief Array of row deltas for each direction.
+   * @brief Array of row deltas for each Direction.
    */
   static constexpr std::array<int, kNumberDirections> kRowDeltas = {0, 0, -1,
                                                                     1};
 
   /**
-   * @brief Array of column deltas for each direction.
+   * @brief Array of column deltas for each Direction.
    */
   static constexpr std::array<int, kNumberDirections> kColDeltas = {-1, 1, 0,
                                                                     0};

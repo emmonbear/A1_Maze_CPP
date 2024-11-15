@@ -71,21 +71,21 @@ bool Solver::dfs(int row, int col) {
 }
 
 /**
- * @brief Checks if a move to a specific direction is possible.
+ * @brief Checks if a move to a specific Direction is possible.
  * @param row The current row.
  * @param col The current column.
- * @param dir The direction to move.
+ * @param dir The Direction to move.
  * @return True if the move is possible, false otherwise.
  */
-bool Solver::canMoveTo(int row, int col, direction dir) {
+bool Solver::canMoveTo(int row, int col, Direction dir) {
   switch (dir) {
-    case direction::kLeft:
+    case Direction::kLeft:
       return col > 0 && !maze_->v_walls_[row][col - 1];
-    case direction::kRight:
+    case Direction::kRight:
       return col < maze_->cols() - 1 && !maze_->v_walls_[row][col];
-    case direction::kUp:
+    case Direction::kUp:
       return row > 0 && !maze_->h_walls_[row - 1][col];
-    case direction::kDown:
+    case Direction::kDown:
       return row < maze_->rows() - 1 && !maze_->h_walls_[row][col];
     default:
       return false;
