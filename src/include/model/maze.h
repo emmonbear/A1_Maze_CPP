@@ -35,16 +35,17 @@ class Maze {
   inline const WallMatrix& h_walls() const { return h_walls_; }
   inline const Path& path() const { return path_; }
   inline void set_rows(int rows) { rows_ = rows; }
-  void push_path(int row, int col);
   void set_cols(int cols);
-  void free_path();
-  void resize();
 
  private:
   int rows_{}, cols_{};
   WallMatrix v_walls_{};
   WallMatrix h_walls_{};
   Path path_{};
+
+  void push_path(int row, int col);
+  void free_path();
+  void resize();
 
   friend class Generator;
   friend class FileHandler;
