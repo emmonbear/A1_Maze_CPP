@@ -1,6 +1,6 @@
 <a id="readme-top"></a>
 
- | [![Contributors][contributors-shield]][contributors-url] | [![Forks][forks-shield]][forks-url] | [![Stargazers][stars-shield]][stars-url] | [![Issues][issues-shield]][issues-url] | [![MIT License][license-shield]][license-url] | [![LinkedIn][linkedin-shield]][linkedin-url] |
+ | [![Contributors][contributors-shield]][contributors-url] | [![Forks][forks-shield]][forks-url] | [![Stargazers][stars-shield]][stars-url] | [![Issues][issues-shield]][issues-url] | [![MIT License][license-shield]][license-url]
 
 <br />
 <div align="center">
@@ -192,5 +192,4 @@ Ilya Moskalev  - [Telegram](https://t.me/emmonbea) / [e-mail](moskaleviluak@iclo
 [issues-url]: https://github.com/emmonbear/A1_Maze_CPP/issues
 [license-shield]: https://img.shields.io/github/license/emmonbear/A1_Maze_CPP.svg?style=for-the-badge
 [license-url]: https://github.com/emmonbear/A1_Maze_CPP/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+
