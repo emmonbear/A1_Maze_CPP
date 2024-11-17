@@ -182,15 +182,15 @@ Ilya Moskalev  - [Telegram](https://t.me/emmonbea) / [e-mail](moskaleviluak@iclo
 
 
 <!-- ССЫЛКИ И ИЗОБРАЖЕНИЯ MARKDOWN -->
-[contributors-shield]: https://img.shields.io/github/contributors/emmonbear/3DViewer.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/emmonbear/A1_Maze_CPP.svg?style=for-the-badge
 [contributors-url]: https://github.com/emmonbear/A1_Maze_CPP/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/emmonbear/3DViewer.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/emmonbear/A1_Maze_CPP.svg?style=for-the-badge
 [forks-url]: https://github.com/emmonbear/A1_Maze_CPP/network/members
-[stars-shield]: https://img.shields.io/github/stars/emmonbear/3DViewer.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/emmonbear/A1_Maze_CPP.svg?style=for-the-badge
 [stars-url]: https://github.com/emmonbear/A1_Maze_CPP/stargazers
-[issues-shield]: https://img.shields.io/github/issues/emmonbear/3DViewer.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/emmonbear/A1_Maze_CPP.svg?style=for-the-badge
 [issues-url]: https://github.com/emmonbear/A1_Maze_CPP/issues
-[license-shield]: https://img.shields.io/github/license/emmonbear/3DViewer.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/emmonbear/A1_Maze_CPP.svg?style=for-the-badge
 [license-url]: https://github.com/emmonbear/A1_Maze_CPP/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
